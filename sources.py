@@ -5,10 +5,10 @@ X (Amanda Askell, Andrej Karpathy) 暂不在此文件中 —— 走单独的X抓
 """
 
 SOURCES = [
-    {"person": "纳瓦尔", "type": "podcast", "name": "Naval (官方播客 nav.al)",
+    {"person": "Naval Ravikant", "type": "podcast", "name": "Naval (官方播客 nav.al)",
      "url": "https://nav.al/feed"},
 
-    {"person": "达里欧", "type": "youtube", "name": "Principles by Ray Dalio",
+    {"person": "Ray Dalio", "type": "youtube", "name": "Principles by Ray Dalio",
      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCqvaXJ1K3HheTPNjH-KpwXQ"},
 
     {"person": "Lex Fridman", "type": "podcast", "name": "Lex Fridman Podcast",
