@@ -1,0 +1,167 @@
+{
+  "ai_track": {
+    "high": [
+      {
+        "person": "Simon Willison",
+        "title": "DeepSeek V4 Pro 0813 (on OpenRouter)",
+        "link": "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/",
+        "date": "2026-08-12",
+        "source_type": "blog",
+        "reason": "前沿模型新发布，趋势追踪",
+        "summary": "DeepSeek发布V4 Pro 0813，目前只开放API访问。一个有意思的细节：这个模型在低／中／高不同推理强度下生成的图像差异很明显，这在其他模型里比较少见。"
+      },
+      {
+        "person": "Andrew Huberman",
+        "title": "Using AI to Increase Your Intelligence & Enrich Humanity | Dr. Fei-Fei Li",
+        "link": "https://www.youtube.com/watch?v=N5AQFYtqx8Q",
+        "date": "2026-08-10",
+        "source_type": "youtube",
+        "reason": "AI科学家（Fei-Fei Li）访谈，内容扎实且不需要技术背景",
+        "summary": "Huberman对话斯坦福AI学者Fei-Fei Li，聊AI怎么安全地增强人类智力和创造力，而不只是搜索信息。两人讨论了AI与人类认知的本质区别、直觉和个人经验为什么难以被AI复制，以及AI加人机协作对健康和科研的正向可能性。"
+      },
+      {
+        "person": "Simon Willison",
+        "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
+        "link": "https://simonwillison.net/2026/Aug/8/auto-mode/",
+        "date": "2026-08-08",
+        "source_type": "blog",
+        "reason": "直接影响日常用Claude Code的方式，实操性强",
+        "summary": "Anthropic把Claude Code的auto mode设成Pro、Max、Team计划的默认选项。第三方评估显示auto mode拦截有害操作的表现很强——七百二十次针对性攻击尝试全部被挡下，远超人工审核。作者仍提醒提示注入这类风险需要独立验证，别照单全收。"
+      }
+    ],
+    "medium": [
+      {
+        "person": "Craig Mod",
+        "title": "[ESSAYS] A Swarm of Blood Robots",
+        "link": "https://craigmod.com/essays/robot_blood/",
+        "date": "2026-08-11",
+        "source_type": "blog",
+        "reason": "用LLM做基因谱系寻亲，真实创造性应用案例",
+        "summary": "Craig Mod分享用LLM做的一系列创新应用，核心是这次用Claude做家谱寻根——从零散线索追出自己的身世。他认为LLM最大价值在于把复杂信息检索转化为人性化的结果呈现，这类工具正处于应用爆发初期，价值被低估，关键是亲身体验而非跟风议论。"
+      },
+      {
+        "person": "Simon Willison",
+        "title": "Introducing Muse Glimmer",
+        "link": "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/",
+        "date": "2026-08-10",
+        "source_type": "blog",
+        "reason": "Meta开源模型动态",
+        "summary": null
+      },
+      {
+        "person": "Simon Willison",
+        "title": "Quoting Claude Opus 5 system prompt",
+        "link": "https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/",
+        "date": "2026-08-09",
+        "source_type": "blog",
+        "reason": "前沿模型行为细节，略技术但有启发",
+        "summary": null
+      },
+      {
+        "person": "Simon Willison",
+        "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
+        "link": "https://simonwillison.net/2026/Aug/8/now-we-have-a-timeline-of-the-openai-accidental-attack-against-h/",
+        "date": "2026-08-08",
+        "source_type": "blog",
+        "reason": "AI agent安全事故系列报道，与8/7那条重复，择一看即可",
+        "summary": null
+      },
+      {
+        "person": "Simon Willison",
+        "title": "Moonlight & Mayhem (Raccoon Heist by Codex + GPT-5.6 Sol Ultra)",
+        "link": "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/",
+        "date": "2026-08-07",
+        "source_type": "blog",
+        "reason": "编程agent实战小案例，跟上一条同系列",
+        "summary": null
+      },
+      {
+        "person": "Simon Willison",
+        "title": "The Tokenpocalypse Is Here: Companies Are Scrambling To Stop Spending So Much on AI",
+        "link": "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/",
+        "date": "2026-08-07",
+        "source_type": "blog",
+        "reason": "行业趋势：企业AI支出降温",
+        "summary": null
+      },
+      {
+        "person": "Simon Willison",
+        "title": "Introducing Muse Code and Muse Spark 1.2",
+        "link": "https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/",
+        "date": "2026-08-05",
+        "source_type": "blog",
+        "reason": "Meta开源模型动态",
+        "summary": null
+      },
+      {
+        "person": "Simon Willison",
+        "title": "Third-party cyber evaluations involving OpenAI models",
+        "link": "https://simonwillison.net/2026/Aug/5/third-party-cyber-evaluations/",
+        "date": "2026-08-05",
+        "source_type": "blog",
+        "reason": "AI agent安全事故系列报道之一",
+        "summary": null
+      },
+      {
+        "person": "Simon Willison",
+        "title": "Incident Report: unsanctioned agent behaviour during cyber testing",
+        "link": "https://simonwillison.net/2026/Aug/5/incident-report/",
+        "date": "2026-08-05",
+        "source_type": "blog",
+        "reason": "AI agent安全事故系列报道之一，趋势性强略专业",
+        "summary": null
+      },
+      {
+        "person": "Simon Willison",
+        "title": "One-shotting a Raccoon Heist game using Claude Fable 5",
+        "link": "https://simonwillison.net/2026/Aug/5/raccoon-heist/",
+        "date": "2026-08-05",
+        "source_type": "blog",
+        "reason": "编程agent实战小案例，直观好懂",
+        "summary": null
+      },
+      {
+        "person": "Simon Willison",
+        "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
+        "link": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/",
+        "date": "2026-08-04",
+        "source_type": "blog",
+        "reason": "他自己的LLM命令行工具重大更新，实用但工具依赖性强",
+        "summary": null
+      }
+    ]
+  },
+  "anchor_track": {
+    "high": [
+      {
+        "person": "Craig Mod",
+        "title": "[RODEN] Blood Robots For You and You and You",
+        "link": "https://craigmod.com/roden/117/",
+        "date": "2026-08-12",
+        "source_type": "blog",
+        "reason": "上一篇的后续，同一脉络",
+        "summary": "这期newsletter介绍了上面那篇四千字长文的写作过程与后续：他用Claude追踪到一篇尘封旧报纸，发现自己出生证明上的中间名竟源于一位几十年前意外身亡的陌生人。另外还提到摄影集《事物变成其他事物》精装第二版开放预订。"
+      },
+      {
+        "person": "Craig Mod",
+        "title": "[ESSAYS] A Swarm of Blood Robots",
+        "link": "https://craigmod.com/essays/robot_blood/",
+        "date": "2026-08-11",
+        "source_type": "blog",
+        "reason": "AI作为认知方式加深度自我认识（身份／收养）双命中，一手经历",
+        "summary": "Craig Mod分享用LLM做的一系列创新应用，核心是这次用Claude做家谱寻根——从零散线索追出自己的身世。他认为LLM最大价值在于把复杂信息检索转化为人性化的结果呈现，这类工具正处于应用爆发初期，价值被低估，关键是亲身体验而非跟风议论。"
+      }
+    ],
+    "medium": [
+      {
+        "person": "Craig Mod",
+        "title": "[RODEN] Oooohhh Summer, How Much Risk Is a Useful Amount of Risk?",
+        "link": "https://craigmod.com/roden/116/",
+        "date": "2026-08-03",
+        "source_type": "blog",
+        "reason": "质朴慢生活反思",
+        "summary": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Digest</title>
+<style>
+  :root {
+    --bg: #f7f6f3;
+    --card: #ffffff;
+    --text: #1f1d1a;
+    --muted: #767267;
+    --border: #e7e3da;
+    --accent: #b5502f;
+    --high: #b5502f;
+    --medium: #8a8474;
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 18px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Georgia, "Noto Serif SC", "PingFang SC", "Songti SC", serif;
+    line-height: 1.75;
+  }
+  header {
+    padding: 24px 24px 10px;
+    max-width: 1080px;
+    width: 94%;
+    margin: 0 auto;
+  }
+  h1 { font-size: 1.5rem; margin: 0 0 14px; font-weight: 700; }
+  select {
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    font-size: 1rem;
+    padding: 7px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+  }
+  main { max-width: 1080px; width: 94%; margin: 0 auto; padding: 10px 24px 60px; }
+  .track { margin-top: 32px; }
+  .track h2 {
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    font-size: 0.95rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  .track-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  @media (min-width: 760px) {
+    .track-items { grid-template-columns: 1fr 1fr; }
+  }
+  .item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 0;
+  }
+  .item.medium { opacity: 0.88; }
+  .item-meta {
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    font-size: 0.85rem;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+  .tier-tag {
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    color: #fff;
+  }
+  .tier-high { background: var(--high); }
+  .tier-medium { background: var(--medium); }
+  .item a.title {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+    margin: 8px 0 8px;
+    line-height: 1.45;
+  }
+  .item a.title:hover { color: var(--accent); }
+  .meta-right {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .source-type {
+    display: inline-flex;
+  }
+  .item p { margin: 0; font-size: 1.05rem; color: #45423c; }
+  .empty {
+    grid-column: 1 / -1;
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    color: var(--muted);
+    font-size: 0.95rem;
+    padding: 20px 0;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Daily Digest</h1>
+  <select id="monthSelect"></select>
+</header>
+<main>
+  <section class="track">
+    <h2>AI实操 / 趋势</h2>
+    <div id="aiTrack" class="track-items"></div>
+  </section>
+  <section class="track">
+    <h2>关注锚点</h2>
+    <div id="anchorTrack" class="track-items"></div>
+  </section>
+</main>
+
+<script>
+async function loadMonths() {
+  const res = await fetch('data/months.json');
+  const { months } = await res.json();
+  const sel = document.getElementById('monthSelect');
+  sel.innerHTML = months.map(m => `<option value="${m}">${m}</option>`).join('');
+  sel.addEventListener('change', () => loadMonth(sel.value));
+  if (months.length) loadMonth(months[0]);
+}
+
+// 内联SVG,不依赖外部图片请求。YouTube用其播放按钮标志;播客/博客没有单一平台可代表,
+// 分别用业内通用的播客图标、标准RSS图标(内容本来就是走RSS抓的,语义也对)。
+const TYPE_ICON = {
+  // YouTube标志用它真实的宽高比(宽矩形+居中播放三角),不是正方形,不然认不出来
+  youtube: {
+    label: 'YouTube',
+    svg: '<svg width="22" height="16" viewBox="0 0 28 20"><rect width="28" height="20" rx="4" fill="#FF0000"/><path d="M11 6l8 4-8 4V6z" fill="#fff"/></svg>',
+  },
+  // 播客用标准麦克风图标(话筒+支架),比之前的广播弧线更清楚
+  podcast: {
+    label: '播客',
+    svg: '<svg width="16" height="16" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#8B5CF6"/><rect x="10" y="5" width="4" height="9" rx="2" fill="#fff"/><path d="M7 11a5 5 0 0 0 10 0" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/><line x1="12" y1="16" x2="12" y2="19" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><line x1="9" y1="19" x2="15" y2="19" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>',
+  },
+  // 标准RSS图标:圆点+两条同心弧,弧线圆心精确对齐圆点位置(标准RSS图标的画法)
+  blog: {
+    label: '文章（RSS）',
+    svg: '<svg width="16" height="16" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#FF8C00"/><circle cx="6.5" cy="17.5" r="2" fill="#fff"/><path d="M6.5 11.5a6 6 0 0 1 6 6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M6.5 6.5a11 11 0 0 1 11 11" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>',
+  },
+};
+
+function renderItem(item, tier) {
+  const desc = item.summary || item.reason || '';
+  const type = TYPE_ICON[item.source_type] || { svg: '🔗', label: item.source_type || '' };
+  return `
+    <div class="item ${tier}">
+      <div class="item-meta">
+        <span>${item.person} · ${item.date}</span>
+        <span class="meta-right">
+          <span class="source-type" title="${type.label}">${type.svg}</span>
+          <span class="tier-tag tier-${tier}">${tier === 'high' ? '重点' : '值得一看'}</span>
+        </span>
+      </div>
+      <a class="title" href="${item.link}" target="_blank" rel="noopener">${item.title}</a>
+      <p>${desc}</p>
+    </div>
+  `;
+}
+
+function renderTrack(containerId, trackData) {
+  const el = document.getElementById(containerId);
+  const items = [
+    ...trackData.high.map(i => ({ i, tier: 'high' })),
+    ...trackData.medium.map(i => ({ i, tier: 'medium' })),
+  ];
+  el.innerHTML = items.length
+    ? items.map(({ i, tier }) => renderItem(i, tier)).join('')
+    : '<div class="empty">这个月这条track没有内容</div>';
+}
+
+async function loadMonth(month) {
+  const res = await fetch(`data/digest_${month}.json`);
+  const data = await res.json();
+  renderTrack('aiTrack', data.ai_track);
+  renderTrack('anchorTrack', data.anchor_track);
+}
+
+loadMonths();
+</script>
+</body>
+</html>
