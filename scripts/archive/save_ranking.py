@@ -1,8 +1,10 @@
 """
-一次性脚本：把这次人工校准的排序结果写回digest.db。
+[归档] 2026-08-13的一次性人工校准记录,不是pipeline的一部分,不会被日常流程调用。
+把这次人工校准的排序结果写回digest.db。
 JUDGMENTS里没提到的guid，默认按 low/low 处理（且都算已排序，ranked_at写当前时间）。
 这不是最终的自动化排序脚本 —— 这是"人工跑一遍、验证校准方向"的记录，
-自动化版本（交给Claude Code每周跑）会复用这里体现出的判断标准，但不会照抄这份dict。
+体现出的判断标准已经固化进RANKING_CRITERIA.md。真正的日常流程见
+scripts/rank_items.py + .claude/skills/run-digest/。
 """
 
 import sqlite3

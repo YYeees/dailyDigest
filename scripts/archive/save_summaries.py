@@ -1,6 +1,8 @@
 """
-一次性脚本：把high档条目的digest_summary写回digest.db。
+[归档] 2026-08-13的一次性人工校准记录,不是pipeline的一部分,不会被日常流程调用。
+把high档条目的digest_summary写回digest.db。
 全文只在生成这些摘要的过程中被临时读取（WebFetch），不落盘——本文件里只有生成好的摘要文本。
+真正的日常流程见scripts/rank_items.py + .claude/skills/run-digest/。
 """
 
 import sqlite3

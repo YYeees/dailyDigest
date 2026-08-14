@@ -2,15 +2,23 @@
 
 这份文档给每次跑digest排序的Claude Code参照用,不是代码规则。判断本身要靠读,不是靠关键词匹配。
 
-## 输入
+## 输入与流程:两段式判断(2026-08-14定案)
 
-从`digest.db`里,读还没排过序的条目(`ranked_at IS NULL`):标题、来源、发布日期、摘要(`summary`字段)。**不读全文**,摘要+标题就够做第一轮判断。
+从`digest.db`里,读还没排过序的条目(`ranked_at IS NULL`):标题、来源、来源类型(`source_type`)、发布日期、摘要(`summary`字段)。
+
+**第一段·初筛(所有pending条目都要做,不抓取任何东西)**:只用标题+`summary`字段,按下面Track 1/Track 2的标准给出初步`ai_tier`/`anchor_tier`。
+
+**第二段·精判(只针对满足条件的条目)**:
+- **`source_type == blog`且初筛任一track达到`medium`或`high`**:WebFetch链接抓一次全文,基于全文重新判断该track的tier(可能上调也可能下调),并生成`digest_summary`。全文只在这一步临时读取,生成完立刻丢弃,**不落盘**。
+- **`source_type`是`podcast`/`youtube`**:不追加抓取——这类来源的`summary`字段本身就是作者/平台写的节目简介,已经是对内容的提炼,WebFetch节目页/视频页拿到的通常还是同一份简介,信息量不会更多。直接用初筛的tier定档,`digest_summary`基于已有`summary`做一次轻提炼(不是照抄,也不需要额外抓取)。
+- **`source_type == blog`但初筛两个track都是`low`**:维持`low`,不生成`digest_summary`(low不进展示层,没必要花这个成本)。
 
 ## 输出
 
 对每条内容,填这几个字段:
 - `ai_tier` / `ai_reason`
 - `anchor_tier` / `anchor_reason`
+- `digest_summary`(仅当至少一个track是`medium`或`high`时需要)
 - 各自取值 `high` / `medium` / `low`,reason一句话说清楚判断依据(哪条标准命中了)
 
 两个track完全独立判断,不合并、不用一个综合分数替代。同一条内容完全可能一边high一边low(比如Craig Mod的《Blood Robots》两边都high,大部分内容只沾一边或都不沾)。
@@ -56,6 +64,6 @@
 
 ## 全文与摘要生成(只在这一步才碰全文)
 
-排序阶段(上面两个track的判断)只用标题+摘要,不读全文。**只有被判定为某个track的high(或者medium但明显值得细读)的条目**,才临时抓一次原文页面,喂给Claude Code生成一段`digest_summary`(内容概要+核心观点,不是全文摘录),生成完立刻丢弃全文,**不落盘**。最终存进`digest_summary`字段的只有这段AI生成的短摘要。
+具体规则见上面"输入与流程:两段式判断"一节。核心原则不变:全文只在blog类精判这一步临时读取,生成完`digest_summary`立刻丢弃,**不落盘**;最终存进`digest_summary`字段的只有AI生成的短摘要(内容概要+核心观点,不是全文摘录/照抄)。
 
 **X来源的内容例外**:不用走"抓全文生成摘要"这一步——推文本身已经很短,`digest_summary`直接用原文文本就行,不需要额外总结。（这部分逻辑等X抓取代码写出来后才会真正用上。）
