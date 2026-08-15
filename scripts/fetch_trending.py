@@ -18,14 +18,14 @@ GitHub没有官方trending API，这里靠解析trending页面的HTML。页面�
 import re
 import sqlite3
 import sys
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from config import DB_PATH  # noqa: E402
+from config import DB_PATH, SNAPSHOT_RETENTION_DAYS  # noqa: E402
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; dailyDigest-trending-bot/1.0)"}
 
@@ -70,6 +70,13 @@ def init_db(conn):
         )
     """)
     conn.commit()
+
+
+def cleanup_old_snapshots(conn):
+    cutoff = (date.today() - timedelta(days=SNAPSHOT_RETENTION_DAYS)).isoformat()
+    cur = conn.execute("DELETE FROM daily_snapshots WHERE snapshot_date < ?", (cutoff,))
+    conn.commit()
+    return cur.rowcount
 
 
 def parse_int(text):
@@ -123,13 +130,19 @@ def fetch_all():
     now = datetime.now(timezone.utc).isoformat()
     new_repos = 0
     snapshot_count = 0
+    failed = []
 
     for page_key, url in TRENDING_PAGES:
         resp = requests.get(url, headers=HEADERS, timeout=30)
         if resp.status_code != 200:
             print(f"[FAIL] {page_key} ({url}) — HTTP {resp.status_code}")
+            failed.append(f"{page_key} (HTTP {resp.status_code})")
             continue
         repos = parse_trending_page(resp.text)
+        if not repos:
+            print(f"[FAIL] {page_key} ({url}) — 解析出0个仓库，页面结构可能变了")
+            failed.append(f"{page_key} (0 repos parsed)")
+            continue
 
         for r in repos:
             existing = conn.execute(
@@ -160,8 +173,14 @@ def fetch_all():
         conn.commit()
         print(f"[OK] {page_key}: {len(repos)}个仓库")
 
+    removed = cleanup_old_snapshots(conn)
     conn.close()
     print(f"\n共{snapshot_count}条快照记录，{new_repos}个新仓库(待AI评估)")
+    if removed:
+        print(f"清理了{removed}条超过{SNAPSHOT_RETENTION_DAYS}天的历史快照")
+    if failed:
+        print(f"共{len(failed)}个页面抓取失败: {failed}", file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == "__main__":

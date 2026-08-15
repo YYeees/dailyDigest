@@ -13,6 +13,7 @@ GitHub Actions里从repo secrets读)。
 """
 
 import sqlite3
+import sys
 import time
 from datetime import datetime, timezone
 
@@ -41,7 +42,13 @@ def init_db(conn):
             published TEXT,
             summary TEXT,
             has_full_text INTEGER,
-            first_seen_at TEXT
+            first_seen_at TEXT,
+            ai_tier TEXT,
+            ai_reason TEXT,
+            anchor_tier TEXT,
+            anchor_reason TEXT,
+            digest_summary TEXT,
+            ranked_at TEXT
         )
     """)
     conn.commit()
@@ -82,6 +89,7 @@ def fetch_all():
     init_db(conn)
 
     total_new = 0
+    failed = []
     for source in X_SOURCES:
         payload = None
         for attempt in range(3):
@@ -102,6 +110,7 @@ def fetch_all():
         if not payload or payload.get("status") != "success":
             detail = payload.get("msg") if payload else resp.text[:200]
             print(f"[FAIL] {source['person']} — HTTP {resp.status_code} — {detail}")
+            failed.append(source["person"])
             continue
 
         tweets = payload["data"]["tweets"]
@@ -124,6 +133,9 @@ def fetch_all():
 
     conn.close()
     print(f"\n共新增 {total_new} 条")
+    if failed:
+        print(f"共{len(failed)}个源抓取失败: {failed}", file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == "__main__":

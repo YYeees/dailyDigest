@@ -41,3 +41,7 @@ HIGH_ONLY_PERSON_LIMIT = 7
 # GitHub Trending展示数量上限(2026-08-15定案)：不用展示太多，只要综合最值得推荐的。
 TRENDING_DAILY_LIMIT = 6    # index.html"7日内关注"页Trending板块
 TRENDING_MONTHLY_LIMIT = 6  # digest.html月度归档"GitHub高分项目"板块，每月上限
+
+# daily_snapshots表的保留窗口(2026-08-16定案)：前端只读每个仓库最新一条快照，更早的
+# 历史快照没有展示价值，超过这个天数就清理，避免表无限增长。
+SNAPSHOT_RETENTION_DAYS = 180

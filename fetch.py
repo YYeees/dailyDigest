@@ -3,8 +3,9 @@
 不做排序、不做全文抓取、不做X —— 只负责"抓到新条目就记下来"这一步。
 """
 
+import calendar
 import sqlite3
-import time
+import sys
 from datetime import datetime, timezone
 
 import feedparser
@@ -25,7 +26,13 @@ def init_db(conn):
             published TEXT,
             summary TEXT,
             has_full_text INTEGER,
-            first_seen_at TEXT
+            first_seen_at TEXT,
+            ai_tier TEXT,
+            ai_reason TEXT,
+            anchor_tier TEXT,
+            anchor_reason TEXT,
+            digest_summary TEXT,
+            ranked_at TEXT
         )
     """)
     conn.commit()
@@ -34,7 +41,9 @@ def init_db(conn):
 def parsed_time_to_iso(struct_time):
     if struct_time is None:
         return None
-    return datetime.fromtimestamp(time.mktime(struct_time), tz=timezone.utc).isoformat()
+    # feedparser的published_parsed/updated_parsed已经是UTC struct_time，要用timegm(按UTC解释)
+    # 而不是mktime(按本地时区解释)——本机是CST(UTC+8)，用mktime会让存入的时间系统性偏早8小时。
+    return datetime.fromtimestamp(calendar.timegm(struct_time), tz=timezone.utc).isoformat()
 
 
 def normalize_entry(source, entry):
@@ -61,10 +70,12 @@ def fetch_all():
     init_db(conn)
 
     total_new = 0
+    failed = []
     for source in SOURCES:
         parsed = feedparser.parse(source["url"])
         if parsed.bozo and not parsed.entries:
             print(f"[FAIL] {source['name']} ({source['url']}) — {parsed.bozo_exception}")
+            failed.append(source["name"])
             continue
 
         new_count = 0
@@ -88,6 +99,9 @@ def fetch_all():
 
     conn.close()
     print(f"\n共新增 {total_new} 条")
+    if failed:
+        print(f"共{len(failed)}个源抓取失败: {failed}", file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == "__main__":
