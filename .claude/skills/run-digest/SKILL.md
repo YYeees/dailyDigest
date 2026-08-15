@@ -13,9 +13,10 @@ description: 跑一次完整的dailyDigest流程——抓取新内容、按RANKI
 
 ```bash
 python3 fetch.py
+python3 fetch_x.py
 ```
 
-按guid去重，只会新增之前没见过的条目。
+按guid去重，只会新增之前没见过的条目。`fetch_x.py`抓`sources.py`里`X_SOURCES`那几个人的最新推文(目前Amanda Askell、Andrej Karpathy)，需要环境变量`TWITTERAPI_IO_KEY`(本地`.env`里有，CI在repo secrets里配)。
 
 ### 2. 读取待排序条目
 
@@ -23,24 +24,23 @@ python3 fetch.py
 python3 scripts/rank_items.py pending
 ```
 
-输出JSON数组，每条含 `guid/person/source_name/source_type/title/link/published/summary`。这个查询已经自动过滤了`published < 2026-07-01`的历史归档内容(永远不展示，不用排)和`ranked_at`不为空的(已经排过序的)。
+输出JSON数组，每条含 `guid/person/source_name/source_type/title/link/published/summary`，外加两个路由标记(算好的，不用自己判断)：`deep_read_eligible`(要不要在medium/high时抓全文精判)、`always_summarize`(不管tier都要写摘要)。这个查询已经自动过滤了历史归档内容(`config.py`里的`DIGEST_START_DATE`之前的，永远不展示，不用排)和`ranked_at`不为空的(已经排过序的)。
 
-如果返回空数组，说明没有新内容，直接跳到步骤5(仍建议跑一次export_json.py，无害)。
+如果返回空数组，说明没有新内容，直接跳到步骤5(仍建议跑一次export脚本，无害)。
 
 如果条目很多(比如第一次跑或者积压了几周)，分批处理，每批30~50条，避免一次读入太多。
 
-### 3. 两段式判断——读 `RANKING_CRITERIA.md` 获取完整标准，这里只列步骤
+### 3. 两段式判断——读 `RANKING_CRITERIA.md` 获取判断标准，这里只列执行步骤
 
 对每一条pending条目：
 
-**初筛**(只用title+summary，不抓取任何东西)：按`RANKING_CRITERIA.md`里Track 1(AI实操/趋势)和Track 2(thought-lab锚点)的标准，给出初步`ai_tier`/`ai_reason`/`anchor_tier`/`anchor_reason`。
+**初筛**(只用title+summary，不抓取任何东西)：按`RANKING_CRITERIA.md`里Track 1(AI实操/趋势)和Track 2(thought-lab锚点)的标准，给出初步`ai_tier`/`ai_reason`/`anchor_tier`/`anchor_reason`。Track 2判断前，先重新读一遍`/Users/taoye/claude/thought-lab/now/关注锚点清单.md`(这份清单用户自己维护，可能会变)。
 
-**精判**(只针对满足条件的条目)：
-- `source_type == "blog"` 且初筛任一track是`medium`或`high` → 用WebFetch工具抓一次`link`的全文，基于全文重新判断该track的tier(可以推翻初筛结果)，并写一段`digest_summary`(内容概要+核心观点，2~4句，不是摘录)。全文读完就丢，不要写入任何文件、不要存进结果JSON。
-- `source_type` 是 `podcast`/`youtube` → 不追加抓取，直接用初筛tier定档；如果任一track是`medium`/`high`，基于已有的`summary`字段写一段轻提炼作为`digest_summary`(不用WebFetch)。
-- `source_type == "blog"`且初筛两个track都是`low` → 维持low，`digest_summary`留空(null)。
-
-Track 2判断前，先重新读一遍`/Users/taoye/claude/thought-lab/now/关注锚点清单.md`(这份清单用户自己维护，可能会变)。
+**精判**(按pending输出里的路由标记执行，不用自己重新判断走哪条路径)：
+- `deep_read_eligible == true` 且初筛任一track是`medium`或`high` → 用WebFetch工具抓一次`link`的全文，基于全文重新判断该track的tier(可以推翻初筛结果)，并写一段`digest_summary`(内容概要+核心观点，2~4句，不是摘录)。全文读完就丢，不要写入任何文件、不要存进结果JSON。
+- `deep_read_eligible == false`(podcast/youtube/x)且初筛任一track是`medium`/`high` → 不追加抓取，基于已有的`summary`字段写一段轻提炼作为`digest_summary`。X的`summary`是英文推文原文，写成中文概要(1~2句)，不要照抄英文。
+- `always_summarize == true`(目前只有X) → 不管`ai_tier`/`anchor_tier`判成什么，都要写中文`digest_summary`——"7日内关注"页面的"X动态"板块对X是不管tier全展示的，用户要的是"知道更新了、大概聊了什么"。
+- 其余情况(`deep_read_eligible == false`且两个track都`low`且`always_summarize == false`) → 维持low，`digest_summary`留空(null)。
 
 ### 4. 写回数据库
 
@@ -54,7 +54,10 @@ python3 scripts/rank_items.py write <临时文件路径>
 
 ```bash
 python3 export_json.py
+python3 export_recent.py
 ```
+
+`export_json.py`导出月度归档(`docs/digest.html`用，只归档high档)，`export_recent.py`导出最近7天动态(`docs/index.html`"7日内关注"页的"AI实操/趋势"+"关注锚点"+"X动态"三个板块用)——**两个都要跑**，漏了`export_recent.py`该页面会拿不到数据。
 
 ### 6. 提交并推送
 

@@ -4,7 +4,10 @@
 
 用法:
     python scripts/rank_items.py pending [--limit N] [--source-type blog]
-        列出digest.db里ranked_at IS NULL的条目(JSON数组,写到stdout)。
+        列出digest.db里ranked_at IS NULL的条目(JSON数组,写到stdout)。每条额外带两个
+        路由标记(规则定义在config.py,不用去记RANKING_CRITERIA.md里的文字规则):
+        - deep_read_eligible: 初筛medium/high后要不要WebFetch全文精判
+        - always_summarize: 不管tier判成什么都要写digest_summary
 
     python scripts/rank_items.py write results.json
         把判断结果写回digest.db。results.json是数组,每个元素:
@@ -19,12 +22,12 @@ import json
 import sqlite3
 import sys
 from datetime import datetime, timezone
+from pathlib import Path
 
-DB_PATH = "digest.db"
-VALID_TIERS = {"high", "medium", "low"}
-# 月份选择器起始范围从七月开始(2026-08-13定案),更早的历史归档内容(比如部分blog feed
-# 暴露的全量历史文章)永远不会展示,不需要排序,查询时直接排除。
-DIGEST_START_DATE = "2026-07-01"
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from config import (  # noqa: E402
+    ALWAYS_SUMMARIZE_TYPES, DB_PATH, DEEP_READ_ELIGIBLE_TYPES, DIGEST_START_DATE, VALID_TIERS,
+)
 
 
 def cmd_pending(args):
@@ -44,7 +47,12 @@ def cmd_pending(args):
         query += " LIMIT ?"
         params.append(args.limit)
 
-    rows = [dict(row) for row in conn.execute(query, params)]
+    rows = []
+    for row in conn.execute(query, params):
+        item = dict(row)
+        item["deep_read_eligible"] = item["source_type"] in DEEP_READ_ELIGIBLE_TYPES
+        item["always_summarize"] = item["source_type"] in ALWAYS_SUMMARIZE_TYPES
+        rows.append(item)
     conn.close()
     json.dump(rows, sys.stdout, ensure_ascii=False, indent=2)
     print(f"\n共{len(rows)}条待排序", file=sys.stderr)
@@ -92,7 +100,7 @@ def main():
 
     p_pending = sub.add_parser("pending", help="列出待排序条目")
     p_pending.add_argument("--limit", type=int, default=None)
-    p_pending.add_argument("--source-type", default=None, choices=["blog", "podcast", "youtube"])
+    p_pending.add_argument("--source-type", default=None, choices=["blog", "podcast", "youtube", "x"])
     p_pending.set_defaults(func=cmd_pending)
 
     p_write = sub.add_parser("write", help="写回排序结果")

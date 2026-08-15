@@ -3,44 +3,54 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Daily Digest</title>
+<title>7日内关注 · Daily Digest</title>
 <style>
   :root {
-    --bg: #f7f6f3;
-    --card: #ffffff;
-    --text: #1f1d1a;
-    --muted: #767267;
-    --border: #e7e3da;
-    --accent: #b5502f;
-    --high: #b5502f;
-    --medium: #8a8474;
-    --today-bg: #fbf1e3;
-    --today-border: #e8d3ab;
+    --bg: #F0EEE6;
+    --card: #FAF9F5;
+    --text: #141413;
+    --muted: #5F5E57;
+    --border: #DDDAD0;
+    --accent: #B5522A;
+    --high: #B5522A;
+    --medium: #716F67;
+    --tag-high-bg: #cbcadb;
+    --tag-ai-bg: #bcd1ca;
+    --tag-anchor-bg: #bcd1ca;
+    --today-bg: var(--card);
+    --today-border: var(--accent);
   }
   * { box-sizing: border-box; }
-  html { font-size: 18px; }
+  html { font-size: 16px; scroll-behavior: smooth; }
   body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: Georgia, "Noto Serif SC", "PingFang SC", "Songti SC", serif;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", Helvetica, Arial, sans-serif;
     line-height: 1.75;
   }
   header {
     padding: 24px 24px 10px;
-    max-width: 1080px;
+    max-width: 720px;
     width: 94%;
     margin: 0 auto;
   }
   h1 { font-size: 1.5rem; margin: 0 0 14px; font-weight: 700; }
-  select {
+  h2.section-title {
     font-family: -apple-system, "PingFang SC", sans-serif;
-    font-size: 1rem;
-    padding: 7px 12px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    background: var(--card);
-    color: var(--text);
+    font-size: 0.95rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+    margin: 0;
+  }
+  h2.section-title .hint {
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: 400;
+    opacity: 0.8;
   }
   nav {
     font-family: -apple-system, "PingFang SC", sans-serif;
@@ -50,57 +60,127 @@
   nav a { color: var(--muted); text-decoration: none; }
   nav a:hover { color: var(--accent); }
   nav a.active { color: var(--text); font-weight: 600; }
-  main { max-width: 1080px; width: 94%; margin: 0 auto; padding: 10px 24px 60px; }
-  .track { margin-top: 32px; }
-  .track h2 {
+  main { max-width: 720px; width: 94%; margin: 0 auto; padding: 10px 24px 60px; }
+  .side-nav {
+    display: none;
+    position: fixed;
+    left: max(24px, calc(50% - 720px / 2 - 180px - 75px));
+    top: 130px;
+    flex-direction: column;
+    gap: 4px;
     font-family: -apple-system, "PingFang SC", sans-serif;
-    font-size: 0.95rem;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 8px;
+    font-size: 0.88rem;
   }
-  .track-items {
+  @media (min-width: 1100px) {
+    .side-nav { display: flex; }
+  }
+  .side-nav a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 7px 14px;
+    border-left: 2px solid var(--border);
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  .side-nav a:hover { color: var(--accent); border-left-color: var(--accent); }
+  section.board { margin-top: 36px; scroll-margin-top: 32px; }
+
+  /* ---- X动态板块 —— 紧凑单行列表 ---- */
+  .flow-list { margin-top: 10px; }
+  .flow-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 9px 10px;
+    border-left: 3px solid var(--border);
+    text-decoration: none;
+    color: var(--text);
+    font-family: -apple-system, "PingFang SC", sans-serif;
+  }
+  .flow-item:hover { background: var(--card); }
+  .flow-item.high { border-left-color: var(--high); }
+  .flow-item.medium { border-left-color: var(--medium); }
+  .flow-item.today { border-left-width: 4px; border-left-color: var(--today-border); }
+  .flow-icon { display: inline-flex; flex-shrink: 0; margin-top: 6px; }
+  .flow-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    flex-shrink: 0;
+    min-width: 96px;
+  }
+  .flow-person {
+    font-weight: 700;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  .flow-text {
+    font-size: 0.95rem;
+    color: var(--text);
+    flex: 1;
+    min-width: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .flow-date {
+    font-size: 0.75rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  /* ---- 卡片通用样式 ---- */
+  .card-grid, .card-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 12px;
     margin-top: 12px;
   }
   @media (min-width: 760px) {
-    .track-items { grid-template-columns: 1fr 1fr; }
+    .card-grid { grid-template-columns: 1fr 1fr; }
   }
   .item {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 16px 18px;
-    margin: 0;
   }
   .item.medium { opacity: 0.88; }
-  .item.today { background: var(--today-bg); border-color: var(--today-border); }
+  .item.today { border: 2px solid var(--today-border); }
   .item-meta {
     font-family: -apple-system, "PingFang SC", sans-serif;
-    font-size: 0.85rem;
+    font-size: 0.92rem;
     color: var(--muted);
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 8px;
   }
+  .source-type { display: inline-flex; align-items: center; }
   .tier-tag {
     font-family: -apple-system, "PingFang SC", sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 600;
     padding: 2px 8px;
     border-radius: 999px;
     color: #fff;
   }
-  .tier-high { background: var(--high); }
-  .tier-medium { background: var(--medium); }
+  .tier-high { background: var(--tag-high-bg); color: var(--text); }
+  .tier-medium { background: var(--tag-high-bg); color: var(--text); }
+  .category-tag {
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 1px 9px;
+    border-radius: 999px;
+    color: var(--text);
+    background: var(--border);
+  }
+  .category-ai { background: var(--tag-ai-bg); }
+  .category-anchor { background: var(--tag-anchor-bg); }
   .item a.title {
     display: block;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--text);
     text-decoration: none;
@@ -108,82 +188,150 @@
     line-height: 1.45;
   }
   .item a.title:hover { color: var(--accent); }
-  .meta-right {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+  .meta-left { display: inline-flex; align-items: center; gap: 6px; }
+  .meta-left .source-type svg { width: 20px; height: 20px; display: block; }
+  .meta-right { display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+  .item p { margin: 0; font-size: 1.02rem; color: var(--text); }
+
+  /* ---- 板块3：GitHub Trending —— 独立筛选器 + 卡片 ---- */
+  .filters { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+  select {
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    padding: 7px 32px 7px 13px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background-color: var(--card);
+    color: var(--text);
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="%235F5E57" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    cursor: pointer;
+    transition: border-color 0.15s ease;
   }
-  .source-type {
-    display: inline-flex;
+  select:hover { border-color: var(--accent); }
+  select:focus { outline: none; border-color: var(--accent); }
+  .tag.diff-tag { background: var(--border); color: var(--muted); }
+  .tag-row { display: inline-flex; gap: 6px; }
+  .tag {
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    color: #fff;
   }
-  .item p { margin: 0; font-size: 1.05rem; color: #45423c; }
+
   .empty {
-    grid-column: 1 / -1;
     font-family: -apple-system, "PingFang SC", sans-serif;
     color: var(--muted);
-    font-size: 0.95rem;
-    padding: 20px 0;
+    font-size: 0.9rem;
+    padding: 14px 0;
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Daily Digest</h1>
-  <nav><a class="active" href="index.html">Digest</a> · <a href="trending.html">GitHub Trending</a></nav>
-  <select id="monthSelect"></select>
+  <h1>7日内关注</h1>
+  <nav><a class="active" href="index.html">7日内关注</a> · <a href="digest.html">月度 Digest</a></nav>
 </header>
+<nav class="side-nav">
+  <a href="#board-x">X动态</a>
+  <a href="#board-content">最近更新</a>
+  <a href="#board-trending">GitHub Trending</a>
+</nav>
 <main>
-  <section class="track">
-    <h2>AI实操 / 趋势</h2>
-    <div id="aiTrack" class="track-items"></div>
+  <section class="board" id="board-x">
+    <h2 class="section-title">X动态 <span class="hint">· Amanda Askell / Andrej Karpathy / Ray Dalio · 最近7天</span></h2>
+    <div id="xBoard" class="flow-list"></div>
   </section>
-  <section class="track">
-    <h2>关注锚点</h2>
-    <div id="anchorTrack" class="track-items"></div>
+
+  <section class="board" id="board-content">
+    <h2 class="section-title">最近更新 <span class="hint">· 最近7天</span></h2>
+    <div class="filters">
+      <select id="contentTrackFilter">
+        <option value="">类型：全部</option>
+        <option value="ai">AI</option>
+        <option value="anchor">锚点</option>
+      </select>
+      <select id="contentTierFilter">
+        <option value="">推荐度：全部</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+      </select>
+    </div>
+    <div id="contentBoard" class="card-list"></div>
+  </section>
+
+  <section class="board" id="board-trending">
+    <h2 class="section-title">GitHub Trending <span class="hint">· AI High Stars</span></h2>
+    <div class="filters">
+      <select id="tierFilter">
+        <option value="">值得关注程度：全部</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+      </select>
+      <select id="difficultyFilter">
+        <option value="">难度：全部</option>
+        <option value="beginner">入门</option>
+        <option value="intermediate">进阶</option>
+        <option value="advanced">较难</option>
+      </select>
+    </div>
+    <div id="trendingBoard" class="card-list"></div>
   </section>
 </main>
 
 <script>
-async function loadMonths() {
-  const res = await fetch('data/months.json');
-  const { months } = await res.json();
-  const sel = document.getElementById('monthSelect');
-  sel.innerHTML = months.map(m => `<option value="${m}">${m}</option>`).join('');
-  sel.addEventListener('change', () => loadMonth(sel.value));
-  if (months.length) loadMonth(months[0]);
-}
-
-// 内联SVG,不依赖外部图片请求。YouTube用其播放按钮标志;播客/博客没有单一平台可代表,
-// 分别用业内通用的播客图标、标准RSS图标(内容本来就是走RSS抓的,语义也对)。
+// 内联SVG,不依赖外部图片请求。
 const TYPE_ICON = {
-  // YouTube标志用它真实的宽高比(宽矩形+居中播放三角),不是正方形,不然认不出来
   youtube: {
     label: 'YouTube',
-    svg: '<svg width="22" height="16" viewBox="0 0 28 20"><rect width="28" height="20" rx="4" fill="#FF0000"/><path d="M11 6l8 4-8 4V6z" fill="#fff"/></svg>',
+    svg: '<svg width="34" height="24" viewBox="0 0 28 20"><rect width="28" height="20" rx="4" fill="#FF0000"/><path d="M11 6l8 4-8 4V6z" fill="#fff"/></svg>',
   },
-  // 播客用标准麦克风图标(话筒+支架),比之前的广播弧线更清楚
   podcast: {
     label: '播客',
-    svg: '<svg width="16" height="16" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#8B5CF6"/><rect x="10" y="5" width="4" height="9" rx="2" fill="#fff"/><path d="M7 11a5 5 0 0 0 10 0" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/><line x1="12" y1="16" x2="12" y2="19" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><line x1="9" y1="19" x2="15" y2="19" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>',
+    svg: '<svg width="24" height="24" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#8B5CF6"/><rect x="10" y="5" width="4" height="9" rx="2" fill="#fff"/><path d="M7 11a5 5 0 0 0 10 0" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/><line x1="12" y1="16" x2="12" y2="19" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><line x1="9" y1="19" x2="15" y2="19" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>',
   },
-  // 标准RSS图标:圆点+两条同心弧,弧线圆心精确对齐圆点位置(标准RSS图标的画法)
   blog: {
-    label: '文章（RSS）',
-    svg: '<svg width="16" height="16" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#FF8C00"/><circle cx="6.5" cy="17.5" r="2" fill="#fff"/><path d="M6.5 11.5a6 6 0 0 1 6 6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M6.5 6.5a11 11 0 0 1 11 11" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>',
+    label: '文章',
+    svg: '<svg width="24" height="24" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#FF8C00"/><rect x="5.5" y="4" width="13" height="16" rx="1.5" fill="#fff"/><line x1="8" y1="8.5" x2="15.5" y2="8.5" stroke="#FF8C00" stroke-width="1.4" stroke-linecap="round"/><line x1="8" y1="11.8" x2="15.5" y2="11.8" stroke="#FF8C00" stroke-width="1.4" stroke-linecap="round"/><line x1="8" y1="15.1" x2="12.5" y2="15.1" stroke="#FF8C00" stroke-width="1.4" stroke-linecap="round"/></svg>',
+  },
+  x: {
+    label: 'X',
+    svg: '<svg width="24" height="24" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#000"/><path d="M6 6l12 12M18 6L6 18" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
   },
 };
 
-function renderItem(item, tier, latestDate) {
-  const desc = item.summary || item.reason || '';
+function latestDateIn(items) {
+  return items.reduce((max, i) => (i.date > max ? i.date : max), '');
+}
+
+// ---- 最近更新板块：AI实操+关注锚点合并。右上角两类独立标签：
+// 内容类型(可能1-2个，中性色) + 推荐程度(该条目命中的最佳tier，彩色) ----
+const TRACK_LABEL = { ai: 'AI', anchor: '锚点' };
+const TIER_LABEL = { high: 'High', medium: 'Medium' };
+const TIER_ORDER = { high: 0, medium: 1 };
+
+function renderContentItem(item, latestDate) {
+  const desc = item.summary || (item.tracks[0] && item.tracks[0].reason) || '';
   const type = TYPE_ICON[item.source_type] || { svg: '🔗', label: item.source_type || '' };
-  const latestClass = item.date === latestDate ? ' today' : '';
+  const todayClass = item.date === latestDate ? ' today' : '';
+  const bestTier = item.tracks.reduce((best, t) => (TIER_ORDER[t.tier] < TIER_ORDER[best] ? t.tier : best), 'medium');
+  const categoryTags = item.tracks.map(t => `<span class="category-tag category-${t.track}">${TRACK_LABEL[t.track]}</span>`).join('');
   return `
-    <div class="item ${tier}${latestClass}">
+    <div class="item ${bestTier}${todayClass}">
       <div class="item-meta">
-        <span>${item.person} · ${item.date}</span>
-        <span class="meta-right">
+        <span class="meta-left">
           <span class="source-type" title="${type.label}">${type.svg}</span>
-          <span class="tier-tag tier-${tier}">${tier === 'high' ? '重点' : '值得一看'}</span>
+          ${item.person} · ${item.date}
+        </span>
+        <span class="meta-right">
+          ${categoryTags}
+          <span class="tier-tag tier-${bestTier}">${TIER_LABEL[bestTier]}</span>
         </span>
       </div>
       <a class="title" href="${item.link}" target="_blank" rel="noopener">${item.title}</a>
@@ -192,32 +340,107 @@ function renderItem(item, tier, latestDate) {
   `;
 }
 
-function renderTrack(containerId, trackData, latestDate) {
-  const el = document.getElementById(containerId);
-  const items = [
-    ...trackData.high.map(i => ({ i, tier: 'high' })),
-    ...trackData.medium.map(i => ({ i, tier: 'medium' })),
-  ];
-  items.sort((a, b) => (a.i.date < b.i.date ? 1 : a.i.date > b.i.date ? -1 : 0));
-  el.innerHTML = items.length
-    ? items.map(({ i, tier }) => renderItem(i, tier, latestDate)).join('')
-    : '<div class="empty">这个月这条track没有内容</div>';
+let contentItems = [];
+let contentLatestDate = '';
+
+function renderContent() {
+  const track = document.getElementById('contentTrackFilter').value;
+  const tier = document.getElementById('contentTierFilter').value;
+  const filtered = contentItems.filter(i =>
+    (!track || i.tracks.some(t => t.track === track)) &&
+    (!tier || i.tracks.some(t => t.tier === tier))
+  );
+  const el = document.getElementById('contentBoard');
+  el.innerHTML = filtered.length
+    ? filtered.map(i => renderContentItem(i, contentLatestDate)).join('')
+    : '<div class="empty">没有符合条件的内容</div>';
 }
 
-function latestDateIn(data) {
-  const all = [...data.ai_track.high, ...data.ai_track.medium, ...data.anchor_track.high, ...data.anchor_track.medium];
-  return all.reduce((max, i) => (i.date > max ? i.date : max), '');
-}
-
-async function loadMonth(month) {
-  const res = await fetch(`data/digest_${month}.json`);
+async function loadRecent() {
+  const res = await fetch('data/recent.json');
   const data = await res.json();
-  const latestDate = latestDateIn(data);
-  renderTrack('aiTrack', data.ai_track, latestDate);
-  renderTrack('anchorTrack', data.anchor_track, latestDate);
+  contentItems = data.items;
+  contentLatestDate = latestDateIn(data.items);
+  document.getElementById('contentTrackFilter').addEventListener('change', renderContent);
+  document.getElementById('contentTierFilter').addEventListener('change', renderContent);
+  renderContent();
 }
 
-loadMonths();
+// ---- X动态板块 ----
+function renderXItem(i, latestDate) {
+  const type = TYPE_ICON[i.source_type] || { svg: '🔗', label: i.source_type || '' };
+  const todayClass = i.date === latestDate ? ' today' : '';
+  const text = i.summary || i.title;
+  return `
+    <a class="flow-item ${i.tier}${todayClass}" href="${i.link}" target="_blank" rel="noopener" title="${text.replace(/"/g, '&quot;')}">
+      <span class="flow-icon" title="${type.label}">${type.svg}</span>
+      <span class="flow-meta">
+        <span class="flow-person">${i.person}</span>
+        <span class="flow-date">${i.date}</span>
+      </span>
+      <span class="flow-text">${text}</span>
+    </a>
+  `;
+}
+
+async function loadX() {
+  const res = await fetch('data/x_recent.json');
+  const data = await res.json();
+  const latestDate = latestDateIn(data.items);
+  const el = document.getElementById('xBoard');
+  el.innerHTML = data.items.length
+    ? data.items.map(i => renderXItem(i, latestDate)).join('')
+    : '<div class="empty">最近7天没有新动态</div>';
+}
+
+// ---- 板块3：GitHub Trending ----
+const DIFFICULTY_LABEL = { beginner: '入门', intermediate: '进阶', advanced: '较难' };
+let trendingItems = [];
+
+function renderTrendingItem(item) {
+  const stars = item.stars_total != null ? `★ ${item.stars_total.toLocaleString()}` : '';
+  const diffTag = item.difficulty
+    ? `<span class="category-tag">${DIFFICULTY_LABEL[item.difficulty] || item.difficulty}</span>`
+    : '';
+  return `
+    <div class="item ${item.worth_tier}">
+      <div class="item-meta">
+        <span class="meta-left">${item.language || ''} · ${stars}</span>
+        <span class="meta-right">
+          ${diffTag}
+          <span class="tier-tag tier-${item.worth_tier}">${TIER_LABEL[item.worth_tier] || item.worth_tier}</span>
+        </span>
+      </div>
+      <a class="title" href="${item.url}" target="_blank" rel="noopener">${item.full_name}</a>
+      <p>${item.recommend_reason || item.description || ''}</p>
+    </div>
+  `;
+}
+
+function renderTrending() {
+  const tier = document.getElementById('tierFilter').value;
+  const difficulty = document.getElementById('difficultyFilter').value;
+  const filtered = trendingItems.filter(i =>
+    (!tier || i.worth_tier === tier) && (!difficulty || i.difficulty === difficulty)
+  );
+  const el = document.getElementById('trendingBoard');
+  el.innerHTML = filtered.length
+    ? filtered.map(renderTrendingItem).join('')
+    : '<div class="empty">没有符合条件的项目</div>';
+}
+
+async function loadTrending() {
+  const res = await fetch('data/trending.json');
+  const data = await res.json();
+  trendingItems = data.items;
+  document.getElementById('tierFilter').addEventListener('change', renderTrending);
+  document.getElementById('difficultyFilter').addEventListener('change', renderTrending);
+  renderTrending();
+}
+
+loadRecent();
+loadX();
+loadTrending();
 </script>
 </body>
 </html>

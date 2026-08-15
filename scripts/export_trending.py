@@ -3,13 +3,19 @@
 (worth_tier=low的仓库留在库里，不进展示层——跟digest的low处理方式一致)
 每个仓库取最新一天的daily_snapshots数据(star数)；同一天可能因为出现在多个语言榜而有多条快照，
 取排名最靠前的那条。
+
+2026-08-15定案：不用展示太多，按tier→star数排完序只取综合最值得推荐的前
+config.TRENDING_DAILY_LIMIT个，不是把评估过的仓库全部展示出来。
 """
 
 import json
 import sqlite3
+import sys
 from pathlib import Path
 
-DB_PATH = "digest.db"
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from config import DB_PATH, TRENDING_DAILY_LIMIT  # noqa: E402
+
 OUT_PATH = Path("docs/data/trending.json")
 
 
@@ -46,10 +52,11 @@ def export():
 
     tier_order = {"high": 0, "medium": 1}
     items.sort(key=lambda i: (tier_order.get(i["worth_tier"], 9), -(i["stars_total"] or 0)))
+    items = items[:TRENDING_DAILY_LIMIT]
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(json.dumps({"items": items}, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"[OK] {OUT_PATH} — {len(items)}个仓库 "
+    print(f"[OK] {OUT_PATH} — {len(items)}个仓库(上限{TRENDING_DAILY_LIMIT}) "
           f"(high:{sum(1 for i in items if i['worth_tier']=='high')} "
           f"medium:{sum(1 for i in items if i['worth_tier']=='medium')})")
 

@@ -1,86 +1,65 @@
 {
-  "ai_track": {
-    "high": [
-      {
-        "person": "Ethan Mollick",
-        "title": "An opinionated guide to which AI to use to do stuff",
-        "link": "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22",
-        "date": "2026-07-23",
-        "source_type": "blog",
-        "reason": "最贴合当前水平的AI工具选型实操指南",
-        "summary": "二〇二六夏季版AI工具选型指南。核心判断：AI已经从聊天工具进化成能自主干几个小时活的「代理系统」。日常需求用免费模型就够，医疗、法律这类高风险决策要上Claude Opus／Fable或GPT-5.6 Sol这类最强模型。最实用建议：每月二十美元订阅一个，把AI当团队成员管，给它权限、设安全检查点，像带新人一样持续调教。"
-      }
-    ],
-    "medium": [
-      {
-        "person": "Ray Dalio",
-        "title": "Want To Speak With Me? Try My Digital Twin",
-        "link": "https://www.youtube.com/shorts/2MEmlCl87QQ",
-        "date": "2026-07-08",
-        "source_type": "youtube",
-        "reason": "他自己做AI数字分身，轻量但有趣",
-        "summary": null
-      },
-      {
-        "person": "Naval Ravikant",
-        "title": "Live in the Future",
-        "link": "https://nav.al/future",
-        "date": "2026-07-02",
-        "source_type": "podcast",
-        "reason": "创业者视角聊AI／未来，偏宏观不算实操",
-        "summary": null
-      }
-    ]
-  },
-  "anchor_track": {
-    "high": [
-      {
-        "person": "Jason Fried",
-        "title": "Mistaking making for the thing you've made",
-        "link": "https://world.hey.com/jason/mistaking-making-for-the-thing-you-ve-made-bd348df9",
-        "date": "2026-07-24",
-        "source_type": "blog",
-        "reason": "质朴中正、护城河在harness不在模型，同派构建者视角",
-        "summary": "Jason Fried用厨房与餐食、蓝图与建筑作比喻，论证一个核心观点：开发速度、commit数量这些生产过程指标，说不出产品本身的质量和体验好不好。不要把「怎么做出来的」和「做出来的东西好不好」混为一谈。"
-      },
-      {
-        "person": "Maggie Appleton",
-        "title": "In Memoriam, Encountering World War I, and Thinkable Horrors",
-        "link": "https://maggieappleton.com/in-memoriam/",
-        "date": "2026-07-17",
-        "source_type": "blog",
-        "reason": "透过历史追问人如何承受苦难，一手反思写作",
-        "summary": "作者读小说《In Memoriam》补上了对一战的认知空白——基于大量一手史料的历史虚构，呈现堑壕战里士兵在泥浆、尸体与机枪火力中大规模死亡的真实图景。她用约九千五百朵罂粟花对应九百五十万军人死亡，并由此联想到气候变化、AI风险这类当代的「工业规模威胁」。"
-      }
-    ],
-    "medium": [
-      {
-        "person": "Lex Fridman",
-        "title": "#499 – Gary Gallagher: American Civil War, Slavery, Lincoln, Grant & Lee",
-        "link": "https://lexfridman.com/gary-gallagher/?utm_source=rss&utm_medium=rss&utm_campaign=gary-gallagher",
-        "date": "2026-07-28",
-        "source_type": "podcast",
-        "reason": "历史学家对话，历史镜头看人如何自处",
-        "summary": null
-      },
-      {
-        "person": "Andrew Huberman",
-        "title": "Essentials: Using Meditation to Focus, View Consciousness & Expand Your Mind | Dr. Sam Harris",
-        "link": "https://www.youtube.com/watch?v=LQI8tl8S2PE",
-        "date": "2026-07-23",
-        "source_type": "youtube",
-        "reason": "冥想／意识话题，沾自我认识的边",
-        "summary": null
-      },
-      {
-        "person": "Craig Mod",
-        "title": "[RIDGELINE] Kazunori Hamana in Apartamento",
-        "link": "https://craigmod.com/ridgeline/231/",
-        "date": "2026-07-11",
-        "source_type": "blog",
-        "reason": "匠人活法，周边主题",
-        "summary": null
-      }
-    ]
-  }
+  "items": [
+    {
+      "person": "Jason Fried",
+      "title": "Mistaking making for the thing you've made",
+      "link": "https://world.hey.com/jason/mistaking-making-for-the-thing-you-ve-made-bd348df9",
+      "date": "2026-07-24",
+      "source_type": "blog",
+      "summary": "Jason Fried用厨房与餐食、蓝图与建筑作比喻，论证一个核心观点：开发速度、commit数量这些生产过程指标，说不出产品本身的质量和体验好不好。不要把「怎么做出来的」和「做出来的东西好不好」混为一谈。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "质朴中正、护城河在harness不在模型，同派构建者视角"
+        }
+      ]
+    },
+    {
+      "person": "Ethan Mollick",
+      "title": "An opinionated guide to which AI to use to do stuff",
+      "link": "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22",
+      "date": "2026-07-23",
+      "source_type": "blog",
+      "summary": "二〇二六夏季版AI工具选型指南。核心判断：AI已经从聊天工具进化成能自主干几个小时活的「代理系统」。日常需求用免费模型就够，医疗、法律这类高风险决策要上Claude Opus／Fable或GPT-5.6 Sol这类最强模型。最实用建议：每月二十美元订阅一个，把AI当团队成员管，给它权限、设安全检查点，像带新人一样持续调教。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "最贴合当前水平的AI工具选型实操指南"
+        }
+      ]
+    },
+    {
+      "person": "Andrej Karpathy",
+      "title": "One pattern I find useful for working with LLMs is a nice long ramble session. Sometimes the LLM nee…",
+      "link": "https://x.com/karpathy/status/2079610838143623371",
+      "date": "2026-07-21",
+      "source_type": "x",
+      "summary": "Karpathy分享了一个用LLM的小技巧：遇到一时说不清楚的需求，切换到语音模式随口碎碎念几分钟(总带一点混乱也没关系)，LLM往往能把这些杂乱的话整理得比自己原本的思路还清晰，能减少后续来回修正的次数。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "具体的LLM使用技巧(用语音模式长时间碎碎念给模型更多上下文)，直接影响日常怎么用AI工具，实操性强"
+        }
+      ]
+    },
+    {
+      "person": "Maggie Appleton",
+      "title": "In Memoriam, Encountering World War I, and Thinkable Horrors",
+      "link": "https://maggieappleton.com/in-memoriam/",
+      "date": "2026-07-17",
+      "source_type": "blog",
+      "summary": "作者读小说《In Memoriam》补上了对一战的认知空白——基于大量一手史料的历史虚构，呈现堑壕战里士兵在泥浆、尸体与机枪火力中大规模死亡的真实图景。她用约九千五百朵罂粟花对应九百五十万军人死亡，并由此联想到气候变化、AI风险这类当代的「工业规模威胁」。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "透过历史追问人如何承受苦难，一手反思写作"
+        }
+      ]
+    }
+  ],
+  "github_track": []
 }

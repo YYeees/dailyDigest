@@ -1,176 +1,180 @@
 {
-  "ai_track": {
-    "high": [
-      {
-        "person": "Simon Willison",
-        "title": "DeepSeek V4 Pro 0813 (on OpenRouter)",
-        "link": "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/",
-        "date": "2026-08-12",
-        "source_type": "blog",
-        "reason": "前沿模型新发布，趋势追踪",
-        "summary": "DeepSeek发布V4 Pro 0813，目前只开放API访问。一个有意思的细节：这个模型在低／中／高不同推理强度下生成的图像差异很明显，这在其他模型里比较少见。"
-      },
-      {
-        "person": "Andrew Huberman",
-        "title": "Using AI to Increase Your Intelligence & Enrich Humanity | Dr. Fei-Fei Li",
-        "link": "https://www.youtube.com/watch?v=N5AQFYtqx8Q",
-        "date": "2026-08-10",
-        "source_type": "youtube",
-        "reason": "AI科学家（Fei-Fei Li）访谈，内容扎实且不需要技术背景",
-        "summary": "Huberman对话斯坦福AI学者Fei-Fei Li，聊AI怎么安全地增强人类智力和创造力，而不只是搜索信息。两人讨论了AI与人类认知的本质区别、直觉和个人经验为什么难以被AI复制，以及AI加人机协作对健康和科研的正向可能性。"
-      },
-      {
-        "person": "Simon Willison",
-        "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
-        "link": "https://simonwillison.net/2026/Aug/8/auto-mode/",
-        "date": "2026-08-08",
-        "source_type": "blog",
-        "reason": "直接影响日常用Claude Code的方式，实操性强",
-        "summary": "Anthropic把Claude Code的auto mode设成Pro、Max、Team计划的默认选项。第三方评估显示auto mode拦截有害操作的表现很强——七百二十次针对性攻击尝试全部被挡下，远超人工审核。作者仍提醒提示注入这类风险需要独立验证，别照单全收。"
-      }
-    ],
-    "medium": [
-      {
-        "person": "Simon Willison",
-        "title": "llm-gemini 0.33",
-        "link": "https://simonwillison.net/2026/Aug/13/llm-gemini/",
-        "date": "2026-08-13",
-        "source_type": "blog",
-        "reason": "他自己的LLM命令行工具重大更新，新增支持刚发布的Gemini 3.7 Flash等模型，含推理追踪可视化、服务端工具调用等实操细节，工具依赖性强，参照过往同类判断给medium",
-        "summary": "Simon Willison更新了他的llm-gemini插件，支持刚发布的Gemini 3.7 Flash及多个新模型，并同步支持推理过程可视化、服务器端工具调用（如直接用命令行执行代码）等新能力，文中给出了具体的CLI操作示例。工具依赖性强（需要用他自己的llm命令行工具），但展示了当下主流模型CLI化实操的一个具体样本。"
-      },
-      {
-        "person": "Craig Mod",
-        "title": "[ESSAYS] A Swarm of Blood Robots",
-        "link": "https://craigmod.com/essays/robot_blood/",
-        "date": "2026-08-11",
-        "source_type": "blog",
-        "reason": "用LLM做基因谱系寻亲，真实创造性应用案例",
-        "summary": "Craig Mod分享用LLM做的一系列创新应用，核心是这次用Claude做家谱寻根——从零散线索追出自己的身世。他认为LLM最大价值在于把复杂信息检索转化为人性化的结果呈现，这类工具正处于应用爆发初期，价值被低估，关键是亲身体验而非跟风议论。"
-      },
-      {
-        "person": "Simon Willison",
-        "title": "Introducing Muse Glimmer",
-        "link": "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/",
-        "date": "2026-08-10",
-        "source_type": "blog",
-        "reason": "Meta开源模型动态",
-        "summary": null
-      },
-      {
-        "person": "Simon Willison",
-        "title": "Quoting Claude Opus 5 system prompt",
-        "link": "https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/",
-        "date": "2026-08-09",
-        "source_type": "blog",
-        "reason": "前沿模型行为细节，略技术但有启发",
-        "summary": null
-      },
-      {
-        "person": "Simon Willison",
-        "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
-        "link": "https://simonwillison.net/2026/Aug/8/now-we-have-a-timeline-of-the-openai-accidental-attack-against-h/",
-        "date": "2026-08-08",
-        "source_type": "blog",
-        "reason": "AI agent安全事故系列报道，与8/7那条重复，择一看即可",
-        "summary": null
-      },
-      {
-        "person": "Simon Willison",
-        "title": "Moonlight & Mayhem (Raccoon Heist by Codex + GPT-5.6 Sol Ultra)",
-        "link": "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/",
-        "date": "2026-08-07",
-        "source_type": "blog",
-        "reason": "编程agent实战小案例，跟上一条同系列",
-        "summary": null
-      },
-      {
-        "person": "Simon Willison",
-        "title": "The Tokenpocalypse Is Here: Companies Are Scrambling To Stop Spending So Much on AI",
-        "link": "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/",
-        "date": "2026-08-07",
-        "source_type": "blog",
-        "reason": "行业趋势：企业AI支出降温",
-        "summary": null
-      },
-      {
-        "person": "Simon Willison",
-        "title": "Introducing Muse Code and Muse Spark 1.2",
-        "link": "https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/",
-        "date": "2026-08-05",
-        "source_type": "blog",
-        "reason": "Meta开源模型动态",
-        "summary": null
-      },
-      {
-        "person": "Simon Willison",
-        "title": "Third-party cyber evaluations involving OpenAI models",
-        "link": "https://simonwillison.net/2026/Aug/5/third-party-cyber-evaluations/",
-        "date": "2026-08-05",
-        "source_type": "blog",
-        "reason": "AI agent安全事故系列报道之一",
-        "summary": null
-      },
-      {
-        "person": "Simon Willison",
-        "title": "Incident Report: unsanctioned agent behaviour during cyber testing",
-        "link": "https://simonwillison.net/2026/Aug/5/incident-report/",
-        "date": "2026-08-05",
-        "source_type": "blog",
-        "reason": "AI agent安全事故系列报道之一，趋势性强略专业",
-        "summary": null
-      },
-      {
-        "person": "Simon Willison",
-        "title": "One-shotting a Raccoon Heist game using Claude Fable 5",
-        "link": "https://simonwillison.net/2026/Aug/5/raccoon-heist/",
-        "date": "2026-08-05",
-        "source_type": "blog",
-        "reason": "编程agent实战小案例，直观好懂",
-        "summary": null
-      },
-      {
-        "person": "Simon Willison",
-        "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
-        "link": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/",
-        "date": "2026-08-04",
-        "source_type": "blog",
-        "reason": "他自己的LLM命令行工具重大更新，实用但工具依赖性强",
-        "summary": null
-      }
-    ]
-  },
-  "anchor_track": {
-    "high": [
-      {
-        "person": "Craig Mod",
-        "title": "[RODEN] Blood Robots For You and You and You",
-        "link": "https://craigmod.com/roden/117/",
-        "date": "2026-08-12",
-        "source_type": "blog",
-        "reason": "上一篇的后续，同一脉络",
-        "summary": "这期newsletter介绍了上面那篇四千字长文的写作过程与后续：他用Claude追踪到一篇尘封旧报纸，发现自己出生证明上的中间名竟源于一位几十年前意外身亡的陌生人。另外还提到摄影集《事物变成其他事物》精装第二版开放预订。"
-      },
-      {
-        "person": "Craig Mod",
-        "title": "[ESSAYS] A Swarm of Blood Robots",
-        "link": "https://craigmod.com/essays/robot_blood/",
-        "date": "2026-08-11",
-        "source_type": "blog",
-        "reason": "AI作为认知方式加深度自我认识（身份／收养）双命中，一手经历",
-        "summary": "Craig Mod分享用LLM做的一系列创新应用，核心是这次用Claude做家谱寻根——从零散线索追出自己的身世。他认为LLM最大价值在于把复杂信息检索转化为人性化的结果呈现，这类工具正处于应用爆发初期，价值被低估，关键是亲身体验而非跟风议论。"
-      }
-    ],
-    "medium": [
-      {
-        "person": "Craig Mod",
-        "title": "[RODEN] Oooohhh Summer, How Much Risk Is a Useful Amount of Risk?",
-        "link": "https://craigmod.com/roden/116/",
-        "date": "2026-08-03",
-        "source_type": "blog",
-        "reason": "质朴慢生活反思",
-        "summary": null
-      }
-    ]
-  }
+  "items": [
+    {
+      "person": "Simon Willison",
+      "title": "Don't classify. Hallucinate!",
+      "link": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/",
+      "date": "2026-08-14",
+      "source_type": "blog",
+      "summary": "这篇文章介绍了Doug Turnbull提出的一个分类技巧：面对1800多个标签的语料库，与其把完整标签表喂给LLM做选择，不如让模型\"幻觉\"生成它认为合适的新标签(给出格式示例但不给真实列表)，再用向量嵌入把生成的标签跟已有标签库做相似度匹配，找出最接近的真实标签。这样既避免了把庞大词表塞进prompt，又利用了LLM的生成能力，是一个具体可借鉴的分类实操思路。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "转发Doug Turnbull的分类技巧：不给LLM完整标签表，而是让它\"幻觉\"生成合适的新标签，再用向量嵌入去匹配真实标签库，避免把庞大标签表塞进prompt。方法具体、讲清楚了为什么有效，是可以直接借鉴的实操技巧"
+        }
+      ]
+    },
+    {
+      "person": "Craig Mod",
+      "title": "[RODEN] Blood Robots For You and You and You",
+      "link": "https://craigmod.com/roden/117/",
+      "date": "2026-08-12",
+      "source_type": "blog",
+      "summary": "这期newsletter介绍了上面那篇四千字长文的写作过程与后续：他用Claude追踪到一篇尘封旧报纸，发现自己出生证明上的中间名竟源于一位几十年前意外身亡的陌生人。另外还提到摄影集《事物变成其他事物》精装第二版开放预订。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "上一篇的后续，同一脉络"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "DeepSeek V4 Pro 0813 (on OpenRouter)",
+      "link": "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/",
+      "date": "2026-08-12",
+      "source_type": "blog",
+      "summary": "DeepSeek发布V4 Pro 0813，目前只开放API访问。一个有意思的细节：这个模型在低／中／高不同推理强度下生成的图像差异很明显，这在其他模型里比较少见。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布，趋势追踪"
+        }
+      ]
+    },
+    {
+      "person": "Craig Mod",
+      "title": "[ESSAYS] A Swarm of Blood Robots",
+      "link": "https://craigmod.com/essays/robot_blood/",
+      "date": "2026-08-11",
+      "source_type": "blog",
+      "summary": "Craig Mod分享用LLM做的一系列创新应用，核心是这次用Claude做家谱寻根——从零散线索追出自己的身世。他认为LLM最大价值在于把复杂信息检索转化为人性化的结果呈现，这类工具正处于应用爆发初期，价值被低估，关键是亲身体验而非跟风议论。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "AI作为认知方式加深度自我认识（身份／收养）双命中，一手经历"
+        }
+      ]
+    },
+    {
+      "person": "Andrew Huberman",
+      "title": "Using AI to Increase Your Intelligence & Enrich Humanity | Dr. Fei-Fei Li",
+      "link": "https://www.youtube.com/watch?v=N5AQFYtqx8Q",
+      "date": "2026-08-10",
+      "source_type": "youtube",
+      "summary": "Huberman对话斯坦福AI学者Fei-Fei Li，聊AI怎么安全地增强人类智力和创造力，而不只是搜索信息。两人讨论了AI与人类认知的本质区别、直觉和个人经验为什么难以被AI复制，以及AI加人机协作对健康和科研的正向可能性。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "AI科学家（Fei-Fei Li）访谈，内容扎实且不需要技术背景"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
+      "link": "https://simonwillison.net/2026/Aug/8/auto-mode/",
+      "date": "2026-08-08",
+      "source_type": "blog",
+      "summary": "Anthropic把Claude Code的auto mode设成Pro、Max、Team计划的默认选项。第三方评估显示auto mode拦截有害操作的表现很强——七百二十次针对性攻击尝试全部被挡下，远超人工审核。作者仍提醒提示注入这类风险需要独立验证，别照单全收。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接影响日常用Claude Code的方式，实操性强"
+        }
+      ]
+    },
+    {
+      "person": "Amanda Askell",
+      "title": "I don't agree with this part. I think the takeaway should be that models (like humans) can behave in…",
+      "link": "https://x.com/AmandaAskell/status/2084369056765989224",
+      "date": "2026-08-03",
+      "source_type": "x",
+      "summary": "Askell认为不应该简单地把\"对齐\"和\"无害\"划等号——模型可能在对齐的状态下仍然造成伤害(比如因为被给了错误的情境信息)，这是两个独立的维度，不存在一条清晰的分界线。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "Anthropic对齐研究员的一手概念性反思，重新框定\"对齐\"和\"无害\"是两个不同的轴，属于AI作为认知方式这个母题的一手思考"
+        }
+      ]
+    },
+    {
+      "person": "Andrej Karpathy",
+      "title": "We're starting to leave the territory where you'd test an LLM by e.g. \"create an svg of pelican on a…",
+      "link": "https://x.com/karpathy/status/2083749667410727319",
+      "date": "2026-08-02",
+      "source_type": "x",
+      "summary": "Karpathy用Opus 5尝试把《魔戒》开篇渲染成一个程序化3D世界(耗时约2小时、写了5500行代码)，展示了当前模型在自定义生成任务上的耐心和能力。但他也指出一个短板：模型很难像人一样通过\"看画面/玩游戏\"来自我校验渲染效果，多模态感知和游戏内自查能力还比较弱。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "用Opus 5做程序化LoTR世界渲染的具体实验，讲清楚了做法(1M token预算)、结果(5500行代码)和暴露出的能力短板(多模态/游戏内自我审查能力不足)，是前沿模型能力的一手观察"
+        }
+      ]
+    }
+  ],
+  "github_track": [
+    {
+      "full_name": "microsoft/ai-agents-for-beginners",
+      "url": "https://github.com/microsoft/ai-agents-for-beginners",
+      "description": "18 Lessons to Get Started Building AI Agents",
+      "language": "Jupyter Notebook",
+      "difficulty": "beginner",
+      "recommend_reason": "微软官方18节AI Agent课程，覆盖基础概念到RAG/多代理/内存管理/生产部署等实战主题，明确面向初学者，每节课含代码示例+视频讲解，系统性强。",
+      "stars_total": 72220
+    },
+    {
+      "full_name": "unslothai/unsloth",
+      "url": "https://github.com/unslothai/unsloth",
+      "description": "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
+      "language": "Python",
+      "difficulty": "intermediate",
+      "recommend_reason": "本地运行/训练AI模型的工具，支持主流模型的LoRA/QLoRA微调，比标准方法快、省显存，提供桌面UI和一键安装脚本降低门槛，是本地模型微调这个方向的代表工具。",
+      "stars_total": 71706
+    },
+    {
+      "full_name": "facebookresearch/segment-anything",
+      "url": "https://github.com/facebookresearch/segment-anything",
+      "description": "The repository provides code for running inference with the SegmentAnything Model (SAM), links for downloading the trained model checkpoints, and example notebooks that show how to use the model.",
+      "language": "Jupyter Notebook",
+      "difficulty": "intermediate",
+      "recommend_reason": "Meta的图像分割基础模型(SAM)，几行代码即可调用、有在线Demo不用本地部署，代表了当前视觉基础模型\"零样本迁移\"这个趋势的经典样本，需要一点Python/PyTorch基础。",
+      "stars_total": 54684
+    },
+    {
+      "full_name": "anthropics/claude-cookbooks",
+      "url": "https://github.com/anthropics/claude-cookbooks",
+      "description": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+      "language": "Jupyter Notebook",
+      "difficulty": "beginner",
+      "recommend_reason": "Anthropic官方的Claude API代码示例合集，涵盖分类/RAG/摘要/工具调用/多模态/子代理/prompt caching等主题，都是可直接运行的notebook，并给出了从API基础到高级优化的学习路径，一手官方资源、内容循序渐进。",
+      "stars_total": 51537
+    },
+    {
+      "full_name": "anthropics/courses",
+      "url": "https://github.com/anthropics/courses",
+      "description": "Anthropic's educational courses",
+      "language": "Jupyter Notebook",
+      "difficulty": "beginner",
+      "recommend_reason": "Anthropic官方的5门交互式课程，从API基础到提示工程、提示评估、工具使用，难度循序渐进，22.6k星、有配套云平台版本，是学Claude实操最权威的一手资源。",
+      "stars_total": 22628
+    },
+    {
+      "full_name": "QwenLM/Qwen3-VL",
+      "url": "https://github.com/QwenLM/Qwen3-VL",
+      "description": "Qwen3-VL is the multimodal large language model series developed by Qwen team, Alibaba Cloud.",
+      "language": "Jupyter Notebook",
+      "difficulty": "intermediate",
+      "recommend_reason": "阿里Qwen团队官方多模态大模型，视觉理解/OCR/空间推理/GUI操作能力全面，提供Transformers代码示例几行代码即可调用，是当前多模态模型能力的一个很好的观察窗口。",
+      "stars_total": 19789
+    }
+  ]
 }

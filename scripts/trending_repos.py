@@ -20,10 +20,10 @@ import json
 import sqlite3
 import sys
 from datetime import datetime, timezone
+from pathlib import Path
 
-DB_PATH = "digest.db"
-VALID_DIFFICULTY = {"beginner", "intermediate", "advanced"}
-VALID_WORTH_TIER = {"high", "medium", "low"}
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from config import DB_PATH, VALID_DIFFICULTY, VALID_WORTH_TIER  # noqa: E402
 
 
 def cmd_pending(args):

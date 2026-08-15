@@ -9,9 +9,8 @@ from datetime import datetime, timezone
 
 import feedparser
 
+from config import DB_PATH
 from sources import SOURCES
-
-DB_PATH = "digest.db"
 
 
 def init_db(conn):

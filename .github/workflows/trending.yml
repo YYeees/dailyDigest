@@ -1,9 +1,10 @@
-name: Daily GitHub Trending
+name: Weekly GitHub Trending
 
 on:
   schedule:
-    # 每天 UTC 01:00(北京时间上午9点)跑一次
-    - cron: '0 1 * * *'
+    # 每周一 UTC 01:00(北京时间周一上午9点)跑一次——2026-08-15从每日改成每周，
+    # 日榜量太大(单天能有50+新仓库)，评估成本跟"只展示top6/10"这个精简目标不匹配。
+    - cron: '0 1 * * 1'
   workflow_dispatch: {}
 
 permissions:
@@ -39,5 +40,5 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          claude -p "调用 rank-github-trending 这个skill，完整跑一遍流程：抓取当日trending、评估所有待处理仓库(evaluated_at为空的)、导出前端JSON、git commit+push。这是无人值守的定时任务，commit+push不需要额外确认，直接做。" \
+          claude -p "调用 rank-github-trending 这个skill，完整跑一遍流程：抓取本周trending、评估所有待处理仓库(evaluated_at为空的)、导出前端JSON、git commit+push。这是无人值守的定时任务，commit+push不需要额外确认，直接做。" \
             --permission-mode bypassPermissions

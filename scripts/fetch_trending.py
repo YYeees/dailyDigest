@@ -1,7 +1,13 @@
 """
-抓取GitHub Trending(全语言榜 + Python/Jupyter Notebook/TypeScript这几个AI项目高频出现的语言榜)，
+抓取GitHub Trending周榜(全语言榜 + Python/Jupyter Notebook/TypeScript这几个AI项目高频出现的语言榜)，
 写入digest.db的repos表(仓库基础信息，靠full_name去重，一个仓库只存一份)和daily_snapshots表
-(每天每个仓库的star数/排名，允许同一仓库多天多条)。
+(每次抓取时每个仓库的star数/排名，允许同一仓库多次多条——表名叫daily_snapshots是历史遗留，
+2026-08-15起实际按周跑，不是按天，字段含义不变只是频率变了，没改表名/字段名避免迁移)。
+
+2026-08-15从"每天抓日榜"改成"每周抓周榜"(since=weekly)：日榜量太大(单天能有50+新仓库)，
+评估成本跟"只展示top6/10"这个精简目标不匹配，周榜天然把一周的热度聚合成一份，评估量更可控。
+月度视图不用额外处理——export_json.py本来就按first_seen_date聚合当月发现的high档仓库，
+一个月大概攒4次周榜的结果，自然形成月度精华。
 
 不做AI评估——新仓库写入repos表后，ai_related等字段留空(evaluated_at IS NULL)，
 由trending_repos.py + GITHUB_TRENDING_CRITERIA.md那一步(Claude Code现场读README判断)来填。
@@ -11,22 +17,28 @@ GitHub没有官方trending API，这里靠解析trending页面的HTML。页面�
 
 import re
 import sqlite3
+import sys
 from datetime import date, datetime, timezone
+from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
 
-DB_PATH = "digest.db"
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from config import DB_PATH  # noqa: E402
+
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; dailyDigest-trending-bot/1.0)"}
 
 TRENDING_PAGES = [
-    ("all", "https://github.com/trending?since=daily"),
-    ("python", "https://github.com/trending/python?since=daily"),
-    ("jupyter-notebook", "https://github.com/trending/jupyter-notebook?since=daily"),
-    ("typescript", "https://github.com/trending/typescript?since=daily"),
+    ("all", "https://github.com/trending?since=weekly"),
+    ("python", "https://github.com/trending/python?since=weekly"),
+    ("jupyter-notebook", "https://github.com/trending/jupyter-notebook?since=weekly"),
+    ("typescript", "https://github.com/trending/typescript?since=weekly"),
 ]
 
-STARS_TODAY_RE = re.compile(r"([\d,]+)\s+stars?\s+today")
+# 日榜文案是"X stars today"，周榜是"X stars this week"，月榜是"X stars this month"——
+# 三种都匹配，不管since=daily/weekly/monthly哪个都能正确解析。
+STARS_TODAY_RE = re.compile(r"([\d,]+)\s+stars?\s+(?:today|this week|this month)")
 
 
 def init_db(conn):
