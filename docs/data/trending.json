@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "full_name": "infiniflow/ragflow",
+      "url": "https://github.com/infiniflow/ragflow",
+      "description": "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
+      "language": "Go",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "开源RAG引擎，融合深度文档理解、模板化分块、引文溯源、多重召回融合重排等能力，是企业级RAG应用的代表项目之一。88.5k星、生产就绪，提供云服务版本和完整Docker部署方案降低上手门槛，是了解当前RAG工程实践的一个很好的切入点。",
+      "first_seen_date": "2026-08-15",
+      "stars_total": 88464,
+      "last_snapshot_date": "2026-08-15"
+    },
+    {
+      "full_name": "unslothai/unsloth",
+      "url": "https://github.com/unslothai/unsloth",
+      "description": "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
+      "language": "Python",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "本地运行/训练AI模型的工具，支持Qwen/DeepSeek/Gemma等主流模型的LoRA/QLoRA微调，号称比标准方法快2倍、省70%显存。提供桌面UI和一键安装脚本降低操作门槛，但训练任务本身还是需要一些深度学习基础，是本地模型微调这个方向的代表工具。",
+      "first_seen_date": "2026-08-15",
+      "stars_total": 71609,
+      "last_snapshot_date": "2026-08-15"
+    },
+    {
+      "full_name": "anthropics/claude-cookbooks",
+      "url": "https://github.com/anthropics/claude-cookbooks",
+      "description": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+      "language": "Jupyter Notebook",
+      "difficulty": "beginner",
+      "worth_tier": "high",
+      "recommend_reason": "Anthropic官方的Claude API代码示例合集，涵盖分类/RAG/摘要/工具调用/多模态/子代理模式等主题，都是可直接运行的Jupyter notebook，并给出了从API基础到高级优化的学习路径建议。作为一手官方资源、内容循序渐进，跟当前\"想成为AI高手\"的学习节奏非常贴合。",
+      "first_seen_date": "2026-08-15",
+      "stars_total": 51529,
+      "last_snapshot_date": "2026-08-15"
+    },
+    {
+      "full_name": "ed-donner/agents",
+      "url": "https://github.com/ed-donner/agents",
+      "description": "Repo for the Complete Agentic AI Engineering Course",
+      "language": "Jupyter Notebook",
+      "difficulty": "beginner",
+      "worth_tier": "high",
+      "recommend_reason": "\"Complete Agentic AI Engineering Course\"的完整课程材料，6周内容覆盖OpenAI/CrewAI/LangChain/LangGraph/MCP等主流框架，官方明确说无编程背景也能学。6000+星、结构完整，对系统性学AI agent实操来说是个很扎实的学习路径，不是零散资料拼凑。",
+      "first_seen_date": "2026-08-15",
+      "stars_total": 5952,
+      "last_snapshot_date": "2026-08-15"
+    },
+    {
+      "full_name": "cactus-compute/needle",
+      "url": "https://github.com/cactus-compute/needle",
+      "description": "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
+      "language": "Python",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "开源的4500万参数轻量模型，专为手机/穿戴设备/机器人这类资源受限设备做推理优化，14MB单文件、约28MB内存占用。提供pip安装+完整代码示例(工具调用、结构化数据提取)、在线Playground、支持LoRA微调，从概念到工程实现都覆盖，是端侧小模型这个新趋势的一个扎实样本。",
+      "first_seen_date": "2026-08-15",
+      "stars_total": 5732,
+      "last_snapshot_date": "2026-08-15"
+    }
+  ]
+}

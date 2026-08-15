@@ -14,6 +14,8 @@
     --accent: #b5502f;
     --high: #b5502f;
     --medium: #8a8474;
+    --today-bg: #fbf1e3;
+    --today-border: #e8d3ab;
   }
   * { box-sizing: border-box; }
   html { font-size: 18px; }
@@ -40,6 +42,14 @@
     background: var(--card);
     color: var(--text);
   }
+  nav {
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+  }
+  nav a { color: var(--muted); text-decoration: none; }
+  nav a:hover { color: var(--accent); }
+  nav a.active { color: var(--text); font-weight: 600; }
   main { max-width: 1080px; width: 94%; margin: 0 auto; padding: 10px 24px 60px; }
   .track { margin-top: 32px; }
   .track h2 {
@@ -68,6 +78,7 @@
     margin: 0;
   }
   .item.medium { opacity: 0.88; }
+  .item.today { background: var(--today-bg); border-color: var(--today-border); }
   .item-meta {
     font-family: -apple-system, "PingFang SC", sans-serif;
     font-size: 0.85rem;
@@ -118,6 +129,7 @@
 <body>
 <header>
   <h1>Daily Digest</h1>
+  <nav><a class="active" href="index.html">Digest</a> · <a href="trending.html">GitHub Trending</a></nav>
   <select id="monthSelect"></select>
 </header>
 <main>
@@ -161,11 +173,12 @@ const TYPE_ICON = {
   },
 };
 
-function renderItem(item, tier) {
+function renderItem(item, tier, latestDate) {
   const desc = item.summary || item.reason || '';
   const type = TYPE_ICON[item.source_type] || { svg: '🔗', label: item.source_type || '' };
+  const latestClass = item.date === latestDate ? ' today' : '';
   return `
-    <div class="item ${tier}">
+    <div class="item ${tier}${latestClass}">
       <div class="item-meta">
         <span>${item.person} · ${item.date}</span>
         <span class="meta-right">
@@ -179,22 +192,29 @@ function renderItem(item, tier) {
   `;
 }
 
-function renderTrack(containerId, trackData) {
+function renderTrack(containerId, trackData, latestDate) {
   const el = document.getElementById(containerId);
   const items = [
     ...trackData.high.map(i => ({ i, tier: 'high' })),
     ...trackData.medium.map(i => ({ i, tier: 'medium' })),
   ];
+  items.sort((a, b) => (a.i.date < b.i.date ? 1 : a.i.date > b.i.date ? -1 : 0));
   el.innerHTML = items.length
-    ? items.map(({ i, tier }) => renderItem(i, tier)).join('')
+    ? items.map(({ i, tier }) => renderItem(i, tier, latestDate)).join('')
     : '<div class="empty">这个月这条track没有内容</div>';
+}
+
+function latestDateIn(data) {
+  const all = [...data.ai_track.high, ...data.ai_track.medium, ...data.anchor_track.high, ...data.anchor_track.medium];
+  return all.reduce((max, i) => (i.date > max ? i.date : max), '');
 }
 
 async function loadMonth(month) {
   const res = await fetch(`data/digest_${month}.json`);
   const data = await res.json();
-  renderTrack('aiTrack', data.ai_track);
-  renderTrack('anchorTrack', data.anchor_track);
+  const latestDate = latestDateIn(data);
+  renderTrack('aiTrack', data.ai_track, latestDate);
+  renderTrack('anchorTrack', data.anchor_track, latestDate);
 }
 
 loadMonths();
