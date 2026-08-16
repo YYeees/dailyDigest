@@ -1,12 +1,129 @@
 {
   "items": [
     {
+      "person": "Ray Dalio",
+      "title": "Open-mindedness doesn't mean going along with what you don't believe in; it means considering the re…",
+      "link": "https://x.com/RayDalio/status/2088687888997253449",
+      "date": "2026-08-15",
+      "source_type": "x",
+      "summary": "达利欧澄清开放心态不等于盲从他人,而是认真考虑他人的理由而非固执己见——真正的开放心态要求你敢于面对\"自己可能是错的\"这一可能性,并主动欢迎他人指出。",
+      "tier": "low"
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "Being radically truthful and transparent with your colleagues and expecting your colleagues to be th…",
+      "link": "https://x.com/RayDalio/status/2088596577325903984",
+      "date": "2026-08-15",
+      "source_type": "x",
+      "summary": "达利欧说对同事保持彻底真实透明、也要求同事同样对待自己,能让重要问题浮出水面而非被隐藏,倒逼所有人保持高标准的思考和行为。",
+      "tier": "low"
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "The first stock I ever bought was the only company I’d heard of selling for under $5 a share. I stup…",
+      "link": "https://x.com/RayDalio/status/2088288411350085880",
+      "date": "2026-08-14",
+      "source_type": "x",
+      "summary": "达利欧回忆自己人生第一次买股票:因为便宜且\"听说过这家公司\"就买入,结果公司险些破产又被收购股价翻三倍——从此\"上瘾\"般迷上了投资这个游戏。",
+      "tier": "low"
+    },
+    {
+      "person": "Andy Matuschak",
+      "title": "What a beautiful project—an ode to the mundane wonders in our living rooms.  Reminds me of Gordon Br…",
+      "link": "https://x.com/andy_matuschak/status/2088076416458113101",
+      "date": "2026-08-14",
+      "source_type": "x",
+      "summary": "Andy Matuschak转发了一个关于客厅日常物件的\"平凡奇迹\"项目,联想到Gordon Brander\"身边的一切都是某人的毕生之作\"这一说法。",
+      "tier": "medium"
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "It’s important not to let our biases stand in the way of our objectivity. To get good results, we ne…",
+      "link": "https://x.com/RayDalio/status/2087990551761096864",
+      "date": "2026-08-13",
+      "source_type": "x",
+      "summary": "达利欧分享一个认知习惯:每当他觉得自然界某种现象\"不对\"时,会先假设自己错了,反过来去理解自然为何如此运作——这重塑了他对善恶、人生目的与重大抉择的看法。",
+      "tier": "medium"
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "In an idea meritocracy, openness is a responsibility; you not only have the privilege to speak up an…",
+      "link": "https://x.com/RayDalio/status/2087744042725413364",
+      "date": "2026-08-13",
+      "source_type": "x",
+      "summary": "达利欧说在\"理念精英制\"文化里,开放不仅是权利也是责任——你必须为对的事情发声,唯一不被允许的是私下抱怨批评,做不到就该离开。",
+      "tier": "low"
+    },
+    {
+      "person": "Andy Matuschak",
+      "title": "A weird advantage of writing by hand is that because it's so slow, I experience stuckness less. By t…",
+      "link": "https://x.com/andy_matuschak/status/2087677816661790856",
+      "date": "2026-08-12",
+      "source_type": "x",
+      "summary": "Andy Matuschak反思手写的一个反直觉优势:因为写字慢,反而更少陷入\"卡壳\"——打字时常常思维快过手速,写到句尾会突然断片,那种令人想逃避分心的\"不知道下一步写什么\"的感觉会更强烈地暴露出来。",
+      "tier": "medium"
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "My reaction from just watching the solar eclipse is that it was a spiritual moment because it brough…",
+      "link": "https://x.com/RayDalio/status/2087633884242448480",
+      "date": "2026-08-12",
+      "source_type": "x",
+      "summary": "达利欧说观看日食是一次\"灵性时刻\",让不同背景的人因自然而共聚一堂;他认为灵性(关照共同福祉)与自私自利之间的较量,将决定人类的福祉甚至存续。",
+      "tier": "medium"
+    },
+    {
       "person": "Amanda Askell",
       "title": "When I started playing Skyrim, I quickly realized you can make a lot of progress without doing any k…",
       "link": "https://x.com/AmandaAskell/status/2087597131800674495",
       "date": "2026-08-12",
       "source_type": "x",
       "summary": "分享玩《上古卷轴5：天际》的经历：她基本不打怪，专注于收养孤儿、给他们盖房子，游戏主线剧情反而没什么印象了。",
+      "tier": "low"
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "My experience, based on watching thousands of people try this approach, is that with practice the va…",
+      "link": "https://x.com/RayDalio/status/2087287662898204778",
+      "date": "2026-08-11",
+      "source_type": "x",
+      "summary": "达利欧说据他观察上千人实践某种方法后,大多数人会觉得回报感很强、难以再用旧方式做事,但这通常需要约18个月来改变习惯。",
+      "tier": "low"
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "People keep cash because they think it's safer, but it's not. You're actually losing money because o…",
+      "link": "https://x.com/RayDalio/status/2087181674643685511",
+      "date": "2026-08-11",
+      "source_type": "x",
+      "summary": "达利欧提醒:持有现金看似安全实则因通胀在贬值,他在与Steven Bartlett的对谈中详细解释了这一观点。",
+      "tier": "low"
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "Many of you have asked about how I've learned to deal with setbacks, so I’m sharing a list of princi…",
+      "link": "https://x.com/RayDalio/status/2086945445029322891",
+      "date": "2026-08-10",
+      "source_type": "x",
+      "summary": "达利欧发布了一份汇总帖,分享他多年来应对挫折/设定的一系列原则。",
+      "tier": "low"
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "I had a blast being out until 4am with my family and friends at UNVRS in Ibiza for my 77th birthday…",
+      "link": "https://x.com/RayDalio/status/2086803219942866965",
+      "date": "2026-08-10",
+      "source_type": "x",
+      "summary": "达利欧分享了在伊比萨岛UNVRS夜店庆祝77岁生日、狂欢到凌晨4点的经历。",
+      "tier": "low"
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "The more open-minded you are, the less likely you are to deceive yourself-- and the more likely it i…",
+      "link": "https://x.com/RayDalio/status/2086527936518320255",
+      "date": "2026-08-09",
+      "source_type": "x",
+      "summary": "达利欧重申开放心态与透明度的价值:越开放越不容易自我欺骗,也更容易获得真实反馈,虽然暴露批评让人本能恐惧,但不主动透明就无法真正学习。",
       "tier": "low"
     }
   ]
