@@ -6,17 +6,17 @@
       "link": "https://simonwillison.net/2026/Aug/15/cors-chat/",
       "date": "2026-08-15",
       "source_type": "blog",
-      "summary": "Simon Willison用GPT-5.6-Sol Xhigh辅助写了个叫CORS Chat的网页工具,可直接对接任意OpenAI Responses兼容的API端点,用它在自己的M5 MacBook Pro和NVIDIA DGX Spark上测试本地跑的Qwen 3.8 27B模型(通过LM Studio的--cors选项)及OpenRouter。工具支持会话本地保存/导出为JSON,还有个细节亮点:能在token流式生成过程中实时渲染出正在生成的SVG图像。",
+      "summary": "Simon Willison用GPT-5.6-Sol Xhigh辅助写了个叫CORS Chat的网页工具，可直接对接任意OpenAI Responses兼容的API端点，用它在自己的M5 MacBook Pro和NVIDIA DGX Spark上测试本地跑的Qwen 3.8 27B模型（通过LM Studio的--cors选项）及OpenRouter。工具支持会话本地保存/导出为JSON，还有个细节亮点：能在token流式生成过程中实时渲染出正在生成的SVG图像。",
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "作者自己周末做的小工具项目介绍(CORS Chat网页聊天工具,用来测本地跑的Qwen 3.8 27B),非面向普通用户的AI应用指南,按标准判medium"
+          "reason": "作者自己周末做的小工具项目介绍（CORS Chat网页聊天工具，用来测本地跑的Qwen 3.8 27B），非面向普通用户的AI应用指南，按标准判medium"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "纯工程向工具搭建,未见对认知方式/harness哲学的一手反思"
+          "reason": "纯工程向工具搭建，未见对认知方式/harness哲学的一手反思"
         }
       ]
     },
@@ -26,12 +26,12 @@
       "link": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/",
       "date": "2026-08-14",
       "source_type": "blog",
-      "summary": "这篇文章介绍了Doug Turnbull提出的一个分类技巧：面对1800多个标签的语料库，与其把完整标签表喂给LLM做选择，不如让模型\"幻觉\"生成它认为合适的新标签(给出格式示例但不给真实列表)，再用向量嵌入把生成的标签跟已有标签库做相似度匹配，找出最接近的真实标签。这样既避免了把庞大词表塞进prompt，又利用了LLM的生成能力，是一个具体可借鉴的分类实操思路。",
+      "summary": "这篇文章介绍了Doug Turnbull提出的一个分类技巧：面对1800多个标签的语料库，与其把完整标签表喂给LLM做选择，不如让模型“幻觉”生成它认为合适的新标签（给出格式示例但不给真实列表），再用向量嵌入把生成的标签跟已有标签库做相似度匹配，找出最接近的真实标签。这样既避免了把庞大词表塞进prompt，又利用了LLM的生成能力，是一个具体可借鉴的分类实操思路。",
       "tracks": [
         {
           "track": "ai",
           "tier": "high",
-          "reason": "转发Doug Turnbull的分类技巧：不给LLM完整标签表，而是让它\"幻觉\"生成合适的新标签，再用向量嵌入去匹配真实标签库，避免把庞大标签表塞进prompt。方法具体、讲清楚了为什么有效，是可以直接借鉴的实操技巧"
+          "reason": "转发Doug Turnbull的分类技巧：不给LLM完整标签表，而是让它“幻觉”生成合适的新标签，再用向量嵌入去匹配真实标签库，避免把庞大标签表塞进prompt。方法具体、讲清楚了为什么有效，是可以直接借鉴的实操技巧"
         }
       ]
     },
