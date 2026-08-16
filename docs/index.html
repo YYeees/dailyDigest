@@ -86,6 +86,7 @@
 
   /* ---- X动态板块 —— 紧凑单行列表 ---- */
   .flow-list { margin-top: 10px; }
+  .flow-list.scrollable { overflow-y: auto; padding-right: 6px; }
   .flow-item {
     display: flex;
     align-items: flex-start;
@@ -390,6 +391,8 @@ function renderXItem(i, latestDate) {
   `;
 }
 
+const X_VISIBLE_COUNT = 6;
+
 async function loadX() {
   const res = await fetch('data/x_recent.json');
   const data = await res.json();
@@ -398,6 +401,18 @@ async function loadX() {
   el.innerHTML = data.items.length
     ? data.items.map(i => renderXItem(i, latestDate)).join('')
     : '<div class="empty">最近7天没有新动态</div>';
+
+  // 超过X_VISIBLE_COUNT条时，把容器高度锁定在正好显示这么多条，多出来的靠滚动条翻——
+  // 按实际渲染出来的前N条高度算，不用猜一个固定像素数(字号/行数变了也不用跟着改)。
+  if (el.children.length > X_VISIBLE_COUNT) {
+    let height = 0;
+    for (let idx = 0; idx < X_VISIBLE_COUNT; idx++) height += el.children[idx].getBoundingClientRect().height;
+    el.style.maxHeight = height + 'px';
+    el.classList.add('scrollable');
+  } else {
+    el.style.maxHeight = '';
+    el.classList.remove('scrollable');
+  }
 }
 
 // ---- 板块3：GitHub Trending ----
