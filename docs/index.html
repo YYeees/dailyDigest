@@ -207,6 +207,26 @@
   .meta-right { display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
   .item p { margin: 0; font-size: 1.02rem; color: var(--text); text-align: justify; }
 
+  /* ---- 运行日志板块 —— 每次定时任务的token用量/费用摘要 ---- */
+  .run-log-list {
+    margin-top: 10px;
+    font-family: -apple-system, "PingFang SC", sans-serif;
+    font-size: 0.85rem;
+  }
+  .run-log-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 10px;
+    padding: 7px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .run-log-row:last-child { border-bottom: none; }
+  .run-log-time { flex-shrink: 0; width: 150px; color: var(--muted); }
+  .run-log-label { flex-shrink: 0; width: 110px; font-weight: 600; }
+  .run-log-cost { flex-shrink: 0; width: 76px; color: var(--accent); font-weight: 600; }
+  .run-log-tokens { flex: 1; min-width: 220px; color: var(--muted); }
+
   /* ---- 板块3：GitHub Trending —— 独立筛选器 + 卡片 ---- */
   .filters { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
   select {
@@ -256,6 +276,7 @@
   <a href="#board-x">X动态</a>
   <a href="#board-content">最近更新</a>
   <a href="#board-trending">GitHub Trending</a>
+  <a href="#board-runlog">运行日志</a>
 </nav>
 <main>
   <section class="board" id="board-x">
@@ -296,6 +317,11 @@
       </select>
     </div>
     <div id="trendingBoard" class="card-list scroll-thin"></div>
+  </section>
+
+  <section class="board" id="board-runlog">
+    <h2 class="section-title">运行日志 <span class="hint">· 每次定时任务的token用量/费用，明细见仓库logs/目录</span></h2>
+    <div id="runLogBoard" class="run-log-list scroll-thin"></div>
   </section>
 </main>
 
@@ -480,9 +506,40 @@ async function loadTrending() {
   renderTrending();
 }
 
+// ---- 板块4：运行日志 ----
+const RUNLOG_VISIBLE_COUNT = 5;
+const RUNLOG_LABEL = { digest: '内容 Digest', trending: 'GitHub Trending' };
+
+function renderRunLogItem(r) {
+  const label = RUNLOG_LABEL[r.label] || r.label;
+  const cost = r.total_cost_usd != null ? `$${r.total_cost_usd.toFixed(4)}` : '—';
+  const time = r.timestamp ? r.timestamp.replace('T', ' ').slice(0, 16) + ' UTC' : '';
+  const errTag = r.is_error ? '<span class="tier-tag tier-medium">失败</span>' : '';
+  return `
+    <div class="run-log-row">
+      <span class="run-log-time">${time}</span>
+      <span class="run-log-label">${label}</span>
+      <span class="run-log-cost">${cost}</span>
+      <span class="run-log-tokens">input ${r.input_tokens ?? '—'} · output ${r.output_tokens ?? '—'} · cache写 ${r.cache_creation_input_tokens ?? '—'} · cache读 ${r.cache_read_input_tokens ?? '—'}</span>
+      ${errTag}
+    </div>
+  `;
+}
+
+async function loadRunLog() {
+  const res = await fetch('data/run_log.json');
+  const data = await res.json();
+  const el = document.getElementById('runLogBoard');
+  el.innerHTML = data.runs && data.runs.length
+    ? data.runs.map(renderRunLogItem).join('')
+    : '<div class="empty">还没有运行记录</div>';
+  capVisibleHeight(el, RUNLOG_VISIBLE_COUNT);
+}
+
 loadRecent();
 loadX();
 loadTrending();
+loadRunLog();
 </script>
 </body>
 </html>

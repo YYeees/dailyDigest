@@ -41,4 +41,11 @@ jobs:
           TWITTERAPI_IO_KEY: ${{ secrets.TWITTERAPI_IO_KEY }}
         run: |
           claude -p "调用 run-digest 这个skill，完整跑一遍流程：抓取新内容、两段式判断优先级、生成摘要、导出前端JSON、git commit+push。这是无人值守的定时任务，commit+push不需要额外确认，直接做。" \
-            --permission-mode bypassPermissions
+            --permission-mode bypassPermissions --output-format json | tee /tmp/claude_result.json
+
+      - name: Log token usage and cost
+        run: |
+          python3 scripts/log_usage.py /tmp/claude_result.json --label digest
+          git add logs/digest.jsonl docs/data/run_log.json
+          git diff --cached --quiet || git commit -m "Log digest run usage/cost"
+          git push
