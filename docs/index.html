@@ -85,21 +85,27 @@
   section.board { margin-top: 36px; scroll-margin-top: 32px; }
 
   /* ---- X动态板块 —— 紧凑单行列表 ---- */
+  .flow-list-wrap { position: relative; }
   .flow-list { margin-top: 10px; }
   .flow-list.scrollable {
     overflow-y: auto;
     padding-right: 6px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--border) transparent;
+    scrollbar-width: none;
   }
-  .flow-list.scrollable::-webkit-scrollbar { width: 5px; }
-  .flow-list.scrollable::-webkit-scrollbar-track { background: transparent; }
-  .flow-list.scrollable::-webkit-scrollbar-thumb {
+  .flow-list.scrollable::-webkit-scrollbar { display: none; }
+  /* 原生滚动条滑块长度是按内容比例自动算的，max-height这类属性浏览器不认，没法固定
+     长度——所以这里自己做一个跟着滚动位置走的定长色块，取代原生滚动条(2026-08-16改)。 */
+  .flow-scroll-thumb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 24px;
     background: var(--border);
-    border-radius: 3px;
-    min-height: 24px;
-    max-height: 24px;
+    border-radius: 2px;
+    display: none;
   }
+  .flow-scroll-thumb.visible { display: block; }
   .flow-item {
     display: flex;
     align-items: flex-start;
@@ -130,7 +136,7 @@
     text-overflow: ellipsis;
   }
   .flow-text {
-    font-size: 0.95rem;
+    font-size: 0.8875rem;
     color: var(--text);
     flex: 1;
     min-width: 0;
@@ -262,7 +268,10 @@
 <main>
   <section class="board" id="board-x">
     <h2 class="section-title">X动态 <span class="hint">· Amanda Askell / Andrej Karpathy / Ray Dalio · 最近7天</span></h2>
-    <div id="xBoard" class="flow-list"></div>
+    <div class="flow-list-wrap">
+      <div id="xBoard" class="flow-list"></div>
+      <div id="xScrollThumb" class="flow-scroll-thumb"></div>
+    </div>
   </section>
 
   <section class="board" id="board-content">
@@ -422,10 +431,25 @@ async function loadX() {
     for (let idx = 0; idx < X_VISIBLE_COUNT; idx++) height += el.children[idx].getBoundingClientRect().height;
     el.style.maxHeight = height + 'px';
     el.classList.add('scrollable');
+    setupScrollThumb(el, document.getElementById('xScrollThumb'));
   } else {
     el.style.maxHeight = '';
     el.classList.remove('scrollable');
   }
+}
+
+// 自定义滚动条滑块：跟着el的滚动位置走，长度固定(见CSS里.flow-scroll-thumb的height)。
+function setupScrollThumb(el, thumb) {
+  const THUMB_HEIGHT = 24;
+  function update() {
+    const scrollable = el.scrollHeight - el.clientHeight;
+    if (scrollable <= 0) { thumb.classList.remove('visible'); return; }
+    thumb.classList.add('visible');
+    const maxTop = el.clientHeight - THUMB_HEIGHT;
+    thumb.style.top = (el.scrollTop / scrollable) * maxTop + 'px';
+  }
+  el.addEventListener('scroll', update);
+  update();
 }
 
 // ---- 板块3：GitHub Trending ----
