@@ -1,17 +1,16 @@
-name: Weekly GitHub Trending
+name: Daily Digest
 
 on:
   schedule:
-    # 每周一 UTC 01:00(北京时间周一上午9点)跑一次——2026-08-15从每日改成每周，
-    # 日榜量太大(单天能有50+新仓库)，评估成本跟"只展示top6/10"这个精简目标不匹配。
-    - cron: '0 1 * * 1'
+    # 每天UTC 22:00(北京时间早6点)跑一次，赶在用户早上打开网页之前把当天内容准备好。
+    - cron: '0 22 * * *'
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
 jobs:
-  trending:
+  digest:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -36,9 +35,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Run rank-github-trending skill
+      - name: Run run-digest skill
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          TWITTERAPI_IO_KEY: ${{ secrets.TWITTERAPI_IO_KEY }}
         run: |
-          claude -p "调用 rank-github-trending 这个skill，完整跑一遍流程：抓取本周trending、评估所有待处理仓库(evaluated_at为空的)、导出前端JSON、git commit+push。这是无人值守的定时任务，commit+push不需要额外确认，直接做。" \
+          claude -p "调用 run-digest 这个skill，完整跑一遍流程：抓取新内容、两段式判断优先级、生成摘要、导出前端JSON、git commit+push。这是无人值守的定时任务，commit+push不需要额外确认，直接做。" \
             --permission-mode bypassPermissions
