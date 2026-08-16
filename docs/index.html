@@ -60,7 +60,7 @@
   nav a { color: var(--muted); text-decoration: none; }
   nav a:hover { color: var(--accent); }
   nav a.active { color: var(--text); font-weight: 600; }
-  main { max-width: 720px; width: 94%; margin: 0 auto; padding: 10px 24px 60px; }
+  main { max-width: 740px; width: 94%; margin: 0 auto; padding: 10px 24px 60px; }
   .side-nav {
     display: none;
     position: fixed;
@@ -84,22 +84,24 @@
   .side-nav a:hover { color: var(--accent); border-left-color: var(--accent); }
   section.board { margin-top: 36px; scroll-margin-top: 32px; }
 
-  /* ---- X动态板块 —— 紧凑单行列表 ---- */
-  .flow-list { margin-top: 10px; }
-  .flow-list.scrollable {
+  /* ---- 超过可见条数时限高+滚动，X动态板块和GitHub Trending板块共用 ---- */
+  .scroll-thin.scrollable {
     overflow-y: auto;
     padding-right: 6px;
     scrollbar-width: thin;
     scrollbar-color: var(--border) transparent;
   }
-  .flow-list.scrollable::-webkit-scrollbar { width: 5px; }
-  .flow-list.scrollable::-webkit-scrollbar-track { background: transparent; }
-  .flow-list.scrollable::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  .scroll-thin.scrollable::-webkit-scrollbar { width: 5px; }
+  .scroll-thin.scrollable::-webkit-scrollbar-track { background: transparent; }
+  .scroll-thin.scrollable::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  /* ---- X动态板块 —— 紧凑单行列表 ---- */
+  .flow-list { margin-top: 10px; }
   .flow-item {
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    padding: 7px 10px;
+    padding: 7.5px 10px;
     border-left: 3px solid var(--border);
     text-decoration: none;
     color: var(--text);
@@ -125,7 +127,7 @@
     text-overflow: ellipsis;
   }
   .flow-text {
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     color: var(--text);
     flex: 1;
     min-width: 0;
@@ -258,7 +260,7 @@
 <main>
   <section class="board" id="board-x">
     <h2 class="section-title">X动态 <span class="hint">· Amanda Askell / Andrej Karpathy / Ray Dalio · 最近7天</span></h2>
-    <div id="xBoard" class="flow-list"></div>
+    <div id="xBoard" class="flow-list scroll-thin"></div>
   </section>
 
   <section class="board" id="board-content">
@@ -293,7 +295,7 @@
         <option value="advanced">较难</option>
       </select>
     </div>
-    <div id="trendingBoard" class="card-list"></div>
+    <div id="trendingBoard" class="card-list scroll-thin"></div>
   </section>
 </main>
 
@@ -411,11 +413,17 @@ async function loadX() {
     ? data.items.map(i => renderXItem(i, latestDate)).join('')
     : '<div class="empty">最近7天没有新动态</div>';
 
-  // 超过X_VISIBLE_COUNT条时，把容器高度锁定在正好显示这么多条，多出来的靠滚动条翻——
-  // 按实际渲染出来的前N条高度算，不用猜一个固定像素数(字号/行数变了也不用跟着改)。
-  if (el.children.length > X_VISIBLE_COUNT) {
+  capVisibleHeight(el, X_VISIBLE_COUNT);
+}
+
+// 超过count条时，把容器高度锁定在正好显示这么多条(含grid的行间距)，多出来的靠滚动条翻——
+// 按实际渲染出来的前N条高度算，不用猜一个固定像素数(字号/行数变了也不用跟着改)。
+function capVisibleHeight(el, count) {
+  if (el.children.length > count) {
     let height = 0;
-    for (let idx = 0; idx < X_VISIBLE_COUNT; idx++) height += el.children[idx].getBoundingClientRect().height;
+    for (let idx = 0; idx < count; idx++) height += el.children[idx].getBoundingClientRect().height;
+    const gap = parseFloat(getComputedStyle(el).rowGap) || 0;
+    height += gap * (count - 1);
     el.style.maxHeight = height + 'px';
     el.classList.add('scrollable');
   } else {
@@ -448,6 +456,8 @@ function renderTrendingItem(item) {
   `;
 }
 
+const TRENDING_VISIBLE_COUNT = 3;
+
 function renderTrending() {
   const tier = document.getElementById('tierFilter').value;
   const difficulty = document.getElementById('difficultyFilter').value;
@@ -458,6 +468,7 @@ function renderTrending() {
   el.innerHTML = filtered.length
     ? filtered.map(renderTrendingItem).join('')
     : '<div class="empty">没有符合条件的项目</div>';
+  capVisibleHeight(el, TRENDING_VISIBLE_COUNT);
 }
 
 async function loadTrending() {
