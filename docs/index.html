@@ -86,7 +86,15 @@
 
   /* ---- X动态板块 —— 紧凑单行列表 ---- */
   .flow-list { margin-top: 10px; }
-  .flow-list.scrollable { overflow-y: auto; padding-right: 6px; }
+  .flow-list.scrollable {
+    overflow-y: auto;
+    padding-right: 6px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  .flow-list.scrollable::-webkit-scrollbar { width: 5px; }
+  .flow-list.scrollable::-webkit-scrollbar-track { background: transparent; }
+  .flow-list.scrollable::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
   .flow-item {
     display: flex;
     align-items: flex-start;
