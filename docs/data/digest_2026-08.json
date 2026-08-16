@@ -5,6 +5,7 @@
       "title": "Don't classify. Hallucinate!",
       "link": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/",
       "date": "2026-08-14",
+      "first_seen": "2026-08-15",
       "source_type": "blog",
       "summary": "这篇文章介绍了Doug Turnbull提出的一个分类技巧：面对1800多个标签的语料库，与其把完整标签表喂给LLM做选择，不如让模型“幻觉”生成它认为合适的新标签（给出格式示例但不给真实列表），再用向量嵌入把生成的标签跟已有标签库做相似度匹配，找出最接近的真实标签。这样既避免了把庞大词表塞进prompt，又利用了LLM的生成能力，是一个具体可借鉴的分类实操思路。",
       "tracks": [
@@ -20,6 +21,7 @@
       "title": "[RODEN] Blood Robots For You and You and You",
       "link": "https://craigmod.com/roden/117/",
       "date": "2026-08-12",
+      "first_seen": "2026-08-13",
       "source_type": "blog",
       "summary": "这期newsletter介绍了上面那篇四千字长文的写作过程与后续：他用Claude追踪到一篇尘封旧报纸，发现自己出生证明上的中间名竟源于一位几十年前意外身亡的陌生人。另外还提到摄影集《事物变成其他事物》精装第二版开放预订。",
       "tracks": [
@@ -35,6 +37,7 @@
       "title": "DeepSeek V4 Pro 0813 (on OpenRouter)",
       "link": "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/",
       "date": "2026-08-12",
+      "first_seen": "2026-08-13",
       "source_type": "blog",
       "summary": "DeepSeek发布V4 Pro 0813，目前只开放API访问。一个有意思的细节：这个模型在低／中／高不同推理强度下生成的图像差异很明显，这在其他模型里比较少见。",
       "tracks": [
@@ -50,6 +53,7 @@
       "title": "[ESSAYS] A Swarm of Blood Robots",
       "link": "https://craigmod.com/essays/robot_blood/",
       "date": "2026-08-11",
+      "first_seen": "2026-08-13",
       "source_type": "blog",
       "summary": "Craig Mod分享用LLM做的一系列创新应用，核心是这次用Claude做家谱寻根——从零散线索追出自己的身世。他认为LLM最大价值在于把复杂信息检索转化为人性化的结果呈现，这类工具正处于应用爆发初期，价值被低估，关键是亲身体验而非跟风议论。",
       "tracks": [
@@ -65,6 +69,7 @@
       "title": "Using AI to Increase Your Intelligence & Enrich Humanity | Dr. Fei-Fei Li",
       "link": "https://www.youtube.com/watch?v=N5AQFYtqx8Q",
       "date": "2026-08-10",
+      "first_seen": "2026-08-13",
       "source_type": "youtube",
       "summary": "Huberman对话斯坦福AI学者Fei-Fei Li，聊AI怎么安全地增强人类智力和创造力，而不只是搜索信息。两人讨论了AI与人类认知的本质区别、直觉和个人经验为什么难以被AI复制，以及AI加人机协作对健康和科研的正向可能性。",
       "tracks": [
@@ -80,6 +85,7 @@
       "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
       "link": "https://simonwillison.net/2026/Aug/8/auto-mode/",
       "date": "2026-08-08",
+      "first_seen": "2026-08-13",
       "source_type": "blog",
       "summary": "Anthropic把Claude Code的auto mode设成Pro、Max、Team计划的默认选项。第三方评估显示auto mode拦截有害操作的表现很强——七百二十次针对性攻击尝试全部被挡下，远超人工审核。作者仍提醒提示注入这类风险需要独立验证，别照单全收。",
       "tracks": [
@@ -95,6 +101,7 @@
       "title": "I don't agree with this part. I think the takeaway should be that models (like humans) can behave in…",
       "link": "https://x.com/AmandaAskell/status/2084369056765989224",
       "date": "2026-08-03",
+      "first_seen": "2026-08-15",
       "source_type": "x",
       "summary": "Askell认为不应该简单地把“对齐”和“无害”划等号——模型可能在对齐的状态下仍然造成伤害（比如因为被给了错误的情境信息），这是两个独立的维度，不存在一条清晰的分界线。",
       "tracks": [
@@ -110,6 +117,7 @@
       "title": "We're starting to leave the territory where you'd test an LLM by e.g. \"create an svg of pelican on a…",
       "link": "https://x.com/karpathy/status/2083749667410727319",
       "date": "2026-08-02",
+      "first_seen": "2026-08-15",
       "source_type": "x",
       "summary": "Karpathy用Opus 5尝试把《魔戒》开篇渲染成一个程序化3D世界（耗时约2小时、写了5500行代码），展示了当前模型在自定义生成任务上的耐心和能力。但他也指出一个短板：模型很难像人一样通过“看画面/玩游戏”来自我校验渲染效果，多模态感知和游戏内自查能力还比较弱。",
       "tracks": [

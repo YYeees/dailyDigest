@@ -5,6 +5,7 @@
       "title": "Mistaking making for the thing you've made",
       "link": "https://world.hey.com/jason/mistaking-making-for-the-thing-you-ve-made-bd348df9",
       "date": "2026-07-24",
+      "first_seen": "2026-08-13",
       "source_type": "blog",
       "summary": "Jason Fried用厨房与餐食、蓝图与建筑作比喻，论证一个核心观点：开发速度、commit数量这些生产过程指标，说不出产品本身的质量和体验好不好。不要把「怎么做出来的」和「做出来的东西好不好」混为一谈。",
       "tracks": [
@@ -20,6 +21,7 @@
       "title": "An opinionated guide to which AI to use to do stuff",
       "link": "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22",
       "date": "2026-07-23",
+      "first_seen": "2026-08-13",
       "source_type": "blog",
       "summary": "二〇二六夏季版AI工具选型指南。核心判断：AI已经从聊天工具进化成能自主干几个小时活的「代理系统」。日常需求用免费模型就够，医疗、法律这类高风险决策要上Claude Opus／Fable或GPT-5.6 Sol这类最强模型。最实用建议：每月二十美元订阅一个，把AI当团队成员管，给它权限、设安全检查点，像带新人一样持续调教。",
       "tracks": [
@@ -35,6 +37,7 @@
       "title": "One pattern I find useful for working with LLMs is a nice long ramble session. Sometimes the LLM nee…",
       "link": "https://x.com/karpathy/status/2079610838143623371",
       "date": "2026-07-21",
+      "first_seen": "2026-08-15",
       "source_type": "x",
       "summary": "Karpathy分享了一个用LLM的小技巧：遇到一时说不清楚的需求，切换到语音模式随口碎碎念几分钟（总带一点混乱也没关系），LLM往往能把这些杂乱的话整理得比自己原本的思路还清晰，能减少后续来回修正的次数。",
       "tracks": [
@@ -50,6 +53,7 @@
       "title": "In Memoriam, Encountering World War I, and Thinkable Horrors",
       "link": "https://maggieappleton.com/in-memoriam/",
       "date": "2026-07-17",
+      "first_seen": "2026-08-13",
       "source_type": "blog",
       "summary": "作者读小说《In Memoriam》补上了对一战的认知空白——基于大量一手史料的历史虚构，呈现堑壕战里士兵在泥浆、尸体与机枪火力中大规模死亡的真实图景。她用约九千五百朵罂粟花对应九百五十万军人死亡，并由此联想到气候变化、AI风险这类当代的「工业规模威胁」。",
       "tracks": [
@@ -65,6 +69,7 @@
       "title": "[RIDGELINE] Kazunori Hamana in Apartamento",
       "link": "https://craigmod.com/ridgeline/231/",
       "date": "2026-07-11",
+      "first_seen": "2026-08-13",
       "source_type": "blog",
       "summary": "记录陶艺家Kazunori Hamana从东京涩谷都市生活转向千叶乡村创作的人生轨迹。借由他曾住过的1961年老公寓，回顾涩谷从战后荒野急速变成消费中心的过程，反思城市更新中失去的个性与质感。也记录了Hamana如何靠陶艺和置地在乡下建立起一个艺术社区。",
       "tracks": [

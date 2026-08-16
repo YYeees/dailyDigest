@@ -39,6 +39,7 @@ def item_dict(row):
         "title": row["title"],
         "link": row["link"],
         "date": row["published"][:10] if row["published"] else None,
+        "first_seen": row["first_seen_at"][:10] if row["first_seen_at"] else None,
         "source_type": row["source_type"],
     }
 

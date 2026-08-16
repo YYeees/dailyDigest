@@ -309,8 +309,10 @@ const TYPE_ICON = {
 };
 
 // "today"高亮要跟真实日期比，不能跟数据集里的最大日期比——否则积压几天没有新内容时，
-// 会把其实是几天前的"数据集里最新一条"误标成"刚更新"(2026-08-16改)。date字段是UTC日期
-// (published[:10])，这里也用UTC今天对齐。
+// 会把其实是几天前的"数据集里最新一条"误标成"刚更新"(2026-08-16改)。
+// 比对用的是first_seen(pipeline实际抓到它的日期)，不是date(published，作者原始发布日期)——
+// digest管线每天跑一次，内容发布和被收录之间常有一天时差，用published比会导致"今天刚收录
+// 的内容"因为发布日期是昨天而不被标亮(同一天又发现的bug，一并修)。
 function todayUTC() {
   return new Date().toISOString().slice(0, 10);
 }
@@ -324,7 +326,7 @@ const TIER_ORDER = { high: 0, medium: 1 };
 function renderContentItem(item, latestDate) {
   const desc = item.summary || (item.tracks[0] && item.tracks[0].reason) || '';
   const type = TYPE_ICON[item.source_type] || { svg: '🔗', label: item.source_type || '' };
-  const todayClass = item.date === latestDate ? ' today' : '';
+  const todayClass = item.first_seen === latestDate ? ' today' : '';
   const bestTier = item.tracks.reduce((best, t) => (TIER_ORDER[t.tier] < TIER_ORDER[best] ? t.tier : best), 'medium');
   const categoryTags = item.tracks.map(t => `<span class="category-tag category-${t.track}">${TRACK_LABEL[t.track]}</span>`).join('');
   return `
@@ -374,7 +376,7 @@ async function loadRecent() {
 // ---- X动态板块 ----
 function renderXItem(i, latestDate) {
   const type = TYPE_ICON[i.source_type] || { svg: '🔗', label: i.source_type || '' };
-  const todayClass = i.date === latestDate ? ' today' : '';
+  const todayClass = i.first_seen === latestDate ? ' today' : '';
   const text = i.summary || i.title;
   return `
     <a class="flow-item ${i.tier}${todayClass}" href="${i.link}" target="_blank" rel="noopener" title="${text.replace(/"/g, '&quot;')}">

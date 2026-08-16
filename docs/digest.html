@@ -217,7 +217,7 @@ const TIER_LABEL = { high: 'High', medium: 'Medium' };
 function renderContentItem(item, latestDate) {
   const desc = item.summary || (item.tracks[0] && item.tracks[0].reason) || '';
   const type = TYPE_ICON[item.source_type] || { svg: '🔗', label: item.source_type || '' };
-  const latestClass = item.date === latestDate ? ' today' : '';
+  const latestClass = item.first_seen === latestDate ? ' today' : '';
   // 月度归档只留high档,tracks里全部都是high,推荐程度标签固定显示High
   const categoryTags = item.tracks.map(t => `<span class="category-tag category-${t.track}">${TRACK_LABEL[t.track]}</span>`).join('');
   return `
@@ -247,7 +247,8 @@ function renderContentTrack(items, latestDate) {
 
 // "today"高亮要跟真实日期比，不能跟这个月归档里的最大日期比——否则本月很久没有新增
 // high档内容时，会把其实是几天/几周前的"月内最新一条"误标成"刚更新"(2026-08-16改，
-// 跟index.html同一处修复)。date字段是UTC日期(published[:10])，这里也用UTC今天对齐。
+// 跟index.html同一处修复)。比对用的是first_seen(pipeline实际收录日期)，不是date
+// (published，作者原始发布日期)——两者常有一天时差，见index.html同一处的注释。
 function todayUTC() {
   return new Date().toISOString().slice(0, 10);
 }
