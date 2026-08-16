@@ -306,8 +306,11 @@ const TYPE_ICON = {
   },
 };
 
-function latestDateIn(items) {
-  return items.reduce((max, i) => (i.date > max ? i.date : max), '');
+// "today"高亮要跟真实日期比，不能跟数据集里的最大日期比——否则积压几天没有新内容时，
+// 会把其实是几天前的"数据集里最新一条"误标成"刚更新"(2026-08-16改)。date字段是UTC日期
+// (published[:10])，这里也用UTC今天对齐。
+function todayUTC() {
+  return new Date().toISOString().slice(0, 10);
 }
 
 // ---- 最近更新板块：AI实操+关注锚点合并。右上角两类独立标签：
@@ -360,7 +363,7 @@ async function loadRecent() {
   const res = await fetch('data/recent.json');
   const data = await res.json();
   contentItems = data.items;
-  contentLatestDate = latestDateIn(data.items);
+  contentLatestDate = todayUTC();
   document.getElementById('contentTrackFilter').addEventListener('change', renderContent);
   document.getElementById('contentTierFilter').addEventListener('change', renderContent);
   renderContent();
@@ -386,7 +389,7 @@ function renderXItem(i, latestDate) {
 async function loadX() {
   const res = await fetch('data/x_recent.json');
   const data = await res.json();
-  const latestDate = latestDateIn(data.items);
+  const latestDate = todayUTC();
   const el = document.getElementById('xBoard');
   el.innerHTML = data.items.length
     ? data.items.map(i => renderXItem(i, latestDate)).join('')

@@ -245,8 +245,11 @@ function renderContentTrack(items, latestDate) {
     : '<div class="empty">这个月没有归档内容</div>';
 }
 
-function latestDateIn(items) {
-  return items.reduce((max, i) => (i.date > max ? i.date : max), '');
+// "today"高亮要跟真实日期比，不能跟这个月归档里的最大日期比——否则本月很久没有新增
+// high档内容时，会把其实是几天/几周前的"月内最新一条"误标成"刚更新"(2026-08-16改，
+// 跟index.html同一处修复)。date字段是UTC日期(published[:10])，这里也用UTC今天对齐。
+function todayUTC() {
+  return new Date().toISOString().slice(0, 10);
 }
 
 const DIFFICULTY_LABEL = { beginner: '入门', intermediate: '进阶', advanced: '较难' };
@@ -278,7 +281,7 @@ function renderGithubTrack(repos) {
 async function loadMonth(month) {
   const res = await fetch(`data/digest_${month}.json`);
   const data = await res.json();
-  const latestDate = latestDateIn(data.items);
+  const latestDate = todayUTC();
   renderContentTrack(data.items, latestDate);
   renderGithubTrack(data.github_track || []);
 }
