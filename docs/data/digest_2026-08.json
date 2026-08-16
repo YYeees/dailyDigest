@@ -2,6 +2,22 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
+      "link": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+      "date": "2026-08-16",
+      "first_seen": "2026-08-16",
+      "source_type": "blog",
+      "summary": "Simon Willison实测阿里巴巴新开源的Qwen 3.8 27B视觉模型：默认推理强度过高导致简单任务也长时间过度思考，需手动调低推理级别才实用；模型在鹈鹕SVG绘制、图像边界框检测上表现出色，也能驱动Pi等coding agent完成实际编码任务，但本地推理速度（15-30 tokens/秒）明显慢于云端模型，多令牌预测（MTP）优化可提速约72%。核心结论：17GB级本地模型已能胜任日常AI工作，但推理速度仍是硬件瓶颈。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿开源模型新发布的深度实测，讲清楚是什么、为什么重要，并附具体实操建议（如何调低推理强度、如何配置驱动coding agent）"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
       "title": "Don't classify. Hallucinate!",
       "link": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/",
       "date": "2026-08-14",

@@ -2,22 +2,43 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "CORS Chat",
-      "link": "https://simonwillison.net/2026/Aug/15/cors-chat/",
-      "date": "2026-08-15",
+      "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
+      "link": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+      "date": "2026-08-16",
       "first_seen": "2026-08-16",
       "source_type": "blog",
-      "summary": "Simon Willison用GPT-5.6-Sol Xhigh辅助写了个叫CORS Chat的网页工具，可直接对接任意OpenAI Responses兼容的API端点，用它在自己的M5 MacBook Pro和NVIDIA DGX Spark上测试本地跑的Qwen 3.8 27B模型（通过LM Studio的--cors选项）及OpenRouter。工具支持会话本地保存/导出为JSON，还有个细节亮点：能在token流式生成过程中实时渲染出正在生成的SVG图像。",
+      "summary": "Simon Willison实测阿里巴巴新开源的Qwen 3.8 27B视觉模型：默认推理强度过高导致简单任务也长时间过度思考，需手动调低推理级别才实用；模型在鹈鹕SVG绘制、图像边界框检测上表现出色，也能驱动Pi等coding agent完成实际编码任务，但本地推理速度（15-30 tokens/秒）明显慢于云端模型，多令牌预测（MTP）优化可提速约72%。核心结论：17GB级本地模型已能胜任日常AI工作，但推理速度仍是硬件瓶颈。",
       "tracks": [
         {
           "track": "ai",
-          "tier": "medium",
-          "reason": "作者自己周末做的小工具项目介绍（CORS Chat网页聊天工具，用来测本地跑的Qwen 3.8 27B），非面向普通用户的AI应用指南，按标准判medium"
+          "tier": "high",
+          "reason": "前沿开源模型新发布的深度实测，讲清楚是什么、为什么重要，并附具体实操建议（如何调低推理强度、如何配置驱动coding agent）"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "纯工程向工具搭建，未见对认知方式/harness哲学的一手反思"
+          "reason": "涉及本地模型驱动Pi等coding agent harness的一手实测，沾根二（和LLM共建/harness）边，但整体偏产品评测而非认知方式反思"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Dario Amodei",
+      "link": "https://simonwillison.net/2026/Aug/16/dario-amodei/",
+      "date": "2026-08-16",
+      "first_seen": "2026-08-16",
+      "source_type": "blog",
+      "summary": "Simon Willison引用Dario Amodei的观点：公众对AI的负面观感根源不是AI领袖的风险警示，而是社会对企业和科技行业长期存在的信任危机。Amodei认为靠正面营销无法挽回信任，唯一有效的方式是真正兑现AI造福社会的承诺——目前AI公司（包括Anthropic）最大的问题正是承诺尚未兑现，这才是值得批评的地方，而非宣传策略本身。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "沾AI边但偏宏观叙事，是Anthropic CEO对AI公众信任危机的评论，非实操信息"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "讨论AI行业信任与公关，与三根主干（自我认识/认知方式/清净场域）都没有实质连接"
         }
       ]
     },
