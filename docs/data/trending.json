@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "full_name": "anomalyco/opencode",
+      "url": "https://github.com/anomalyco/opencode",
+      "description": "The open source coding agent.",
+      "language": "TypeScript",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "开源AI编程Agent，build(全权限执行)和plan(只读分析、执行命令前需授权)双Agent模式覆盖了从代码探索到实际开发的不同信任级别，CLI和桌面端(macOS/Windows/Linux)都有，安装渠道成熟。已核实该仓库原属sst组织、现迁移到anomalyco(sst/opencode会跳转到这里)，不是冒名蹭热度的仓库，是AI编程Agent赛道有代表性的成熟项目。",
+      "first_seen_date": "2026-08-16",
+      "stars_total": 198112,
+      "last_snapshot_date": "2026-08-16"
+    },
+    {
       "full_name": "anthropics/skills",
       "url": "https://github.com/anthropics/skills",
       "description": "Public repository for Agent Skills",
@@ -9,7 +21,7 @@
       "worth_tier": "high",
       "recommend_reason": "Anthropic官方维护的Agent Skills参考库，用Markdown+YAML就能定义Claude可动态加载的技能，门槛很低。包含48+个覆盖创意、文档处理、企业工作流的示例，部分（如docx/pdf处理）附带可读源码。是理解Claude技能扩展机制、学习如何给AI助手写可复用指令模块的权威一手资料，不是玩具项目。",
       "first_seen_date": "2026-08-15",
-      "stars_total": 169599,
+      "stars_total": 169750,
       "last_snapshot_date": "2026-08-16"
     },
     {
@@ -21,7 +33,7 @@
       "worth_tier": "high",
       "recommend_reason": "面向AI应用的网页搜索/抓取/交互API平台，将网页转为LLM友好的Markdown/JSON格式，并提供Agent式自主数据采集能力。多语言SDK(Python/Node/Go/Java等)、CLI、MCP集成一应俱全，开源(AGPL)加云服务双模式，是当前RAG/Agent应用构建网页数据管道时的代表性优秀工具，生态成熟度高。",
       "first_seen_date": "2026-08-15",
-      "stars_total": 167901,
+      "stars_total": 168182,
       "last_snapshot_date": "2026-08-16"
     },
     {
@@ -59,18 +71,6 @@
       "first_seen_date": "2026-08-15",
       "stars_total": 89398,
       "last_snapshot_date": "2026-08-15"
-    },
-    {
-      "full_name": "addyosmani/agent-skills",
-      "url": "https://github.com/addyosmani/agent-skills",
-      "description": "Production-grade engineering skills for AI coding agents.",
-      "language": "JavaScript",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "把资深工程实践拆解成覆盖spec到ship全生命周期的24个skill和8个斜杠命令，专门给Claude Code、Cursor等编码agent用来约束其按生产级流程工作而非原型级抄近路。有清晰的CLI安装方式(npx skills)和多工具原生集成，是学习如何用Skill机制规范agent工作流的代表性范例。",
-      "first_seen_date": "2026-08-15",
-      "stars_total": 87559,
-      "last_snapshot_date": "2026-08-16"
     }
   ]
 }
