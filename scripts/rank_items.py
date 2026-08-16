@@ -26,7 +26,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from config import (  # noqa: E402
-    ALWAYS_SUMMARIZE_TYPES, DB_PATH, DEEP_READ_ELIGIBLE_TYPES, DIGEST_START_DATE, VALID_TIERS,
+    ALWAYS_ARCHIVE_TITLE_PREFIXES, ALWAYS_SUMMARIZE_TYPES, DB_PATH, DEEP_READ_ELIGIBLE_TYPES,
+    DIGEST_START_DATE, VALID_TIERS,
 )
 
 
@@ -51,7 +52,10 @@ def cmd_pending(args):
     for row in conn.execute(query, params):
         item = dict(row)
         item["deep_read_eligible"] = item["source_type"] in DEEP_READ_ELIGIBLE_TYPES
-        item["always_summarize"] = item["source_type"] in ALWAYS_SUMMARIZE_TYPES
+        item["always_summarize"] = (
+            item["source_type"] in ALWAYS_SUMMARIZE_TYPES
+            or any(item["title"].startswith(p) for p in ALWAYS_ARCHIVE_TITLE_PREFIXES)
+        )
         rows.append(item)
     conn.close()
     json.dump(rows, sys.stdout, ensure_ascii=False, indent=2)

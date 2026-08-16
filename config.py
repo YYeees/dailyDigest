@@ -38,6 +38,13 @@ ALWAYS_DISPLAY_TYPES = {"x"}
 HIGH_ONLY_PERSONS = {"Simon Willison"}
 HIGH_ONLY_PERSON_LIMIT = 7
 
+# Craig Mod的Ridgeline newsletter——用户明确说很喜欢，不想被ai_tier/anchor_tier的判断结果
+# 筛掉(2026-08-16定案)：不管判成什么档，都要写digest_summary，且不受"只有high档才永久归档"/
+# "medium档只在7天窗口展示"这两条规则限制，全部永久展示。craigmod.com/index.xml这个feed本身没有
+# 分类字段，只能靠标题前缀"[RIDGELINE]"识别——同一个feed里的Roden/Essays newsletter前缀不同，
+# 不在这条例外范围内。
+ALWAYS_ARCHIVE_TITLE_PREFIXES = {"[RIDGELINE]"}
+
 # GitHub Trending展示数量上限(2026-08-15定案)：不用展示太多，只要综合最值得推荐的。
 TRENDING_DAILY_LIMIT = 6    # index.html"7日内关注"页Trending板块
 TRENDING_MONTHLY_LIMIT = 6  # digest.html月度归档"GitHub高分项目"板块，每月上限

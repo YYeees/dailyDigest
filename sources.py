@@ -57,4 +57,5 @@ X_SOURCES = [
     {"person": "Amanda Askell", "x_username": "AmandaAskell"},
     {"person": "Andrej Karpathy", "x_username": "karpathy"},
     {"person": "Ray Dalio", "x_username": "RayDalio"},
+    {"person": "Andy Matuschak", "x_username": "andy_matuschak"},
 ]

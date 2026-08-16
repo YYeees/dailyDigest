@@ -79,21 +79,6 @@
           "reason": "AI科学家（Fei-Fei Li）访谈，内容扎实且不需要技术背景"
         }
       ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
-      "link": "https://simonwillison.net/2026/Aug/8/auto-mode/",
-      "date": "2026-08-08",
-      "source_type": "blog",
-      "summary": "Anthropic把Claude Code的auto mode设成Pro、Max、Team计划的默认选项。第三方评估显示auto mode拦截有害操作的表现很强——七百二十次针对性攻击尝试全部被挡下，远超人工审核。作者仍提醒提示注入这类风险需要独立验证，别照单全收。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "直接影响日常用Claude Code的方式，实操性强"
-        }
-      ]
     }
   ]
 }

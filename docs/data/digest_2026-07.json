@@ -59,6 +59,21 @@
           "reason": "透过历史追问人如何承受苦难，一手反思写作"
         }
       ]
+    },
+    {
+      "person": "Craig Mod",
+      "title": "[RIDGELINE] Kazunori Hamana in Apartamento",
+      "link": "https://craigmod.com/ridgeline/231/",
+      "date": "2026-07-11",
+      "source_type": "blog",
+      "summary": "记录陶艺家Kazunori Hamana从东京涩谷都市生活转向千叶乡村创作的人生轨迹。借由他曾住过的1961年老公寓，回顾涩谷从战后荒野急速变成消费中心的过程，反思城市更新中失去的个性与质感。也记录了Hamana如何靠陶艺和置地在乡下建立起一个艺术社区。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "城市变迁与手工艺人生活方式的观察反思"
+        }
+      ]
     }
   ],
   "github_track": []

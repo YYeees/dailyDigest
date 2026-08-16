@@ -25,7 +25,14 @@ from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from config import DB_PATH, HIGH_ONLY_PERSON_LIMIT, HIGH_ONLY_PERSONS, RECENT_WINDOW_DAYS
+from config import (
+    ALWAYS_ARCHIVE_TITLE_PREFIXES, DB_PATH, HIGH_ONLY_PERSON_LIMIT, HIGH_ONLY_PERSONS,
+    RECENT_WINDOW_DAYS,
+)
+
+
+def always_archive(title):
+    return any(title.startswith(p) for p in ALWAYS_ARCHIVE_TITLE_PREFIXES)
 
 OUT_DIR = Path("docs/data")
 TIER_ORDER = {"high": 0, "medium": 1}
@@ -68,6 +75,14 @@ def export():
                     continue
                 high_only_counts[key] += 1
             tracks.append({"track": track_name, "tier": tier, "reason": row[reason_field] or ""})
+
+        if not tracks and always_archive(row["title"]):
+            # Ridgeline：ai/anchor两个track都没到medium，但用户明确要求不管tier全展示——
+            # 归到锚点track，tier保底显示成medium(不覆盖数据库里的真实判断结果)。
+            tracks.append({
+                "track": "anchor", "tier": "medium",
+                "reason": row["anchor_reason"] or "Craig Mod Ridgeline，用户偏好锚点内容",
+            })
 
         if not tracks:
             continue

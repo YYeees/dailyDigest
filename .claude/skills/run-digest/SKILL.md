@@ -39,7 +39,7 @@ python3 scripts/rank_items.py pending
 **精判**(按pending输出里的路由标记执行，不用自己重新判断走哪条路径)：
 - `deep_read_eligible == true` 且初筛任一track是`medium`或`high` → 用WebFetch工具抓一次`link`的全文，基于全文重新判断该track的tier(可以推翻初筛结果)，并写一段`digest_summary`(内容概要+核心观点，2~4句，不是摘录)。全文读完就丢，不要写入任何文件、不要存进结果JSON。
 - `deep_read_eligible == false`(podcast/youtube/x)且初筛任一track是`medium`/`high` → 不追加抓取，基于已有的`summary`字段写一段轻提炼作为`digest_summary`。X的`summary`是英文推文原文，写成中文概要(1~2句)，不要照抄英文。
-- `always_summarize == true`(目前只有X) → 不管`ai_tier`/`anchor_tier`判成什么，都要写中文`digest_summary`——"7日内关注"页面的"X动态"板块对X是不管tier全展示的，用户要的是"知道更新了、大概聊了什么"。
+- `always_summarize == true`(X，或标题带`[RIDGELINE]`前缀的Craig Mod文章) → 不管`ai_tier`/`anchor_tier`判成什么，都要写中文`digest_summary`。X是"7日内关注"页"X动态"板块不管tier全展示；Ridgeline是用户明确说很喜欢、不想被判断结果筛掉，全部永久展示(见`config.ALWAYS_ARCHIVE_TITLE_PREFIXES`)。这类如果`deep_read_eligible`也是true(Ridgeline是blog类型，是)但初筛两个track都`low`，不用额外WebFetch全文，直接基于已有`summary`写轻提炼即可，跟podcast/youtube走同样的轻量路径。
 - 其余情况(`deep_read_eligible == false`且两个track都`low`且`always_summarize == false`) → 维持low，`digest_summary`留空(null)。
 
 ### 4. 写回数据库
