@@ -63,7 +63,7 @@ python3 export_recent.py
 
 ```bash
 git add digest.db docs/data/
-git commit -m "Weekly digest: 排序N条新内容"
+git commit -m "Daily digest: 排序N条新内容"
 git push
 ```
 
