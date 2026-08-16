@@ -2,6 +2,26 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "CORS Chat",
+      "link": "https://simonwillison.net/2026/Aug/15/cors-chat/",
+      "date": "2026-08-15",
+      "source_type": "blog",
+      "summary": "Simon Willison用GPT-5.6-Sol Xhigh辅助写了个叫CORS Chat的网页工具,可直接对接任意OpenAI Responses兼容的API端点,用它在自己的M5 MacBook Pro和NVIDIA DGX Spark上测试本地跑的Qwen 3.8 27B模型(通过LM Studio的--cors选项)及OpenRouter。工具支持会话本地保存/导出为JSON,还有个细节亮点:能在token流式生成过程中实时渲染出正在生成的SVG图像。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "作者自己周末做的小工具项目介绍(CORS Chat网页聊天工具,用来测本地跑的Qwen 3.8 27B),非面向普通用户的AI应用指南,按标准判medium"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "纯工程向工具搭建,未见对认知方式/harness哲学的一手反思"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
       "title": "Don't classify. Hallucinate!",
       "link": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/",
       "date": "2026-08-14",

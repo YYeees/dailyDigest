@@ -12,6 +12,13 @@
 - X单独一份扁平列表，不限tier——用户要的是"知道更新了、大概聊了什么"，不是被优先级过滤掉
   的精选，所以X每条都要有digest_summary(哪怕low)。
 
+2026-08-16追加两条：
+- HIGH_ONLY_PERSONS里的人，发布在HIGH_ONLY_RECENT_DAYS天以内的内容不分tier全部展示(哪怕
+  low)，超过这个窗口才收紧回"只看high档"——用户想第一时间看到他们的动态，不想被判断结果挡住。
+- `excluded_reason`不为空的条目，不管来源/tier，一律不展示——给内容主题层面的排除用(比如
+  Ray Dalio重复的principles语录、跟工作无关的个人生活动态)，判断标准见RANKING_CRITERIA.md，
+  由排序时的Claude Code现场判断，不是关键词硬匹配。
+
 2026-08-15追加：同一条内容如果AI/锚点两个track都命中，只出现一次，`tracks`字段里带两条
 (而不是像之前那样在两个独立的track区块里各出现一次)——前端用这个字段在卡片右上角画track徽章。
 
@@ -27,7 +34,7 @@ from pathlib import Path
 
 from config import (
     ALWAYS_ARCHIVE_TITLE_PREFIXES, DB_PATH, HIGH_ONLY_PERSON_LIMIT, HIGH_ONLY_PERSONS,
-    RECENT_WINDOW_DAYS,
+    HIGH_ONLY_RECENT_DAYS, RECENT_WINDOW_DAYS,
 )
 
 
@@ -35,7 +42,6 @@ def always_archive(title):
     return any(title.startswith(p) for p in ALWAYS_ARCHIVE_TITLE_PREFIXES)
 
 OUT_DIR = Path("docs/data")
-TIER_ORDER = {"high": 0, "medium": 1}
 TRACKS = (("ai", "ai_tier", "ai_reason"), ("anchor", "anchor_tier", "anchor_reason"))
 
 
@@ -50,6 +56,7 @@ def export():
     conn.row_factory = sqlite3.Row
 
     cutoff = (datetime.now(timezone.utc) - timedelta(days=RECENT_WINDOW_DAYS)).isoformat()
+    high_only_recent_cutoff = (datetime.now(timezone.utc) - timedelta(days=HIGH_ONLY_RECENT_DAYS)).isoformat()
 
     recent_items = []
     high_only_counts = defaultdict(int)  # (track_name, person) -> 已经放了几条
@@ -57,14 +64,24 @@ def export():
     for row in conn.execute("""
         SELECT * FROM items
         WHERE published >= ? AND ranked_at IS NOT NULL AND source_type != 'x'
+          AND excluded_reason IS NULL
         ORDER BY published DESC
     """, (cutoff,)):
         person = row["person"]
         high_only = person in HIGH_ONLY_PERSONS
+        high_only_recent = high_only and row["published"] >= high_only_recent_cutoff
 
         tracks = []
         for track_name, tier_field, reason_field in TRACKS:
             tier = row[tier_field]
+            if high_only_recent:
+                # HIGH_ONLY_RECENT_DAYS天以内：不分tier全部展示，low档保底显示成medium
+                # (不覆盖数据库里真实的判断结果，只是展示层的下限)。
+                tracks.append({
+                    "track": track_name, "tier": tier if tier in ("high", "medium") else "medium",
+                    "reason": row[reason_field] or "",
+                })
+                continue
             if tier not in ("high", "medium"):
                 continue
             if high_only and tier == "medium":
@@ -98,12 +115,12 @@ def export():
         })
 
     recent_items.sort(key=lambda i: i["date"], reverse=True)
-    recent_items.sort(key=lambda i: min(TIER_ORDER[t["tier"]] for t in i["tracks"]))
 
     x_items = []
     for row in conn.execute("""
         SELECT * FROM items
         WHERE published >= ? AND ranked_at IS NOT NULL AND source_type = 'x'
+          AND excluded_reason IS NULL
         ORDER BY published DESC
     """, (cutoff,)):
         x_items.append({

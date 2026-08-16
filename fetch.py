@@ -32,7 +32,8 @@ def init_db(conn):
             anchor_tier TEXT,
             anchor_reason TEXT,
             digest_summary TEXT,
-            ranked_at TEXT
+            ranked_at TEXT,
+            excluded_reason TEXT
         )
     """)
     conn.commit()

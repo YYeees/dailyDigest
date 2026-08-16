@@ -35,8 +35,12 @@ ALWAYS_DISPLAY_TYPES = {"x"}
 # - medium档：不管来源，只在RECENT_WINDOW_DAYS内的"最新"页面展示，不归档
 # - 例外：HIGH_ONLY_PERSONS里的人，medium档也不在"最新"页面展示(更新太勤，medium量太大)，
 #   且他们的展示条目数额外设上限(HIGH_ONLY_PERSON_LIMIT)，避免一个人占满整个板块。
+# - 2026-08-16再加一层例外：HIGH_ONLY_PERSONS里的人，发布在HIGH_ONLY_RECENT_DAYS天以内的
+#   内容不分tier全部展示(哪怕low)——用户想看到他最新的动态，不想被判断结果挡住；超过这个
+#   窗口(但仍在RECENT_WINDOW_DAYS内)才收紧回"只看high档"。
 HIGH_ONLY_PERSONS = {"Simon Willison"}
 HIGH_ONLY_PERSON_LIMIT = 7
+HIGH_ONLY_RECENT_DAYS = 1
 
 # Craig Mod的Ridgeline newsletter——用户明确说很喜欢，不想被ai_tier/anchor_tier的判断结果
 # 筛掉(2026-08-16定案)：不管判成什么档，都要写digest_summary，且不受"只有high档才永久归档"/

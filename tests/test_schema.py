@@ -16,6 +16,7 @@ EXPECTED_ITEMS_COLUMNS = {
     "guid", "person", "source_name", "source_type", "title", "link", "published",
     "summary", "has_full_text", "first_seen_at",
     "ai_tier", "ai_reason", "anchor_tier", "anchor_reason", "digest_summary", "ranked_at",
+    "excluded_reason",
 }
 
 

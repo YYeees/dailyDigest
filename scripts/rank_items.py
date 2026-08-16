@@ -13,8 +13,10 @@
         把判断结果写回digest.db。results.json是数组,每个元素:
         {"guid": "...", "ai_tier": "high|medium|low", "ai_reason": "...",
          "anchor_tier": "high|medium|low", "anchor_reason": "...",
-         "digest_summary": "..." 或 null}
-        ranked_at自动写当前时间。
+         "digest_summary": "..." 或 null,
+         "excluded_reason": "..." 或 null(可选,不传等价于null)}
+        ranked_at自动写当前时间。excluded_reason不为空时,不管tier判成什么,导出时都不展示
+        (内容主题层面的排除,标准见RANKING_CRITERIA.md，比如某人重复的口水话题/无关个人生活)。
 """
 
 import argparse
@@ -79,11 +81,11 @@ def cmd_write(args):
     for r in results:
         cur = conn.execute(
             """UPDATE items SET ai_tier=?, ai_reason=?, anchor_tier=?, anchor_reason=?,
-               digest_summary=?, ranked_at=? WHERE guid=?""",
+               digest_summary=?, excluded_reason=?, ranked_at=? WHERE guid=?""",
             (
                 r["ai_tier"], r.get("ai_reason", ""),
                 r["anchor_tier"], r.get("anchor_reason", ""),
-                r.get("digest_summary"), now, r["guid"],
+                r.get("digest_summary"), r.get("excluded_reason"), now, r["guid"],
             ),
         )
         if cur.rowcount:

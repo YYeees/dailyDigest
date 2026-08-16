@@ -76,7 +76,7 @@ def export():
 
     for row in conn.execute("""
         SELECT * FROM items
-        WHERE published IS NOT NULL AND published >= ?
+        WHERE published IS NOT NULL AND published >= ? AND excluded_reason IS NULL
           AND (ai_tier = 'high' OR anchor_tier = 'high' OR digest_summary IS NOT NULL)
         ORDER BY published DESC
     """, (DIGEST_START_DATE,)):

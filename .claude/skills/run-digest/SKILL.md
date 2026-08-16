@@ -42,6 +42,8 @@ python3 scripts/rank_items.py pending
 - `always_summarize == true`(X，或标题带`[RIDGELINE]`前缀的Craig Mod文章) → 不管`ai_tier`/`anchor_tier`判成什么，都要写中文`digest_summary`。X是"7日内关注"页"X动态"板块不管tier全展示；Ridgeline是用户明确说很喜欢、不想被判断结果筛掉，全部永久展示(见`config.ALWAYS_ARCHIVE_TITLE_PREFIXES`)。这类如果`deep_read_eligible`也是true(Ridgeline是blog类型，是)但初筛两个track都`low`，不用额外WebFetch全文，直接基于已有`summary`写轻提炼即可，跟podcast/youtube走同样的轻量路径。
 - 其余情况(`deep_read_eligible == false`且两个track都`low`且`always_summarize == false`) → 维持low，`digest_summary`留空(null)。
 
+`ai_tier`/`anchor_tier`判完后，再对照`RANKING_CRITERIA.md`最后的"内容排除"一节检查一遍——目前只对Ray Dalio的X内容生效，命中就在结果里加`excluded_reason`(一句话理由)，其余字段照常写，导出时会被过滤掉。
+
 ### 4. 写回数据库
 
 把每条的判断结果整理成JSON数组(格式见`scripts/rank_items.py`文件头注释)，写到一个临时文件(比如`/tmp`或scratchpad目录)，然后:
