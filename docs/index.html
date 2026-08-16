@@ -94,7 +94,12 @@
   }
   .flow-list.scrollable::-webkit-scrollbar { width: 5px; }
   .flow-list.scrollable::-webkit-scrollbar-track { background: transparent; }
-  .flow-list.scrollable::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  .flow-list.scrollable::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+    min-height: 24px;
+    max-height: 24px;
+  }
   .flow-item {
     display: flex;
     align-items: flex-start;
