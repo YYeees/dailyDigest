@@ -2,6 +2,85 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility",
+      "link": "https://simonwillison.net/2026/Aug/17/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-tra/",
+      "date": "2026-08-17",
+      "first_seen": "2026-08-17T22:25:28.617040+00:00",
+      "source_type": "blog",
+      "summary": "404 Media通过在书籍中放置AirTag追踪发现，大量匿名订购的旧书最终被送到亚马逊拉斯维加斯的AI训练设施做破坏性扫描。这项调查证实了长期以来的怀疑：科技公司正在大规模、匿名地采购旧书用于AI模型训练，整个过程对书籍和版权持有人缺乏透明度。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "揭示AI训练数据获取的行业真实操作，调查扎实，但偏行业伦理/新闻而非实操指南"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干无实质连接"
+        }
+      ]
+    },
+    {
+      "person": "Andrew Huberman",
+      "title": "Neuroscience of Emotions & Tools for Improving Emotion Regulation| Dr. Ralph Adolphs",
+      "link": "https://www.youtube.com/watch?v=P-h5WSQG1Sw",
+      "date": "2026-08-17",
+      "first_seen": "2026-08-17T22:25:26.367664+00:00",
+      "source_type": "youtube",
+      "summary": "Ralph Adolphs和Huberman探讨情绪如何塑造注意力和决策、情绪是否真的“储存”在身体里，以及面部表情作为情绪信号的可靠性问题。节目也给出了情绪调节的具体工具，比如认知重评和刻意冷暴露，是一次比较扎实的关于人如何理解和调节自身情绪的科学对话。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "清单外，但关于情绪调节与自我认知的深度科学对话，沾根一自我认识的边"
+        }
+      ]
+    },
+    {
+      "person": "Andrew Huberman",
+      "title": "Benevolent Uses of AI to Improve Your Life",
+      "link": "https://www.youtube.com/shorts/XmUVbu5BgiI",
+      "date": "2026-08-17",
+      "first_seen": "2026-08-17T04:20:15.580202+00:00",
+      "source_type": "youtube",
+      "summary": "Fei-Fei Li和Huberman讨论AI如何安全有效地延伸人类能力，不只是用来搜索信息，更是用来提升人的智力和创造力，以及人机协作如何改善健康和生活体验。谈话也涉及AI和人类认知的根本差异：直觉和个体独特经历是AI难以复制的部分。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "面向大众的AI人机协作科普，有一定趋势价值但内容较轻量"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "讨论AI与人类认知的本质差异，沾根一自我认识的边"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Markdown SVG upgrades",
+      "link": "https://simonwillison.net/2026/Aug/16/markdown-svg-upgrades/",
+      "date": "2026-08-16",
+      "first_seen": "2026-08-17T04:20:19.046585+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "作者自己维护的小工具版本更新日志，没有普适学习价值"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干无实质连接"
+        }
+      ]
+    },
+    {
+      "person": "Simon Willison",
       "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
       "link": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
       "date": "2026-08-16",
@@ -13,32 +92,27 @@
           "track": "ai",
           "tier": "high",
           "reason": "前沿开源模型新发布的深度实测，讲清楚是什么、为什么重要，并附具体实操建议（如何调低推理强度、如何配置驱动coding agent）"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "涉及本地模型驱动Pi等coding agent harness的一手实测，沾根二（和LLM共建/harness）边，但整体偏产品评测而非认知方式反思"
         }
       ]
     },
     {
-      "person": "Simon Willison",
-      "title": "Quoting Dario Amodei",
-      "link": "https://simonwillison.net/2026/Aug/16/dario-amodei/",
-      "date": "2026-08-16",
-      "first_seen": "2026-08-16T22:21:35.809536+00:00",
+      "person": "Latent Space",
+      "title": "React for Agents: Astro Creator Brings Hooks to his Meta-Harness, Flue",
+      "link": "https://www.latent.space/p/flue-2",
+      "date": "2026-08-15",
+      "first_seen": "2026-08-17T04:20:19.882542+00:00",
       "source_type": "blog",
-      "summary": "Simon Willison引用Dario Amodei的观点：公众对AI的负面观感根源不是AI领袖的风险警示，而是社会对企业和科技行业长期存在的信任危机。Amodei认为靠正面营销无法挽回信任，唯一有效的方式是真正兑现AI造福社会的承诺——目前AI公司（包括Anthropic）最大的问题正是承诺尚未兑现，这才是值得批评的地方，而非宣传策略本身。",
+      "summary": "Astro作者Fred Schott在采访中讲述他做的agent meta-harness Flue 2，核心洞察是“没有harness就没有agent”，harness不是可选的附加功能，而是定义agent本质的架构基石。Flue借鉴React引入hooks概念，让agent能动态管理状态、实时适应变化而非依赖静态配置，体现的是应该先想清楚agent的执行环境和能力边界，而不是先搭模型交互层这条设计路径。",
       "tracks": [
         {
           "track": "ai",
-          "tier": "medium",
-          "reason": "沾AI边但偏宏观叙事，是Anthropic CEO对AI公众信任危机的评论，非实操信息"
+          "tier": "high",
+          "reason": "harness优先的agent架构哲学讲得很清楚，对构建agent系统的人有直接设计启发"
         },
         {
           "track": "anchor",
-          "tier": "medium",
-          "reason": "讨论AI行业信任与公关，与三根主干（自我认识/认知方式/清净场域）都没有实质连接"
+          "tier": "high",
+          "reason": "构建者一手视角谈“没有harness就没有agent”，延续护城河在harness不在模型这条母题"
         }
       ]
     },
@@ -55,6 +129,38 @@
           "track": "ai",
           "tier": "high",
           "reason": "转发Doug Turnbull的分类技巧：不给LLM完整标签表，而是让它“幻觉”生成合适的新标签，再用向量嵌入去匹配真实标签库，避免把庞大标签表塞进prompt。方法具体、讲清楚了为什么有效，是可以直接借鉴的实操技巧"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Gemini 3.7 Flash brings GDM back to the forefront",
+      "link": "https://www.latent.space/p/ainews-gemini-37-flash-brings-gdm",
+      "date": "2026-08-14",
+      "first_seen": "2026-08-17T04:20:19.882800+00:00",
+      "source_type": "blog",
+      "summary": "文章通过图表指出较早的Gemini 3.5/3.6 Flash已经落后于Claude和GPT最新系列，Gemini 3.7 Flash的发布被解读为Google试图重新追赶的动作，但具体性能提升细节因付费墙未能获取，无法进一步验证。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "全文被付费墙限制，只能确认是模型更新新闻性质内容，信息量有限"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] SpaceXAI Grok 4.6 and Grok @Bot",
+      "link": "https://www.latent.space/p/ainews-spacexai-grok-46-and-grok",
+      "date": "2026-08-13",
+      "first_seen": "2026-08-17T04:20:19.882809+00:00",
+      "source_type": "blog",
+      "summary": "xAI发布Grok 4.6，针对长流程agent任务和复杂交互做了专门优化（更长的辅助训练、模型生成推理数据、改进的优化器），号称成本效率超越同代前沿模型；配套的Grok @Bot定位为能“登录你的工具像你一样使用它们”的AI团队助手，被视为agent应用从编程领域扩展到知识工作的重要一步。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "模型与Agent产品信息扎实，但整体偏发布新闻性质"
         }
       ]
     },
@@ -91,6 +197,38 @@
       ]
     },
     {
+      "person": "Latent Space",
+      "title": "[AINews] How to steal a Reasoning Trace",
+      "link": "https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace",
+      "date": "2026-08-12",
+      "first_seen": "2026-08-17T04:20:19.882816+00:00",
+      "source_type": "blog",
+      "summary": "研究人员发现可以通过重放加密的推理令牌到较弱模型上，配合精心设计的提示词逐步“抄录”出被隐藏的推理过程，一次网络扫描还在公开的追踪记录里发现了大量泄露的API密钥和账号密码。核心启示是加密签名不等于安全，隐藏推理这道防蒸馏防监控的防线并不牢固。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "揭示了一个真实安全漏洞并讲清为什么重要，但理解攻击链需要中等技术背景"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "🔬The BioAI Phase Shift - Matthew McPartlon & Neil Patil, Chai Discovery",
+      "link": "https://www.latent.space/p/chai-discovery",
+      "date": "2026-08-11",
+      "first_seen": "2026-08-17T04:20:19.882822+00:00",
+      "source_type": "blog",
+      "summary": "Chai Discovery联合创始人谈到AI分子设计工具已经好到可以被制药巨头（礼来、诺华等）直接采购而非自建管线，2026年至今已成交多笔大单，公司估值达40亿美元。关键技术突破是从“结构预测”进阶到“精确的结合亲和力预测”，让分子设计从试错变成工程化问题，减少了后续实验的迭代次数。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Bio加AI投资趋势解释清楚，但受众窄，偏垂直行业内容"
+        }
+      ]
+    },
+    {
       "person": "Craig Mod",
       "title": "[ESSAYS] A Swarm of Blood Robots",
       "link": "https://craigmod.com/essays/robot_blood/",
@@ -112,18 +250,18 @@
       ]
     },
     {
-      "person": "Andrew Huberman",
-      "title": "Using AI to Increase Your Intelligence & Enrich Humanity | Dr. Fei-Fei Li",
-      "link": "https://www.youtube.com/watch?v=N5AQFYtqx8Q",
-      "date": "2026-08-10",
-      "first_seen": "2026-08-13T07:53:38.863467+00:00",
-      "source_type": "youtube",
-      "summary": "Huberman对话斯坦福AI学者Fei-Fei Li，聊AI怎么安全地增强人类智力和创造力，而不只是搜索信息。两人讨论了AI与人类认知的本质区别、直觉和个人经验为什么难以被AI复制，以及AI加人机协作对健康和科研的正向可能性。",
+      "person": "Latent Space",
+      "title": "[AINews] Muse Glimmer and Spark: Open Weights return Personal Superintelligence promise",
+      "link": "https://www.latent.space/p/ainews-muse-glimmer-and-spark-open",
+      "date": "2026-08-11",
+      "first_seen": "2026-08-17T04:20:19.882829+00:00",
+      "source_type": "blog",
+      "summary": "Meta发布开源模型Muse Glimmer（30B参数，Apache 2.0协议），4位量化后体积压缩到20GB以内，可在单张RTX 3090上跑本地agent工作流；开源版Muse Spark 1.2也即将发布。这标志着Meta在“个人超级智能”战略下重申对开放权重模型的投入，是少见的消费级硬件就能跑的高质量开源模型。",
       "tracks": [
         {
           "track": "ai",
           "tier": "high",
-          "reason": "AI科学家（Fei-Fei Li）访谈，内容扎实且不需要技术背景"
+          "reason": "消费级显卡就能跑的开源模型，实操相关性强，且是Meta重申开放权重投入的信号"
         }
       ]
     }

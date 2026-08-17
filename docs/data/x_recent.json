@@ -2,6 +2,26 @@
   "items": [
     {
       "person": "Ray Dalio",
+      "title": "Everything from the smallest subatomic particle to the entire galaxy is evolving. While everything a…",
+      "link": "https://x.com/RayDalio/status/2089468608942387672",
+      "date": "2026-08-17",
+      "first_seen": "2026-08-17T22:25:42.507616+00:00",
+      "source_type": "x",
+      "summary": "Ray Dalio写道，从最小的亚原子粒子到整个星系都在演化；万物看似消亡，实则只是以新形式重新组合，能量不会消失只会被重新配置，这股力量就是演化本身。",
+      "tier": "medium"
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "I've received a lot of positive feedback on this interview I did with @StevenBartlett for his Diary…",
+      "link": "https://x.com/RayDalio/status/2089339167964578106",
+      "date": "2026-08-17",
+      "first_seen": "2026-08-17T22:25:42.507970+00:00",
+      "source_type": "x",
+      "summary": "Ray Dalio转发了他与Steven Bartlett在Diary of a CEO播客的访谈，说收到很多正面反馈，建议看视频简介跳转到感兴趣的具体话题。",
+      "tier": "low"
+    },
+    {
+      "person": "Ray Dalio",
       "title": "The first stock I ever bought was the only company I’d heard of selling for under $5 a share. I stup…",
       "link": "https://x.com/RayDalio/status/2088288411350085880",
       "date": "2026-08-14",

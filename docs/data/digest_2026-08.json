@@ -17,6 +17,27 @@
       ]
     },
     {
+      "person": "Latent Space",
+      "title": "React for Agents: Astro Creator Brings Hooks to his Meta-Harness, Flue",
+      "link": "https://www.latent.space/p/flue-2",
+      "date": "2026-08-15",
+      "first_seen": "2026-08-17T04:20:19.882542+00:00",
+      "source_type": "blog",
+      "summary": "Astro作者Fred Schott在采访中讲述他做的agent meta-harness Flue 2，核心洞察是“没有harness就没有agent”，harness不是可选的附加功能，而是定义agent本质的架构基石。Flue借鉴React引入hooks概念，让agent能动态管理状态、实时适应变化而非依赖静态配置，体现的是应该先想清楚agent的执行环境和能力边界，而不是先搭模型交互层这条设计路径。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "harness优先的agent架构哲学讲得很清楚，对构建agent系统的人有直接设计启发"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "构建者一手视角谈“没有harness就没有agent”，延续护城河在harness不在模型这条母题"
+        }
+      ]
+    },
+    {
       "person": "Simon Willison",
       "title": "Don't classify. Hallucinate!",
       "link": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/",
@@ -81,6 +102,22 @@
       ]
     },
     {
+      "person": "Latent Space",
+      "title": "[AINews] Muse Glimmer and Spark: Open Weights return Personal Superintelligence promise",
+      "link": "https://www.latent.space/p/ainews-muse-glimmer-and-spark-open",
+      "date": "2026-08-11",
+      "first_seen": "2026-08-17T04:20:19.882829+00:00",
+      "source_type": "blog",
+      "summary": "Meta发布开源模型Muse Glimmer（30B参数，Apache 2.0协议），4位量化后体积压缩到20GB以内，可在单张RTX 3090上跑本地agent工作流；开源版Muse Spark 1.2也即将发布。这标志着Meta在“个人超级智能”战略下重申对开放权重模型的投入，是少见的消费级硬件就能跑的高质量开源模型。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "消费级显卡就能跑的开源模型，实操相关性强，且是Meta重申开放权重投入的信号"
+        }
+      ]
+    },
+    {
       "person": "Andrew Huberman",
       "title": "Using AI to Increase Your Intelligence & Enrich Humanity | Dr. Fei-Fei Li",
       "link": "https://www.youtube.com/watch?v=N5AQFYtqx8Q",
@@ -109,6 +146,22 @@
           "track": "ai",
           "tier": "high",
           "reason": "直接影响日常用Claude Code的方式，实操性强"
+        }
+      ]
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Zawinski's Law of MultiAgents",
+      "link": "https://www.latent.space/p/ainews-zawinskis-law-of-multiagents",
+      "date": "2026-08-08",
+      "first_seen": "2026-08-17T04:20:19.882834+00:00",
+      "source_type": "blog",
+      "summary": "文章提出一条观察规律：每个agent都会试图扩展到能与其他agent通信，做不到这一点的agent会被能做到的取代，因此agent间的消息传递机制正从“可选项”变成系统设计的必需品。举了OpenAI模型自发用Artifactory协调、Claude Code跨会话通信、LangChain的agent身份管理等例子，核心启发是应该主动设计安全的agent通信架构，而不是等出问题再补。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "多agent通信架构的实操洞察，配有具体案例，对开发者有直接可用的设计启发"
         }
       ]
     },
