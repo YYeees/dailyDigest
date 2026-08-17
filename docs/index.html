@@ -346,16 +346,14 @@ const TYPE_ICON = {
   },
 };
 
-// "today"高亮要跟真实日期比，不能跟数据集里的最大日期比——否则积压几天没有新内容时，
-// 会把其实是几天前的"数据集里最新一条"误标成"刚更新"(2026-08-16改)。
-// 比对用的是first_seen(pipeline实际抓到它的日期)，不是date(published，作者原始发布日期)——
-// digest管线每天跑一次，内容发布和被收录之间常有一天时差，用published比会导致"今天刚收录
-// 的内容"因为发布日期是昨天而不被标亮(同一天又发现的bug，一并修)。
-// first_seen存的是北京时间日期(见export_recent.py的to_beijing_date)，因为管线是按北京时间
-// 早晨的schedule跑的——如果这里比UTC日期，北京时间早8点(UTC换日线)一过高亮就会消失，跟用户
-// 早上"昨天/今天"的直觉对不上(2026-08-17改，见digest.html同一处)。
-function todayUTC() {
-  return new Date(Date.now() + 8 * 3600 * 1000).toISOString().slice(0, 10);
+// "刚更新"高亮不跟任何日历日比较(不管UTC/北京/美国时区，日历日边界都会导致"半夜/清早
+// 换日"那一刻高亮突然消失，跟用户直觉对不上，2026-08-16/17两次踩过)。改成直接看
+// first_seen(pipeline实际收录这条内容的时间戳)离现在够不够近——够近就是"新"，不用管
+// 现在是哪一天、作者在哪个时区发的。NEW_WINDOW_HOURS比"一天一次"的抓取节奏留了点余量，
+// 免得pipeline偶尔跑晚了导致刚收录的内容还没显示"新"就已经过期。
+const NEW_WINDOW_HOURS = 26;
+function isRecent(firstSeen) {
+  return !!firstSeen && (Date.now() - Date.parse(firstSeen)) < NEW_WINDOW_HOURS * 3600 * 1000;
 }
 
 // ---- 最近更新板块：AI实操+关注锚点合并。右上角两类独立标签：
@@ -364,10 +362,10 @@ const TRACK_LABEL = { ai: 'AI', anchor: '锚点' };
 const TIER_LABEL = { high: 'High', medium: 'Medium' };
 const TIER_ORDER = { high: 0, medium: 1 };
 
-function renderContentItem(item, latestDate) {
+function renderContentItem(item) {
   const desc = item.summary || (item.tracks[0] && item.tracks[0].reason) || '';
   const type = TYPE_ICON[item.source_type] || { svg: '🔗', label: item.source_type || '' };
-  const todayClass = item.first_seen === latestDate ? ' today' : '';
+  const todayClass = isRecent(item.first_seen) ? ' today' : '';
   const bestTier = item.tracks.reduce((best, t) => (TIER_ORDER[t.tier] < TIER_ORDER[best] ? t.tier : best), 'medium');
   const categoryTags = item.tracks.map(t => `<span class="category-tag category-${t.track}">${TRACK_LABEL[t.track]}</span>`).join('');
   return `
@@ -389,7 +387,6 @@ function renderContentItem(item, latestDate) {
 }
 
 let contentItems = [];
-let contentLatestDate = '';
 
 function renderContent() {
   const track = document.getElementById('contentTrackFilter').value;
@@ -400,7 +397,7 @@ function renderContent() {
   );
   const el = document.getElementById('contentBoard');
   el.innerHTML = filtered.length
-    ? filtered.map(i => renderContentItem(i, contentLatestDate)).join('')
+    ? filtered.map(renderContentItem).join('')
     : '<div class="empty">没有符合条件的内容</div>';
 }
 
@@ -408,16 +405,15 @@ async function loadRecent() {
   const res = await fetch('data/recent.json');
   const data = await res.json();
   contentItems = data.items;
-  contentLatestDate = todayUTC();
   document.getElementById('contentTrackFilter').addEventListener('change', renderContent);
   document.getElementById('contentTierFilter').addEventListener('change', renderContent);
   renderContent();
 }
 
 // ---- X动态板块 ----
-function renderXItem(i, latestDate) {
+function renderXItem(i) {
   const type = TYPE_ICON[i.source_type] || { svg: '🔗', label: i.source_type || '' };
-  const todayClass = i.first_seen === latestDate ? ' today' : '';
+  const todayClass = isRecent(i.first_seen) ? ' today' : '';
   const text = i.summary || i.title;
   return `
     <a class="flow-item ${i.tier}${todayClass}" href="${i.link}" target="_blank" rel="noopener" title="${text.replace(/"/g, '&quot;')}">
@@ -436,10 +432,9 @@ const X_VISIBLE_COUNT = 6;
 async function loadX() {
   const res = await fetch('data/x_recent.json');
   const data = await res.json();
-  const latestDate = todayUTC();
   const el = document.getElementById('xBoard');
   el.innerHTML = data.items.length
-    ? data.items.map(i => renderXItem(i, latestDate)).join('')
+    ? data.items.map(renderXItem).join('')
     : '<div class="empty">最近7天没有新动态</div>';
 
   capVisibleHeight(el, X_VISIBLE_COUNT);

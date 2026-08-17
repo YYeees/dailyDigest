@@ -5,7 +5,7 @@
       "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
       "link": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
       "date": "2026-08-16",
-      "first_seen": "2026-08-17",
+      "first_seen": "2026-08-16T22:21:35.809222+00:00",
       "source_type": "blog",
       "summary": "Simon Willison实测阿里巴巴新开源的Qwen 3.8 27B视觉模型：默认推理强度过高导致简单任务也长时间过度思考，需手动调低推理级别才实用；模型在鹈鹕SVG绘制、图像边界框检测上表现出色，也能驱动Pi等coding agent完成实际编码任务，但本地推理速度（15-30 tokens/秒）明显慢于云端模型，多令牌预测（MTP）优化可提速约72%。核心结论：17GB级本地模型已能胜任日常AI工作，但推理速度仍是硬件瓶颈。",
       "tracks": [
@@ -26,7 +26,7 @@
       "title": "Quoting Dario Amodei",
       "link": "https://simonwillison.net/2026/Aug/16/dario-amodei/",
       "date": "2026-08-16",
-      "first_seen": "2026-08-17",
+      "first_seen": "2026-08-16T22:21:35.809536+00:00",
       "source_type": "blog",
       "summary": "Simon Willison引用Dario Amodei的观点：公众对AI的负面观感根源不是AI领袖的风险警示，而是社会对企业和科技行业长期存在的信任危机。Amodei认为靠正面营销无法挽回信任，唯一有效的方式是真正兑现AI造福社会的承诺——目前AI公司（包括Anthropic）最大的问题正是承诺尚未兑现，这才是值得批评的地方，而非宣传策略本身。",
       "tracks": [
@@ -47,7 +47,7 @@
       "title": "Don't classify. Hallucinate!",
       "link": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/",
       "date": "2026-08-14",
-      "first_seen": "2026-08-15",
+      "first_seen": "2026-08-15T08:00:45.693341+00:00",
       "source_type": "blog",
       "summary": "这篇文章介绍了Doug Turnbull提出的一个分类技巧：面对1800多个标签的语料库，与其把完整标签表喂给LLM做选择，不如让模型“幻觉”生成它认为合适的新标签（给出格式示例但不给真实列表），再用向量嵌入把生成的标签跟已有标签库做相似度匹配，找出最接近的真实标签。这样既避免了把庞大词表塞进prompt，又利用了LLM的生成能力，是一个具体可借鉴的分类实操思路。",
       "tracks": [
@@ -63,7 +63,7 @@
       "title": "[RODEN] Blood Robots For You and You and You",
       "link": "https://craigmod.com/roden/117/",
       "date": "2026-08-12",
-      "first_seen": "2026-08-13",
+      "first_seen": "2026-08-13T07:53:39.913822+00:00",
       "source_type": "blog",
       "summary": "这期newsletter介绍了上面那篇四千字长文的写作过程与后续：他用Claude追踪到一篇尘封旧报纸，发现自己出生证明上的中间名竟源于一位几十年前意外身亡的陌生人。另外还提到摄影集《事物变成其他事物》精装第二版开放预订。",
       "tracks": [
@@ -79,7 +79,7 @@
       "title": "DeepSeek V4 Pro 0813 (on OpenRouter)",
       "link": "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/",
       "date": "2026-08-12",
-      "first_seen": "2026-08-13",
+      "first_seen": "2026-08-13T09:18:25.646159+00:00",
       "source_type": "blog",
       "summary": "DeepSeek发布V4 Pro 0813，目前只开放API访问。一个有意思的细节：这个模型在低／中／高不同推理强度下生成的图像差异很明显，这在其他模型里比较少见。",
       "tracks": [
@@ -95,7 +95,7 @@
       "title": "[ESSAYS] A Swarm of Blood Robots",
       "link": "https://craigmod.com/essays/robot_blood/",
       "date": "2026-08-11",
-      "first_seen": "2026-08-13",
+      "first_seen": "2026-08-13T07:53:39.914238+00:00",
       "source_type": "blog",
       "summary": "Craig Mod分享用LLM做的一系列创新应用，核心是这次用Claude做家谱寻根——从零散线索追出自己的身世。他认为LLM最大价值在于把复杂信息检索转化为人性化的结果呈现，这类工具正处于应用爆发初期，价值被低估，关键是亲身体验而非跟风议论。",
       "tracks": [
@@ -116,7 +116,7 @@
       "title": "Using AI to Increase Your Intelligence & Enrich Humanity | Dr. Fei-Fei Li",
       "link": "https://www.youtube.com/watch?v=N5AQFYtqx8Q",
       "date": "2026-08-10",
-      "first_seen": "2026-08-13",
+      "first_seen": "2026-08-13T07:53:38.863467+00:00",
       "source_type": "youtube",
       "summary": "Huberman对话斯坦福AI学者Fei-Fei Li，聊AI怎么安全地增强人类智力和创造力，而不只是搜索信息。两人讨论了AI与人类认知的本质区别、直觉和个人经验为什么难以被AI复制，以及AI加人机协作对健康和科研的正向可能性。",
       "tracks": [

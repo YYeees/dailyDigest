@@ -214,10 +214,10 @@ const TYPE_ICON = {
 const TRACK_LABEL = { ai: 'AI', anchor: '锚点' };
 const TIER_LABEL = { high: 'High', medium: 'Medium' };
 
-function renderContentItem(item, latestDate) {
+function renderContentItem(item) {
   const desc = item.summary || (item.tracks[0] && item.tracks[0].reason) || '';
   const type = TYPE_ICON[item.source_type] || { svg: '🔗', label: item.source_type || '' };
-  const latestClass = item.first_seen === latestDate ? ' today' : '';
+  const latestClass = isRecent(item.first_seen) ? ' today' : '';
   // 月度归档只留high档,tracks里全部都是high,推荐程度标签固定显示High
   const categoryTags = item.tracks.map(t => `<span class="category-tag category-${t.track}">${TRACK_LABEL[t.track]}</span>`).join('');
   return `
@@ -238,21 +238,19 @@ function renderContentItem(item, latestDate) {
   `;
 }
 
-function renderContentTrack(items, latestDate) {
+function renderContentTrack(items) {
   const el = document.getElementById('contentTrack');
   el.innerHTML = items.length
-    ? items.map(i => renderContentItem(i, latestDate)).join('')
+    ? items.map(renderContentItem).join('')
     : '<div class="empty">这个月没有归档内容</div>';
 }
 
-// "today"高亮要跟真实日期比，不能跟这个月归档里的最大日期比——否则本月很久没有新增
-// high档内容时，会把其实是几天/几周前的"月内最新一条"误标成"刚更新"(2026-08-16改，
-// 跟index.html同一处修复)。比对用的是first_seen(pipeline实际收录日期)，不是date
-// (published，作者原始发布日期)——两者常有一天时差，见index.html同一处的注释。
-// first_seen存的是北京时间日期，这里也要按北京时间取"今天"，否则北京时间早8点(UTC换日线)
-// 一过，当天早上刚跑出来的内容就会被误判成"昨天"，高亮消失(2026-08-17改，跟index.html同一处)。
-function todayUTC() {
-  return new Date(Date.now() + 8 * 3600 * 1000).toISOString().slice(0, 10);
+// "刚更新"高亮不跟日历日比较——不管UTC/北京/美国哪个时区，日历日边界换日的那一刻高亮都会
+// 突然消失，跟用户直觉对不上(2026-08-16/17两次踩过，见index.html同一处的完整说明)。改成直接
+// 看first_seen离现在够不够近。NEW_WINDOW_HOURS比"一天一次"的抓取节奏留了点余量。
+const NEW_WINDOW_HOURS = 26;
+function isRecent(firstSeen) {
+  return !!firstSeen && (Date.now() - Date.parse(firstSeen)) < NEW_WINDOW_HOURS * 3600 * 1000;
 }
 
 const DIFFICULTY_LABEL = { beginner: '入门', intermediate: '进阶', advanced: '较难' };
@@ -284,8 +282,7 @@ function renderGithubTrack(repos) {
 async function loadMonth(month) {
   const res = await fetch(`data/digest_${month}.json`);
   const data = await res.json();
-  const latestDate = todayUTC();
-  renderContentTrack(data.items, latestDate);
+  renderContentTrack(data.items);
   renderGithubTrack(data.github_track || []);
 }
 

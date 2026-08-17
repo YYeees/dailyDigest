@@ -25,7 +25,6 @@ from collections import defaultdict
 from pathlib import Path
 
 from config import ALWAYS_ARCHIVE_TITLE_PREFIXES, DB_PATH, DIGEST_START_DATE, TRENDING_MONTHLY_LIMIT
-from export_recent import to_beijing_date
 
 
 def always_archive(title):
@@ -40,7 +39,7 @@ def item_dict(row):
         "title": row["title"],
         "link": row["link"],
         "date": row["published"][:10] if row["published"] else None,
-        "first_seen": to_beijing_date(row["first_seen_at"]),
+        "first_seen": row["first_seen_at"],
         "source_type": row["source_type"],
     }
 
