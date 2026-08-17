@@ -41,6 +41,23 @@ from config import (
 def always_archive(title):
     return any(title.startswith(p) for p in ALWAYS_ARCHIVE_TITLE_PREFIXES)
 
+
+BEIJING_TZ = timezone(timedelta(hours=8))
+
+
+def to_beijing_date(iso_str):
+    # first_seen_at存的是UTC时间戳。管线是按北京时间早晨的schedule跑的(比如北京6点=UTC前一天
+    # 22点)，如果直接取UTC日期做"first_seen"，UTC换日线(北京时间早8点)一过，当天早上刚抓到的
+    # 内容就会被误判成"昨天收录"——前端"今日更新"高亮框跟着消失，跟用户对"今天"的感知对不上。
+    # 所以统一转成北京时间的日期。
+    if not iso_str:
+        return None
+    dt = datetime.fromisoformat(iso_str)
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(BEIJING_TZ).date().isoformat()
+
+
 OUT_DIR = Path("docs/data")
 TRACKS = (("ai", "ai_tier", "ai_reason"), ("anchor", "anchor_tier", "anchor_reason"))
 
@@ -109,7 +126,7 @@ def export():
             "title": row["title"],
             "link": row["link"],
             "date": row["published"][:10] if row["published"] else None,
-            "first_seen": row["first_seen_at"][:10] if row["first_seen_at"] else None,
+            "first_seen": to_beijing_date(row["first_seen_at"]),
             "source_type": row["source_type"],
             "summary": row["digest_summary"],
             "tracks": tracks,
@@ -129,7 +146,7 @@ def export():
             "title": row["title"],
             "link": row["link"],
             "date": row["published"][:10] if row["published"] else None,
-            "first_seen": row["first_seen_at"][:10] if row["first_seen_at"] else None,
+            "first_seen": to_beijing_date(row["first_seen_at"]),
             "source_type": row["source_type"],
             "summary": row["digest_summary"],
             "tier": best_tier(row["ai_tier"], row["anchor_tier"]),

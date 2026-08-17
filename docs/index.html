@@ -351,8 +351,11 @@ const TYPE_ICON = {
 // 比对用的是first_seen(pipeline实际抓到它的日期)，不是date(published，作者原始发布日期)——
 // digest管线每天跑一次，内容发布和被收录之间常有一天时差，用published比会导致"今天刚收录
 // 的内容"因为发布日期是昨天而不被标亮(同一天又发现的bug，一并修)。
+// first_seen存的是北京时间日期(见export_recent.py的to_beijing_date)，因为管线是按北京时间
+// 早晨的schedule跑的——如果这里比UTC日期，北京时间早8点(UTC换日线)一过高亮就会消失，跟用户
+// 早上"昨天/今天"的直觉对不上(2026-08-17改，见digest.html同一处)。
 function todayUTC() {
-  return new Date().toISOString().slice(0, 10);
+  return new Date(Date.now() + 8 * 3600 * 1000).toISOString().slice(0, 10);
 }
 
 // ---- 最近更新板块：AI实操+关注锚点合并。右上角两类独立标签：

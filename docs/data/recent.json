@@ -5,7 +5,7 @@
       "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
       "link": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
       "date": "2026-08-16",
-      "first_seen": "2026-08-16",
+      "first_seen": "2026-08-17",
       "source_type": "blog",
       "summary": "Simon Willison实测阿里巴巴新开源的Qwen 3.8 27B视觉模型：默认推理强度过高导致简单任务也长时间过度思考，需手动调低推理级别才实用；模型在鹈鹕SVG绘制、图像边界框检测上表现出色，也能驱动Pi等coding agent完成实际编码任务，但本地推理速度（15-30 tokens/秒）明显慢于云端模型，多令牌预测（MTP）优化可提速约72%。核心结论：17GB级本地模型已能胜任日常AI工作，但推理速度仍是硬件瓶颈。",
       "tracks": [
@@ -26,7 +26,7 @@
       "title": "Quoting Dario Amodei",
       "link": "https://simonwillison.net/2026/Aug/16/dario-amodei/",
       "date": "2026-08-16",
-      "first_seen": "2026-08-16",
+      "first_seen": "2026-08-17",
       "source_type": "blog",
       "summary": "Simon Willison引用Dario Amodei的观点：公众对AI的负面观感根源不是AI领袖的风险警示，而是社会对企业和科技行业长期存在的信任危机。Amodei认为靠正面营销无法挽回信任，唯一有效的方式是真正兑现AI造福社会的承诺——目前AI公司（包括Anthropic）最大的问题正是承诺尚未兑现，这才是值得批评的地方，而非宣传策略本身。",
       "tracks": [

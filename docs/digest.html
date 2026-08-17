@@ -249,8 +249,10 @@ function renderContentTrack(items, latestDate) {
 // high档内容时，会把其实是几天/几周前的"月内最新一条"误标成"刚更新"(2026-08-16改，
 // 跟index.html同一处修复)。比对用的是first_seen(pipeline实际收录日期)，不是date
 // (published，作者原始发布日期)——两者常有一天时差，见index.html同一处的注释。
+// first_seen存的是北京时间日期，这里也要按北京时间取"今天"，否则北京时间早8点(UTC换日线)
+// 一过，当天早上刚跑出来的内容就会被误判成"昨天"，高亮消失(2026-08-17改，跟index.html同一处)。
 function todayUTC() {
-  return new Date().toISOString().slice(0, 10);
+  return new Date(Date.now() + 8 * 3600 * 1000).toISOString().slice(0, 10);
 }
 
 const DIFFICULTY_LABEL = { beginner: '入门', intermediate: '进阶', advanced: '较难' };
