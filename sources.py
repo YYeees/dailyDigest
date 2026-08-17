@@ -44,12 +44,19 @@ SOURCES = [
 
     {"person": "Simon Willison", "type": "blog", "name": "Simon Willison",
      "url": "https://simonwillison.net/atom/everything/"},
+
+    {"person": "Latent Space", "type": "blog", "name": "Latent Space (swyx & Alessio)",
+     "url": "https://www.latent.space/feed"},
 ]
+# 2026-08-17加入Latent Space：Mollick的内容用户已经不觉得够吃了(基本都是已知的东西)，触发了
+# 2026-08-13就定好的"往上加难度"计划。feed里summary字段很短(teaser，十几到一百多字符)，
+# 归类成blog(而不是podcast)是为了让medium/high档触发WebFetch抓全文精判——按podcast
+# 走轻量摘要的话，摘要质量会因为summary太短而很差。注意这个feed里混了一批[AINews]开头
+# 的自动日报条目，更新频率比之前的信源明显高，属于这个feed本来的构成，不是抓取出错。
 
 # AI实操track候选,难度更高/暂缓加入(2026-08-13讨论,坡度太陡先不上):
-#   Latent Space     - https://www.latent.space/feed                偏难,默认工程师听众
 #   Nathan Lambert(Interconnects) - https://www.interconnects.ai/feed  研究级别,最难
-# Mollick+Willison这两条线跟得顺、觉得不够吃了,再考虑往上加。
+# 如果Latent Space也跟得顺了,再考虑往上加。
 
 # X源(2026-08-15新增，2026-08-15追加Karpathy改为仅X、Dalio切到X)。
 # 用TwitterAPI.io抓，后面可能继续扩大——扩大时直接往这个list加条目就行。
