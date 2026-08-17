@@ -40,6 +40,8 @@ jobs:
       - name: Run rank-github-trending skill
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # 见digest.yml同一处注释：强制5分钟prompt cache TTL，省cache写入的钱
+          FORCE_PROMPT_CACHING_5M: "1"
         run: |
           claude -p "调用 rank-github-trending 这个skill，完整跑一遍流程：抓取本周trending、评估所有待处理仓库(evaluated_at为空的)、导出前端JSON、git commit+push。这是无人值守的定时任务，commit+push不需要额外确认，直接做。" \
             --permission-mode bypassPermissions --output-format json | tee /tmp/claude_result.json

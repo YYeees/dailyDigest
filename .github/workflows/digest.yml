@@ -39,6 +39,11 @@ jobs:
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           TWITTERAPI_IO_KEY: ${{ secrets.TWITTERAPI_IO_KEY }}
+          # 订阅token认证默认会给prompt cache用1小时TTL(写入价格2倍基准价)，但这个job全程
+          # 只有几分钟，5分钟TTL(写入价格1.25倍)完全够用，强制5分钟能省一截cache写入的钱
+          # (2026-08-17查claude CLI源码确认有这个开关，见run_log.json里cache_creation的
+          # ephemeral_1h_input_tokens远高于ephemeral_5m_input_tokens)。
+          FORCE_PROMPT_CACHING_5M: "1"
         run: |
           claude -p "调用 run-digest 这个skill，完整跑一遍流程：抓取新内容、两段式判断优先级、生成摘要、导出前端JSON、git commit+push。这是无人值守的定时任务，commit+push不需要额外确认，直接做。" \
             --permission-mode bypassPermissions --output-format json | tee /tmp/claude_result.json
