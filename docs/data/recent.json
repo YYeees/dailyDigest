@@ -2,6 +2,45 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index",
+      "link": "https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/",
+      "date": "2026-08-17",
+      "first_seen": "2026-08-18T14:00:26.746432+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "与8月16日那篇《Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things》是同一个模型的连续追踪，那篇是上手实测、这篇只补了一个benchmark分数且无任何实操信息，择一看即可"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "benchmark分数对比，跟三根主干没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Stripe buys OpenRouter for $7B",
+      "link": "https://www.latent.space/p/ainews-stripe-buys-openrouter-for",
+      "date": "2026-08-17",
+      "first_seen": "2026-08-18T14:00:35.853696+00:00",
+      "source_type": "blog",
+      "summary": "Stripe以70亿美元收购模型路由平台OpenRouter，距其13亿美元B轮仅90天，按1.4亿美元年化收入算是50倍市销率。文章给出的关键数字：服务成本约4000万美元（占收入28.5%），年化毛利1亿美元、毛利率约70%，每月路由的token量从2月的50万亿涨到250万亿，开发者基数800万。作者由此给出的判断是，这笔交易指向AI基础设施的价值累积位置——不在GPU基础设施、不在Agent实验室、也不在前沿模型实验室，而在路由与分发这一层。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "讲清楚了OpenRouter的盈利结构、token路由量级，以及价值在AI基础设施哪一层累积的判断，但整体是行业并购的宏观叙事，对日常怎么用AI工具没有直接实操指引"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility",
       "link": "https://simonwillison.net/2026/Aug/17/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-tra/",
       "date": "2026-08-17",
@@ -20,7 +59,7 @@
           "reason": "跟三根主干无实质连接"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -37,7 +76,7 @@
           "reason": "清单外，但关于情绪调节与自我认知的深度科学对话，沾根一自我认识的边"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -59,7 +98,7 @@
           "reason": "讨论AI与人类认知的本质差异，沾根一自我认识的边"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -98,7 +137,7 @@
           "reason": "构建者一手视角谈“没有harness就没有agent”，延续护城河在harness不在模型这条母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -132,7 +171,7 @@
           "reason": "全文被付费墙限制，只能确认是模型更新新闻性质内容，信息量有限"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -149,7 +188,7 @@
           "reason": "模型与Agent产品信息扎实，但整体偏发布新闻性质"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -200,7 +239,7 @@
           "reason": "揭示了一个真实安全漏洞并讲清为什么重要，但理解攻击链需要中等技术背景"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -217,7 +256,7 @@
           "reason": "Bio加AI投资趋势解释清楚，但受众窄，偏垂直行业内容"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -240,23 +279,6 @@
         }
       ],
       "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Muse Glimmer and Spark: Open Weights return Personal Superintelligence promise",
-      "link": "https://www.latent.space/p/ainews-muse-glimmer-and-spark-open",
-      "date": "2026-08-11",
-      "first_seen": "2026-08-17T04:20:19.882829+00:00",
-      "source_type": "blog",
-      "summary": "Meta发布开源模型Muse Glimmer（30B参数，Apache 2.0协议），4位量化后体积压缩到20GB以内，可在单张RTX 3090上跑本地agent工作流；开源版Muse Spark 1.2也即将发布。这标志着Meta在“个人超级智能”战略下重申对开放权重模型的投入，是少见的消费级硬件就能跑的高质量开源模型。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "消费级显卡就能跑的开源模型，实操相关性强，且是Meta重申开放权重投入的信号"
-        }
-      ],
-      "is_new": true
     }
   ]
 }
