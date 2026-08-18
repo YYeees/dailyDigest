@@ -51,3 +51,27 @@ class TestNormalizeEntry(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestContentOnlyForRankableItems(unittest.TestCase):
+    """DIGEST_START_DATE之前的历史存量永远进不了排序，正文存了也等不到write来清空。"""
+
+    SOURCE = {"name": "S", "person": "P", "type": "blog", "url": "u"}
+
+    def _entry(self, year):
+        return {
+            "id": f"g{year}", "title": "标题", "link": "l",
+            "published_parsed": time.struct_time((year, 8, 1, 0, 0, 0, 4, 213, 0)),
+            "content": [{"value": "<p>" + "正文" * 500 + "</p>"}],
+        }
+
+    def test_recent_item_keeps_content(self):
+        self.assertTrue(normalize_entry(self.SOURCE, self._entry(2026))["content"])
+
+    def test_pre_digest_start_item_stores_no_content(self):
+        self.assertIsNone(normalize_entry(self.SOURCE, self._entry(2023))["content"])
+
+    def test_undated_item_stores_no_content(self):
+        entry = self._entry(2026)
+        del entry["published_parsed"]
+        self.assertIsNone(normalize_entry(self.SOURCE, entry)["content"])

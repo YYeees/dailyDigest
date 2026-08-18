@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 
 import feedparser
 
-from config import DB_PATH
+from config import DB_PATH, DIGEST_START_DATE
 from content_extract import extract_body
 from sources import SOURCES
 
@@ -69,8 +69,12 @@ def normalize_entry(source, entry):
     has_full_text = 1 if entry.get("content") else 0
     summary = entry.get("summary", "")
     title = entry.get("title", "(无标题)")
+    published = parsed_time_to_iso(published_struct)
     # 正文只在"排序那一次"用得上，排完由rank_items.py write清空——所以这一列不会让库无限膨胀，
     # 稳态下库里最多只有"这次抓到还没排"的那点正文。详见content_extract.py文件头。
+    # DIGEST_START_DATE之前的历史存量永远进不了排序(见rank_items.py的pending查询)，正文存了
+    # 没人读、也永远等不到write来清空，所以干脆不存——否则会慢慢漏成一堆清不掉的死数据。
+    rankable = bool(published) and published >= DIGEST_START_DATE
     return {
         "guid": f"{source['name']}::{guid}",
         "person": source["person"],
@@ -78,11 +82,11 @@ def normalize_entry(source, entry):
         "source_type": source["type"],
         "title": title,
         "link": entry.get("link", ""),
-        "published": parsed_time_to_iso(published_struct),
+        "published": published,
         "summary": summary,
         "has_full_text": has_full_text,
         "first_seen_at": datetime.now(timezone.utc).isoformat(),
-        "content": extract_body(title, entry),
+        "content": extract_body(title, entry) if rankable else None,
     }
 
 
