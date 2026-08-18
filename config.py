@@ -56,3 +56,4 @@ TRENDING_MONTHLY_LIMIT = 6  # digest.html月度归档"GitHub高分项目"板块�
 # daily_snapshots表的保留窗口(2026-08-16定案)：前端只读每个仓库最新一条快照，更早的
 # 历史快照没有展示价值，超过这个天数就清理，避免表无限增长。
 SNAPSHOT_RETENTION_DAYS = 180
+CONTENT_CHAR_CAP = 30000  # 单条正文入库上限，见content_extract.py文件头

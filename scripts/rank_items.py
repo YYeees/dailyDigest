@@ -4,10 +4,13 @@
 
 用法:
     python scripts/rank_items.py pending [--limit N] [--source-type blog]
-        列出digest.db里ranked_at IS NULL的条目(JSON数组,写到stdout)。每条额外带两个
+        列出digest.db里ranked_at IS NULL的条目(JSON数组,写到stdout)。每条额外带三个
         路由标记(规则定义在config.py,不用去记RANKING_CRITERIA.md里的文字规则):
         - deep_read_eligible: 初筛medium/high后要不要WebFetch全文精判
         - always_summarize: 不管tier判成什么都要写digest_summary
+        - content_chars: fetch时从RSS里存下来的正文有多长。0表示这个源的RSS没给正文,
+          只能靠WebFetch抓原文;不为0说明正文已经在库里,加--with-content就能直接拿到,
+          不用再下载一遍。正文在write时会被清空(见下)。
 
     python scripts/rank_items.py write results.json
         把判断结果写回digest.db。results.json是数组,每个元素:
@@ -15,7 +18,9 @@
          "anchor_tier": "high|medium|low", "anchor_reason": "...",
          "digest_summary": "..." 或 null,
          "excluded_reason": "..." 或 null(可选,不传等价于null)}
-        ranked_at自动写当前时间。excluded_reason不为空时,不管tier判成什么,导出时都不展示
+        ranked_at自动写当前时间,同时把content清空——正文只在排序那一次用得上,排完留着
+        只会让digest.db(每天提交进git)无限膨胀。要留的是digest_summary,不是原文。
+        excluded_reason不为空时,不管tier判成什么,导出时都不展示
         (内容主题层面的排除,标准见RANKING_CRITERIA.md，比如某人重复的口水话题/无关个人生活)。
 """
 
@@ -38,7 +43,7 @@ def cmd_pending(args):
     conn.row_factory = sqlite3.Row
 
     query = (
-        "SELECT guid, person, source_name, source_type, title, link, published, summary "
+        "SELECT guid, person, source_name, source_type, title, link, published, summary, content "
         "FROM items WHERE ranked_at IS NULL AND published >= ?"
     )
     params = [DIGEST_START_DATE]
@@ -58,6 +63,12 @@ def cmd_pending(args):
             item["source_type"] in ALWAYS_SUMMARIZE_TYPES
             or any(item["title"].startswith(p) for p in ALWAYS_ARCHIVE_TITLE_PREFIXES)
         )
+        # 正文默认不吐出来——一次pending可能是几十万字符，谁要用谁显式加--with-content。
+        # `content_chars`永远给，用来判断这条源RSS里到底有没有正文(0=只能靠WebFetch抓原文)。
+        body = item.pop("content", None)
+        item["content_chars"] = len(body or "")
+        if args.with_content:
+            item["content"] = body
         rows.append(item)
     conn.close()
     json.dump(rows, sys.stdout, ensure_ascii=False, indent=2)
@@ -81,7 +92,7 @@ def cmd_write(args):
     for r in results:
         cur = conn.execute(
             """UPDATE items SET ai_tier=?, ai_reason=?, anchor_tier=?, anchor_reason=?,
-               digest_summary=?, excluded_reason=?, ranked_at=? WHERE guid=?""",
+               digest_summary=?, excluded_reason=?, ranked_at=?, content=NULL WHERE guid=?""",
             (
                 r["ai_tier"], r.get("ai_reason", ""),
                 r["anchor_tier"], r.get("anchor_reason", ""),
@@ -107,6 +118,8 @@ def main():
     p_pending = sub.add_parser("pending", help="列出待排序条目")
     p_pending.add_argument("--limit", type=int, default=None)
     p_pending.add_argument("--source-type", default=None, choices=["blog", "podcast", "youtube", "x"])
+    p_pending.add_argument("--with-content", action="store_true",
+                           help="连RSS正文一起吐出来(默认只给content_chars,正文可能很大)")
     p_pending.set_defaults(func=cmd_pending)
 
     p_write = sub.add_parser("write", help="写回排序结果")

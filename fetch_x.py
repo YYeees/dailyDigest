@@ -30,6 +30,19 @@ API_URL = "https://api.twitterapi.io/twitter/user/last_tweets"
 TWEET_DATE_FORMAT = "%a %b %d %H:%M:%S %z %Y"  # "Wed Aug 12 17:48:36 +0000 2026"
 
 
+# 存量digest.db是2026-08-13建的，那时还没有content列——CREATE TABLE IF NOT EXISTS对已存在的
+# 表不会补列，所以新增列必须同时在这里补一次(2026-08-15代码审计踩过同类问题，见tests/test_schema.py)。
+ADDED_COLUMNS = (("content", "TEXT"),)
+
+
+def migrate(conn):
+    existing = {row[1] for row in conn.execute("PRAGMA table_info(items)")}
+    for name, decl in ADDED_COLUMNS:
+        if name not in existing:
+            conn.execute(f"ALTER TABLE items ADD COLUMN {name} {decl}")
+    conn.commit()
+
+
 def init_db(conn):
     conn.execute("""
         CREATE TABLE IF NOT EXISTS items (
@@ -49,10 +62,12 @@ def init_db(conn):
             anchor_reason TEXT,
             digest_summary TEXT,
             ranked_at TEXT,
-            excluded_reason TEXT
+            excluded_reason TEXT,
+            content TEXT
         )
     """)
     conn.commit()
+    migrate(conn)
 
 
 def parse_tweet_date(created_at):

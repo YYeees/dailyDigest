@@ -11,7 +11,21 @@ from datetime import datetime, timezone
 import feedparser
 
 from config import DB_PATH
+from content_extract import extract_body
 from sources import SOURCES
+
+
+# 存量digest.db是2026-08-13建的，那时还没有content列——CREATE TABLE IF NOT EXISTS对已存在的
+# 表不会补列，所以新增列必须同时在这里补一次(2026-08-15代码审计踩过同类问题，见tests/test_schema.py)。
+ADDED_COLUMNS = (("content", "TEXT"),)
+
+
+def migrate(conn):
+    existing = {row[1] for row in conn.execute("PRAGMA table_info(items)")}
+    for name, decl in ADDED_COLUMNS:
+        if name not in existing:
+            conn.execute(f"ALTER TABLE items ADD COLUMN {name} {decl}")
+    conn.commit()
 
 
 def init_db(conn):
@@ -33,10 +47,12 @@ def init_db(conn):
             anchor_reason TEXT,
             digest_summary TEXT,
             ranked_at TEXT,
-            excluded_reason TEXT
+            excluded_reason TEXT,
+            content TEXT
         )
     """)
     conn.commit()
+    migrate(conn)
 
 
 def parsed_time_to_iso(struct_time):
@@ -52,17 +68,21 @@ def normalize_entry(source, entry):
     published_struct = entry.get("published_parsed") or entry.get("updated_parsed")
     has_full_text = 1 if entry.get("content") else 0
     summary = entry.get("summary", "")
+    title = entry.get("title", "(无标题)")
+    # 正文只在"排序那一次"用得上，排完由rank_items.py write清空——所以这一列不会让库无限膨胀，
+    # 稳态下库里最多只有"这次抓到还没排"的那点正文。详见content_extract.py文件头。
     return {
         "guid": f"{source['name']}::{guid}",
         "person": source["person"],
         "source_name": source["name"],
         "source_type": source["type"],
-        "title": entry.get("title", "(无标题)"),
+        "title": title,
         "link": entry.get("link", ""),
         "published": parsed_time_to_iso(published_struct),
         "summary": summary,
         "has_full_text": has_full_text,
         "first_seen_at": datetime.now(timezone.utc).isoformat(),
+        "content": extract_body(title, entry),
     }
 
 
@@ -89,8 +109,8 @@ def fetch_all():
                 continue  # 已经见过,跳过
             conn.execute(
                 """INSERT INTO items
-                   (guid, person, source_name, source_type, title, link, published, summary, has_full_text, first_seen_at)
-                   VALUES (:guid, :person, :source_name, :source_type, :title, :link, :published, :summary, :has_full_text, :first_seen_at)""",
+                   (guid, person, source_name, source_type, title, link, published, summary, has_full_text, first_seen_at, content)
+                   VALUES (:guid, :person, :source_name, :source_type, :title, :link, :published, :summary, :has_full_text, :first_seen_at, :content)""",
                 record,
             )
             new_count += 1
