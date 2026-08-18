@@ -36,6 +36,7 @@ from config import (
     ALWAYS_ARCHIVE_TITLE_PREFIXES, DB_PATH, HIGH_ONLY_PERSON_LIMIT, HIGH_ONLY_PERSONS,
     HIGH_ONLY_RECENT_DAYS, RECENT_WINDOW_DAYS,
 )
+from new_flags import load_prev_items, mark_new
 
 
 def always_archive(title):
@@ -138,10 +139,14 @@ def export():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     recent_path = OUT_DIR / "recent.json"
+    x_path = OUT_DIR / "x_recent.json"
+    # 高亮=跟上一份导出比这次才新出现的(见new_flags.py)，所以要赶在覆盖之前先读旧文件
+    mark_new(recent_items, load_prev_items(recent_path))
+    mark_new(x_items, load_prev_items(x_path))
+
     recent_path.write_text(json.dumps({"items": recent_items}, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"[OK] {recent_path} — {len(recent_items)}条 (最近{RECENT_WINDOW_DAYS}天)")
 
-    x_path = OUT_DIR / "x_recent.json"
     x_path.write_text(json.dumps({"items": x_items}, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"[OK] {x_path} — {len(x_items)}条 (最近{RECENT_WINDOW_DAYS}天)")
 

@@ -8,7 +8,8 @@
       "first_seen": "2026-08-17T22:25:42.507616+00:00",
       "source_type": "x",
       "summary": "Ray Dalio写道，从最小的亚原子粒子到整个星系都在演化；万物看似消亡，实则只是以新形式重新组合，能量不会消失只会被重新配置，这股力量就是演化本身。",
-      "tier": "medium"
+      "tier": "medium",
+      "is_new": true
     },
     {
       "person": "Ray Dalio",
@@ -18,7 +19,8 @@
       "first_seen": "2026-08-17T22:25:42.507970+00:00",
       "source_type": "x",
       "summary": "Ray Dalio转发了他与Steven Bartlett在Diary of a CEO播客的访谈，说收到很多正面反馈，建议看视频简介跳转到感兴趣的具体话题。",
-      "tier": "low"
+      "tier": "low",
+      "is_new": true
     },
     {
       "person": "Ray Dalio",
@@ -28,7 +30,8 @@
       "first_seen": "2026-08-15T09:47:09.378249+00:00",
       "source_type": "x",
       "summary": "达利欧回忆自己人生第一次买股票：因为便宜且“听说过这家公司”就买入，结果公司险些破产又被收购股价翻三倍——从此“上瘾”般迷上了投资这个游戏。",
-      "tier": "low"
+      "tier": "low",
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -38,7 +41,8 @@
       "first_seen": "2026-08-16T07:47:34.148977+00:00",
       "source_type": "x",
       "summary": "Andy Matuschak转发了一个关于客厅日常物件的“平凡奇迹”项目，联想到Gordon Brander“身边的一切都是某人的毕生之作”这一说法。",
-      "tier": "medium"
+      "tier": "medium",
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -48,7 +52,8 @@
       "first_seen": "2026-08-15T09:47:09.380400+00:00",
       "source_type": "x",
       "summary": "达利欧分享一个认知习惯：每当他觉得自然界某种现象“不对”时，会先假设自己错了，反过来去理解自然为何如此运作——这重塑了他对善恶、人生目的与重大抉择的看法。",
-      "tier": "medium"
+      "tier": "medium",
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -58,7 +63,8 @@
       "first_seen": "2026-08-16T07:47:34.149243+00:00",
       "source_type": "x",
       "summary": "Andy Matuschak反思手写的一个反直觉优势：因为写字慢，反而更少陷入“卡壳”——打字时常常思维快过手速，写到句尾会突然断片，那种令人想逃避分心的“不知道下一步写什么”的感觉会更强烈地暴露出来。",
-      "tier": "medium"
+      "tier": "medium",
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -68,7 +74,8 @@
       "first_seen": "2026-08-15T09:47:09.380510+00:00",
       "source_type": "x",
       "summary": "达利欧说观看日食是一次“灵性时刻”，让不同背景的人因自然而共聚一堂；他认为灵性（关照共同福祉）与自私自利之间的较量，将决定人类的福祉甚至存续。",
-      "tier": "medium"
+      "tier": "medium",
+      "is_new": false
     },
     {
       "person": "Amanda Askell",
@@ -78,7 +85,8 @@
       "first_seen": "2026-08-15T07:46:51.910571+00:00",
       "source_type": "x",
       "summary": "分享玩《上古卷轴5：天际》的经历：她基本不打怪，专注于收养孤儿、给他们盖房子，游戏主线剧情反而没什么印象了。",
-      "tier": "low"
+      "tier": "low",
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -88,7 +96,8 @@
       "first_seen": "2026-08-15T09:47:09.380593+00:00",
       "source_type": "x",
       "summary": "达利欧说据他观察上千人实践某种方法后，大多数人会觉得回报感很强、难以再用旧方式做事，但这通常需要约18个月来改变习惯。",
-      "tier": "low"
+      "tier": "low",
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -98,17 +107,8 @@
       "first_seen": "2026-08-15T09:47:09.380636+00:00",
       "source_type": "x",
       "summary": "达利欧提醒：持有现金看似安全实则因通胀在贬值，他在与Steven Bartlett的对谈中详细解释了这一观点。",
-      "tier": "low"
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "Many of you have asked about how I've learned to deal with setbacks, so I’m sharing a list of princi…",
-      "link": "https://x.com/RayDalio/status/2086945445029322891",
-      "date": "2026-08-10",
-      "first_seen": "2026-08-15T09:47:09.380672+00:00",
-      "source_type": "x",
-      "summary": "达利欧发布了一份汇总帖，分享他多年来应对挫折/设定的一系列原则。",
-      "tier": "low"
+      "tier": "low",
+      "is_new": false
     }
   ]
 }

@@ -19,7 +19,8 @@
           "tier": "medium",
           "reason": "跟三根主干无实质连接"
         }
-      ]
+      ],
+      "is_new": true
     },
     {
       "person": "Andrew Huberman",
@@ -35,7 +36,8 @@
           "tier": "medium",
           "reason": "清单外，但关于情绪调节与自我认知的深度科学对话，沾根一自我认识的边"
         }
-      ]
+      ],
+      "is_new": true
     },
     {
       "person": "Andrew Huberman",
@@ -56,28 +58,8 @@
           "tier": "medium",
           "reason": "讨论AI与人类认知的本质差异，沾根一自我认识的边"
         }
-      ]
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Markdown SVG upgrades",
-      "link": "https://simonwillison.net/2026/Aug/16/markdown-svg-upgrades/",
-      "date": "2026-08-16",
-      "first_seen": "2026-08-17T04:20:19.046585+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "作者自己维护的小工具版本更新日志，没有普适学习价值"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干无实质连接"
-        }
-      ]
+      ],
+      "is_new": true
     },
     {
       "person": "Simon Willison",
@@ -93,7 +75,8 @@
           "tier": "high",
           "reason": "前沿开源模型新发布的深度实测，讲清楚是什么、为什么重要，并附具体实操建议（如何调低推理强度、如何配置驱动coding agent）"
         }
-      ]
+      ],
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -114,7 +97,8 @@
           "tier": "high",
           "reason": "构建者一手视角谈“没有harness就没有agent”，延续护城河在harness不在模型这条母题"
         }
-      ]
+      ],
+      "is_new": true
     },
     {
       "person": "Simon Willison",
@@ -130,7 +114,8 @@
           "tier": "high",
           "reason": "转发Doug Turnbull的分类技巧：不给LLM完整标签表，而是让它“幻觉”生成合适的新标签，再用向量嵌入去匹配真实标签库，避免把庞大标签表塞进prompt。方法具体、讲清楚了为什么有效，是可以直接借鉴的实操技巧"
         }
-      ]
+      ],
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -146,7 +131,8 @@
           "tier": "medium",
           "reason": "全文被付费墙限制，只能确认是模型更新新闻性质内容，信息量有限"
         }
-      ]
+      ],
+      "is_new": true
     },
     {
       "person": "Latent Space",
@@ -162,7 +148,8 @@
           "tier": "medium",
           "reason": "模型与Agent产品信息扎实，但整体偏发布新闻性质"
         }
-      ]
+      ],
+      "is_new": true
     },
     {
       "person": "Craig Mod",
@@ -178,7 +165,8 @@
           "tier": "high",
           "reason": "上一篇的后续，同一脉络"
         }
-      ]
+      ],
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -194,7 +182,8 @@
           "tier": "high",
           "reason": "前沿模型新发布，趋势追踪"
         }
-      ]
+      ],
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -210,7 +199,8 @@
           "tier": "medium",
           "reason": "揭示了一个真实安全漏洞并讲清为什么重要，但理解攻击链需要中等技术背景"
         }
-      ]
+      ],
+      "is_new": true
     },
     {
       "person": "Latent Space",
@@ -226,7 +216,8 @@
           "tier": "medium",
           "reason": "Bio加AI投资趋势解释清楚，但受众窄，偏垂直行业内容"
         }
-      ]
+      ],
+      "is_new": true
     },
     {
       "person": "Craig Mod",
@@ -247,7 +238,8 @@
           "tier": "high",
           "reason": "AI作为认知方式加深度自我认识（身份／收养）双命中，一手经历"
         }
-      ]
+      ],
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -263,7 +255,8 @@
           "tier": "high",
           "reason": "消费级显卡就能跑的开源模型，实操相关性强，且是Meta重申开放权重投入的信号"
         }
-      ]
+      ],
+      "is_new": true
     }
   ]
 }

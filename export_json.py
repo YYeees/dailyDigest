@@ -25,6 +25,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from config import ALWAYS_ARCHIVE_TITLE_PREFIXES, DB_PATH, DIGEST_START_DATE, TRENDING_MONTHLY_LIMIT
+from new_flags import load_prev_items, mark_new
 
 
 def always_archive(title):
@@ -118,6 +119,8 @@ def export():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     for month, data in months.items():
         path = OUT_DIR / f"digest_{month}.json"
+        # 高亮=跟上一份导出比这次才新出现的(见new_flags.py)，覆盖之前先读旧文件
+        mark_new(data["items"], load_prev_items(path))
         path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"[OK] {path} — {len(data['items'])}条内容 github:{len(data['github_track'])}个")
 

@@ -14,7 +14,8 @@
           "tier": "high",
           "reason": "前沿开源模型新发布的深度实测，讲清楚是什么、为什么重要，并附具体实操建议（如何调低推理强度、如何配置驱动coding agent）"
         }
-      ]
+      ],
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -35,7 +36,8 @@
           "tier": "high",
           "reason": "构建者一手视角谈“没有harness就没有agent”，延续护城河在harness不在模型这条母题"
         }
-      ]
+      ],
+      "is_new": true
     },
     {
       "person": "Simon Willison",
@@ -51,7 +53,8 @@
           "tier": "high",
           "reason": "转发Doug Turnbull的分类技巧：不给LLM完整标签表，而是让它“幻觉”生成合适的新标签，再用向量嵌入去匹配真实标签库，避免把庞大标签表塞进prompt。方法具体、讲清楚了为什么有效，是可以直接借鉴的实操技巧"
         }
-      ]
+      ],
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -67,7 +70,8 @@
           "tier": "high",
           "reason": "上一篇的后续，同一脉络"
         }
-      ]
+      ],
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -83,7 +87,8 @@
           "tier": "high",
           "reason": "前沿模型新发布，趋势追踪"
         }
-      ]
+      ],
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -99,7 +104,8 @@
           "tier": "high",
           "reason": "AI作为认知方式加深度自我认识（身份／收养）双命中，一手经历"
         }
-      ]
+      ],
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -115,7 +121,8 @@
           "tier": "high",
           "reason": "消费级显卡就能跑的开源模型，实操相关性强，且是Meta重申开放权重投入的信号"
         }
-      ]
+      ],
+      "is_new": true
     },
     {
       "person": "Andrew Huberman",
@@ -131,7 +138,8 @@
           "tier": "high",
           "reason": "AI科学家（Fei-Fei Li）访谈，内容扎实且不需要技术背景"
         }
-      ]
+      ],
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -147,7 +155,8 @@
           "tier": "high",
           "reason": "直接影响日常用Claude Code的方式，实操性强"
         }
-      ]
+      ],
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -163,7 +172,8 @@
           "tier": "high",
           "reason": "多agent通信架构的实操洞察，配有具体案例，对开发者有直接可用的设计启发"
         }
-      ]
+      ],
+      "is_new": true
     },
     {
       "person": "Amanda Askell",
@@ -179,7 +189,8 @@
           "tier": "high",
           "reason": "Anthropic对齐研究员的一手概念性反思，重新框定“对齐”和“无害”是两个不同的轴，属于AI作为认知方式这个母题的一手思考"
         }
-      ]
+      ],
+      "is_new": false
     },
     {
       "person": "Andrej Karpathy",
@@ -195,7 +206,8 @@
           "tier": "high",
           "reason": "用Opus 5做程序化LoTR世界渲染的具体实验，讲清楚了做法（1M token预算）、结果（5500行代码）和暴露出的能力短板（多模态/游戏内自我审查能力不足），是前沿模型能力的一手观察"
         }
-      ]
+      ],
+      "is_new": false
     }
   ],
   "github_track": [

@@ -217,7 +217,7 @@ const TIER_LABEL = { high: 'High', medium: 'Medium' };
 function renderContentItem(item) {
   const desc = item.summary || (item.tracks[0] && item.tracks[0].reason) || '';
   const type = TYPE_ICON[item.source_type] || { svg: '🔗', label: item.source_type || '' };
-  const latestClass = isRecent(item.first_seen) ? ' today' : '';
+  const latestClass = item.is_new ? ' today' : '';
   // 月度归档只留high档,tracks里全部都是high,推荐程度标签固定显示High
   const categoryTags = item.tracks.map(t => `<span class="category-tag category-${t.track}">${TRACK_LABEL[t.track]}</span>`).join('');
   return `
@@ -245,13 +245,9 @@ function renderContentTrack(items) {
     : '<div class="empty">这个月没有归档内容</div>';
 }
 
-// "刚更新"高亮不跟日历日比较——不管UTC/北京/美国哪个时区，日历日边界换日的那一刻高亮都会
-// 突然消失，跟用户直觉对不上(2026-08-16/17两次踩过，见index.html同一处的完整说明)。改成直接
-// 看first_seen离现在够不够近。NEW_WINDOW_HOURS比"一天一次"的抓取节奏留了点余量。
-const NEW_WINDOW_HOURS = 26;
-function isRecent(firstSeen) {
-  return !!firstSeen && (Date.now() - Date.parse(firstSeen)) < NEW_WINDOW_HOURS * 3600 * 1000;
-}
+// "刚更新"高亮完全由导出脚本算好写进JSON的`is_new`字段决定，前端不做任何时间运算——
+// 页面什么时候打开高亮都一样，一次更新到下一次更新之间不会自己变。判定规则和踩过的坑
+// (日历日换日线、26小时滚动窗口跨了两次抓取)见项目根目录new_flags.py的文件头注释。
 
 const DIFFICULTY_LABEL = { beginner: '入门', intermediate: '进阶', advanced: '较难' };
 

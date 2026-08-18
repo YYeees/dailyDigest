@@ -14,7 +14,8 @@
           "tier": "high",
           "reason": "十家机构的实战案例聚焦企业级agent基础设施真实痛点，不是泛泛谈AI加金融的宏观叙事"
         }
-      ]
+      ],
+      "is_new": true
     },
     {
       "person": "Latent Space",
@@ -30,7 +31,8 @@
           "tier": "high",
           "reason": "OpenAI产品负责人给出的实操建议直接影响日常怎么用AI agent产品，比如默认配置、持久化环境价值、衡量真实进展"
         }
-      ]
+      ],
+      "is_new": true
     },
     {
       "person": "Latent Space",
@@ -46,7 +48,8 @@
           "tier": "high",
           "reason": "Moonshot AI发布Kimi K3并开源配套基础设施，技术细节扎实，且点出谁在真做谁在站队这条清晰的行业脉络"
         }
-      ]
+      ],
+      "is_new": true
     },
     {
       "person": "Jason Fried",
@@ -62,7 +65,8 @@
           "tier": "high",
           "reason": "质朴中正、护城河在harness不在模型，同派构建者视角"
         }
-      ]
+      ],
+      "is_new": false
     },
     {
       "person": "Ethan Mollick",
@@ -78,7 +82,8 @@
           "tier": "high",
           "reason": "最贴合当前水平的AI工具选型实操指南"
         }
-      ]
+      ],
+      "is_new": false
     },
     {
       "person": "Andrej Karpathy",
@@ -94,7 +99,8 @@
           "tier": "high",
           "reason": "具体的LLM使用技巧（用语音模式长时间碎碎念给模型更多上下文），直接影响日常怎么用AI工具，实操性强"
         }
-      ]
+      ],
+      "is_new": false
     },
     {
       "person": "Maggie Appleton",
@@ -110,7 +116,8 @@
           "tier": "high",
           "reason": "透过历史追问人如何承受苦难，一手反思写作"
         }
-      ]
+      ],
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -126,7 +133,8 @@
           "tier": "medium",
           "reason": "城市变迁与手工艺人生活方式的观察反思"
         }
-      ]
+      ],
+      "is_new": false
     }
   ],
   "github_track": []
