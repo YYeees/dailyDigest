@@ -24,7 +24,7 @@
 import re
 from html import unescape
 
-from config import CONTENT_CHAR_CAP
+from config import AINEWS_FLOOR_CHARS, AINEWS_MIN_CHARS, CONTENT_CHAR_CAP
 
 # Substack给每条RSS都追加的"Read more"页脚链接，不是正文
 _SUBSTACK_FOOTER = re.compile(r"(?is)\s*<p>\s*<a[^>]*>\s*Read\s+more\s*</a>\s*</p>\s*$")
@@ -59,7 +59,12 @@ def extract_body(title, entry, cap=CONTENT_CHAR_CAP):
     if title.startswith(_AINEWS_PREFIX):
         cut = _RECAP_CUT.search(raw)
         if cut:
-            raw = raw[:cut.start()]
+            body = html_to_text(raw[:cut.start()])
+            # 编者按太短说明当天的按语基本没写，切完等于什么都没剩(实测最短478字符)——
+            # 退回去取全文开头，宁可多带点Recap也别让初筛手里空空如也。
+            if len(body) < AINEWS_MIN_CHARS:
+                body = html_to_text(raw)[:AINEWS_FLOOR_CHARS]
+            return body[:cap] or None
     return html_to_text(raw)[:cap] or None
 
 

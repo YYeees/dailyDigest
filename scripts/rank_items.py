@@ -6,11 +6,12 @@
     python scripts/rank_items.py pending [--limit N] [--source-type blog]
         列出digest.db里ranked_at IS NULL的条目(JSON数组,写到stdout)。每条额外带三个
         路由标记(规则定义在config.py,不用去记RANKING_CRITERIA.md里的文字规则):
-        - deep_read_eligible: 初筛medium/high后要不要WebFetch全文精判
+        - body_source: 这条内容的正文从哪来,决定走哪条路径(三选一):
+            "rss"   正文已经在库里(fetch时从RSS存的),`content`字段直接给,**不用WebFetch**
+            "fetch" 库里没有或被源截断,且source_type允许深读 → 初筛medium/high时WebFetch原文
+            "none"  没有全文可用(podcast/youtube/x) → 基于summary轻提炼
         - always_summarize: 不管tier判成什么都要写digest_summary
-        - content_chars: fetch时从RSS里存下来的正文有多长。0表示这个源的RSS没给正文,
-          只能靠WebFetch抓原文;不为0说明正文已经在库里,加--with-content就能直接拿到,
-          不用再下载一遍。正文在write时会被清空(见下)。
+        - content_chars: 库里存的正文有多长(0=这个源的RSS没给正文)。正文在write时被清空。
 
     python scripts/rank_items.py write results.json
         把判断结果写回digest.db。results.json是数组,每个元素:
@@ -28,14 +29,16 @@ import argparse
 import json
 import sqlite3
 import sys
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from config import (  # noqa: E402
     ALWAYS_ARCHIVE_TITLE_PREFIXES, ALWAYS_SUMMARIZE_TYPES, DB_PATH, DEEP_READ_ELIGIBLE_TYPES,
-    DIGEST_START_DATE, VALID_TIERS,
+    DIGEST_START_DATE, PENDING_CONTENT_BUDGET, VALID_TIERS,
 )
+from content_extract import is_truncated  # noqa: E402
 
 
 def cmd_pending(args):
@@ -56,23 +59,39 @@ def cmd_pending(args):
         params.append(args.limit)
 
     rows = []
+    budget, spent, over_budget = args.content_budget, 0, 0
     for row in conn.execute(query, params):
         item = dict(row)
-        item["deep_read_eligible"] = item["source_type"] in DEEP_READ_ELIGIBLE_TYPES
         item["always_summarize"] = (
             item["source_type"] in ALWAYS_SUMMARIZE_TYPES
             or any(item["title"].startswith(p) for p in ALWAYS_ARCHIVE_TITLE_PREFIXES)
         )
-        # 正文默认不吐出来——一次pending可能是几十万字符，谁要用谁显式加--with-content。
-        # `content_chars`永远给，用来判断这条源RSS里到底有没有正文(0=只能靠WebFetch抓原文)。
         body = item.pop("content", None)
         item["content_chars"] = len(body or "")
-        if args.with_content:
+
+        # 正文已经在库里(fetch时从RSS存的)就直接给，不用再去WebFetch同一个链接下载一遍。
+        # 超出本次预算的退回"fetch"走老路径——多抓一次总比把上下文撑爆强。
+        have_body = args.with_content and not is_truncated(body)
+        give_body = have_body and spent + len(body) <= budget
+        over_budget += have_body and not give_body
+        if give_body:
+            item["body_source"] = "rss"
             item["content"] = body
+            spent += len(body)
+        elif item["source_type"] in DEEP_READ_ELIGIBLE_TYPES:
+            item["body_source"] = "fetch"
+        else:
+            item["body_source"] = "none"
         rows.append(item)
     conn.close()
     json.dump(rows, sys.stdout, ensure_ascii=False, indent=2)
-    print(f"\n共{len(rows)}条待排序", file=sys.stderr)
+    kinds = Counter(r["body_source"] for r in rows)
+    print(f"\n共{len(rows)}条待排序 (正文来源: "
+          f"rss={kinds['rss']} fetch={kinds['fetch']} none={kinds['none']}, "
+          f"已用正文预算{spent:,}/{budget:,}字符)", file=sys.stderr)
+    if over_budget:
+        print(f"警告:正文预算不够,{over_budget}条明明库里有正文却退回了fetch。"
+              "配合--limit分批,或调大--content-budget。", file=sys.stderr)
 
 
 def cmd_write(args):
@@ -120,6 +139,8 @@ def main():
     p_pending.add_argument("--source-type", default=None, choices=["blog", "podcast", "youtube", "x"])
     p_pending.add_argument("--with-content", action="store_true",
                            help="连RSS正文一起吐出来(默认只给content_chars,正文可能很大)")
+    p_pending.add_argument("--content-budget", type=int, default=PENDING_CONTENT_BUDGET,
+                           help="本次最多吐多少字符的正文,超出的条目退回body_source=fetch")
     p_pending.set_defaults(func=cmd_pending)
 
     p_write = sub.add_parser("write", help="写回排序结果")

@@ -29,9 +29,18 @@ class TestExtractBody(unittest.TestCase):
         self.assertIsNone(extract_body("标题", entry("   ")))
 
     def test_ainews_cut_at_first_recap_section(self):
-        html = ("<p>编者按正文</p><h1><strong>AI Twitter Recap</strong></h1>"
+        note = "编者按正文" * 400  # 够长，不触发保底
+        html = (f"<p>{note}</p><h1><strong>AI Twitter Recap</strong></h1>"
                 "<p>大段机器聚合的社媒原文</p><h1><strong>AI Reddit Recap</strong></h1><p>更多</p>")
-        self.assertEqual(extract_body("[AINews] 某某", entry(html)), "编者按正文")
+        self.assertEqual(extract_body("[AINews] 某某", entry(html)), note)
+
+    def test_ainews_short_editor_note_falls_back_to_full_text(self):
+        # 实测有几天的编者按只有478字符，切完等于什么都没剩，要退回去取全文开头
+        html = ("<p>短按语</p><h1><strong>AI Twitter Recap</strong></h1>"
+                f"<p>{'社媒原文' * 500}</p>")
+        body = extract_body("[AINews] 某某", entry(html))
+        self.assertIn("社媒原文", body)
+        self.assertLessEqual(len(body), 4000)
 
     def test_recap_cut_only_applies_to_ainews(self):
         # 播客/文章标题没有[AINews]前缀，整篇留下

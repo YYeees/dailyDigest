@@ -21,6 +21,9 @@ VALID_WORTH_TIER = {"high", "medium", "low"}
 
 # 两段式判断的路由规则(原本是RANKING_CRITERIA.md里的散文段落，2026-08-15移进代码)。
 # 初筛(标题+摘要)得到medium/high后，只有这些source_type才会再WebFetch全文做精判。
+# 这些source_type在"库里没有正文"时**可以**去WebFetch原文抓一次(podcast/youtube/x没有原文
+# 可抓，只能用summary轻提炼)。注意语义：不是"要不要抓"，是"抓不到正文时能不能抓"——
+# RSS里已经带正文的条目不管什么type都不再抓，判定见rank_items.py的body_source。
 DEEP_READ_ELIGIBLE_TYPES = {"blog"}
 
 # 不管ai_tier/anchor_tier判成什么，这些source_type每条都要写digest_summary
@@ -57,3 +60,13 @@ TRENDING_MONTHLY_LIMIT = 6  # digest.html月度归档"GitHub高分项目"板块�
 # 历史快照没有展示价值，超过这个天数就清理，避免表无限增长。
 SNAPSHOT_RETENTION_DAYS = 180
 CONTENT_CHAR_CAP = 30000  # 单条正文入库上限，见content_extract.py文件头
+
+# [AINews]切到第一个Recap小标题后，编者按短于这个长度就认为切过头了(实测最短的只有478字符)，
+# 退回去取全文的前AINEWS_FLOOR_CHARS字符，保证初筛手里至少有判断依据。
+AINEWS_MIN_CHARS = 1000
+AINEWS_FLOOR_CHARS = 4000
+
+# 一次`rank_items.py pending --with-content`最多吐这么多字符的正文。稳态下一天的正文才~11K，
+# 这个预算用不到；但新增信源那天会一次回填几十条(实测22条×最多30K=660K)，超预算的条目退回
+# body_source="fetch"走老路径,避免一次pending把上下文撑爆。想全量拿就配合--limit分批。
+PENDING_CONTENT_BUDGET = 200000

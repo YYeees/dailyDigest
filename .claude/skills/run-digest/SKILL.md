@@ -20,26 +20,36 @@ python3 fetch.py && python3 fetch_x.py
 ### 2. 读取待排序条目
 
 ```bash
-python3 scripts/rank_items.py pending
+python3 scripts/rank_items.py pending --with-content
 ```
 
-输出JSON数组，每条含 `guid/person/source_name/source_type/title/link/published/summary`，外加两个路由标记(算好的，不用自己判断)：`deep_read_eligible`(要不要在medium/high时抓全文精判)、`always_summarize`(不管tier都要写摘要)。这个查询已经自动过滤了历史归档内容(`config.py`里的`DIGEST_START_DATE`之前的，永远不展示，不用排)和`ranked_at`不为空的(已经排过序的)。
+输出JSON数组，每条含 `guid/person/source_name/source_type/title/link/published/summary`，外加路由标记(算好的，不用自己判断)：
+
+- **`body_source`** —— 这条内容的正文从哪来，直接决定走哪条路径，不用自己判断：
+  - `"rss"` —— 正文已经在`content`字段里了(fetch时从RSS存的)。**不要再WebFetch这条的link**，那是把已经拿到的东西重新下载一遍，而且抓回来的网页比这个还大(多了导航/推荐位/评论)。
+  - `"fetch"` —— 库里没有正文(这个源的RSS不给全文，比如Simon Willison/Craig Mod/Andy Matuschak)，初筛medium/high时去WebFetch。
+  - `"none"` —— 没有全文可用(podcast/youtube/x)，只能基于`summary`轻提炼。
+- `always_summarize` —— 不管tier判成什么都要写`digest_summary`。
+- `content_chars` —— 库里存的正文长度，参考用。
+
+`summary`字段对多数源来说只是**副标题**(latent.space只有16~183字符)，不是摘要——所以`body_source`是`"rss"`时以`content`为准判断，别被短得离谱的summary带偏。这个查询已经自动过滤了历史归档内容(`config.py`里的`DIGEST_START_DATE`之前的，永远不展示，不用排)和`ranked_at`不为空的(已经排过序的)。
 
 如果返回空数组，说明没有新内容，直接跳到步骤5(仍建议跑一次export脚本，无害)。
 
-如果条目很多(比如第一次跑或者积压了几周)，分批处理，每批30~50条，避免一次读入太多。
+如果条目很多(比如第一次跑，或者刚加了新信源、RSS一次回填几十条)，分批处理：`--limit 30`配合多跑几次。stderr里如果出现"正文预算不够"的警告，说明这一批里有条目明明库里有正文却被退回了`fetch`——减小`--limit`重跑，别让它白抓一遍。
 
 ### 3. 两段式判断——读 `RANKING_CRITERIA.md` 获取判断标准，这里只列执行步骤
 
 **先读一次**`/Users/taoye/claude/thought-lab/now/关注锚点清单.md`(这份清单用户自己维护，可能会变，所以每次跑都要读，但**只读这一次**，不是每条item读一次——一次run几分钟内文件不会变，读过的内容留在上下文里对所有条目复用)。
 
-**初筛**(只用title+summary，不抓取任何东西)：**一轮里把所有pending条目一次性判完**，不要一条条分开处理——初筛不需要任何工具调用，纯粹是对着title+summary的判断，凑一轮做完能省掉N-1轮的turn开销。按`RANKING_CRITERIA.md`里Track 1(AI实操/趋势)和Track 2(thought-lab锚点)的标准，给每条条目出`ai_tier`/`ai_reason`/`anchor_tier`/`anchor_reason`。
+**初筛**(不抓取任何东西)：**一轮里把所有pending条目一次性判完**，不要一条条分开处理——初筛不需要任何工具调用，凑一轮做完能省掉N-1轮的turn开销。手里有什么就用什么：`body_source == "rss"`的条目用`content`(正文)判，其余的只能用title+summary判。按`RANKING_CRITERIA.md`里Track 1(AI实操/趋势)和Track 2(thought-lab锚点)的标准，给每条条目出`ai_tier`/`ai_reason`/`anchor_tier`/`anchor_reason`。
 
-**精判**(初筛做完之后，只针对需要精判的条目继续，按pending输出里的路由标记执行，不用自己重新判断走哪条路径)：
-- `deep_read_eligible == true` 且初筛任一track是`medium`或`high` → 用WebFetch工具抓一次`link`的全文，基于全文重新判断该track的tier(可以推翻初筛结果)，并写一段`digest_summary`(内容概要+核心观点，2~4句，不是摘录)。全文读完就丢，不要写入任何文件、不要存进结果JSON。
-- `deep_read_eligible == false`(podcast/youtube/x)且初筛任一track是`medium`/`high` → 不追加抓取，基于已有的`summary`字段写一段轻提炼作为`digest_summary`。X的`summary`是英文推文原文，写成中文概要(1~2句)，不要照抄英文。
-- `always_summarize == true`(X，或标题带`[RIDGELINE]`前缀的Craig Mod文章) → 不管`ai_tier`/`anchor_tier`判成什么，都要写中文`digest_summary`。X是"7日内关注"页"X动态"板块不管tier全展示；Ridgeline是用户明确说很喜欢、不想被判断结果筛掉，全部永久展示(见`config.ALWAYS_ARCHIVE_TITLE_PREFIXES`)。这类如果`deep_read_eligible`也是true(Ridgeline是blog类型，是)但初筛两个track都`low`，不用额外WebFetch全文，直接基于已有`summary`写轻提炼即可，跟podcast/youtube走同样的轻量路径。
-- 其余情况(`deep_read_eligible == false`且两个track都`low`且`always_summarize == false`) → 维持low，`digest_summary`留空(null)。
+**精判**(初筛做完之后，只针对需要精判的条目继续，按`body_source`执行，不用自己重新判断走哪条路径)：
+- `body_source == "rss"` → **不要WebFetch**。初筛已经看过正文了，tier就是终值。任一track是`medium`/`high`时基于正文写一段`digest_summary`(内容概要+核心观点，2~4句，不是摘录)。
+- `body_source == "fetch"` 且初筛任一track是`medium`或`high` → 用WebFetch工具抓一次`link`的全文，基于全文重新判断该track的tier(可以推翻初筛结果)，并写`digest_summary`。全文读完就丢，不要写入任何文件、不要存进结果JSON。
+- `body_source == "none"` 且初筛任一track是`medium`/`high` → 不追加抓取，基于已有的`summary`字段写一段轻提炼作为`digest_summary`。X的`summary`是英文推文原文，写成中文概要(1~2句)，不要照抄英文。
+- `always_summarize == true`(X，或标题带`[RIDGELINE]`前缀的Craig Mod文章) → 不管`ai_tier`/`anchor_tier`判成什么，都要写中文`digest_summary`。X是"7日内关注"页"X动态"板块不管tier全展示；Ridgeline是用户明确说很喜欢、不想被判断结果筛掉，全部永久展示(见`config.ALWAYS_ARCHIVE_TITLE_PREFIXES`)。这类如果`body_source`是`"fetch"`但初筛两个track都`low`，不用额外WebFetch全文，直接基于已有`summary`写轻提炼即可，跟`"none"`走同样的轻量路径。
+- 其余情况(两个track都`low`且`always_summarize == false`) → 维持low，`digest_summary`留空(null)。
 
 `ai_tier`/`anchor_tier`判完后，再对照`RANKING_CRITERIA.md`最后的"内容排除"一节检查一遍——目前只对Ray Dalio的X内容生效，命中就在结果里加`excluded_reason`(一句话理由)，其余字段照常写，导出时会被过滤掉。
 
