@@ -2,6 +2,23 @@
   "items": [
     {
       "person": "Latent Space",
+      "title": "[AINews] Memory prices up 500% in 12 months",
+      "link": "https://www.latent.space/p/ainews-memory-prices-up-500-in-12",
+      "date": "2026-08-19",
+      "first_seen": "2026-08-19T22:26:02.771967+00:00",
+      "source_type": "blog",
+      "summary": "内存芯片价格在过去12个月暴涨约500%，128GB DDR5内存价格已是历史最低价的十倍，业内称之为RAMageddon。根源是超大规模云厂商为保障AI算力扩张，已提前锁定2027年全球DRAM产能并支付预付款，内存单位重量价值一度逼近黄金的一半。摘自Latent Space的AINews栏目，属于AI基础设施成本上涨的宏观趋势梳理，不涉及具体工具或实操建议。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI算力扩张带动内存供应链紧缺涨价的宏观趋势梳理，信息量足但偏行业新闻叙事，不是直接操作指南"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
       "title": "Frontier Model Cost and Open-Weights Popularity is Driving Demand for Model Routing",
       "link": "https://www.latent.space/p/glean-model-routing",
       "date": "2026-08-18",
@@ -15,29 +32,7 @@
           "reason": "扎实的企业AI模型路由趋势报道，讲清楚成本驱动因素、路由机制、开源模型崛起，实操信息量足"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Mojo🔥 is now open source",
-      "link": "https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/",
-      "date": "2026-08-18",
-      "first_seen": "2026-08-18T22:24:21.876982+00:00",
-      "source_type": "blog",
-      "summary": "Mojo编程语言在承诺三年后终于以Apache 2许可证开源，紧随其1.0版本发布。项目早期目标是做Python的超集以复用现有生态，但2025年8月官方明确放弃这一定位，转而成为一门独立语言，语法借鉴Python但专注于简化GPU编程。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "AI基础设施相关的语言开源发布，说明清楚背景和转向，但内容单薄（link blog短文），达不到high的信息量门槛"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "纯编程语言工具新闻，跟三根主干无实质连接"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Maggie Appleton",
@@ -57,28 +52,6 @@
           "track": "anchor",
           "tier": "medium",
           "reason": "一手生活反思触及自我认识边缘，主题偏经济理论非清单原文母题，清单外但有分量"
-        }
-      ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index",
-      "link": "https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/",
-      "date": "2026-08-17",
-      "first_seen": "2026-08-18T14:00:26.746432+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "与8月16日那篇《Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things》是同一个模型的连续追踪，那篇是上手实测、这篇只补了一个benchmark分数且无任何实操信息，择一看即可"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "benchmark分数对比，跟三根主干没有实质连接"
         }
       ],
       "is_new": false
@@ -225,57 +198,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "模型与Agent产品信息扎实，但整体偏发布新闻性质"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Craig Mod",
-      "title": "[RODEN] Blood Robots For You and You and You",
-      "link": "https://craigmod.com/roden/117/",
-      "date": "2026-08-12",
-      "first_seen": "2026-08-13T07:53:39.913822+00:00",
-      "source_type": "blog",
-      "summary": "这期newsletter介绍了上面那篇四千字长文的写作过程与后续：他用Claude追踪到一篇尘封旧报纸，发现自己出生证明上的中间名竟源于一位几十年前意外身亡的陌生人。另外还提到摄影集《事物变成其他事物》精装第二版开放预订。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "上一篇的后续，同一脉络"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "DeepSeek V4 Pro 0813 (on OpenRouter)",
-      "link": "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/",
-      "date": "2026-08-12",
-      "first_seen": "2026-08-13T09:18:25.646159+00:00",
-      "source_type": "blog",
-      "summary": "DeepSeek发布V4 Pro 0813，目前只开放API访问。一个有意思的细节：这个模型在低／中／高不同推理强度下生成的图像差异很明显，这在其他模型里比较少见。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "前沿模型新发布，趋势追踪"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] How to steal a Reasoning Trace",
-      "link": "https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace",
-      "date": "2026-08-12",
-      "first_seen": "2026-08-17T04:20:19.882816+00:00",
-      "source_type": "blog",
-      "summary": "研究人员发现可以通过重放加密的推理令牌到较弱模型上，配合精心设计的提示词逐步“抄录”出被隐藏的推理过程，一次网络扫描还在公开的追踪记录里发现了大量泄露的API密钥和账号密码。核心启示是加密签名不等于安全，隐藏推理这道防蒸馏防监控的防线并不牢固。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "揭示了一个真实安全漏洞并讲清为什么重要，但理解攻击链需要中等技术背景"
         }
       ],
       "is_new": false
