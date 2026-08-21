@@ -1,6 +1,57 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "Stop Making TUIs",
+      "link": "https://simonwillison.net/2026/Aug/21/stop-making-tuis/",
+      "date": "2026-08-21",
+      "first_seen": "2026-08-21T22:25:51.700383+00:00",
+      "source_type": "blog",
+      "summary": "Thomas Ptacek主张：既然coding agent已经能可靠地生成合格的原生GUI，开发者应该停止为随手写的小工具做TUI，转而默认做原生图形界面——TUI存在的历史原因只是当年不想学Motif，而非技术优势，在滚动、拖拽、图像展示等方面天然弱于GUI。他给出了5个用agent搭建原生界面的真实工具(Markdown查看器、数学计算器、音乐播放器等)和具体工作流(复用SwiftUI技能库、Makefile构建、agent可视化调试)。Simon也提到自己今年3月vibe-coding出的带宽和GPU监控小工具，至今每天在用。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "核心论点正是护城河在harness不在模型这条母题的具体例证——模型能力人人可得，真正的差异在你围绕agent搭的工作流和界面，Simon补充了自己vibe-coding出的macOS应用仍在每天用的一手经历"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Poolside gets $12B reverse-execuhire to NVIDIA; founders stay for $1B, employees go for $6B, Infraco scaling to 7GW neocloud",
+      "link": "https://www.latent.space/p/ainews-poolside-gets-12b-reverse",
+      "date": "2026-08-21",
+      "first_seen": "2026-08-21T22:25:52.102056+00:00",
+      "source_type": "blog",
+      "summary": "Poolside与NVIDIA达成一笔罕见的反向execuhire：创始人留任并获10亿美元，109名员工(几乎是全部技术骨干)转投NVIDIA获60亿美元，原基础设施子公司PIC Infraco独立出去、目标扩容到7GW。创始人称这不是收购也不是acquihire，原因是去年底一次20亿美元融资未能按时到位、错失4万块GB300集群，暴露了独立训练前沿模型对资本和物理算力的双重门槛。三方创始人都暗示下一步尚未公开，但强调AI的终极价值会落在能靠真实世界实验形成数据护城河的科学发现类问题上，而非可被开源商品化的通用智能能力。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚了Poolside向NVIDIA反向execuhire的12B美元交易细节和背后算力/资本约束的行业动因，属于讲透是什么、为什么重要的前沿趋势报道"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Craig Mod",
+      "title": "[RIDGELINE] Walking The Length of Manhattan",
+      "link": "https://craigmod.com/ridgeline/232/",
+      "date": "2026-08-21",
+      "first_seen": "2026-08-21T22:25:49.377109+00:00",
+      "source_type": "blog",
+      "summary": "作者与摄影师从曼哈顿最北端徒步走到最南端，历时六小时、24公里，途中特意放弃把旅行做成创作项目的念头，只是单纯地享受城市与街区的细节。文中顺带提到用Claude做血液数据的侦探式分析，但与主线关系不大。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "亲身徒步的一手经历，触及清净的场域(选择享受而非项目化)与自然生长质朴中正的主题，但更多是旅行叙事而非系统性反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "The /wayfinder Skill: Navigating the “Fog of War” of Planning",
       "link": "https://www.latent.space/p/wayfinder-skill",
@@ -20,7 +71,7 @@
           "reason": "正面命中「护城河在harness，不在模型」——skill本身就是harness，且整段讲的是怎么设计agent之间的信息流和上下文管理，是根二「和LLM共建、认知系统」的一手经验"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -37,7 +88,7 @@
           "reason": "踩中「一手不二手」和「自然生长、质朴中正，不迎合」两条母题——信任自己的品味、别过度解释、与作品全然在场，且是Rick Rubin本人的创作经验"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -59,7 +110,7 @@
           "reason": "直接踩中「认知系统不能外包，信息系统可以」这条母题——代码生成能交给agent，但读懂和守住设计的认知容量不能；且是他本人的一手反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",

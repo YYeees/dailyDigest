@@ -2,6 +2,128 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "llm 0.32.1",
+      "link": "https://simonwillison.net/2026/Aug/21/llm/",
+      "date": "2026-08-21",
+      "first_seen": "2026-08-21T22:25:51.700174+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "作者自己维护的工具修复性版本更新日志，按内容本身判断不算AI实操内容"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "纯软件更新日志，跟三根主干和周边领域都没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "llm-openrouter 0.7",
+      "link": "https://simonwillison.net/2026/Aug/21/llm-openrouter/",
+      "date": "2026-08-21",
+      "first_seen": "2026-08-21T22:25:51.700351+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "作者自己维护的插件版本更新日志，按内容本身判断不算AI实操内容"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "纯软件更新日志，跟三根主干和周边领域都没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Stop Making TUIs",
+      "link": "https://simonwillison.net/2026/Aug/21/stop-making-tuis/",
+      "date": "2026-08-21",
+      "first_seen": "2026-08-21T22:25:51.700383+00:00",
+      "source_type": "blog",
+      "summary": "Thomas Ptacek主张：既然coding agent已经能可靠地生成合格的原生GUI，开发者应该停止为随手写的小工具做TUI，转而默认做原生图形界面——TUI存在的历史原因只是当年不想学Motif，而非技术优势，在滚动、拖拽、图像展示等方面天然弱于GUI。他给出了5个用agent搭建原生界面的真实工具(Markdown查看器、数学计算器、音乐播放器等)和具体工作流(复用SwiftUI技能库、Makefile构建、agent可视化调试)。Simon也提到自己今年3月vibe-coding出的带宽和GPU监控小工具，至今每天在用。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Thomas Ptacek的实战主张：coding agent已经能可靠地搭出合格的原生GUI，成本骤降，所以哪怕是丢弃型小工具也该做原生界面而不是TUI，附了5个用agent生成界面的真实案例和具体工作流，属于编程agent实战案例"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "核心论点正是护城河在harness不在模型这条母题的具体例证——模型能力人人可得，真正的差异在你围绕agent搭的工作流和界面，Simon补充了自己vibe-coding出的macOS应用仍在每天用的一手经历"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Matt Webb",
+      "link": "https://simonwillison.net/2026/Aug/21/matt-webb/",
+      "date": "2026-08-21",
+      "first_seen": "2026-08-21T22:25:51.700399+00:00",
+      "source_type": "blog",
+      "summary": "Simon转引Matt Webb的话：他更新银河指南针App时遇到四元数计算错误，没有直接让ChatGPT写代码，而是让它像家教一样教自己理解四元数原理，最终真正学会了读书和请教数学家朋友都没学会的东西。Webb的结论是，把具体执行外包给AI并不会让学习停止，反而会推着你学得更多。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Matt Webb分享了用ChatGPT像家教一样互动学习四元数(而非直接要代码)的一手经历，说明把思考外包给AI不代表停止学习，是有启发的AI学习方法论，但篇幅短、属于引用体"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "直接呼应认知系统不能外包这条反射母题，用一手经历给出了外包思考反而促进学习的回应，但内容是Simon转引Matt Webb的话，偏轻量"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Poolside gets $12B reverse-execuhire to NVIDIA; founders stay for $1B, employees go for $6B, Infraco scaling to 7GW neocloud",
+      "link": "https://www.latent.space/p/ainews-poolside-gets-12b-reverse",
+      "date": "2026-08-21",
+      "first_seen": "2026-08-21T22:25:52.102056+00:00",
+      "source_type": "blog",
+      "summary": "Poolside与NVIDIA达成一笔罕见的反向execuhire：创始人留任并获10亿美元，109名员工(几乎是全部技术骨干)转投NVIDIA获60亿美元，原基础设施子公司PIC Infraco独立出去、目标扩容到7GW。创始人称这不是收购也不是acquihire，原因是去年底一次20亿美元融资未能按时到位、错失4万块GB300集群，暴露了独立训练前沿模型对资本和物理算力的双重门槛。三方创始人都暗示下一步尚未公开，但强调AI的终极价值会落在能靠真实世界实验形成数据护城河的科学发现类问题上，而非可被开源商品化的通用智能能力。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚了Poolside向NVIDIA反向execuhire的12B美元交易细节和背后算力/资本约束的行业动因，属于讲透是什么、为什么重要的前沿趋势报道"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Craig Mod",
+      "title": "[RIDGELINE] Walking The Length of Manhattan",
+      "link": "https://craigmod.com/ridgeline/232/",
+      "date": "2026-08-21",
+      "first_seen": "2026-08-21T22:25:49.377109+00:00",
+      "source_type": "blog",
+      "summary": "作者与摄影师从曼哈顿最北端徒步走到最南端，历时六小时、24公里，途中特意放弃把旅行做成创作项目的念头，只是单纯地享受城市与街区的细节。文中顺带提到用Claude做血液数据的侦探式分析，但与主线关系不大。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "亲身徒步的一手经历，触及清净的场域(选择享受而非项目化)与自然生长质朴中正的主题，但更多是旅行叙事而非系统性反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "ChatGPT search now uses the site:operator at scale",
       "link": "https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/",
       "date": "2026-08-20",
@@ -20,7 +142,7 @@
           "reason": "搜索产品行为与GEO行业观察，跟三根主干没有实质连接"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -42,29 +164,7 @@
           "reason": "正面命中「护城河在harness，不在模型」——skill本身就是harness，且整段讲的是怎么设计agent之间的信息流和上下文管理，是根二「和LLM共建、认知系统」的一手经验"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "A shot-scraper-style JSON API on Bun 1.4's new Bun.WebView",
-      "link": "https://simonwillison.net/2026/Aug/20/bun-webview-json-api/",
-      "date": "2026-08-20",
-      "first_seen": "2026-08-21T01:28:39.199268+00:00",
-      "source_type": "blog",
-      "summary": "Bun 1.4发了，是Rust重写之后的第一个稳定版。西蒙·威利森最在意的新东西是Bun.WebView——把浏览器自动化做进了Bun核心，走macOS WebKit或者用Chrome DevTools Protocol控制本地Chromium。他让Claude Code for web照着自己的shot-scraper做了一个原型：一个能加载网页再对它执行JavaScript的JSON API，实测跑复杂网页大约需要192~256MB的容器内存。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "Bun 1.4发布加上作者自己搭的原型，偏JavaScript工程生态，对日常怎么用AI工具的帮助是间接的"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "运行时和浏览器自动化的工程话题，跟三根主干没有实质连接"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -81,7 +181,7 @@
           "reason": "踩中「一手不二手」和「自然生长、质朴中正，不迎合」两条母题——信任自己的品味、别过度解释、与作品全然在场，且是Rick Rubin本人的创作经验"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -98,7 +198,7 @@
           "reason": "讲的是参数量为何不再是能力指标、后训练环境如何合成，属于模型内部机制和训练方法论，要一定技术背景才看得懂门道"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -120,7 +220,7 @@
           "reason": "直接踩中「认知系统不能外包，信息系统可以」这条母题——代码生成能交给agent，但读懂和守住设计的认知容量不能；且是他本人的一手反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -269,40 +369,6 @@
           "track": "anchor",
           "tier": "high",
           "reason": "构建者一手视角谈“没有harness就没有agent”，延续护城河在harness不在模型这条母题"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Don't classify. Hallucinate!",
-      "link": "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/",
-      "date": "2026-08-14",
-      "first_seen": "2026-08-15T08:00:45.693341+00:00",
-      "source_type": "blog",
-      "summary": "这篇文章介绍了Doug Turnbull提出的一个分类技巧：面对1800多个标签的语料库，与其把完整标签表喂给LLM做选择，不如让模型“幻觉”生成它认为合适的新标签（给出格式示例但不给真实列表），再用向量嵌入把生成的标签跟已有标签库做相似度匹配，找出最接近的真实标签。这样既避免了把庞大词表塞进prompt，又利用了LLM的生成能力，是一个具体可借鉴的分类实操思路。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "转发Doug Turnbull的分类技巧：不给LLM完整标签表，而是让它“幻觉”生成合适的新标签，再用向量嵌入去匹配真实标签库，避免把庞大标签表塞进prompt。方法具体、讲清楚了为什么有效，是可以直接借鉴的实操技巧"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Gemini 3.7 Flash brings GDM back to the forefront",
-      "link": "https://www.latent.space/p/ainews-gemini-37-flash-brings-gdm",
-      "date": "2026-08-14",
-      "first_seen": "2026-08-17T04:20:19.882800+00:00",
-      "source_type": "blog",
-      "summary": "文章通过图表指出较早的Gemini 3.5/3.6 Flash已经落后于Claude和GPT最新系列，Gemini 3.7 Flash的发布被解读为Google试图重新追赶的动作，但具体性能提升细节因付费墙未能获取，无法进一步验证。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "全文被付费墙限制，只能确认是模型更新新闻性质内容，信息量有限"
         }
       ],
       "is_new": false

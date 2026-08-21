@@ -2,6 +2,28 @@
   "items": [
     {
       "person": "Ray Dalio",
+      "title": "It seems to me that the personal evolutionary process takes place in five distinct steps. If you can…",
+      "link": "https://x.com/RayDalio/status/2090877673698447530",
+      "date": "2026-08-21",
+      "first_seen": "2026-08-21T22:25:57.132819+00:00",
+      "source_type": "x",
+      "summary": "Dalio发了条每日原则，提出个人进化要经过五个步骤，做好这五件事基本就能成功(具体步骤在配图里，推文正文没有展开)。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "https://t.co/VXVQj5NGAc",
+      "link": "https://x.com/RayDalio/status/2090832828397203480",
+      "date": "2026-08-21",
+      "first_seen": "2026-08-21T22:25:57.133011+00:00",
+      "source_type": "x",
+      "summary": "这条推文只附带一张图片或视频链接，没有文字说明，具体内容不明。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
       "title": "What makes a \"Shaper\"?  It’s a unique personality type—people who are driven by the compulsive thril…",
       "link": "https://x.com/RayDalio/status/2090537764651458791",
       "date": "2026-08-20",
@@ -9,7 +31,7 @@
       "source_type": "x",
       "summary": "达利欧谈什么是「塑造者（Shaper）」：一种独特的人格类型，被「把一个想法从设想推到落地」这件事本身的冲动所驱动。对这些人来说，重点不是安全感也不是赚钱，而是攀爬过程本身带来的兴奋。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -20,7 +42,7 @@
       "source_type": "x",
       "summary": "Andy Matuschak转推了Live Poetry：把live coding的形式挪到诗歌上，让诗成为一个实时演进的过程来现场表演，是个协作式的创作系统。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -31,7 +53,7 @@
       "source_type": "x",
       "summary": "Andy Matuschak说自己被Dennis Hlynsky的作品迷住了：把椋鸟、乌鸦、鱼群的运动轨迹用重叠延时的方式拍下来，让一段时间里的动线同时显影在一张画面上。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -42,7 +64,7 @@
       "source_type": "x",
       "summary": "达利欧讲演化周期：这套循环不只作用在人身上，国家、公司、经济体乃至一切事物都在其中，而且整体上会自我纠正、局部却未必。比如市场供给过剩、浪费太多时，价格下跌、公司倒闭、产能收缩，直到供给重新对上需求，周期就朝反方向走；经济坏到一定程度，管事的人要么做出必要的政治和政策调整，要么被替换掉。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -53,7 +75,7 @@
       "source_type": "x",
       "summary": "达利欧回顾一生后认为，钱、业绩记录、为客户做的事都很好，但最好的部分始终是关系。而那些诚实的关系之所以更深、更好，恰恰是因为有「严厉的爱」——严厉的爱是最好的爱，因为它出自真正的在乎；当对方知道你是真在乎，你就能把难听的实话和这份在乎捆在一起，一起扛过去。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -74,17 +96,6 @@
       "first_seen": "2026-08-17T22:25:42.507970+00:00",
       "source_type": "x",
       "summary": "Ray Dalio转发了他与Steven Bartlett在Diary of a CEO播客的访谈，说收到很多正面反馈，建议看视频简介跳转到感兴趣的具体话题。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "The first stock I ever bought was the only company I’d heard of selling for under $5 a share. I stup…",
-      "link": "https://x.com/RayDalio/status/2088288411350085880",
-      "date": "2026-08-14",
-      "first_seen": "2026-08-15T09:47:09.378249+00:00",
-      "source_type": "x",
-      "summary": "达利欧回忆自己人生第一次买股票：因为便宜且“听说过这家公司”就买入，结果公司险些破产又被收购股价翻三倍——从此“上瘾”般迷上了投资这个游戏。",
       "tier": "low",
       "is_new": false
     }
