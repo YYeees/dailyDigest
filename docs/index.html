@@ -456,13 +456,16 @@ let trendingItems = [];
 
 function renderTrendingItem(item) {
   const stars = item.stars_total != null ? `★ ${item.stars_total.toLocaleString()}` : '';
+  // 这块板子是按"本期新增star"排序的(见scripts/export_trending.py文件头)，把排序依据显示出来，
+  // 否则读者看到的顺序没有任何可见理由——常驻的大仓库和这周真的在涨的仓库长得一模一样
+  const gained = item.stars_period ? ` · 本周 +${item.stars_period.toLocaleString()}` : '';
   const diffTag = item.difficulty
     ? `<span class="category-tag">${DIFFICULTY_LABEL[item.difficulty] || item.difficulty}</span>`
     : '';
   return `
     <div class="item ${item.worth_tier}">
       <div class="item-meta">
-        <span class="meta-left">${item.language || ''} · ${stars}</span>
+        <span class="meta-left">${item.language || ''} · ${stars}${gained}</span>
         <span class="meta-right">
           ${diffTag}
           <span class="tier-tag tier-${item.worth_tier}">${TIER_LABEL[item.worth_tier] || item.worth_tier}</span>
