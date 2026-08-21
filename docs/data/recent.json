@@ -1,6 +1,128 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "ChatGPT search now uses the site:operator at scale",
+      "link": "https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/",
+      "date": "2026-08-20",
+      "first_seen": "2026-08-21T01:28:39.199001+00:00",
+      "source_type": "blog",
+      "summary": "Promptwatch的监测显示，ChatGPT搜索里带site:操作符的fanout查询占比，在GPT-5.6于8月8日推开之后，从原本长期的0.3%~0.5%一下跳到16%~17%。西蒙·威利森推测OpenAI的搜索工具形态更可能是search(query, recency, domains)这样带域名参数的调用，而不是真的在鼓励模型写site:。同一家在8月18日的后续报告里还观察到ChatGPT明显减少了把Reddit当信息源，但他试图从泄露的系统提示词里求证这一点没有成功——OpenAI刻意隐藏系统提示词让这类判断只能靠外部观测。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "第三方监测数据推出来的产品行为变化，OpenAI没有公开确认，属于值得知道的趋势观察而不是确定的实操信息"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "搜索产品行为与GEO行业观察，跟三根主干没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "The /wayfinder Skill: Navigating the “Fog of War” of Planning",
+      "link": "https://www.latent.space/p/wayfinder-skill",
+      "date": "2026-08-20",
+      "first_seen": "2026-08-21T01:28:40.160421+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space新开的skill系列第一期，访谈Matt Pocock，聊他新发布的/wayfinder。它要解决的是「战争迷雾」式的项目——目标在一开始没法完全定死的时候怎么规划。Pocock的起因是他大量使用AFK（离开键盘的）agent，把工作拆成spec再拆成ticket让agent通宵跑，但规划这一步本身变得很累人：他得一直惦记自己用掉了多少上下文、这一层挖得多深。于是他想要一个编排层，把规划过程本身托管掉——自动切分成多个线程去做原型、做调研，再把结果收拢回来，让规划阶段不再受上下文窗口的约束。他强调skill的本质就是上下文管理，所以设计时真正要想的是信息流：被管理的子会话需要什么，答案是一份对全局的粗略认知加上它自己那份具体任务。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接可用的实操信息：一个公开的skill，讲清了它解决什么问题、怎么设计的、什么场景该用，门槛不高"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "正面命中「护城河在harness，不在模型」——skill本身就是harness，且整段讲的是怎么设计agent之间的信息流和上下文管理，是根二「和LLM共建、认知系统」的一手经验"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "A shot-scraper-style JSON API on Bun 1.4's new Bun.WebView",
+      "link": "https://simonwillison.net/2026/Aug/20/bun-webview-json-api/",
+      "date": "2026-08-20",
+      "first_seen": "2026-08-21T01:28:39.199268+00:00",
+      "source_type": "blog",
+      "summary": "Bun 1.4发了，是Rust重写之后的第一个稳定版。西蒙·威利森最在意的新东西是Bun.WebView——把浏览器自动化做进了Bun核心，走macOS WebKit或者用Chrome DevTools Protocol控制本地Chromium。他让Claude Code for web照着自己的shot-scraper做了一个原型：一个能加载网页再对它执行JavaScript的JSON API，实测跑复杂网页大约需要192~256MB的容器内存。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Bun 1.4发布加上作者自己搭的原型，偏JavaScript工程生态，对日常怎么用AI工具的帮助是间接的"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "运行时和浏览器自动化的工程话题，跟三根主干没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Andrew Huberman",
+      "title": "Essentials: How to Access Your Creativity | Rick Rubin",
+      "link": "https://www.youtube.com/watch?v=QP8Kpf1UQwM",
+      "date": "2026-08-20",
+      "first_seen": "2026-08-21T01:28:33.448563+00:00",
+      "source_type": "youtube",
+      "summary": "Huberman Lab精编版，嘉宾是制作人Rick Rubin（《创造之道》作者）。核心是怎么进入创造状态：留意冒出来的念头、信任自己的品味、与手上的作品保持全然在场。Rubin拆了创作过程的四个阶段，谈了专注与刻意抽离如何交替、自我怀疑其实可以当成工具用、截止日期和冥想各自起什么作用。还聊到感知与叙事、以及为什么对不确定保持敞开能让人创作得更本真——包括「别急着解释你的实验」和从职业摔角里看到的真实与表演的关系。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "踩中「一手不二手」和「自然生长、质朴中正，不迎合」两条母题——信任自己的品味、别过度解释、与作品全然在场，且是Rick Rubin本人的创作经验"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Death of Params: Z.ai CEO Jie Tang on GLM 5.3 and the new Post-training Scaling Law",
+      "link": "https://www.latent.space/p/ainews-death-of-params-zai-ceo-jie",
+      "date": "2026-08-20",
+      "first_seen": "2026-08-21T01:28:40.161198+00:00",
+      "source_type": "blog",
+      "summary": "Z.ai的唐杰教授说，光看参数量已经不够了——得同时看数据量、算力打算花在哪、谁在什么条件下跑这个模型。GLM-5.3的大幅跃升完全来自在长周期真实环境上做强化学习：任务按工程和研究实际的做法设计，有的相当于一个熟练工程师好几天的工作量，比如给模型一整套真实的ML基础设施环境，让它自己诊断训练栈瓶颈、实现优化、跑实验，最后交出可测量且不破坏正确性的端到端加速。更关键的是这套环境、评判和验证器已经全链路合成：研究agent从真实工作里提取任务模式生成可运行的长周期环境，判题agent先自己做一遍确认题目可解，验证器在不看参考答案的情况下合成。结论是记忆力靠参数，推理力靠后训练数据和有效深度。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "讲的是参数量为何不再是能力指标、后训练环境如何合成，属于模型内部机制和训练方法论，要一定技术背景才看得懂门道"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Conceptual integrity and counting lines of code",
+      "link": "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/",
+      "date": "2026-08-19",
+      "first_seen": "2026-08-21T01:28:39.199316+00:00",
+      "source_type": "blog",
+      "summary": "西蒙·威利森反驳「代码行数不能衡量生产力」的通行说法：过去一个工程师一天写出两百行可上生产的代码已是极好的一天，多数时候只有五六十行；如果agent能让你产出一千行同等质量的代码，这就是实打实的提升。但他紧接着指出新的限制因素已经变成认知容量——产出快一百倍，人却没有能力盯住一百倍的代码，所以团队依然必要，是为了把认知负荷分摊开。更麻烦的是《人月神话》里说的「概念完整性」：agent让加功能变得极便宜，软件于是长出各种奇怪的疣，最后变成温彻斯特神秘屋。过去是时间成本替你强制了纪律，现在这层约束没了，只能靠主动的自律补上。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "把「用agent之后瓶颈到底在哪」讲透了：产出速度不再是限制，认知容量才是——面向工程师的一手判断，讲清了是什么和为什么重要，门槛不高"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "直接踩中「认知系统不能外包，信息系统可以」这条母题——代码生成能交给agent，但读懂和守住设计的认知容量不能；且是他本人的一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] Memory prices up 500% in 12 months",
       "link": "https://www.latent.space/p/ainews-memory-prices-up-500-in-12",
@@ -15,7 +137,7 @@
           "reason": "AI算力扩张带动内存供应链紧缺涨价的宏观趋势梳理，信息量足但偏行业新闻叙事，不是直接操作指南"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -181,23 +303,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "全文被付费墙限制，只能确认是模型更新新闻性质内容，信息量有限"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] SpaceXAI Grok 4.6 and Grok @Bot",
-      "link": "https://www.latent.space/p/ainews-spacexai-grok-46-and-grok",
-      "date": "2026-08-13",
-      "first_seen": "2026-08-17T04:20:19.882809+00:00",
-      "source_type": "blog",
-      "summary": "xAI发布Grok 4.6，针对长流程agent任务和复杂交互做了专门优化（更长的辅助训练、模型生成推理数据、改进的优化器），号称成本效率超越同代前沿模型；配套的Grok @Bot定位为能“登录你的工具像你一样使用它们”的AI团队助手，被视为agent应用从编程领域扩展到知识工作的重要一步。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "模型与Agent产品信息扎实，但整体偏发布新闻性质"
         }
       ],
       "is_new": false

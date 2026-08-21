@@ -2,6 +2,61 @@
   "items": [
     {
       "person": "Ray Dalio",
+      "title": "What makes a \"Shaper\"?  It’s a unique personality type—people who are driven by the compulsive thril…",
+      "link": "https://x.com/RayDalio/status/2090537764651458791",
+      "date": "2026-08-20",
+      "first_seen": "2026-08-21T01:28:47.962987+00:00",
+      "source_type": "x",
+      "summary": "达利欧谈什么是「塑造者（Shaper）」：一种独特的人格类型，被「把一个想法从设想推到落地」这件事本身的冲动所驱动。对这些人来说，重点不是安全感也不是赚钱，而是攀爬过程本身带来的兴奋。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Andy Matuschak",
+      "title": "RT @upcycledwords: Live coding, but make it poetry.  Live Poetry is a system for performing poetry a…",
+      "link": "https://x.com/andy_matuschak/status/2090256991801483396",
+      "date": "2026-08-20",
+      "first_seen": "2026-08-21T01:28:50.197793+00:00",
+      "source_type": "x",
+      "summary": "Andy Matuschak转推了Live Poetry：把live coding的形式挪到诗歌上，让诗成为一个实时演进的过程来现场表演，是个协作式的创作系统。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Andy Matuschak",
+      "title": "Mesmerized by Dennis Hlynsky's overlapped timelapses of starlings, crows, fish…https://t.co/7J7TBbSQ…",
+      "link": "https://x.com/andy_matuschak/status/2090254660300923059",
+      "date": "2026-08-20",
+      "first_seen": "2026-08-21T01:28:50.198400+00:00",
+      "source_type": "x",
+      "summary": "Andy Matuschak说自己被Dennis Hlynsky的作品迷住了：把椋鸟、乌鸦、鱼群的运动轨迹用重叠延时的方式拍下来，让一段时间里的动线同时显影在一张画面上。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "This evolutionary cycle is not just for people but for countries, companies, economies—for everythin…",
+      "link": "https://x.com/RayDalio/status/2090182018940518700",
+      "date": "2026-08-19",
+      "first_seen": "2026-08-21T01:28:47.963089+00:00",
+      "source_type": "x",
+      "summary": "达利欧讲演化周期：这套循环不只作用在人身上，国家、公司、经济体乃至一切事物都在其中，而且整体上会自我纠正、局部却未必。比如市场供给过剩、浪费太多时，价格下跌、公司倒闭、产能收缩，直到供给重新对上需求，周期就朝反方向走；经济坏到一定程度，管事的人要么做出必要的政治和政策调整，要么被替换掉。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "When I look back at my life, reflect, and think about what has been best for me, I realize that the…",
+      "link": "https://x.com/RayDalio/status/2090124297029218453",
+      "date": "2026-08-19",
+      "first_seen": "2026-08-21T01:28:47.963162+00:00",
+      "source_type": "x",
+      "summary": "达利欧回顾一生后认为，钱、业绩记录、为客户做的事都很好，但最好的部分始终是关系。而那些诚实的关系之所以更深、更好，恰恰是因为有「严厉的爱」——严厉的爱是最好的爱，因为它出自真正的在乎；当对方知道你是真在乎，你就能把难听的实话和这份在乎捆在一起，一起扛过去。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
       "title": "Everything from the smallest subatomic particle to the entire galaxy is evolving. While everything a…",
       "link": "https://x.com/RayDalio/status/2089468608942387672",
       "date": "2026-08-17",
@@ -9,7 +64,7 @@
       "source_type": "x",
       "summary": "Ray Dalio写道，从最小的亚原子粒子到整个星系都在演化；万物看似消亡，实则只是以新形式重新组合，能量不会消失只会被重新配置，这股力量就是演化本身。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -20,7 +75,7 @@
       "source_type": "x",
       "summary": "Ray Dalio转发了他与Steven Bartlett在Diary of a CEO播客的访谈，说收到很多正面反馈，建议看视频简介跳转到感兴趣的具体话题。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -31,39 +86,6 @@
       "source_type": "x",
       "summary": "达利欧回忆自己人生第一次买股票：因为便宜且“听说过这家公司”就买入，结果公司险些破产又被收购股价翻三倍——从此“上瘾”般迷上了投资这个游戏。",
       "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Andy Matuschak",
-      "title": "What a beautiful project—an ode to the mundane wonders in our living rooms.  Reminds me of Gordon Br…",
-      "link": "https://x.com/andy_matuschak/status/2088076416458113101",
-      "date": "2026-08-14",
-      "first_seen": "2026-08-16T07:47:34.148977+00:00",
-      "source_type": "x",
-      "summary": "Andy Matuschak转发了一个关于客厅日常物件的“平凡奇迹”项目，联想到Gordon Brander“身边的一切都是某人的毕生之作”这一说法。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "It’s important not to let our biases stand in the way of our objectivity. To get good results, we ne…",
-      "link": "https://x.com/RayDalio/status/2087990551761096864",
-      "date": "2026-08-13",
-      "first_seen": "2026-08-15T09:47:09.380400+00:00",
-      "source_type": "x",
-      "summary": "达利欧分享一个认知习惯：每当他觉得自然界某种现象“不对”时，会先假设自己错了，反过来去理解自然为何如此运作——这重塑了他对善恶、人生目的与重大抉择的看法。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Andy Matuschak",
-      "title": "A weird advantage of writing by hand is that because it's so slow, I experience stuckness less. By t…",
-      "link": "https://x.com/andy_matuschak/status/2087677816661790856",
-      "date": "2026-08-12",
-      "first_seen": "2026-08-16T07:47:34.149243+00:00",
-      "source_type": "x",
-      "summary": "Andy Matuschak反思手写的一个反直觉优势：因为写字慢，反而更少陷入“卡壳”——打字时常常思维快过手速，写到句尾会突然断片，那种令人想逃避分心的“不知道下一步写什么”的感觉会更强烈地暴露出来。",
-      "tier": "medium",
       "is_new": false
     }
   ]

@@ -2,6 +2,67 @@
   "items": [
     {
       "person": "Latent Space",
+      "title": "The /wayfinder Skill: Navigating the “Fog of War” of Planning",
+      "link": "https://www.latent.space/p/wayfinder-skill",
+      "date": "2026-08-20",
+      "first_seen": "2026-08-21T01:28:40.160421+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space新开的skill系列第一期，访谈Matt Pocock，聊他新发布的/wayfinder。它要解决的是「战争迷雾」式的项目——目标在一开始没法完全定死的时候怎么规划。Pocock的起因是他大量使用AFK（离开键盘的）agent，把工作拆成spec再拆成ticket让agent通宵跑，但规划这一步本身变得很累人：他得一直惦记自己用掉了多少上下文、这一层挖得多深。于是他想要一个编排层，把规划过程本身托管掉——自动切分成多个线程去做原型、做调研，再把结果收拢回来，让规划阶段不再受上下文窗口的约束。他强调skill的本质就是上下文管理，所以设计时真正要想的是信息流：被管理的子会话需要什么，答案是一份对全局的粗略认知加上它自己那份具体任务。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接可用的实操信息：一个公开的skill，讲清了它解决什么问题、怎么设计的、什么场景该用，门槛不高"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "正面命中「护城河在harness，不在模型」——skill本身就是harness，且整段讲的是怎么设计agent之间的信息流和上下文管理，是根二「和LLM共建、认知系统」的一手经验"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Andrew Huberman",
+      "title": "Essentials: How to Access Your Creativity | Rick Rubin",
+      "link": "https://www.youtube.com/watch?v=QP8Kpf1UQwM",
+      "date": "2026-08-20",
+      "first_seen": "2026-08-21T01:28:33.448563+00:00",
+      "source_type": "youtube",
+      "summary": "Huberman Lab精编版，嘉宾是制作人Rick Rubin（《创造之道》作者）。核心是怎么进入创造状态：留意冒出来的念头、信任自己的品味、与手上的作品保持全然在场。Rubin拆了创作过程的四个阶段，谈了专注与刻意抽离如何交替、自我怀疑其实可以当成工具用、截止日期和冥想各自起什么作用。还聊到感知与叙事、以及为什么对不确定保持敞开能让人创作得更本真——包括「别急着解释你的实验」和从职业摔角里看到的真实与表演的关系。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "踩中「一手不二手」和「自然生长、质朴中正，不迎合」两条母题——信任自己的品味、别过度解释、与作品全然在场，且是Rick Rubin本人的创作经验"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Conceptual integrity and counting lines of code",
+      "link": "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/",
+      "date": "2026-08-19",
+      "first_seen": "2026-08-21T01:28:39.199316+00:00",
+      "source_type": "blog",
+      "summary": "西蒙·威利森反驳「代码行数不能衡量生产力」的通行说法：过去一个工程师一天写出两百行可上生产的代码已是极好的一天，多数时候只有五六十行；如果agent能让你产出一千行同等质量的代码，这就是实打实的提升。但他紧接着指出新的限制因素已经变成认知容量——产出快一百倍，人却没有能力盯住一百倍的代码，所以团队依然必要，是为了把认知负荷分摊开。更麻烦的是《人月神话》里说的「概念完整性」：agent让加功能变得极便宜，软件于是长出各种奇怪的疣，最后变成温彻斯特神秘屋。过去是时间成本替你强制了纪律，现在这层约束没了，只能靠主动的自律补上。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "把「用agent之后瓶颈到底在哪」讲透了：产出速度不再是限制，认知容量才是——面向工程师的一手判断，讲清了是什么和为什么重要，门槛不高"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "直接踩中「认知系统不能外包，信息系统可以」这条母题——代码生成能交给agent，但读懂和守住设计的认知容量不能；且是他本人的一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
       "title": "Frontier Model Cost and Open-Weights Popularity is Driving Demand for Model Routing",
       "link": "https://www.latent.space/p/glean-model-routing",
       "date": "2026-08-18",
@@ -15,7 +76,7 @@
           "reason": "扎实的企业AI模型路由趋势报道，讲清楚成本驱动因素、路由机制、开源模型崛起，实操信息量足"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
