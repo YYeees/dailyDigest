@@ -13,8 +13,13 @@
 写进JSON的`is_new`字段，前端只读这个字段、不做任何时间运算——页面什么时候打开高亮都一样，
 一次更新到下一次更新之间不会自己变。
 
-例外：这次导出如果一条都没新增(抓取没抓到东西，或者只是手动重跑一遍export脚本)，原样保留
-上一份的高亮——重跑一次导出脚本不该让刚上站的内容失去高亮。
+"这次没新增"有两种情况，2026-08-21起分开处理(之前混在一起，导致用户看到"20号那批次没有
+任何更新，界面还是把前一次的更新内容高亮着")：
+- **手动重跑export脚本**(没跑抓取)——原样保留上一份的高亮。重跑一次导出不该让刚上站的
+  内容失去高亮，这是`preserve_when_empty=True`(默认)。
+- **完整跑了一次批，但确实没抓到新内容**——高亮全灭。"刚更新"的语义是"最近一次跑批带来的
+  新东西"，这次跑批什么都没带来，就不该有任何东西亮着。走`preserve_when_empty=False`，
+  由`export_recent.py --pipeline-run`传入(见run-digest skill第5步)。
 """
 
 import json
@@ -29,14 +34,21 @@ def load_prev_items(path, field="items"):
         return []
 
 
-def mark_new(items, prev_items, key="link"):
-    """给items逐条打上`is_new`。原地修改并返回items。"""
+def mark_new(items, prev_items, key="link", preserve_when_empty=True):
+    """给items逐条打上`is_new`。原地修改并返回items。
+
+    preserve_when_empty: 这次一条都没新增时怎么办。True(默认,手动重跑export)=沿用上一份的
+    高亮; False(完整跑了一次批)=全部灭掉。区别的理由见模块头注释。
+    """
     prev = {i.get(key): i for i in prev_items}
     has_additions = any(i.get(key) not in prev for i in items)
     for item in items:
         if has_additions:
             item["is_new"] = item.get(key) not in prev
-        else:
-            # 这次没新增任何条目——沿用上一份的高亮，别把它清空
+        elif preserve_when_empty:
+            # 只是重跑了一遍导出脚本——沿用上一份的高亮，别把它清空
             item["is_new"] = bool(prev.get(item.get(key), {}).get("is_new"))
+        else:
+            # 完整跑了一次批却没带来任何新内容——上一批的高亮到此为止
+            item["is_new"] = False
     return items

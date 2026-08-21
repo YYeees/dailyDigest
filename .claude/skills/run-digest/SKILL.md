@@ -40,7 +40,7 @@ python3 scripts/rank_items.py pending --with-content
 
 ### 3. 两段式判断——读 `RANKING_CRITERIA.md` 获取判断标准，这里只列执行步骤
 
-**先读一次**`/Users/taoye/claude/thought-lab/now/关注锚点清单.md`(这份清单用户自己维护，可能会变，所以每次跑都要读，但**只读这一次**，不是每条item读一次——一次run几分钟内文件不会变，读过的内容留在上下文里对所有条目复用)。
+判断锚点track需要的清单已经内联在`RANKING_CRITERIA.md`的Track 2里，**不要去读任何仓库外的文件**——尤其不要去找`/Users/taoye/claude/thought-lab/`下面的路径，那是用户本地Mac上的目录，定时任务跑在GitHub Actions上根本读不到。**读不到某个可选文件时绝不要停下来问用户**：这是无人值守的定时任务，没人会回答，停下来等于整次跑批白跑(2026-08-20踩过，那次已经抓到6条新内容，因为卡在提问上没走到commit，随runner容器一起丢了)。
 
 **初筛**(不抓取任何东西)：**一轮里把所有pending条目一次性判完**，不要一条条分开处理——初筛不需要任何工具调用，凑一轮做完能省掉N-1轮的turn开销。手里有什么就用什么：`body_source == "rss"`的条目用`content`(正文)判，其余的只能用title+summary判。按`RANKING_CRITERIA.md`里Track 1(AI实操/趋势)和Track 2(thought-lab锚点)的标准，给每条条目出`ai_tier`/`ai_reason`/`anchor_tier`/`anchor_reason`。
 
@@ -64,10 +64,10 @@ python3 scripts/rank_items.py write <临时文件路径>
 ### 5. 导出前端数据
 
 ```bash
-python3 export_json.py && python3 export_recent.py
+python3 export_json.py && python3 export_recent.py --pipeline-run
 ```
 
-一次Bash调用跑完，不要拆成两次。`export_json.py`导出月度归档(`docs/digest.html`用，只归档high档)，`export_recent.py`导出最近7天动态(`docs/index.html`"7日内关注"页的"AI实操/趋势"+"关注锚点"+"X动态"三个板块用)——**两个都要跑**，漏了`export_recent.py`该页面会拿不到数据。
+一次Bash调用跑完，不要拆成两次。**`--pipeline-run`这个参数不能漏**——它告诉导出脚本"这次是完整跑了一遍管线"，这样当这次一条新内容都没抓到时，会把上一批残留的"刚更新"高亮灭掉(不带这个参数是手动重跑导出的语义，会原样保留上一份高亮，见`new_flags.py`模块头)。`export_json.py`导出月度归档(`docs/digest.html`用，只归档high档)，`export_recent.py`导出最近7天动态(`docs/index.html`"7日内关注"页的"AI实操/趋势"+"关注锚点"+"X动态"三个板块用)——**两个都要跑**，漏了`export_recent.py`该页面会拿不到数据。
 
 ### 6. 提交并推送
 

@@ -25,11 +25,26 @@ class TestMarkNew(unittest.TestCase):
         self.assertTrue(all(i["is_new"] for i in items))
 
     def test_no_additions_preserves_previous_highlight(self):
-        # 手动重跑一遍export(或者抓取没抓到新东西)不该让刚上站的内容失去高亮
+        # 手动重跑一遍export不该让刚上站的内容失去高亮(默认preserve_when_empty=True)
         prev = [dict(item("a"), is_new=True), dict(item("b"), is_new=False)]
         items = [item("a"), item("b")]
         mark_new(items, prev)
         self.assertEqual([i["is_new"] for i in items], [True, False])
+
+    def test_pipeline_run_with_no_additions_clears_highlight(self):
+        # 完整跑了一次批却一条都没新增——上一批的高亮到此为止，不能继续亮着
+        # (2026-08-20跑批零新增，页面还亮着8-19那条，就是这里漏了)
+        prev = [dict(item("a"), is_new=True), dict(item("b"), is_new=False)]
+        items = [item("a"), item("b")]
+        mark_new(items, prev, preserve_when_empty=False)
+        self.assertEqual([i["is_new"] for i in items], [False, False])
+
+    def test_pipeline_run_with_additions_behaves_the_same(self):
+        # 有新增时两种模式行为一致：只有这次才出现的才亮
+        prev = [dict(item("a"), is_new=True)]
+        items = [item("a"), item("b")]
+        mark_new(items, prev, preserve_when_empty=False)
+        self.assertEqual([i["is_new"] for i in items], [False, True])
 
     def test_dropping_items_alone_does_not_relight_everything(self):
         # 条目滑出7天窗口被删掉，但没有新增——高亮保持不变

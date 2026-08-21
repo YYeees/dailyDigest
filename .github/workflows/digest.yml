@@ -48,7 +48,16 @@ jobs:
           claude -p "调用 run-digest 这个skill，完整跑一遍流程：抓取新内容、两段式判断优先级、生成摘要、导出前端JSON、git commit+push。这是无人值守的定时任务，commit+push不需要额外确认，直接做。" \
             --permission-mode bypassPermissions --output-format json | tee /tmp/claude_result.json
 
+      # claude -p只要正常退出就是exit 0，哪怕它一条都没排、只是卡在提问上(2026-08-20就是
+      # 这样白跑一次还报success)。所以要单独查结果状态，查不过就让job红，Actions会发邮件。
+      - name: Health check
+        env:
+          TWITTERAPI_IO_KEY: ${{ secrets.TWITTERAPI_IO_KEY }}
+        run: python3 scripts/health_check.py --claude-result /tmp/claude_result.json
+
+      # always(): 自检没过也要把这次的花费记下来，别因为报警就丢了成本数据
       - name: Log token usage and cost
+        if: always()
         run: |
           python3 scripts/log_usage.py /tmp/claude_result.json --label digest
           git add logs/digest.jsonl docs/data/run_log.json

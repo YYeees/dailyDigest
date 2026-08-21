@@ -26,6 +26,7 @@
 (那边是永久归档，这里是"最近发生了什么"的快速脉冲，两者用途不同，不冲突)。
 """
 
+import argparse
 import json
 import sqlite3
 from collections import defaultdict
@@ -52,7 +53,7 @@ def best_tier(ai_tier, anchor_tier):
     return min(tiers, key=lambda t: order.get(t, 9)) if tiers else "low"
 
 
-def export():
+def export(pipeline_run=False):
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
 
@@ -141,8 +142,10 @@ def export():
     recent_path = OUT_DIR / "recent.json"
     x_path = OUT_DIR / "x_recent.json"
     # 高亮=跟上一份导出比这次才新出现的(见new_flags.py)，所以要赶在覆盖之前先读旧文件
-    mark_new(recent_items, load_prev_items(recent_path))
-    mark_new(x_items, load_prev_items(x_path))
+    # pipeline_run=True(完整跑批)时，这次没新增就把上一批的高亮灭掉；手动重跑export则保留
+    preserve = not pipeline_run
+    mark_new(recent_items, load_prev_items(recent_path), preserve_when_empty=preserve)
+    mark_new(x_items, load_prev_items(x_path), preserve_when_empty=preserve)
 
     recent_path.write_text(json.dumps({"items": recent_items}, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"[OK] {recent_path} — {len(recent_items)}条 (最近{RECENT_WINDOW_DAYS}天)")
@@ -154,4 +157,10 @@ def export():
 
 
 if __name__ == "__main__":
-    export()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--pipeline-run", action="store_true",
+        help="这次是完整跑了一遍digest管线(抓取+排序)，不是手动重跑导出。"
+             "带上它，这次没抓到新内容时会把上一批的'刚更新'高亮灭掉。",
+    )
+    export(pipeline_run=parser.parse_args().pipeline_run)
