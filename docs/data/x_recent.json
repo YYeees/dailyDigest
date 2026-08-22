@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "person": "Andy Matuschak",
+      "title": "The wonderful Gary Wolf has a lovely new book about personal science. It's a synthesized anthology,…",
+      "link": "https://x.com/andy_matuschak/status/2091266951565943261",
+      "date": "2026-08-22",
+      "first_seen": "2026-08-22T22:23:01.268538+00:00",
+      "source_type": "x",
+      "summary": "Andy Matuschak推荐Gary Wolf的新书，一部关于“个人科学”的选编文集，收录了人们认真追问、并（有时）回答关于自己生活的真实故事。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Andy Matuschak",
+      "title": "Trying to understand why the sudden flood of low effort AI-generated math findings feels profane to…",
+      "link": "https://x.com/andy_matuschak/status/2091013622633840877",
+      "date": "2026-08-22",
+      "first_seen": "2026-08-22T22:23:01.268804+00:00",
+      "source_type": "x",
+      "summary": "Andy Matuschak反思AI生成数学证明的浪潮为何让他感到有种“亵渎感”——不同于国际象棋或钢琴演奏，这种发现的意义似乎会因AI唾手可得而被稀释（他借用他人提出的“qualia theft”概念），但他也用探险/定向越野作类比，思考为什么有些被地图化的人类活动依然有意义。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
       "person": "Ray Dalio",
       "title": "It seems to me that the personal evolutionary process takes place in five distinct steps. If you can…",
       "link": "https://x.com/RayDalio/status/2090877673698447530",
@@ -9,7 +31,7 @@
       "source_type": "x",
       "summary": "Dalio发了条每日原则，提出个人进化要经过五个步骤，做好这五件事基本就能成功(具体步骤在配图里，推文正文没有展开)。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -20,7 +42,7 @@
       "source_type": "x",
       "summary": "这条推文只附带一张图片或视频链接，没有文字说明，具体内容不明。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",

@@ -2,6 +2,96 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "More than just code review",
+      "link": "https://simonwillison.net/2026/Aug/22/more-than-just-code-review/",
+      "date": "2026-08-22",
+      "first_seen": "2026-08-22T22:22:52.055939+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison指出使用编程agent的核心技能不是逐行审查代码，而是能自信地下达指令、并自信地验证改动是否正确落地——逐行审查从来都不是验证软件变更最有效的方式，他建议探索审查之外的其他验证路径。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接影响日常怎么用AI编程agent的实操信息，指出验证改动正确性比逐行审查更关键"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] 10% worse, 100x cheaper, 10000x faster: Why Simulation is taking over",
+      "link": "https://www.latent.space/p/ainews-10-worse-100x-cheaper-10000x",
+      "date": "2026-08-22",
+      "first_seen": "2026-08-22T22:22:52.447780+00:00",
+      "source_type": "blog",
+      "summary": "这期AINews周报梳理了AI逐步“合成化”接管整条生产链条的八个阶段：从2022年奖励信号（RLHF/Constitutional AI）、训练数据（Phi的教科书式合成数据）、教师模型（蒸馏），到2024年模型自定课程，2026年AI研究员（Karpathy的autoresearch）、RL环境合成（Z.ai），直至Simile这类公司正在合成“人类被试”本身。作者认为每次合成化的落地都不是生成质量变好触发的，而是验证机制变得可信时才发生，唯一还没被合成的是需要物理世界反馈的实验环节。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "梳理AI逐步合成化接管整条生产链条的完整趋势脉络，讲清各阶段代表事件和为什么重要，信息量扎实"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "The Evolution of the Agent Harness",
+      "link": "https://www.latent.space/p/attention-interface",
+      "date": "2026-08-22",
+      "first_seen": "2026-08-22T22:22:52.449564+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space梳理了agent harness的演化史：从2022年ReAct的纯prompting循环，到AutoGPT时期给模型过多自主权导致的“早熟自主”失败，再到Claude Code在2025年抓住模型能力反超harness的窗口期而成功。作者认为当前处于Harness 2.0“共训时代”——模型不断把harness能力吸收进权重（如自动压缩上下文），导致harness持续被删减。预测下一步harness会从“面向模型的接口”转变为“面向人类注意力的接口”，管理AI何时该打断人、何时该自主决策。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "系统梳理agent harness演化史与未来方向，讲清是什么、为什么重要，面向工程师的扎实趋势分析"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "整篇原创分析直接讨论护城河在harness不在模型这一母题，系统论证harness如何被模型吸收又如何转向人类注意力接口"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Andy Matuschak",
+      "title": "Trying to understand why the sudden flood of low effort AI-generated math findings feels profane to…",
+      "link": "https://x.com/andy_matuschak/status/2091013622633840877",
+      "date": "2026-08-22",
+      "first_seen": "2026-08-22T22:23:01.268804+00:00",
+      "source_type": "x",
+      "summary": "Andy Matuschak反思AI生成数学证明的浪潮为何让他感到有种“亵渎感”——不同于国际象棋或钢琴演奏，这种发现的意义似乎会因AI唾手可得而被稀释（他借用他人提出的“qualia theft”概念），但他也用探险/定向越野作类比，思考为什么有些被地图化的人类活动依然有意义。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者本人对AI冲击人类创造意义的一手反思，直接踩中根一深度自我认识与批判性思维认识论周边母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Simulation: the new Scaling Law — Joon Sung Park, Simile AI",
+      "link": "https://www.latent.space/p/simile",
+      "date": "2026-08-21",
+      "first_seen": "2026-08-22T22:22:52.450993+00:00",
+      "source_type": "blog",
+      "summary": "Simile联合创始人Joon Sung Park（Generative Agents/Smallville论文作者）访谈，讲述如何从2023年的生成式智能体演化到用行为基础模型构建8亿人数字孪生的公司，已完成2B美元B轮融资。核心方法是用访谈、观察行为数据和随机对照试验三类数据训练模型，让模拟结果学到人类的偏差和非理性，而不是像前沿模型那样趋于理性。他强调好的个人助手首先需要对用户的深度建模，并认为记忆架构长期要靠改模型权重而非单纯prompt。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "把模拟对话讲成新的AI扩展趋势前沿创业访谈，讲清是什么、为什么重要，涉及2B美元B轮融资、行为基础模型、RCT训练方法，信息量扎实"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "Stop Making TUIs",
       "link": "https://simonwillison.net/2026/Aug/21/stop-making-tuis/",
       "date": "2026-08-21",
@@ -15,7 +105,7 @@
           "reason": "核心论点正是护城河在harness不在模型这条母题的具体例证——模型能力人人可得，真正的差异在你围绕agent搭的工作流和界面，Simon补充了自己vibe-coding出的macOS应用仍在每天用的一手经历"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -32,7 +122,7 @@
           "reason": "讲清楚了Poolside向NVIDIA反向execuhire的12B美元交易细节和背后算力/资本约束的行业动因，属于讲透是什么、为什么重要的前沿趋势报道"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -49,7 +139,7 @@
           "reason": "亲身徒步的一手经历，触及清净的场域(选择享受而非项目化)与自然生长质朴中正的主题，但更多是旅行叙事而非系统性反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
