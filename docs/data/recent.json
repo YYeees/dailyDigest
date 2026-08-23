@@ -2,44 +2,44 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "Quoting Linus Torvalds",
-      "link": "https://simonwillison.net/2026/Aug/22/linus-torvalds/",
-      "date": "2026-08-22",
-      "first_seen": "2026-08-22T22:22:52.055598+00:00",
+      "title": "Anthropic’s best AI model struggles to attract users as cheaper tools thrive",
+      "link": "https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/",
+      "date": "2026-08-23",
+      "first_seen": "2026-08-23T22:22:47.546307+00:00",
       "source_type": "blog",
-      "summary": "Linus Torvalds在一次地狱级调试中借助AI完成了大量基础工作——AI几次想放弃、直接建议写报告认输，但在他坚持推动下继续添加调试代码并忠实分析，最终他还让AI代写了这条提交信息，是人类坚持与AI辅助结合的真实案例。",
+      "summary": "Simon Willison摘录FT报道：Anthropic年化营收7月已达650亿美元（5月为470亿），预期Q3盈利，已有6000个年消费超10万美元的大客户；OpenAI同期营收增长35%至400亿美元以上，GPT-5.6发力明显。Ramp的信用卡账单数据显示，7月Anthropic模型消费中Opus 4.8占比最高（28%），而刚发布的Opus 5仅占3.5%，印证了Fable定价过高导致采用率不及预期的趋势。",
       "tracks": [
         {
           "track": "ai",
-          "tier": "medium",
-          "reason": "真实的AI辅助内核调试案例，展示AI当前能力与局限（会中途想放弃），有信息量但只是一则简短语录"
+          "tier": "high",
+          "reason": "带具体营收和采用率数据，清楚说明Anthropic与OpenAI的市场动态，以及Fable因定价高导致采用率偏低的趋势，是扎实的AI行业趋势信息"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "人类坚持推动、AI几度想放弃仍忠实执行的真实协作案例，沾根二AI作为认知方式的边，但是转述引用非一手反思"
+          "reason": "纯营收与市场份额数据报道，跟三根主干和周边领域都没有实质连接"
         }
       ],
       "is_new": true
     },
     {
       "person": "Simon Willison",
-      "title": "llm 0.33",
-      "link": "https://simonwillison.net/2026/Aug/22/llm/",
-      "date": "2026-08-22",
-      "first_seen": "2026-08-22T22:22:52.055880+00:00",
+      "title": "Quoting Drew Breunig",
+      "link": "https://simonwillison.net/2026/Aug/23/drew-breunig/",
+      "date": "2026-08-23",
+      "first_seen": "2026-08-23T22:22:47.546637+00:00",
       "source_type": "blog",
-      "summary": null,
+      "summary": "Drew Breunig的观点（经Simon Willison转引）：Fable虽然能力强但价格昂贵，过去模型迭代能自动兜底工程问题，但Fable上线后大家开始认真思考活该分给哪个模型——用Fable做设计判断，把具体编码任务交给GLM 5.2这类成本仅为其九分之一、配合好上下文也够用的模型。核心洞察是：真正的护城河在于打磨好的编码工具链和上下文策略，而不是一味追新模型。",
       "tracks": [
         {
           "track": "ai",
-          "tier": "medium",
-          "reason": "作者自己维护的llm工具版本更新日志（依赖升级、embed参数、模板合并），按内容本身判断属日常维护性更新，不算AI实操/趋势"
+          "tier": "high",
+          "reason": "讲清楚Fable高定价倒逼团队重新分配模型和harness策略这一实操趋势，直接影响日常怎么选模型干活"
         },
         {
           "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干和周边领域都没有实质连接"
+          "tier": "high",
+          "reason": "精准命中护城河在harness、不在模型这条母题，且是Drew Breunig本人用Fable想清楚思路、把活交给GLM执行的一手实践"
         }
       ],
       "is_new": true
@@ -57,14 +57,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "直接影响日常怎么用AI编程agent的实操信息，指出验证改动正确性比逐行审查更关键"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "自信验证而非放弃判断的主张，呼应认知系统不能外包的母题，但未直接讨论清单主干本身"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -86,7 +81,7 @@
           "reason": "讨论AI逐步替代认知链条各环节（判官/教师/研究员/被试），呼应认知系统不能外包的边界议题，但属产业趋势综述而非一手反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -108,7 +103,7 @@
           "reason": "整篇原创分析直接讨论护城河在harness不在模型这一母题，系统论证harness如何被模型吸收又如何转向人类注意力接口"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -130,7 +125,7 @@
           "reason": "讨论记忆架构（Markdown文件vs知识图谱）与个人助手需要深度用户模型，呼应harness/认知系统主题，但是访谈转述，非一手反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -369,23 +364,6 @@
           "track": "anchor",
           "tier": "medium",
           "reason": "讨论AI与人类认知的本质差异，沾根一自我认识的边"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
-      "link": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
-      "date": "2026-08-16",
-      "first_seen": "2026-08-16T22:21:35.809222+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison实测阿里巴巴新开源的Qwen 3.8 27B视觉模型：默认推理强度过高导致简单任务也长时间过度思考，需手动调低推理级别才实用；模型在鹈鹕SVG绘制、图像边界框检测上表现出色，也能驱动Pi等coding agent完成实际编码任务，但本地推理速度（15-30 tokens/秒）明显慢于云端模型，多令牌预测（MTP）优化可提速约72%。核心结论：17GB级本地模型已能胜任日常AI工作，但推理速度仍是硬件瓶颈。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "前沿开源模型新发布的深度实测，讲清楚是什么、为什么重要，并附具体实操建议（如何调低推理强度、如何配置驱动coding agent）"
         }
       ],
       "is_new": false

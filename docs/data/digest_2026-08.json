@@ -2,6 +2,45 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Anthropic’s best AI model struggles to attract users as cheaper tools thrive",
+      "link": "https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/",
+      "date": "2026-08-23",
+      "first_seen": "2026-08-23T22:22:47.546307+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison摘录FT报道：Anthropic年化营收7月已达650亿美元（5月为470亿），预期Q3盈利，已有6000个年消费超10万美元的大客户；OpenAI同期营收增长35%至400亿美元以上，GPT-5.6发力明显。Ramp的信用卡账单数据显示，7月Anthropic模型消费中Opus 4.8占比最高（28%），而刚发布的Opus 5仅占3.5%，印证了Fable定价过高导致采用率不及预期的趋势。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "带具体营收和采用率数据，清楚说明Anthropic与OpenAI的市场动态，以及Fable因定价高导致采用率偏低的趋势，是扎实的AI行业趋势信息"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Drew Breunig",
+      "link": "https://simonwillison.net/2026/Aug/23/drew-breunig/",
+      "date": "2026-08-23",
+      "first_seen": "2026-08-23T22:22:47.546637+00:00",
+      "source_type": "blog",
+      "summary": "Drew Breunig的观点（经Simon Willison转引）：Fable虽然能力强但价格昂贵，过去模型迭代能自动兜底工程问题，但Fable上线后大家开始认真思考活该分给哪个模型——用Fable做设计判断，把具体编码任务交给GLM 5.2这类成本仅为其九分之一、配合好上下文也够用的模型。核心洞察是：真正的护城河在于打磨好的编码工具链和上下文策略，而不是一味追新模型。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚Fable高定价倒逼团队重新分配模型和harness策略这一实操趋势，直接影响日常怎么选模型干活"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "精准命中护城河在harness、不在模型这条母题，且是Drew Breunig本人用Fable想清楚思路、把活交给GLM执行的一手实践"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "More than just code review",
       "link": "https://simonwillison.net/2026/Aug/22/more-than-just-code-review/",
       "date": "2026-08-22",
@@ -15,7 +54,7 @@
           "reason": "直接影响日常怎么用AI编程agent的实操信息，指出验证改动正确性比逐行审查更关键"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -32,7 +71,7 @@
           "reason": "梳理AI逐步合成化接管整条生产链条的完整趋势脉络，讲清各阶段代表事件和为什么重要，信息量扎实"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -54,7 +93,7 @@
           "reason": "整篇原创分析直接讨论护城河在harness不在模型这一母题，系统论证harness如何被模型吸收又如何转向人类注意力接口"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -71,7 +110,7 @@
           "reason": "作者本人对AI冲击人类创造意义的一手反思，直接踩中根一深度自我认识与批判性思维认识论周边母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -88,7 +127,7 @@
           "reason": "把模拟对话讲成新的AI扩展趋势前沿创业访谈，讲清是什么、为什么重要，涉及2B美元B轮融资、行为基础模型、RCT训练方法，信息量扎实"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
