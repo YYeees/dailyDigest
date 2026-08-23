@@ -1,17 +1,69 @@
 {
   "items": [
     {
-      "full_name": "stablyai/orca",
-      "url": "https://github.com/stablyai/orca",
-      "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
-      "language": "TypeScript",
+      "full_name": "usestrix/strix",
+      "url": "https://github.com/usestrix/strix",
+      "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
+      "language": "Python",
       "difficulty": "intermediate",
       "worth_tier": "high",
-      "recommend_reason": "面向多AI编程代理(Claude Code、Codex、Cursor等30+)并行编排的Agent开发环境，支持在独立git worktree中同时运行多个代理、跨桌面/移动/远程SSH使用，并带终端分屏、设计模式检查、GitHub/Linear集成等丰富IDE功能。8753次提交、多平台原生实现说明工程扎实，代表了\"多智能体并行开发工作流\"这一新兴实践的优秀样本。",
+      "recommend_reason": "开源的AI自动化渗透测试工具，用LLM驱动侦察、漏洞利用和PoC生成，覆盖OWASP Top 10。安装简单(一行curl脚本)，支持多个LLM提供商，有CLI、本地面板和CI/CD集成，代码和文档都很完整，不是demo级项目。是LLM agent应用于安全测试这一细分方向里比较有代表性的落地案例。",
+      "first_seen_date": "2026-08-23",
+      "stars_total": 57415,
+      "stars_period": 4754,
+      "last_snapshot_date": "2026-08-23"
+    },
+    {
+      "full_name": "volcengine/OpenViking",
+      "url": "https://github.com/volcengine/OpenViking",
+      "description": "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
+      "language": "Python",
+      "difficulty": "advanced",
+      "worth_tier": "high",
+      "recommend_reason": "OpenViking把Agent的记忆/知识/技能统一抽象成一个用viking://协议访问的虚拟文件系统，用ls/tree/find代替黑盒向量检索，并按L0/L2三层粒度按需加载以节省token。项目有实际的Rust+Python实现、CLI/SDK、多Agent(Claude Code/Cursor/LangChain等)集成和公开的benchmark数据，不是纯概念文章。对做Agent Memory/RAG系统设计的人是个有代表性的工程案例，但概念和接口都偏复杂，需要一定Agent架构背景才能吃透。",
+      "first_seen_date": "2026-08-23",
+      "stars_total": 32470,
+      "stars_period": 3447,
+      "last_snapshot_date": "2026-08-23"
+    },
+    {
+      "full_name": "unslothai/unsloth",
+      "url": "https://github.com/unslothai/unsloth",
+      "description": "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
+      "language": "Python",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "本地运行/训练AI模型的工具，支持主流模型的LoRA/QLoRA微调，比标准方法快、省显存，提供桌面UI和一键安装脚本降低门槛，是本地模型微调这个方向的代表工具。",
       "first_seen_date": "2026-08-15",
-      "stars_total": 46570,
-      "stars_period": 6054,
-      "last_snapshot_date": "2026-08-16"
+      "stars_total": 74520,
+      "stars_period": 2729,
+      "last_snapshot_date": "2026-08-23"
+    },
+    {
+      "full_name": "cactus-compute/needle",
+      "url": "https://github.com/cactus-compute/needle",
+      "description": "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
+      "language": "Python",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "开源的4500万参数轻量模型，专为手机/穿戴设备/机器人这类资源受限设备做推理优化，提供pip安装+完整代码示例、在线Playground、支持LoRA微调，是端侧小模型这个新趋势的一个扎实样本。",
+      "first_seen_date": "2026-08-15",
+      "stars_total": 8740,
+      "stars_period": 2664,
+      "last_snapshot_date": "2026-08-23"
+    },
+    {
+      "full_name": "akitaonrails/ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+      "language": "Rust",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "ai-memory解决的是编码Agent的长期记忆和跨厂商(Claude Code/Codex/Cursor等)交接问题，把会话生命周期事件记录成git版本化的markdown wiki，支持在不同Agent CLI间无缝续接上下文。Rust实现、文档详尽、支持Docker/二进制部署，属于'AI辅助编程工具链'里解决实际痛点(上下文丢失)的扎实实践，值得参考其设计思路。",
+      "first_seen_date": "2026-08-23",
+      "stars_total": 4234,
+      "stars_period": 2575,
+      "last_snapshot_date": "2026-08-23"
     },
     {
       "full_name": "semantica-agi/semantica",
@@ -22,61 +74,9 @@
       "worth_tier": "high",
       "recommend_reason": "面向金融/医疗/法律等高监管场景的知识图谱基础设施，核心思路是把\"决策\"本身建模为带因果链和审计轨迹的图节点，用图遍历替代向量相似度检索，直接针对RAG/向量库\"不可解释、不可追溯\"的痛点。项目成熟度高(v0.6.5、14+模块、可运行GraphRAG管道示例)，是\"图原生检索/可审计AI系统\"这一细分方向少见的扎实实现，但需要图数据库和数据工程背景，门槛偏高。",
       "first_seen_date": "2026-08-15",
-      "stars_total": 8172,
-      "stars_period": 5339,
-      "last_snapshot_date": "2026-08-16"
-    },
-    {
-      "full_name": "firecrawl/firecrawl",
-      "url": "https://github.com/firecrawl/firecrawl",
-      "description": "The context API to search, scrape, and interact with the web at scale. 🔥",
-      "language": "TypeScript",
-      "difficulty": "beginner",
-      "worth_tier": "high",
-      "recommend_reason": "面向AI应用的网页搜索/抓取/交互API平台，将网页转为LLM友好的Markdown/JSON格式，并提供Agent式自主数据采集能力。多语言SDK(Python/Node/Go/Java等)、CLI、MCP集成一应俱全，开源(AGPL)加云服务双模式，是当前RAG/Agent应用构建网页数据管道时的代表性优秀工具，生态成熟度高。",
-      "first_seen_date": "2026-08-15",
-      "stars_total": 168182,
-      "stars_period": 4704,
-      "last_snapshot_date": "2026-08-16"
-    },
-    {
-      "full_name": "TencentCloud/TencentDB-Agent-Memory",
-      "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
-      "description": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
-      "language": "TypeScript",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "面向AI agent团队的持久化记忆系统，把对话、技能、文档、代码索引结构化为可复用的Memory Asset(而非简单聊天记录仓库)，并给出多agent协作下的访问控制和PersonaMem基准提升数据(48%到76%)作为效果验证。设计思路清晰、有具体架构(L0-L3分层蒸馏、CodeGraph等)，是学习AI agent记忆系统设计的一个扎实案例。",
-      "first_seen_date": "2026-08-15",
-      "stars_total": 22223,
-      "stars_period": 3956,
-      "last_snapshot_date": "2026-08-16"
-    },
-    {
-      "full_name": "addyosmani/agent-skills",
-      "url": "https://github.com/addyosmani/agent-skills",
-      "description": "Production-grade engineering skills for AI coding agents.",
-      "language": "JavaScript",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "把资深工程实践拆解成覆盖spec到ship全生命周期的24个skill和8个斜杠命令，专门给Claude Code、Cursor等编码agent用来约束其按生产级流程工作而非原型级抄近路。有清晰的CLI安装方式(npx skills)和多工具原生集成，是学习如何用Skill机制规范agent工作流的代表性范例。",
-      "first_seen_date": "2026-08-15",
-      "stars_total": 87739,
-      "stars_period": 3300,
-      "last_snapshot_date": "2026-08-16"
-    },
-    {
-      "full_name": "Comfy-Org/ComfyUI",
-      "url": "https://github.com/Comfy-Org/ComfyUI",
-      "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
-      "language": "Python",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "节点式可视化工作流引擎，支持Stable Diffusion/Flux/视频生成等主流开源模型的本地离线运行，是扩散模型应用生态里最成熟、影响力最大的GUI/后端之一(12万+ star、每周更新)。虽然不是新项目，但作为学习\"如何搭建可复用AI生成工作流\"的范例极具代表性，文档和生态都非常完善。",
-      "first_seen_date": "2026-08-15",
-      "stars_total": 127823,
-      "stars_period": 3032,
-      "last_snapshot_date": "2026-08-16"
+      "stars_total": 10444,
+      "stars_period": 2450,
+      "last_snapshot_date": "2026-08-23"
     }
   ]
 }
