@@ -202,6 +202,34 @@
     line-height: 1.45;
   }
   .item a.title:hover { color: var(--accent); }
+  /* 「记一笔」——一键在写作收件箱(独立Obsidian vault)新建一条临时笔记。
+     回路的另一头是scripts/scan_inbox.py:靠笔记frontmatter里的source匹配回digest.db。 */
+  /* 跟同一行的tier-tag等高(padding 1px + 1px描边 = tier-tag的2px padding),但不加粗、
+     用描边不用填充——那两个是"这条内容是什么"的状态标签,这个是可点的动作,要弱化让路。 */
+  .note-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    transition: color .15s, border-color .15s, background .15s;
+  }
+  /* 未记:空心笔(只描边)。已记:实心笔。同形状不同填充,切换时尺寸完全不变。 */
+  .note-btn svg { fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linejoin: round; }
+  .note-btn:hover { color: var(--text); border-color: var(--muted); }
+  /* 「已记」不能弱化:它是这套回路唯一的产物(你为这条写过东西=ground truth),也是
+     一屏卡片里最该一眼扫到的信息。而且它是可点的(跳回那条笔记)——之前用虚线+半透明
+     等于把活按钮画成了disabled,是可用性错误。用主色描边+勾:比未记态重,但仍是描边,
+     跟旁边填充的AI/锚点/tier标签(系统的判断)分开——这个是你自己的标记。 */
+  /* 去掉描边但保留1px透明边:盒模型不变,两个状态等宽等高,标签行不会因为切换状态而跳动。
+     digest首先是个阅读界面,已记态靠"实心+主色"认出来就够,不需要再加一圈框去抢注意力。 */
+  .note-btn.noted { color: var(--accent); border-color: transparent; }
+  .note-btn.noted svg { fill: currentColor; stroke: currentColor; }
+  .note-btn.noted:hover { color: var(--accent); background: rgba(181, 82, 42, 0.08); }
   .meta-left { display: inline-flex; align-items: center; gap: 6px; }
   .meta-left .source-type svg { width: 20px; height: 20px; display: block; }
   .meta-right { display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
@@ -356,6 +384,112 @@ const TRACK_LABEL = { ai: 'AI', anchor: '锚点' };
 const TIER_LABEL = { high: 'High', medium: 'Medium' };
 const TIER_ORDER = { high: 0, medium: 1 };
 
+// ---- 「记一笔」:在写作收件箱里新建/打开一条临时笔记 ----
+// 走官方 obsidian://new。官方URI只支持"新建"不支持"追加"——这正是收件箱定成"一条一文件"
+// 的原因(不用为了追加去装Advanced URI插件)。vault名就是那个文件夹名。
+// 正文第一行那个markdown链接是整条反馈回路的接头:页面自动填,URL跟digest.db的link字段
+// 逐字节相同,scan_inbox.py精确匹配即可。用[标题](链接)而不是frontmatter里塞一行裸URL,
+// 是因为笔记是给人读的——三个月后翻回来,看见的该是文章标题,点一下就能回去重读。
+//
+// 同一篇点第二次不能再走`new`:obsidian://new撞名会另建一个"xxx 1.md",笔记就散了。
+// 所以用localStorage记住已经记过的link,之后改走`open`直接跳到那条笔记上。
+// localStorage是逐浏览器的、可能被清掉——清掉的后果只是某条会多建一次文件,不影响数据,
+// 所以读写都包在try里,取不到就当没记过。
+const INBOX_VAULT = 'writing-inbox';
+const NOTED_KEY = 'digest-noted-links-v1';
+
+function notedLinks() {
+  try { return new Set(JSON.parse(localStorage.getItem(NOTED_KEY) || '[]')); }
+  catch (e) { return new Set(); }
+}
+
+function setNoted(link, on) {
+  try {
+    const s = notedLinks();
+    if (on) { s.add(link); } else { s.delete(link); }
+    localStorage.setItem(NOTED_KEY, JSON.stringify([...s]));
+  } catch (e) { /* 隐私模式/禁用站点数据:记不住就下次再建一个,不该让点击失败 */ }
+}
+
+function attrEscape(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+}
+
+function inboxNoteName(item) {
+  const slug = (item.title || '').trim()
+    .replace(/[\\/:*?"<>|#^[\]]/g, ' ')   // 文件名非法字符 + Obsidian的保留字符
+    .replace(/\s+/g, ' ').trim().slice(0, 60);
+  return `${item.date} ${slug}`;
+}
+
+function inboxHref(item, noted) {
+  const name = inboxNoteName(item);
+  const vault = `vault=${encodeURIComponent(INBOX_VAULT)}`;
+  if (noted) {
+    return `obsidian://open?${vault}&file=${encodeURIComponent(name)}`;
+  }
+  // 方括号会把markdown链接语法拆掉(Craig Mod的"[RIDGELINE] ..."就带方括号),换成圆括号。
+  const anchor = (item.title || '').trim().replace(/[[\]]/g, m => (m === '[' ? '(' : ')'));
+  // source填信息来源(人或刊物,如"Simon Willison"/"Latent Space")。双引号会撑破YAML,
+  // 换成单引号——名字里带冒号的源(有的播客标题就带)不加引号会直接把frontmatter弄坏。
+  const from = (item.person || '').replace(/"/g, "'");
+  const content = `---\nsource: "${from}"\ndate: ${item.date}\n---\n\n[${anchor}](${item.link})\n\n`;
+  return `obsidian://new?${vault}`
+    + `&name=${encodeURIComponent(name)}`
+    + `&content=${encodeURIComponent(content)}`;
+}
+
+// 笔的图标:内联SVG,跟source-type那几个图标一个路子(不依赖外部图片)。未记态描边、
+// 已记态填充——同一个形状靠"空心/实心"区分状态,是最省视觉重量的一种做法,digest首先
+// 是阅读界面。**不用星号**:星号的语义是收藏,而"收藏"是明确否掉过的方向,这个标记的
+// 意思是"我为这条写过东西",不是"以后再看"。
+const PEN_SVG = '<svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true">'
+  + '<path d="M11.1 1.9a1.3 1.3 0 0 1 1.9 0l1.1 1.1a1.3 1.3 0 0 1 0 1.9l-7.6 7.6-3.4.9.9-3.4z"/>'
+  + '</svg>';
+
+function noteBtn(item) {
+  const noted = notedLinks().has(item.link);
+  // data-new-href存着"新建"那条链接:右键取消标记后要能换回去。
+  return `<a class="note-btn${noted ? ' noted' : ''}"`
+    + ` href="${attrEscape(inboxHref(item, noted))}"`
+    + ` data-link="${attrEscape(item.link)}" data-name="${attrEscape(inboxNoteName(item))}"`
+    + ` data-new-href="${attrEscape(inboxHref(item, false))}"`
+    + ` title="${noted ? '打开已记的那条笔记（右键取消标记）' : '在写作收件箱里记一笔'}">${PEN_SVG}</a>`;
+}
+
+function openHref(name) {
+  return `obsidian://open?vault=${encodeURIComponent(INBOX_VAULT)}&file=${encodeURIComponent(name)}`;
+}
+
+// 右键取消已记标记。为什么需要这个:点「记录」时Chrome可能弹"是否打开Obsidian",而**页面
+// 收不到你在那个弹框上点了确定还是取消**——外部协议链接没有回调,只能假定成功。点了取消
+// 就会出现"标成已记但笔记不存在",再点走open又打不开,这一条就卡死了。右键给一条退路。
+// (Chrome弹框上勾"总是允许"之后就不再弹,这个问题也就不出现了。)
+document.addEventListener('contextmenu', function (e) {
+  const btn = e.target.closest && e.target.closest('.note-btn.noted');
+  if (!btn) return;
+  e.preventDefault();
+  setNoted(btn.dataset.link, false);
+  btn.classList.remove('noted');
+  btn.href = btn.dataset.newHref;
+  btn.title = '在写作收件箱里记一笔（点了没反应？右键可取消标记）';
+});
+
+// 事件委托:卡片是innerHTML整块重渲染的(筛选器一动就重来),挂在document上才不会掉。
+document.addEventListener('click', function (e) {
+  const btn = e.target.closest && e.target.closest('.note-btn');
+  if (!btn || btn.classList.contains('noted')) return;
+  setNoted(btn.dataset.link, true);
+  // **必须setTimeout**:监听器跑在浏览器执行默认跳转之前,在这里直接改href,本次点击就会
+  // 跳到还不存在的那条笔记上,笔记建不出来(2026-08-24踩过)。推到下一个tick,等默认跳转
+  // 带着当前的new链接发出去之后再改状态,下次点这个按钮才走open。
+  setTimeout(function () {
+    btn.classList.add('noted');
+    btn.title = '打开已记的那条笔记（右键取消标记）';
+    btn.href = openHref(btn.dataset.name);
+  }, 0);
+});
+
 function renderContentItem(item) {
   const desc = item.summary || (item.tracks[0] && item.tracks[0].reason) || '';
   const type = TYPE_ICON[item.source_type] || { svg: '🔗', label: item.source_type || '' };
@@ -370,6 +504,7 @@ function renderContentItem(item) {
           ${item.person} · ${item.date}
         </span>
         <span class="meta-right">
+          ${noteBtn(item)}
           ${categoryTags}
           <span class="tier-tag tier-${bestTier}">${TIER_LABEL[bestTier]}</span>
         </span>
