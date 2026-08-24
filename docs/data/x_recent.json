@@ -2,6 +2,28 @@
   "items": [
     {
       "person": "Ray Dalio",
+      "title": "When I talk with a \"Shaper\" like Elon Musk, what stands out is the ability to operate at both the bi…",
+      "link": "https://x.com/RayDalio/status/2091900586371252567",
+      "date": "2026-08-24",
+      "first_seen": "2026-08-24T22:27:37.128470+00:00",
+      "source_type": "x",
+      "summary": "达利欧观察埃隆·马斯克这类塑造者的特质：既能抠车内按钮这类细节，又能在同一段对话里畅想把植物送上火星的宏大愿景，认为真正的塑造者能自如切换宏观视野与微观执行。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "It is instinctually that way, which is why most of us feel the pull of it-- in other words, we insti…",
+      "link": "https://x.com/RayDalio/status/2091690182793650340",
+      "date": "2026-08-24",
+      "first_seen": "2026-08-24T22:27:37.128512+00:00",
+      "source_type": "x",
+      "summary": "达利欧认为人类对科技的本能追求源于进化冲动，人类终将像过去两百万年的物种演化一样，借助AI等技术加速进化为更接近全知的更高形态，除非先自我毁灭。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
       "title": "Integrity comes from the Latin word integritas, meaning \"one\" or \"whole.\" People who are one way on…",
       "link": "https://x.com/RayDalio/status/2091463684522467421",
       "date": "2026-08-23",
@@ -9,7 +31,7 @@
       "source_type": "x",
       "summary": "达利欧的本日格言：真正的诚信来自内外如一，表里不一的双重性会让人逐渐迷失自己的价值观，难以获得幸福，也难以发挥出最佳状态。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -108,28 +130,6 @@
       "source_type": "x",
       "summary": "达利欧回顾一生后认为，钱、业绩记录、为客户做的事都很好，但最好的部分始终是关系。而那些诚实的关系之所以更深、更好，恰恰是因为有「严厉的爱」——严厉的爱是最好的爱，因为它出自真正的在乎；当对方知道你是真在乎，你就能把难听的实话和这份在乎捆在一起，一起扛过去。",
       "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "Everything from the smallest subatomic particle to the entire galaxy is evolving. While everything a…",
-      "link": "https://x.com/RayDalio/status/2089468608942387672",
-      "date": "2026-08-17",
-      "first_seen": "2026-08-17T22:25:42.507616+00:00",
-      "source_type": "x",
-      "summary": "Ray Dalio写道，从最小的亚原子粒子到整个星系都在演化；万物看似消亡，实则只是以新形式重新组合，能量不会消失只会被重新配置，这股力量就是演化本身。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "I've received a lot of positive feedback on this interview I did with @StevenBartlett for his Diary…",
-      "link": "https://x.com/RayDalio/status/2089339167964578106",
-      "date": "2026-08-17",
-      "first_seen": "2026-08-17T22:25:42.507970+00:00",
-      "source_type": "x",
-      "summary": "Ray Dalio转发了他与Steven Bartlett在Diary of a CEO播客的访谈，说收到很多正面反馈，建议看视频简介跳转到感兴趣的具体话题。",
-      "tier": "low",
       "is_new": false
     }
   ]

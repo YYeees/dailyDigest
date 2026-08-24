@@ -2,6 +2,67 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "llm-anthropic 0.27",
+      "link": "https://simonwillison.net/2026/Aug/24/llm-anthropic/",
+      "date": "2026-08-24",
+      "first_seen": "2026-08-24T22:27:29.751228+00:00",
+      "source_type": "blog",
+      "summary": "llm-anthropic 0.27主要是适配Anthropic Python SDK v1.0.0(httpx迁移)的版本更新，但作者展示了一个实操技巧：直接把迁移指南链接和跑通测试的目标丢给Claude Code里的Fable 5，让它自动完成升级并生成PR，比手动读文档改代码更高效。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "主体是作者自己维护的插件版本更新日志，但展示了把迁移文档链接和明确目标丢给Claude Code自动完成升级的实操模式，信息量偏轻量"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "未连接三根主干，纯工具维护记录"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Andrew Huberman",
+      "title": "How to Improve Motivation & Overcome Procrastination | Dr. Masud Husain",
+      "link": "https://www.youtube.com/watch?v=58-k4F7-AoA",
+      "date": "2026-08-24",
+      "first_seen": "2026-08-24T22:27:28.009989+00:00",
+      "source_type": "youtube",
+      "summary": "神经科学家Masud Husain与Huberman探讨动机与倦怠的神经机制：多巴胺回路如何权衡努力与回报来决定人是否愿意行动，以及如何通过拆解任务、调整心理框架等方式提升动机、对抗拖延。节目也涉及痴呆症、帕金森病等神经退行性疾病与动机丧失的关联，并讨论自我认同、人生目的与反思在维持行动力中的作用。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "沾根一自我认识的边(动机/自我概念/人生目的/反思)，但是访谈形式的二手科普内容"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Your executable is a SQLite database",
+      "link": "https://simonwillison.net/2026/Aug/24/your-executable-is-a-sqlite-database/",
+      "date": "2026-08-24",
+      "first_seen": "2026-08-24T22:27:29.751487+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "跟AI完全无关，是Linux/SQLite/ELF格式的系统编程技巧"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "纯技术奇技淫巧转述，非作者一手反思，也不沾三根主干或周边领域的边"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "Anthropic’s best AI model struggles to attract users as cheaper tools thrive",
       "link": "https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/",
       "date": "2026-08-23",
@@ -13,14 +74,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "带具体营收和采用率数据，清楚说明Anthropic与OpenAI的市场动态，以及Fable因定价高导致采用率偏低的趋势，是扎实的AI行业趋势信息"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "纯营收与市场份额数据报道，跟三根主干和周边领域都没有实质连接"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -42,7 +98,7 @@
           "reason": "精准命中护城河在harness、不在模型这条母题，且是Drew Breunig本人用Fable想清楚思路、把活交给GLM执行的一手实践"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -325,45 +381,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "讲清楚了OpenRouter的盈利结构、token路由量级，以及价值在AI基础设施哪一层累积的判断，但整体是行业并购的宏观叙事，对日常怎么用AI工具没有直接实操指引"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Andrew Huberman",
-      "title": "Neuroscience of Emotions & Tools for Improving Emotion Regulation| Dr. Ralph Adolphs",
-      "link": "https://www.youtube.com/watch?v=P-h5WSQG1Sw",
-      "date": "2026-08-17",
-      "first_seen": "2026-08-17T22:25:26.367664+00:00",
-      "source_type": "youtube",
-      "summary": "Ralph Adolphs和Huberman探讨情绪如何塑造注意力和决策、情绪是否真的“储存”在身体里，以及面部表情作为情绪信号的可靠性问题。节目也给出了情绪调节的具体工具，比如认知重评和刻意冷暴露，是一次比较扎实的关于人如何理解和调节自身情绪的科学对话。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "清单外，但关于情绪调节与自我认知的深度科学对话，沾根一自我认识的边"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Andrew Huberman",
-      "title": "Benevolent Uses of AI to Improve Your Life",
-      "link": "https://www.youtube.com/shorts/XmUVbu5BgiI",
-      "date": "2026-08-17",
-      "first_seen": "2026-08-17T04:20:15.580202+00:00",
-      "source_type": "youtube",
-      "summary": "Fei-Fei Li和Huberman讨论AI如何安全有效地延伸人类能力，不只是用来搜索信息，更是用来提升人的智力和创造力，以及人机协作如何改善健康和生活体验。谈话也涉及AI和人类认知的根本差异：直觉和个体独特经历是AI难以复制的部分。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "面向大众的AI人机协作科普，有一定趋势价值但内容较轻量"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "讨论AI与人类认知的本质差异，沾根一自我认识的边"
         }
       ],
       "is_new": false
