@@ -2,6 +2,28 @@
   "items": [
     {
       "person": "Ray Dalio",
+      "title": "To give you a quick example of nature creating incentives that lead to individuals pursuing their ow…",
+      "link": "https://x.com/RayDalio/status/2092363891472810185",
+      "date": "2026-08-25",
+      "first_seen": "2026-08-25T22:28:33.492029+00:00",
+      "source_type": "x",
+      "summary": "达利欧以性与自然选择为例说明自然界如何设计激励机制：让个体追求自身快感（性愉悦）的同时，无意间推动整体（基因）的演化，个体与整体的利益因此得以统一，这是他“每日原则”系列的一条。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "To collaborate successfully, you have to do three things:  First, put your honest thoughts on the ta…",
+      "link": "https://x.com/RayDalio/status/2092278370440524168",
+      "date": "2026-08-25",
+      "first_seen": "2026-08-25T22:28:33.492319+00:00",
+      "source_type": "x",
+      "summary": "达利欧谈高效协作的三个步骤：坦诚亮出真实想法、掌握“深思熟虑的分歧”艺术、分歧持续时靠协议兜底（他公司用可信度加权的理念择优机制），好想法胜出会带来远超个人独自决策的结果。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
       "title": "When I talk with a \"Shaper\" like Elon Musk, what stands out is the ability to operate at both the bi…",
       "link": "https://x.com/RayDalio/status/2091900586371252567",
       "date": "2026-08-24",
@@ -9,7 +31,7 @@
       "source_type": "x",
       "summary": "达利欧观察埃隆·马斯克这类塑造者的特质：既能抠车内按钮这类细节，又能在同一段对话里畅想把植物送上火星的宏大愿景，认为真正的塑造者能自如切换宏观视野与微观执行。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -20,7 +42,7 @@
       "source_type": "x",
       "summary": "达利欧认为人类对科技的本能追求源于进化冲动，人类终将像过去两百万年的物种演化一样，借助AI等技术加速进化为更接近全知的更高形态，除非先自我毁灭。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",

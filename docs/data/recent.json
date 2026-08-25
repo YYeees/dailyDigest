@@ -1,23 +1,23 @@
 {
   "items": [
     {
-      "person": "Simon Willison",
-      "title": "llm-anthropic 0.27",
-      "link": "https://simonwillison.net/2026/Aug/24/llm-anthropic/",
-      "date": "2026-08-24",
-      "first_seen": "2026-08-24T22:27:29.751228+00:00",
+      "person": "Latent Space",
+      "title": "[AINews] Andrew Ng gets into AI Engineering",
+      "link": "https://www.latent.space/p/ainews-andrew-ng-gets-into-ai-engineering",
+      "date": "2026-08-25",
+      "first_seen": "2026-08-25T22:28:28.164820+00:00",
       "source_type": "blog",
-      "summary": "llm-anthropic 0.27主要是适配Anthropic Python SDK v1.0.0(httpx迁移)的版本更新，但作者展示了一个实操技巧：直接把迁移指南链接和跑通测试的目标丢给Claude Code里的Fable 5，让它自动完成升级并生成PR，比手动读文档改代码更高效。",
+      "summary": "吴恩达联合DeepLearning.AI发布关于AI工程技能的报告，基于万份招聘信息分析、专家访谈提炼出四项核心技能：构建部署AI应用、软件工程基本功、熟练使用编程agent、以及产品/业务感知力。swyx点评认为编程agent技能是最初“1000x AI工程师”设想里最没被预见到的部分，2024至2026年Cursor、Claude Code、Codex等工具的爆发式发展印证了这一判断。",
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "主体是作者自己维护的插件版本更新日志，但展示了把迁移文档链接和明确目标丢给Claude Code自动完成升级的实操模式，信息量偏轻量"
+          "reason": "吴恩达发布AI工程技能框架（基于万份招聘信息分析），swyx做点评，涉及编程agent等实操技能，但整体是newsletter式的宏观评论而非一手实操指南"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "未连接三根主干，纯工具维护记录"
+          "reason": "评论里提到编程agent技能核心是理解harness、知道如何驾驭和避坑，沾“护城河在harness不在模型”母题的边，但主体是技能框架转述而非一手反思"
         }
       ],
       "is_new": true
@@ -37,29 +37,7 @@
           "reason": "沾根一自我认识的边(动机/自我概念/人生目的/反思)，但是访谈形式的二手科普内容"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Your executable is a SQLite database",
-      "link": "https://simonwillison.net/2026/Aug/24/your-executable-is-a-sqlite-database/",
-      "date": "2026-08-24",
-      "first_seen": "2026-08-24T22:27:29.751487+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "跟AI完全无关，是Linux/SQLite/ELF格式的系统编程技巧"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "纯技术奇技淫巧转述，非作者一手反思，也不沾三根主干或周边领域的边"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -325,62 +303,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "AI算力扩张带动内存供应链紧缺涨价的宏观趋势梳理，信息量足但偏行业新闻叙事，不是直接操作指南"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Frontier Model Cost and Open-Weights Popularity is Driving Demand for Model Routing",
-      "link": "https://www.latent.space/p/glean-model-routing",
-      "date": "2026-08-18",
-      "first_seen": "2026-08-18T22:24:22.520944+00:00",
-      "source_type": "blog",
-      "summary": "Glean CEO Arvind Jain在访谈中解释了模型路由为何成为企业AI部署的核心议题：前沿模型价格持续上涨，任务复杂度和调用量同时增加，导致企业AI开支一年内可能涨十几到二十倍。Glean的方案是三层选择机制（员工手动选型、管理员限制、自动路由），并用agentic search模型Waldo先组装“原料”再决定调用哪个模型，同时靠大规模真实用户反馈和AI裁判持续训练路由系统。文中还提到过去三个月企业对开源模型的态度因成本压力发生明显转向。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "扎实的企业AI模型路由趋势报道，讲清楚成本驱动因素、路由机制、开源模型崛起，实操信息量足"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Maggie Appleton",
-      "title": "August 2026",
-      "link": "https://maggieappleton.com/now-2026-08/",
-      "date": "2026-08-18",
-      "first_seen": "2026-08-18T22:24:19.164489+00:00",
-      "source_type": "blog",
-      "summary": "Maggie Appleton记录了自己成为父母、搬入新家后的时间挤压体验，并借此反思无偿家务劳动长期被排除在经济核算之外的问题。她期待AI agent未来能分担规划采购、协调日程这类心智负担，但坦言目前自主agent系统在安全性和可配置性上还不成熟，是“明年再看”的技术。她还提到自己正在通过读经济学入门书，试图理解AI带来的劳动力冲击将如何重塑工资与阶层。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "偏宏观叙事的AI对劳动经济影响的个人思考，非实操指南"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "一手生活反思触及自我认识边缘，主题偏经济理论非清单原文母题，清单外但有分量"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Stripe buys OpenRouter for $7B",
-      "link": "https://www.latent.space/p/ainews-stripe-buys-openrouter-for",
-      "date": "2026-08-17",
-      "first_seen": "2026-08-18T14:00:35.853696+00:00",
-      "source_type": "blog",
-      "summary": "Stripe以70亿美元收购模型路由平台OpenRouter，距其13亿美元B轮仅90天，按1.4亿美元年化收入算是50倍市销率。文章给出的关键数字：服务成本约4000万美元（占收入28.5%），年化毛利1亿美元、毛利率约70%，每月路由的token量从2月的50万亿涨到250万亿，开发者基数800万。作者由此给出的判断是，这笔交易指向AI基础设施的价值累积位置——不在GPU基础设施、不在Agent实验室、也不在前沿模型实验室，而在路由与分发这一层。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "讲清楚了OpenRouter的盈利结构、token路由量级，以及价值在AI基础设施哪一层累积的判断，但整体是行业并购的宏观叙事，对日常怎么用AI工具没有直接实操指引"
         }
       ],
       "is_new": false
