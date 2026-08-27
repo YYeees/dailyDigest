@@ -1,6 +1,91 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "[AINews] NVIDIA buys HuggingFace for $13B, as OpenAI publishes their HF incident retro",
+      "link": "https://www.latent.space/p/ainews-nvidia-buys-huggingface-for",
+      "date": "2026-08-27",
+      "first_seen": "2026-08-27T02:58:58.651738+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space的AINews报道英伟达以约130亿美元收购HuggingFace(约为其1.5亿美元ARR的80倍)，较2026年1月最初70亿美元报价几乎翻倍。同期Z.ai正式发布GLM-5.3-Flash(此前代号Ox Alpha)：原生多模态、320B总参数/18B激活、100万token上下文、MIT协议开源，官方基准称编程能力对齐Claude Opus 4.8，社区反响热烈，被视为当前智能/价格比最优的开源模型之一，也被拿来跟同期国产芯片上跑出的Qwen新模型一起讨论中国开源AI的架构趋同趋势。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "英伟达收购HuggingFace、GLM-5.3-Flash开源模型发布，都是有具体数字和细节的重大AI行业趋势新闻"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Hot Chips: OpenAI’s Jalapeño, Cerebras CS-5, Groq 3 LPX, Apple M6",
+      "link": "https://www.latent.space/p/ainews-hot-chips-openais-jalapeno",
+      "date": "2026-08-27",
+      "first_seen": "2026-08-27T02:58:58.653295+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space的AINews汇总了Hot Chips 37大会最大的新闻——OpenAI自研推理芯片Jalapeño首次公布性能数据，号称比英伟达GB200/GB300每瓦性能高1.5~1.9倍、端到端延迟低1.7~3.6倍，且不靠激进的prefill/decode拆分等技巧就做到了，年底前开始在OpenAI自家基础设施部署。另外提到GPT-Astra+Codex协助写Jalapeño底层kernel，部分注意力/MoE模块比人类专家手写代码快1.5~1.8倍；以及一篇论文实测发现换agent harness对分数的影响可能比换模型还大，提出了Harness Card披露标准。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Hot Chips大会上OpenAI自研推理芯片Jalapeño的详细性能数据、agent harness质量对模型排名影响的研究，扎实的前沿AI硬件/工程趋势信息"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Jason Fried",
+      "title": "$5300 in $100s",
+      "link": "https://world.hey.com/jason/5300-in-100s-3be4c194",
+      "date": "2026-08-26",
+      "first_seen": "2026-08-27T02:58:57.330096+00:00",
+      "source_type": "blog",
+      "summary": "Jason Fried记录37signals给免费线下活动(Breakfast with Basecamp芝加哥站)想的一个招：报名先收$100，到场就在门口原样退还，不到场则没收——用真金白银的代价填报名和实际到场之间的落差。他说这不是新点子(不少餐厅订位也这么干)，打算试完之后公布放鸽子率跟以往对比。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "Jason Fried本人一手记录的构建者实验(收$100押金、到场原样退还解决活动放鸽子问题)，质朴直接、不绕弯子解决真实问题，踩中\"自然生长质朴中正是我这一派\"这条正向母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Lex Fridman",
+      "title": "#501 – DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding & Linux",
+      "link": "https://lexfridman.com/dhh-2/?utm_source=rss&utm_medium=rss&utm_campaign=dhh-2",
+      "date": "2026-08-26",
+      "first_seen": "2026-08-27T02:58:55.984100+00:00",
+      "source_type": "podcast",
+      "summary": "Lex Fridman访谈DHH(Ruby on Rails作者、37signals CTO)，话题覆盖用AI agent编程、vibe coding与agentic engineering的区别、AI对开源生态的冲击、他打造的Omarchy Linux发行版、给程序员的建议，以及怎么选最佳AI编程模型和编程harness。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "DHH谈AI编程agent实操话题(agentic engineering vs vibe coding、AI编程模型/harness怎么选)，节目大纲列出的具体章节直接对应日常怎么用AI编程工具，扎实且门槛不高"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Lovable CTO: The Future of SaaS Is Apps That Agents Can Use",
+      "link": "https://www.latent.space/p/lovable-future-of-saas",
+      "date": "2026-08-26",
+      "first_seen": "2026-08-27T02:58:58.654494+00:00",
+      "source_type": "blog",
+      "summary": "Lovable CTO Fabian Hedin接受Latent Space采访，讲Lovable如何从AI建站工具演变成让agent直接调用的\"能力\"(capability)平台——把已发布应用的部分功能通过托管MCP服务器暴露出来，让ChatGPT/Claude等agent客户端可以直接调用，绕开人工打开App。愿景是给团队做一个\"数字大脑\"，统一入口调用所有工具和工作流，人机交互形态从多标签页App转向agent编排的能力集合，安全上靠权限图谱和连接器网关隔离凭证。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚了一个正在发生的AI应用趋势——Lovable从建站工具转向让agent直接调用的MCP能力平台，具体解释了是什么、为什么重要，属于扎实且门槛不高的AI实操/趋势信息"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "Anthropic’s best AI model struggles to attract users as cheaper tools thrive",
       "link": "https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/",
@@ -15,7 +100,7 @@
           "reason": "带具体营收和采用率数据，清楚说明Anthropic与OpenAI的市场动态，以及Fable因定价高导致采用率偏低的趋势，是扎实的AI行业趋势信息"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -37,7 +122,7 @@
           "reason": "精准命中护城河在harness、不在模型这条母题，且是Drew Breunig本人用Fable想清楚思路、把活交给GLM执行的一手实践"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

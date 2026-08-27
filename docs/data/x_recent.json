@@ -9,7 +9,7 @@
       "source_type": "x",
       "summary": "达利欧以性与自然选择为例说明自然界如何设计激励机制：让个体追求自身快感（性愉悦）的同时，无意间推动整体（基因）的演化，个体与整体的利益因此得以统一，这是他“每日原则”系列的一条。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -20,7 +20,7 @@
       "source_type": "x",
       "summary": "达利欧谈高效协作的三个步骤：坦诚亮出真实想法、掌握“深思熟虑的分歧”艺术、分歧持续时靠协议兜底（他公司用可信度加权的理念择优机制），好想法胜出会带来远超个人独自决策的结果。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -107,50 +107,6 @@
       "first_seen": "2026-08-21T01:28:47.962987+00:00",
       "source_type": "x",
       "summary": "达利欧谈什么是「塑造者（Shaper）」：一种独特的人格类型，被「把一个想法从设想推到落地」这件事本身的冲动所驱动。对这些人来说，重点不是安全感也不是赚钱，而是攀爬过程本身带来的兴奋。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Andy Matuschak",
-      "title": "RT @upcycledwords: Live coding, but make it poetry.  Live Poetry is a system for performing poetry a…",
-      "link": "https://x.com/andy_matuschak/status/2090256991801483396",
-      "date": "2026-08-20",
-      "first_seen": "2026-08-21T01:28:50.197793+00:00",
-      "source_type": "x",
-      "summary": "Andy Matuschak转推了Live Poetry：把live coding的形式挪到诗歌上，让诗成为一个实时演进的过程来现场表演，是个协作式的创作系统。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Andy Matuschak",
-      "title": "Mesmerized by Dennis Hlynsky's overlapped timelapses of starlings, crows, fish…https://t.co/7J7TBbSQ…",
-      "link": "https://x.com/andy_matuschak/status/2090254660300923059",
-      "date": "2026-08-20",
-      "first_seen": "2026-08-21T01:28:50.198400+00:00",
-      "source_type": "x",
-      "summary": "Andy Matuschak说自己被Dennis Hlynsky的作品迷住了：把椋鸟、乌鸦、鱼群的运动轨迹用重叠延时的方式拍下来，让一段时间里的动线同时显影在一张画面上。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "This evolutionary cycle is not just for people but for countries, companies, economies—for everythin…",
-      "link": "https://x.com/RayDalio/status/2090182018940518700",
-      "date": "2026-08-19",
-      "first_seen": "2026-08-21T01:28:47.963089+00:00",
-      "source_type": "x",
-      "summary": "达利欧讲演化周期：这套循环不只作用在人身上，国家、公司、经济体乃至一切事物都在其中，而且整体上会自我纠正、局部却未必。比如市场供给过剩、浪费太多时，价格下跌、公司倒闭、产能收缩，直到供给重新对上需求，周期就朝反方向走；经济坏到一定程度，管事的人要么做出必要的政治和政策调整，要么被替换掉。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "When I look back at my life, reflect, and think about what has been best for me, I realize that the…",
-      "link": "https://x.com/RayDalio/status/2090124297029218453",
-      "date": "2026-08-19",
-      "first_seen": "2026-08-21T01:28:47.963162+00:00",
-      "source_type": "x",
-      "summary": "达利欧回顾一生后认为，钱、业绩记录、为客户做的事都很好，但最好的部分始终是关系。而那些诚实的关系之所以更深、更好，恰恰是因为有「严厉的爱」——严厉的爱是最好的爱，因为它出自真正的在乎；当对方知道你是真在乎，你就能把难听的实话和这份在乎捆在一起，一起扛过去。",
       "tier": "medium",
       "is_new": false
     }

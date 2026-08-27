@@ -2,6 +2,162 @@
   "items": [
     {
       "person": "Latent Space",
+      "title": "[AINews] NVIDIA buys HuggingFace for $13B, as OpenAI publishes their HF incident retro",
+      "link": "https://www.latent.space/p/ainews-nvidia-buys-huggingface-for",
+      "date": "2026-08-27",
+      "first_seen": "2026-08-27T02:58:58.651738+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space的AINews报道英伟达以约130亿美元收购HuggingFace(约为其1.5亿美元ARR的80倍)，较2026年1月最初70亿美元报价几乎翻倍。同期Z.ai正式发布GLM-5.3-Flash(此前代号Ox Alpha)：原生多模态、320B总参数/18B激活、100万token上下文、MIT协议开源，官方基准称编程能力对齐Claude Opus 4.8，社区反响热烈，被视为当前智能/价格比最优的开源模型之一，也被拿来跟同期国产芯片上跑出的Qwen新模型一起讨论中国开源AI的架构趋同趋势。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "英伟达收购HuggingFace、GLM-5.3-Flash开源模型发布，都是有具体数字和细节的重大AI行业趋势新闻"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Hot Chips: OpenAI’s Jalapeño, Cerebras CS-5, Groq 3 LPX, Apple M6",
+      "link": "https://www.latent.space/p/ainews-hot-chips-openais-jalapeno",
+      "date": "2026-08-27",
+      "first_seen": "2026-08-27T02:58:58.653295+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space的AINews汇总了Hot Chips 37大会最大的新闻——OpenAI自研推理芯片Jalapeño首次公布性能数据，号称比英伟达GB200/GB300每瓦性能高1.5~1.9倍、端到端延迟低1.7~3.6倍，且不靠激进的prefill/decode拆分等技巧就做到了，年底前开始在OpenAI自家基础设施部署。另外提到GPT-Astra+Codex协助写Jalapeño底层kernel，部分注意力/MoE模块比人类专家手写代码快1.5~1.8倍；以及一篇论文实测发现换agent harness对分数的影响可能比换模型还大，提出了Harness Card披露标准。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Hot Chips大会上OpenAI自研推理芯片Jalapeño的详细性能数据、agent harness质量对模型排名影响的研究，扎实的前沿AI硬件/工程趋势信息"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "\"harness质量比模型选择更重要\"这条研究直接沾到护城河在harness不在模型这个母题，但是新闻综述性质的二手内容，不是作者本人一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Qwen3.8-Flash-Next",
+      "link": "https://simonwillison.net/2026/Aug/26/qwen38-flash-next/",
+      "date": "2026-08-26",
+      "first_seen": "2026-08-27T02:58:58.311655+00:00",
+      "source_type": "blog",
+      "summary": "Qwen发布了3.8-Flash-Next，一个多模态MoE模型，也是Qwen4架构的早期预览版——总参数125B、激活只有6B，因此推理速度有明显提升。Simon Willison在DGX Spark上用Unsloth的量化版本(72.5GB和78.9GB两档)做了本地测试，用他一贯的\"pelican riding a bicycle\"画图基准跑了几张图，其中xhigh推理强度下的一张效果最好。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "新开源模型Qwen3.8-Flash-Next的发布信息扎实(MoE架构、Qwen4架构预览)，但正文内容偏向Simon自己跑pelican-riding-bicycle测试图的演示性质，不是深入讲清楚为什么重要"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "纯模型测试记录，跟三根主干无实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Jason Fried",
+      "title": "$5300 in $100s",
+      "link": "https://world.hey.com/jason/5300-in-100s-3be4c194",
+      "date": "2026-08-26",
+      "first_seen": "2026-08-27T02:58:57.330096+00:00",
+      "source_type": "blog",
+      "summary": "Jason Fried记录37signals给免费线下活动(Breakfast with Basecamp芝加哥站)想的一个招：报名先收$100，到场就在门口原样退还，不到场则没收——用真金白银的代价填报名和实际到场之间的落差。他说这不是新点子(不少餐厅订位也这么干)，打算试完之后公布放鸽子率跟以往对比。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "Jason Fried本人一手记录的构建者实验(收$100押金、到场原样退还解决活动放鸽子问题)，质朴直接、不绕弯子解决真实问题，踩中\"自然生长质朴中正是我这一派\"这条正向母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Lex Fridman",
+      "title": "#501 – DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding & Linux",
+      "link": "https://lexfridman.com/dhh-2/?utm_source=rss&utm_medium=rss&utm_campaign=dhh-2",
+      "date": "2026-08-26",
+      "first_seen": "2026-08-27T02:58:55.984100+00:00",
+      "source_type": "podcast",
+      "summary": "Lex Fridman访谈DHH(Ruby on Rails作者、37signals CTO)，话题覆盖用AI agent编程、vibe coding与agentic engineering的区别、AI对开源生态的冲击、他打造的Omarchy Linux发行版、给程序员的建议，以及怎么选最佳AI编程模型和编程harness。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "DHH谈AI编程agent实操话题(agentic engineering vs vibe coding、AI编程模型/harness怎么选)，节目大纲列出的具体章节直接对应日常怎么用AI编程工具，扎实且门槛不高"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "节目专门有一段讲\"最佳AI编程harness\"，沾到护城河在harness不在模型这个母题，但这是访谈形式，是嘉宾观点经Lex转述呈现，不是作者本人一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Lovable CTO: The Future of SaaS Is Apps That Agents Can Use",
+      "link": "https://www.latent.space/p/lovable-future-of-saas",
+      "date": "2026-08-26",
+      "first_seen": "2026-08-27T02:58:58.654494+00:00",
+      "source_type": "blog",
+      "summary": "Lovable CTO Fabian Hedin接受Latent Space采访，讲Lovable如何从AI建站工具演变成让agent直接调用的\"能力\"(capability)平台——把已发布应用的部分功能通过托管MCP服务器暴露出来，让ChatGPT/Claude等agent客户端可以直接调用，绕开人工打开App。愿景是给团队做一个\"数字大脑\"，统一入口调用所有工具和工作流，人机交互形态从多标签页App转向agent编排的能力集合，安全上靠权限图谱和连接器网关隔离凭证。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚了一个正在发生的AI应用趋势——Lovable从建站工具转向让agent直接调用的MCP能力平台，具体解释了是什么、为什么重要，属于扎实且门槛不高的AI实操/趋势信息"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "🔬“We have foundation models for language, not for physics” — Anima Anandkumar, Bren Professor of Computing",
+      "link": "https://www.latent.space/p/anima",
+      "date": "2026-08-26",
+      "first_seen": "2026-08-27T02:58:58.655665+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space专访Anima Anandkumar(Caltech教授)，讲她如何用神经算子(Neural Operators)给天气、聚变反应堆这类连续物理系统建模，而不是走语言模型的规模化路线——物理世界数据稀少、分辨率要求又把上下文长度推到千亿级，硬堆token行不通，得把物理先验(比如球谐函数)直接编进网络结构。她还提到TorchLean(在Lean证明助手里写神经网络并形式化验证)以及她在联合国科学顾问委员会的工作。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "对Anima Anandkumar的深度专访，讲神经算子/物理基础模型这类研究级别内容，门槛较高，属于沾AI边的技术深挖而非日常实操信息"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Paul Dix",
+      "link": "https://simonwillison.net/2026/Aug/26/paul-dix/",
+      "date": "2026-08-26",
+      "first_seen": "2026-08-27T02:58:58.311863+00:00",
+      "source_type": "blog",
+      "summary": "Paul Dix的一段话被Simon Willison转发：AI写出上百万行代码后，靠持续几个月的打磨和验证系统，做出了跑在数百万开发者机器上的可靠软件。核心观点是，只要能搭好验证系统、给对方向，AI就能产出复杂精密的软件并持续把它改到能用——护城河在于验证/harness，不在模型本身。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "只是一段引语(Paul Dix原话)加Simon的转发，讲AI写百万行代码后靠验证系统迭代到可靠，观点扎实但篇幅极短、无原创评论"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "\"靠验证系统+方向把控让AI产出复杂软件\"沾到护城河在harness不在模型这个母题，但是转述Paul Dix的话，不是作者本人一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
       "title": "[AINews] Andrew Ng gets into AI Engineering",
       "link": "https://www.latent.space/p/ainews-andrew-ng-gets-into-ai-engineering",
       "date": "2026-08-25",
@@ -20,7 +176,7 @@
           "reason": "评论里提到编程agent技能核心是理解harness、知道如何驾驭和避坑，沾“护城河在harness不在模型”母题的边，但主体是技能框架转述而非一手反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -264,45 +420,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "讲的是参数量为何不再是能力指标、后训练环境如何合成，属于模型内部机制和训练方法论，要一定技术背景才看得懂门道"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Conceptual integrity and counting lines of code",
-      "link": "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/",
-      "date": "2026-08-19",
-      "first_seen": "2026-08-21T01:28:39.199316+00:00",
-      "source_type": "blog",
-      "summary": "西蒙·威利森反驳「代码行数不能衡量生产力」的通行说法：过去一个工程师一天写出两百行可上生产的代码已是极好的一天，多数时候只有五六十行；如果agent能让你产出一千行同等质量的代码，这就是实打实的提升。但他紧接着指出新的限制因素已经变成认知容量——产出快一百倍，人却没有能力盯住一百倍的代码，所以团队依然必要，是为了把认知负荷分摊开。更麻烦的是《人月神话》里说的「概念完整性」：agent让加功能变得极便宜，软件于是长出各种奇怪的疣，最后变成温彻斯特神秘屋。过去是时间成本替你强制了纪律，现在这层约束没了，只能靠主动的自律补上。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "把「用agent之后瓶颈到底在哪」讲透了：产出速度不再是限制，认知容量才是——面向工程师的一手判断，讲清了是什么和为什么重要，门槛不高"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "直接踩中「认知系统不能外包，信息系统可以」这条母题——代码生成能交给agent，但读懂和守住设计的认知容量不能；且是他本人的一手反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Memory prices up 500% in 12 months",
-      "link": "https://www.latent.space/p/ainews-memory-prices-up-500-in-12",
-      "date": "2026-08-19",
-      "first_seen": "2026-08-19T22:26:02.771967+00:00",
-      "source_type": "blog",
-      "summary": "内存芯片价格在过去12个月暴涨约500%，128GB DDR5内存价格已是历史最低价的十倍，业内称之为RAMageddon。根源是超大规模云厂商为保障AI算力扩张，已提前锁定2027年全球DRAM产能并支付预付款，内存单位重量价值一度逼近黄金的一半。摘自Latent Space的AINews栏目，属于AI基础设施成本上涨的宏观趋势梳理，不涉及具体工具或实操建议。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "AI算力扩张带动内存供应链紧缺涨价的宏观趋势梳理，信息量足但偏行业新闻叙事，不是直接操作指南"
         }
       ],
       "is_new": false
