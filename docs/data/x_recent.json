@@ -2,6 +2,28 @@
   "items": [
     {
       "person": "Ray Dalio",
+      "title": "Contribute to the whole and you will likely be rewarded.   Natural selection leads to better qualiti…",
+      "link": "https://x.com/RayDalio/status/2093096223502897240",
+      "date": "2026-08-27",
+      "first_seen": "2026-08-28T05:59:36.695275+00:00",
+      "source_type": "x",
+      "summary": "达利欧这条“每日原则”讲：为整体做贡献往往会得到回报，自然选择机制会让更好的品质被保留和传递（比如更好的基因、更强的滋养他人能力、更好的产品），从而让整体持续改进。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "When starting out with no revenue, you have a choice. You can stay out of the jungle, take the safe…",
+      "link": "https://x.com/RayDalio/status/2092988506058416160",
+      "date": "2026-08-27",
+      "first_seen": "2026-08-28T05:59:36.695546+00:00",
+      "source_type": "x",
+      "summary": "达利欧谈起步阶段没有收入时的选择：可以留在安全地带打一份稳定工作，也可以选择进入丛林、直面能致命的风险、争取更大的上行空间——他说自己选择了和视角不同的人一起走进丛林。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
       "title": "To give you a quick example of nature creating incentives that lead to individuals pursuing their ow…",
       "link": "https://x.com/RayDalio/status/2092363891472810185",
       "date": "2026-08-25",
@@ -97,17 +119,6 @@
       "source_type": "x",
       "summary": "这条推文只附带一张图片或视频链接，没有文字说明，具体内容不明。",
       "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "What makes a \"Shaper\"?  It’s a unique personality type—people who are driven by the compulsive thril…",
-      "link": "https://x.com/RayDalio/status/2090537764651458791",
-      "date": "2026-08-20",
-      "first_seen": "2026-08-21T01:28:47.962987+00:00",
-      "source_type": "x",
-      "summary": "达利欧谈什么是「塑造者（Shaper）」：一种独特的人格类型，被「把一个想法从设想推到落地」这件事本身的冲动所驱动。对这些人来说，重点不是安全感也不是赚钱，而是攀爬过程本身带来的兴奋。",
-      "tier": "medium",
       "is_new": false
     }
   ]

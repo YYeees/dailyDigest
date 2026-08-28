@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "Breaking Claude Code Opus 5 Auto Mode",
+      "link": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
+      "date": "2026-08-27",
+      "first_seen": "2026-08-28T05:59:26.551128+00:00",
+      "source_type": "blog",
+      "summary": "提示注入研究员Johann Rehberger发现一种攻击方法，能以约80%成功率绕过Claude Code Auto Mode的防护——诱导agent下载解压zip包，再执行代码导入base64时实际加载了包内的恶意struct.py文件。更严重的是，部分场景下agent察觉到进程被攻陷想终止恶意进程时，Auto Mode反而拦截了清理命令，安全机制本身成了故障点。Simon Willison据此建议：无人值守coding agent应在容器/虚拟机/沙箱里跑、限制出网、持续监控，且不要让agent接触家目录、SSH密钥、云凭证等敏感资源。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "揭示Claude Code Auto Mode被提示注入攻击绕过（成功率约80%），并给出无人值守agent的具体防护建议（沙箱/限制出网/监控），直接影响日常怎么安全使用编程agent"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] NVIDIA buys HuggingFace for $13B, as OpenAI publishes their HF incident retro",
       "link": "https://www.latent.space/p/ainews-nvidia-buys-huggingface-for",
@@ -15,7 +32,7 @@
           "reason": "英伟达收购HuggingFace、GLM-5.3-Flash开源模型发布，都是有具体数字和细节的重大AI行业趋势新闻"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -32,7 +49,7 @@
           "reason": "Hot Chips大会上OpenAI自研推理芯片Jalapeño的详细性能数据、agent harness质量对模型排名影响的研究，扎实的前沿AI硬件/工程趋势信息"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Jason Fried",
@@ -49,7 +66,7 @@
           "reason": "Jason Fried本人一手记录的构建者实验(收$100押金、到场原样退还解决活动放鸽子问题)，质朴直接、不绕弯子解决真实问题，踩中\"自然生长质朴中正是我这一派\"这条正向母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Lex Fridman",
@@ -66,7 +83,7 @@
           "reason": "DHH谈AI编程agent实操话题(agentic engineering vs vibe coding、AI编程模型/harness怎么选)，节目大纲列出的具体章节直接对应日常怎么用AI编程工具，扎实且门槛不高"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -83,7 +100,7 @@
           "reason": "讲清楚了一个正在发生的AI应用趋势——Lovable从建站工具转向让agent直接调用的MCP能力平台，具体解释了是什么、为什么重要，属于扎实且门槛不高的AI实操/趋势信息"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

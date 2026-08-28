@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "Breaking Claude Code Opus 5 Auto Mode",
+      "link": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
+      "date": "2026-08-27",
+      "first_seen": "2026-08-28T05:59:26.551128+00:00",
+      "source_type": "blog",
+      "summary": "提示注入研究员Johann Rehberger发现一种攻击方法，能以约80%成功率绕过Claude Code Auto Mode的防护——诱导agent下载解压zip包，再执行代码导入base64时实际加载了包内的恶意struct.py文件。更严重的是，部分场景下agent察觉到进程被攻陷想终止恶意进程时，Auto Mode反而拦截了清理命令，安全机制本身成了故障点。Simon Willison据此建议：无人值守coding agent应在容器/虚拟机/沙箱里跑、限制出网、持续监控，且不要让agent接触家目录、SSH密钥、云凭证等敏感资源。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "揭示Claude Code Auto Mode被提示注入攻击绕过（成功率约80%），并给出无人值守agent的具体防护建议（沙箱/限制出网/监控），直接影响日常怎么安全使用编程agent"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "涉及agent harness安全议题，沾根二（AI作为认知方式/harness）的边，但内容是转述研究员发现加作者点评，非本人一手经历"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] NVIDIA buys HuggingFace for $13B, as OpenAI publishes their HF incident retro",
       "link": "https://www.latent.space/p/ainews-nvidia-buys-huggingface-for",
@@ -15,7 +37,7 @@
           "reason": "英伟达收购HuggingFace、GLM-5.3-Flash开源模型发布，都是有具体数字和细节的重大AI行业趋势新闻"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -37,29 +59,7 @@
           "reason": "\"harness质量比模型选择更重要\"这条研究直接沾到护城河在harness不在模型这个母题，但是新闻综述性质的二手内容，不是作者本人一手反思"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Qwen3.8-Flash-Next",
-      "link": "https://simonwillison.net/2026/Aug/26/qwen38-flash-next/",
-      "date": "2026-08-26",
-      "first_seen": "2026-08-27T02:58:58.311655+00:00",
-      "source_type": "blog",
-      "summary": "Qwen发布了3.8-Flash-Next，一个多模态MoE模型，也是Qwen4架构的早期预览版——总参数125B、激活只有6B，因此推理速度有明显提升。Simon Willison在DGX Spark上用Unsloth的量化版本(72.5GB和78.9GB两档)做了本地测试，用他一贯的\"pelican riding a bicycle\"画图基准跑了几张图，其中xhigh推理强度下的一张效果最好。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "新开源模型Qwen3.8-Flash-Next的发布信息扎实(MoE架构、Qwen4架构预览)，但正文内容偏向Simon自己跑pelican-riding-bicycle测试图的演示性质，不是深入讲清楚为什么重要"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "纯模型测试记录，跟三根主干无实质连接"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Jason Fried",
@@ -76,7 +76,7 @@
           "reason": "Jason Fried本人一手记录的构建者实验(收$100押金、到场原样退还解决活动放鸽子问题)，质朴直接、不绕弯子解决真实问题，踩中\"自然生长质朴中正是我这一派\"这条正向母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Lex Fridman",
@@ -98,7 +98,7 @@
           "reason": "节目专门有一段讲\"最佳AI编程harness\"，沾到护城河在harness不在模型这个母题，但这是访谈形式，是嘉宾观点经Lex转述呈现，不是作者本人一手反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -115,7 +115,7 @@
           "reason": "讲清楚了一个正在发生的AI应用趋势——Lovable从建站工具转向让agent直接调用的MCP能力平台，具体解释了是什么、为什么重要，属于扎实且门槛不高的AI实操/趋势信息"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -132,29 +132,7 @@
           "reason": "对Anima Anandkumar的深度专访，讲神经算子/物理基础模型这类研究级别内容，门槛较高，属于沾AI边的技术深挖而非日常实操信息"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Paul Dix",
-      "link": "https://simonwillison.net/2026/Aug/26/paul-dix/",
-      "date": "2026-08-26",
-      "first_seen": "2026-08-27T02:58:58.311863+00:00",
-      "source_type": "blog",
-      "summary": "Paul Dix的一段话被Simon Willison转发：AI写出上百万行代码后，靠持续几个月的打磨和验证系统，做出了跑在数百万开发者机器上的可靠软件。核心观点是，只要能搭好验证系统、给对方向，AI就能产出复杂精密的软件并持续把它改到能用——护城河在于验证/harness，不在模型本身。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "只是一段引语(Paul Dix原话)加Simon的转发，讲AI写百万行代码后靠验证系统迭代到可靠，观点扎实但篇幅极短、无原创评论"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "\"靠验证系统+方向把控让AI产出复杂软件\"沾到护城河在harness不在模型这个母题，但是转述Paul Dix的话，不是作者本人一手反思"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -330,96 +308,6 @@
           "track": "anchor",
           "tier": "high",
           "reason": "核心论点正是护城河在harness不在模型这条母题的具体例证——模型能力人人可得，真正的差异在你围绕agent搭的工作流和界面，Simon补充了自己vibe-coding出的macOS应用仍在每天用的一手经历"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Poolside gets $12B reverse-execuhire to NVIDIA; founders stay for $1B, employees go for $6B, Infraco scaling to 7GW neocloud",
-      "link": "https://www.latent.space/p/ainews-poolside-gets-12b-reverse",
-      "date": "2026-08-21",
-      "first_seen": "2026-08-21T22:25:52.102056+00:00",
-      "source_type": "blog",
-      "summary": "Poolside与NVIDIA达成一笔罕见的反向execuhire：创始人留任并获10亿美元，109名员工(几乎是全部技术骨干)转投NVIDIA获60亿美元，原基础设施子公司PIC Infraco独立出去、目标扩容到7GW。创始人称这不是收购也不是acquihire，原因是去年底一次20亿美元融资未能按时到位、错失4万块GB300集群，暴露了独立训练前沿模型对资本和物理算力的双重门槛。三方创始人都暗示下一步尚未公开，但强调AI的终极价值会落在能靠真实世界实验形成数据护城河的科学发现类问题上，而非可被开源商品化的通用智能能力。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "讲清楚了Poolside向NVIDIA反向execuhire的12B美元交易细节和背后算力/资本约束的行业动因，属于讲透是什么、为什么重要的前沿趋势报道"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Craig Mod",
-      "title": "[RIDGELINE] Walking The Length of Manhattan",
-      "link": "https://craigmod.com/ridgeline/232/",
-      "date": "2026-08-21",
-      "first_seen": "2026-08-21T22:25:49.377109+00:00",
-      "source_type": "blog",
-      "summary": "作者与摄影师从曼哈顿最北端徒步走到最南端，历时六小时、24公里，途中特意放弃把旅行做成创作项目的念头，只是单纯地享受城市与街区的细节。文中顺带提到用Claude做血液数据的侦探式分析，但与主线关系不大。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "亲身徒步的一手经历，触及清净的场域(选择享受而非项目化)与自然生长质朴中正的主题，但更多是旅行叙事而非系统性反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "The /wayfinder Skill: Navigating the “Fog of War” of Planning",
-      "link": "https://www.latent.space/p/wayfinder-skill",
-      "date": "2026-08-20",
-      "first_seen": "2026-08-21T01:28:40.160421+00:00",
-      "source_type": "blog",
-      "summary": "Latent Space新开的skill系列第一期，访谈Matt Pocock，聊他新发布的/wayfinder。它要解决的是「战争迷雾」式的项目——目标在一开始没法完全定死的时候怎么规划。Pocock的起因是他大量使用AFK（离开键盘的）agent，把工作拆成spec再拆成ticket让agent通宵跑，但规划这一步本身变得很累人：他得一直惦记自己用掉了多少上下文、这一层挖得多深。于是他想要一个编排层，把规划过程本身托管掉——自动切分成多个线程去做原型、做调研，再把结果收拢回来，让规划阶段不再受上下文窗口的约束。他强调skill的本质就是上下文管理，所以设计时真正要想的是信息流：被管理的子会话需要什么，答案是一份对全局的粗略认知加上它自己那份具体任务。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "直接可用的实操信息：一个公开的skill，讲清了它解决什么问题、怎么设计的、什么场景该用，门槛不高"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "正面命中「护城河在harness，不在模型」——skill本身就是harness，且整段讲的是怎么设计agent之间的信息流和上下文管理，是根二「和LLM共建、认知系统」的一手经验"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Andrew Huberman",
-      "title": "Essentials: How to Access Your Creativity | Rick Rubin",
-      "link": "https://www.youtube.com/watch?v=QP8Kpf1UQwM",
-      "date": "2026-08-20",
-      "first_seen": "2026-08-21T01:28:33.448563+00:00",
-      "source_type": "youtube",
-      "summary": "Huberman Lab精编版，嘉宾是制作人Rick Rubin（《创造之道》作者）。核心是怎么进入创造状态：留意冒出来的念头、信任自己的品味、与手上的作品保持全然在场。Rubin拆了创作过程的四个阶段，谈了专注与刻意抽离如何交替、自我怀疑其实可以当成工具用、截止日期和冥想各自起什么作用。还聊到感知与叙事、以及为什么对不确定保持敞开能让人创作得更本真——包括「别急着解释你的实验」和从职业摔角里看到的真实与表演的关系。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "踩中「一手不二手」和「自然生长、质朴中正，不迎合」两条母题——信任自己的品味、别过度解释、与作品全然在场，且是Rick Rubin本人的创作经验"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Death of Params: Z.ai CEO Jie Tang on GLM 5.3 and the new Post-training Scaling Law",
-      "link": "https://www.latent.space/p/ainews-death-of-params-zai-ceo-jie",
-      "date": "2026-08-20",
-      "first_seen": "2026-08-21T01:28:40.161198+00:00",
-      "source_type": "blog",
-      "summary": "Z.ai的唐杰教授说，光看参数量已经不够了——得同时看数据量、算力打算花在哪、谁在什么条件下跑这个模型。GLM-5.3的大幅跃升完全来自在长周期真实环境上做强化学习：任务按工程和研究实际的做法设计，有的相当于一个熟练工程师好几天的工作量，比如给模型一整套真实的ML基础设施环境，让它自己诊断训练栈瓶颈、实现优化、跑实验，最后交出可测量且不破坏正确性的端到端加速。更关键的是这套环境、评判和验证器已经全链路合成：研究agent从真实工作里提取任务模式生成可运行的长周期环境，判题agent先自己做一遍确认题目可解，验证器在不看参考答案的情况下合成。结论是记忆力靠参数，推理力靠后训练数据和有效深度。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "讲的是参数量为何不再是能力指标、后训练环境如何合成，属于模型内部机制和训练方法论，要一定技术背景才看得懂门道"
         }
       ],
       "is_new": false
