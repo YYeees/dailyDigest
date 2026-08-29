@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "[AINews] OpenAI shuts off Cursor",
+      "link": "https://www.latent.space/p/ainews-openai-shuts-off-cursor",
+      "date": "2026-08-29",
+      "first_seen": "2026-08-29T23:56:09.027494+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI在Cursor被SpaceX收购后切断了其API接入，援引马斯克旗下公司此前违反合同的经历为由，延续两人多年的公开纷争。文章借此指出编程模型竞争格局已经变化：曾经Claude系列遥遥领先的局面被打破，GPT-5.6和xAI的Grok 4.6都已成为有竞争力的编程模型选项。Cursor方面回应称OpenAI流量仅占其5%，但对断供是否终局仍持保留态度。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "OpenAI与Cursor因SpaceX收购引发的商业纠纷，涉及Claude、GPT-5.6、Grok 4.6编程能力对比，但偏行业新闻叙事，非直接实操指南"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "Just a rumour of a bug is enough to find a security exploit these days",
       "link": "https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/",
@@ -13,14 +30,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "报道AI编程agent已强大到仅凭bug传闻就能在几分钟内定位并生成漏洞利用，导致开源项目安全披露量激增（rclone一月内40+起），讲清楚新趋势是什么、为什么重要，对理解AI能力边界与安全影响有实操价值"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "AI安全/开源治理话题，与三根主干无实质连接"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -37,7 +49,7 @@
           "reason": "AI News周报详细报道GLM-5.3-Flash等新模型发布的参数规格、量化部署方案与实测吞吐，讲清楚新趋势为什么重要，对了解前沿AI进展有实操价值"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -242,67 +254,6 @@
           "track": "anchor",
           "tier": "high",
           "reason": "精准命中护城河在harness、不在模型这条母题，且是Drew Breunig本人用Fable想清楚思路、把活交给GLM执行的一手实践"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "More than just code review",
-      "link": "https://simonwillison.net/2026/Aug/22/more-than-just-code-review/",
-      "date": "2026-08-22",
-      "first_seen": "2026-08-22T22:22:52.055939+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison指出使用编程agent的核心技能不是逐行审查代码，而是能自信地下达指令、并自信地验证改动是否正确落地——逐行审查从来都不是验证软件变更最有效的方式，他建议探索审查之外的其他验证路径。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "直接影响日常怎么用AI编程agent的实操信息，指出验证改动正确性比逐行审查更关键"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] 10% worse, 100x cheaper, 10000x faster: Why Simulation is taking over",
-      "link": "https://www.latent.space/p/ainews-10-worse-100x-cheaper-10000x",
-      "date": "2026-08-22",
-      "first_seen": "2026-08-22T22:22:52.447780+00:00",
-      "source_type": "blog",
-      "summary": "这期AINews周报梳理了AI逐步“合成化”接管整条生产链条的八个阶段：从2022年奖励信号（RLHF/Constitutional AI）、训练数据（Phi的教科书式合成数据）、教师模型（蒸馏），到2024年模型自定课程，2026年AI研究员（Karpathy的autoresearch）、RL环境合成（Z.ai），直至Simile这类公司正在合成“人类被试”本身。作者认为每次合成化的落地都不是生成质量变好触发的，而是验证机制变得可信时才发生，唯一还没被合成的是需要物理世界反馈的实验环节。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "梳理AI逐步合成化接管整条生产链条的完整趋势脉络，讲清各阶段代表事件和为什么重要，信息量扎实"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "讨论AI逐步替代认知链条各环节（判官/教师/研究员/被试），呼应认知系统不能外包的边界议题，但属产业趋势综述而非一手反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "The Evolution of the Agent Harness",
-      "link": "https://www.latent.space/p/attention-interface",
-      "date": "2026-08-22",
-      "first_seen": "2026-08-22T22:22:52.449564+00:00",
-      "source_type": "blog",
-      "summary": "Latent Space梳理了agent harness的演化史：从2022年ReAct的纯prompting循环，到AutoGPT时期给模型过多自主权导致的“早熟自主”失败，再到Claude Code在2025年抓住模型能力反超harness的窗口期而成功。作者认为当前处于Harness 2.0“共训时代”——模型不断把harness能力吸收进权重（如自动压缩上下文），导致harness持续被删减。预测下一步harness会从“面向模型的接口”转变为“面向人类注意力的接口”，管理AI何时该打断人、何时该自主决策。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "系统梳理agent harness演化史与未来方向，讲清是什么、为什么重要，面向工程师的扎实趋势分析"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "整篇原创分析直接讨论护城河在harness不在模型这一母题，系统论证harness如何被模型吸收又如何转向人类注意力接口"
         }
       ],
       "is_new": false

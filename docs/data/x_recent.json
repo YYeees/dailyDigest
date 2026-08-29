@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "person": "Ray Dalio",
+      "title": "Natural selection’s trial-and-error process allows improvement without anyone understanding or guidi…",
+      "link": "https://x.com/RayDalio/status/2093730395732750845",
+      "date": "2026-08-29",
+      "first_seen": "2026-08-29T23:56:13.664889+00:00",
+      "source_type": "x",
+      "summary": "达利欧探讨了三种学习方式——依赖记忆的有意识学习、影响决策却不进入意识的潜意识学习，以及不经思考的进化式学习（如DNA适应）——并认为比起有意识记忆学习，试错式的适应性学习反而带来更快的进步。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
       "person": "Andy Matuschak",
       "title": "RT @xhfloz: I spent the week barely using chatbots — just reading, thinking, and writing — and feel…",
       "link": "https://x.com/andy_matuschak/status/2093392461607645597",
@@ -9,7 +20,7 @@
       "source_type": "x",
       "summary": "Andy Matuschak转发他人分享：这一周几乎不用聊天机器人，只专注阅读、思考与写作，结果感到比过去几个月都更清晰。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -86,28 +97,6 @@
       "source_type": "x",
       "summary": "达利欧的本日格言：真正的诚信来自内外如一，表里不一的双重性会让人逐渐迷失自己的价值观，难以获得幸福，也难以发挥出最佳状态。",
       "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Andy Matuschak",
-      "title": "The wonderful Gary Wolf has a lovely new book about personal science. It's a synthesized anthology,…",
-      "link": "https://x.com/andy_matuschak/status/2091266951565943261",
-      "date": "2026-08-22",
-      "first_seen": "2026-08-22T22:23:01.268538+00:00",
-      "source_type": "x",
-      "summary": "Andy Matuschak推荐Gary Wolf的新书，一部关于“个人科学”的选编文集，收录了人们认真追问、并（有时）回答关于自己生活的真实故事。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Andy Matuschak",
-      "title": "Trying to understand why the sudden flood of low effort AI-generated math findings feels profane to…",
-      "link": "https://x.com/andy_matuschak/status/2091013622633840877",
-      "date": "2026-08-22",
-      "first_seen": "2026-08-22T22:23:01.268804+00:00",
-      "source_type": "x",
-      "summary": "Andy Matuschak反思AI生成数学证明的浪潮为何让他感到有种“亵渎感”——不同于国际象棋或钢琴演奏，这种发现的意义似乎会因AI唾手可得而被稀释（他借用他人提出的“qualia theft”概念），但他也用探险/定向越野作类比，思考为什么有些被地图化的人类活动依然有意义。",
-      "tier": "high",
       "is_new": false
     }
   ]
