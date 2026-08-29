@@ -2,6 +2,45 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Just a rumour of a bug is enough to find a security exploit these days",
+      "link": "https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/",
+      "date": "2026-08-28",
+      "first_seen": "2026-08-29T03:33:12.993704+00:00",
+      "source_type": "blog",
+      "summary": "剑桥学者Anil Madhavapeddy发现，如今只要有安全补丁的讨论传闻，AI编程agent就能在十分钟内定位并试探利用相应漏洞，他自己也用AI agent（包括DeepSeek V4 Pro）复现了这一过程。rclone维护者证实项目安全披露量从十年20起暴增至一个月40多起，CVE审批也从2-3天拖长到3-4周，现有开源安全披露机制已经跟不上这种AI驱动的发现速度。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "报道AI编程agent已强大到仅凭bug传闻就能在几分钟内定位并生成漏洞利用，导致开源项目安全披露量激增（rclone一月内40+起），讲清楚新趋势是什么、为什么重要，对理解AI能力边界与安全影响有实操价值"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "AI安全/开源治理话题，与三根主干无实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] OpenAI to reach AGI bar by end-2026",
+      "link": "https://www.latent.space/p/ainews-openai-to-reach-agi-bar-by",
+      "date": "2026-08-28",
+      "first_seen": "2026-08-29T03:33:13.657620+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI内部人士称力争在2026年底前达成AGI标准，Latent Space的AI News周报梳理了本周AI圈动态：开源机器人Microduck（399美元双足机器人，配备摄像头、激光雷达等传感器，支持仿真训练迁移部署）上线即热卖；神秘模型Ox Alpha被证实是智谱GLM-5.3-Flash（3200亿参数/180亿激活参数/百万上下文），量化后可在128GB内存本地运行，性价比被多方称为新的效率标杆；视频生成领域Gemini Omni等新模型也在加速迭代。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "AI News周报详细报道GLM-5.3-Flash等新模型发布的参数规格、量化部署方案与实测吞吐，讲清楚新趋势为什么重要，对了解前沿AI进展有实操价值"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "Breaking Claude Code Opus 5 Auto Mode",
       "link": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
       "date": "2026-08-27",
@@ -13,14 +52,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "揭示Claude Code Auto Mode被提示注入攻击绕过（成功率约80%），并给出无人值守agent的具体防护建议（沙箱/限制出网/监控），直接影响日常怎么安全使用编程agent"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "涉及agent harness安全议题，沾根二（AI作为认知方式/harness）的边，但内容是转述研究员发现加作者点评，非本人一手经历"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -269,45 +303,6 @@
           "track": "anchor",
           "tier": "high",
           "reason": "整篇原创分析直接讨论护城河在harness不在模型这一母题，系统论证harness如何被模型吸收又如何转向人类注意力接口"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Simulation: the new Scaling Law — Joon Sung Park, Simile AI",
-      "link": "https://www.latent.space/p/simile",
-      "date": "2026-08-21",
-      "first_seen": "2026-08-22T22:22:52.450993+00:00",
-      "source_type": "blog",
-      "summary": "Simile联合创始人Joon Sung Park（Generative Agents/Smallville论文作者）访谈，讲述如何从2023年的生成式智能体演化到用行为基础模型构建8亿人数字孪生的公司，已完成2B美元B轮融资。核心方法是用访谈、观察行为数据和随机对照试验三类数据训练模型，让模拟结果学到人类的偏差和非理性，而不是像前沿模型那样趋于理性。他强调好的个人助手首先需要对用户的深度建模，并认为记忆架构长期要靠改模型权重而非单纯prompt。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "把模拟对话讲成新的AI扩展趋势前沿创业访谈，讲清是什么、为什么重要，涉及2B美元B轮融资、行为基础模型、RCT训练方法，信息量扎实"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "讨论记忆架构（Markdown文件vs知识图谱）与个人助手需要深度用户模型，呼应harness/认知系统主题，但是访谈转述，非一手反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Stop Making TUIs",
-      "link": "https://simonwillison.net/2026/Aug/21/stop-making-tuis/",
-      "date": "2026-08-21",
-      "first_seen": "2026-08-21T22:25:51.700383+00:00",
-      "source_type": "blog",
-      "summary": "Thomas Ptacek主张：既然coding agent已经能可靠地生成合格的原生GUI，开发者应该停止为随手写的小工具做TUI，转而默认做原生图形界面——TUI存在的历史原因只是当年不想学Motif，而非技术优势，在滚动、拖拽、图像展示等方面天然弱于GUI。他给出了5个用agent搭建原生界面的真实工具(Markdown查看器、数学计算器、音乐播放器等)和具体工作流(复用SwiftUI技能库、Makefile构建、agent可视化调试)。Simon也提到自己今年3月vibe-coding出的带宽和GPU监控小工具，至今每天在用。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "核心论点正是护城河在harness不在模型这条母题的具体例证——模型能力人人可得，真正的差异在你围绕agent搭的工作流和界面，Simon补充了自己vibe-coding出的macOS应用仍在每天用的一手经历"
         }
       ],
       "is_new": false

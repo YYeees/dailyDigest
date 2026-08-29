@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "person": "Andy Matuschak",
+      "title": "RT @xhfloz: I spent the week barely using chatbots — just reading, thinking, and writing — and feel…",
+      "link": "https://x.com/andy_matuschak/status/2093392461607645597",
+      "date": "2026-08-28",
+      "first_seen": "2026-08-29T03:33:20.949693+00:00",
+      "source_type": "x",
+      "summary": "Andy Matuschak转发他人分享：这一周几乎不用聊天机器人，只专注阅读、思考与写作，结果感到比过去几个月都更清晰。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
       "person": "Ray Dalio",
       "title": "Contribute to the whole and you will likely be rewarded.   Natural selection leads to better qualiti…",
       "link": "https://x.com/RayDalio/status/2093096223502897240",
@@ -9,7 +20,7 @@
       "source_type": "x",
       "summary": "达利欧这条“每日原则”讲：为整体做贡献往往会得到回报，自然选择机制会让更好的品质被保留和传递（比如更好的基因、更强的滋养他人能力、更好的产品），从而让整体持续改进。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -20,7 +31,7 @@
       "source_type": "x",
       "summary": "达利欧谈起步阶段没有收入时的选择：可以留在安全地带打一份稳定工作，也可以选择进入丛林、直面能致命的风险、争取更大的上行空间——他说自己选择了和视角不同的人一起走进丛林。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -97,28 +108,6 @@
       "source_type": "x",
       "summary": "Andy Matuschak反思AI生成数学证明的浪潮为何让他感到有种“亵渎感”——不同于国际象棋或钢琴演奏，这种发现的意义似乎会因AI唾手可得而被稀释（他借用他人提出的“qualia theft”概念），但他也用探险/定向越野作类比，思考为什么有些被地图化的人类活动依然有意义。",
       "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "It seems to me that the personal evolutionary process takes place in five distinct steps. If you can…",
-      "link": "https://x.com/RayDalio/status/2090877673698447530",
-      "date": "2026-08-21",
-      "first_seen": "2026-08-21T22:25:57.132819+00:00",
-      "source_type": "x",
-      "summary": "Dalio发了条每日原则，提出个人进化要经过五个步骤，做好这五件事基本就能成功(具体步骤在配图里，推文正文没有展开)。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "https://t.co/VXVQj5NGAc",
-      "link": "https://x.com/RayDalio/status/2090832828397203480",
-      "date": "2026-08-21",
-      "first_seen": "2026-08-21T22:25:57.133011+00:00",
-      "source_type": "x",
-      "summary": "这条推文只附带一张图片或视频链接，没有文字说明，具体内容不明。",
-      "tier": "low",
       "is_new": false
     }
   ]
