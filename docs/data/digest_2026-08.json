@@ -2,6 +2,40 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Understanding ChatGPT Work",
+      "link": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
+      "date": "2026-08-30",
+      "first_seen": "2026-08-31T00:14:52.173673+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison实测拆解ChatGPT Work(区分Work Cloud与Work Local)：核心亮点是代码执行环境获得了完整互联网访问权限、可跑无头Chrome浏览器操作DOM、跨会话持久化文件系统、能部署ChatGPT Sites网站、支持子代理协作与定时自动化。他引用自己提出的'致命三角'模型指出Work同时具备私密数据访问、不可信内容接触、信息外泄通道三大风险，呼吁OpenAI公开系统提示与工具描述以减少产品的使用门槛。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "详细拆解ChatGPT Work这一新产品的功能边界与使用方式(代码执行联网/无头浏览器/子代理/定时自动化)，是直接影响日常怎么用AI工具的实操信息"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Introducing Hy4 Preview",
+      "link": "https://simonwillison.net/2026/Aug/29/hy4/",
+      "date": "2026-08-29",
+      "first_seen": "2026-08-31T00:14:52.173858+00:00",
+      "source_type": "blog",
+      "summary": "腾讯发布开源权重大模型Hy4 Preview：770亿总参数、49亿活跃参数、100万token上下文，相比7月的Hy3明显放大。作者测试发现该模型的聊天模板只支持high(默认全推理)和no_think两档推理强度，用鹈鹕骑车提示词测试后，从推理轨迹里观察到模型用简化英文思考，推测是为了节省隐藏推理的token成本。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "腾讯发布开源权重大模型Hy4 Preview，讲清了参数规模、上下文窗口和推理难度机制等关键细节，属于讲透了'是什么为什么重要'的前沿模型新发布"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "Just a rumour of a bug is enough to find a security exploit these days",
       "link": "https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/",
       "date": "2026-08-28",
@@ -15,7 +49,7 @@
           "reason": "报道AI编程agent已强大到仅凭bug传闻就能在几分钟内定位并生成漏洞利用，导致开源项目安全披露量激增（rclone一月内40+起），讲清楚新趋势是什么、为什么重要，对理解AI能力边界与安全影响有实操价值"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -32,7 +66,7 @@
           "reason": "AI News周报详细报道GLM-5.3-Flash等新模型发布的参数规格、量化部署方案与实测吞吐，讲清楚新趋势为什么重要，对了解前沿AI进展有实操价值"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

@@ -9,7 +9,7 @@
       "source_type": "x",
       "summary": "达利欧探讨了三种学习方式——依赖记忆的有意识学习、影响决策却不进入意识的潜意识学习，以及不经思考的进化式学习（如DNA适应）——并认为比起有意识记忆学习，试错式的适应性学习反而带来更快的进步。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -86,17 +86,6 @@
       "source_type": "x",
       "summary": "达利欧认为人类对科技的本能追求源于进化冲动，人类终将像过去两百万年的物种演化一样，借助AI等技术加速进化为更接近全知的更高形态，除非先自我毁灭。",
       "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "Integrity comes from the Latin word integritas, meaning \"one\" or \"whole.\" People who are one way on…",
-      "link": "https://x.com/RayDalio/status/2091463684522467421",
-      "date": "2026-08-23",
-      "first_seen": "2026-08-23T22:22:52.473160+00:00",
-      "source_type": "x",
-      "summary": "达利欧的本日格言：真正的诚信来自内外如一，表里不一的双重性会让人逐渐迷失自己的价值观，难以获得幸福，也难以发挥出最佳状态。",
-      "tier": "medium",
       "is_new": false
     }
   ]

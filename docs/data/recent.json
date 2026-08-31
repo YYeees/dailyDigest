@@ -1,6 +1,45 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "Understanding ChatGPT Work",
+      "link": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
+      "date": "2026-08-30",
+      "first_seen": "2026-08-31T00:14:52.173673+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison实测拆解ChatGPT Work(区分Work Cloud与Work Local)：核心亮点是代码执行环境获得了完整互联网访问权限、可跑无头Chrome浏览器操作DOM、跨会话持久化文件系统、能部署ChatGPT Sites网站、支持子代理协作与定时自动化。他引用自己提出的'致命三角'模型指出Work同时具备私密数据访问、不可信内容接触、信息外泄通道三大风险，呼吁OpenAI公开系统提示与工具描述以减少产品的使用门槛。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "详细拆解ChatGPT Work这一新产品的功能边界与使用方式(代码执行联网/无头浏览器/子代理/定时自动化)，是直接影响日常怎么用AI工具的实操信息"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "一手测试记录聚焦harness能力(联网代码执行/持久文件系统/子代理)，沾根二'技术抓手'的边，也提到致命三角安全模型，但整体偏产品测评而非反思，故判medium"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Introducing Hy4 Preview",
+      "link": "https://simonwillison.net/2026/Aug/29/hy4/",
+      "date": "2026-08-29",
+      "first_seen": "2026-08-31T00:14:52.173858+00:00",
+      "source_type": "blog",
+      "summary": "腾讯发布开源权重大模型Hy4 Preview：770亿总参数、49亿活跃参数、100万token上下文，相比7月的Hy3明显放大。作者测试发现该模型的聊天模板只支持high(默认全推理)和no_think两档推理强度，用鹈鹕骑车提示词测试后，从推理轨迹里观察到模型用简化英文思考，推测是为了节省隐藏推理的token成本。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "腾讯发布开源权重大模型Hy4 Preview，讲清了参数规模、上下文窗口和推理难度机制等关键细节，属于讲透了'是什么为什么重要'的前沿模型新发布"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] OpenAI shuts off Cursor",
       "link": "https://www.latent.space/p/ainews-openai-shuts-off-cursor",
@@ -15,7 +54,7 @@
           "reason": "OpenAI与Cursor因SpaceX收购引发的商业纠纷，涉及Claude、GPT-5.6、Grok 4.6编程能力对比，但偏行业新闻叙事，非直接实操指南"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -215,45 +254,6 @@
           "track": "anchor",
           "tier": "medium",
           "reason": "沾根一自我认识的边(动机/自我概念/人生目的/反思)，但是访谈形式的二手科普内容"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Anthropic’s best AI model struggles to attract users as cheaper tools thrive",
-      "link": "https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/",
-      "date": "2026-08-23",
-      "first_seen": "2026-08-23T22:22:47.546307+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison摘录FT报道：Anthropic年化营收7月已达650亿美元（5月为470亿），预期Q3盈利，已有6000个年消费超10万美元的大客户；OpenAI同期营收增长35%至400亿美元以上，GPT-5.6发力明显。Ramp的信用卡账单数据显示，7月Anthropic模型消费中Opus 4.8占比最高（28%），而刚发布的Opus 5仅占3.5%，印证了Fable定价过高导致采用率不及预期的趋势。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "带具体营收和采用率数据，清楚说明Anthropic与OpenAI的市场动态，以及Fable因定价高导致采用率偏低的趋势，是扎实的AI行业趋势信息"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Drew Breunig",
-      "link": "https://simonwillison.net/2026/Aug/23/drew-breunig/",
-      "date": "2026-08-23",
-      "first_seen": "2026-08-23T22:22:47.546637+00:00",
-      "source_type": "blog",
-      "summary": "Drew Breunig的观点（经Simon Willison转引）：Fable虽然能力强但价格昂贵，过去模型迭代能自动兜底工程问题，但Fable上线后大家开始认真思考活该分给哪个模型——用Fable做设计判断，把具体编码任务交给GLM 5.2这类成本仅为其九分之一、配合好上下文也够用的模型。核心洞察是：真正的护城河在于打磨好的编码工具链和上下文策略，而不是一味追新模型。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "讲清楚Fable高定价倒逼团队重新分配模型和harness策略这一实操趋势，直接影响日常怎么选模型干活"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "精准命中护城河在harness、不在模型这条母题，且是Drew Breunig本人用Fable想清楚思路、把活交给GLM执行的一手实践"
         }
       ],
       "is_new": false
