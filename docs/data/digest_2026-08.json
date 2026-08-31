@@ -685,13 +685,13 @@
       "stars_total": 127823
     },
     {
-      "full_name": "microsoft/ML-For-Beginners",
-      "url": "https://github.com/microsoft/ML-For-Beginners",
-      "description": "12 weeks, 26 lessons, 52 quizzes, classic Machine Learning for all",
-      "language": "Jupyter Notebook",
-      "difficulty": "beginner",
-      "recommend_reason": "微软出品的经典机器学习系统教程，12周26课52测验、配实践项目和多语言支持，用尼日利亚音乐、欧洲酒店评论等真实数据集教学，门槛低且体系完整，是入门经典ML的代表性样本。局限是不涉及深度学习和现代LLM技术，只覆盖Scikit-learn范畴的经典算法。",
-      "stars_total": 89398
+      "full_name": "openai/codex",
+      "url": "https://github.com/openai/codex",
+      "description": "Lightweight coding agent that runs in your terminal",
+      "language": "Rust",
+      "difficulty": "intermediate",
+      "recommend_reason": "OpenAI官方的本地编码Agent CLI,支持终端、IDE插件、桌面应用多种形态,可用ChatGPT账号或API Key鉴权。120k star、上万次提交,是当前最主流的AI编码助手之一,工程成熟度和文档质量都属一流,是了解coding agent产品形态的重要参考。",
+      "stars_total": 120101
     }
   ]
 }
