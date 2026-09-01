@@ -1,6 +1,50 @@
 {
   "items": [
     {
+      "person": "Andy Matuschak",
+      "title": "Extremely luxurious to go to the library, make a beeline for the oversize shelves, and wallow in end…",
+      "link": "https://x.com/andy_matuschak/status/2094871565678629139",
+      "date": "2026-09-01",
+      "first_seen": "2026-09-01T23:51:03.683520+00:00",
+      "source_type": "x",
+      "summary": "Andy Matuschak感叹去图书馆直奔超大开本书架、沉浸在华丽而不实用的大部头书籍中，是一种极致的奢侈享受。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "Early on, I had to confront some major weaknesses. I have a terrible rote memory—I can't remember an…",
+      "link": "https://x.com/RayDalio/status/2094812670956380497",
+      "date": "2026-09-01",
+      "first_seen": "2026-09-01T23:51:02.032509+00:00",
+      "source_type": "x",
+      "summary": "达利欧回顾早年经历：机械记忆差、学生时代成绩不好，也曾因年少气盛而自负，直到多次受挫后才学会敬畏；他意识到弱点本身不重要，关键是承认弱点、找互补的人共事，并从错误中学习。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "With the announcement of new U.S. sanctions for countries that trade with Iran, it has become increa…",
+      "link": "https://x.com/RayDalio/status/2094797659932377140",
+      "date": "2026-09-01",
+      "first_seen": "2026-09-01T23:51:02.032846+00:00",
+      "source_type": "x",
+      "summary": "针对美国对与伊朗有贸易往来国家的新制裁，达利欧认为这是美国全球权力面临的一次重大考验，符合他在《原则：应对变化中的世界秩序》一书中描述的“大周期”阶段性特征，他将持续关注各国后续反应及美国的应对方式。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "In this article in TIME, I squeezed my explanation of the debt supply and demand problem into a 3-mi…",
+      "link": "https://x.com/RayDalio/status/2094771413093667224",
+      "date": "2026-09-01",
+      "first_seen": "2026-09-01T23:51:02.032926+00:00",
+      "source_type": "x",
+      "summary": "达利欧在TIME杂志上用三分钟阅读篇幅解释了他对债务供需问题的看法，称这是他对该问题最精炼的说明，供感兴趣的读者参考。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
       "person": "Ray Dalio",
       "title": "Earth is just one of about 100 billion planets in our galaxy, which is just one of about two trillio…",
       "link": "https://x.com/RayDalio/status/2094539173772591109",
@@ -9,7 +53,7 @@
       "source_type": "x",
       "summary": "达利欧发文感慨：地球只是银河系约1000亿颗行星之一，银河系又只是宇宙约两万亿个星系之一；人类历史只占地球存在时间的1/20000，个人一生更只占人类历史的1/3000。他说人类因此渺小到无论成就什么都影响甚微，但我们本能地想要“有意义”和进化，无数微小的存在感累加起来正是推动宇宙演化的力量。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -20,7 +64,7 @@
       "source_type": "x",
       "summary": "达利欧发布的一条推文只包含一个链接（推测是图片或外部内容），没有随附文字说明，正文层面没有可提炼的信息。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -63,28 +107,6 @@
       "first_seen": "2026-08-28T05:59:36.695546+00:00",
       "source_type": "x",
       "summary": "达利欧谈起步阶段没有收入时的选择：可以留在安全地带打一份稳定工作，也可以选择进入丛林、直面能致命的风险、争取更大的上行空间——他说自己选择了和视角不同的人一起走进丛林。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "To give you a quick example of nature creating incentives that lead to individuals pursuing their ow…",
-      "link": "https://x.com/RayDalio/status/2092363891472810185",
-      "date": "2026-08-25",
-      "first_seen": "2026-08-25T22:28:33.492029+00:00",
-      "source_type": "x",
-      "summary": "达利欧以性与自然选择为例说明自然界如何设计激励机制：让个体追求自身快感（性愉悦）的同时，无意间推动整体（基因）的演化，个体与整体的利益因此得以统一，这是他“每日原则”系列的一条。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "To collaborate successfully, you have to do three things:  First, put your honest thoughts on the ta…",
-      "link": "https://x.com/RayDalio/status/2092278370440524168",
-      "date": "2026-08-25",
-      "first_seen": "2026-08-25T22:28:33.492319+00:00",
-      "source_type": "x",
-      "summary": "达利欧谈高效协作的三个步骤：坦诚亮出真实想法、掌握“深思熟虑的分歧”艺术、分歧持续时靠协议兜底（他公司用可信度加权的理念择优机制），好想法胜出会带来远超个人独自决策的结果。",
       "tier": "low",
       "is_new": false
     }

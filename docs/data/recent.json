@@ -2,6 +2,111 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Codex bundles LibreOffice",
+      "link": "https://simonwillison.net/2026/Sep/1/codex-libreoffice/",
+      "date": "2026-09-01",
+      "first_seen": "2026-09-01T23:50:56.601468+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison在清理磁盘缓存时发现，OpenAI Codex桌面版（现更名ChatGPT桌面应用）在本地缓存了完整的Python、Node.js环境，以及LibreOffice、Poppler、git等原生二进制文件，总计1.7GB；配套的skills目录里说明了Codex如何调用这些工具处理文档，这揭示了Codex背后为支持文档处理任务而打包的完整运行时架构。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "揭示OpenAI Codex桌面应用打包完整运行时（Python/Node/LibreOffice）支持文档处理技能，讲清楚了AI工具底层架构的新发现，对理解AI编程工具实操有参考价值"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "与三根主干和周边领域都没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Tarn Adams",
+      "link": "https://simonwillison.net/2026/Sep/1/tarn-adams/",
+      "date": "2026-09-01",
+      "first_seen": "2026-09-01T23:50:56.601749+00:00",
+      "source_type": "blog",
+      "summary": "《矮人堡垒》联合创作者Tarn Adams在采访中吐槽游戏行业因AI陷入混乱：他被要求不能再说“矮人AI”，只能说“矮人行为”，讽刺行业里“老板们都在慢慢发疯”的乱象。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "游戏行业对AI的吐槽评论，沾AI边但偏宏观情绪化表达，信息量有限"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "与三根主干和周边领域都没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "PRs NOT Welcome: How Top AI Open Source Projects Are Managing Thousands of Contributors",
+      "link": "https://www.latent.space/p/pr-not-welcome",
+      "date": "2026-09-01",
+      "first_seen": "2026-09-01T23:50:57.149411+00:00",
+      "source_type": "blog",
+      "summary": "Vercel、Astro/Flue、tldraw等AI原生开源项目正在关闭对外部PR的直接接受，转而用自建的agent团队（“软件工厂”）来分诊issue、复现bug、实现修复并审查，再交给人类合并。Vercel的AI SDK项目agent已能完成25~35%的合并PR和70~80%的issue关闭；Astro创始人Fred Schott在此基础上做了新框架Flue，外部PR会被自动转成issue或讨论。tldraw等项目认为，当agent能写代码时，人工drive-by PR的价值降低，社区参与的重心正转向讨论、报告和判断力，而非直接贡献代码。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "详细报道多个头部AI原生开源项目如何用agent团队（软件工厂）管理贡献，是直接影响开发者理解AI工具落地的前沿趋势内容"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "报道AI原生开源项目用agent团队（软件工厂）管理贡献和维护，呼应“护城河在harness不在模型”的正向母题，但是二手报道，非作者一手经历"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Python 3.15.0 candidate 2 is here!",
+      "link": "https://simonwillison.net/2026/Sep/1/python-315-rc-2/",
+      "date": "2026-09-01",
+      "first_seen": "2026-09-01T23:50:56.601820+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Python版本发布公告，与AI实操无关"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "与三根主干和周边领域都没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Fal’s H3 Max Live breaks the infinite videogen barrier",
+      "link": "https://www.latent.space/p/ainews-fals-h3-max-live-breaks-the",
+      "date": "2026-09-01",
+      "first_seen": "2026-09-01T23:50:57.150874+00:00",
+      "source_type": "blog",
+      "summary": "Fal将Minimax上月发布的H3模型做了成本和质量优化，并针对自家推理引擎加速35倍，实现了生成速度快于实时观看的“无限视频”效果——由Ethan Mollick最先注意到，随后被网友做成无限直播的Twitch/YouTube频道，两平台很快因内容质量问题下架，Fal干脆自建了直播服务。作者认为，虽然现在的画面质量粗糙、毫无剧情，但这是“生成速度快于实时”这件事第一次被证明可行，随着技术迭代，这类能力会成为AI应用竞争的新战场。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Fal对H3模型做推理加速优化，实现快于实时的视频生成，是前沿AI工具的新突破，讲清楚了是什么、为什么重要"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "Introducing wrapture",
       "link": "https://simonwillison.net/2026/Aug/31/introducing-wrapture/",
       "date": "2026-08-31",
@@ -20,29 +125,7 @@
           "reason": "Dumpleton强调自己吃透这块领域后才用AI做实现手段、设计仍由人把关，呼应'护城河在harness不在模型'，但这是Simon转述他人的话，属二手内容"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Andrew Digby",
-      "link": "https://simonwillison.net/2026/Aug/31/andrew-digby/",
-      "date": "2026-08-31",
-      "first_seen": "2026-09-01T01:01:25.207458+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "跟AI完全无关"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干和周边领域都没有实质连接"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -59,7 +142,7 @@
           "reason": "讨论AI个性化学习在K-12教育中的应用（Alpha School模式），是AI应用的宏观叙事而非直接的AI工具实操指南"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ethan Mollick",
@@ -81,7 +164,7 @@
           "reason": "Mollick本人提出的Twilight Factory框架核心论点是：若AI拿走所有有意思的决定，人类会失去锻炼判断力的机会，直接呼应'认知系统不能外包（Sapere aude）'这一母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -293,28 +376,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "对Anima Anandkumar的深度专访，讲神经算子/物理基础模型这类研究级别内容，门槛较高，属于沾AI边的技术深挖而非日常实操信息"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Andrew Ng gets into AI Engineering",
-      "link": "https://www.latent.space/p/ainews-andrew-ng-gets-into-ai-engineering",
-      "date": "2026-08-25",
-      "first_seen": "2026-08-25T22:28:28.164820+00:00",
-      "source_type": "blog",
-      "summary": "吴恩达联合DeepLearning.AI发布关于AI工程技能的报告，基于万份招聘信息分析、专家访谈提炼出四项核心技能：构建部署AI应用、软件工程基本功、熟练使用编程agent、以及产品/业务感知力。swyx点评认为编程agent技能是最初“1000x AI工程师”设想里最没被预见到的部分，2024至2026年Cursor、Claude Code、Codex等工具的爆发式发展印证了这一判断。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "吴恩达发布AI工程技能框架（基于万份招聘信息分析），swyx做点评，涉及编程agent等实操技能，但整体是newsletter式的宏观评论而非一手实操指南"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "评论里提到编程agent技能核心是理解harness、知道如何驾驭和避坑，沾“护城河在harness不在模型”母题的边，但主体是技能框架转述而非一手反思"
         }
       ],
       "is_new": false
