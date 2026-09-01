@@ -2,6 +2,28 @@
   "items": [
     {
       "person": "Ray Dalio",
+      "title": "Earth is just one of about 100 billion planets in our galaxy, which is just one of about two trillio…",
+      "link": "https://x.com/RayDalio/status/2094539173772591109",
+      "date": "2026-08-31",
+      "first_seen": "2026-09-01T01:01:30.264044+00:00",
+      "source_type": "x",
+      "summary": "达利欧发文感慨：地球只是银河系约1000亿颗行星之一，银河系又只是宇宙约两万亿个星系之一；人类历史只占地球存在时间的1/20000，个人一生更只占人类历史的1/3000。他说人类因此渺小到无论成就什么都影响甚微，但我们本能地想要“有意义”和进化，无数微小的存在感累加起来正是推动宇宙演化的力量。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "https://t.co/0aLfkz0EDS",
+      "link": "https://x.com/RayDalio/status/2094480601676235092",
+      "date": "2026-08-31",
+      "first_seen": "2026-09-01T01:01:30.264354+00:00",
+      "source_type": "x",
+      "summary": "达利欧发布的一条推文只包含一个链接（推测是图片或外部内容），没有随附文字说明，正文层面没有可提炼的信息。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
       "title": "Natural selection’s trial-and-error process allows improvement without anyone understanding or guidi…",
       "link": "https://x.com/RayDalio/status/2093730395732750845",
       "date": "2026-08-29",
@@ -63,28 +85,6 @@
       "first_seen": "2026-08-25T22:28:33.492319+00:00",
       "source_type": "x",
       "summary": "达利欧谈高效协作的三个步骤：坦诚亮出真实想法、掌握“深思熟虑的分歧”艺术、分歧持续时靠协议兜底（他公司用可信度加权的理念择优机制），好想法胜出会带来远超个人独自决策的结果。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "When I talk with a \"Shaper\" like Elon Musk, what stands out is the ability to operate at both the bi…",
-      "link": "https://x.com/RayDalio/status/2091900586371252567",
-      "date": "2026-08-24",
-      "first_seen": "2026-08-24T22:27:37.128470+00:00",
-      "source_type": "x",
-      "summary": "达利欧观察埃隆·马斯克这类塑造者的特质：既能抠车内按钮这类细节，又能在同一段对话里畅想把植物送上火星的宏大愿景，认为真正的塑造者能自如切换宏观视野与微观执行。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "It is instinctually that way, which is why most of us feel the pull of it-- in other words, we insti…",
-      "link": "https://x.com/RayDalio/status/2091690182793650340",
-      "date": "2026-08-24",
-      "first_seen": "2026-08-24T22:27:37.128512+00:00",
-      "source_type": "x",
-      "summary": "达利欧认为人类对科技的本能追求源于进化冲动，人类终将像过去两百万年的物种演化一样，借助AI等技术加速进化为更接近全知的更高形态，除非先自我毁灭。",
       "tier": "low",
       "is_new": false
     }
