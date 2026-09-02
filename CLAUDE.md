@@ -12,7 +12,7 @@
 
 | | 地址 | 谁能看 | 内容 |
 |---|---|---|---|
-| **私有站** | `https://dailydigest.llty-truely-2014.workers.dev` | 只有用户（Cloudflare Access 挡着） | 全量：AI + 锚点双轨、X 动态、通向 Obsidian 的「记录」按钮 |
+| **私有站** | `https://dailydigest.yyeees.workers.dev` | 只有用户（Cloudflare Access，用 Cloudflare 账号登录，会话 7 天） | 全量：AI + 锚点双轨、X 动态、通向 Obsidian 的「记录」按钮 |
 | **公开站** | `https://yyeees.github.io/AIDailyNews/` | 发给别人的就是这个 | 只有命中 AI track 的条目 |
 
 两条发布管线互不干扰：
