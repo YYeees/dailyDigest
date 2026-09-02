@@ -362,7 +362,13 @@
   </section>
 </main>
 
+<!--SITE-CONFIG-->
 <script>
+// 公开站(AIDailyNews)和私有站共用这一份HTML,不是复制两份——公开站由export_public.py
+// 在SITE-CONFIG标记那行注入window.PUBLIC_SITE=true。共用是刻意的:前端以后怎么改,
+// 公开站都自动跟着走,不会两边慢慢漂开。公开站跟私有站的差别只有下面这几处guard。
+const IS_PUBLIC = !!window.PUBLIC_SITE;
+
 // 内联SVG,不依赖外部图片请求。
 const TYPE_ICON = {
   youtube: {
@@ -457,6 +463,8 @@ const PEN_SVG = '<svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="tr
   + '</svg>';
 
 function noteBtn(item) {
+  // 公开站没有本地Obsidian收件箱,这个按钮点了也没意义
+  if (IS_PUBLIC) return '';
   const noted = notedLinks().has(item.link);
   // data-new-href存着"新建"那条链接:右键取消标记后要能换回去。
   return `<a class="note-btn${noted ? ' noted' : ''}"`
@@ -675,8 +683,15 @@ async function loadRunLog() {
   capVisibleHeight(el, RUNLOG_VISIBLE_COUNT);
 }
 
+if (IS_PUBLIC) {
+  // 公开站不导出x_recent.json:X是不限tier全展示的,里面混着跟AI无关的个人动态。
+  // 板块连同侧栏入口一起撤掉,留着只会fetch 404 + 一块空板子。
+  document.getElementById('board-x').remove();
+  document.querySelector('.side-nav a[href="#board-x"]').remove();
+}
+
 loadRecent();
-loadX();
+if (!IS_PUBLIC) loadX();
 loadTrending();
 loadRunLog();
 </script>

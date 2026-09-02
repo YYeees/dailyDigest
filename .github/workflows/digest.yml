@@ -63,3 +63,13 @@ jobs:
           git add logs/digest.jsonl docs/data/run_log.json
           git diff --cached --quiet || git commit -m "Log digest run usage/cost"
           git push
+
+      # 公开站(yyeees.github.io/AIDailyNews)只放命中AI track的内容，过滤规则和自检见
+      # export_public.py。放在最后:上一步刚把这次的花费写进docs/data/run_log.json，
+      # 公开站的运行日志板块要显示的就是它。
+      # always(): 这次跑挂了也照样发布——花费数据同样该更新，内容没变则脚本自己跳过推送。
+      - name: Publish public site
+        if: always()
+        env:
+          AIDAILYNEWS_DEPLOY_KEY: ${{ secrets.AIDAILYNEWS_DEPLOY_KEY }}
+        run: bash scripts/publish_public.sh

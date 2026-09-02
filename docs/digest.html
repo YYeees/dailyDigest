@@ -213,7 +213,13 @@
   </section>
 </main>
 
+<!--SITE-CONFIG-->
 <script>
+// 公开站(AIDailyNews)和私有站共用这一份HTML,不是复制两份——公开站由export_public.py
+// 在SITE-CONFIG标记那行注入window.PUBLIC_SITE=true。共用是刻意的:前端以后怎么改,
+// 公开站都自动跟着走,不会两边慢慢漂开。公开站跟私有站的差别只有下面这几处guard。
+const IS_PUBLIC = !!window.PUBLIC_SITE;
+
 async function loadMonths() {
   const res = await fetch('data/months.json');
   const { months } = await res.json();
@@ -315,6 +321,8 @@ const PEN_SVG = '<svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="tr
   + '</svg>';
 
 function noteBtn(item) {
+  // 公开站没有本地Obsidian收件箱,这个按钮点了也没意义
+  if (IS_PUBLIC) return '';
   const noted = notedLinks().has(item.link);
   // data-new-href存着"新建"那条链接:右键取消标记后要能换回去。
   return `<a class="note-btn${noted ? ' noted' : ''}"`
