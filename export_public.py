@@ -1,5 +1,7 @@
 """
-生成公开站(github.com/YYeees/AIDailyNews → yyeees.github.io/AIDailyNews/)的产物到`public/`。
+生成公开站的产物到`public/`。产物推到 github.com/YYeees/AIDailyNews，由 Cloudflare Worker
+(静态资源)接那个仓发布到 aidailynews.yyeees.workers.dev;同仓的 GitHub Pages
+(yyeees.github.io/AIDailyNews/)没关,留作备份线路。
 
 跟私有站的关系:**公开站是私有站的严格子集**。这个脚本不碰digest.db,只读docs/下已经导出好
 的产物做过滤——这样tier规则、HIGH_ONLY_PERSONS、always_archive那套判断逻辑只有一份
@@ -60,7 +62,8 @@ README = """# AI Daily News
 每天自动抓取一批AI领域的信息源(博客/播客/YouTube/GitHub Trending),由Claude Code逐条判断
 "这条对成为AI高手有多大帮助",筛出值得看的,附上一句话理由和摘要。
 
-网站: https://yyeees.github.io/AIDailyNews/
+网站: https://aidailynews.yyeees.workers.dev
+备份地址: https://yyeees.github.io/AIDailyNews/
 
 - **最近更新** — 最近7天筛出来的内容,标了推荐度(High/Medium)和判断理由
 - **GitHub Trending** — 每周抓一次趋势榜,按"这一期涨了多少"排序,标了难度和推荐理由
