@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "person": "Ray Dalio",
+      "title": "Where you go in life will depend on how you see things and who and what you feel connected to (your…",
+      "link": "https://x.com/RayDalio/status/2095293193956794428",
+      "date": "2026-09-02",
+      "first_seen": "2026-09-02T23:53:47.200580+00:00",
+      "source_type": "x",
+      "summary": "Dalio谈人生走向取决于你如何看待事物、以及选择与谁产生深度连接（家庭、社群、国家乃至整个生态系统），这决定了你在利己与利他之间会做出怎样的取舍——他认为人生中会不断遇到迫使你做这类选择的情境。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "When pain comes, it's easy to get hung up in it and skip reflection. Transcendental meditation has h…",
+      "link": "https://x.com/RayDalio/status/2095242852955537672",
+      "date": "2026-09-02",
+      "first_seen": "2026-09-02T23:53:47.200911+00:00",
+      "source_type": "x",
+      "summary": "Dalio分享超验冥想（TM）对他处理痛苦、进入反思状态的帮助——这项练习从1969年至今，通过静坐重复咒语让思绪沉淀，进入逻辑意识之下的潜意识空间，他认为真正的创造力和情绪安顿都来自这个状态，而非强迫逻辑推导。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
       "person": "Andy Matuschak",
       "title": "Extremely luxurious to go to the library, make a beeline for the oversize shelves, and wallow in end…",
       "link": "https://x.com/andy_matuschak/status/2094871565678629139",
@@ -9,7 +31,7 @@
       "source_type": "x",
       "summary": "Andy Matuschak感叹去图书馆直奔超大开本书架、沉浸在华丽而不实用的大部头书籍中，是一种极致的奢侈享受。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -20,7 +42,7 @@
       "source_type": "x",
       "summary": "达利欧回顾早年经历：机械记忆差、学生时代成绩不好，也曾因年少气盛而自负，直到多次受挫后才学会敬畏；他意识到弱点本身不重要，关键是承认弱点、找互补的人共事，并从错误中学习。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -31,7 +53,7 @@
       "source_type": "x",
       "summary": "针对美国对与伊朗有贸易往来国家的新制裁，达利欧认为这是美国全球权力面临的一次重大考验，符合他在《原则：应对变化中的世界秩序》一书中描述的“大周期”阶段性特征，他将持续关注各国后续反应及美国的应对方式。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -42,7 +64,7 @@
       "source_type": "x",
       "summary": "达利欧在TIME杂志上用三分钟阅读篇幅解释了他对债务供需问题的看法，称这是他对该问题最精炼的说明，供感兴趣的读者参考。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",

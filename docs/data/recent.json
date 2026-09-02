@@ -2,6 +2,111 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "llm-gemini 0.34",
+      "link": "https://simonwillison.net/2026/Sep/2/llm-gemini/",
+      "date": "2026-09-02",
+      "first_seen": "2026-09-02T23:53:41.136197+00:00",
+      "source_type": "blog",
+      "summary": "Willison发布了自己维护的llm-gemini插件0.34版，新增对Gemini 3.8 Flash的支持（含低/中/高三档思考强度）并修了一个版本号记录的bug。顺带展示了Gemini 3.8 Flash又快又便宜的代码能力——13秒/1.8美分就生成了一个有创意的HTML演示，并用它给自己的markdown-svg-renderer工具添加了沙箱iframe渲染HTML的功能。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "自己维护的CLI插件版本更新日志，附带新模型Gemini 3.8 Flash的简单演示和成本数据，信息量中等"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Claude's new system prompt really doesn't want to reproduce song lyrics",
+      "link": "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/",
+      "date": "2026-09-02",
+      "first_seen": "2026-09-02T23:53:41.136478+00:00",
+      "source_type": "blog",
+      "summary": "Willison梳理了Claude Fable 5.1系统提示词相对5的具体改动：新增禁止逐字复现歌词/诗歌/书摘的强规则（与近期索尼音乐对Anthropic的诉讼时间点接近）、扩大到禁止用代码画出受版权保护的角色和标志、语气上更少说「genuinely」这类词并保持简洁、物质滥用应对新增了三个外部减害网站链接、不再鼓励Claude主动用end_conversation工具结束对话、知识截止日期锁定在2026年6月。整体反映Anthropic在法律压力和用户体验之间持续微调产品行为边界。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入拆解Claude新系统提示词的具体改动（版权/歌词/语气/物质滥用/end_conversation/知识截止日期），讲清楚变化和背后动机，直接影响理解Claude的实际行为边界"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Claude Fable/Mythos 5.1: new SOTA model, 75% cache price cut but 70% more output tokens",
+      "link": "https://www.latent.space/p/ainews-claude-fablemythos-51-new",
+      "date": "2026-09-02",
+      "first_seen": "2026-09-02T23:53:41.667760+00:00",
+      "source_type": "blog",
+      "summary": "这期Latent Space的AI新闻简报聚合报道了当天的多个模型动态：Claude Fable/Mythos 5.1发布，定价上缓存读取费用降75%但实测单任务输出token增加约1.7倍，综合成本反而上涨约20%；同时提到World Labs的Astra世界模型发布，以及Grok 4.7、Gemini Flash 3.8等即将上线的动向。属于当日AI圈动态的汇总通讯，信息密度低于专门测评文章。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "新闻简报性质，汇总当日多个模型发布动态（含与Willison测评重复的Fable 5.1发布事件），信息密度偏通稿化"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Rick Brewster",
+      "link": "https://simonwillison.net/2026/Sep/2/rick-brewster/",
+      "date": "2026-09-02",
+      "first_seen": "2026-09-02T23:53:41.136532+00:00",
+      "source_type": "blog",
+      "summary": "Paint.NET作者Rick Brewster公开分享了他用Claude（约18万行代码）从零重写Direct2D在WINE上运行所需组件的经历——这段代码大部分是「vibe coded」、未经逐行审查。他形容Claude时而像「十个爱因斯坦级程序员全力冲刺」，时而又会犯资源管理这类低级错误（比如漏掉COM对象的引用计数），需要他持续介入纠正架构判断，但也惊讶于其逆向工程复杂特效公式的能力。这是一手记录的大规模AI辅助编码信任边界与人工监督必要性的真实案例。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "一手记录用Claude完成18万行代码级别AI辅助编码项目的真实经验，坦诚呈现能力上限与人工监督的必要性，对理解AI编码agent的可靠边界很有参考价值"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "一手案例印证「护城河在harness不在模型」与人机协作边界的判断，但是转述者（Willison）引用而非thought-lab作者本人反思，主题沾根二的边"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Claude Fable 5.1 made me a really nice animated pelican",
+      "link": "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/",
+      "date": "2026-09-01",
+      "first_seen": "2026-09-02T23:53:41.136555+00:00",
+      "source_type": "blog",
+      "summary": "Willison测试了新发布的Claude Fable 5.1的经典鹈鹕骑车SVG基准，对比了low/medium/high/xhigh/max五档推理强度的输出质量、耗时与成本差异——从几乎不推理的23秒/10美分到max档13分54秒/3.30美元的精细作品，强度越高细节和几何合理性越好。Anthropic同时宣称Fable 5.1在新的Terminal-Bench-Science基准上从24.7%跃升到52.6%，但作者认为鹈鹕测试本身作为跨模型能力指标的参考价值已不如从前，更适合用来比较同一模型不同推理强度间的差异。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型Fable 5.1的详细测评，讲清楚推理强度档位对输出质量/耗时/成本的具体影响，对选择推理强度有直接实操参考价值"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "纯模型能力测评，跟三根主干没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "Codex bundles LibreOffice",
       "link": "https://simonwillison.net/2026/Sep/1/codex-libreoffice/",
       "date": "2026-09-01",
@@ -13,36 +118,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "揭示OpenAI Codex桌面应用打包完整运行时（Python/Node/LibreOffice）支持文档处理技能，讲清楚了AI工具底层架构的新发现，对理解AI编程工具实操有参考价值"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "与三根主干和周边领域都没有实质连接"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Tarn Adams",
-      "link": "https://simonwillison.net/2026/Sep/1/tarn-adams/",
-      "date": "2026-09-01",
-      "first_seen": "2026-09-01T23:50:56.601749+00:00",
-      "source_type": "blog",
-      "summary": "《矮人堡垒》联合创作者Tarn Adams在采访中吐槽游戏行业因AI陷入混乱：他被要求不能再说“矮人AI”，只能说“矮人行为”，讽刺行业里“老板们都在慢慢发疯”的乱象。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "游戏行业对AI的吐槽评论，沾AI边但偏宏观情绪化表达，信息量有限"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "与三根主干和周边领域都没有实质连接"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -64,29 +142,7 @@
           "reason": "报道AI原生开源项目用agent团队（软件工厂）管理贡献和维护，呼应“护城河在harness不在模型”的正向母题，但是二手报道，非作者一手经历"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Python 3.15.0 candidate 2 is here!",
-      "link": "https://simonwillison.net/2026/Sep/1/python-315-rc-2/",
-      "date": "2026-09-01",
-      "first_seen": "2026-09-01T23:50:56.601820+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "Python版本发布公告，与AI实操无关"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "与三根主干和周边领域都没有实质连接"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -101,28 +157,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "Fal对H3模型做推理加速优化，实现快于实时的视频生成，是前沿AI工具的新突破，讲清楚了是什么、为什么重要"
-        }
-      ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Introducing wrapture",
-      "link": "https://simonwillison.net/2026/Aug/31/introducing-wrapture/",
-      "date": "2026-08-31",
-      "first_seen": "2026-09-01T01:01:25.207180+00:00",
-      "source_type": "blog",
-      "summary": "Graham Dumpleton（wrapt、mod_wsgi作者）发布新库Wrapture，把monkeypatching能力和测试/追踪结合起来，可以替代unittest.mock并支持OpenTelemetry。更值得注意的是他透露wrapture里每一行代码和文档都是AI在他指导下写的，但特别澄清这不是'vibe coding'——他说自己对这块Python领域了解透彻、知道结果该是什么样，AI只是实现手段而非设计来源，工程判断始终由他自己把关。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "库本身（monkeypatching/测试追踪工具）跟AI无关，但作者Graham Dumpleton关于'如何负责任地用AI写代码、区别于vibe coding'的方法论反思是有价值的实操参考"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "Dumpleton强调自己吃透这块领域后才用AI做实现手段、设计仍由人把关，呼应'护城河在harness不在模型'，但这是Simon转述他人的话，属二手内容"
         }
       ],
       "is_new": false
@@ -303,79 +337,6 @@
           "track": "anchor",
           "tier": "medium",
           "reason": "\"harness质量比模型选择更重要\"这条研究直接沾到护城河在harness不在模型这个母题，但是新闻综述性质的二手内容，不是作者本人一手反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Jason Fried",
-      "title": "$5300 in $100s",
-      "link": "https://world.hey.com/jason/5300-in-100s-3be4c194",
-      "date": "2026-08-26",
-      "first_seen": "2026-08-27T02:58:57.330096+00:00",
-      "source_type": "blog",
-      "summary": "Jason Fried记录37signals给免费线下活动(Breakfast with Basecamp芝加哥站)想的一个招：报名先收$100，到场就在门口原样退还，不到场则没收——用真金白银的代价填报名和实际到场之间的落差。他说这不是新点子(不少餐厅订位也这么干)，打算试完之后公布放鸽子率跟以往对比。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "Jason Fried本人一手记录的构建者实验(收$100押金、到场原样退还解决活动放鸽子问题)，质朴直接、不绕弯子解决真实问题，踩中\"自然生长质朴中正是我这一派\"这条正向母题"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Lex Fridman",
-      "title": "#501 – DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding & Linux",
-      "link": "https://lexfridman.com/dhh-2/?utm_source=rss&utm_medium=rss&utm_campaign=dhh-2",
-      "date": "2026-08-26",
-      "first_seen": "2026-08-27T02:58:55.984100+00:00",
-      "source_type": "podcast",
-      "summary": "Lex Fridman访谈DHH(Ruby on Rails作者、37signals CTO)，话题覆盖用AI agent编程、vibe coding与agentic engineering的区别、AI对开源生态的冲击、他打造的Omarchy Linux发行版、给程序员的建议，以及怎么选最佳AI编程模型和编程harness。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "DHH谈AI编程agent实操话题(agentic engineering vs vibe coding、AI编程模型/harness怎么选)，节目大纲列出的具体章节直接对应日常怎么用AI编程工具，扎实且门槛不高"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "节目专门有一段讲\"最佳AI编程harness\"，沾到护城河在harness不在模型这个母题，但这是访谈形式，是嘉宾观点经Lex转述呈现，不是作者本人一手反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Lovable CTO: The Future of SaaS Is Apps That Agents Can Use",
-      "link": "https://www.latent.space/p/lovable-future-of-saas",
-      "date": "2026-08-26",
-      "first_seen": "2026-08-27T02:58:58.654494+00:00",
-      "source_type": "blog",
-      "summary": "Lovable CTO Fabian Hedin接受Latent Space采访，讲Lovable如何从AI建站工具演变成让agent直接调用的\"能力\"(capability)平台——把已发布应用的部分功能通过托管MCP服务器暴露出来，让ChatGPT/Claude等agent客户端可以直接调用，绕开人工打开App。愿景是给团队做一个\"数字大脑\"，统一入口调用所有工具和工作流，人机交互形态从多标签页App转向agent编排的能力集合，安全上靠权限图谱和连接器网关隔离凭证。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "讲清楚了一个正在发生的AI应用趋势——Lovable从建站工具转向让agent直接调用的MCP能力平台，具体解释了是什么、为什么重要，属于扎实且门槛不高的AI实操/趋势信息"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "🔬“We have foundation models for language, not for physics” — Anima Anandkumar, Bren Professor of Computing",
-      "link": "https://www.latent.space/p/anima",
-      "date": "2026-08-26",
-      "first_seen": "2026-08-27T02:58:58.655665+00:00",
-      "source_type": "blog",
-      "summary": "Latent Space专访Anima Anandkumar(Caltech教授)，讲她如何用神经算子(Neural Operators)给天气、聚变反应堆这类连续物理系统建模，而不是走语言模型的规模化路线——物理世界数据稀少、分辨率要求又把上下文长度推到千亿级，硬堆token行不通，得把物理先验(比如球谐函数)直接编进网络结构。她还提到TorchLean(在Lean证明助手里写神经网络并形式化验证)以及她在联合国科学顾问委员会的工作。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "对Anima Anandkumar的深度专访，讲神经算子/物理基础模型这类研究级别内容，门槛较高，属于沾AI边的技术深挖而非日常实操信息"
         }
       ],
       "is_new": false
