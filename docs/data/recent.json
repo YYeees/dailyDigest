@@ -1,23 +1,62 @@
 {
   "items": [
     {
-      "person": "Simon Willison",
-      "title": "llm-gemini 0.34",
-      "link": "https://simonwillison.net/2026/Sep/2/llm-gemini/",
-      "date": "2026-09-02",
-      "first_seen": "2026-09-02T23:53:41.136197+00:00",
+      "person": "Latent Space",
+      "title": "GPT-6 Astra: an automated AI Engineer you can hire for <$6 an hour",
+      "link": "https://www.latent.space/p/astra",
+      "date": "2026-09-03",
+      "first_seen": "2026-09-03T23:49:43.110197+00:00",
       "source_type": "blog",
-      "summary": "Willison发布了自己维护的llm-gemini插件0.34版，新增对Gemini 3.8 Flash的支持（含低/中/高三档思考强度）并修了一个版本号记录的bug。顺带展示了Gemini 3.8 Flash又快又便宜的代码能力——13秒/1.8美分就生成了一个有创意的HTML演示，并用它给自己的markdown-svg-renderer工具添加了沙箱iframe渲染HTML的功能。",
+      "summary": "swyx团队用超过200亿token实测GPT-6 Astra，认为它已经是能独立完成AI工程工作的“自动化AI工程师”——帮你选模型、标数据、盯流水线、部署调试系统、管理并发的agent子集群。他们估算按33 token/秒、每百万token50美元的速率，Astra的使用成本约每小时6美元，认为这类模型让“放大野心”的门槛大幅降低。",
       "tracks": [
         {
           "track": "ai",
-          "tier": "medium",
-          "reason": "自己维护的CLI插件版本更新日志，附带新模型Gemini 3.8 Flash的简单演示和成本数据，信息量中等"
+          "tier": "high",
+          "reason": "swyx团队实测GPT-6 Astra用于真实工程任务（管理agent集群、训练模型、调试部署系统等），超20B token的一手实操经验，直接指导“怎么用AI工具”，扎实且门槛不高"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "跟三根主干没有实质连接"
+          "reason": "触及“护城河在harness，不在模型”这条母题——展示的是通过harness化的agent集群工作方式放大产出，但属于团队产品性记录，不是个人深度反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "GPT‑6 Astra",
+      "link": "https://simonwillison.net/2026/Sep/3/gpt6-astra/",
+      "date": "2026-09-03",
+      "first_seen": "2026-09-03T23:49:42.638179+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI发布GPT-6 Astra，定价与Claude Fable 5/5.1看齐（每百万token输入10美元、输出50美元），作者称其为“OpenAI的Fable竞品”。它在ARC-AGI-3（99.9%，需专用适配harness）、安全类基准（ExploitBench 100%）和长上下文（百万token内96.3%）上表现突出，但在Artificial Analysis的智能指数上仍略逊于Fable 5.1，优势在编程agent任务的性价比。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布（OpenAI GPT-6 Astra）的清晰解读，讲清定价、对标Fable的基准表现、安全能力和长上下文的具体数据，兼具新闻性和门槛不高的解释"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "纯模型发布评测，跟三根主干没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Muse Spark 1.3 matches GPT-5.6-Sol, confirming Meta Superintelligence as the newest Frontier Lab, >90% discount for training",
+      "link": "https://www.latent.space/p/ainews-muse-spark-13-matches-gpt",
+      "date": "2026-09-03",
+      "first_seen": "2026-09-03T23:49:43.111125+00:00",
+      "source_type": "blog",
+      "summary": "这期AINews摘要指出Meta的Muse Spark 1.3已跻身AAII排名第三、逼近GPT-5.6 Sol，且选择训练可享90%以上折扣；同时综述了Stanford新开的“AI原生软件工程”课程，以及围绕OpenAI传闻中Astra架构是否属于“循环Transformer”的技术讨论。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI新闻聚合观察，覆盖Meta Muse Spark 1.3发布、循环Transformer架构讨论等多条趋势，信息量大但是自动生成的多条新闻拼接，偏宏观叙事而非实操指南"
         }
       ],
       "is_new": true
@@ -35,14 +74,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "深入拆解Claude新系统提示词的具体改动（版权/歌词/语气/物质滥用/end_conversation/知识截止日期），讲清楚变化和背后动机，直接影响理解Claude的实际行为边界"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干没有实质连接"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -59,7 +93,7 @@
           "reason": "新闻简报性质，汇总当日多个模型发布动态（含与Willison测评重复的Fable 5.1发布事件），信息密度偏通稿化"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -74,14 +108,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "一手记录用Claude完成18万行代码级别AI辅助编码项目的真实经验，坦诚呈现能力上限与人工监督的必要性，对理解AI编码agent的可靠边界很有参考价值"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "一手案例印证「护城河在harness不在模型」与人机协作边界的判断，但是转述者（Willison）引用而非thought-lab作者本人反思，主题沾根二的边"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -96,14 +125,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "前沿模型Fable 5.1的详细测评，讲清楚推理强度档位对输出质量/耗时/成本的具体影响，对选择推理强度有直接实操参考价值"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "纯模型能力测评，跟三根主干没有实质连接"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -281,62 +305,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "AI News周报详细报道GLM-5.3-Flash等新模型发布的参数规格、量化部署方案与实测吞吐，讲清楚新趋势为什么重要，对了解前沿AI进展有实操价值"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Breaking Claude Code Opus 5 Auto Mode",
-      "link": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
-      "date": "2026-08-27",
-      "first_seen": "2026-08-28T05:59:26.551128+00:00",
-      "source_type": "blog",
-      "summary": "提示注入研究员Johann Rehberger发现一种攻击方法，能以约80%成功率绕过Claude Code Auto Mode的防护——诱导agent下载解压zip包，再执行代码导入base64时实际加载了包内的恶意struct.py文件。更严重的是，部分场景下agent察觉到进程被攻陷想终止恶意进程时，Auto Mode反而拦截了清理命令，安全机制本身成了故障点。Simon Willison据此建议：无人值守coding agent应在容器/虚拟机/沙箱里跑、限制出网、持续监控，且不要让agent接触家目录、SSH密钥、云凭证等敏感资源。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "揭示Claude Code Auto Mode被提示注入攻击绕过（成功率约80%），并给出无人值守agent的具体防护建议（沙箱/限制出网/监控），直接影响日常怎么安全使用编程agent"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] NVIDIA buys HuggingFace for $13B, as OpenAI publishes their HF incident retro",
-      "link": "https://www.latent.space/p/ainews-nvidia-buys-huggingface-for",
-      "date": "2026-08-27",
-      "first_seen": "2026-08-27T02:58:58.651738+00:00",
-      "source_type": "blog",
-      "summary": "Latent Space的AINews报道英伟达以约130亿美元收购HuggingFace(约为其1.5亿美元ARR的80倍)，较2026年1月最初70亿美元报价几乎翻倍。同期Z.ai正式发布GLM-5.3-Flash(此前代号Ox Alpha)：原生多模态、320B总参数/18B激活、100万token上下文、MIT协议开源，官方基准称编程能力对齐Claude Opus 4.8，社区反响热烈，被视为当前智能/价格比最优的开源模型之一，也被拿来跟同期国产芯片上跑出的Qwen新模型一起讨论中国开源AI的架构趋同趋势。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "英伟达收购HuggingFace、GLM-5.3-Flash开源模型发布，都是有具体数字和细节的重大AI行业趋势新闻"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Hot Chips: OpenAI’s Jalapeño, Cerebras CS-5, Groq 3 LPX, Apple M6",
-      "link": "https://www.latent.space/p/ainews-hot-chips-openais-jalapeno",
-      "date": "2026-08-27",
-      "first_seen": "2026-08-27T02:58:58.653295+00:00",
-      "source_type": "blog",
-      "summary": "Latent Space的AINews汇总了Hot Chips 37大会最大的新闻——OpenAI自研推理芯片Jalapeño首次公布性能数据，号称比英伟达GB200/GB300每瓦性能高1.5~1.9倍、端到端延迟低1.7~3.6倍，且不靠激进的prefill/decode拆分等技巧就做到了，年底前开始在OpenAI自家基础设施部署。另外提到GPT-Astra+Codex协助写Jalapeño底层kernel，部分注意力/MoE模块比人类专家手写代码快1.5~1.8倍；以及一篇论文实测发现换agent harness对分数的影响可能比换模型还大，提出了Harness Card披露标准。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "Hot Chips大会上OpenAI自研推理芯片Jalapeño的详细性能数据、agent harness质量对模型排名影响的研究，扎实的前沿AI硬件/工程趋势信息"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "\"harness质量比模型选择更重要\"这条研究直接沾到护城河在harness不在模型这个母题，但是新闻综述性质的二手内容，不是作者本人一手反思"
         }
       ],
       "is_new": false

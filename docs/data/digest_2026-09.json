@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "GPT-6 Astra: an automated AI Engineer you can hire for <$6 an hour",
+      "link": "https://www.latent.space/p/astra",
+      "date": "2026-09-03",
+      "first_seen": "2026-09-03T23:49:43.110197+00:00",
+      "source_type": "blog",
+      "summary": "swyx团队用超过200亿token实测GPT-6 Astra，认为它已经是能独立完成AI工程工作的“自动化AI工程师”——帮你选模型、标数据、盯流水线、部署调试系统、管理并发的agent子集群。他们估算按33 token/秒、每百万token50美元的速率，Astra的使用成本约每小时6美元，认为这类模型让“放大野心”的门槛大幅降低。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "swyx团队实测GPT-6 Astra用于真实工程任务（管理agent集群、训练模型、调试部署系统等），超20B token的一手实操经验，直接指导“怎么用AI工具”，扎实且门槛不高"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "GPT‑6 Astra",
+      "link": "https://simonwillison.net/2026/Sep/3/gpt6-astra/",
+      "date": "2026-09-03",
+      "first_seen": "2026-09-03T23:49:42.638179+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI发布GPT-6 Astra，定价与Claude Fable 5/5.1看齐（每百万token输入10美元、输出50美元），作者称其为“OpenAI的Fable竞品”。它在ARC-AGI-3（99.9%，需专用适配harness）、安全类基准（ExploitBench 100%）和长上下文（百万token内96.3%）上表现突出，但在Artificial Analysis的智能指数上仍略逊于Fable 5.1，优势在编程agent任务的性价比。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布（OpenAI GPT-6 Astra）的清晰解读，讲清定价、对标Fable的基准表现、安全能力和长上下文的具体数据，兼具新闻性和门槛不高的解释"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "Claude's new system prompt really doesn't want to reproduce song lyrics",
       "link": "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/",
@@ -15,7 +49,7 @@
           "reason": "深入拆解Claude新系统提示词的具体改动（版权/歌词/语气/物质滥用/end_conversation/知识截止日期），讲清楚变化和背后动机，直接影响理解Claude的实际行为边界"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -32,7 +66,7 @@
           "reason": "一手记录用Claude完成18万行代码级别AI辅助编码项目的真实经验，坦诚呈现能力上限与人工监督的必要性，对理解AI编码agent的可靠边界很有参考价值"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -49,7 +83,7 @@
           "reason": "前沿模型Fable 5.1的详细测评，讲清楚推理强度档位对输出质量/耗时/成本的具体影响，对选择推理强度有直接实操参考价值"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

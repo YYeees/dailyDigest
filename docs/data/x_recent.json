@@ -2,6 +2,39 @@
   "items": [
     {
       "person": "Ray Dalio",
+      "title": "Both inside and outside of any organization, there are some people who will intentionally cause the…",
+      "link": "https://x.com/RayDalio/status/2095621079645777963",
+      "date": "2026-09-03",
+      "first_seen": "2026-09-03T23:49:50.554989+00:00",
+      "source_type": "x",
+      "summary": "Dalio说组织内外都可能存在蓄意使坏的人：如果“敌人”在组织内部，要通过组织既定的解决机制公开点出以化解冲突，不能放任内部“敌人”损害大家庭的凝聚力；如果“敌人”在外部且会用信息害你，就不要分享信息给他们。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Andrej Karpathy",
+      "title": "RT @theworldlabs: Introducing Atlas:  The world's first multimodal world model that generates image…",
+      "link": "https://x.com/karpathy/status/2095535021146992835",
+      "date": "2026-09-03",
+      "first_seen": "2026-09-03T23:49:47.686436+00:00",
+      "source_type": "x",
+      "summary": "Karpathy转发了World Labs发布的多模态世界模型Atlas，称其为首个能生成带精确摄像机控制的图像和视频帧的世界模型。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Andy Matuschak",
+      "title": "What are your favorite unusual elements of your studio/study/office? Drown me in inspo please!   I'm…",
+      "link": "https://x.com/andy_matuschak/status/2095317920515592337",
+      "date": "2026-09-03",
+      "first_seen": "2026-09-03T23:49:52.314714+00:00",
+      "source_type": "x",
+      "summary": "Andy Matuschak正在租一个专属工作室，做“环境的独裁者”实验；目前最喜欢的元素是一张没有电脑的大书桌，接下来要装一面8×6英尺的图钉墙，并向网友征集工作室布置的巧思。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
       "title": "Where you go in life will depend on how you see things and who and what you feel connected to (your…",
       "link": "https://x.com/RayDalio/status/2095293193956794428",
       "date": "2026-09-02",
@@ -9,7 +42,7 @@
       "source_type": "x",
       "summary": "Dalio谈人生走向取决于你如何看待事物、以及选择与谁产生深度连接（家庭、社群、国家乃至整个生态系统），这决定了你在利己与利他之间会做出怎样的取舍——他认为人生中会不断遇到迫使你做这类选择的情境。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -20,7 +53,7 @@
       "source_type": "x",
       "summary": "Dalio分享超验冥想（TM）对他处理痛苦、进入反思状态的帮助——这项练习从1969年至今，通过静坐重复咒语让思绪沉淀，进入逻辑意识之下的潜意识空间，他认为真正的创造力和情绪安顿都来自这个状态，而非强迫逻辑推导。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -108,28 +141,6 @@
       "source_type": "x",
       "summary": "Andy Matuschak转发他人分享：这一周几乎不用聊天机器人，只专注阅读、思考与写作，结果感到比过去几个月都更清晰。",
       "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "Contribute to the whole and you will likely be rewarded.   Natural selection leads to better qualiti…",
-      "link": "https://x.com/RayDalio/status/2093096223502897240",
-      "date": "2026-08-27",
-      "first_seen": "2026-08-28T05:59:36.695275+00:00",
-      "source_type": "x",
-      "summary": "达利欧这条“每日原则”讲：为整体做贡献往往会得到回报，自然选择机制会让更好的品质被保留和传递（比如更好的基因、更强的滋养他人能力、更好的产品），从而让整体持续改进。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "When starting out with no revenue, you have a choice. You can stay out of the jungle, take the safe…",
-      "link": "https://x.com/RayDalio/status/2092988506058416160",
-      "date": "2026-08-27",
-      "first_seen": "2026-08-28T05:59:36.695546+00:00",
-      "source_type": "x",
-      "summary": "达利欧谈起步阶段没有收入时的选择：可以留在安全地带打一份稳定工作，也可以选择进入丛林、直面能致命的风险、争取更大的上行空间——他说自己选择了和视角不同的人一起走进丛林。",
-      "tier": "low",
       "is_new": false
     }
   ]
