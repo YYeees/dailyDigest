@@ -2,6 +2,28 @@
   "items": [
     {
       "person": "Ray Dalio",
+      "title": "Realizing that we innately want to evolve--and that the other stuff we are going after, while nice,…",
+      "link": "https://x.com/RayDalio/status/2095976639230255381",
+      "date": "2026-09-04",
+      "first_seen": "2026-09-04T23:47:18.302680+00:00",
+      "source_type": "x",
+      "summary": "Ray Dalio讲他意识到人类天生渴望进化，其他外在追求虽好但撑不起持久幸福感，这个认识让他更专注于让自己和推动世界进化这件事上。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Amanda Askell",
+      "title": "I still don't know how to convey my enthusiasm in a way that Americans will read as enthusiasm and n…",
+      "link": "https://x.com/AmandaAskell/status/2095662935603552337",
+      "date": "2026-09-03",
+      "first_seen": "2026-09-04T23:47:15.405696+00:00",
+      "source_type": "x",
+      "summary": "Amanda Askell调侃自己作为英国人很难让美国人读出她话里的热情，反而常被听成不情不愿，问有没有英国人破解过这个表达难题。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
       "title": "Both inside and outside of any organization, there are some people who will intentionally cause the…",
       "link": "https://x.com/RayDalio/status/2095621079645777963",
       "date": "2026-09-03",
@@ -9,7 +31,7 @@
       "source_type": "x",
       "summary": "Dalio说组织内外都可能存在蓄意使坏的人：如果“敌人”在组织内部，要通过组织既定的解决机制公开点出以化解冲突，不能放任内部“敌人”损害大家庭的凝聚力；如果“敌人”在外部且会用信息害你，就不要分享信息给他们。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrej Karpathy",
@@ -20,7 +42,7 @@
       "source_type": "x",
       "summary": "Karpathy转发了World Labs发布的多模态世界模型Atlas，称其为首个能生成带精确摄像机控制的图像和视频帧的世界模型。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -31,7 +53,7 @@
       "source_type": "x",
       "summary": "Andy Matuschak正在租一个专属工作室，做“环境的独裁者”实验；目前最喜欢的元素是一张没有电脑的大书桌，接下来要装一面8×6英尺的图钉墙，并向网友征集工作室布置的巧思。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -129,17 +151,6 @@
       "first_seen": "2026-08-29T23:56:13.664889+00:00",
       "source_type": "x",
       "summary": "达利欧探讨了三种学习方式——依赖记忆的有意识学习、影响决策却不进入意识的潜意识学习，以及不经思考的进化式学习（如DNA适应）——并认为比起有意识记忆学习，试错式的适应性学习反而带来更快的进步。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Andy Matuschak",
-      "title": "RT @xhfloz: I spent the week barely using chatbots — just reading, thinking, and writing — and feel…",
-      "link": "https://x.com/andy_matuschak/status/2093392461607645597",
-      "date": "2026-08-28",
-      "first_seen": "2026-08-29T03:33:20.949693+00:00",
-      "source_type": "x",
-      "summary": "Andy Matuschak转发他人分享：这一周几乎不用聊天机器人，只专注阅读、思考与写作，结果感到比过去几个月都更清晰。",
       "tier": "medium",
       "is_new": false
     }
