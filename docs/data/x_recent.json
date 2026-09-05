@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "person": "Andy Matuschak",
+      "title": "Rigged my camera to automatically produce instant prints, via phone (locked in pocket) as BTLE clien…",
+      "link": "https://x.com/andy_matuschak/status/2096327833517728087",
+      "date": "2026-09-05",
+      "first_seen": "2026-09-05T23:36:30.994326+00:00",
+      "source_type": "x",
+      "summary": "Andy Matuschak改装了自己的相机，让它能通过手机（放在口袋里、锁屏状态）作为BTLE客户端自动触发即时打印；还做了一个模式，只有在相机回放界面给照片\"加星\"时才打印，相当于在相机上直接做出一个\"打印\"按钮。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
       "person": "Ray Dalio",
       "title": "Realizing that we innately want to evolve--and that the other stuff we are going after, while nice,…",
       "link": "https://x.com/RayDalio/status/2095976639230255381",
@@ -9,7 +20,7 @@
       "source_type": "x",
       "summary": "Ray Dalio讲他意识到人类天生渴望进化，其他外在追求虽好但撑不起持久幸福感，这个认识让他更专注于让自己和推动世界进化这件事上。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Amanda Askell",
@@ -20,7 +31,7 @@
       "source_type": "x",
       "summary": "Amanda Askell调侃自己作为英国人很难让美国人读出她话里的热情，反而常被听成不情不愿，问有没有英国人破解过这个表达难题。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -141,17 +152,6 @@
       "source_type": "x",
       "summary": "达利欧发布的一条推文只包含一个链接（推测是图片或外部内容），没有随附文字说明，正文层面没有可提炼的信息。",
       "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "Natural selection’s trial-and-error process allows improvement without anyone understanding or guidi…",
-      "link": "https://x.com/RayDalio/status/2093730395732750845",
-      "date": "2026-08-29",
-      "first_seen": "2026-08-29T23:56:13.664889+00:00",
-      "source_type": "x",
-      "summary": "达利欧探讨了三种学习方式——依赖记忆的有意识学习、影响决策却不进入意识的潜意识学习，以及不经思考的进化式学习（如DNA适应）——并认为比起有意识记忆学习，试错式的适应性学习反而带来更快的进步。",
-      "tier": "medium",
       "is_new": false
     }
   ]
