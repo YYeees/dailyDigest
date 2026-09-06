@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "person": "Andy Matuschak",
+      "title": "U Chicago offers a great four-year program studying the \"Great Books of the Western World\". Meets we…",
+      "link": "https://x.com/andy_matuschak/status/2096701001898348674",
+      "date": "2026-09-06",
+      "first_seen": "2026-09-06T23:33:48.694765+00:00",
+      "source_type": "x",
+      "summary": "Matuschak分享完成芝加哥大学四年「西方经典」共读项目后的反思：他坦言最初带着「打卡式」心态报名，读完千余小时后发现并未真正吃透多数经典，但收获的是与这些思想源头建立起真实具体的连接——从抽象的书单变成了想反复回访的对象（卢克莱修、洛克、卢梭、尼采等），并由此更深体会到「个体的人」如何创造出改变思想史的具体作品。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "Matuschak完成芝大四年「西方经典」共读项目后的一手反思，直接命中根一「深度自我认识」——透过哲学与文学追问如何活成自己，且体现「一手不二手」（从抽象书单变成亲身连接的转变）"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "There's No Limit to How Bad Code Can Get",
+      "link": "https://simonwillison.net/2026/Sep/6/theres-no-limit-to-how-bad-code-can-get/",
+      "date": "2026-09-06",
+      "first_seen": "2026-09-06T23:33:42.687447+00:00",
+      "source_type": "blog",
+      "summary": "Willison结合亲身经历指出，「推倒重来」式重写技术债务系统的做法很少成功：旧系统因团队士气低落而继续腐化，新系统团队又常常低估旧系统的隐性需求，导致数月甚至数年后两套系统并存、新系统被搁置。他更推荐先给旧系统补齐自动化测试，再做针对性重构，并推荐了Will Larson关于系统迁移的文章作为延伸阅读。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "Willison结合亲身经历总结「推倒重写」失败的典型模式，命中反射母题「找一劳永逸+强制慢反弹」——反对推倒重来的冲动、主张渐进式重构，是质朴中正的构建者活法，且是一手反思不是转述"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "OpenClaw Power, MacBook Simplicity: Five Days With Grok Bot",
       "link": "https://www.latent.space/p/grok-bot",
@@ -15,7 +49,7 @@
           "reason": "对xAI Grok Bot agent平台的五天深度一手评测，讲清楚跟OpenClaw等平台在抽象层级、托管方式、控制权上的核心差异，兼具趋势判断和实操细节。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

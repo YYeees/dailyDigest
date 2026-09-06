@@ -2,22 +2,66 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "Using Blender with coding agents on macOS",
-      "link": "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/",
-      "date": "2026-09-05",
-      "first_seen": "2026-09-05T23:36:24.744941+00:00",
+      "title": "The purpose of DNS is to spread scams",
+      "link": "https://simonwillison.net/2026/Sep/6/the-purpose-of-dns-is-to-spread-scams/",
+      "date": "2026-09-06",
+      "first_seen": "2026-09-06T23:33:42.687211+00:00",
       "source_type": "blog",
-      "summary": "作者发现前沿模型现在很擅长操作Blender：只需安装好Mac版Blender应用，让编程agent（比如ChatGPT Codex）直接调用，就能生成、渲染场景甚至输出视频。他给了一个简单的操作示例——用几句自然语言指令，让agent通过Blender的Python API渲染出一只骑自行车的鹈鹕，逐步加背景、加装饰后效果明显提升。",
+      "summary": null,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "展示用编程agent（ChatGPT Codex）直接调用本地Blender应用生成3D渲染的实操技巧，属轻量演示性内容，非系统性指南。"
+          "reason": "跟AI无关，是DNS域名滥用/网络诈骗话题"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "纯工具使用技巧演示，跟三根主干无实质连接。"
+          "reason": "跟三根主干及周边领域没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "There's No Limit to How Bad Code Can Get",
+      "link": "https://simonwillison.net/2026/Sep/6/theres-no-limit-to-how-bad-code-can-get/",
+      "date": "2026-09-06",
+      "first_seen": "2026-09-06T23:33:42.687447+00:00",
+      "source_type": "blog",
+      "summary": "Willison结合亲身经历指出，「推倒重来」式重写技术债务系统的做法很少成功：旧系统因团队士气低落而继续腐化，新系统团队又常常低估旧系统的隐性需求，导致数月甚至数年后两套系统并存、新系统被搁置。他更推荐先给旧系统补齐自动化测试，再做针对性重构，并推荐了Will Larson关于系统迁移的文章作为延伸阅读。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "跟AI无关，是关于技术债务与重写策略的工程实践讨论"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "Willison结合亲身经历总结「推倒重写」失败的典型模式，命中反射母题「找一劳永逸+强制慢反弹」——反对推倒重来的冲动、主张渐进式重构，是质朴中正的构建者活法，且是一手反思不是转述"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Zach Kehs",
+      "link": "https://simonwillison.net/2026/Sep/6/zach-kehs/",
+      "date": "2026-09-06",
+      "first_seen": "2026-09-06T23:33:42.687472+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "跟AI无关，是技术债务话题的二手引用"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "是Zach Kehs原文的二手引用，且与同一天另一条「There's No Limit to How Bad Code Can Get」重复报道同一话题，后者是Willison本人的一手反思、信息量更全，择一看即可"
         }
       ],
       "is_new": true
@@ -42,29 +86,7 @@
           "reason": "反复触及'护城河在harness不在模型'与控制权/认知负荷的取舍，但整体是产品测评类一手体验，非thought-lab框架本身的反思。"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "The Pelican comparison grid for Astra is pretty interesting",
-      "link": "https://simonwillison.net/2026/Sep/4/astra-pelicans/",
-      "date": "2026-09-04",
-      "first_seen": "2026-09-05T23:36:24.745266+00:00",
-      "source_type": "blog",
-      "summary": "作者用经典的鹈鹕骑车SVG测试对比了新发布的GPT-6 Astra与GPT-5.6系列（Sol/Terra/Luna）：Astra在各推理档位下的图像质量都明显优于Sol，最低档花9.55美分就能超过Sol任意档位的效果；虽然Astra单价约为Sol的两倍，但耗费的token更少，实际花费差距被拉近。作者还注意到Astra和Luna的输入token数相同，猜测两者底层可能有关联。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "对比GPT-6 Astra与GPT-5.6各版本鹈鹕基准测试，展示新模型质量/成本权衡，属实操性benchmark演示，非系统性指南。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "纯模型对比测评，跟三根主干均无实质连接。"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

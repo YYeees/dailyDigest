@@ -2,6 +2,28 @@
   "items": [
     {
       "person": "Andy Matuschak",
+      "title": "U Chicago offers a great four-year program studying the \"Great Books of the Western World\". Meets we…",
+      "link": "https://x.com/andy_matuschak/status/2096701001898348674",
+      "date": "2026-09-06",
+      "first_seen": "2026-09-06T23:33:48.694765+00:00",
+      "source_type": "x",
+      "summary": "Matuschak分享完成芝加哥大学四年「西方经典」共读项目后的反思：他坦言最初带着「打卡式」心态报名，读完千余小时后发现并未真正吃透多数经典，但收获的是与这些思想源头建立起真实具体的连接——从抽象的书单变成了想反复回访的对象（卢克莱修、洛克、卢梭、尼采等），并由此更深体会到「个体的人」如何创造出改变思想史的具体作品。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "As Carl Jung put it, \"Man needs difficulties. They are necessary for health.\" Yet most people instin…",
+      "link": "https://x.com/RayDalio/status/2096603437609669078",
+      "date": "2026-09-06",
+      "first_seen": "2026-09-06T23:33:47.357609+00:00",
+      "source_type": "x",
+      "summary": "Dalio引用荣格「人需要磨难，它们是健康所必需的」，指出人本能回避痛苦——无论是健身时肌肉的撕裂重建，还是心理上的挫败、羞耻与直面自身局限，这些不适都是成长的必经之路。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Andy Matuschak",
       "title": "Rigged my camera to automatically produce instant prints, via phone (locked in pocket) as BTLE clien…",
       "link": "https://x.com/andy_matuschak/status/2096327833517728087",
       "date": "2026-09-05",
@@ -9,7 +31,7 @@
       "source_type": "x",
       "summary": "Andy Matuschak改装了自己的相机，让它能通过手机（放在口袋里、锁屏状态）作为BTLE客户端自动触发即时打印；还做了一个模式，只有在相机回放界面给照片\"加星\"时才打印，相当于在相机上直接做出一个\"打印\"按钮。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
