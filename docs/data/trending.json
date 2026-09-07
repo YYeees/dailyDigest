@@ -9,61 +9,9 @@
       "worth_tier": "high",
       "recommend_reason": "面向AI代理设计的图表生成技能包,让Cursor/Claude Code等代理把系统描述编译成交互式架构图、序列图、数据流图,支持一行命令零代码安装。代码实现完整(CLI、验证器、布局引擎、导出功能),把\"给AI代理装技能\"这件事做得很规范,是Agent Skill落地的优秀范例。",
       "first_seen_date": "2026-08-31",
-      "stars_total": 34636,
-      "stars_period": 18103,
-      "last_snapshot_date": "2026-08-31"
-    },
-    {
-      "full_name": "openai/codex",
-      "url": "https://github.com/openai/codex",
-      "description": "Lightweight coding agent that runs in your terminal",
-      "language": "Rust",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "OpenAI官方的本地编码Agent CLI,支持终端、IDE插件、桌面应用多种形态,可用ChatGPT账号或API Key鉴权。120k star、上万次提交,是当前最主流的AI编码助手之一,工程成熟度和文档质量都属一流,是了解coding agent产品形态的重要参考。",
-      "first_seen_date": "2026-08-31",
-      "stars_total": 120101,
-      "stars_period": 5510,
-      "last_snapshot_date": "2026-08-31"
-    },
-    {
-      "full_name": "K-Dense-AI/scientific-agent-skills",
-      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
-      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
-      "language": "Python",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "163个面向科研场景的Agent Skill集合,覆盖生物、化学、药物研发等领域,对接100+科学数据库和70+ Python包(RDKit、Scanpy等),每个skill有文档、脚本和测试,并有CI和安全扫描把关质量。是\"把AI agent变成科研助手\"这一垂类做得比较扎实的案例,但要用好需要具备相应领域的科学背景。",
-      "first_seen_date": "2026-08-31",
-      "stars_total": 39263,
-      "stars_period": 4309,
-      "last_snapshot_date": "2026-08-31"
-    },
-    {
-      "full_name": "rohitg00/ai-engineering-from-scratch",
-      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
-      "description": "Learn it. Build it. Ship it for others.",
-      "language": "Python",
-      "difficulty": "advanced",
-      "worth_tier": "high",
-      "recommend_reason": "一套从数学基础到生产级Agent系统的完整AI工程课程,523节课分20个阶段,用Python/TypeScript/Rust/Julia提供可运行实现,并配套书籍和技能/MCP产出物。目录结构和提交历史(1764次)显示内容确实落地而非大纲空转,体量和深度要求学习者有一定钻研耐心,是系统学习AI工程实操路径的优秀样本。",
-      "first_seen_date": "2026-08-31",
-      "stars_total": 51281,
-      "stars_period": 3720,
-      "last_snapshot_date": "2026-08-31"
-    },
-    {
-      "full_name": "tashfeenahmed/freellmapi",
-      "url": "https://github.com/tashfeenahmed/freellmapi",
-      "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
-      "language": "TypeScript",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "聚合34家LLM提供商免费额度、统一成OpenAI兼容接口的网关,具备智能路由、故障自动切换、加密密钥管理,还有完整的服务端、React仪表盘、桌面客户端和CLI,代码成熟度高。对于想省钱试用各家免费模型的开发者是很实用的AI基础设施工具,但配置路由策略需要一定后端/API背景。",
-      "first_seen_date": "2026-08-31",
-      "stars_total": 22787,
-      "stars_period": 3037,
-      "last_snapshot_date": "2026-08-31"
+      "stars_total": 50789,
+      "stars_period": 17190,
+      "last_snapshot_date": "2026-09-07"
     },
     {
       "full_name": "THU-MAIC/OpenMAIC",
@@ -74,9 +22,61 @@
       "worth_tier": "high",
       "recommend_reason": "清华MAIC实验室出品的多智能体交互课堂平台，用LangGraph编排AI教师与虚拟同学，将任意主题一键生成含3D可视化、白板演绎、语音讲解的完整互动课程，架构完整(18+ API端点、28+动作类型)是多智能体应用于教育场景的代表性实践。局限在于高级功能(语音克隆、文档解析)需额外部署和API密钥，生产级用户隔离和持久化方案仍处试验阶段。",
       "first_seen_date": "2026-08-15",
-      "stars_total": 24053,
-      "stars_period": 2085,
-      "last_snapshot_date": "2026-08-31"
+      "stars_total": 32411,
+      "stars_period": 9193,
+      "last_snapshot_date": "2026-09-07"
+    },
+    {
+      "full_name": "debpalash/VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "VoiceStudio是本地部署的语音AI一体化平台，对标ElevenLabs，支持声音克隆、语音合成（646种语言、16个TTS引擎）、转录（11个ASR引擎）、视频配音、有声书制作等，架构上Rust桌面壳+React前端+Python FastAPI后端，还内置AudioSeal水印检测。功能覆盖全面且完全本地运行、注重隐私，是了解「多引擎注册式」语音AI应用架构设计的好范例，不过默认模型权重为CC-BY-NC，商用需换引擎。",
+      "first_seen_date": "2026-09-07",
+      "stars_total": 19843,
+      "stars_period": 7513,
+      "last_snapshot_date": "2026-09-07"
+    },
+    {
+      "full_name": "K-Dense-AI/scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "language": "Python",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "163个面向科研场景的Agent Skill集合,覆盖生物、化学、药物研发等领域,对接100+科学数据库和70+ Python包(RDKit、Scanpy等),每个skill有文档、脚本和测试,并有CI和安全扫描把关质量。是\"把AI agent变成科研助手\"这一垂类做得比较扎实的案例,但要用好需要具备相应领域的科学背景。",
+      "first_seen_date": "2026-08-31",
+      "stars_total": 43288,
+      "stars_period": 4718,
+      "last_snapshot_date": "2026-09-07"
+    },
+    {
+      "full_name": "jingyaogong/minimind",
+      "url": "https://github.com/jingyaogong/minimind",
+      "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
+      "language": "Python",
+      "difficulty": "beginner",
+      "worth_tier": "high",
+      "recommend_reason": "MiniMind让用户能用单张GPU、约3美元成本、2小时内从零训练一个6400万参数的语言模型，完整覆盖预训练、SFT、LoRA、蒸馏、DPO/PPO/GRPO强化学习等全流程，架构对齐Qwen3（RoPE+SwiGLU+预归一化）。项目坦诚讨论了小模型的能力局限和RL奖励稀疏问题，教学意图明确、文档详尽，是理解LLM训练全链路最好的平民化入门项目之一，非常适合AI实践学习者上手。",
+      "first_seen_date": "2026-09-07",
+      "stars_total": 59148,
+      "stars_period": 3816,
+      "last_snapshot_date": "2026-09-07"
+    },
+    {
+      "full_name": "google-research/timesfm",
+      "url": "https://github.com/google-research/timesfm",
+      "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+      "language": "Python",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "TimesFM是Google Research推出的时间序列预测基础模型，3.0版本支持多变量预测、过去/未来协变量、分位数不确定性估计，并在多个权威榜单（fev-bench、GIFT-Eval等）排名靠前，已集成进BigQuery ML、Vertex AI等产品。API调用简单（传入NumPy数组即可预测），是学习「预训练基础模型如何应用到时间序列这一非NLP/CV领域」的优质案例，但模型权重仅限非商用，商用需另外授权。",
+      "first_seen_date": "2026-09-07",
+      "stars_total": 31646,
+      "stars_period": 3203,
+      "last_snapshot_date": "2026-09-07"
     }
   ]
 }

@@ -222,5 +222,60 @@
       "is_new": false
     }
   ],
-  "github_track": []
+  "github_track": [
+    {
+      "full_name": "unclecode/crawl4ai",
+      "url": "https://github.com/unclecode/crawl4ai",
+      "description": "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here:https://discord.gg/jP8KfhDhyN",
+      "language": "Python",
+      "difficulty": "intermediate",
+      "recommend_reason": "面向LLM/RAG场景的开源网页爬虫，能将网页转换为结构化markdown，支持BM25过滤降噪、LLM驱动抽取和CSS/XPath模式抽取、反检测浏览器模式、自适应爬取等。项目成熟度高（8万+ star、1650+ commits、持续发版），是RAG数据管道中「网页转LLM可用文本」这一环节的代表性工具，工程细节扎实，值得学习其抽取策略设计。",
+      "stars_total": 81818
+    },
+    {
+      "full_name": "jingyaogong/minimind",
+      "url": "https://github.com/jingyaogong/minimind",
+      "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
+      "language": "Python",
+      "difficulty": "beginner",
+      "recommend_reason": "MiniMind让用户能用单张GPU、约3美元成本、2小时内从零训练一个6400万参数的语言模型，完整覆盖预训练、SFT、LoRA、蒸馏、DPO/PPO/GRPO强化学习等全流程，架构对齐Qwen3（RoPE+SwiGLU+预归一化）。项目坦诚讨论了小模型的能力局限和RL奖励稀疏问题，教学意图明确、文档详尽，是理解LLM训练全链路最好的平民化入门项目之一，非常适合AI实践学习者上手。",
+      "stars_total": 59148
+    },
+    {
+      "full_name": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "description": "Chrome DevTools for coding agents",
+      "language": "TypeScript",
+      "difficulty": "intermediate",
+      "recommend_reason": "这是Chrome官方团队维护的MCP服务器，让Claude、Cursor等AI编程agent能够直接控制和检查真实Chrome实例，支持性能trace分析、网络请求调试、截图、基于Puppeteer的可靠浏览器自动化。作为官方出品、生产级质量的MCP服务器范例，是学习MCP协议如何对接真实工具（而非玩具demo）的优质案例，文档也明确提示了数据暴露的安全风险，值得警惕但不影响其工具价值。",
+      "stars_total": 51159
+    },
+    {
+      "full_name": "GokuMohandas/Made-With-ML",
+      "url": "https://github.com/GokuMohandas/Made-With-ML",
+      "description": "Learn how to develop, deploy and iterate on production-grade ML applications.",
+      "language": "Jupyter Notebook",
+      "difficulty": "intermediate",
+      "recommend_reason": "系统教授如何把机器学习从实验做成可部署、可迭代的生产级应用，覆盖设计开发、部署、MLOps全流程，用Ray做分布式训练、MLflow做实验跟踪、GitHub Actions做CI/CD，并给出本地/云端（AWS/GCP/K8s/Anyscale）多种部署路径的可运行代码。内容工程化程度高，是「AI落地工程实践」很典型的学习范本，能清楚学到从notebook到生产系统的完整链路，但需要一定的软件工程和MLOps基础才能跟上。",
+      "stars_total": 49371
+    },
+    {
+      "full_name": "Imbad0202/academic-research-skills",
+      "url": "https://github.com/Imbad0202/academic-research-skills",
+      "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+      "language": "Python",
+      "difficulty": "intermediate",
+      "recommend_reason": "这是为Claude Code设计的学术研究全流程技能集（研究-写作-评审-修订-定稿），采用多agent分工（如13-agent研究团队、12-agent写作流水线），并有确定性引用校验、时间线一致性审计、700+自动化测试等严谨的工程细节，强调「AI是副驾驶不是主驾驶」的人工监督理念。这是将复杂agent编排应用到具体垂直场景（学术写作）的优质实践案例，值得学习其技能拆分和验证机制设计。",
+      "stars_total": 46571
+    },
+    {
+      "full_name": "anthropics/prompt-eng-interactive-tutorial",
+      "url": "https://github.com/anthropics/prompt-eng-interactive-tutorial",
+      "description": "Anthropic's Interactive Prompt Engineering Tutorial",
+      "language": "Jupyter Notebook",
+      "difficulty": "beginner",
+      "recommend_reason": "Anthropic官方出品的提示工程交互教程，按初级到高级共9章循序渐进，配练习题、答案和可实时试验的Playground，还有面向行业场景（客服、法律、金融、代码）的复杂提示构建示例。内容体系完整、动手性强，且来自一手权威来源，是学习提示工程非常扎实的入门到进阶材料，适合几乎所有层次的AI实践者。",
+      "stars_total": 38081
+    }
+  ]
 }
