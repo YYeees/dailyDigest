@@ -2,6 +2,40 @@
   "items": [
     {
       "person": "Andy Matuschak",
+      "title": "Been tinkering with annotation \"fusion\": annotate a paper with ink; take a photo; markup is segmente…",
+      "link": "https://x.com/andy_matuschak/status/2097098368342192148",
+      "date": "2026-09-07",
+      "first_seen": "2026-09-08T00:01:45.867727+00:00",
+      "source_type": "x",
+      "summary": "Andy Matuschak在试验一种批注「融合」玩法：先在纸质文档上手写批注、拍照，再把批注切割识别成结构化数据、重新叠加回干净的原始PDF上。他觉得这个方向技术上挺有意思，但概念上是错的——这种「写完就扔」的方式没法让人接着在上下文里继续「使用」这些批注，他会接着琢磨。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "本人一手反思与经历，直接触及人机交互/思维工具周边领域，也印证了清单里「上游原创vs下游组合」式的自我校正"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Research acceleration: The view inside OpenAI",
+      "link": "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/",
+      "date": "2026-09-06",
+      "first_seen": "2026-09-08T00:01:40.174103+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI发布内部报告，披露coding agent正在重塑研究员的日常工作方式：人均每日AI工具花费从2月接近零，一路攀升到6月约150美元，7月后陡增到8月底约600美元，Simon Willison推测7月的跃升可能对应内部员工提前用上了后来发布的GPT-6 Astra。文章还提到同日发布的OpenAI首席科学家Jakub Pachocki《An Alien Mind》一文，两篇都在谈「RSI（递归自我改进）」，暗示这是OpenAI眼中的新AGI路径。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿AI公司内部真实数据披露coding agent对研究工作方式的重塑，讲清楚是什么、为什么重要，非纯新闻通稿"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Andy Matuschak",
       "title": "U Chicago offers a great four-year program studying the \"Great Books of the Western World\". Meets we…",
       "link": "https://x.com/andy_matuschak/status/2096701001898348674",
       "date": "2026-09-06",
@@ -15,7 +49,7 @@
           "reason": "Matuschak完成芝大四年「西方经典」共读项目后的一手反思，直接命中根一「深度自我认识」——透过哲学与文学追问如何活成自己，且体现「一手不二手」（从抽象书单变成亲身连接的转变）"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -32,7 +66,7 @@
           "reason": "Willison结合亲身经历总结「推倒重写」失败的典型模式，命中反射母题「找一劳永逸+强制慢反弹」——反对推倒重来的冲动、主张渐进式重构，是质朴中正的构建者活法，且是一手反思不是转述"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",

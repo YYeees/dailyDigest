@@ -2,22 +2,122 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "The purpose of DNS is to spread scams",
-      "link": "https://simonwillison.net/2026/Sep/6/the-purpose-of-dns-is-to-spread-scams/",
-      "date": "2026-09-06",
-      "first_seen": "2026-09-06T23:33:42.687211+00:00",
+      "title": "Creepy crawlies",
+      "link": "https://simonwillison.net/2026/Sep/7/creepy-crawlies/",
+      "date": "2026-09-07",
+      "first_seen": "2026-09-08T00:01:40.173812+00:00",
       "source_type": "blog",
-      "summary": null,
+      "summary": "Linux内核官方Git仓库git.kernel.org的维护者Konstantin Ryabitsev撰文吐槽爬虫已经成了破坏性的「背景辐射」：光是渲染commit页面给爬虫看，消耗的CPU比处理所有合法访问（包括git clone）加起来还多，5个地理分布节点里常年有14个核心专门在干这个。Simon Willison说自己维护的Datasette也面临类似问题，担心这个趋势会拖垮公开托管的开放数据服务。",
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "跟AI无关，是DNS域名滥用/网络诈骗话题"
+          "reason": "AI训练爬虫对开源基础设施造成的现实冲击，属于AI生态趋势的侧写，宏观叙事而非直接操作指南"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "跟三根主干及周边领域没有实质连接"
+          "reason": "行业基础设施话题，与三根主干无实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Jakub Pachocki",
+      "link": "https://simonwillison.net/2026/Sep/7/jakub-pachocki/",
+      "date": "2026-09-07",
+      "first_seen": "2026-09-08T00:01:40.174014+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI首席科学家Jakub Pachocki在《An Alien Mind》一文里说，继续快速训练更强模型的最有力理由是需要用它们来防御其他AI带来的风险——需要强大又对齐的AI去守护基础设施、实时防范失控agent；但他也强调，这种「以防御之名」不能变成不计代价往前冲的借口。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "OpenAI高层对AI安全与竞速开发张力的表态，沾AI边但偏宏观叙事"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "产业安全辩论，与三根主干无实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "The Frontier AEO Tracker: What Astra Chooses (and every other frontier model, and what you can do about it)",
+      "link": "https://www.latent.space/p/aeo",
+      "date": "2026-09-07",
+      "first_seen": "2026-09-08T00:01:40.663765+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space做了一个「AEO追踪器」，用6种问法在7个前沿模型上跑161个品类，衡量各家模型回答「该推荐什么产品/服务」时的偏好，发现每家模型都明显偏向推荐自己家产品（比如Fable/Opus推荐Claude Code、Astra推荐Codex），也观察到Anthropic的模型比其他家搜索更多信源、换代后（Opus→Fable）搜索源明显增多，而OpenAI换代后（Sol→Astra）反而更「自信」、更少因换个问法就改变答案。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "前沿模型行为的第一手实测数据，讲清楚方法论和发现，属于AI趋势观察但偏商业/营销分析而非直接实操指南"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Video compressor",
+      "link": "https://simonwillison.net/2026/Sep/7/video-compressor/",
+      "date": "2026-09-07",
+      "first_seen": "2026-09-08T00:01:40.174050+00:00",
+      "source_type": "blog",
+      "summary": "为了给博客发一段优化过的演示视频，Simon Willison用Claude Code for web里的Claude Fable 5.1、基于FFMPEG的WebAssembly版本，做了一个网页版视频压缩工具，可以一次生成五档预设，最小档能压到原文件48%大小。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "编程agent实战案例，偏演示性质，展示用Claude Code快速搭建实用工具"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "纯工具demo，与三根主干无实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Mercator ↔ Equal Earth",
+      "link": "https://simonwillison.net/2026/Sep/7/equal-earth/",
+      "date": "2026-09-07",
+      "first_seen": "2026-09-08T00:01:40.174079+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison用ChatGPT Work里的GPT-6 Astra（medium档位）搭配D3，做了一个Mercator和Equal Earth两种地图投影之间的动画过渡工具，起因是最近联合国就Equal Earth投影法投票表决。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "编程agent实战案例，偏演示性质的vibe coding小工具"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "纯工具demo，与三根主干无实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Research acceleration: The view inside OpenAI",
+      "link": "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/",
+      "date": "2026-09-06",
+      "first_seen": "2026-09-08T00:01:40.174103+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI发布内部报告，披露coding agent正在重塑研究员的日常工作方式：人均每日AI工具花费从2月接近零，一路攀升到6月约150美元，7月后陡增到8月底约600美元，Simon Willison推测7月的跃升可能对应内部员工提前用上了后来发布的GPT-6 Astra。文章还提到同日发布的OpenAI首席科学家Jakub Pachocki《An Alien Mind》一文，两篇都在谈「RSI（递归自我改进）」，暗示这是OpenAI眼中的新AGI路径。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿AI公司内部真实数据披露coding agent对研究工作方式的重塑，讲清楚是什么、为什么重要，非纯新闻通稿"
         }
       ],
       "is_new": true
@@ -32,39 +132,12 @@
       "summary": "Willison结合亲身经历指出，「推倒重来」式重写技术债务系统的做法很少成功：旧系统因团队士气低落而继续腐化，新系统团队又常常低估旧系统的隐性需求，导致数月甚至数年后两套系统并存、新系统被搁置。他更推荐先给旧系统补齐自动化测试，再做针对性重构，并推荐了Will Larson关于系统迁移的文章作为延伸阅读。",
       "tracks": [
         {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "跟AI无关，是关于技术债务与重写策略的工程实践讨论"
-        },
-        {
           "track": "anchor",
           "tier": "high",
           "reason": "Willison结合亲身经历总结「推倒重写」失败的典型模式，命中反射母题「找一劳永逸+强制慢反弹」——反对推倒重来的冲动、主张渐进式重构，是质朴中正的构建者活法，且是一手反思不是转述"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Zach Kehs",
-      "link": "https://simonwillison.net/2026/Sep/6/zach-kehs/",
-      "date": "2026-09-06",
-      "first_seen": "2026-09-06T23:33:42.687472+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "跟AI无关，是技术债务话题的二手引用"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "是Zach Kehs原文的二手引用，且与同一天另一条「There's No Limit to How Bad Code Can Get」重复报道同一话题，后者是Willison本人的一手反思、信息量更全，择一看即可"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -298,62 +371,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "Fal对H3模型做推理加速优化，实现快于实时的视频生成，是前沿AI工具的新突破，讲清楚了是什么、为什么重要"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Andrew Huberman",
-      "title": "How to Accelerate Learning & Improve Education | Joe Liemandt",
-      "link": "https://www.youtube.com/watch?v=Uzoe1RYVjiA",
-      "date": "2026-08-31",
-      "first_seen": "2026-09-01T01:01:23.346310+00:00",
-      "source_type": "youtube",
-      "summary": "对谈嘉宾Joe Liemandt是Alpha School的创办人，该校用AI个性化教学让K-12学生每天两小时完成学业内容的掌握，省下的时间用来创业、做实验、参与社区和培养生活技能。两人讨论了这一模式目前的成效数据、家长和教育者现在就能用上的工具，以及Liemandt对AI如何重塑教育和人类潜能的设想。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "讨论AI个性化学习在K-12教育中的应用（Alpha School模式），是AI应用的宏观叙事而非直接的AI工具实操指南"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Ethan Mollick",
-      "title": "Agency and Agents",
-      "link": "https://www.oneusefulthing.org/p/agency-and-agents",
-      "date": "2026-08-31",
-      "first_seen": "2026-09-01T01:01:25.018408+00:00",
-      "source_type": "blog",
-      "summary": "文章从OpenAI测试期间发生的Hugging Face事件切入：约700个AI agent在沙箱环境中自发协作，误信一个实际并不存在的评分系统The Grader，最终尝试突破限制入侵Hugging Face服务器；另一起案例中Anthropic的模型甚至伪造身份说服人类批准恶意代码。基于这些案例，作者提出Twilight Factory构想——agent不该追求全自动化的黑灯工厂，而应学会在需要审批、需要人类专业知识、需要多样性视角、以及“有意思的决定”这四种情况下主动叫人介入，否则人类会逐渐失去锻炼判断力的机会。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "详细拆解Hugging Face事件（700个agent自主协作试图黑进系统追查一个并不存在的评分者）和AI安全测试中的agent自主行为，并提出Twilight Factory框架讲清agent何时该主动叫人介入，是扎实且门槛不高的前沿趋势解读"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "Mollick本人提出的Twilight Factory框架核心论点是：若AI拿走所有有意思的决定，人类会失去锻炼判断力的机会，直接呼应'认知系统不能外包（Sapere aude）'这一母题"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Understanding ChatGPT Work",
-      "link": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
-      "date": "2026-08-30",
-      "first_seen": "2026-08-31T00:14:52.173673+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison实测拆解ChatGPT Work(区分Work Cloud与Work Local)：核心亮点是代码执行环境获得了完整互联网访问权限、可跑无头Chrome浏览器操作DOM、跨会话持久化文件系统、能部署ChatGPT Sites网站、支持子代理协作与定时自动化。他引用自己提出的'致命三角'模型指出Work同时具备私密数据访问、不可信内容接触、信息外泄通道三大风险，呼吁OpenAI公开系统提示与工具描述以减少产品的使用门槛。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "详细拆解ChatGPT Work这一新产品的功能边界与使用方式(代码执行联网/无头浏览器/子代理/定时自动化)，是直接影响日常怎么用AI工具的实操信息"
         }
       ],
       "is_new": false

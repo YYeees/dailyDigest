@@ -2,6 +2,28 @@
   "items": [
     {
       "person": "Andy Matuschak",
+      "title": "Been tinkering with annotation \"fusion\": annotate a paper with ink; take a photo; markup is segmente…",
+      "link": "https://x.com/andy_matuschak/status/2097098368342192148",
+      "date": "2026-09-07",
+      "first_seen": "2026-09-08T00:01:45.867727+00:00",
+      "source_type": "x",
+      "summary": "Andy Matuschak在试验一种批注「融合」玩法：先在纸质文档上手写批注、拍照，再把批注切割识别成结构化数据、重新叠加回干净的原始PDF上。他觉得这个方向技术上挺有意思，但概念上是错的——这种「写完就扔」的方式没法让人接着在上下文里继续「使用」这些批注，他会接着琢磨。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Amanda Askell",
+      "title": "It would be cool to set up an email address that autonomous AI models could reach out to if they wer…",
+      "link": "https://x.com/AmandaAskell/status/2096995340654444674",
+      "date": "2026-09-07",
+      "first_seen": "2026-09-08T00:01:41.884122+00:00",
+      "source_type": "x",
+      "summary": "Amanda Askell设想建一个邮箱地址，让自主运行的AI模型在需要道德指引时可以联系求助，但她也指出这需要一种「反向验证码」来识别对方既不是人类、也不是被人类指使来破解系统的AI。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Andy Matuschak",
       "title": "U Chicago offers a great four-year program studying the \"Great Books of the Western World\". Meets we…",
       "link": "https://x.com/andy_matuschak/status/2096701001898348674",
       "date": "2026-09-06",
@@ -9,7 +31,7 @@
       "source_type": "x",
       "summary": "Matuschak分享完成芝加哥大学四年「西方经典」共读项目后的反思：他坦言最初带着「打卡式」心态报名，读完千余小时后发现并未真正吃透多数经典，但收获的是与这些思想源头建立起真实具体的连接——从抽象的书单变成了想反复回访的对象（卢克莱修、洛克、卢梭、尼采等），并由此更深体会到「个体的人」如何创造出改变思想史的具体作品。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -20,7 +42,7 @@
       "source_type": "x",
       "summary": "Dalio引用荣格「人需要磨难，它们是健康所必需的」，指出人本能回避痛苦——无论是健身时肌肉的撕裂重建，还是心理上的挫败、羞耻与直面自身局限，这些不适都是成长的必经之路。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -151,28 +173,6 @@
       "first_seen": "2026-09-01T23:51:02.032926+00:00",
       "source_type": "x",
       "summary": "达利欧在TIME杂志上用三分钟阅读篇幅解释了他对债务供需问题的看法，称这是他对该问题最精炼的说明，供感兴趣的读者参考。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "Earth is just one of about 100 billion planets in our galaxy, which is just one of about two trillio…",
-      "link": "https://x.com/RayDalio/status/2094539173772591109",
-      "date": "2026-08-31",
-      "first_seen": "2026-09-01T01:01:30.264044+00:00",
-      "source_type": "x",
-      "summary": "达利欧发文感慨：地球只是银河系约1000亿颗行星之一，银河系又只是宇宙约两万亿个星系之一；人类历史只占地球存在时间的1/20000，个人一生更只占人类历史的1/3000。他说人类因此渺小到无论成就什么都影响甚微，但我们本能地想要“有意义”和进化，无数微小的存在感累加起来正是推动宇宙演化的力量。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "https://t.co/0aLfkz0EDS",
-      "link": "https://x.com/RayDalio/status/2094480601676235092",
-      "date": "2026-08-31",
-      "first_seen": "2026-09-01T01:01:30.264354+00:00",
-      "source_type": "x",
-      "summary": "达利欧发布的一条推文只包含一个链接（推测是图片或外部内容），没有随附文字说明，正文层面没有可提炼的信息。",
       "tier": "low",
       "is_new": false
     }
