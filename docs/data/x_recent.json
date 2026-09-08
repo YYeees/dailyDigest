@@ -2,6 +2,50 @@
   "items": [
     {
       "person": "Andy Matuschak",
+      "title": "RT @dreamwieber: I think one of my fundamental disappointments with modern devices is that I can't j…",
+      "link": "https://x.com/andy_matuschak/status/2097432724231647678",
+      "date": "2026-09-08",
+      "first_seen": "2026-09-08T23:53:36.184179+00:00",
+      "source_type": "x",
+      "summary": "转推一条对现代设备的不满：无法像纸笔一样自由地在屏幕上随手涂写标注，触及人机交互与思维工具的周边议题。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Andy Matuschak",
+      "title": "God's in his heaven; all's right with the world. https://t.co/ujFjXnMS61",
+      "link": "https://x.com/andy_matuschak/status/2097416632884969801",
+      "date": "2026-09-08",
+      "first_seen": "2026-09-08T23:53:36.184409+00:00",
+      "source_type": "x",
+      "summary": "分享一句诗意短句『天上有神，世间安好』，配一张图片，内容简短未做进一步阐述。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "You work your ass off to get a lot of money. But what is that money actually for?  Money has no intr…",
+      "link": "https://x.com/RayDalio/status/2097351372265938963",
+      "date": "2026-09-08",
+      "first_seen": "2026-09-08T23:53:34.838807+00:00",
+      "source_type": "x",
+      "summary": "达利欧谈金钱本身没有内在价值，真正的成功是认清自己的本性、走适合自己的路，而不是用财富衡量人生。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "Loyalty to specific people who are not in tight sync with the mission and how to achieve it will cre…",
+      "link": "https://x.com/RayDalio/status/2097313839066886278",
+      "date": "2026-09-08",
+      "first_seen": "2026-09-08T23:53:34.839084+00:00",
+      "source_type": "x",
+      "summary": "达利欧谈组织内部因个人忠诚与使命方向不一致而滋生派系问题，主张个人忠诚不应凌驾于团体利益之上。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Andy Matuschak",
       "title": "Been tinkering with annotation \"fusion\": annotate a paper with ink; take a photo; markup is segmente…",
       "link": "https://x.com/andy_matuschak/status/2097098368342192148",
       "date": "2026-09-07",
@@ -9,7 +53,7 @@
       "source_type": "x",
       "summary": "Andy Matuschak在试验一种批注「融合」玩法：先在纸质文档上手写批注、拍照，再把批注切割识别成结构化数据、重新叠加回干净的原始PDF上。他觉得这个方向技术上挺有意思，但概念上是错的——这种「写完就扔」的方式没法让人接着在上下文里继续「使用」这些批注，他会接着琢磨。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Amanda Askell",
@@ -20,7 +64,7 @@
       "source_type": "x",
       "summary": "Amanda Askell设想建一个邮箱地址，让自主运行的AI模型在需要道德指引时可以联系求助，但她也指出这需要一种「反向验证码」来识别对方既不是人类、也不是被人类指使来破解系统的AI。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -130,50 +174,6 @@
       "source_type": "x",
       "summary": "Dalio分享超验冥想（TM）对他处理痛苦、进入反思状态的帮助——这项练习从1969年至今，通过静坐重复咒语让思绪沉淀，进入逻辑意识之下的潜意识空间，他认为真正的创造力和情绪安顿都来自这个状态，而非强迫逻辑推导。",
       "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Andy Matuschak",
-      "title": "Extremely luxurious to go to the library, make a beeline for the oversize shelves, and wallow in end…",
-      "link": "https://x.com/andy_matuschak/status/2094871565678629139",
-      "date": "2026-09-01",
-      "first_seen": "2026-09-01T23:51:03.683520+00:00",
-      "source_type": "x",
-      "summary": "Andy Matuschak感叹去图书馆直奔超大开本书架、沉浸在华丽而不实用的大部头书籍中，是一种极致的奢侈享受。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "Early on, I had to confront some major weaknesses. I have a terrible rote memory—I can't remember an…",
-      "link": "https://x.com/RayDalio/status/2094812670956380497",
-      "date": "2026-09-01",
-      "first_seen": "2026-09-01T23:51:02.032509+00:00",
-      "source_type": "x",
-      "summary": "达利欧回顾早年经历：机械记忆差、学生时代成绩不好，也曾因年少气盛而自负，直到多次受挫后才学会敬畏；他意识到弱点本身不重要，关键是承认弱点、找互补的人共事，并从错误中学习。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "With the announcement of new U.S. sanctions for countries that trade with Iran, it has become increa…",
-      "link": "https://x.com/RayDalio/status/2094797659932377140",
-      "date": "2026-09-01",
-      "first_seen": "2026-09-01T23:51:02.032846+00:00",
-      "source_type": "x",
-      "summary": "针对美国对与伊朗有贸易往来国家的新制裁，达利欧认为这是美国全球权力面临的一次重大考验，符合他在《原则：应对变化中的世界秩序》一书中描述的“大周期”阶段性特征，他将持续关注各国后续反应及美国的应对方式。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "In this article in TIME, I squeezed my explanation of the debt supply and demand problem into a 3-mi…",
-      "link": "https://x.com/RayDalio/status/2094771413093667224",
-      "date": "2026-09-01",
-      "first_seen": "2026-09-01T23:51:02.032926+00:00",
-      "source_type": "x",
-      "summary": "达利欧在TIME杂志上用三分钟阅读篇幅解释了他对债务供需问题的看法，称这是他对该问题最精炼的说明，供感兴趣的读者参考。",
-      "tier": "low",
       "is_new": false
     }
   ]

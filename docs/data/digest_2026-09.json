@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "Introducing ChatGPT Images 2.5",
+      "link": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/",
+      "date": "2026-09-08",
+      "first_seen": "2026-09-08T23:53:30.314621+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI发布ChatGPT Images 2.5，改进多轮指令遵循、生成速度和参考图主体保留能力，新增Sunburst（精细编辑）和Flare（快速生成）两个模型。作者据此升级了自己的openai_image.py命令行工具以支持传入参考图片，并演示了给图表添加卡通浣熊角色的效果。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "OpenAI图片生成模型重大更新，全文确认作者亲自升级自己的CLI工具并给出可复用命令行示例演示效果，兼具新闻性和实操价值"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Andy Matuschak",
       "title": "Been tinkering with annotation \"fusion\": annotate a paper with ink; take a photo; markup is segmente…",
       "link": "https://x.com/andy_matuschak/status/2097098368342192148",
@@ -15,7 +32,7 @@
           "reason": "本人一手反思与经历，直接触及人机交互/思维工具周边领域，也印证了清单里「上游原创vs下游组合」式的自我校正"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -32,7 +49,7 @@
           "reason": "前沿AI公司内部真实数据披露coding agent对研究工作方式的重塑，讲清楚是什么、为什么重要，非纯新闻通稿"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",

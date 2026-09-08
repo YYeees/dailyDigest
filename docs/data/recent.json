@@ -2,44 +2,22 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "Creepy crawlies",
-      "link": "https://simonwillison.net/2026/Sep/7/creepy-crawlies/",
-      "date": "2026-09-07",
-      "first_seen": "2026-09-08T00:01:40.173812+00:00",
+      "title": "Introducing ChatGPT Images 2.5",
+      "link": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/",
+      "date": "2026-09-08",
+      "first_seen": "2026-09-08T23:53:30.314621+00:00",
       "source_type": "blog",
-      "summary": "Linux内核官方Git仓库git.kernel.org的维护者Konstantin Ryabitsev撰文吐槽爬虫已经成了破坏性的「背景辐射」：光是渲染commit页面给爬虫看，消耗的CPU比处理所有合法访问（包括git clone）加起来还多，5个地理分布节点里常年有14个核心专门在干这个。Simon Willison说自己维护的Datasette也面临类似问题，担心这个趋势会拖垮公开托管的开放数据服务。",
+      "summary": "OpenAI发布ChatGPT Images 2.5，改进多轮指令遵循、生成速度和参考图主体保留能力，新增Sunburst（精细编辑）和Flare（快速生成）两个模型。作者据此升级了自己的openai_image.py命令行工具以支持传入参考图片，并演示了给图表添加卡通浣熊角色的效果。",
       "tracks": [
         {
           "track": "ai",
-          "tier": "medium",
-          "reason": "AI训练爬虫对开源基础设施造成的现实冲击，属于AI生态趋势的侧写，宏观叙事而非直接操作指南"
+          "tier": "high",
+          "reason": "OpenAI图片生成模型重大更新，全文确认作者亲自升级自己的CLI工具并给出可复用命令行示例演示效果，兼具新闻性和实操价值"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "行业基础设施话题，与三根主干无实质连接"
-        }
-      ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Jakub Pachocki",
-      "link": "https://simonwillison.net/2026/Sep/7/jakub-pachocki/",
-      "date": "2026-09-07",
-      "first_seen": "2026-09-08T00:01:40.174014+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI首席科学家Jakub Pachocki在《An Alien Mind》一文里说，继续快速训练更强模型的最有力理由是需要用它们来防御其他AI带来的风险——需要强大又对齐的AI去守护基础设施、实时防范失控agent；但他也强调，这种「以防御之名」不能变成不计代价往前冲的借口。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "OpenAI高层对AI安全与竞速开发张力的表态，沾AI边但偏宏观叙事"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "产业安全辩论，与三根主干无实质连接"
+          "reason": "纯AI工具/模型内容，跟三根主干无关"
         }
       ],
       "is_new": true
@@ -59,51 +37,7 @@
           "reason": "前沿模型行为的第一手实测数据，讲清楚方法论和发现，属于AI趋势观察但偏商业/营销分析而非直接实操指南"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Video compressor",
-      "link": "https://simonwillison.net/2026/Sep/7/video-compressor/",
-      "date": "2026-09-07",
-      "first_seen": "2026-09-08T00:01:40.174050+00:00",
-      "source_type": "blog",
-      "summary": "为了给博客发一段优化过的演示视频，Simon Willison用Claude Code for web里的Claude Fable 5.1、基于FFMPEG的WebAssembly版本，做了一个网页版视频压缩工具，可以一次生成五档预设，最小档能压到原文件48%大小。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "编程agent实战案例，偏演示性质，展示用Claude Code快速搭建实用工具"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "纯工具demo，与三根主干无实质连接"
-        }
-      ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Mercator ↔ Equal Earth",
-      "link": "https://simonwillison.net/2026/Sep/7/equal-earth/",
-      "date": "2026-09-07",
-      "first_seen": "2026-09-08T00:01:40.174079+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison用ChatGPT Work里的GPT-6 Astra（medium档位）搭配D3，做了一个Mercator和Equal Earth两种地图投影之间的动画过渡工具，起因是最近联合国就Equal Earth投影法投票表决。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "编程agent实战案例，偏演示性质的vibe coding小工具"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "纯工具demo，与三根主干无实质连接"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -120,7 +54,7 @@
           "reason": "前沿AI公司内部真实数据披露coding agent对研究工作方式的重塑，讲清楚是什么、为什么重要，非纯新闻通稿"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -315,62 +249,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "前沿模型Fable 5.1的详细测评，讲清楚推理强度档位对输出质量/耗时/成本的具体影响，对选择推理强度有直接实操参考价值"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Codex bundles LibreOffice",
-      "link": "https://simonwillison.net/2026/Sep/1/codex-libreoffice/",
-      "date": "2026-09-01",
-      "first_seen": "2026-09-01T23:50:56.601468+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison在清理磁盘缓存时发现，OpenAI Codex桌面版（现更名ChatGPT桌面应用）在本地缓存了完整的Python、Node.js环境，以及LibreOffice、Poppler、git等原生二进制文件，总计1.7GB；配套的skills目录里说明了Codex如何调用这些工具处理文档，这揭示了Codex背后为支持文档处理任务而打包的完整运行时架构。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "揭示OpenAI Codex桌面应用打包完整运行时（Python/Node/LibreOffice）支持文档处理技能，讲清楚了AI工具底层架构的新发现，对理解AI编程工具实操有参考价值"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "PRs NOT Welcome: How Top AI Open Source Projects Are Managing Thousands of Contributors",
-      "link": "https://www.latent.space/p/pr-not-welcome",
-      "date": "2026-09-01",
-      "first_seen": "2026-09-01T23:50:57.149411+00:00",
-      "source_type": "blog",
-      "summary": "Vercel、Astro/Flue、tldraw等AI原生开源项目正在关闭对外部PR的直接接受，转而用自建的agent团队（“软件工厂”）来分诊issue、复现bug、实现修复并审查，再交给人类合并。Vercel的AI SDK项目agent已能完成25~35%的合并PR和70~80%的issue关闭；Astro创始人Fred Schott在此基础上做了新框架Flue，外部PR会被自动转成issue或讨论。tldraw等项目认为，当agent能写代码时，人工drive-by PR的价值降低，社区参与的重心正转向讨论、报告和判断力，而非直接贡献代码。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "详细报道多个头部AI原生开源项目如何用agent团队（软件工厂）管理贡献，是直接影响开发者理解AI工具落地的前沿趋势内容"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "报道AI原生开源项目用agent团队（软件工厂）管理贡献和维护，呼应“护城河在harness不在模型”的正向母题，但是二手报道，非作者一手经历"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Fal’s H3 Max Live breaks the infinite videogen barrier",
-      "link": "https://www.latent.space/p/ainews-fals-h3-max-live-breaks-the",
-      "date": "2026-09-01",
-      "first_seen": "2026-09-01T23:50:57.150874+00:00",
-      "source_type": "blog",
-      "summary": "Fal将Minimax上月发布的H3模型做了成本和质量优化，并针对自家推理引擎加速35倍，实现了生成速度快于实时观看的“无限视频”效果——由Ethan Mollick最先注意到，随后被网友做成无限直播的Twitch/YouTube频道，两平台很快因内容质量问题下架，Fal干脆自建了直播服务。作者认为，虽然现在的画面质量粗糙、毫无剧情，但这是“生成速度快于实时”这件事第一次被证明可行，随着技术迭代，这类能力会成为AI应用竞争的新战场。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "Fal对H3模型做推理加速优化，实现快于实时的视频生成，是前沿AI工具的新突破，讲清楚了是什么、为什么重要"
         }
       ],
       "is_new": false
