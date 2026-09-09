@@ -2,6 +2,61 @@
   "items": [
     {
       "person": "Andy Matuschak",
+      "title": "We might become grey goo, but before that, what about our spirits? \"The world it envisions for all o…",
+      "link": "https://x.com/andy_matuschak/status/2097778827925844467",
+      "date": "2026-09-09",
+      "first_seen": "2026-09-09T23:52:16.403486+00:00",
+      "source_type": "x",
+      "summary": "Andy回应Gregory Conti一篇引用鲁比奥反共演讲的文章，担心AI会让世界变得“扁平灰暗”，人不再有机会靠技艺和努力脱颖而出，天职存在的前提，机器做不过人，正在消失。Andy部分认同这种担忧是真实的伤害且未被AI拥护者认真对待，但他不认为结论会那么绝望，人会被迫也有机会开辟新的卓越渠道，他自己已经体会到agent帮他更快探索原型、旅行时看懂更多、发现日记里更多联系，但他也承认，这些变化是被强加给所有人的，缺乏民主参与，这是不道德的，尽管他自己作为技术人员也说不清这条线该划在哪。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "Almost every technology boom creates a bubble, then a bust, whether it’s railroads, the Industrial R…",
+      "link": "https://x.com/RayDalio/status/2097722434346496346",
+      "date": "2026-09-09",
+      "first_seen": "2026-09-09T23:52:15.007355+00:00",
+      "source_type": "x",
+      "summary": "Dalio谈技术泡沫的历史规律：铁路、工业革命、20年代的电力和汽车都曾是“神迹”技术却也伴随泡沫破裂，关键要分清技术本身的伟大和为它付出的价格是否合理，这条推文本身没点名AI，但语境明显在敲打当下的AI投资热。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Andy Matuschak",
+      "title": "Made an Obsidian plugin that turns audio files into interactive editable transcripts embedded within…",
+      "link": "https://x.com/andy_matuschak/status/2097528667907743768",
+      "date": "2026-09-09",
+      "first_seen": "2026-09-09T23:52:16.403719+00:00",
+      "source_type": "x",
+      "summary": "Andy做了一个Obsidian插件，把音频文件变成嵌在Markdown里的可交互可编辑文字稿：按住Command点击任意位置可从那里开始播放，删除文字会同步跳过对应音频片段，复制粘贴也能保留播放功能。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "To have a good relationship, you must be clear with each other about what the quid pro quo is--what…",
+      "link": "https://x.com/RayDalio/status/2097526574018949631",
+      "date": "2026-09-09",
+      "first_seen": "2026-09-09T23:52:15.007640+00:00",
+      "source_type": "x",
+      "summary": "Dalio讲的是关系相处原则：要把彼此之间“谁欠谁什么”讲清楚，什么算慷慨、什么算公平、什么算占便宜。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Andy Matuschak",
+      "title": "Outstanding new work on a composable and collaborative malleable computing environment from @inkands…",
+      "link": "https://x.com/andy_matuschak/status/2097507349502263323",
+      "date": "2026-09-09",
+      "first_seen": "2026-09-09T23:52:16.403747+00:00",
+      "source_type": "x",
+      "summary": "Andy转发Ink & Switch一个可组合协作的“可塑计算”环境新工作：同一份数据可被不同工具协同编辑、工具本身也可协同编辑、通过lens在不同表示间双向转换，且全部本地优先、可版本化分支。他形容这像Smalltalk、Webstrates式的梦想终于落地。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Andy Matuschak",
       "title": "RT @dreamwieber: I think one of my fundamental disappointments with modern devices is that I can't j…",
       "link": "https://x.com/andy_matuschak/status/2097432724231647678",
       "date": "2026-09-08",
@@ -9,7 +64,7 @@
       "source_type": "x",
       "summary": "转推一条对现代设备的不满：无法像纸笔一样自由地在屏幕上随手涂写标注，触及人机交互与思维工具的周边议题。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -20,7 +75,7 @@
       "source_type": "x",
       "summary": "分享一句诗意短句『天上有神，世间安好』，配一张图片，内容简短未做进一步阐述。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -31,7 +86,7 @@
       "source_type": "x",
       "summary": "达利欧谈金钱本身没有内在价值，真正的成功是认清自己的本性、走适合自己的路，而不是用财富衡量人生。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -42,7 +97,7 @@
       "source_type": "x",
       "summary": "达利欧谈组织内部因个人忠诚与使命方向不一致而滋生派系问题，主张个人忠诚不应凌驾于团体利益之上。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -151,28 +206,6 @@
       "first_seen": "2026-09-03T23:49:52.314714+00:00",
       "source_type": "x",
       "summary": "Andy Matuschak正在租一个专属工作室，做“环境的独裁者”实验；目前最喜欢的元素是一张没有电脑的大书桌，接下来要装一面8×6英尺的图钉墙，并向网友征集工作室布置的巧思。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "Where you go in life will depend on how you see things and who and what you feel connected to (your…",
-      "link": "https://x.com/RayDalio/status/2095293193956794428",
-      "date": "2026-09-02",
-      "first_seen": "2026-09-02T23:53:47.200580+00:00",
-      "source_type": "x",
-      "summary": "Dalio谈人生走向取决于你如何看待事物、以及选择与谁产生深度连接（家庭、社群、国家乃至整个生态系统），这决定了你在利己与利他之间会做出怎样的取舍——他认为人生中会不断遇到迫使你做这类选择的情境。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "When pain comes, it's easy to get hung up in it and skip reflection. Transcendental meditation has h…",
-      "link": "https://x.com/RayDalio/status/2095242852955537672",
-      "date": "2026-09-02",
-      "first_seen": "2026-09-02T23:53:47.200911+00:00",
-      "source_type": "x",
-      "summary": "Dalio分享超验冥想（TM）对他处理痛苦、进入反思状态的帮助——这项练习从1969年至今，通过静坐重复咒语让思绪沉淀，进入逻辑意识之下的潜意识空间，他认为真正的创造力和情绪安顿都来自这个状态，而非强迫逻辑推导。",
       "tier": "medium",
       "is_new": false
     }
