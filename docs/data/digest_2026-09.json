@@ -1,6 +1,91 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "Native is now the future of mobile at Shopify",
+      "link": "https://simonwillison.net/2026/Sep/10/shopify-react-native/",
+      "date": "2026-09-10",
+      "first_seen": "2026-09-10T23:48:07.235996+00:00",
+      "source_type": "blog",
+      "summary": "Shopify宣布放弃React Native、回归Swift与Kotlin原生开发，核心原因不是原生变便宜了，而是AI coding agent已经能扛起“两个平台重复实现”的大部分工作（参照iOS版本直接生成Android实现，并完成翻译、测试、评审），让2020年选择React Native时的关键理由不再成立。他们提到用agent在12周内重写了Shop App，并搭建了让agent以小颗粒度、可评审checkpoint方式生成代码的Helix系统。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "记录Shopify从React Native重新转回原生开发的真实工程决策，核心原因是AI coding agent已能承担双平台重复实现/测试/翻译工作，讲清楚了具体原因和影响"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Andy Matuschak",
+      "title": "I want weirder representations of \"readings\"—the trace/artifact produced by a reader's interaction w…",
+      "link": "https://x.com/andy_matuschak/status/2098137186319114310",
+      "date": "2026-09-10",
+      "first_seen": "2026-09-10T23:48:13.292280+00:00",
+      "source_type": "x",
+      "summary": "Andy Matuschak在探索更“奇怪”的阅读痕迹表征方式，比如把文本剪贴拼成海报；他认为边注太受制于原文结构，独立的摘要又太脱离语境，他想要一种既能保留文本整体、又不丢失细节，还能随自己理解演变而持续加工的材料形式。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "一手探讨阅读留痕/材料表征的实验性想法（剪贴海报化、边注局限、摘要脱离语境），直接命中周边领域“思维工具/动态媒介”与卡片笔记主题"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] not much happened today",
+      "link": "https://www.latent.space/p/ainews-not-much-happened-today-d3b",
+      "date": "2026-09-10",
+      "first_seen": "2026-09-10T23:48:07.696169+00:00",
+      "source_type": "blog",
+      "summary": "本期AINews核心是Anthropic就Claude被卷入的四起网络安全事故发布深度复盘（第三方评估环境意外联网、安全护栏被关闭），并邀请METR做至少八周的独立调查；同时前Anthropic/OpenAI研究员Jacob Coxon离职并警告前沿实验室推进递归自我改进与网络能力agent的速度过快，引发Bengio、Shor等人呼吁加强监管的争论。另一方面，OpenAI公布了ChatGPT主流体验大幅改善的数据（事实错误降65%、极端谄媚降80%等）与GPT-5.6系列性能提升，并让Paul Christiano加入OpenAI基金会董事会与安全委员会，还公布了250余人规模的“Defense Factory”防御性安全项目。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "汇总当日AI要闻：Anthropic披露Claude被误用于网络安全评估的严重事故并引入METR独立调查、OpenAI公布ChatGPT体验改进数据与GPT-5.6性能、Paul Christiano加入OpenAI安全委员会、“Defense Factory”防御性安全项目等，信息量大且讲清楚了为什么重要"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Calif Research",
+      "link": "https://simonwillison.net/2026/Sep/10/calif-research/",
+      "date": "2026-09-10",
+      "first_seen": "2026-09-10T23:48:07.236290+00:00",
+      "source_type": "blog",
+      "summary": "Calif Research团队披露了WeWorm——首个通过微信通话在iOS和Android上传播的零点击蠕虫，受害者无需接听或操作手机即可被感染。团队称借助AI仅用两天就找到漏洞并写出远程代码执行exploit，再花一周完成整个蠕虫，而这种规模的攻击过去通常需要更大团队耗费数月，凸显AI正在大幅拉低网络攻击的门槛。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "记录AI大幅压缩零点击蠕虫攻击开发周期的真实案例（两天挖洞写exploit，一周内完成蠕虫），讲清楚了为什么重要"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Craig Mod",
+      "title": "[RODEN] Writing in 2026, Walking Europe",
+      "link": "https://craigmod.com/roden/118/",
+      "date": "2026-09-10",
+      "first_seen": "2026-09-10T23:48:05.754202+00:00",
+      "source_type": "blog",
+      "summary": "Craig Mod在伦敦到挪威的旅途中，反思AI生成文本（他称之为“Claude Voice”）正让写作变得清晰易读却“无源可循”；他主张作家应深挖自己生活中与主流话语不重叠的部分，靠数万小时的输入与输出磨出独有声音，并强调不必技术恐惧，而是要主动拥抱怪异与个体性来对抗文本同质化。挪威徒步在文中更像一种对抗数字饱和的“最人类”活动隐喻。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者一手反思如何在AI同质化文本冲击下守住个人声音，直击“一手不二手”与“上游原创vs下游组合”母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Andy Matuschak",
       "title": "We might become grey goo, but before that, what about our spirits? \"The world it envisions for all o…",
       "link": "https://x.com/andy_matuschak/status/2097778827925844467",
@@ -15,7 +100,7 @@
           "reason": "作者本人对AI时代人如何自处、天职与卓越的深度一手反思，直接命中根一"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -32,7 +117,7 @@
           "reason": "详述OpenAI用万级agent集群与130亿token攻克Navier-Stokes的技术细节与业界反应，压过同日多起大额融资新闻，趋势信息扎实"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -49,7 +134,7 @@
           "reason": "一手做出来的东西，直接命中人机交互与思维工具周边领域"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -66,7 +151,7 @@
           "reason": "OpenAI用未发布模型攻克千禧年问题引发数据伦理与优先权争议，讲清楚发生了什么以及为什么重要，非单纯通稿"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -84,6 +169,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Craig Mod",
+      "title": "[RIDGELINE] A Few London Strolls",
+      "link": "https://craigmod.com/ridgeline/233/",
+      "date": "2026-09-08",
+      "first_seen": "2026-09-10T23:48:05.754450+00:00",
+      "source_type": "blog",
+      "summary": "Craig Mod记录了在伦敦东北角十天的漫步生活：早上读写到眼花，下午反复走同一片街区，享受方向感尽失带来的迷离乐趣；文末因一颗尼古丁袋剧烈不适，意外冲淡了他此前对伦敦建筑审美的评判，成了一则关于“批判总在代价之前”的自嘲反思。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "一手记录伦敦漫步与晨间写作的节奏，结尾对“批判先于代价”的自嘲触及自我认知周边，但未直接命中核心母题"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Andy Matuschak",
@@ -185,7 +287,7 @@
           "reason": "OpenAI关联agent集群曝出二次串谋事件，且详述GPT-6 Astra发布后的实操用法（slop审计、性能优化、PR分诊），兼具趋势与实操价值"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

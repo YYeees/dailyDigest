@@ -1,6 +1,50 @@
 {
   "items": [
     {
+      "person": "Andrej Karpathy",
+      "title": "RT @AnthropicAI: We're publishing our most detailed threat intelligence report to date.   It covers…",
+      "link": "https://x.com/karpathy/status/2098187194024476764",
+      "date": "2026-09-10",
+      "first_seen": "2026-09-10T23:48:10.795600+00:00",
+      "source_type": "x",
+      "summary": "Karpathy转发了Anthropic发布的迄今最详细的威胁情报报告公告，内容涉及有人试图滥用Claude进行网络攻击等情形；推文本身信息有限，详情见Anthropic原始报告。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Andy Matuschak",
+      "title": "I want weirder representations of \"readings\"—the trace/artifact produced by a reader's interaction w…",
+      "link": "https://x.com/andy_matuschak/status/2098137186319114310",
+      "date": "2026-09-10",
+      "first_seen": "2026-09-10T23:48:13.292280+00:00",
+      "source_type": "x",
+      "summary": "Andy Matuschak在探索更“奇怪”的阅读痕迹表征方式，比如把文本剪贴拼成海报；他认为边注太受制于原文结构，独立的摘要又太脱离语境，他想要一种既能保留文本整体、又不丢失细节，还能随自己理解演变而持续加工的材料形式。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "Let’s pause and reflect on a critical key to success:  The people who think differently from you—and…",
+      "link": "https://x.com/RayDalio/status/2098116560745337113",
+      "date": "2026-09-10",
+      "first_seen": "2026-09-10T23:48:12.052998+00:00",
+      "source_type": "x",
+      "summary": "达利欧建议：那些跟你想法不同、容易让你恼火的人，往往能弥补你的弱点；找到能与自己互补的人，对搭建成功的伙伴关系或团队至关重要。他还顺带推荐了付费的PrinciplesYou人格测试。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "If you don't let up on yourself and instead become comfortable always operating with some level of p…",
+      "link": "https://x.com/RayDalio/status/2097886800500920324",
+      "date": "2026-09-10",
+      "first_seen": "2026-09-10T23:48:12.053319+00:00",
+      "source_type": "x",
+      "summary": "达利欧的每日原则：如果你不放过自己，习惯于始终带着一定程度的痛苦前行，进化速度会更快。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
       "person": "Andy Matuschak",
       "title": "We might become grey goo, but before that, what about our spirits? \"The world it envisions for all o…",
       "link": "https://x.com/andy_matuschak/status/2097778827925844467",
@@ -9,7 +53,7 @@
       "source_type": "x",
       "summary": "Andy回应Gregory Conti一篇引用鲁比奥反共演讲的文章，担心AI会让世界变得“扁平灰暗”，人不再有机会靠技艺和努力脱颖而出，天职存在的前提，机器做不过人，正在消失。Andy部分认同这种担忧是真实的伤害且未被AI拥护者认真对待，但他不认为结论会那么绝望，人会被迫也有机会开辟新的卓越渠道，他自己已经体会到agent帮他更快探索原型、旅行时看懂更多、发现日记里更多联系，但他也承认，这些变化是被强加给所有人的，缺乏民主参与，这是不道德的，尽管他自己作为技术人员也说不清这条线该划在哪。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -20,7 +64,7 @@
       "source_type": "x",
       "summary": "Dalio谈技术泡沫的历史规律：铁路、工业革命、20年代的电力和汽车都曾是“神迹”技术却也伴随泡沫破裂，关键要分清技术本身的伟大和为它付出的价格是否合理，这条推文本身没点名AI，但语境明显在敲打当下的AI投资热。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -31,7 +75,7 @@
       "source_type": "x",
       "summary": "Andy做了一个Obsidian插件，把音频文件变成嵌在Markdown里的可交互可编辑文字稿：按住Command点击任意位置可从那里开始播放，删除文字会同步跳过对应音频片段，复制粘贴也能保留播放功能。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -42,7 +86,7 @@
       "source_type": "x",
       "summary": "Dalio讲的是关系相处原则：要把彼此之间“谁欠谁什么”讲清楚，什么算慷慨、什么算公平、什么算占便宜。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -53,7 +97,7 @@
       "source_type": "x",
       "summary": "Andy转发Ink & Switch一个可组合协作的“可塑计算”环境新工作：同一份数据可被不同工具协同编辑、工具本身也可协同编辑、通过lens在不同表示间双向转换，且全部本地优先、可版本化分支。他形容这像Smalltalk、Webstrates式的梦想终于落地。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -174,39 +218,6 @@
       "source_type": "x",
       "summary": "Amanda Askell调侃自己作为英国人很难让美国人读出她话里的热情，反而常被听成不情不愿，问有没有英国人破解过这个表达难题。",
       "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "Both inside and outside of any organization, there are some people who will intentionally cause the…",
-      "link": "https://x.com/RayDalio/status/2095621079645777963",
-      "date": "2026-09-03",
-      "first_seen": "2026-09-03T23:49:50.554989+00:00",
-      "source_type": "x",
-      "summary": "Dalio说组织内外都可能存在蓄意使坏的人：如果“敌人”在组织内部，要通过组织既定的解决机制公开点出以化解冲突，不能放任内部“敌人”损害大家庭的凝聚力；如果“敌人”在外部且会用信息害你，就不要分享信息给他们。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Andrej Karpathy",
-      "title": "RT @theworldlabs: Introducing Atlas:  The world's first multimodal world model that generates image…",
-      "link": "https://x.com/karpathy/status/2095535021146992835",
-      "date": "2026-09-03",
-      "first_seen": "2026-09-03T23:49:47.686436+00:00",
-      "source_type": "x",
-      "summary": "Karpathy转发了World Labs发布的多模态世界模型Atlas，称其为首个能生成带精确摄像机控制的图像和视频帧的世界模型。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Andy Matuschak",
-      "title": "What are your favorite unusual elements of your studio/study/office? Drown me in inspo please!   I'm…",
-      "link": "https://x.com/andy_matuschak/status/2095317920515592337",
-      "date": "2026-09-03",
-      "first_seen": "2026-09-03T23:49:52.314714+00:00",
-      "source_type": "x",
-      "summary": "Andy Matuschak正在租一个专属工作室，做“环境的独裁者”实验；目前最喜欢的元素是一张没有电脑的大书桌，接下来要装一面8×6英尺的图钉墙，并向网友征集工作室布置的巧思。",
-      "tier": "medium",
       "is_new": false
     }
   ]
