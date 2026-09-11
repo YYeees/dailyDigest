@@ -2,6 +2,79 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "So you want to use OpenRouter?",
+      "link": "https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/",
+      "date": "2026-09-11",
+      "first_seen": "2026-09-11T23:55:32.132858+00:00",
+      "source_type": "blog",
+      "summary": "OpenRouter号称能自动failover并帮你挑最划算的provider，但Mohamed Moustafa指出这会带来问题：不同provider跑的serving软件和优化设置不同，同一个OpenRouter模型端点实际请求到不同后端时表现会不一样，有的provider甚至不支持视觉能力，reasoning effort参数的处理方式也可能不同。好在可以用provider.only选项锁定具体provider，配合/endpoints接口查某个模型有哪些可用provider。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "面向工程师的AI基础设施选型建议：讲清楚了OpenRouter自动路由到不同后端provider会带来的实际问题(视觉能力缺失、reasoning effort处理不一致)，以及用provider.only参数锁定具体provider的解法"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Boris Cherny",
+      "link": "https://simonwillison.net/2026/Sep/11/boris-cherny/",
+      "date": "2026-09-11",
+      "first_seen": "2026-09-11T23:55:32.133143+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic的Boris Cherny说：Claude写的生产代码理应比人写的标准更高。他们靠一整套护栏保证这点——大量lint规则、大量测试、Claude驱动的端到端测试、每天跑的Claude模糊测试、自动化代码评审与安全评审、自动化代码重构等。没有这些护栏，代码库会很快变得难以维护。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Anthropic工程师Boris Cherny讲清楚了Claude写的生产代码要有比人写代码更高的门槛，以及具体靠哪些护栏做到(lint、测试、Claude驱动的端到端测试、每日跑的模糊测试、自动代码评审与安全评审、自动重构)，是直接可用的实操建议"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "正中'护城河在harness，不在模型'这条母题——Boris讲的是Anthropic内部围绕Claude写代码搭建的一整套工程护栏，是从业者一手经验"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Feeling sad about AI",
+      "link": "https://simonwillison.net/2026/Sep/11/feeling-sad-about-ai/",
+      "date": "2026-09-11",
+      "first_seen": "2026-09-11T23:55:32.133190+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison在HN评论区回应'对AI感到悲伤'这个话题：他自己几年前也经历过这种存在危机——看到编码agent一小时干完你一周的活还干得漂亮，第一反应是很受打击。但走出来之后会发现，把精确需求翻译成代码不再是稀缺技能，剩下要面对的问题还有很多，而你已有的经验和判断力能让你驾驭这些新工具、做到刚入门者做不到的水平。他认为软件行业本就没有过五年以上不变的技术栈，变化只是变快了，这是选择这行时就该有的心理准备。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "Simon本人的一手反思：从'编码agent一小时干完一周活'的存在危机，走到'深度经验仍是燃料，能带着新工具做到新手做不到的水平'，正中'深度+真做出来的东西=我的燃料'和'AI作为认知方式'两条母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Datasette 1.0a39 and 0.65.4 security releases",
+      "link": "https://simonwillison.net/2026/Sep/11/datasette-security/",
+      "date": "2026-09-11",
+      "first_seen": "2026-09-11T23:55:32.133301+00:00",
+      "source_type": "blog",
+      "summary": "Datasette发布了两个安全补丁版本(1.0a39和0.65.4)，修复因公开/私有表混用导致的漏洞。这次审计首次系统性引入Claude Fable 5.1、GPT-5.6、GPT-6 Astra三个前沿模型做代码审计，找出了一些很隐蔽的bug；作者和合作者摸索出一套协作方法——一人写复现测试、另一人实现修复，确保每个问题都有两个人独立过眼，同时不同模型的编码agent也在跑，往后会把前沿模型审计常态化纳入开发流程。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "全文读完确认：讲清楚了用Claude Fable 5.1/GPT-5.6/GPT-6 Astra做代码安全审计的具体协作方法(拆分测试与修复、双人复核)，是可直接借鉴的AI辅助审计实操流程"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "Native is now the future of mobile at Shopify",
       "link": "https://simonwillison.net/2026/Sep/10/shopify-react-native/",
       "date": "2026-09-10",
@@ -15,7 +88,7 @@
           "reason": "记录Shopify从React Native重新转回原生开发的真实工程决策，核心原因是AI coding agent已能承担双平台重复实现/测试/翻译工作，讲清楚了具体原因和影响"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -32,7 +105,7 @@
           "reason": "一手探讨阅读留痕/材料表征的实验性想法（剪贴海报化、边注局限、摘要脱离语境），直接命中周边领域“思维工具/动态媒介”与卡片笔记主题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -49,7 +122,7 @@
           "reason": "汇总当日AI要闻：Anthropic披露Claude被误用于网络安全评估的严重事故并引入METR独立调查、OpenAI公布ChatGPT体验改进数据与GPT-5.6性能、Paul Christiano加入OpenAI安全委员会、“Defense Factory”防御性安全项目等，信息量大且讲清楚了为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -66,7 +139,7 @@
           "reason": "记录AI大幅压缩零点击蠕虫攻击开发周期的真实案例（两天挖洞写exploit，一周内完成蠕虫），讲清楚了为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -83,7 +156,7 @@
           "reason": "作者一手反思如何在AI同质化文本冲击下守住个人声音，直击“一手不二手”与“上游原创vs下游组合”母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -185,7 +258,7 @@
           "reason": "一手记录伦敦漫步与晨间写作的节奏，结尾对“批判先于代价”的自嘲触及自我认知周边，但未直接命中核心母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",

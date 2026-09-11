@@ -1,6 +1,39 @@
 {
   "items": [
     {
+      "person": "Andy Matuschak",
+      "title": "I've been really loving Grant's thoughtful digital tabletop work.  Some great concepts: * bidirectio…",
+      "link": "https://x.com/andy_matuschak/status/2098553239511945335",
+      "date": "2026-09-11",
+      "first_seen": "2026-09-11T23:55:38.486358+00:00",
+      "source_type": "x",
+      "summary": "Andy Matuschak称赞Grant的数字桌游交互设计：用传统的块编辑器双向映射空间元素；用'frames'定义可选中、投射到外部屏幕并做CSS变换的区域。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "This happens as long-term rates rise relative to short-term rates. Though they try to hold short rat…",
+      "link": "https://x.com/RayDalio/status/2098411249218592784",
+      "date": "2026-09-11",
+      "first_seen": "2026-09-11T23:55:37.189918+00:00",
+      "source_type": "x",
+      "summary": "达利欧谈滞胀动态：长期利率相对短期利率走高时会出现这种局面，即便试图压住短期利率，长期利率仍在上升，同时伴随美元走弱和黄金波动。利率上升开始冲击股市——债券下跌而收益率上升，使股票的预期回报相对债券走低，给股市带来更广泛的压力。这种经典局面让美联储陷入两难：到底该收紧还是放松，而在贫富差距巨大的经济体里，是否持有股票会让这种冲击的影响天差地别，带来深远的政治含义。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Ray Dalio",
+      "title": "When there were just a few of us, we had meaningful relationships because we knew and liked each oth…",
+      "link": "https://x.com/RayDalio/status/2098392432245100936",
+      "date": "2026-09-11",
+      "first_seen": "2026-09-11T23:55:37.190217+00:00",
+      "source_type": "x",
+      "summary": "达利欧谈组织规模：人少时靠彼此认识喜欢维系关系；五十到一百人时形成社区感；超过这个规模社区感开始变弱。他认为把公司拆成百人上下、由共同使命统一的部门，是把有意义的关系尺度延伸到大公司的最佳方式。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
       "person": "Andrej Karpathy",
       "title": "RT @AnthropicAI: We're publishing our most detailed threat intelligence report to date.   It covers…",
       "link": "https://x.com/karpathy/status/2098187194024476764",
@@ -9,7 +42,7 @@
       "source_type": "x",
       "summary": "Karpathy转发了Anthropic发布的迄今最详细的威胁情报报告公告，内容涉及有人试图滥用Claude进行网络攻击等情形；推文本身信息有限，详情见Anthropic原始报告。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -20,7 +53,7 @@
       "source_type": "x",
       "summary": "Andy Matuschak在探索更“奇怪”的阅读痕迹表征方式，比如把文本剪贴拼成海报；他认为边注太受制于原文结构，独立的摘要又太脱离语境，他想要一种既能保留文本整体、又不丢失细节，还能随自己理解演变而持续加工的材料形式。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -31,7 +64,7 @@
       "source_type": "x",
       "summary": "达利欧建议：那些跟你想法不同、容易让你恼火的人，往往能弥补你的弱点；找到能与自己互补的人，对搭建成功的伙伴关系或团队至关重要。他还顺带推荐了付费的PrinciplesYou人格测试。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -42,7 +75,7 @@
       "source_type": "x",
       "summary": "达利欧的每日原则：如果你不放过自己，习惯于始终带着一定程度的痛苦前行，进化速度会更快。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -196,28 +229,6 @@
       "source_type": "x",
       "summary": "Andy Matuschak改装了自己的相机，让它能通过手机（放在口袋里、锁屏状态）作为BTLE客户端自动触发即时打印；还做了一个模式，只有在相机回放界面给照片\"加星\"时才打印，相当于在相机上直接做出一个\"打印\"按钮。",
       "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "Realizing that we innately want to evolve--and that the other stuff we are going after, while nice,…",
-      "link": "https://x.com/RayDalio/status/2095976639230255381",
-      "date": "2026-09-04",
-      "first_seen": "2026-09-04T23:47:18.302680+00:00",
-      "source_type": "x",
-      "summary": "Ray Dalio讲他意识到人类天生渴望进化，其他外在追求虽好但撑不起持久幸福感，这个认识让他更专注于让自己和推动世界进化这件事上。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Amanda Askell",
-      "title": "I still don't know how to convey my enthusiasm in a way that Americans will read as enthusiasm and n…",
-      "link": "https://x.com/AmandaAskell/status/2095662935603552337",
-      "date": "2026-09-03",
-      "first_seen": "2026-09-04T23:47:15.405696+00:00",
-      "source_type": "x",
-      "summary": "Amanda Askell调侃自己作为英国人很难让美国人读出她话里的热情，反而常被听成不情不愿，问有没有英国人破解过这个表达难题。",
-      "tier": "low",
       "is_new": false
     }
   ]
