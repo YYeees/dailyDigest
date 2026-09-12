@@ -33,6 +33,18 @@ ALWAYS_SUMMARIZE_TYPES = {"x"}
 # "最新"页面里，这些source_type不管tier全部展示(用紧凑样式，跟AI实操/锚点的大卡片分开)。
 ALWAYS_DISPLAY_TYPES = {"x"}
 
+# 这些人的X内容里，纯转推(retweet)直接不入库(2026-09-12定案)。转的是别人写的东西，
+# 而X板块的用途是"知道这个人更新了、大概聊了什么"，转推撑不起这个用途，量大了还会把
+# 本人写的内容淹掉——@steipete最近40条里32条是转推(80%)，加进来当天就会顶满整个板块。
+# 只对量大的人开，其他人照旧全收：Karpathy(2条)/Matuschak(3条)转得很少，偶尔转一次
+# 本身就是信号，不该跟着一起砍。
+# 放这里而不是RANKING_CRITERIA.md：判断"是不是转推"读API的retweeted_tweet字段就行，
+# 属于机械分支，不需要理解内容——按本文件头的分工，这类规则维护在代码里。
+# 注意是在抓取阶段丢掉、不写进items表，所以也省掉了这些条目的摘要生成开销
+# (X走ALWAYS_SUMMARIZE_TYPES，每条都要写digest_summary)。代价是丢了就找不回来，
+# 哪天想重新收，last_tweets只能捞回最近一页。
+X_SKIP_RETWEETS = {"Peter Steinberger"}
+
 # 内容归档/展示的统一规则(2026-08-15定案，替代之前的flow/feature分类)：
 # - high档：不管来源，永久进月度归档
 # - medium档：不管来源，只在RECENT_WINDOW_DAYS内的"最新"页面展示，不归档

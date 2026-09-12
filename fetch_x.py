@@ -4,8 +4,10 @@
 
 只取每人最新一页(最多20条，不含回复)，不做分页增量——digest管线每天跑一次，单页20条
 对现有账号都能覆盖一天以上。2026-09-12加@steipete时实测过：他是这批里最高产的，约10条/天
-(不含回复，但含RT)，单页刚好覆盖2天，余量不大；哪天他发超过20条(或者再加更高产的账号)，
-超出的部分会被静默漏掉，那时候就得在这里加分页。
+(不含回复)，单页刚好覆盖2天，余量不大；哪天他发超过20条(或者再加更高产的账号)，超出的
+部分会被静默漏掉，那时候就得在这里加分页。注意config.X_SKIP_RETWEETS丢掉的转推**是在
+这一页之内**丢的，不会让这一页多装几条本人写的——他80%是转推，所以过滤后实际入库的只有
+每页4条左右，但页仍然只覆盖那2天。
 
 不做排序、不做摘要生成——这两步交给排序阶段(读RANKING_CRITERIA.md+config.py里的
 ALWAYS_SUMMARIZE_TYPES)处理，这里只负责抓取入库，summary字段存推文原文(英文)。
@@ -23,7 +25,7 @@ import requests
 from dotenv import load_dotenv
 import os
 
-from config import DB_PATH
+from config import DB_PATH, X_SKIP_RETWEETS
 from sources import X_SOURCES
 
 load_dotenv()
@@ -132,8 +134,16 @@ def fetch_all():
             continue
 
         tweets = payload["data"]["tweets"]
+        skip_rt = source["person"] in X_SKIP_RETWEETS
         new_count = 0
+        rt_count = 0
         for tweet in tweets:
+            # 纯转推(retweeted_tweet非空)：对X_SKIP_RETWEETS里的人直接丢掉，不入库。
+            # 用这个字段而不是text的"RT @"前缀——实测两者结果一致，但字段是结构化的，
+            # 不会被正文里恰好出现的"RT @"骗到。
+            if skip_rt and tweet.get("retweeted_tweet"):
+                rt_count += 1
+                continue
             record = normalize_tweet(source, tweet)
             cur = conn.execute("SELECT 1 FROM items WHERE guid = ?", (record["guid"],))
             if cur.fetchone() is not None:
@@ -147,7 +157,8 @@ def fetch_all():
             new_count += 1
         conn.commit()
         total_new += new_count
-        print(f"[OK] {source['person']}: {len(tweets)}条 in page, {new_count}条新增")
+        skipped = f", 跳过{rt_count}条转推" if rt_count else ""
+        print(f"[OK] {source['person']}: {len(tweets)}条 in page, {new_count}条新增{skipped}")
 
     conn.close()
     print(f"\n共新增 {total_new} 条")
