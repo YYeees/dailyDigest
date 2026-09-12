@@ -40,7 +40,7 @@ except ImportError:
 CREDITS_PER_TWEET = 15
 TWEETS_PER_CALL = 20
 MIN_RUNWAY_DAYS = 30  # 余额撑不到30天就报警，留足充值的时间
-X_SILENCE_LIMIT_DAYS = 7  # 4个活跃账号一周一条都没有，基本可以确定是抓取坏了而不是真没发
+X_SILENCE_LIMIT_DAYS = 7  # X_SOURCES里的活跃账号一周一条都没有，基本可以确定是抓取坏了而不是真没发
 
 
 def _fail(msg):

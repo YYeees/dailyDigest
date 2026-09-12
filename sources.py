@@ -58,11 +58,19 @@ SOURCES = [
 #   Nathan Lambert(Interconnects) - https://www.interconnects.ai/feed  研究级别,最难
 # 如果Latent Space也跟得顺了,再考虑往上加。
 
-# X源(2026-08-15新增，2026-08-15追加Karpathy改为仅X、Dalio切到X)。
+# X源(2026-08-15新增，2026-08-15追加Karpathy改为仅X、Dalio切到X；2026-09-12加Boris Cherny、
+# Peter Steinberger)。
 # 用TwitterAPI.io抓，后面可能继续扩大——扩大时直接往这个list加条目就行。
+#
+# 2026-09-12两位按文件头的规矩核实过一手身份(查TwitterAPI.io的user/info读本人bio自认)：
+#   - @bcherny  bio="Claude Code @anthropicai"，即Claude Code的作者Boris Cherny
+#   - @steipete bio="Polyagentmorous ClawFather...@OpenClaw🦞 + @OpenAI"，即OpenClaw的作者
+#     Peter Steinberger("ClawFather"是他自称)
 X_SOURCES = [
     {"person": "Amanda Askell", "x_username": "AmandaAskell"},
     {"person": "Andrej Karpathy", "x_username": "karpathy"},
     {"person": "Ray Dalio", "x_username": "RayDalio"},
     {"person": "Andy Matuschak", "x_username": "andy_matuschak"},
+    {"person": "Boris Cherny", "x_username": "bcherny"},
+    {"person": "Peter Steinberger", "x_username": "steipete"},
 ]
