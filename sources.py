@@ -47,7 +47,45 @@ SOURCES = [
 
     {"person": "Latent Space", "type": "blog", "name": "Latent Space (swyx & Alessio)",
      "url": "https://www.latent.space/feed"},
+
+    {"person": "Hamel Husain", "type": "blog", "name": "Hamel Husain (hamel.dev)",
+     "url": "https://hamel.dev/index.xml"},
+
+    {"person": "Martin Fowler", "type": "blog", "name": "Martin Fowler",
+     "url": "https://martinfowler.com/feed.atom"},
+
+    {"person": "NN/g", "type": "blog", "name": "NN/g (Nielsen Norman Group)",
+     "url": "https://www.nngroup.com/feed/rss/"},
+
+    {"person": "Amelia Wattenberger", "type": "blog", "name": "Amelia Wattenberger",
+     "url": "https://wattenberger.com/rss.xml"},
 ]
+# 2026-09-12加这四个，分两个方向(用户本职是软件测试，另外对艺术设计感兴趣但没有美术功底、
+# 强在审美和眼力)。全部按文件头的规矩核实过一手身份，并且实测了更新量和主题密度——机构feed
+# 最容易混公关稿，光看名气会踩坑(实测拒掉的：OpenAI Blog 153条/90天全是产品公关和客户案例；
+# Thoughtworks Insights 68%密度但一半是招聘和AWS联合营销；Vercel 329条/90天纯changelog)。
+#
+# 测试方向：
+#   Hamel Husain  3条/90天，标题AI密度55%，全是evals("Do Automated Evals Work?"
+#     "Evals Skills for Coding Agents")。身份核实：hamel.dev首页本人自述"machine learning
+#     engineer with 20+ years"、Airbnb和GitHub出身。注意他卖evals课程、首页就挂着招生，
+#     会有自我推广内容，参照Peter Steinberger那条宣发规则的思路判断。量少是优点，不刷屏。
+#   Martin Fowler 27条/90天，AI密度只有12%但命中的正是交叉点("TDD inside the agent loop -
+#     theater or actual value?")。身份核实：martinfowler.com/aboutMe.html本人自述，站上
+#     Topics明确列着Testing。噪音是Fragments/社交媒体流水账，靠逐条判tier过滤——跟Latent
+#     Space的[AINews]一个处理方式，不是抓取出错。
+#
+# 设计方向(选的都是"讲判断力和证据"而不是"教画工"的，用户没有美术功底)：
+#   NN/g 20条/90天，AI密度45%("Using AI for UX Work: Study Guide""The Custodial Era of
+#     UX: Cleaning Up After AI")。做可用性研究的机构，域名本身即身份。噪音只有UX Conference
+#     的会议广告，好滤。
+#   Amelia Wattenberger 1条/90天，极慢但每篇都值("Our interfaces have lost their senses"
+#     "Fish eye for text")。身份核实：wattenberger.com首页本人自述"Principal Research
+#     Engineer exploring novel UIs + playing with ML"、GitHub的研发小组。她标题里基本不出现
+#     AI字样，别用关键词密度误判成不相关。
+#
+# 注意：测试类内容按RANKING_CRITERIA.md的例外要判ai_tier=low走锚点track(用户暂时不想对外
+# 展示)，设计类内容天然接锚点的"人机交互/思维工具/动态媒介"这条周边领域。
 # 2026-08-17加入Latent Space：Mollick的内容用户已经不觉得够吃了(基本都是已知的东西)，触发了
 # 2026-08-13就定好的"往上加难度"计划。feed里summary字段很短(teaser，十几到一百多字符)，
 # 归类成blog(而不是podcast)是为了让medium/high档触发WebFetch抓全文精判——按podcast
@@ -69,8 +107,14 @@ SOURCES = [
 X_SOURCES = [
     {"person": "Amanda Askell", "x_username": "AmandaAskell"},
     {"person": "Andrej Karpathy", "x_username": "karpathy"},
-    {"person": "Ray Dalio", "x_username": "RayDalio"},
-    {"person": "Andy Matuschak", "x_username": "andy_matuschak"},
     {"person": "Boris Cherny", "x_username": "bcherny"},
     {"person": "Peter Steinberger", "x_username": "steipete"},
 ]
+# 2026-09-12撤掉Ray Dalio(@RayDalio)和Andy Matuschak(@andy_matuschak)的X源——用户说
+# "我发现我不咋点开"，是读者行为的反馈，不是这两个账号抓取有问题。
+# 两点注意：
+#   1. Andy Matuschak**只撤X**，他的博客(andymatuschak.org，在上面SOURCES里)照旧保留。
+#      用户说的是"X里面的andy内容"，不是这个人整个不要了。
+#   2. Ray Dalio撤掉后就彻底没有来源了——他2026-08-15从RSS切到过X，这是他唯一的渠道。
+#      所以RANKING_CRITERIA.md里那条"Ray Dalio的X内容"排除规则也一并删了(规则针对的源
+#      都没了，留着只会白占每次跑批的判断上下文)。哪天想加回来，从git history捞。
