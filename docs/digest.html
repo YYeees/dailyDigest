@@ -17,6 +17,7 @@
     --tag-high-bg: #cbcadb;
     --tag-ai-bg: #bcd1ca;
     --tag-anchor-bg: #bcd1ca;
+    --tag-eval-bg: #d8c6a8;
     --today-bg: var(--card);
     --today-border: var(--accent);
   }
@@ -121,6 +122,7 @@
   }
   .category-ai { background: var(--tag-ai-bg); }
   .category-anchor { background: var(--tag-anchor-bg); }
+  .category-eval { background: var(--tag-eval-bg); }
   .item a.title {
     display: block;
     font-size: 1.25rem;
@@ -254,7 +256,7 @@ const TYPE_ICON = {
   },
 };
 
-const TRACK_LABEL = { ai: 'AI', anchor: '锚点' };
+const TRACK_LABEL = { ai: 'AI', anchor: '锚点', eval: 'Eval' };
 const TIER_LABEL = { high: 'High', medium: 'Medium' };
 
 // ---- 「记一笔」:在写作收件箱里新建/打开一条临时笔记 ----

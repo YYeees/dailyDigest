@@ -17,6 +17,7 @@
         把判断结果写回digest.db。results.json是数组,每个元素:
         {"guid": "...", "ai_tier": "high|medium|low", "ai_reason": "...",
          "anchor_tier": "high|medium|low", "anchor_reason": "...",
+         "eval_tier": "high|medium|low", "eval_reason": "...",
          "digest_summary": "..." 或 null,
          "excluded_reason": "..." 或 null(可选,不传等价于null)}
         ranked_at自动写当前时间,同时把content清空——正文只在排序那一次用得上,排完留着
@@ -101,8 +102,9 @@ def cmd_write(args):
     for r in results:
         if "guid" not in r:
             raise ValueError(f"缺少guid: {r}")
-        if r.get("ai_tier") not in VALID_TIERS or r.get("anchor_tier") not in VALID_TIERS:
-            raise ValueError(f"tier取值必须是high/medium/low: {r}")
+        missing = [f for f in ("ai_tier", "anchor_tier", "eval_tier") if r.get(f) not in VALID_TIERS]
+        if missing:
+            raise ValueError(f"{missing}取值必须是high/medium/low(三个track都要判): {r}")
 
     conn = sqlite3.connect(DB_PATH)
     now = datetime.now(timezone.utc).isoformat()
@@ -111,10 +113,12 @@ def cmd_write(args):
     for r in results:
         cur = conn.execute(
             """UPDATE items SET ai_tier=?, ai_reason=?, anchor_tier=?, anchor_reason=?,
+               eval_tier=?, eval_reason=?,
                digest_summary=?, excluded_reason=?, ranked_at=?, content=NULL WHERE guid=?""",
             (
                 r["ai_tier"], r.get("ai_reason", ""),
                 r["anchor_tier"], r.get("anchor_reason", ""),
+                r["eval_tier"], r.get("eval_reason", ""),
                 r.get("digest_summary"), r.get("excluded_reason"), now, r["guid"],
             ),
         )

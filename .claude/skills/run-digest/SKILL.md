@@ -40,18 +40,18 @@ python3 scripts/rank_items.py pending --with-content
 
 ### 3. 两段式判断——读 `RANKING_CRITERIA.md` 获取判断标准，这里只列执行步骤
 
-判断锚点track需要的清单已经内联在`RANKING_CRITERIA.md`的Track 2里，**不要去读任何仓库外的文件**——尤其不要去找`/Users/taoye/claude/thought-lab/`下面的路径，那是用户本地Mac上的目录，定时任务跑在GitHub Actions上根本读不到。**读不到某个可选文件时绝不要停下来问用户**：这是无人值守的定时任务，没人会回答，停下来等于整次跑批白跑(2026-08-20踩过，那次已经抓到6条新内容，因为卡在提问上没走到commit，随runner容器一起丢了)。
+判断锚点track需要的清单已经内联在`RANKING_CRITERIA.md`的Track 2里(eval track的判据在Track 3)，**不要去读任何仓库外的文件**——尤其不要去找`/Users/taoye/claude/thought-lab/`下面的路径，那是用户本地Mac上的目录，定时任务跑在GitHub Actions上根本读不到。**读不到某个可选文件时绝不要停下来问用户**：这是无人值守的定时任务，没人会回答，停下来等于整次跑批白跑(2026-08-20踩过，那次已经抓到6条新内容，因为卡在提问上没走到commit，随runner容器一起丢了)。
 
-**初筛**(不抓取任何东西)：**一轮里把所有pending条目一次性判完**，不要一条条分开处理——初筛不需要任何工具调用，凑一轮做完能省掉N-1轮的turn开销。手里有什么就用什么：`body_source == "rss"`的条目用`content`(正文)判，其余的只能用title+summary判。按`RANKING_CRITERIA.md`里Track 1(AI实操/趋势)和Track 2(thought-lab锚点)的标准，给每条条目出`ai_tier`/`ai_reason`/`anchor_tier`/`anchor_reason`。
+**初筛**(不抓取任何东西)：**一轮里把所有pending条目一次性判完**，不要一条条分开处理——初筛不需要任何工具调用，凑一轮做完能省掉N-1轮的turn开销。手里有什么就用什么：`body_source == "rss"`的条目用`content`(正文)判，其余的只能用title+summary判。按`RANKING_CRITERIA.md`里Track 1(AI实操/趋势)、Track 2(thought-lab锚点)、Track 3(eval，用户本职软件测试)的标准，给每条条目出`ai_tier`/`ai_reason`/`anchor_tier`/`anchor_reason`/`eval_tier`/`eval_reason`。**三个track都要出**，少一个`rank_items.py write`会直接报错拒收。
 
 **精判**(初筛做完之后，只针对需要精判的条目继续，按`body_source`执行，不用自己重新判断走哪条路径)：
 - `body_source == "rss"` → **不要WebFetch**。初筛已经看过正文了，tier就是终值。任一track是`medium`/`high`时基于正文写一段`digest_summary`(内容概要+核心观点，2~4句，不是摘录)。
 - `body_source == "fetch"` 且初筛任一track是`medium`或`high` → 用WebFetch工具抓一次`link`的全文，基于全文重新判断该track的tier(可以推翻初筛结果)，并写`digest_summary`。全文读完就丢，不要写入任何文件、不要存进结果JSON。
 - `body_source == "none"` 且初筛任一track是`medium`/`high` → 不追加抓取，基于已有的`summary`字段写一段轻提炼作为`digest_summary`。X的`summary`是英文推文原文，写成中文概要(1~2句)，不要照抄英文。
-- `always_summarize == true`(X，或标题带`[RIDGELINE]`前缀的Craig Mod文章) → 不管`ai_tier`/`anchor_tier`判成什么，都要写中文`digest_summary`。X是"7日内关注"页"X动态"板块不管tier全展示；Ridgeline是用户明确说很喜欢、不想被判断结果筛掉，全部永久展示(见`config.ALWAYS_ARCHIVE_TITLE_PREFIXES`)。这类如果`body_source`是`"fetch"`但初筛两个track都`low`，不用额外WebFetch全文，直接基于已有`summary`写轻提炼即可，跟`"none"`走同样的轻量路径。
-- 其余情况(两个track都`low`且`always_summarize == false`) → 维持low，`digest_summary`留空(null)。
+- `always_summarize == true`(X，或标题带`[RIDGELINE]`前缀的Craig Mod文章) → 不管三个track判成什么，都要写中文`digest_summary`。X是"7日内关注"页"X动态"板块不管tier全展示；Ridgeline是用户明确说很喜欢、不想被判断结果筛掉，全部永久展示(见`config.ALWAYS_ARCHIVE_TITLE_PREFIXES`)。这类如果`body_source`是`"fetch"`但初筛三个track都`low`，不用额外WebFetch全文，直接基于已有`summary`写轻提炼即可，跟`"none"`走同样的轻量路径。
+- 其余情况(三个track都`low`且`always_summarize == false`) → 维持low，`digest_summary`留空(null)。
 
-`ai_tier`/`anchor_tier`判完后，再对照`RANKING_CRITERIA.md`最后的"内容排除"一节检查一遍——目前只对Ray Dalio的X内容生效，命中就在结果里加`excluded_reason`(一句话理由)，其余字段照常写，导出时会被过滤掉。
+三个track判完后，再对照`RANKING_CRITERIA.md`最后的"内容排除"一节检查一遍——目前只对Peter Steinberger的X内容生效(宣发/广告，2026-09-12加；原来那条Ray Dalio的规则已随他的X源一起撤掉)，命中就在结果里加`excluded_reason`(一句话理由)，其余字段照常写，导出时会被过滤掉。
 
 ### 4. 写回数据库
 
@@ -67,7 +67,7 @@ python3 scripts/rank_items.py write <临时文件路径>
 python3 export_json.py && python3 export_recent.py --pipeline-run
 ```
 
-一次Bash调用跑完，不要拆成两次。**`--pipeline-run`这个参数不能漏**——它告诉导出脚本"这次是完整跑了一遍管线"，这样当这次一条新内容都没抓到时，会把上一批残留的"刚更新"高亮灭掉(不带这个参数是手动重跑导出的语义，会原样保留上一份高亮，见`new_flags.py`模块头)。`export_json.py`导出月度归档(`docs/digest.html`用，只归档high档)，`export_recent.py`导出最近7天动态(`docs/index.html`"7日内关注"页的"AI实操/趋势"+"关注锚点"+"X动态"三个板块用)——**两个都要跑**，漏了`export_recent.py`该页面会拿不到数据。
+一次Bash调用跑完，不要拆成两次。**`--pipeline-run`这个参数不能漏**——它告诉导出脚本"这次是完整跑了一遍管线"，这样当这次一条新内容都没抓到时，会把上一批残留的"刚更新"高亮灭掉(不带这个参数是手动重跑导出的语义，会原样保留上一份高亮，见`new_flags.py`模块头)。`export_json.py`导出月度归档(`docs/digest.html`用，只归档high档)，`export_recent.py`导出最近7天动态(`docs/index.html`"7日内关注"页用：AI实操/锚点/eval三个track合并成一个列表、靠右上角徽章区分，外加独立的"X动态"板块)——**两个都要跑**，漏了`export_recent.py`该页面会拿不到数据。
 
 ### 6. 提交并推送
 

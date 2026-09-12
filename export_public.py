@@ -11,6 +11,10 @@
 - 只放命中AI track的条目;`tracks`里只留ai那条。**锚点track整条不外传**——anchor_reason
   会直接引用RANKING_CRITERIA.md里的正向母题原话,那是用户的思想坐标,不是内容信息。
   同一条内容两个track都命中时,条目照常公开,只是把anchor那条从tracks里摘掉。
+- **eval track命中的条目整条不公开**(2026-09-12定案),比锚点那条更严:锚点是"条目照常
+  公开、只摘掉徽章",eval是"整条扣下"。这是用户的本职(软件测试)内容,他暂时不想对外展示。
+  注意**不看ai_tier判成什么**——evals和测试工具的内容本来就常常同时是正经的AI实操内容,
+  只按ai track过滤必然漏,所以这里以"有没有命中eval"为准。
 - X动态不放:X是不限tier全展示的(见config.ALWAYS_DISPLAY_TYPES),里面混着跟AI无关的
   个人动态,展示规则跟"只公开AI"直接冲突。
 - GitHub Trending照常放:那份导出本来就只有ai_related=1的仓库。
@@ -50,7 +54,12 @@ HTML_PAGES = ("index.html", "digest.html")
 # 而不是悄悄把字眼发出去。
 HTML_STRIPS = (
     ('        <option value="anchor">锚点</option>\n', ""),
-    ("const TRACK_LABEL = { ai: 'AI', anchor: '锚点' };", "const TRACK_LABEL = { ai: 'AI' };"),
+    ('        <option value="eval">Eval</option>\n', ""),
+    # eval track的样式也摘掉:CSS本身泄露不了内容,但留着等于告诉读源码的人"还有第三条track"
+    ("    --tag-eval-bg: #d8c6a8;\n", ""),
+    ("  .category-eval { background: var(--tag-eval-bg); }\n", ""),
+    ("const TRACK_LABEL = { ai: 'AI', anchor: '锚点', eval: 'Eval' };",
+     "const TRACK_LABEL = { ai: 'AI' };"),
     # 开发注释也算:它们泄露不了判断内容,但会告诉读源码的人"这里还有第二条track"
     ("AI/锚点/tier标签", "AI/tier标签"),
     ("// ---- 最近更新板块：AI实操+关注锚点合并。右上角两类独立标签：",
@@ -74,10 +83,15 @@ README = """# AI Daily News
 
 
 def public_item(item):
-    """按白名单挑字段 + 只留AI track;这条内容没命中AI track时返回None(整条不公开)。"""
+    """按白名单挑字段 + 只留AI track;没命中AI track、或命中了eval track时返回None(整条不公开)。"""
+    tracks = item.get("tracks", [])
+    # eval(用户本职:软件测试/评测)命中就整条扣下,不管ai判成什么——这类内容常常同时是
+    # 正经的AI实操内容,只按"有没有ai track"过滤是漏的。顺序上先于下面的ai筛选。
+    if any(t.get("track") == "eval" for t in tracks):
+        return None
     ai_tracks = [
         {"track": t["track"], "tier": t["tier"], "reason": t.get("reason", "")}
-        for t in item.get("tracks", []) if t.get("track") == "ai"
+        for t in tracks if t.get("track") == "ai"
     ]
     if not ai_tracks:
         return None
@@ -95,16 +109,17 @@ def write_json(path, data):
 
 
 def audit(paths):
-    """产物自检:锚点的任何痕迹都不该出现在公开数据里。
+    """产物自检:锚点和eval的任何痕迹都不该出现在公开数据里。
 
     这不是"以防万一"——上面的过滤只要哪天被改错(比如白名单里手滑加回tracks原样透传),
     静默漏出去的就是用户的母题清单。宁可让跑批在这里炸掉,也不要悄悄发出去。
     """
     for path in paths:
         text = path.read_text(encoding="utf-8")
-        for needle in ('"anchor"', "anchor_tier", "anchor_reason", "锚点"):
+        for needle in ('"anchor"', "anchor_tier", "anchor_reason", "锚点",
+                       '"eval"', "eval_tier", "eval_reason"):
             if needle in text:
-                raise SystemExit(f"[中止] {path} 里出现了`{needle}`,锚点内容可能正在外泄,不导出。")
+                raise SystemExit(f"[中止] {path} 里出现了`{needle}`,不该外传的内容可能正在外泄,不导出。")
 
 
 def export():
@@ -145,7 +160,7 @@ def export():
         print(f"[OK] {name} — 原样搬运")
 
     audit(written)
-    print("[OK] 自检通过:公开数据里没有锚点痕迹")
+    print("[OK] 自检通过:公开数据里没有锚点/eval痕迹")
 
     for name in HTML_PAGES:
         html = (DOCS / name).read_text(encoding="utf-8")
@@ -159,10 +174,13 @@ def export():
         html = html.replace(SITE_CONFIG_MARKER, SITE_CONFIG_SCRIPT)
         for old_text, new_text in HTML_STRIPS:
             html = html.replace(old_text, new_text)
-        if "锚点" in html:
-            raise SystemExit(f"[中止] docs/{name} 剥离后仍残留`锚点`字样,HTML_STRIPS该更新了,不导出。")
+        for residue in ("锚点", "eval"):
+            if residue in html:
+                raise SystemExit(
+                    f"[中止] docs/{name} 剥离后仍残留`{residue}`字样,HTML_STRIPS该更新了,不导出。"
+                )
         (OUT / name).write_text(html, encoding="utf-8")
-        print(f"[OK] {name} — 已注入公开站开关、剥掉锚点字样")
+        print(f"[OK] {name} — 已注入公开站开关、剥掉锚点/eval字样")
 
     # Jekyll会吃掉下划线开头的文件;这个站是纯静态产物,不需要它插手
     (OUT / ".nojekyll").write_text("", encoding="utf-8")

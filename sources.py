@@ -59,7 +59,40 @@ SOURCES = [
 
     {"person": "Amelia Wattenberger", "type": "blog", "name": "Amelia Wattenberger",
      "url": "https://wattenberger.com/rss.xml"},
+
+    {"person": "Maaret Pyhäjärvi", "type": "blog", "name": "Maaret Pyhäjärvi (Visible Quality)",
+     "url": "https://visible-quality.blogspot.com/feeds/posts/default"},
+
+    {"person": "Antithesis", "type": "blog", "name": "Antithesis (自主测试/确定性仿真)",
+     "url": "https://antithesis.com/blog/rss.xml"},
+
+    {"person": "Ministry of Testing", "type": "blog", "name": "Ministry of Testing Club(论坛)",
+     "url": "https://club.ministryoftesting.com/latest.rss"},
 ]
+# 2026-09-12第二批，全部服务eval track(AI怎么改造测试这门手艺)，同样实测过再选：
+#   Maaret Pyhäjärvi 8条/90天。芬兰的一线测试员，她在真拿自己的工作做实验而不是评论AI
+#     ("Why would I even want to generate test cases with AI?""Benchmarking results -
+#     Human, Human with AI, AI with Human")。标题AI密度只有12%，别用关键词密度误判。
+#   Antithesis 5条/90天。做确定性仿真测试(deterministic simulation testing)/自主找bug，
+#     跟"让LLM帮我写测试用例"是完全不同的创新轴，更底层。标题AI密度3%是误判——
+#     "Breaking the WAL""Finding bugs in Raft implementations"讲的就是自动化找bug本身。
+#     这是厂商博客但技术含量高，不是营销稿。
+#   Ministry of Testing 30条/90天，AI密度33%("Is agentic AI testing real?""AI assisted
+#     testing""What are the signs that a QA manager is AI pilled")。
+#     **注意这是Discourse论坛的latest feed，不是文章**：每条是个帖子，主楼往往很短、
+#     精华在回帖里(管线抓全文只拿得到主楼)，而且混着"个人求职困惑"这类跟主题无关的帖。
+#     它给的是行业脉搏不是分析，预期是"淘"不是"读"——判tier时别因为它来自测试社区就抬手。
+#     哪天觉得噪音受不了，第一个撤它。
+#
+# 实测拒掉的(留个记录，免得以后重复调研)：
+#   Software Testing Weekly —— 周刊还活着(12条/90天)，但标题全是"Issue #326"，初筛只看
+#     title+summary必然判low，永远触发不了全文精判，结构上跟这套管线冲突。
+#   Kent Beck(tidyfirst.substack.com) —— 15条/90天但AI密度只有5%，内容飘到经济学隐喻
+#     ("Busy is Short Volatility")，不再是当年那个讲TDD的他。
+#   Dave Farley博客停更1372天(转YouTube了)、Alan Page停更547天、Google Testing Blog
+#     1条/90天且完全不碰AI、Qodo/Diffblue没有可用feed、Meta Engineering全是基建不碰测试。
+#   Applitools —— 11条/90天、密度33%，但一半是"How Customer Success Keeps Quality..."
+#     这类营销稿，含金量不够，暂不加。
 # 2026-09-12加这四个，分两个方向(用户本职是软件测试，另外对艺术设计感兴趣但没有美术功底、
 # 强在审美和眼力)。全部按文件头的规矩核实过一手身份，并且实测了更新量和主题密度——机构feed
 # 最容易混公关稿，光看名气会踩坑(实测拒掉的：OpenAI Blog 153条/90天全是产品公关和客户案例；

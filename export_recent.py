@@ -44,7 +44,8 @@ def always_archive(title):
     return any(title.startswith(p) for p in ALWAYS_ARCHIVE_TITLE_PREFIXES)
 
 OUT_DIR = Path("docs/data")
-TRACKS = (("ai", "ai_tier", "ai_reason"), ("anchor", "anchor_tier", "anchor_reason"))
+TRACKS = (("ai", "ai_tier", "ai_reason"), ("anchor", "anchor_tier", "anchor_reason"),
+          ("eval", "eval_tier", "eval_reason"))
 
 
 def best_tier(ai_tier, anchor_tier):
@@ -76,9 +77,14 @@ def export(pipeline_run=False):
         tracks = []
         for track_name, tier_field, reason_field in TRACKS:
             tier = row[tier_field]
-            if high_only_recent:
+            if high_only_recent and track_name != "eval":
                 # HIGH_ONLY_RECENT_DAYS天以内：不分tier全部展示，low档保底显示成medium
                 # (不覆盖数据库里真实的判断结果，只是展示层的下限)。
+                #
+                # **eval不参加这个保底**(2026-09-12)：eval命中与否决定这条进不进公开站
+                # (见export_public.py)，把low抬成medium等于凭空给他编一个"这是测试内容"的
+                # 判断，结果是HIGH_ONLY_PERSONS的当日内容会被整批挡在公开站外——实测过，
+                # 公开站当场少掉一半。展示层的下限只能动展示，不能动外传的闸门。
                 tracks.append({
                     "track": track_name, "tier": tier if tier in ("high", "medium") else "medium",
                     "reason": row[reason_field] or "",

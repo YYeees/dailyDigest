@@ -67,7 +67,8 @@ def repo_dict(conn, row):
     }
 
 
-TRACKS = (("ai", "ai_tier", "ai_reason"), ("anchor", "anchor_tier", "anchor_reason"))
+TRACKS = (("ai", "ai_tier", "ai_reason"), ("anchor", "anchor_tier", "anchor_reason"),
+          ("eval", "eval_tier", "eval_reason"))
 
 
 def export():
@@ -79,10 +80,12 @@ def export():
     for row in conn.execute("""
         SELECT * FROM items
         WHERE published IS NOT NULL AND published >= ? AND excluded_reason IS NULL
-          AND (ai_tier = 'high' OR anchor_tier = 'high' OR digest_summary IS NOT NULL)
+          AND (ai_tier = 'high' OR anchor_tier = 'high' OR eval_tier = 'high'
+               OR digest_summary IS NOT NULL)
         ORDER BY published DESC
     """, (DIGEST_START_DATE,)):
-        if not (row["ai_tier"] == "high" or row["anchor_tier"] == "high" or always_archive(row["title"])):
+        if not (row["ai_tier"] == "high" or row["anchor_tier"] == "high"
+                or row["eval_tier"] == "high" or always_archive(row["title"])):
             continue
         month = row["published"][:7]  # YYYY-MM
 

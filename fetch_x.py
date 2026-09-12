@@ -36,7 +36,8 @@ TWEET_DATE_FORMAT = "%a %b %d %H:%M:%S %z %Y"  # "Wed Aug 12 17:48:36 +0000 2026
 
 # 存量digest.db是2026-08-13建的，那时还没有content列——CREATE TABLE IF NOT EXISTS对已存在的
 # 表不会补列，所以新增列必须同时在这里补一次(2026-08-15代码审计踩过同类问题，见tests/test_schema.py)。
-ADDED_COLUMNS = (("content", "TEXT"),)
+ADDED_COLUMNS = (("content", "TEXT"),
+                 ("eval_tier", "TEXT"), ("eval_reason", "TEXT"))
 
 
 def migrate(conn):
@@ -67,7 +68,9 @@ def init_db(conn):
             digest_summary TEXT,
             ranked_at TEXT,
             excluded_reason TEXT,
-            content TEXT
+            content TEXT,
+            eval_tier TEXT,
+            eval_reason TEXT
         )
     """)
     conn.commit()

@@ -12,8 +12,8 @@
 
 | | 地址 | 谁能看 | 内容 |
 |---|---|---|---|
-| **全量站** | `https://yyeees.github.io/dailyDigest/` | **没有任何访问控制**，只是地址不显眼 | 全量：AI + 锚点双轨、X 动态、通向 Obsidian 的「记录」按钮 |
-| **公开站** | `https://aidailynews.yyeees.workers.dev` | 发给别人的就是这个 | 只有命中 AI track 的条目 |
+| **全量站** | `https://yyeees.github.io/dailyDigest/` | **没有任何访问控制**，只是地址不显眼 | 全量：AI / 锚点 / eval 三轨、X 动态、通向 Obsidian 的「记录」按钮 |
+| **公开站** | `https://aidailynews.yyeees.workers.dev` | 发给别人的就是这个 | 只有命中 AI track、且**没**命中 eval track 的条目 |
 
 **别把全量站当私有站。** 它原来在 Cloudflare Worker 后面挂着 Cloudflare Access 登录，
 2026-09-02 用户拍板换掉了：`YYeees/dailyDigest` 转回公开仓，GitHub Pages 从 `main` 分支
@@ -33,4 +33,6 @@ Actions 的运行日志也是。这是用户在知情后选的（图访问和修
 
 **改前端时注意**：`docs/index.html` 和 `docs/digest.html` 是**唯一**一份，两个站共用。公开站靠 `export_public.py` 注入 `window.PUBLIC_SITE`、由文件里的 `IS_PUBLIC` 分支收敛差异。不要为公开站复制第二份 HTML——复制必然漂开。
 
-`export_public.py` 里有两道会让跑批直接中止的自检（产物含「锚点」字样、`<!--SITE-CONFIG-->` 标记不止一处），别为了让它跑过去而绕开它们。
+`export_public.py` 里有两道会让跑批直接中止的自检（产物含「锚点」/「eval」字样、`<!--SITE-CONFIG-->` 标记不止一处），别为了让它跑过去而绕开它们。
+
+**eval track（2026-09-12 加）**：用户本职是软件测试，这一轨收「AI 怎么改造测试这门手艺」的内容，判据见 `RANKING_CRITERIA.md` 的 Track 3。**命中 eval 的条目整条不进公开站**，比锚点那条更严（锚点是条目照常公开、只摘掉徽章），而且**不看 `ai_tier` 判成什么**——这类内容常常同时是正经的 AI 实操内容，只按 ai track 过滤必然漏。

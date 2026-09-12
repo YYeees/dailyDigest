@@ -39,6 +39,23 @@ class TestPublicItem(unittest.TestCase):
     def test_no_tracks_dropped(self):
         self.assertIsNone(public_item(item(tracks=[])))
 
+    def test_eval_track_item_dropped_even_with_ai_track(self):
+        """eval命中就整条扣下——**哪怕同时命中ai track且判了high**。
+
+        这是跟anchor不一样的地方(anchor是"条目照常公开、只摘掉徽章")。测试/评测内容
+        本来就常常同时是正经的AI实操内容,只按"有没有ai track"过滤必然漏,所以这条
+        回归必须在:漏了就是用户的本职内容外泄到公开站。
+        """
+        self.assertIsNone(public_item(item(tracks=[
+            {"track": "ai", "tier": "high", "reason": "AI实操"},
+            {"track": "eval", "tier": "high", "reason": "本职"},
+        ])))
+
+    def test_eval_only_item_dropped(self):
+        self.assertIsNone(public_item(item(tracks=[
+            {"track": "eval", "tier": "high", "reason": "本职"},
+        ])))
+
     def test_field_whitelist_drops_unknown_fields(self):
         """白名单的意义:以后往导出里加字段，默认不外传。"""
         out = public_item(item(tracks=[{"track": "ai", "tier": "high", "reason": "r"}],
