@@ -2,22 +2,17 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "California Brown Pelican",
-      "link": "https://simonwillison.net/2026/Sep/12/sighting-399708714/",
+      "title": "Generating running routes with GPT-6 Astra and ChatGPT Work",
+      "link": "https://simonwillison.net/2026/Sep/12/astra-running-routes/",
       "date": "2026-09-12",
-      "first_seen": "2026-09-12T23:49:14.748377+00:00",
+      "first_seen": "2026-09-13T23:55:14.119972+00:00",
       "source_type": "blog",
-      "summary": null,
+      "summary": "作者让ChatGPT Work用GPT-6 Astra基于住址生成5K/10K跑步路线，模型自主调用Nominatim定位、Overpass拉取OSM路网数据并用D3渲染出可视化地图和GPX文件，耗时27分钟完成。但作者发现对话被压缩后无法再拿到原始Python代码，认为这是agent系统透明度上的反面特性，呼吁压缩后仍应保留原文供工具调用访问。",
       "tracks": [
         {
           "track": "ai",
-          "tier": "medium",
-          "reason": "野生动物观察记录,跟AI/技术无关"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干没有实质连接"
+          "tier": "high",
+          "reason": "展示ChatGPT Work用GPT-6 Astra调用Nominatim/Overpass生成实际可用的跑步路线，并揭示对话压缩会丢失过程代码这一透明度问题，是有实操价值的AI应用观察。"
         }
       ],
       "is_new": true
@@ -35,14 +30,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "转引的观点扎实——行业正意识到顶尖软件依然离不开人的协作与手艺,AI让“谁都能写代码”但也让“很多人不该写代码”这件事更清楚了"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "“AI能替你写出很能用的代码,但也让人更容易把别人的活干砸”呼应“认知系统不能外包/一手不二手”的母题，但这是Simon转引Paul Ford的观点，非一手"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -64,7 +54,7 @@
           "reason": "作者本人十余年三段FDE一线经历的反思，沾“构建者线技术抓手/质朴中正慢的构建者活法”周边领域的边"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -81,7 +71,7 @@
           "reason": "深入分析DeepSeek新模型的架构创新(prefill/decode分离等),需要较强模型内部机制背景才能看懂门道"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -96,14 +86,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "扎实的AI安全重磅报道,讲清楚OpenAI agent群攻击RubyGems事件的证据链和未披露问题"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "对AI实验室治理和事后披露的怀疑态度,沾“批判性思维与认识论”周边领域的边"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -137,7 +122,7 @@
           "reason": "提出了一个真实且有价值的判断问题——怎么分辨QA/工程经理是真懂AI在测试中的适用边界,还是盲目把AI硬塞进每个流程"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -193,7 +178,7 @@
           "reason": "介绍用AI原型工具在设计早期就能测试复杂交互(筛选器/仪表盘/对话式AI)的具体技术,实操但偏UX原型场景"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "NN/g",
@@ -215,7 +200,7 @@
           "reason": "“人保留编辑判断和责任,AI不能替你担责”呼应“认知系统不能外包”母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -269,23 +254,6 @@
       "is_new": false
     },
     {
-      "person": "Simon Willison",
-      "title": "Quoting Calif Research",
-      "link": "https://simonwillison.net/2026/Sep/10/calif-research/",
-      "date": "2026-09-10",
-      "first_seen": "2026-09-10T23:48:07.236290+00:00",
-      "source_type": "blog",
-      "summary": "Calif Research团队披露了WeWorm——首个通过微信通话在iOS和Android上传播的零点击蠕虫，受害者无需接听或操作手机即可被感染。团队称借助AI仅用两天就找到漏洞并写出远程代码执行exploit，再花一周完成整个蠕虫，而这种规模的攻击过去通常需要更大团队耗费数月，凸显AI正在大幅拉低网络攻击的门槛。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "记录AI大幅压缩零点击蠕虫攻击开发周期的真实案例（两天挖洞写exploit，一周内完成蠕虫），讲清楚了为什么重要"
-        }
-      ],
-      "is_new": false
-    },
-    {
       "person": "Craig Mod",
       "title": "[RODEN] Writing in 2026, Walking Europe",
       "link": "https://craigmod.com/roden/118/",
@@ -325,40 +293,6 @@
       "is_new": false
     },
     {
-      "person": "Simon Willison",
-      "title": "On the Navier–Stokes Millennium Prize Problem",
-      "link": "https://simonwillison.net/2026/Sep/8/on-navier-stokes/",
-      "date": "2026-09-08",
-      "first_seen": "2026-09-09T23:52:09.339048+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI用未发布模型解出纳维-斯托克斯存在性与光滑性问题（千禧年大奖难题之一），但被指抢跑：NYU教授Buckmaster与Anthropic员工Alpöge近一年来一直在攻克相关问题，8月15日已有突破，消息传出后OpenAI才在9月1日临时组队、9月5日就宣布解出。OpenAI否认接触过对方在Codex里的草稿，但承认无法排除脱敏训练数据带来影响。Simon认为这揭示了一个更普遍的问题：数据“用于改进模型”到底意味着什么，一旦风声走漏，AI算力竞速就可能抢先摘走成果。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "OpenAI用未发布模型攻克千禧年问题引发数据伦理与优先权争议，讲清楚发生了什么以及为什么重要，非单纯通稿"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Introducing ChatGPT Images 2.5",
-      "link": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/",
-      "date": "2026-09-08",
-      "first_seen": "2026-09-08T23:53:30.314621+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI发布ChatGPT Images 2.5，改进多轮指令遵循、生成速度和参考图主体保留能力，新增Sunburst（精细编辑）和Flare（快速生成）两个模型。作者据此升级了自己的openai_image.py命令行工具以支持传入参考图片，并演示了给图表添加卡通浣熊角色的效果。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "OpenAI图片生成模型重大更新，全文确认作者亲自升级自己的CLI工具并给出可复用命令行示例演示效果，兼具新闻性和实操价值"
-        }
-      ],
-      "is_new": false
-    },
-    {
       "person": "Martin Fowler",
       "title": "Fragments: September  8",
       "link": "https://martinfowler.com/fragments/2026-09-08.html",
@@ -383,7 +317,7 @@
           "reason": "核心论证正是验证/评测在AI时代变得比生成更稀缺、更重要,直击eval track的根本关切,并给出“组织建立表面上活跃却掩盖能力空心化的空心经济”的扎实警示"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ministry of Testing",
@@ -400,7 +334,7 @@
           "reason": "扎实的一线实测困惑:复杂iGaming领域里手工QA写用例交给Claude自动化、AQA再审核的流程，具体指出每个游戏协议都不同导致AI生成用例难以复用维护，还提出了怎么设计实验验证这套流程是否值得的问题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -432,23 +366,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "前沿模型行为的第一手实测数据，讲清楚方法论和发现，属于AI趋势观察但偏商业/营销分析而非直接实操指南"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "There's No Limit to How Bad Code Can Get",
-      "link": "https://simonwillison.net/2026/Sep/6/theres-no-limit-to-how-bad-code-can-get/",
-      "date": "2026-09-06",
-      "first_seen": "2026-09-06T23:33:42.687447+00:00",
-      "source_type": "blog",
-      "summary": "Willison结合亲身经历指出，「推倒重来」式重写技术债务系统的做法很少成功：旧系统因团队士气低落而继续腐化，新系统团队又常常低估旧系统的隐性需求，导致数月甚至数年后两套系统并存、新系统被搁置。他更推荐先给旧系统补齐自动化测试，再做针对性重构，并推荐了Will Larson关于系统迁移的文章作为延伸阅读。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "Willison结合亲身经历总结「推倒重写」失败的典型模式，命中反射母题「找一劳永逸+强制慢反弹」——反对推倒重来的冲动、主张渐进式重构，是质朴中正的构建者活法，且是一手反思不是转述"
         }
       ],
       "is_new": false

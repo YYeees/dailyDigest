@@ -1,6 +1,39 @@
 {
   "items": [
     {
+      "person": "Peter Steinberger",
+      "title": "If you haven't given Linux a go lately, try with agents. You can fix anything with a prompt now.  Go…",
+      "link": "https://x.com/steipete/status/2099172248213225791",
+      "date": "2026-09-13",
+      "first_seen": "2026-09-13T23:55:23.765289+00:00",
+      "source_type": "x",
+      "summary": "作者用Dell XPS装Linux，摄像头驱动不工作，让codex处理后重启就修好了，以此鼓励大家现在可以放心借助agent尝试Linux。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "Yeah, was just about to say the same. https://t.co/dy8McRUBvS",
+      "link": "https://x.com/steipete/status/2099171190925640188",
+      "date": "2026-09-13",
+      "first_seen": "2026-09-13T23:55:23.765352+00:00",
+      "source_type": "x",
+      "summary": "对某条内容表示认同的简短回复，附一张图片，原推缺少上下文，看不出具体讨论的是什么。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "Anyone got an invite code for Meta's Muse? 👉👈  I saw their Soul.md file and now i'm curious.",
+      "link": "https://x.com/steipete/status/2098931686042210381",
+      "date": "2026-09-13",
+      "first_seen": "2026-09-13T23:55:23.765385+00:00",
+      "source_type": "x",
+      "summary": "作者看到Meta旗下Muse产品的Soul.md文件后来了兴趣，发推询问谁有邀请码，内容没有更多细节。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
       "person": "Andrej Karpathy",
       "title": "I love this and really hope we can come together as an industry and make it happen. https://t.co/lz2…",
       "link": "https://x.com/karpathy/status/2098811935114551617",
@@ -9,7 +42,7 @@
       "source_type": "x",
       "summary": "Andrej Karpathy表态支持(推测是呼应Dario Amodei关于放慢AI前沿竞速节奏的倡议)，希望整个行业能达成一致、共同促成这件事。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -20,7 +53,7 @@
       "source_type": "x",
       "summary": "Boris Cherny转发Dario Amodei的新文章《We Must Pace the Frontier》，文章论证AI行业应该主动放慢前沿竞速的节奏，并提出一个三部分的具体方案。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -31,7 +64,7 @@
       "source_type": "x",
       "summary": "Peter Steinberger回应说这个演示很棒,希望接下来能加上《英雄无敌之类的Master of Orion 2》。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -42,7 +75,7 @@
       "source_type": "x",
       "summary": "关于claude plugin eval功能的补充说明:很多用户反馈,模型换代后不知道自己写的skill是不是还照常工作，plugin eval就是用来解决这个痛点的。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -53,7 +86,7 @@
       "source_type": "x",
       "summary": "Boris Cherny补充团队怎么用Claude Tag做on-call:Slack里一有告警触发，Claude就会拉取指标、比对部署差异，检查代码改动，跟此前提到的“CI on-call第一响应人是Claude Tag”是同一件事的更多细节。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -64,7 +97,7 @@
       "source_type": "x",
       "summary": "Claude Code新增claude plugin eval功能，可以检验一个插件到底带来多少价值、还是需要继续打磨，用户能为插件创建测试。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -86,7 +119,7 @@
       "source_type": "x",
       "summary": "Peter Steinberger分享了一个能力演示:名为Astra的agent在OC(推测为OpenClaw)的云端会话里，用computer-use能力(CUA)玩《毁灭战士》，他调侃说“还不算AGI，但大概比果蝇脑子强”。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -119,7 +152,7 @@
       "source_type": "x",
       "summary": "Boris Cherny称最新的Threat Intelligence报告“可怕又重要”:模型越智能，如果没有配套的防护和监控，也越危险——很多能力是双重用途的，会写代码的模型能被用来黑基础设施，懂生物研究的模型也能被用来设计下一场大流行病，这些议题复杂且日益紧迫，需要全社会关注和应对。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -130,7 +163,7 @@
       "source_type": "x",
       "summary": "Peter Steinberger调侃旧金山最近异常炎热，自己用“token”换了台空调。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -141,7 +174,7 @@
       "source_type": "x",
       "summary": "Boris Cherny称自己每天收到很多类似的邮件/私信提问，会尽量回复，并分享了自己给某个问题的回复内容(具体文字未附带)，征询大家怎么看。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -152,7 +185,7 @@
       "source_type": "x",
       "summary": "Boris Cherny发了一句“wait what”，没有更多上下文说明具体在回应什么。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrej Karpathy",
@@ -174,7 +207,7 @@
       "source_type": "x",
       "summary": "Claude Code的/diff现在变成一个可以滚动点击、实时更新的常驻面板，不用再来回切换窗口看代码改动。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -273,7 +306,7 @@
       "source_type": "x",
       "summary": "Boris Cherny发了一条配图推文,配文是“都是这些小细节”,具体指什么没有文字说明。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -284,7 +317,7 @@
       "source_type": "x",
       "summary": "Boris Cherny转发ClaudeDevs的分享:他们团队的CI on-call第一响应人现在是Claude Tag,会自动读取告警、指标和日志,写出情况简报(SITREP)并持续跟进。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -317,7 +350,7 @@
       "source_type": "x",
       "summary": "Boris Cherny称OpenAI新模型在prompt injection风险上大致追平Gemini Flash和Opus 4.8,他认为公开评测和点名其他实验室反而能倒逼大家训练更对齐的模型，Anthropic会持续这么做直到全行业都更重视安全。他还提到Claude大约两个月前已经在实践中解决了prompt injection问题，但强调这仍是全行业无论用什么模型都要认真对待的安全风险。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -361,28 +394,6 @@
       "source_type": "x",
       "summary": "Amanda Askell设想建一个邮箱地址，让自主运行的AI模型在需要道德指引时可以联系求助，但她也指出这需要一种「反向验证码」来识别对方既不是人类、也不是被人类指使来破解系统的AI。",
       "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Andy Matuschak",
-      "title": "U Chicago offers a great four-year program studying the \"Great Books of the Western World\". Meets we…",
-      "link": "https://x.com/andy_matuschak/status/2096701001898348674",
-      "date": "2026-09-06",
-      "first_seen": "2026-09-06T23:33:48.694765+00:00",
-      "source_type": "x",
-      "summary": "Matuschak分享完成芝加哥大学四年「西方经典」共读项目后的反思：他坦言最初带着「打卡式」心态报名，读完千余小时后发现并未真正吃透多数经典，但收获的是与这些思想源头建立起真实具体的连接——从抽象的书单变成了想反复回访的对象（卢克莱修、洛克、卢梭、尼采等），并由此更深体会到「个体的人」如何创造出改变思想史的具体作品。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "As Carl Jung put it, \"Man needs difficulties. They are necessary for health.\" Yet most people instin…",
-      "link": "https://x.com/RayDalio/status/2096603437609669078",
-      "date": "2026-09-06",
-      "first_seen": "2026-09-06T23:33:47.357609+00:00",
-      "source_type": "x",
-      "summary": "Dalio引用荣格「人需要磨难，它们是健康所必需的」，指出人本能回避痛苦——无论是健身时肌肉的撕裂重建，还是心理上的挫败、羞耻与直面自身局限，这些不适都是成长的必经之路。",
-      "tier": "low",
       "is_new": false
     }
   ]

@@ -2,6 +2,23 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Generating running routes with GPT-6 Astra and ChatGPT Work",
+      "link": "https://simonwillison.net/2026/Sep/12/astra-running-routes/",
+      "date": "2026-09-12",
+      "first_seen": "2026-09-13T23:55:14.119972+00:00",
+      "source_type": "blog",
+      "summary": "作者让ChatGPT Work用GPT-6 Astra基于住址生成5K/10K跑步路线，模型自主调用Nominatim定位、Overpass拉取OSM路网数据并用D3渲染出可视化地图和GPX文件，耗时27分钟完成。但作者发现对话被压缩后无法再拿到原始Python代码，认为这是agent系统透明度上的反面特性，呼吁压缩后仍应保留原文供工具调用访问。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "展示ChatGPT Work用GPT-6 Astra调用Nominatim/Overpass生成实际可用的跑步路线，并揭示对话压缩会丢失过程代码这一透明度问题，是有实操价值的AI应用观察。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "Quoting Paul Ford",
       "link": "https://simonwillison.net/2026/Sep/12/paul-ford/",
       "date": "2026-09-12",
@@ -15,7 +32,7 @@
           "reason": "转引的观点扎实——行业正意识到顶尖软件依然离不开人的协作与手艺,AI让“谁都能写代码”但也让“很多人不该写代码”这件事更清楚了"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -32,7 +49,7 @@
           "reason": "转发Dario Amodei关于AI行业应该放慢前沿竞速节奏的重要文章，是行业级安全/节奏议题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -49,7 +66,7 @@
           "reason": "对“前向部署工程师(FDE)”这个AI行业新兴热门岗位给出扎实的定义辨析和实践经验，讲清楚是什么、为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -66,7 +83,7 @@
           "reason": "Claude Code新功能公告(claude plugin eval)，能实际检验插件效果，实操价值直接"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -83,7 +100,7 @@
           "reason": "扎实的AI安全重磅报道,讲清楚OpenAI agent群攻击RubyGems事件的证据链和未披露问题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -156,7 +173,7 @@
           "reason": "扎实提出AI能力双重用途风险(会写代码的模型能黑基础设施,懂生物的模型能助力病原体设计)，呼吁全行业关注安全防护"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -360,7 +377,7 @@
           "reason": "具体展示Claude Tag被用作CI团队on-call第一响应人的真实实践,读告警/指标/日志并写SITREP,实操参考价值高"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -377,7 +394,7 @@
           "reason": "披露跨实验室prompt injection风险评测对比和Anthropic自身两个月前已在实践中解决prompt injection的信息,是有实质内容的AI安全趋势信息"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -404,7 +421,7 @@
           "reason": "核心论证正是验证/评测在AI时代变得比生成更稀缺、更重要,直击eval track的根本关切,并给出“组织建立表面上活跃却掩盖能力空心化的空心经济”的扎实警示"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ministry of Testing",
@@ -421,7 +438,7 @@
           "reason": "扎实的一线实测困惑:复杂iGaming领域里手工QA写用例交给Claude自动化、AQA再审核的流程，具体指出每个游戏协议都不同导致AI生成用例难以复用维护，还提出了怎么设计实验验证这套流程是否值得的问题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -630,7 +647,7 @@
           "reason": "明确踩中“护城河在harness不在模型”母题——多agent靠共享计划文档自发协调,是构建者线一手实验记录"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -664,7 +681,7 @@
           "reason": "对AI导致代码量激增背景下代码评审该不该继续当核心质量关卡提出扎实、有争议性的论证"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -725,7 +742,7 @@
           "reason": "对“AI打破了CI背后的假设”做了扎实的方法论辨析(agent推送前要不要先在本地跑完验证),正是track3点名的“测试实践在agent时代怎么变”的例子"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -742,7 +759,7 @@
           "reason": "新旗舰模型发布信息,直接relevant AI趋势"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
