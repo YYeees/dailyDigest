@@ -1,6 +1,62 @@
 {
   "items": [
     {
+      "person": "Martin Fowler",
+      "title": "The Conductor Developer",
+      "link": "https://martinfowler.com/rachels-ramblings/conductor-developer.html",
+      "date": "2026-07-31",
+      "first_seen": "2026-09-12T23:49:15.822284+00:00",
+      "source_type": "blog",
+      "summary": "Rachel认为AI没有改变什么是好软件,而是改变了什么东西稀缺——现在稀缺的是人类注意力。过去开发者靠保护心流时间产出好软件,但她观察到最好的开发者已经不再整天沉浸心流写代码,而是像指挥家一样统筹多个agent:不需要自己演奏每件乐器,但要理解全局、听出不对劲的地方、在恰当时机调整节奏。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "对AI改变开发者角色(从写代码到编排agent)提出扎实、有洞察的框架性判断"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Maaret Pyhäjärvi",
+      "title": "Comparing Blue, Yellow, Red, Pink and Purple - How are they Different",
+      "link": "https://visible-quality.blogspot.com/2026/07/comparing-blue-yellow-red-pink-and.html",
+      "date": "2026-07-30",
+      "first_seen": "2026-09-12T23:49:17.077082+00:00",
+      "source_type": "blog",
+      "summary": "Maaret提出一套辨别AI测试工具真实价值的分类框架:按价值来源分Packaging(包装)/Surface(界面)/Files(投喂素材)/Harness(agent循环+内置指令)/Model(模型本身)五层,再看约束条件和停止付费后还剩什么(Lifecycle)。她主张需要“架构感知”才能看穿一堆“都带AI”的测试工具背后到底谁在真正创造价值,并坦承自己参与打造的CGI Test Intelligence Mesh本质也是“Files”层的产品。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "提出一套可迁移的AI产品/工具评估框架(Packaging/Surface/Files/Harness/Model分层)，帮读者穿透营销话术看清价值来源"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "针对AI测试工具选型给出扎实的分类方法论,直接改变明天怎么评估这类工具"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "The Economic Benefit of Refactoring",
+      "link": "https://martinfowler.com/articles/exploring-gen-ai/refactoring-economic-benefit.html",
+      "date": "2026-07-30",
+      "first_seen": "2026-09-12T23:49:15.822691+00:00",
+      "source_type": "blog",
+      "summary": "Edwards-Alexander用一个17155行的Rust数据访问层文件做重构实验：让AI agent在重构前后分别执行同一个功能变更任务，测得处理同一变更所需的输入token从159564降到27360、降幅83%(单次省下不到4毛钱)，以此证明代码结构对AI时代的开发成本有可持续衡量的经济价值，重构不再只是“感觉更整洁”。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "具体实验量化重构对AI时代开发成本的经济价值，实操性强"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] AI is eating Finance; AIE NYC now open",
       "link": "https://www.latent.space/p/ainews-ai-is-eating-finance-aie-nyc",
@@ -13,6 +69,23 @@
           "track": "ai",
           "tier": "high",
           "reason": "十家机构的实战案例聚焦企业级agent基础设施真实痛点，不是泛泛谈AI加金融的宏观叙事"
+        }
+      ],
+      "is_new": false
+    },
+    {
+      "person": "Maaret Pyhäjärvi",
+      "title": "Capture the Bugs - Feedback on learning how to test",
+      "link": "https://visible-quality.blogspot.com/2026/07/capture-bugs-feedback-on-learning-how.html",
+      "date": "2026-07-29",
+      "first_seen": "2026-09-12T23:49:17.077471+00:00",
+      "source_type": "blog",
+      "summary": "Maaret和Ru Cindrea做了个自助式探索性测试练习工具Capture the Bugs：面对同一个测试目标(e-primer)，学习者可以选择“没有任何提示”“给出问题分类”或“给出具体例子”三档引导难度来练习输入覆盖，完成后由一个浏览器内AI模型比对学习者报告的问题和65个已知bug清单，给出覆盖率反馈。这是她多年“用真做练测试”教学法的延伸产品化。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "作者一手项目，用AI辅助反馈机制做探索性测试自助训练工具，是具体方法+可用工具的真实案例"
         }
       ],
       "is_new": true
@@ -32,6 +105,23 @@
           "reason": "OpenAI产品负责人给出的实操建议直接影响日常怎么用AI agent产品，比如默认配置、持久化环境价值、衡量真实进展"
         }
       ],
+      "is_new": false
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "The Orchestrator's Tax",
+      "link": "https://martinfowler.com/articles/orchestrator-tax.html",
+      "date": "2026-07-28",
+      "first_seen": "2026-09-12T23:49:15.822738+00:00",
+      "source_type": "blog",
+      "summary": "Garg认为子代理(subagent)真正的价值不是并行节省时间，而是把不必要的中间推理过程隔离在外，保护主代理(orchestrator)的上下文不被污染。他给出四条具体规则：单波次子代理数量控制在2~4个、不要靠轮询子代理拿完整记录、不并发跑git操作、把共享文件区域的任务合并处理——核心是“认知局部性”，让主代理的注意力始终集中在真正需要它决策的地方。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "具体规则直接影响日常怎么设计多agent协作，实操性强"
+        }
+      ],
       "is_new": true
     },
     {
@@ -47,6 +137,23 @@
           "track": "ai",
           "tier": "high",
           "reason": "Moonshot AI发布Kimi K3并开源配套基础设施，技术细节扎实，且点出谁在真做谁在站队这条清晰的行业脉络"
+        }
+      ],
+      "is_new": false
+    },
+    {
+      "person": "Antithesis",
+      "title": "Finding bugs in Raft implementations",
+      "link": "https://antithesis.com/blog/2026/finding-bugs-in-raft-implementations/",
+      "date": "2026-07-27",
+      "first_seen": "2026-09-12T23:49:17.158336+00:00",
+      "source_type": "blog",
+      "summary": "Antithesis在确定性仿真环境里对Raft共识算法实现注入网络故障和随机输入，发现即便实现经过形式化验证依然存在安全性/活性违规——核心论点是“规范不等于代码”，实现者对同步性、请求-响应映射等假设的理解偏差才是真正的漏洞来源。文章主张用廉价算力做全面自动化测试，而不是过度迷信形式化方法本身的保证力。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "确定性仿真测试对形式化验证过的Raft实现找出真实bug，对“形式化验证够不够”有扎实论证"
         }
       ],
       "is_new": true
@@ -103,6 +210,45 @@
       "is_new": false
     },
     {
+      "person": "Martin Fowler",
+      "title": "Fragments: July 21",
+      "link": "https://martinfowler.com/fragments/2026-07-21.html",
+      "date": "2026-07-21",
+      "first_seen": "2026-09-12T23:49:15.823063+00:00",
+      "source_type": "blog",
+      "summary": "Fragments July21：Thoughtworks静修会报告给出五条主要结论——代码生成不再是瓶颈、验证才是；harness工程正成为独立学科；组织正撞上“学徒制危机”；高管与工程师对AI的预期落差是比技术限制更大的风险；遗留系统现代化是最容易变现的近期价值点。文中还用一个“沙漠训练的模型用到北极”的寓言警示董事会不能只看AI承诺的效率提升而忽视安全风险，公民开发者“vibe coding”需要独立基础设施和确定性数据访问管控来兜底。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "行业静修会的五条结论，扎实讲清楚agentic开发当前的关键瓶颈和风险"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "明确踩中“护城河在harness不在模型”母题(harness工程成独立学科)，是Fowler本人一手记录"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Ministry of Testing",
+      "title": "QA is reviewing our code with AI — and it suggests the fixes, not just a verdict. Normal now?",
+      "link": "https://club.ministryoftesting.com/t/qa-is-reviewing-our-code-with-ai-and-it-suggests-the-fixes-not-just-a-verdict-normal-now/87588",
+      "date": "2026-07-18",
+      "first_seen": "2026-09-12T23:49:18.203810+00:00",
+      "source_type": "blog",
+      "summary": "MoT开发者提问：QA团队用AI审查PR、不只给通过/不通过的判断还直接给出改代码的具体建议，这是不是已经成了行业常态？他指出部分建议“教科书式正确”但脱离团队实际约束(性能预算、历史包袱)，自己得逐条判断要不要采纳，这引出了如何筛选AI审查建议、避免变成噪音队列的实际问题。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "具体描述了QA用AI审查PR的真实工作流限制(建议正确但脱离实际约束)，对怎么筛选AI审查建议有直接参考价值"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Maggie Appleton",
       "title": "In Memoriam, Encountering World War I, and Thinkable Horrors",
       "link": "https://maggieappleton.com/in-memoriam/",
@@ -120,6 +266,79 @@
       "is_new": false
     },
     {
+      "person": "Martin Fowler",
+      "title": "The Archaeologist’s Copilot",
+      "link": "https://martinfowler.com/articles/archaeologist-copilot.html",
+      "date": "2026-07-16",
+      "first_seen": "2026-09-12T23:49:15.823984+00:00",
+      "source_type": "blog",
+      "summary": "Malykhin记录了用AI把一个Java 1.5遗留系统现代化的真实过程：AI给出的“乐观答案”常常经不起代码库验证，真正见效是在用证据约束AI、搭建隔离Docker环境、分阶段小步验证之后。核心教训是AI最有效的用法不是自动修复，而是被严格约束、按考古学方式一步步引导。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "具体实操案例+教训，讲清楚AI在遗留系统现代化中怎么用才有效"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "DSLs Enable Reliable Use of LLMs",
+      "link": "https://martinfowler.com/articles/llm-and-dsls.html",
+      "date": "2026-07-14",
+      "first_seen": "2026-09-12T23:49:15.824064+00:00",
+      "source_type": "blog",
+      "summary": "Joshi介绍如何用DSL给LLM生成代码划定“强护栏”：先与LLM合作设计DSL本身，再把DSL当作自然语言接口生成代码。以分布式系统框架Tickloom为例，固定的语义模型大幅压缩了LLM的决策空间，并能借助确定性解析器/编译器自动校验生成结果，让DSL本身成为可长期维护的真实源码资产。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "具体方法+真实案例(Tickloom)讲清楚DSL如何约束LLM生成代码，实操性强"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "Fragments: July 13",
+      "link": "https://martinfowler.com/fragments/2026-07-13.html",
+      "date": "2026-07-13",
+      "first_seen": "2026-09-12T23:49:15.824134+00:00",
+      "source_type": "blog",
+      "summary": "Fragments July13：深入讨论“harness工程”在这次静修会上从无人问津变成专门议题，涵盖上下文管理(agents.md控制在200行内)、用Rust等强类型语言替代Python、以及用属性测试/形式化方法当作“计算传感器”。文章也谈到自托管开源模型因成本、主权和数据安全考量正重新受到关注。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入讲harness工程的具体实践(上下文管理/计算传感器/自托管模型)，实操性强"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "明确踩中“护城河在harness不在模型”母题，是Fowler本人在场观察和分析的一手记录"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Amelia Wattenberger",
+      "title": "Code was our medium for thought",
+      "link": "https://wattenberger.com/thoughts/code-is-a-medium-for-thought",
+      "date": "2026-07-13",
+      "first_seen": "2026-09-12T23:49:16.655021+00:00",
+      "source_type": "blog",
+      "summary": "Wattenberger认为，代码本应是开发者探索问题、理清思路的“思维媒介”，但如果只是用AI加速代码编辑而不改变协作和理解方式，反而会削弱开发者对代码库和产品的直觉。她主张开发新工具(如可视化、原型化手段)去维持人类以自己方式思考的心流，而不是把认知过程外包给AI。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "明确踩中“认知系统不能外包”母题，主张维持代码作为思维媒介而非把认知过程外包给AI，是作者本人的一手论点"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Craig Mod",
       "title": "[RIDGELINE] Kazunori Hamana in Apartamento",
       "link": "https://craigmod.com/ridgeline/231/",
@@ -135,6 +354,74 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "Experiences with local models for coding",
+      "link": "https://martinfowler.com/articles/exploring-gen-ai/local-models-for-coding-experiences.html",
+      "date": "2026-07-08",
+      "first_seen": "2026-09-12T23:49:15.825288+00:00",
+      "source_type": "blog",
+      "summary": "Böckeler实测多个本地模型(如Qwen3.6 35B)完成编程任务，发现其agentic编码能力“远不及”她已经习惯的大模型水准。她建议把本地模型用于简单直接的小任务，并强调代码审查依然不可省，本地方案暂时还谈不上即插即用。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "一手实测对比本地模型与大模型编程能力差距，给出实操建议"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "Viability of local models for coding",
+      "link": "https://martinfowler.com/articles/exploring-gen-ai/local-models-for-coding-factors.html",
+      "date": "2026-07-07",
+      "first_seen": "2026-09-12T23:49:15.825349+00:00",
+      "source_type": "blog",
+      "summary": "Böckeler梳理了本地运行编码LLM的可行性因素：硬件限制(内存带宽)、模型量化与架构、以及agentic编码依赖的工具调用能力。结论是本地模型目前还称不上“开箱即用”，但Qwen3.6 35B MoE在能力、速度、内存占用之间取得了较好平衡，是当前较实用的选择。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "梳理本地LLM编程可行性的具体影响因素和实用选型建议，实操性强"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "Fragments: July  6",
+      "link": "https://martinfowler.com/fragments/2026-07-06.html",
+      "date": "2026-07-06",
+      "first_seen": "2026-09-12T23:49:15.825400+00:00",
+      "source_type": "blog",
+      "summary": "记录Thoughtworks第二届“软件开发的未来”欧洲静修会的观察，与会者态度从半年前的“将信将疑”转为“证据确凿”：agentic开发已从概念走向生产落地。文中还讨论了架构设计在AI时代是否仍重要，一种观点认为护城河已转向“harness工程”这个新兴术语，另一种则担心模型足够聪明后不再需要精心设计的模块化。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "记录行业一线对agentic开发从概念到生产落地的真实转变，讲清楚是什么、为什么重要"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Antithesis",
+      "title": "My quest to see all of Tetris",
+      "link": "https://antithesis.com/blog/2026/tetris-quest/",
+      "date": "2026-07-02",
+      "first_seen": "2026-09-12T23:49:17.158370+00:00",
+      "source_type": "blog",
+      "summary": "Antithesis用确定性仿真测试挑战《俄罗斯方块》，通过目标函数优化和随机输入模糊测试逐步探索深层游戏状态，最终定位到一个隐藏六年的BCD编码错误并达成“重生”状态。案例展示了自主化测试系统如何在边界情况下发现人工难以察觉的缺陷。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "确定性仿真测试找出隐藏六年的BCD编码bug，是该工具真实用法和能力边界的扎实案例"
+        }
+      ],
+      "is_new": true
     }
   ],
   "github_track": []

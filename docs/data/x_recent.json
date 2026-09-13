@@ -1,6 +1,72 @@
 {
   "items": [
     {
+      "person": "Andrej Karpathy",
+      "title": "I love this and really hope we can come together as an industry and make it happen. https://t.co/lz2…",
+      "link": "https://x.com/karpathy/status/2098811935114551617",
+      "date": "2026-09-12",
+      "first_seen": "2026-09-12T23:49:21.565644+00:00",
+      "source_type": "x",
+      "summary": "Andrej Karpathy表态支持(推测是呼应Dario Amodei关于放慢AI前沿竞速节奏的倡议)，希望整个行业能达成一致、共同促成这件事。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @DarioAmodei: We Must Pace the Frontier: I’ve written a new essay on why the AI industry should s…",
+      "link": "https://x.com/bcherny/status/2098807271241482468",
+      "date": "2026-09-12",
+      "first_seen": "2026-09-12T23:49:22.881991+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny转发Dario Amodei的新文章《We Must Pace the Frontier》，文章论证AI行业应该主动放慢前沿竞速的节奏，并提出一个三部分的具体方案。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "This is amazing. Add Master of Orion 2 next!",
+      "link": "https://x.com/steipete/status/2098784877495939145",
+      "date": "2026-09-12",
+      "first_seen": "2026-09-12T23:49:24.292854+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger回应说这个演示很棒,希望接下来能加上《英雄无敌之类的Master of Orion 2》。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @trq212: we heard feedback that it's hard to know if your skills are still working with new model…",
+      "link": "https://x.com/bcherny/status/2098673314642436251",
+      "date": "2026-09-12",
+      "first_seen": "2026-09-12T23:49:22.882234+00:00",
+      "source_type": "x",
+      "summary": "关于claude plugin eval功能的补充说明:很多用户反馈,模型换代后不知道自己写的skill是不是还照常工作，plugin eval就是用来解决这个痛点的。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @ClaudeDevs: Here's how our team uses Claude Tag for on-call:  When an alert fires in Slack, Clau…",
+      "link": "https://x.com/bcherny/status/2098670885150605529",
+      "date": "2026-09-12",
+      "first_seen": "2026-09-12T23:49:22.882278+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny补充团队怎么用Claude Tag做on-call:Slack里一有告警触发，Claude就会拉取指标、比对部署差异，检查代码改动，跟此前提到的“CI on-call第一响应人是Claude Tag”是同一件事的更多细节。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @ClaudeDevs: New in Claude Code: claude plugin eval  See what value your plugin is adding, or if…",
+      "link": "https://x.com/bcherny/status/2098670782184612051",
+      "date": "2026-09-12",
+      "first_seen": "2026-09-12T23:49:22.882303+00:00",
+      "source_type": "x",
+      "summary": "Claude Code新增claude plugin eval功能，可以检验一个插件到底带来多少价值、还是需要继续打磨，用户能为插件创建测试。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
       "person": "Andy Matuschak",
       "title": "I've been really loving Grant's thoughtful digital tabletop work.  Some great concepts: * bidirectio…",
       "link": "https://x.com/andy_matuschak/status/2098553239511945335",
@@ -8,6 +74,17 @@
       "first_seen": "2026-09-11T23:55:38.486358+00:00",
       "source_type": "x",
       "summary": "Andy Matuschak称赞Grant的数字桌游交互设计：用传统的块编辑器双向映射空间元素；用'frames'定义可选中、投射到外部屏幕并做CSS变换的区域。",
+      "tier": "medium",
+      "is_new": false
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "Astra on OC in a cloud session playing Doom with CUA. Not quite AGI yet, but probably beats fly brai…",
+      "link": "https://x.com/steipete/status/2098527519213604889",
+      "date": "2026-09-11",
+      "first_seen": "2026-09-12T23:49:24.293109+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger分享了一个能力演示:名为Astra的agent在OC(推测为OpenClaw)的云端会话里，用computer-use能力(CUA)玩《毁灭战士》，他调侃说“还不算AGI，但大概比果蝇脑子强”。",
       "tier": "medium",
       "is_new": true
     },
@@ -20,7 +97,7 @@
       "source_type": "x",
       "summary": "达利欧谈滞胀动态：长期利率相对短期利率走高时会出现这种局面，即便试图压住短期利率，长期利率仍在上升，同时伴随美元走弱和黄金波动。利率上升开始冲击股市——债券下跌而收益率上升，使股票的预期回报相对债券走低，给股市带来更广泛的压力。这种经典局面让美联储陷入两难：到底该收紧还是放松，而在贫富差距巨大的经济体里，是否持有股票会让这种冲击的影响天差地别，带来深远的政治含义。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ray Dalio",
@@ -30,6 +107,50 @@
       "first_seen": "2026-09-11T23:55:37.190217+00:00",
       "source_type": "x",
       "summary": "达利欧谈组织规模：人少时靠彼此认识喜欢维系关系；五十到一百人时形成社区感；超过这个规模社区感开始变弱。他认为把公司拆成百人上下、由共同使命统一的部门，是把有意义的关系尺度延伸到大公司的最佳方式。",
+      "tier": "low",
+      "is_new": false
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "The latest Threat Intelligence report is an absolutely terrifying and important read.   As models be…",
+      "link": "https://x.com/bcherny/status/2098281805770309686",
+      "date": "2026-09-11",
+      "first_seen": "2026-09-12T23:49:22.882324+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny称最新的Threat Intelligence报告“可怕又重要”:模型越智能，如果没有配套的防护和监控，也越危险——很多能力是双重用途的，会写代码的模型能被用来黑基础设施，懂生物研究的模型也能被用来设计下一场大流行病，这些议题复杂且日益紧迫，需要全社会关注和应对。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "Trading tokens for an AC. Who knew SF could be so hot 🫠",
+      "link": "https://x.com/steipete/status/2098229090570629419",
+      "date": "2026-09-11",
+      "first_seen": "2026-09-12T23:49:24.293155+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger调侃旧金山最近异常炎热，自己用“token”换了台空调。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "Every day, I get a lot of of emails and messages like this one. I try to respond to as many as I can…",
+      "link": "https://x.com/bcherny/status/2098217571153838124",
+      "date": "2026-09-11",
+      "first_seen": "2026-09-12T23:49:22.882377+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny称自己每天收到很多类似的邮件/私信提问，会尽量回复，并分享了自己给某个问题的回复内容(具体文字未附带)，征询大家怎么看。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "wait what",
+      "link": "https://x.com/bcherny/status/2098209880310264048",
+      "date": "2026-09-11",
+      "first_seen": "2026-09-12T23:49:22.882412+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny发了一句“wait what”，没有更多上下文说明具体在回应什么。",
       "tier": "low",
       "is_new": true
     },
@@ -43,6 +164,17 @@
       "summary": "Karpathy转发了Anthropic发布的迄今最详细的威胁情报报告公告，内容涉及有人试图滥用Claude进行网络攻击等情形；推文本身信息有限，详情见Anthropic原始报告。",
       "tier": "medium",
       "is_new": false
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "Just landed: /diff is now a persistent pane that you can scroll and click. It updates in real-time.…",
+      "link": "https://x.com/bcherny/status/2098165206296011059",
+      "date": "2026-09-10",
+      "first_seen": "2026-09-12T23:49:22.882430+00:00",
+      "source_type": "x",
+      "summary": "Claude Code的/diff现在变成一个可以滚动点击、实时更新的常驻面板，不用再来回切换窗口看代码改动。",
+      "tier": "medium",
+      "is_new": true
     },
     {
       "person": "Andy Matuschak",
@@ -133,6 +265,28 @@
       "is_new": false
     },
     {
+      "person": "Boris Cherny",
+      "title": "It's the little things https://t.co/dhyV5jPE8o",
+      "link": "https://x.com/bcherny/status/2097470212471922848",
+      "date": "2026-09-08",
+      "first_seen": "2026-09-12T23:49:22.882448+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny发了一条配图推文,配文是“都是这些小细节”,具体指什么没有文字说明。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @ClaudeDevs: Our CI team's on-call first responder is Claude Tag.  It reads alerts, metrics, and…",
+      "link": "https://x.com/bcherny/status/2097453584539668664",
+      "date": "2026-09-08",
+      "first_seen": "2026-09-12T23:49:22.882465+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny转发ClaudeDevs的分享:他们团队的CI on-call第一响应人现在是Claude Tag,会自动读取告警、指标和日志,写出情况简报(SITREP)并持续跟进。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
       "person": "Andy Matuschak",
       "title": "RT @dreamwieber: I think one of my fundamental disappointments with modern devices is that I can't j…",
       "link": "https://x.com/andy_matuschak/status/2097432724231647678",
@@ -153,6 +307,17 @@
       "summary": "分享一句诗意短句『天上有神，世间安好』，配一张图片，内容简短未做进一步阐述。",
       "tier": "low",
       "is_new": false
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "I am pleased to see that OpenAI’s new model is roughly on par with Gemini Flash and Opus 4.8 on prom…",
+      "link": "https://x.com/bcherny/status/2097363234747818070",
+      "date": "2026-09-08",
+      "first_seen": "2026-09-12T23:49:22.882482+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny称OpenAI新模型在prompt injection风险上大致追平Gemini Flash和Opus 4.8,他认为公开评测和点名其他实验室反而能倒逼大家训练更对齐的模型，Anthropic会持续这么做直到全行业都更重视安全。他还提到Claude大约两个月前已经在实践中解决了prompt injection问题，但强调这仍是全行业无论用什么模型都要认真对待的安全风险。",
+      "tier": "high",
+      "is_new": true
     },
     {
       "person": "Ray Dalio",
@@ -218,17 +383,6 @@
       "source_type": "x",
       "summary": "Dalio引用荣格「人需要磨难，它们是健康所必需的」，指出人本能回避痛苦——无论是健身时肌肉的撕裂重建，还是心理上的挫败、羞耻与直面自身局限，这些不适都是成长的必经之路。",
       "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Andy Matuschak",
-      "title": "Rigged my camera to automatically produce instant prints, via phone (locked in pocket) as BTLE clien…",
-      "link": "https://x.com/andy_matuschak/status/2096327833517728087",
-      "date": "2026-09-05",
-      "first_seen": "2026-09-05T23:36:30.994326+00:00",
-      "source_type": "x",
-      "summary": "Andy Matuschak改装了自己的相机，让它能通过手机（放在口袋里、锁屏状态）作为BTLE客户端自动触发即时打印；还做了一个模式，只有在相机回放界面给照片\"加星\"时才打印，相当于在相机上直接做出一个\"打印\"按钮。",
-      "tier": "medium",
       "is_new": false
     }
   ]
