@@ -887,7 +887,7 @@
       "language": "TypeScript",
       "difficulty": "intermediate",
       "recommend_reason": "开源AI编程Agent，build(全权限执行)和plan(只读分析、执行命令前需授权)双Agent模式覆盖了从代码探索到实际开发的不同信任级别，CLI和桌面端(macOS/Windows/Linux)都有，安装渠道成熟。已核实该仓库原属sst组织、现迁移到anomalyco(sst/opencode会跳转到这里)，不是冒名蹭热度的仓库，是AI编程Agent赛道有代表性的成熟项目。",
-      "stars_total": 198112
+      "stars_total": 207137
     },
     {
       "full_name": "anthropics/skills",
@@ -914,7 +914,7 @@
       "language": "Python",
       "difficulty": "intermediate",
       "recommend_reason": "GitHub官方出品的规范驱动开发(SDD)工具包，把\"先写清楚规范再让AI编码\"拆解成constitution/specify/plan/tasks/implement等七步斜杠命令，并配套Specify CLI和对30+种AI编码助手的集成，是目前\"AI辅助工程化开发流程\"领域最有代表性的官方实践之一，扎实可用而非demo。",
-      "stars_total": 128849
+      "stars_total": 136412
     },
     {
       "full_name": "Comfy-Org/ComfyUI",
