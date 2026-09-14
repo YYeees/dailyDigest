@@ -815,6 +815,24 @@
   ],
   "github_track": [
     {
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "difficulty": "intermediate",
+      "recommend_reason": "面向编码agent的方法论框架，把brainstorm-plan-TDD-review-merge整个软件开发流程结构化为可执行的skill库，支持14+个agent平台。文档专业、有实际skill实现和测试框架，体现出真实的工程严谨性，是“AI辅助软件开发方法论”方向有代表性的学习样本。",
+      "stars_total": 286194
+    },
+    {
+      "full_name": "microsoft/markitdown",
+      "url": "https://github.com/microsoft/markitdown",
+      "description": "Python tool for converting files and office documents to Markdown.",
+      "language": "Python",
+      "difficulty": "beginner",
+      "recommend_reason": "微软官方工具，将PDF/Office/图片/音频等多种文件格式转换为LLM友好的Markdown，是RAG/文档处理流水线中的常见基础组件。生产级实现(400+提交、测试、Docker)，文档清晰、CLI和Python API均易用，是AI应用开发工具链里代表性强、实用价值高的基础设施项目。",
+      "stars_total": 183588
+    },
+    {
       "full_name": "langgenius/dify",
       "url": "https://github.com/langgenius/dify",
       "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
@@ -824,49 +842,31 @@
       "stars_total": 155621
     },
     {
-      "full_name": "unclecode/crawl4ai",
-      "url": "https://github.com/unclecode/crawl4ai",
-      "description": "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here:https://discord.gg/jP8KfhDhyN",
+      "full_name": "browser-use/browser-use",
+      "url": "https://github.com/browser-use/browser-use",
+      "description": "Agents that use the browser.",
       "language": "Python",
       "difficulty": "intermediate",
-      "recommend_reason": "面向LLM/RAG场景的开源网页爬虫，能将网页转换为结构化markdown，支持BM25过滤降噪、LLM驱动抽取和CSS/XPath模式抽取、反检测浏览器模式、自适应爬取等。项目成熟度高（8万+ star、1650+ commits、持续发版），是RAG数据管道中「网页转LLM可用文本」这一环节的代表性工具，工程细节扎实，值得学习其抽取策略设计。",
-      "stars_total": 81818
+      "recommend_reason": "成熟的AI浏览器自动化框架，让LLM agent像人一样操作浏览器完成预订、填表等复杂任务，提供开源Python库、CLI harness和云服务三层架构，115k star、文档和基准测试齐全。是AI agent+浏览器自动化方向最具代表性的项目之一，工具化和文档成熟度都很高，值得学习其架构设计。",
+      "stars_total": 114520
     },
     {
-      "full_name": "jingyaogong/minimind",
-      "url": "https://github.com/jingyaogong/minimind",
-      "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
-      "language": "Python",
-      "difficulty": "beginner",
-      "recommend_reason": "MiniMind让用户能用单张GPU、约3美元成本、2小时内从零训练一个6400万参数的语言模型，完整覆盖预训练、SFT、LoRA、蒸馏、DPO/PPO/GRPO强化学习等全流程，架构对齐Qwen3（RoPE+SwiGLU+预归一化）。项目坦诚讨论了小模型的能力局限和RL奖励稀疏问题，教学意图明确、文档详尽，是理解LLM训练全链路最好的平民化入门项目之一，非常适合AI实践学习者上手。",
-      "stars_total": 59148
-    },
-    {
-      "full_name": "ChromeDevTools/chrome-devtools-mcp",
-      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "description": "Chrome DevTools for coding agents",
+      "full_name": "OpenHands/OpenHands",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "description": "🙌 OpenHands: AI-Driven Development",
       "language": "TypeScript",
       "difficulty": "intermediate",
-      "recommend_reason": "这是Chrome官方团队维护的MCP服务器，让Claude、Cursor等AI编程agent能够直接控制和检查真实Chrome实例，支持性能trace分析、网络请求调试、截图、基于Puppeteer的可靠浏览器自动化。作为官方出品、生产级质量的MCP服务器范例，是学习MCP协议如何对接真实工具（而非玩具demo）的优质案例，文档也明确提示了数据暴露的安全风险，值得警惕但不影响其工具价值。",
-      "stars_total": 51839
+      "recommend_reason": "自托管的AI编程agent控制中心，支持OpenHands/Claude Code/Codex/Gemini等多种agent后端，可本地/Docker/云端部署并接入Slack/GitHub/Linear等自动化工作流。87.8k星、Beta阶段但活跃维护，架构文档和自托管指南完整，是学习如何把编程agent产品化、工程化落地的代表性项目。",
+      "stars_total": 87783
     },
     {
-      "full_name": "GokuMohandas/Made-With-ML",
-      "url": "https://github.com/GokuMohandas/Made-With-ML",
-      "description": "Learn how to develop, deploy and iterate on production-grade ML applications.",
-      "language": "Jupyter Notebook",
-      "difficulty": "intermediate",
-      "recommend_reason": "系统教授如何把机器学习从实验做成可部署、可迭代的生产级应用，覆盖设计开发、部署、MLOps全流程，用Ray做分布式训练、MLflow做实验跟踪、GitHub Actions做CI/CD，并给出本地/云端（AWS/GCP/K8s/Anyscale）多种部署路径的可运行代码。内容工程化程度高，是「AI落地工程实践」很典型的学习范本，能清楚学到从notebook到生产系统的完整链路，但需要一定的软件工程和MLOps基础才能跟上。",
-      "stars_total": 49481
-    },
-    {
-      "full_name": "Imbad0202/academic-research-skills",
-      "url": "https://github.com/Imbad0202/academic-research-skills",
-      "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+      "full_name": "bytedance/deer-flow",
+      "url": "https://github.com/bytedance/deer-flow",
+      "description": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
       "language": "Python",
       "difficulty": "intermediate",
-      "recommend_reason": "这是为Claude Code设计的学术研究全流程技能集（研究-写作-评审-修订-定稿），采用多agent分工（如13-agent研究团队、12-agent写作流水线），并有确定性引用校验、时间线一致性审计、700+自动化测试等严谨的工程细节，强调「AI是副驾驶不是主驾驶」的人工监督理念。这是将复杂agent编排应用到具体垂直场景（学术写作）的优质实践案例，值得学习其技能拆分和验证机制设计。",
-      "stars_total": 46571
+      "recommend_reason": "字节跳动出品的“超级Agent”框架，整合子代理编排、持久记忆、沙箱代码执行、技能系统和消息网关，基于LangGraph/LangChain构建，支持本地/Docker/K8s多种部署，文档详尽（4万字级别）且有商业背书和82k star的活跃社区。是研究长时程复杂任务agent架构的优秀实操样本，技术栈和工程化程度都属于第一梯队。",
+      "stars_total": 82365
     }
   ]
 }

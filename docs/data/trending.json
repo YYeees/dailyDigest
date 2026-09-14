@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "full_name": "bilawalsidhu/gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "language": "JavaScript",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "浏览器端实时地理空间可视化平台，用真实公开数据(飞机、船舶、卫星、地震等)渲染3D地球，并集成OpenAI Realtime API做语音控制、场景理解和AI摘要生成，是模型应用的完整生产级案例。项目工程成熟(CI/CD、详细文档、安全声明)，是“AI+空间数据/多模态交互”方向有代表性的实操样本，值得学习其语音agent与前端数据管道的结合方式。",
+      "first_seen_date": "2026-09-14",
+      "stars_total": 31891,
+      "stars_period": 12931,
+      "last_snapshot_date": "2026-09-14"
+    },
+    {
       "full_name": "tt-a1i/archify",
       "url": "https://github.com/tt-a1i/archify",
       "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
@@ -27,6 +40,32 @@
       "last_snapshot_date": "2026-09-14"
     },
     {
+      "full_name": "microsoft/markitdown",
+      "url": "https://github.com/microsoft/markitdown",
+      "description": "Python tool for converting files and office documents to Markdown.",
+      "language": "Python",
+      "difficulty": "beginner",
+      "worth_tier": "high",
+      "recommend_reason": "微软官方工具，将PDF/Office/图片/音频等多种文件格式转换为LLM友好的Markdown，是RAG/文档处理流水线中的常见基础组件。生产级实现(400+提交、测试、Docker)，文档清晰、CLI和Python API均易用，是AI应用开发工具链里代表性强、实用价值高的基础设施项目。",
+      "first_seen_date": "2026-09-14",
+      "stars_total": 183588,
+      "stars_period": 5191,
+      "last_snapshot_date": "2026-09-14"
+    },
+    {
+      "full_name": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "description": "Write HTML. Render video. Built for agents.",
+      "language": "TypeScript",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "将HTML/CSS/动画确定性渲染为MP4视频的框架，核心定位是“为AI agent设计”——用平文本HTML代替React组件(对比Remotion)，让AI也能直接编写视频内容，并提供20个可复用技能供Claude/Cursor等agent调用。有7个功能性npm包、完整CLI和测试基线，是“AI生成内容”方向具代表性的工具实践。",
+      "first_seen_date": "2026-09-14",
+      "stars_total": 49594,
+      "stars_period": 5146,
+      "last_snapshot_date": "2026-09-14"
+    },
+    {
       "full_name": "THU-MAIC/OpenMAIC",
       "url": "https://github.com/THU-MAIC/OpenMAIC",
       "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
@@ -37,45 +76,6 @@
       "first_seen_date": "2026-08-15",
       "stars_total": 36473,
       "stars_period": 4202,
-      "last_snapshot_date": "2026-09-14"
-    },
-    {
-      "full_name": "github/spec-kit",
-      "url": "https://github.com/github/spec-kit",
-      "description": "💫 Toolkit to help you get started with Spec-Driven Development",
-      "language": "Python",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "GitHub官方出品的规范驱动开发(SDD)工具包，把\"先写清楚规范再让AI编码\"拆解成constitution/specify/plan/tasks/implement等七步斜杠命令，并配套Specify CLI和对30+种AI编码助手的集成，是目前\"AI辅助工程化开发流程\"领域最有代表性的官方实践之一，扎实可用而非demo。",
-      "first_seen_date": "2026-08-15",
-      "stars_total": 136412,
-      "stars_period": 2642,
-      "last_snapshot_date": "2026-09-14"
-    },
-    {
-      "full_name": "anomalyco/opencode",
-      "url": "https://github.com/anomalyco/opencode",
-      "description": "The open source coding agent.",
-      "language": "TypeScript",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "开源AI编程Agent，build(全权限执行)和plan(只读分析、执行命令前需授权)双Agent模式覆盖了从代码探索到实际开发的不同信任级别，CLI和桌面端(macOS/Windows/Linux)都有，安装渠道成熟。已核实该仓库原属sst组织、现迁移到anomalyco(sst/opencode会跳转到这里)，不是冒名蹭热度的仓库，是AI编程Agent赛道有代表性的成熟项目。",
-      "first_seen_date": "2026-08-16",
-      "stars_total": 207137,
-      "stars_period": 2218,
-      "last_snapshot_date": "2026-09-14"
-    },
-    {
-      "full_name": "rohitg00/ai-engineering-from-scratch",
-      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
-      "description": "Learn it. Build it. Ship it for others.",
-      "language": "Python",
-      "difficulty": "advanced",
-      "worth_tier": "high",
-      "recommend_reason": "一套从数学基础到生产级Agent系统的完整AI工程课程,523节课分20个阶段,用Python/TypeScript/Rust/Julia提供可运行实现,并配套书籍和技能/MCP产出物。目录结构和提交历史(1764次)显示内容确实落地而非大纲空转,体量和深度要求学习者有一定钻研耐心,是系统学习AI工程实操路径的优秀样本。",
-      "first_seen_date": "2026-08-31",
-      "stars_total": 54460,
-      "stars_period": 1968,
       "last_snapshot_date": "2026-09-14"
     }
   ]
