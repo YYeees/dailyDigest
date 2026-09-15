@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "person": "Boris Cherny",
+      "title": "RT @addyosmani: At Anthropic, Claude now writes 80% of our code. Engineers ship 8x more code per qua…",
+      "link": "https://x.com/bcherny/status/2099640440740028520",
+      "date": "2026-09-14",
+      "first_seen": "2026-09-15T00:21:50.842553+00:00",
+      "source_type": "x",
+      "summary": "转引Addy Osmani的说法：在Anthropic内部，Claude现在编写了80%的代码，工程师每季度交付的代码量提升了8倍，副作用是测试代码量增长了10倍，CI部分推文被截断、后续内容未知。这条数据直接触及AI大幅提升代码产出后测试规模同步膨胀的现象，跟AI怎么改造测试这个主题相关。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Anthropic内部真实数据点(Claude写80%代码、工程师产出提升8倍)，直接反映AI工具影响力的前沿趋势"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "The contagion of fear",
+      "link": "https://simonwillison.net/2026/Sep/14/the-contagion-of-fear/",
+      "date": "2026-09-14",
+      "first_seen": "2026-09-15T00:21:43.532822+00:00",
+      "source_type": "blog",
+      "summary": "Bryan Cantrill撰文回应前Anthropic员工关于\"AI可能在本世纪末前害死所有人\"的说法，用自己年轻时因不够格却发表技术断言、造成不必要恐慌的往事作类比，主张专家在敲响警钟时更该谨慎克制——尤其是生物武器这类他认为被随口引用、缺乏专业背书的风险场景，应该真正请生物学家/军控专家来评估而不是靠联想制造恐惧。Simon Willison在博文里补充了对应播客节目里Cantrill原话的引用。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入讨论AI存在性风险言论的可信度和专家责任，是前沿AI安全叙事里讲得清楚、有分量的一篇"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Humanity’s Last Invention — Richard Socher of Recursive",
+      "link": "https://www.latent.space/p/recursive",
+      "date": "2026-09-14",
+      "first_seen": "2026-09-15T00:21:44.030993+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space访谈Richard Socher(You.com创始人，现创办估值50亿美元的Recursive)，围绕他提出的\"尤里卡机器\"构想——用AI自动化AI研究本身，实现递归自我提升。访谈深入讨论了reward hacking、对Anthropic\"宪法式AI\"有效性的质疑、开源模型的地缘软实力价值，以及AI硬起飞被物理与经济约束低估的观点，还提到Recursive已有的GPU kernel自动优化、AI研究系统跑赢人类等早期成果。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深度访谈前沿AI创业者，讲清楚递归自我提升、reward hacking、对齐等前沿趋势是什么、为什么重要"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Maggie Appleton",
+      "title": "Planning with Agents: Divided Worlds, Boundary Objects, and Thicker Interfaces",
+      "link": "https://maggieappleton.com/planning-agents/",
+      "date": "2026-09-14",
+      "first_seen": "2026-09-15T00:21:41.885459+00:00",
+      "source_type": "blog",
+      "summary": "作者在GitHub Next的一手实践出发，主张当前人机协作界面太\"薄\"——agent只用文本对话向人汇报，缺少让人类介入验证的界面。她提出应该用可视化状态图、实时可操控原型、多方案并行呈现等\"厚界面\"替代纯文本交互，并以设计系统调整、播放器状态机、重试逻辑对比三个真实项目为例。团队正在开发Chopin项目，一个支持多人协作与决策留痕的实时规划原型工具。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "基于GitHub Next一手实践，讲清楚人机agent协作界面该怎么设计、为什么重要，属于扎实的AI实操/趋势内容"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "明确踩中根二AI作为认知方式与护城河在harness不在模型这两条正向母题，且是作者本人一手实践反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "Generating running routes with GPT-6 Astra and ChatGPT Work",
       "link": "https://simonwillison.net/2026/Sep/12/astra-running-routes/",
@@ -15,7 +88,7 @@
           "reason": "展示ChatGPT Work用GPT-6 Astra调用Nominatim/Overpass生成实际可用的跑步路线，并揭示对话压缩会丢失过程代码这一透明度问题，是有实操价值的AI应用观察。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

@@ -2,6 +2,138 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "The contagion of fear",
+      "link": "https://simonwillison.net/2026/Sep/14/the-contagion-of-fear/",
+      "date": "2026-09-14",
+      "first_seen": "2026-09-15T00:21:43.532822+00:00",
+      "source_type": "blog",
+      "summary": "Bryan Cantrill撰文回应前Anthropic员工关于\"AI可能在本世纪末前害死所有人\"的说法，用自己年轻时因不够格却发表技术断言、造成不必要恐慌的往事作类比，主张专家在敲响警钟时更该谨慎克制——尤其是生物武器这类他认为被随口引用、缺乏专业背书的风险场景，应该真正请生物学家/军控专家来评估而不是靠联想制造恐惧。Simon Willison在博文里补充了对应播客节目里Cantrill原话的引用。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入讨论AI存在性风险言论的可信度和专家责任，是前沿AI安全叙事里讲得清楚、有分量的一篇"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "沾批判性思维与认识论周边的边，但是Simon转述Bryan Cantrill的二手内容"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "What blog posts influenced your thinking the most?",
+      "link": "https://simonwillison.net/2026/Sep/14/influences/",
+      "date": "2026-09-14",
+      "first_seen": "2026-09-15T00:21:43.532992+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison在Lobsters讨论串里回顾了三篇塑造他职业思考的博文：Joel Spolsky的《渗漏抽象定律》让他养成持续深挖底层原理的习惯；Will Larson的《迁移：技术债唯一可规模化的解法》说服他把系统迁移当成工程师该练的常规技能而非特殊状况；Charity Majors的《工程师/经理钟摆》则让他放下\"转回IC会毁掉职业生涯\"的焦虑，认识到在IC和管理间来回摆动反而让两边都做得更好。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "跟AI无关，是职业生涯影响他思考的博文回顾"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "作者本人一手回顾职业思考的形成，沾批判性思维与认识论/构建者活法周边的边，但不是直接讨论AI或自我认识母题本身"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Humanity’s Last Invention — Richard Socher of Recursive",
+      "link": "https://www.latent.space/p/recursive",
+      "date": "2026-09-14",
+      "first_seen": "2026-09-15T00:21:44.030993+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space访谈Richard Socher(You.com创始人，现创办估值50亿美元的Recursive)，围绕他提出的\"尤里卡机器\"构想——用AI自动化AI研究本身，实现递归自我提升。访谈深入讨论了reward hacking、对Anthropic\"宪法式AI\"有效性的质疑、开源模型的地缘软实力价值，以及AI硬起飞被物理与经济约束低估的观点，还提到Recursive已有的GPU kernel自动优化、AI研究系统跑赢人类等早期成果。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深度访谈前沿AI创业者，讲清楚递归自我提升、reward hacking、对齐等前沿趋势是什么、为什么重要"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "沾根二AI作为认知方式的边(自动化AI研究、harness/sandbox基础设施)，但是访谈形式的二手内容非本人一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Laurie Voss",
+      "link": "https://simonwillison.net/2026/Sep/14/laurie-voss/",
+      "date": "2026-09-14",
+      "first_seen": "2026-09-15T00:21:43.533056+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison转引Laurie Voss的观点：写代码的成本已经坍缩，审查、修复、运维代码的成本也在跟进下降；软件开发剩下的核心工作，将变成搞清楚用户到底想要什么、把需求定义精确、并做得让人用着舒服。这条只是引用，Willison本人没有额外评论。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "转引的一段观察很扎实(AI让写代码成本坍缩、剩下的核心工作是搞清楚需求)，但只是引用没有Willison本人展开"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "沾根二AI作为认知方式/护城河不在模型的边，但是二手引用非本人一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "commit-rewriter 0.1",
+      "link": "https://simonwillison.net/2026/Sep/14/commit-rewriter/",
+      "date": "2026-09-14",
+      "first_seen": "2026-09-15T00:21:43.533082+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison为清理Datasette安全发布中带有编程代理痕迹和私有issue编号的commit信息，做了一个小工具commit-rewriter：本地网页界面逐条编辑commit message，提交前自动打一个时间戳分支备份，再批量重写从选定commit往后的历史。属于AI辅助编程留下的\"尾巴\"该怎么收拾的实用小工具，文章本身没有更深的架构或方法论展开。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "作者自己维护的小工具介绍，但解决的是编程agent留下commit信息垃圾这个实际AI辅助编程痛点"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干及周边领域都没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Maggie Appleton",
+      "title": "Planning with Agents: Divided Worlds, Boundary Objects, and Thicker Interfaces",
+      "link": "https://maggieappleton.com/planning-agents/",
+      "date": "2026-09-14",
+      "first_seen": "2026-09-15T00:21:41.885459+00:00",
+      "source_type": "blog",
+      "summary": "作者在GitHub Next的一手实践出发，主张当前人机协作界面太\"薄\"——agent只用文本对话向人汇报，缺少让人类介入验证的界面。她提出应该用可视化状态图、实时可操控原型、多方案并行呈现等\"厚界面\"替代纯文本交互，并以设计系统调整、播放器状态机、重试逻辑对比三个真实项目为例。团队正在开发Chopin项目，一个支持多人协作与决策留痕的实时规划原型工具。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "基于GitHub Next一手实践，讲清楚人机agent协作界面该怎么设计、为什么重要，属于扎实的AI实操/趋势内容"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "明确踩中根二AI作为认知方式与护城河在harness不在模型这两条正向母题，且是作者本人一手实践反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "Generating running routes with GPT-6 Astra and ChatGPT Work",
       "link": "https://simonwillison.net/2026/Sep/12/astra-running-routes/",
       "date": "2026-09-12",
@@ -15,7 +147,7 @@
           "reason": "展示ChatGPT Work用GPT-6 Astra调用Nominatim/Overpass生成实际可用的跑步路线，并揭示对话压缩会丢失过程代码这一透明度问题，是有实操价值的AI应用观察。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -332,40 +464,6 @@
           "track": "eval",
           "tier": "high",
           "reason": "扎实的一线实测困惑:复杂iGaming领域里手工QA写用例交给Claude自动化、AQA再审核的流程，具体指出每个游戏协议都不同导致AI生成用例难以复用维护，还提出了怎么设计实验验证这套流程是否值得的问题"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Craig Mod",
-      "title": "[RIDGELINE] A Few London Strolls",
-      "link": "https://craigmod.com/ridgeline/233/",
-      "date": "2026-09-08",
-      "first_seen": "2026-09-10T23:48:05.754450+00:00",
-      "source_type": "blog",
-      "summary": "Craig Mod记录了在伦敦东北角十天的漫步生活：早上读写到眼花，下午反复走同一片街区，享受方向感尽失带来的迷离乐趣；文末因一颗尼古丁袋剧烈不适，意外冲淡了他此前对伦敦建筑审美的评判，成了一则关于“批判总在代价之前”的自嘲反思。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "一手记录伦敦漫步与晨间写作的节奏，结尾对“批判先于代价”的自嘲触及自我认知周边，但未直接命中核心母题"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "The Frontier AEO Tracker: What Astra Chooses (and every other frontier model, and what you can do about it)",
-      "link": "https://www.latent.space/p/aeo",
-      "date": "2026-09-07",
-      "first_seen": "2026-09-08T00:01:40.663765+00:00",
-      "source_type": "blog",
-      "summary": "Latent Space做了一个「AEO追踪器」，用6种问法在7个前沿模型上跑161个品类，衡量各家模型回答「该推荐什么产品/服务」时的偏好，发现每家模型都明显偏向推荐自己家产品（比如Fable/Opus推荐Claude Code、Astra推荐Codex），也观察到Anthropic的模型比其他家搜索更多信源、换代后（Opus→Fable）搜索源明显增多，而OpenAI换代后（Sol→Astra）反而更「自信」、更少因换个问法就改变答案。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "前沿模型行为的第一手实测数据，讲清楚方法论和发现，属于AI趋势观察但偏商业/营销分析而非直接实操指南"
         }
       ],
       "is_new": false

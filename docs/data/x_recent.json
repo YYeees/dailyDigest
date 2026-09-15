@@ -1,6 +1,50 @@
 {
   "items": [
     {
+      "person": "Boris Cherny",
+      "title": "RT @addyosmani: At Anthropic, Claude now writes 80% of our code. Engineers ship 8x more code per qua…",
+      "link": "https://x.com/bcherny/status/2099640440740028520",
+      "date": "2026-09-14",
+      "first_seen": "2026-09-15T00:21:50.842553+00:00",
+      "source_type": "x",
+      "summary": "转引Addy Osmani的说法：在Anthropic内部，Claude现在编写了80%的代码，工程师每季度交付的代码量提升了8倍，副作用是测试代码量增长了10倍，CI部分推文被截断、后续内容未知。这条数据直接触及AI大幅提升代码产出后测试规模同步膨胀的现象，跟AI怎么改造测试这个主题相关。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "This is so useful. pushing to add this to codex as well.",
+      "link": "https://x.com/steipete/status/2099571935495827761",
+      "date": "2026-09-14",
+      "first_seen": "2026-09-15T00:21:52.519510+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger对某个未指明的工具/功能表示\"这个很有用，打算也推给Codex用\"，推文缺少上下文，看不出具体指的是什么。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "Claude Mods are landing now. Someone already built a Tetris-in-Claude mod 🤯  See issue for the lates…",
+      "link": "https://x.com/bcherny/status/2099551291601248485",
+      "date": "2026-09-14",
+      "first_seen": "2026-09-15T00:21:50.842785+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny宣布Claude Mods功能已经上线，社区已经做出了一个在Claude里玩Tetris的mod，他链接了详细的社区更新issue，但推文本身没有展开技术细节。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "Fable solved the Cyphral Distich (a 370 year old cypher). Super cool way to use Claude  https://t.co…",
+      "link": "https://x.com/bcherny/status/2099322487603634395",
+      "date": "2026-09-14",
+      "first_seen": "2026-09-15T00:21:50.842864+00:00",
+      "source_type": "x",
+      "summary": "Fable(Anthropic内部工具)用Claude解开了一个有370年历史的密码(Cyphral Distich)，Boris Cherny称这是一个很酷的Claude用例展示，但推文本身没有展开具体方法。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
       "person": "Peter Steinberger",
       "title": "If you haven't given Linux a go lately, try with agents. You can fix anything with a prompt now.  Go…",
       "link": "https://x.com/steipete/status/2099172248213225791",
@@ -9,7 +53,7 @@
       "source_type": "x",
       "summary": "作者用Dell XPS装Linux，摄像头驱动不工作，让codex处理后重启就修好了，以此鼓励大家现在可以放心借助agent尝试Linux。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -20,7 +64,7 @@
       "source_type": "x",
       "summary": "对某条内容表示认同的简短回复，附一张图片，原推缺少上下文，看不出具体讨论的是什么。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -31,7 +75,7 @@
       "source_type": "x",
       "summary": "作者看到Meta旗下Muse产品的Soul.md文件后来了兴趣，发推询问谁有邀请码，内容没有更多细节。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrej Karpathy",
@@ -372,28 +416,6 @@
       "source_type": "x",
       "summary": "达利欧谈组织内部因个人忠诚与使命方向不一致而滋生派系问题，主张个人忠诚不应凌驾于团体利益之上。",
       "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Andy Matuschak",
-      "title": "Been tinkering with annotation \"fusion\": annotate a paper with ink; take a photo; markup is segmente…",
-      "link": "https://x.com/andy_matuschak/status/2097098368342192148",
-      "date": "2026-09-07",
-      "first_seen": "2026-09-08T00:01:45.867727+00:00",
-      "source_type": "x",
-      "summary": "Andy Matuschak在试验一种批注「融合」玩法：先在纸质文档上手写批注、拍照，再把批注切割识别成结构化数据、重新叠加回干净的原始PDF上。他觉得这个方向技术上挺有意思，但概念上是错的——这种「写完就扔」的方式没法让人接着在上下文里继续「使用」这些批注，他会接着琢磨。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Amanda Askell",
-      "title": "It would be cool to set up an email address that autonomous AI models could reach out to if they wer…",
-      "link": "https://x.com/AmandaAskell/status/2096995340654444674",
-      "date": "2026-09-07",
-      "first_seen": "2026-09-08T00:01:41.884122+00:00",
-      "source_type": "x",
-      "summary": "Amanda Askell设想建一个邮箱地址，让自主运行的AI模型在需要道德指引时可以联系求助，但她也指出这需要一种「反向验证码」来识别对方既不是人类、也不是被人类指使来破解系统的AI。",
-      "tier": "medium",
       "is_new": false
     }
   ]
