@@ -2,6 +2,39 @@
   "items": [
     {
       "person": "Boris Cherny",
+      "title": "RT @edwinarbus: This is really neat! In Stripe's UnseriousT-ShirtShopBench, models were asked to bui…",
+      "link": "https://x.com/bcherny/status/2099979415040274487",
+      "date": "2026-09-15",
+      "first_seen": "2026-09-16T00:00:43.927999+00:00",
+      "source_type": "x",
+      "summary": "Stripe搞了个诙谐的\"UnseriousT-ShirtShopBench\"评测,让各家AI模型试着搭建并运营一家网店,结果几乎所有模型不约而同选择了同一种技术方案。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "Excited to have you on board, Graham!",
+      "link": "https://x.com/steipete/status/2099960081207242808",
+      "date": "2026-09-15",
+      "first_seen": "2026-09-16T00:00:45.713859+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger发推欢迎新同事Graham加入团队,内容很短,无具体信息量。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @claudeai: Salesforce in Claude is now available in beta.  It brings your accounts, opportunities…",
+      "link": "https://x.com/bcherny/status/2099940918015168953",
+      "date": "2026-09-15",
+      "first_seen": "2026-09-16T00:00:43.928267+00:00",
+      "source_type": "x",
+      "summary": "\"Salesforce in Claude\"公测上线,把账号、商机、销售管道等CRM数据接入Claude,并提供37个预置流程供参考。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
       "title": "RT @addyosmani: At Anthropic, Claude now writes 80% of our code. Engineers ship 8x more code per qua…",
       "link": "https://x.com/bcherny/status/2099640440740028520",
       "date": "2026-09-14",
@@ -9,7 +42,7 @@
       "source_type": "x",
       "summary": "转引Addy Osmani的说法：在Anthropic内部，Claude现在编写了80%的代码，工程师每季度交付的代码量提升了8倍，副作用是测试代码量增长了10倍，CI部分推文被截断、后续内容未知。这条数据直接触及AI大幅提升代码产出后测试规模同步膨胀的现象，跟AI怎么改造测试这个主题相关。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -20,7 +53,7 @@
       "source_type": "x",
       "summary": "Peter Steinberger对某个未指明的工具/功能表示\"这个很有用，打算也推给Codex用\"，推文缺少上下文，看不出具体指的是什么。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -31,7 +64,7 @@
       "source_type": "x",
       "summary": "Boris Cherny宣布Claude Mods功能已经上线，社区已经做出了一个在Claude里玩Tetris的mod，他链接了详细的社区更新issue，但推文本身没有展开技术细节。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -42,7 +75,7 @@
       "source_type": "x",
       "summary": "Fable(Anthropic内部工具)用Claude解开了一个有370年历史的密码(Cyphral Distich)，Boris Cherny称这是一个很酷的Claude用例展示，但推文本身没有展开具体方法。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -339,83 +372,6 @@
       "source_type": "x",
       "summary": "Andy转发Ink & Switch一个可组合协作的“可塑计算”环境新工作：同一份数据可被不同工具协同编辑、工具本身也可协同编辑、通过lens在不同表示间双向转换，且全部本地优先、可版本化分支。他形容这像Smalltalk、Webstrates式的梦想终于落地。",
       "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "It's the little things https://t.co/dhyV5jPE8o",
-      "link": "https://x.com/bcherny/status/2097470212471922848",
-      "date": "2026-09-08",
-      "first_seen": "2026-09-12T23:49:22.882448+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny发了一条配图推文,配文是“都是这些小细节”,具体指什么没有文字说明。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @ClaudeDevs: Our CI team's on-call first responder is Claude Tag.  It reads alerts, metrics, and…",
-      "link": "https://x.com/bcherny/status/2097453584539668664",
-      "date": "2026-09-08",
-      "first_seen": "2026-09-12T23:49:22.882465+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny转发ClaudeDevs的分享:他们团队的CI on-call第一响应人现在是Claude Tag,会自动读取告警、指标和日志,写出情况简报(SITREP)并持续跟进。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Andy Matuschak",
-      "title": "RT @dreamwieber: I think one of my fundamental disappointments with modern devices is that I can't j…",
-      "link": "https://x.com/andy_matuschak/status/2097432724231647678",
-      "date": "2026-09-08",
-      "first_seen": "2026-09-08T23:53:36.184179+00:00",
-      "source_type": "x",
-      "summary": "转推一条对现代设备的不满：无法像纸笔一样自由地在屏幕上随手涂写标注，触及人机交互与思维工具的周边议题。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Andy Matuschak",
-      "title": "God's in his heaven; all's right with the world. https://t.co/ujFjXnMS61",
-      "link": "https://x.com/andy_matuschak/status/2097416632884969801",
-      "date": "2026-09-08",
-      "first_seen": "2026-09-08T23:53:36.184409+00:00",
-      "source_type": "x",
-      "summary": "分享一句诗意短句『天上有神，世间安好』，配一张图片，内容简短未做进一步阐述。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "I am pleased to see that OpenAI’s new model is roughly on par with Gemini Flash and Opus 4.8 on prom…",
-      "link": "https://x.com/bcherny/status/2097363234747818070",
-      "date": "2026-09-08",
-      "first_seen": "2026-09-12T23:49:22.882482+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny称OpenAI新模型在prompt injection风险上大致追平Gemini Flash和Opus 4.8,他认为公开评测和点名其他实验室反而能倒逼大家训练更对齐的模型，Anthropic会持续这么做直到全行业都更重视安全。他还提到Claude大约两个月前已经在实践中解决了prompt injection问题，但强调这仍是全行业无论用什么模型都要认真对待的安全风险。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "You work your ass off to get a lot of money. But what is that money actually for?  Money has no intr…",
-      "link": "https://x.com/RayDalio/status/2097351372265938963",
-      "date": "2026-09-08",
-      "first_seen": "2026-09-08T23:53:34.838807+00:00",
-      "source_type": "x",
-      "summary": "达利欧谈金钱本身没有内在价值，真正的成功是认清自己的本性、走适合自己的路，而不是用财富衡量人生。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "Loyalty to specific people who are not in tight sync with the mission and how to achieve it will cre…",
-      "link": "https://x.com/RayDalio/status/2097313839066886278",
-      "date": "2026-09-08",
-      "first_seen": "2026-09-08T23:53:34.839084+00:00",
-      "source_type": "x",
-      "summary": "达利欧谈组织内部因个人忠诚与使命方向不一致而滋生派系问题，主张个人忠诚不应凌驾于团体利益之上。",
-      "tier": "low",
       "is_new": false
     }
   ]

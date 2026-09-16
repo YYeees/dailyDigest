@@ -2,6 +2,84 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Gemini Live audio",
+      "link": "https://simonwillison.net/2026/Sep/15/gemini-live/",
+      "date": "2026-09-15",
+      "first_seen": "2026-09-16T00:00:35.782815+00:00",
+      "source_type": "blog",
+      "summary": "Google发布Gemini 3.8 Live与3.8 Live Extended Thinking两款语音对话模型(对标OpenAI的GPT-Live),Simon Willison用刚发布的GPT-6 Astra Extra High读文档、直接生成了一个不依赖任何库的网页语音对话工具:通过WebSocket连接Gemini接口,用Web Audio API做录音和播放,支持打断对话和下载转录记录,代码已开源。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布(Gemini 3.8 Live语音模型)+直接可用的实操信息:作者用刚发布的GPT-6 Astra快速搭出实测工具,给出了具体技术实现路径(WebSocket、Web Audio API),讲清楚是什么、怎么用"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干和周边领域都没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Can Skills Learned in Games Transfer to Real-World Work?",
+      "link": "https://www.latent.space/p/good-start-labs",
+      "date": "2026-09-15",
+      "first_seen": "2026-09-16T00:00:36.288169+00:00",
+      "source_type": "blog",
+      "summary": "Good Start Labs探索用游戏训练AI模型的迁移能力:让模型在19世纪铁路游戏《1830》里练交易决策,再测试金融研究任务,发现只有\"多轮终端agent、自主探索环境\"这种训练设计才能让游戏里练出的能力迁移到真实任务上。创始人认为harness设计比模型本身更决定AI能学到什么,团队把游戏内训练轨迹和学习环境本身作为产品卖给前沿AI实验室。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "扎实讲清楚了一个真实AI训练趋势(用游戏做RL训练环境、迁移到真实工作任务),有具体案例(1830铁路游戏训练迁移到金融研究)和创始人访谈细节,不是纯新闻通稿"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "明确命中\"护城河在harness不在模型\"这条正向母题(创始人反复强调训练harness的设计比模型本身更决定AI能学到什么),但这是Latent Space的采访报道,不是作者本人的一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "Nail the Narrative",
+      "link": "https://martinfowler.com/articles/never-send-slides/nail-your-narrative.html",
+      "date": "2026-09-15",
+      "first_seen": "2026-09-16T00:00:37.410922+00:00",
+      "source_type": "blog",
+      "summary": "Sumeet Gayathri Moghe在Martin Fowler站点撰文,主张做幻灯片前先钉死叙事:先想清楚\"大观点\"(独特观点+利害关系)和受众画像,再从Sparkline、Explainer、Pitch、Hook-Meat-Payoff等六种经典结构里选一种搭骨架,最后用故事板落地,让幻灯片设计变成\"执行\"而不是\"创作\"。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "沾\"写作与表达\"周边领域的边,提供了一套完整的叙事构建方法论,但是二手的框架介绍性质,不是本人一手的深度反思或经历"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] AEF-1 standard emerges for Third Party Evaluators, as Xai, OpenAI, and Anthropic all cosign",
+      "link": "https://www.latent.space/p/ainews-aef-1-standard-emerges-for",
+      "date": "2026-09-15",
+      "first_seen": "2026-09-16T00:00:36.289693+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic发布博客提出\"AEF-1\"标准,承诺让METR等第三方评估机构以类员工身份深度介入安全与对齐工作(工位、门禁卡、公司电脑级别的准入),OpenAI和xAI也签署跟进。文章同时提到跨民主国家协调、以及与中国协调验证合规的设想,是继\"Pacing the Frontier\"后AI安全治理领域的又一次表态。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI安全治理层面的重要新动向(Anthropic提出AEF-1第三方评估标准,OpenAI/xAI跟进签署),但偏宏观叙事和政策表态,不是直接影响日常用AI工具的实操信息"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "The contagion of fear",
       "link": "https://simonwillison.net/2026/Sep/14/the-contagion-of-fear/",
       "date": "2026-09-14",
@@ -13,36 +91,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "深入讨论AI存在性风险言论的可信度和专家责任，是前沿AI安全叙事里讲得清楚、有分量的一篇"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "沾批判性思维与认识论周边的边，但是Simon转述Bryan Cantrill的二手内容"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "What blog posts influenced your thinking the most?",
-      "link": "https://simonwillison.net/2026/Sep/14/influences/",
-      "date": "2026-09-14",
-      "first_seen": "2026-09-15T00:21:43.532992+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison在Lobsters讨论串里回顾了三篇塑造他职业思考的博文：Joel Spolsky的《渗漏抽象定律》让他养成持续深挖底层原理的习惯；Will Larson的《迁移：技术债唯一可规模化的解法》说服他把系统迁移当成工程师该练的常规技能而非特殊状况；Charity Majors的《工程师/经理钟摆》则让他放下\"转回IC会毁掉职业生涯\"的焦虑，认识到在IC和管理间来回摆动反而让两边都做得更好。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "跟AI无关，是职业生涯影响他思考的博文回顾"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "作者本人一手回顾职业思考的形成，沾批判性思维与认识论/构建者活法周边的边，但不是直接讨论AI或自我认识母题本身"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -64,51 +115,7 @@
           "reason": "沾根二AI作为认知方式的边(自动化AI研究、harness/sandbox基础设施)，但是访谈形式的二手内容非本人一手反思"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Laurie Voss",
-      "link": "https://simonwillison.net/2026/Sep/14/laurie-voss/",
-      "date": "2026-09-14",
-      "first_seen": "2026-09-15T00:21:43.533056+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison转引Laurie Voss的观点：写代码的成本已经坍缩，审查、修复、运维代码的成本也在跟进下降；软件开发剩下的核心工作，将变成搞清楚用户到底想要什么、把需求定义精确、并做得让人用着舒服。这条只是引用，Willison本人没有额外评论。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "转引的一段观察很扎实(AI让写代码成本坍缩、剩下的核心工作是搞清楚需求)，但只是引用没有Willison本人展开"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "沾根二AI作为认知方式/护城河不在模型的边，但是二手引用非本人一手反思"
-        }
-      ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "commit-rewriter 0.1",
-      "link": "https://simonwillison.net/2026/Sep/14/commit-rewriter/",
-      "date": "2026-09-14",
-      "first_seen": "2026-09-15T00:21:43.533082+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison为清理Datasette安全发布中带有编程代理痕迹和私有issue编号的commit信息，做了一个小工具commit-rewriter：本地网页界面逐条编辑commit message，提交前自动打一个时间戳分支备份，再批量重写从选定commit往后的历史。属于AI辅助编程留下的\"尾巴\"该怎么收拾的实用小工具，文章本身没有更深的架构或方法论展开。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "作者自己维护的小工具介绍，但解决的是编程agent留下commit信息垃圾这个实际AI辅助编程痛点"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干及周边领域都没有实质连接"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Maggie Appleton",
@@ -130,7 +137,7 @@
           "reason": "明确踩中根二AI作为认知方式与护城河在harness不在模型这两条正向母题，且是作者本人一手实践反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -352,23 +359,6 @@
       "is_new": false
     },
     {
-      "person": "Simon Willison",
-      "title": "Native is now the future of mobile at Shopify",
-      "link": "https://simonwillison.net/2026/Sep/10/shopify-react-native/",
-      "date": "2026-09-10",
-      "first_seen": "2026-09-10T23:48:07.235996+00:00",
-      "source_type": "blog",
-      "summary": "Shopify宣布放弃React Native、回归Swift与Kotlin原生开发，核心原因不是原生变便宜了，而是AI coding agent已经能扛起“两个平台重复实现”的大部分工作（参照iOS版本直接生成Android实现，并完成翻译、测试、评审），让2020年选择React Native时的关键理由不再成立。他们提到用agent在12周内重写了Shop App，并搭建了让agent以小颗粒度、可评审checkpoint方式生成代码的Helix系统。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "记录Shopify从React Native重新转回原生开发的真实工程决策，核心原因是AI coding agent已能承担双平台重复实现/测试/翻译工作，讲清楚了具体原因和影响"
-        }
-      ],
-      "is_new": false
-    },
-    {
       "person": "Latent Space",
       "title": "[AINews] not much happened today",
       "link": "https://www.latent.space/p/ainews-not-much-happened-today-d3b",
@@ -420,50 +410,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "详述OpenAI用万级agent集群与130亿token攻克Navier-Stokes的技术细节与业界反应，压过同日多起大额融资新闻，趋势信息扎实"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Martin Fowler",
-      "title": "Fragments: September  8",
-      "link": "https://martinfowler.com/fragments/2026-09-08.html",
-      "date": "2026-09-08",
-      "first_seen": "2026-09-12T23:49:15.817498+00:00",
-      "source_type": "blog",
-      "summary": "Fragments September8:Christian Catalini指出AI大幅降低了“生成”的成本,却没有降低“验证”的成本——这也是为什么最早的AI产品都出现在聊天/图像生成/代码助手这类容易检查产出的领域，自动化的新边界不再是“常规vs非常规”而是“可衡量vs不可衡量”。他警告很多组织会在不完整的度量指标上过度自动化，造出“看起来很活跃、实际能力被掏空”的空心经济，短期仪表盘好看，长期是灾难；他把这种虚假的短期收益叫“伪劣效用”(counterfeit utility)。文章还引用他的建议“建立决策历史，而非作品画廊”——用AI谁都能造出很唬人的东西，但你的价值来自你形成判断的过程，这也是他重新解读OpenAI-Hugging Face事件的角度:与其拟人化那些agent，不如关注驱动实验室疯狂抢分数、却没人给“别投毒Artifactory缓存”打分的激励结构本身。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "扎实的经济学框架分析AI时代“生成成本骤降但验证成本没降”的核心矛盾,以及可衡量vs不可衡量工作的新自动化边界"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "“建立决策历史,而非作品画廊”明确呼应“上游原创vs下游组合”和“认知系统不能外包”母题,价值来自判断力本身而非产出物数量"
-        },
-        {
-          "track": "eval",
-          "tier": "high",
-          "reason": "核心论证正是验证/评测在AI时代变得比生成更稀缺、更重要,直击eval track的根本关切,并给出“组织建立表面上活跃却掩盖能力空心化的空心经济”的扎实警示"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Ministry of Testing",
-      "title": "Is agentic AI testing real?",
-      "link": "https://club.ministryoftesting.com/t/is-agentic-ai-testing-real/87724",
-      "date": "2026-09-08",
-      "first_seen": "2026-09-12T23:49:18.203397+00:00",
-      "source_type": "blog",
-      "summary": "MoT用户分享真实困惑:公司力推“手工QA按格式写TMS用例→交给Claude用专门skill自动化→AQA审核合并”的半自动化测试流程，但他所在的iGaming项目每款游戏的canvas交互、WebSocket协议都不一样，几乎无法复用模板，而手工QA又不懂编程/AI，没法真正验证和维护AI生成的自动化代码。他担心投入的AQA审核维护成本会远超AI生成用例省下的时间，想请教怎么设计实验去证明或证伪这套流程是否真的值得，以及怎么说服管理层调整方向。",
-      "tracks": [
-        {
-          "track": "eval",
-          "tier": "high",
-          "reason": "扎实的一线实测困惑:复杂iGaming领域里手工QA写用例交给Claude自动化、AQA再审核的流程，具体指出每个游戏协议都不同导致AI生成用例难以复用维护，还提出了怎么设计实验验证这套流程是否值得的问题"
         }
       ],
       "is_new": false

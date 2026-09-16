@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "Gemini Live audio",
+      "link": "https://simonwillison.net/2026/Sep/15/gemini-live/",
+      "date": "2026-09-15",
+      "first_seen": "2026-09-16T00:00:35.782815+00:00",
+      "source_type": "blog",
+      "summary": "Google发布Gemini 3.8 Live与3.8 Live Extended Thinking两款语音对话模型(对标OpenAI的GPT-Live),Simon Willison用刚发布的GPT-6 Astra Extra High读文档、直接生成了一个不依赖任何库的网页语音对话工具:通过WebSocket连接Gemini接口,用Web Audio API做录音和播放,支持打断对话和下载转录记录,代码已开源。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布(Gemini 3.8 Live语音模型)+直接可用的实操信息:作者用刚发布的GPT-6 Astra快速搭出实测工具,给出了具体技术实现路径(WebSocket、Web Audio API),讲清楚是什么、怎么用"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Can Skills Learned in Games Transfer to Real-World Work?",
+      "link": "https://www.latent.space/p/good-start-labs",
+      "date": "2026-09-15",
+      "first_seen": "2026-09-16T00:00:36.288169+00:00",
+      "source_type": "blog",
+      "summary": "Good Start Labs探索用游戏训练AI模型的迁移能力:让模型在19世纪铁路游戏《1830》里练交易决策,再测试金融研究任务,发现只有\"多轮终端agent、自主探索环境\"这种训练设计才能让游戏里练出的能力迁移到真实任务上。创始人认为harness设计比模型本身更决定AI能学到什么,团队把游戏内训练轨迹和学习环境本身作为产品卖给前沿AI实验室。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "扎实讲清楚了一个真实AI训练趋势(用游戏做RL训练环境、迁移到真实工作任务),有具体案例(1830铁路游戏训练迁移到金融研究)和创始人访谈细节,不是纯新闻通稿"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Boris Cherny",
       "title": "RT @addyosmani: At Anthropic, Claude now writes 80% of our code. Engineers ship 8x more code per qua…",
       "link": "https://x.com/bcherny/status/2099640440740028520",
@@ -15,7 +49,7 @@
           "reason": "Anthropic内部真实数据点(Claude写80%代码、工程师产出提升8倍)，直接反映AI工具影响力的前沿趋势"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -32,7 +66,7 @@
           "reason": "深入讨论AI存在性风险言论的可信度和专家责任，是前沿AI安全叙事里讲得清楚、有分量的一篇"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -49,7 +83,7 @@
           "reason": "深度访谈前沿AI创业者，讲清楚递归自我提升、reward hacking、对齐等前沿趋势是什么、为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Maggie Appleton",
@@ -71,7 +105,7 @@
           "reason": "明确踩中根二AI作为认知方式与护城河在harness不在模型这两条正向母题，且是作者本人一手实践反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
