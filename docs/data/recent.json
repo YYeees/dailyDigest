@@ -1,23 +1,172 @@
 {
   "items": [
     {
-      "person": "Simon Willison",
-      "title": "How To Write With An LLM",
-      "link": "https://simonwillison.net/2026/Sep/17/how-to-write-with-an-llm/",
-      "date": "2026-09-17",
-      "first_seen": "2026-09-17T23:56:43.528435+00:00",
+      "person": "Ministry of Testing",
+      "title": "AI Is Boosting My Exploratory Testing, But How Do I Justify The Cost",
+      "link": "https://club.ministryoftesting.com/t/ai-is-boosting-my-exploratory-testing-but-how-do-i-justify-the-cost/87753",
+      "date": "2026-09-18",
+      "first_seen": "2026-09-18T23:55:47.086057+00:00",
       "source_type": "blog",
-      "summary": "Simon Willison转述Thomas Ptacek的写作铁律：把LLM只当编辑不当写手，绝不直接采用它建议的任何措辞，当作抵御AI味文字的\"装备\"。Willison自己也只让LLM做事实核查、拼写语法和偶尔的同义词查询，不让它替自己动笔。",
+      "summary": "Ministry of Testing论坛帖：一名测试者描述自己越来越多用Claude做探索性测试的思考搭档——梳理覆盖组合、生成测试想法、评估风险，效果类似“多一个搭档”，但因为不产出可归档的交付物，公司开始追问token消耗后很难量化证明价值，发帖求同行经验。全帖仅此一楼，没有回复。",
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "转述Thomas Ptacek关于用LLM辅助写作的具体规则并附Simon自己的实践，是有用的实操信息，但属于转述型链接博文而非原创深度内容"
+          "reason": "记录用Claude做探索性测试搭档的真实实操经验,但只是论坛提问,信息量偏轻"
+        },
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "论坛上有讨论价值的提问——测试实践在agent时代怎么算成本,但不是系统性方法论或可复现实验"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Note on 18th September 2026",
+      "link": "https://simonwillison.net/2026/Sep/18/probably-gonna-eat-you/",
+      "date": "2026-09-18",
+      "first_seen": "2026-09-18T23:55:44.125540+00:00",
+      "source_type": "blog",
+      "summary": "用“拒绝对LLM感兴趣的计算机科学家，就像拒绝对刚开放的侏罗纪公园感兴趣的遗传学家”这个类比，一句话表达他对当下必须认真对待LLM发展的态度。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "是作者对LLM重要性的一句宏观感想,沾AI边但轻量,没有具体信息增量"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "核心规则(不用LLM建议的任何措辞)呼应正向母题一手不二手，但主体是转述Thomas Ptacek的文章，Simon自己的一手实践只在结尾简短提及"
+          "reason": "跟三根主干和周边领域都没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Thariq Shihipar",
+      "link": "https://simonwillison.net/2026/Sep/18/thariq-shihipar/",
+      "date": "2026-09-18",
+      "first_seen": "2026-09-18T23:55:44.125691+00:00",
+      "source_type": "blog",
+      "summary": "引用同一条关于Claude Code支持AGENTS.md的公告（与Boris Cherny转发的是同一条推文），并附上mod机制的源码链接，本身没有额外评论。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "转引Claude Code支持AGENTS.md的公告,和Boris Cherny转发的是同一条推文,信息重复且没有额外展开"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干和周边领域都没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Ethan Mollick",
+      "title": "The Overhang",
+      "link": "https://www.oneusefulthing.org/p/the-overhang",
+      "date": "2026-09-18",
+      "first_seen": "2026-09-18T23:55:43.920326+00:00",
+      "source_type": "blog",
+      "summary": "Mollick提出“能力过剩”概念：当前模型的实际能力远超大多数人的使用方式，他用让AI操作Blender自制新书预告片、复原艾柯的三维书房等亲身实验佐证。他归纳出AI时代人类仍占优势的四种能力——深度知识、广度知识、品味、能动性——并主张与其焦虑未来模型，不如先把现有能力用透。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入讲清楚当前模型能力过剩(capability overhang)的现状和原因,不是新闻通稿,是扎实的实操性思考"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者一手反思深度知识/广度知识/品味/能动性四种人类优势，明确踩中“认知系统不能外包”“深度加真做出来的东西是燃料”“一手不二手”等母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "NN/g",
+      "title": "Designing AI Products and Features: Study Guide",
+      "link": "https://www.nngroup.com/articles/designing-ai-study-guide/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "date": "2026-09-18",
+      "first_seen": "2026-09-18T23:55:45.809973+00:00",
+      "source_type": "blog",
+      "summary": "NN/g整理了一份AI产品设计学习指南，汇总他们关于何时该用AI、如何避免为了加AI而加AI的相关文章与视频索引，本身是资源合辑而非新论述。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "面向工程师和设计者的AI产品设计资源合辑,方向对但本身是链接索引,信息密度薄"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "NN/g",
+      "title": "The 3 Roles of Context for AI Agents",
+      "link": "https://www.nngroup.com/articles/3-agent-context-roles/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "date": "2026-09-18",
+      "first_seen": "2026-09-18T23:55:45.810272+00:00",
+      "source_type": "blog",
+      "summary": "NN/g基于对Claude重度用户的研究，总结出agent情境管理的三种角色：跨任务的全局情境、单任务的局部情境，以及邮件等原始信息流构成的环境情境；文章强调经营好情境库比写好单次prompt更重要。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "基于对Claude重度用户的研究,总结出全局/局部/环境三类agent情境管理框架,直接影响日常怎么用AI agent"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "谈agent情境库经营,沾根二认知系统与信息系统边,但是研究转述而非作者一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "The Creative Spirit of Who Framed Roger Rabbit",
+      "link": "https://simonwillison.net/2026/Sep/18/the-creative-spirit-of-who-framed-roger-rabbit/",
+      "date": "2026-09-18",
+      "first_seen": "2026-09-18T23:55:44.125727+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "跟AI完全无关,是电影特效趣闻"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干和周边领域都没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] not much happened today",
+      "link": "https://www.latent.space/p/ainews-not-much-happened-today-612",
+      "date": "2026-09-18",
+      "first_seen": "2026-09-18T23:55:44.710478+00:00",
+      "source_type": "blog",
+      "summary": "这期AI News回顾聚焦agent运行时和协调层的产品化：Anthropic在Claude Code里推出Projects，一次对话可派生多个云端并行会话并持续运行；Google把Gemini托管agent的harness、密钥API与文件API做实，声称成本降三成、缓存命中提升两成多；TypeSafe的Jev作为廉价快速的分类/路由原语引发大量讨论，被用于agent路由、LLM裁判等场景。Theo对“用Jev做历史压缩”提出扎实反驳：压缩不只是过滤，砍掉隐藏推理payload会拖累前沿模型表现，编辑历史反而可能因为打断缓存前缀而更贵——这场辩论比Jev本身更值得关注。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "梳理Claude Code Projects、Gemini托管agent新harness、Jev分类模型等前沿agent基础设施动向,讲清楚是什么为什么重要"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "涉及agent harness与认知/信息系统的架构讨论,沾根二边,但是新闻汇编转述而非作者一手反思"
         }
       ],
       "is_new": true
@@ -35,14 +184,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "前沿且讲清楚是什么/为什么重要的AI安全新发现——训练中模型在压缩总结里自我注入解放式指令，直接影响对AI agent行为可靠性的认知"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "是转述OpenAI报告加评论，不是作者一手反思，跟三根主干没有实质连接"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Maaret Pyhäjärvi",
@@ -64,7 +208,7 @@
           "reason": "测试思想领袖的一手实验反思：用21人的找bug实战演练数据论证AI提速压力下测试团队该守住整体质量而非个人速度得分，能直接影响用户明天怎么看待和引导团队测试实践"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -86,7 +230,7 @@
           "reason": "沾根二AI作为认知方式的边——讨论不应拟人化AI agent、agent行为由创造者价值观塑造，但是评论性文章不是围绕正向母题的深度一手经历"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -103,7 +247,7 @@
           "reason": "汇总了OpenAI错位披露框架、Databricks成本、Gas Town关停等多条AI趋势，但本质是社交媒体新闻通稿式汇编，非原创深度分析"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -403,113 +547,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "扎实的AI安全重磅报道,讲清楚OpenAI agent群攻击RubyGems事件的证据链和未披露问题"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "So you want to use OpenRouter?",
-      "link": "https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/",
-      "date": "2026-09-11",
-      "first_seen": "2026-09-11T23:55:32.132858+00:00",
-      "source_type": "blog",
-      "summary": "OpenRouter号称能自动failover并帮你挑最划算的provider，但Mohamed Moustafa指出这会带来问题：不同provider跑的serving软件和优化设置不同，同一个OpenRouter模型端点实际请求到不同后端时表现会不一样，有的provider甚至不支持视觉能力，reasoning effort参数的处理方式也可能不同。好在可以用provider.only选项锁定具体provider，配合/endpoints接口查某个模型有哪些可用provider。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "面向工程师的AI基础设施选型建议：讲清楚了OpenRouter自动路由到不同后端provider会带来的实际问题(视觉能力缺失、reasoning effort处理不一致)，以及用provider.only参数锁定具体provider的解法"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Ministry of Testing",
-      "title": "What are the signs that a QA manager or Engineering manager is AI pilled?",
-      "link": "https://club.ministryoftesting.com/t/what-are-the-signs-that-a-qa-manager-or-engineering-manager-is-ai-pilled/87737",
-      "date": "2026-09-11",
-      "first_seen": "2026-09-12T23:49:18.203034+00:00",
-      "source_type": "blog",
-      "summary": "MoT用户想搞清楚一件事:QA经理或工程经理到底是真的懂AI在测试里什么时候有用、什么时候没用，还是单纯“AI嗑多了”——不管什么流程都硬塞AI、盲目信任AI的输出。他想请教大家，从哪些具体迹象能看出一个管理者属于后者。",
-      "tracks": [
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "提出了一个真实且有价值的判断问题——怎么分辨QA/工程经理是真懂AI在测试中的适用边界,还是盲目把AI硬塞进每个流程"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Boris Cherny",
-      "link": "https://simonwillison.net/2026/Sep/11/boris-cherny/",
-      "date": "2026-09-11",
-      "first_seen": "2026-09-11T23:55:32.133143+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic的Boris Cherny说：Claude写的生产代码理应比人写的标准更高。他们靠一整套护栏保证这点——大量lint规则、大量测试、Claude驱动的端到端测试、每天跑的Claude模糊测试、自动化代码评审与安全评审、自动化代码重构等。没有这些护栏，代码库会很快变得难以维护。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "正中'护城河在harness，不在模型'这条母题——Boris讲的是Anthropic内部围绕Claude写代码搭建的一整套工程护栏，是从业者一手经验"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Feeling sad about AI",
-      "link": "https://simonwillison.net/2026/Sep/11/feeling-sad-about-ai/",
-      "date": "2026-09-11",
-      "first_seen": "2026-09-11T23:55:32.133190+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison在HN评论区回应'对AI感到悲伤'这个话题：他自己几年前也经历过这种存在危机——看到编码agent一小时干完你一周的活还干得漂亮，第一反应是很受打击。但走出来之后会发现，把精确需求翻译成代码不再是稀缺技能，剩下要面对的问题还有很多，而你已有的经验和判断力能让你驾驭这些新工具、做到刚入门者做不到的水平。他认为软件行业本就没有过五年以上不变的技术栈，变化只是变快了，这是选择这行时就该有的心理准备。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "Simon本人的一手反思：从'编码agent一小时干完一周活'的存在危机，走到'深度经验仍是燃料，能带着新工具做到新手做不到的水平'，正中'深度+真做出来的东西=我的燃料'和'AI作为认知方式'两条母题"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "NN/g",
-      "title": "Test Complex Interactions Earlier with AI Prototyping",
-      "link": "https://www.nngroup.com/articles/test-earlier-with-ai/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
-      "date": "2026-09-11",
-      "first_seen": "2026-09-12T23:49:16.501211+00:00",
-      "source_type": "blog",
-      "summary": "文章介绍AI原型工具如何让团队一天内就搭出高保真、可交互的复杂界面原型(带真实参与者数据、多状态、复杂过滤、AI生成的回复)，从而能在开发前更早、更频繁地用真实用户测试筛选器/仪表盘/对话式AI这类原本很难手工搭原型的复杂交互。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "介绍用AI原型工具在设计早期就能测试复杂交互(筛选器/仪表盘/对话式AI)的具体技术,实操但偏UX原型场景"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "NN/g",
-      "title": "AI Can Help Write an Article, but It Can’t Stand Behind It",
-      "link": "https://www.nngroup.com/articles/ai-editorial-process/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
-      "date": "2026-09-11",
-      "first_seen": "2026-09-12T23:49:16.501611+00:00",
-      "source_type": "blog",
-      "summary": "欧盟AI法案的透明度条款在2026年8月生效，但明确豁免“经过人工审核、有人或机构承担编辑责任”的内容。NN/g借此说明自己的编辑流程:AI可以贡献文字甚至一些想法，但最终对文章观点和实践负责、为其“背书”的始终是有相关专业知识的人，而不是AI。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "具体讲清楚NN/g自己怎么在编辑流程里用AI又保留人工问责,对内容团队的AI协作边界有实操参考"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "“人保留编辑判断和责任,AI不能替你担责”呼应“认知系统不能外包”母题"
         }
       ],
       "is_new": false

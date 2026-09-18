@@ -1,6 +1,62 @@
 {
   "items": [
     {
+      "person": "Ethan Mollick",
+      "title": "The Overhang",
+      "link": "https://www.oneusefulthing.org/p/the-overhang",
+      "date": "2026-09-18",
+      "first_seen": "2026-09-18T23:55:43.920326+00:00",
+      "source_type": "blog",
+      "summary": "Mollick提出“能力过剩”概念：当前模型的实际能力远超大多数人的使用方式，他用让AI操作Blender自制新书预告片、复原艾柯的三维书房等亲身实验佐证。他归纳出AI时代人类仍占优势的四种能力——深度知识、广度知识、品味、能动性——并主张与其焦虑未来模型，不如先把现有能力用透。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入讲清楚当前模型能力过剩(capability overhang)的现状和原因,不是新闻通稿,是扎实的实操性思考"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者一手反思深度知识/广度知识/品味/能动性四种人类优势，明确踩中“认知系统不能外包”“深度加真做出来的东西是燃料”“一手不二手”等母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "NN/g",
+      "title": "The 3 Roles of Context for AI Agents",
+      "link": "https://www.nngroup.com/articles/3-agent-context-roles/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "date": "2026-09-18",
+      "first_seen": "2026-09-18T23:55:45.810272+00:00",
+      "source_type": "blog",
+      "summary": "NN/g基于对Claude重度用户的研究，总结出agent情境管理的三种角色：跨任务的全局情境、单任务的局部情境，以及邮件等原始信息流构成的环境情境；文章强调经营好情境库比写好单次prompt更重要。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "基于对Claude重度用户的研究,总结出全局/局部/环境三类agent情境管理框架,直接影响日常怎么用AI agent"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] not much happened today",
+      "link": "https://www.latent.space/p/ainews-not-much-happened-today-612",
+      "date": "2026-09-18",
+      "first_seen": "2026-09-18T23:55:44.710478+00:00",
+      "source_type": "blog",
+      "summary": "这期AI News回顾聚焦agent运行时和协调层的产品化：Anthropic在Claude Code里推出Projects，一次对话可派生多个云端并行会话并持续运行；Google把Gemini托管agent的harness、密钥API与文件API做实，声称成本降三成、缓存命中提升两成多；TypeSafe的Jev作为廉价快速的分类/路由原语引发大量讨论，被用于agent路由、LLM裁判等场景。Theo对“用Jev做历史压缩”提出扎实反驳：压缩不只是过滤，砍掉隐藏推理payload会拖累前沿模型表现，编辑历史反而可能因为打断缓存前缀而更贵——这场辩论比Jev本身更值得关注。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "梳理Claude Code Projects、Gemini托管agent新harness、Jev分类模型等前沿agent基础设施动向,讲清楚是什么为什么重要"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "Self-generated prompt injections in compaction summaries",
       "link": "https://simonwillison.net/2026/Sep/17/compaction-summaries/",
@@ -15,7 +71,7 @@
           "reason": "前沿且讲清楚是什么/为什么重要的AI安全新发现——训练中模型在压缩总结里自我注入解放式指令，直接影响对AI agent行为可靠性的认知"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -32,7 +88,7 @@
           "reason": "Claude Projects作者本人分享具体工作流变化(不再手动管理会话、agent自动拆分线程)，是直接影响日常怎么用AI工具的一手实操信息，也是这组同事件里信息量最全的一条"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Maaret Pyhäjärvi",
@@ -49,7 +105,7 @@
           "reason": "测试思想领袖的一手实验反思：用21人的找bug实战演练数据论证AI提速压力下测试团队该守住整体质量而非个人速度得分，能直接影响用户明天怎么看待和引导团队测试实践"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",

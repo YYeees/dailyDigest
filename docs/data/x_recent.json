@@ -2,6 +2,39 @@
   "items": [
     {
       "person": "Boris Cherny",
+      "title": "RT @trq212: We're adding support for AGENTS.md to Claude Code.   Starting today in version 2.1.277,…",
+      "link": "https://x.com/bcherny/status/2101014069608395196",
+      "date": "2026-09-18",
+      "first_seen": "2026-09-18T23:55:51.324346+00:00",
+      "source_type": "x",
+      "summary": "转发通知Claude Code从2.1.277版本起支持AGENTS.md：文件夹里没有CLAUDE.md时会自动改用AGENTS.md，这是即将推出的harness自定义mod体系里内置的一个例子。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "Collaborating on a session is so good. Even see what someone's typing to prevent sending the same to…",
+      "link": "https://x.com/steipete/status/2100989842691871142",
+      "date": "2026-09-18",
+      "first_seen": "2026-09-18T23:55:53.308125+00:00",
+      "source_type": "x",
+      "summary": "描述一种协作会话体验：能实时看到对方正在输入的内容，从而避免重复发送同样的消息给agent。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "love how more and more people discover the awesome combination of agents + oss!",
+      "link": "https://x.com/steipete/status/2100984203588616208",
+      "date": "2026-09-18",
+      "first_seen": "2026-09-18T23:55:53.308183+00:00",
+      "source_type": "x",
+      "summary": "感慨agents加开源工具的组合正被越来越多人发现，属于一句话式的观察，没有展开细节。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
       "title": "RT @emollick: What makes Claude Projects so interesting is that it handles teams of agents really we…",
       "link": "https://x.com/bcherny/status/2100682621093347571",
       "date": "2026-09-17",
@@ -9,7 +42,7 @@
       "source_type": "x",
       "summary": "Boris Cherny转发Ethan Mollick的观点：Claude Projects的亮点在于能很好地统筹一组agent协作，用户只需和一个主协调agent对话。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -20,7 +53,7 @@
       "source_type": "x",
       "summary": "Boris Cherny分享Claude Projects如何改变了他的编码方式：不再手动管理会话，而是随时把想法发给Claude，由它自动拆分成不同工作线程，项目会记住他的工作习惯，现在他大部分代码工作都在这里完成。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -31,7 +64,7 @@
       "source_type": "x",
       "summary": "Boris Cherny宣布Claude Projects功能开始推送，称这是他现在写代码最主要依赖的方式，对新体验感到兴奋。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -240,94 +273,6 @@
       "source_type": "x",
       "summary": "Claude Code新增claude plugin eval功能，可以检验一个插件到底带来多少价值、还是需要继续打磨，用户能为插件创建测试。",
       "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Andy Matuschak",
-      "title": "I've been really loving Grant's thoughtful digital tabletop work.  Some great concepts: * bidirectio…",
-      "link": "https://x.com/andy_matuschak/status/2098553239511945335",
-      "date": "2026-09-11",
-      "first_seen": "2026-09-11T23:55:38.486358+00:00",
-      "source_type": "x",
-      "summary": "Andy Matuschak称赞Grant的数字桌游交互设计：用传统的块编辑器双向映射空间元素；用'frames'定义可选中、投射到外部屏幕并做CSS变换的区域。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Astra on OC in a cloud session playing Doom with CUA. Not quite AGI yet, but probably beats fly brai…",
-      "link": "https://x.com/steipete/status/2098527519213604889",
-      "date": "2026-09-11",
-      "first_seen": "2026-09-12T23:49:24.293109+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger分享了一个能力演示:名为Astra的agent在OC(推测为OpenClaw)的云端会话里，用computer-use能力(CUA)玩《毁灭战士》，他调侃说“还不算AGI，但大概比果蝇脑子强”。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "This happens as long-term rates rise relative to short-term rates. Though they try to hold short rat…",
-      "link": "https://x.com/RayDalio/status/2098411249218592784",
-      "date": "2026-09-11",
-      "first_seen": "2026-09-11T23:55:37.189918+00:00",
-      "source_type": "x",
-      "summary": "达利欧谈滞胀动态：长期利率相对短期利率走高时会出现这种局面，即便试图压住短期利率，长期利率仍在上升，同时伴随美元走弱和黄金波动。利率上升开始冲击股市——债券下跌而收益率上升，使股票的预期回报相对债券走低，给股市带来更广泛的压力。这种经典局面让美联储陷入两难：到底该收紧还是放松，而在贫富差距巨大的经济体里，是否持有股票会让这种冲击的影响天差地别，带来深远的政治含义。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "When there were just a few of us, we had meaningful relationships because we knew and liked each oth…",
-      "link": "https://x.com/RayDalio/status/2098392432245100936",
-      "date": "2026-09-11",
-      "first_seen": "2026-09-11T23:55:37.190217+00:00",
-      "source_type": "x",
-      "summary": "达利欧谈组织规模：人少时靠彼此认识喜欢维系关系；五十到一百人时形成社区感；超过这个规模社区感开始变弱。他认为把公司拆成百人上下、由共同使命统一的部门，是把有意义的关系尺度延伸到大公司的最佳方式。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "The latest Threat Intelligence report is an absolutely terrifying and important read.   As models be…",
-      "link": "https://x.com/bcherny/status/2098281805770309686",
-      "date": "2026-09-11",
-      "first_seen": "2026-09-12T23:49:22.882324+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny称最新的Threat Intelligence报告“可怕又重要”:模型越智能，如果没有配套的防护和监控，也越危险——很多能力是双重用途的，会写代码的模型能被用来黑基础设施，懂生物研究的模型也能被用来设计下一场大流行病，这些议题复杂且日益紧迫，需要全社会关注和应对。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Trading tokens for an AC. Who knew SF could be so hot 🫠",
-      "link": "https://x.com/steipete/status/2098229090570629419",
-      "date": "2026-09-11",
-      "first_seen": "2026-09-12T23:49:24.293155+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger调侃旧金山最近异常炎热，自己用“token”换了台空调。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "Every day, I get a lot of of emails and messages like this one. I try to respond to as many as I can…",
-      "link": "https://x.com/bcherny/status/2098217571153838124",
-      "date": "2026-09-11",
-      "first_seen": "2026-09-12T23:49:22.882377+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny称自己每天收到很多类似的邮件/私信提问，会尽量回复，并分享了自己给某个问题的回复内容(具体文字未附带)，征询大家怎么看。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "wait what",
-      "link": "https://x.com/bcherny/status/2098209880310264048",
-      "date": "2026-09-11",
-      "first_seen": "2026-09-12T23:49:22.882412+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny发了一句“wait what”，没有更多上下文说明具体在回应什么。",
-      "tier": "low",
       "is_new": false
     }
   ]
