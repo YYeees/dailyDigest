@@ -2,6 +2,39 @@
   "items": [
     {
       "person": "Boris Cherny",
+      "title": "RT @emollick: What makes Claude Projects so interesting is that it handles teams of agents really we…",
+      "link": "https://x.com/bcherny/status/2100682621093347571",
+      "date": "2026-09-17",
+      "first_seen": "2026-09-17T23:56:56.028075+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny转发Ethan Mollick的观点：Claude Projects的亮点在于能很好地统筹一组agent协作，用户只需和一个主协调agent对话。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "Projects have changed not only how I interact with Claude but how I code.  I stopped managing sessio…",
+      "link": "https://x.com/bcherny/status/2100669598995816511",
+      "date": "2026-09-17",
+      "first_seen": "2026-09-17T23:56:56.028327+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny分享Claude Projects如何改变了他的编码方式：不再手动管理会话，而是随时把想法发给Claude，由它自动拆分成不同工作线程，项目会记住他的工作习惯，现在他大部分代码工作都在这里完成。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "Projects are how I write a lot of my code these days. Really excited for everyone to try the new exp…",
+      "link": "https://x.com/bcherny/status/2100639991244427490",
+      "date": "2026-09-17",
+      "first_seen": "2026-09-17T23:56:56.028354+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny宣布Claude Projects功能开始推送，称这是他现在写代码最主要依赖的方式，对新体验感到兴奋。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
       "title": "RT @felixrieseberg: Today, we're combining Cowork and Chat into one Claude.  You can fire off questi…",
       "link": "https://x.com/bcherny/status/2100307205019107451",
       "date": "2026-09-16",
@@ -9,7 +42,7 @@
       "source_type": "x",
       "summary": "转发同事felixrieseberg的说法，重申Cowork和Chat合并成一个Claude：可以先问个简单问题，再转向认真的工作（与Boris Cherny本人稍早那条公告是同一件事）。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -20,7 +53,7 @@
       "source_type": "x",
       "summary": "同一波更新里，Claude Docs、Slides、Design也整合进了所有对话：直接跟Claude要一份演示文稿，就能拿到可打开、编辑、导出成PowerPoint或PDF的文件，文档和设计同理，不用再跳去单独的工具。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -31,7 +64,7 @@
       "source_type": "x",
       "summary": "Boris Cherny（Claude Code团队）宣布Claude Cowork和常规聊天正式合并为一个产品：可以随手问个问题，也可以把整份报告交给Claude处理、合上电脑后它继续跑。目前先向Pro/Max用户逐步开放，后续会持续调优体验。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -294,61 +327,6 @@
       "first_seen": "2026-09-12T23:49:22.882412+00:00",
       "source_type": "x",
       "summary": "Boris Cherny发了一句“wait what”，没有更多上下文说明具体在回应什么。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Andrej Karpathy",
-      "title": "RT @AnthropicAI: We're publishing our most detailed threat intelligence report to date.   It covers…",
-      "link": "https://x.com/karpathy/status/2098187194024476764",
-      "date": "2026-09-10",
-      "first_seen": "2026-09-10T23:48:10.795600+00:00",
-      "source_type": "x",
-      "summary": "Karpathy转发了Anthropic发布的迄今最详细的威胁情报报告公告，内容涉及有人试图滥用Claude进行网络攻击等情形；推文本身信息有限，详情见Anthropic原始报告。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "Just landed: /diff is now a persistent pane that you can scroll and click. It updates in real-time.…",
-      "link": "https://x.com/bcherny/status/2098165206296011059",
-      "date": "2026-09-10",
-      "first_seen": "2026-09-12T23:49:22.882430+00:00",
-      "source_type": "x",
-      "summary": "Claude Code的/diff现在变成一个可以滚动点击、实时更新的常驻面板，不用再来回切换窗口看代码改动。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Andy Matuschak",
-      "title": "I want weirder representations of \"readings\"—the trace/artifact produced by a reader's interaction w…",
-      "link": "https://x.com/andy_matuschak/status/2098137186319114310",
-      "date": "2026-09-10",
-      "first_seen": "2026-09-10T23:48:13.292280+00:00",
-      "source_type": "x",
-      "summary": "Andy Matuschak在探索更“奇怪”的阅读痕迹表征方式，比如把文本剪贴拼成海报；他认为边注太受制于原文结构，独立的摘要又太脱离语境，他想要一种既能保留文本整体、又不丢失细节，还能随自己理解演变而持续加工的材料形式。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "Let’s pause and reflect on a critical key to success:  The people who think differently from you—and…",
-      "link": "https://x.com/RayDalio/status/2098116560745337113",
-      "date": "2026-09-10",
-      "first_seen": "2026-09-10T23:48:12.052998+00:00",
-      "source_type": "x",
-      "summary": "达利欧建议：那些跟你想法不同、容易让你恼火的人，往往能弥补你的弱点；找到能与自己互补的人，对搭建成功的伙伴关系或团队至关重要。他还顺带推荐了付费的PrinciplesYou人格测试。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Ray Dalio",
-      "title": "If you don't let up on yourself and instead become comfortable always operating with some level of p…",
-      "link": "https://x.com/RayDalio/status/2097886800500920324",
-      "date": "2026-09-10",
-      "first_seen": "2026-09-10T23:48:12.053319+00:00",
-      "source_type": "x",
-      "summary": "达利欧的每日原则：如果你不放过自己，习惯于始终带着一定程度的痛苦前行，进化速度会更快。",
       "tier": "low",
       "is_new": false
     }
