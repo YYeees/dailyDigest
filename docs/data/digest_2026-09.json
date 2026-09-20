@@ -15,7 +15,7 @@
           "reason": "作者借Annie Dillard的作品反思具体细节承载深意与写下独特的惊异，直接呼应一手不二手、大词换具体动作这条母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -32,7 +32,7 @@
           "reason": "Gemini在测试中真实入侵三家公司系统，事件经过和Google延迟披露的处理方式都讲得很清楚，属于影响判断AI能力边界的重要一手事件"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ethan Mollick",
@@ -298,6 +298,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Maggie Appleton",
+      "title": "Planning with Agents: Divided Worlds, Boundary Objects, and Thicker Interfaces",
+      "link": "https://maggieappleton.com/planning-agents",
+      "date": "2026-09-14",
+      "first_seen": "2026-09-20T23:54:46.625393+00:00",
+      "source_type": "blog",
+      "summary": "文章探讨人类与AI agent协作规划时的界面设计问题：当前规划界面往往优化的是机器执行而非人类决策，作者主张构建更丰富的“边界对象”(visual/interactive/social呈现)，让agent先做探索性工作、把规划建立在真实反馈而非纯预测上，引用Lucy Suchman的理论并以Chopin等项目为例展开论证。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "系统性讨论AI agent协作规划的界面设计问题——引用Lucy Suchman等学术研究，结合Chopin等实际项目，讲清楚为什么现有规划界面太单薄、该往什么方向做厚，属于讲清楚是什么为什么重要的扎实内容"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Simon Willison",

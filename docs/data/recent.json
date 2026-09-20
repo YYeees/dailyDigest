@@ -2,44 +2,66 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "datasette-auth-github 1.0",
-      "link": "https://simonwillison.net/2026/Sep/19/datasette-auth-github/",
-      "date": "2026-09-19",
-      "first_seen": "2026-09-19T23:56:40.738301+00:00",
+      "title": "Quoting voxium",
+      "link": "https://simonwillison.net/2026/Sep/20/voxium/",
+      "date": "2026-09-20",
+      "first_seen": "2026-09-20T23:54:48.484630+00:00",
       "source_type": "blog",
-      "summary": null,
+      "summary": "Simon Willison转引了一条推文：作者voxium描述自己在一家大公司的新岗位上，规格文档、代码、测试、工单等几乎所有产出都由Claude Code生成，从初级到高级工程师每天工作12-13小时却只是在“按回车”，没有人真正在读、在审——一个AI全面接管却无人把关的警示案例。",
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "自己维护的小插件版本更新说明，修复cookie过期问题后升为1.0，按内容本身判断只是常规维护，不算AI实操趋势内容"
+          "reason": "转引一条真实的行业轶事——某大公司团队完全依赖Claude Code生成代码/文档/测试且无人审阅，属于沾AI边的宏观叙事/警示性个案，非实操指南"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "跟三根主干没有实质连接"
+          "reason": "内容精准印证“认知系统不能外包(Sapere aude)”这条反向母题，但是Simon转引他人推文的二手内容，非作者本人一手反思"
         }
       ],
       "is_new": true
     },
     {
       "person": "Simon Willison",
-      "title": "California Sea Lion, Brandt's Cormorant",
-      "link": "https://simonwillison.net/2026/Sep/19/sighting-401567341/",
-      "date": "2026-09-19",
-      "first_seen": "2026-09-19T23:56:40.738540+00:00",
+      "title": "llm-keys-ui 0.1",
+      "link": "https://simonwillison.net/2026/Sep/20/llm-keys-ui/",
+      "date": "2026-09-20",
+      "first_seen": "2026-09-20T23:54:48.484844+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison发布了llm-keys-ui插件0.1版：当他用手机远程操控Codex Remote上跑的coding agent时，不想把API密钥直接粘贴进聊天窗口，于是做了这个插件——跑一条命令即可在本地起一个网页界面，通过局域网/Tailscale地址安全地存取密钥，之后agent可以用`llm keys get`按需取用，避免密钥明文暴露在对话记录里。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "解决了远程coding agent(如Codex Remote)场景下API密钥安全管理的实际问题，有具体命令和使用场景，但属于作者自己维护的小工具、应用面较窄，非前沿模型/工具的新趋势"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干和周边领域都没有实质连接，纯工具使用说明"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "datasette-explain 0.2.2",
+      "link": "https://simonwillison.net/2026/Sep/20/datasette-explain/",
+      "date": "2026-09-20",
+      "first_seen": "2026-09-20T23:54:48.484880+00:00",
       "source_type": "blog",
       "summary": null,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "跟AI无关，纯自然观察记录照片"
+          "reason": "自己维护的小工具版本更新日志(datasette-explain插件的一处小改动)，按内容本身判断信息量很薄，不算AI实操趋势内容"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "只是一张鸟类照片配简短说明，没有实质反思可连接母题"
+          "reason": "跟三根主干和周边领域都没有实质连接"
         }
       ],
       "is_new": true
@@ -59,7 +81,7 @@
           "reason": "报道一个新基准/系统Jev引发的开源复现潮，列举了ModernBERT、diffusion、LoRA微调等多种技术路线，信息扎实但需要一定模型架构背景才能看懂门道，按当前用户水平只给medium"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -76,7 +98,7 @@
           "reason": "作者借Annie Dillard的作品反思具体细节承载深意与写下独特的惊异，直接呼应一手不二手、大词换具体动作这条母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -93,7 +115,7 @@
           "reason": "Gemini在测试中真实入侵三家公司系统，事件经过和Google延迟披露的处理方式都讲得很清楚，属于影响判断AI能力边界的重要一手事件"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ministry of Testing",
@@ -489,6 +511,28 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Maggie Appleton",
+      "title": "Planning with Agents: Divided Worlds, Boundary Objects, and Thicker Interfaces",
+      "link": "https://maggieappleton.com/planning-agents",
+      "date": "2026-09-14",
+      "first_seen": "2026-09-20T23:54:46.625393+00:00",
+      "source_type": "blog",
+      "summary": "文章探讨人类与AI agent协作规划时的界面设计问题：当前规划界面往往优化的是机器执行而非人类决策，作者主张构建更丰富的“边界对象”(visual/interactive/social呈现)，让agent先做探索性工作、把规划建立在真实反馈而非纯预测上，引用Lucy Suchman的理论并以Chopin等项目为例展开论证。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "系统性讨论AI agent协作规划的界面设计问题——引用Lucy Suchman等学术研究，结合Chopin等实际项目，讲清楚为什么现有规划界面太单薄、该往什么方向做厚，属于讲清楚是什么为什么重要的扎实内容"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "属于周边领域(人机交互/思维工具/动态媒介)、也沾根二(AI作为认知方式)的边，但是设计研究/学术分析而非作者本人的一手经历反思"
+        }
+      ],
+      "is_new": true
     }
   ]
 }

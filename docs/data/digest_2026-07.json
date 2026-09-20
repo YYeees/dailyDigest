@@ -15,7 +15,7 @@
           "reason": "对AI改变开发者角色(从写代码到编排agent)提出扎实、有洞察的框架性判断"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Maaret Pyhäjärvi",
@@ -37,7 +37,7 @@
           "reason": "针对AI测试工具选型给出扎实的分类方法论,直接改变明天怎么评估这类工具"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -54,7 +54,7 @@
           "reason": "具体实验量化重构对AI时代开发成本的经济价值，实操性强"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -88,7 +88,7 @@
           "reason": "作者一手项目，用AI辅助反馈机制做探索性测试自助训练工具，是具体方法+可用工具的真实案例"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -122,7 +122,7 @@
           "reason": "具体规则直接影响日常怎么设计多agent协作，实操性强"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -156,7 +156,7 @@
           "reason": "确定性仿真测试对形式化验证过的Raft实现找出真实bug，对“形式化验证够不够”有扎实论证"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Jason Fried",
@@ -229,7 +229,7 @@
           "reason": "明确踩中“护城河在harness不在模型”母题(harness工程成独立学科)，是Fowler本人一手记录"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ministry of Testing",
@@ -244,6 +244,23 @@
           "track": "eval",
           "tier": "high",
           "reason": "具体描述了QA用AI审查PR的真实工作流限制(建议正确但脱离实际约束)，对怎么筛选AI审查建议有直接参考价值"
+        }
+      ],
+      "is_new": false
+    },
+    {
+      "person": "Maggie Appleton",
+      "title": "In Memoriam, Encountering World War I, and Thinkable Horrors",
+      "link": "https://maggieappleton.com/in-memoriam",
+      "date": "2026-07-18",
+      "first_seen": "2026-09-20T23:54:46.626353+00:00",
+      "source_type": "blog",
+      "summary": "作者记录了自己通过观看舞台剧《战马》、阅读历史书籍来弥补对一战历史教育空白的经历，用9500朵罂粟花可视化战争死亡人数等细节，提醒我们距离大规模工业化死亡其实并不遥远，是一次一手的历史反思。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者一手反思：通过一战历史(舞台剧《战马》+阅读)追问人如何面对大规模苦难，正是根一透过历史镜头追问人如何活成自己、如何自处"
         }
       ],
       "is_new": true
@@ -280,7 +297,7 @@
           "reason": "具体实操案例+教训，讲清楚AI在遗留系统现代化中怎么用才有效"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -297,7 +314,7 @@
           "reason": "具体方法+真实案例(Tickloom)讲清楚DSL如何约束LLM生成代码，实操性强"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -319,7 +336,7 @@
           "reason": "明确踩中“护城河在harness不在模型”母题，是Fowler本人在场观察和分析的一手记录"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Amelia Wattenberger",
@@ -336,7 +353,7 @@
           "reason": "明确踩中“认知系统不能外包”母题，主张维持代码作为思维媒介而非把认知过程外包给AI，是作者本人的一手论点"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -370,7 +387,7 @@
           "reason": "一手实测对比本地模型与大模型编程能力差距，给出实操建议"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -387,7 +404,7 @@
           "reason": "梳理本地LLM编程可行性的具体影响因素和实用选型建议，实操性强"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -404,7 +421,7 @@
           "reason": "记录行业一线对agentic开发从概念到生产落地的真实转变，讲清楚是什么、为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Antithesis",
@@ -421,7 +438,7 @@
           "reason": "确定性仿真测试找出隐藏六年的BCD编码bug，是该工具真实用法和能力边界的扎实案例"
         }
       ],
-      "is_new": true
+      "is_new": false
     }
   ],
   "github_track": []

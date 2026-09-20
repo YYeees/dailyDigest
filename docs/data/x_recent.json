@@ -2,6 +2,17 @@
   "items": [
     {
       "person": "Peter Steinberger",
+      "title": "New benchmark dropped https://t.co/5lFZNcDNCh",
+      "link": "https://x.com/steipete/status/2101748820237500557",
+      "date": "2026-09-20",
+      "first_seen": "2026-09-20T23:54:57.013148+00:00",
+      "source_type": "x",
+      "summary": "发布了一个新的基准测试，具体内容和数据未在文字中说明(附图未能解析)。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
       "title": "The coolest part: roboclaw runs our team server, is live on Discord, talks with gpt-live and knows a…",
       "link": "https://x.com/steipete/status/2101141707375227372",
       "date": "2026-09-19",
@@ -9,7 +20,7 @@
       "source_type": "x",
       "summary": "介绍团队内部工具roboclaw：常驻团队服务器、在Discord上在线、能对接gpt-live语音，还能记住团队正在处理的所有session。作者提到开会时可以直接问它当前和历史session的上下文，省去自己回忆的功夫。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -20,7 +31,7 @@
       "source_type": "x",
       "summary": "分享两条工作流心得：一是喜欢让同事在PR落地前替自己的AI会话去slop化；二是提示可以打开侧边栏，直接让agent帮你把一堆session重新整理归类。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -31,7 +42,7 @@
       "source_type": "x",
       "summary": "OpenClaw新增功能：可以直接让agent把某个网页应用跑进crabbox沙盒，并给出vnc或portal方式查看。这个能力此前只支持云端session，现在本地session一样能用，解决了本地开发中途需要一个盒子来测试的痛点。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -42,7 +53,7 @@
       "source_type": "x",
       "summary": "对某件事（配图未知，具体所指不明）表达终于解脱了的情绪，内容过短无法判断具体指向。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -218,39 +229,6 @@
       "source_type": "x",
       "summary": "Fable(Anthropic内部工具)用Claude解开了一个有370年历史的密码(Cyphral Distich)，Boris Cherny称这是一个很酷的Claude用例展示，但推文本身没有展开具体方法。",
       "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "If you haven't given Linux a go lately, try with agents. You can fix anything with a prompt now.  Go…",
-      "link": "https://x.com/steipete/status/2099172248213225791",
-      "date": "2026-09-13",
-      "first_seen": "2026-09-13T23:55:23.765289+00:00",
-      "source_type": "x",
-      "summary": "作者用Dell XPS装Linux，摄像头驱动不工作，让codex处理后重启就修好了，以此鼓励大家现在可以放心借助agent尝试Linux。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Yeah, was just about to say the same. https://t.co/dy8McRUBvS",
-      "link": "https://x.com/steipete/status/2099171190925640188",
-      "date": "2026-09-13",
-      "first_seen": "2026-09-13T23:55:23.765352+00:00",
-      "source_type": "x",
-      "summary": "对某条内容表示认同的简短回复，附一张图片，原推缺少上下文，看不出具体讨论的是什么。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Anyone got an invite code for Meta's Muse? 👉👈  I saw their Soul.md file and now i'm curious.",
-      "link": "https://x.com/steipete/status/2098931686042210381",
-      "date": "2026-09-13",
-      "first_seen": "2026-09-13T23:55:23.765385+00:00",
-      "source_type": "x",
-      "summary": "作者看到Meta旗下Muse产品的Soul.md文件后来了兴趣，发推询问谁有邀请码，内容没有更多细节。",
-      "tier": "low",
       "is_new": false
     }
   ]
