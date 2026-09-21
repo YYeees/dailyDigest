@@ -1146,7 +1146,16 @@
       "language": "Python",
       "difficulty": "beginner",
       "recommend_reason": "微软官方工具，将PDF/Office/图片/音频等多种文件格式转换为LLM友好的Markdown，是RAG/文档处理流水线中的常见基础组件。生产级实现(400+提交、测试、Docker)，文档清晰、CLI和Python API均易用，是AI应用开发工具链里代表性强、实用价值高的基础设施项目。",
-      "stars_total": 183588
+      "stars_total": 185944
+    },
+    {
+      "full_name": "huggingface/transformers",
+      "url": "https://github.com/huggingface/transformers",
+      "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+      "language": "Python",
+      "difficulty": "advanced",
+      "recommend_reason": "Hugging Face的模型定义统一框架，横跨文本/视觉/音频/多模态，100万+预训练模型可直接调用，兼容PyTorch/JAX/TensorFlow，是整个开源ML生态的基础设施级项目。虽然Pipeline API降低了简单推理的门槛，但要真正理解和定制模型内部结构仍需要较深的模型机制背景，是AI从业者绕不开的学习标的。",
+      "stars_total": 166453
     },
     {
       "full_name": "langgenius/dify",
@@ -1158,31 +1167,22 @@
       "stars_total": 155621
     },
     {
-      "full_name": "browser-use/browser-use",
-      "url": "https://github.com/browser-use/browser-use",
-      "description": "Agents that use the browser.",
-      "language": "Python",
-      "difficulty": "intermediate",
-      "recommend_reason": "成熟的AI浏览器自动化框架，让LLM agent像人一样操作浏览器完成预订、填表等复杂任务，提供开源Python库、CLI harness和云服务三层架构，115k star、文档和基准测试齐全。是AI agent+浏览器自动化方向最具代表性的项目之一，工具化和文档成熟度都很高，值得学习其架构设计。",
-      "stars_total": 114520
-    },
-    {
-      "full_name": "OpenHands/OpenHands",
-      "url": "https://github.com/OpenHands/OpenHands",
-      "description": "🙌 OpenHands: AI-Driven Development",
+      "full_name": "anthropics/claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
       "language": "TypeScript",
-      "difficulty": "intermediate",
-      "recommend_reason": "自托管的AI编程agent控制中心，支持OpenHands/Claude Code/Codex/Gemini等多种agent后端，可本地/Docker/云端部署并接入Slack/GitHub/Linear等自动化工作流。87.8k星、Beta阶段但活跃维护，架构文档和自托管指南完整，是学习如何把编程agent产品化、工程化落地的代表性项目。",
-      "stars_total": 87783
+      "difficulty": "beginner",
+      "recommend_reason": "Anthropic官方终端agentic编程工具，一行命令安装即可用，覆盖代码理解、git工作流、GitHub issue/PR协作等场景。插件系统和活跃社区让它既是好用的生产力工具，也是学习「agent怎么落地到日常编程」的标杆样本，门槛低但代表性强。",
+      "stars_total": 147121
     },
     {
-      "full_name": "bytedance/deer-flow",
-      "url": "https://github.com/bytedance/deer-flow",
-      "description": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
-      "language": "Python",
-      "difficulty": "intermediate",
-      "recommend_reason": "字节跳动出品的“超级Agent”框架，整合子代理编排、持久记忆、沙箱代码执行、技能系统和消息网关，基于LangGraph/LangChain构建，支持本地/Docker/K8s多种部署，文档详尽（4万字级别）且有商业背书和82k star的活跃社区。是研究长时程复杂任务agent架构的优秀实操样本，技术栈和工程化程度都属于第一梯队。",
-      "stars_total": 82365
+      "full_name": "microsoft/generative-ai-for-beginners",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners",
+      "description": "21 Lessons, Get Started Building with Generative AI",
+      "language": "Jupyter Notebook",
+      "difficulty": "beginner",
+      "recommend_reason": "微软出品的生成式AI入门课程，21节课覆盖提示工程、文本/图像生成、聊天应用、RAG、AI Agent等主题，Python和TypeScript双语代码示例齐全，支持Azure OpenAI/OpenAI/开源模型多种后端。120k星、50多种语言翻译、持续维护，是生成式AI入门教程里体量最大、最成熟的样本之一。",
+      "stars_total": 120140
     }
   ]
 }
