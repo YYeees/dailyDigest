@@ -2,6 +2,28 @@
   "items": [
     {
       "person": "Peter Steinberger",
+      "title": "Because this “Meta uses OpenClaw” story is going around. They built their own agent, being inspired.…",
+      "link": "https://x.com/steipete/status/2102116206371315854",
+      "date": "2026-09-21",
+      "first_seen": "2026-09-22T00:38:10.613532+00:00",
+      "source_type": "x",
+      "summary": "针对『Meta使用了OpenClaw』的传言进行澄清：Meta实际是受OpenClaw启发后自研了自己的agent，作者对Meta团队的工作表示认可和祝贺，而非暗示对方直接套用了自己的产品。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "The beauty of running a claw yourself: they cannot block you.",
+      "link": "https://x.com/steipete/status/2102044040397238286",
+      "date": "2026-09-21",
+      "first_seen": "2026-09-22T00:38:10.613797+00:00",
+      "source_type": "x",
+      "summary": "作者（OpenClaw作者）认为自己搭建运行agent的好处在于不受制于任何平台方，不会被随意封禁或限制访问，这是自建/自托管相较于依赖第三方平台的核心价值。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
       "title": "New benchmark dropped https://t.co/5lFZNcDNCh",
       "link": "https://x.com/steipete/status/2101748820237500557",
       "date": "2026-09-20",
@@ -9,7 +31,7 @@
       "source_type": "x",
       "summary": "发布了一个新的基准测试，具体内容和数据未在文字中说明(附图未能解析)。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -184,50 +206,6 @@
       "first_seen": "2026-09-16T00:00:43.928267+00:00",
       "source_type": "x",
       "summary": "\"Salesforce in Claude\"公测上线,把账号、商机、销售管道等CRM数据接入Claude,并提供37个预置流程供参考。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @addyosmani: At Anthropic, Claude now writes 80% of our code. Engineers ship 8x more code per qua…",
-      "link": "https://x.com/bcherny/status/2099640440740028520",
-      "date": "2026-09-14",
-      "first_seen": "2026-09-15T00:21:50.842553+00:00",
-      "source_type": "x",
-      "summary": "转引Addy Osmani的说法：在Anthropic内部，Claude现在编写了80%的代码，工程师每季度交付的代码量提升了8倍，副作用是测试代码量增长了10倍，CI部分推文被截断、后续内容未知。这条数据直接触及AI大幅提升代码产出后测试规模同步膨胀的现象，跟AI怎么改造测试这个主题相关。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "This is so useful. pushing to add this to codex as well.",
-      "link": "https://x.com/steipete/status/2099571935495827761",
-      "date": "2026-09-14",
-      "first_seen": "2026-09-15T00:21:52.519510+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger对某个未指明的工具/功能表示\"这个很有用，打算也推给Codex用\"，推文缺少上下文，看不出具体指的是什么。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "Claude Mods are landing now. Someone already built a Tetris-in-Claude mod 🤯  See issue for the lates…",
-      "link": "https://x.com/bcherny/status/2099551291601248485",
-      "date": "2026-09-14",
-      "first_seen": "2026-09-15T00:21:50.842785+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny宣布Claude Mods功能已经上线，社区已经做出了一个在Claude里玩Tetris的mod，他链接了详细的社区更新issue，但推文本身没有展开技术细节。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "Fable solved the Cyphral Distich (a 370 year old cypher). Super cool way to use Claude  https://t.co…",
-      "link": "https://x.com/bcherny/status/2099322487603634395",
-      "date": "2026-09-14",
-      "first_seen": "2026-09-15T00:21:50.842864+00:00",
-      "source_type": "x",
-      "summary": "Fable(Anthropic内部工具)用Claude解开了一个有370年历史的密码(Cyphral Distich)，Boris Cherny称这是一个很酷的Claude用例展示，但推文本身没有展开具体方法。",
       "tier": "medium",
       "is_new": false
     }

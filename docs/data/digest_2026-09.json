@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "Jev introduces a new shape of LLM - System One, aka Decision Models",
+      "link": "https://simonwillison.net/2026/Sep/21/jev/",
+      "date": "2026-09-21",
+      "first_seen": "2026-09-22T00:37:58.862597+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison详细拆解了TypeSafe AI发布的Jev——一种只输出浮点数（置信度/分类概率/评分）而非文本的『决策模型』，定价仅按输入计费（每百万token $0.042，比GPT-5 Nano还便宜），适合垃圾邮件检测、打标签、排序重排一类分类任务。他也提出批评：这类模型进一步退化成黑箱，给不出任何决策依据，他自测让Jev给旧金山湾区城市打『是否宜居』分时就出现了可疑的社会经济偏向。发布一周内已经涌现出用Jev实现聊天、left-pad、玩2048等创意项目，以及基于开源模型复现的Kev等类似产品。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "详细解读Jev这类新型决策模型的原理、定价、适用场景，并提出黑箱和偏见方面的批判性观察，兼具实操信息和独立判断，是扎实的前沿工具解读。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Jev: System One models for Prod, not God — with Diogo Almeida, CEO, TypeSafe AI",
+      "link": "https://www.latent.space/p/jev",
+      "date": "2026-09-21",
+      "first_seen": "2026-09-22T00:37:59.488986+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space访谈TypeSafe AI创始人Diogo Almeida，围绕新发布的Jev模型展开——一种被称为『System One models』的决策模型，只返回置信度/分类等结构化数值而非自然语言。核心论点是RLHF存在mode collapse问题导致模型丢失校准能力，Jev用『RLCD（面向校准决策的强化学习）』替代RLHF/RLVR作为训练目标。访谈还讨论了为什么TypeSafe拒绝公开跑分、认为任务和数据比算力更重要（『最苦的教训』），以及这类模型对未来coding agent架构（绕开KV cache瓶颈、多agent协作）的潜在影响。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入访谈TypeSafe AI创始人，讲清楚Jev这类『决策模型』新范式是什么、为什么重要（RLHF的mode collapse问题、RLCD训练目标、对coding agent架构的影响），是扎实的前沿模型解读。"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Craig Mod",
       "title": "[RIDGELINE] Walking with Annie",
       "link": "https://craigmod.com/ridgeline/234/",
@@ -314,7 +348,7 @@
           "reason": "系统性讨论AI agent协作规划的界面设计问题——引用Lucy Suchman等学术研究，结合Chopin等实际项目，讲清楚为什么现有规划界面太单薄、该往什么方向做厚，属于讲清楚是什么为什么重要的扎实内容"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

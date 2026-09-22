@@ -2,66 +2,66 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "Quoting voxium",
-      "link": "https://simonwillison.net/2026/Sep/20/voxium/",
-      "date": "2026-09-20",
-      "first_seen": "2026-09-20T23:54:48.484630+00:00",
+      "title": "Jev introduces a new shape of LLM - System One, aka Decision Models",
+      "link": "https://simonwillison.net/2026/Sep/21/jev/",
+      "date": "2026-09-21",
+      "first_seen": "2026-09-22T00:37:58.862597+00:00",
       "source_type": "blog",
-      "summary": "Simon Willison转引了一条推文：作者voxium描述自己在一家大公司的新岗位上，规格文档、代码、测试、工单等几乎所有产出都由Claude Code生成，从初级到高级工程师每天工作12-13小时却只是在“按回车”，没有人真正在读、在审——一个AI全面接管却无人把关的警示案例。",
+      "summary": "Simon Willison详细拆解了TypeSafe AI发布的Jev——一种只输出浮点数（置信度/分类概率/评分）而非文本的『决策模型』，定价仅按输入计费（每百万token $0.042，比GPT-5 Nano还便宜），适合垃圾邮件检测、打标签、排序重排一类分类任务。他也提出批评：这类模型进一步退化成黑箱，给不出任何决策依据，他自测让Jev给旧金山湾区城市打『是否宜居』分时就出现了可疑的社会经济偏向。发布一周内已经涌现出用Jev实现聊天、left-pad、玩2048等创意项目，以及基于开源模型复现的Kev等类似产品。",
       "tracks": [
         {
           "track": "ai",
-          "tier": "medium",
-          "reason": "转引一条真实的行业轶事——某大公司团队完全依赖Claude Code生成代码/文档/测试且无人审阅，属于沾AI边的宏观叙事/警示性个案，非实操指南"
+          "tier": "high",
+          "reason": "详细解读Jev这类新型决策模型的原理、定价、适用场景，并提出黑箱和偏见方面的批判性观察，兼具实操信息和独立判断，是扎实的前沿工具解读。"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "内容精准印证“认知系统不能外包(Sapere aude)”这条反向母题，但是Simon转引他人推文的二手内容，非作者本人一手反思"
+          "reason": "讨论决策模型的黑箱与偏见问题，触及认识论/批判性思维周边领域，但是评论他人产品而非一手经历。"
         }
       ],
       "is_new": true
     },
     {
       "person": "Simon Willison",
-      "title": "llm-keys-ui 0.1",
-      "link": "https://simonwillison.net/2026/Sep/20/llm-keys-ui/",
-      "date": "2026-09-20",
-      "first_seen": "2026-09-20T23:54:48.484844+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison发布了llm-keys-ui插件0.1版：当他用手机远程操控Codex Remote上跑的coding agent时，不想把API密钥直接粘贴进聊天窗口，于是做了这个插件——跑一条命令即可在本地起一个网页界面，通过局域网/Tailscale地址安全地存取密钥，之后agent可以用`llm keys get`按需取用，避免密钥明文暴露在对话记录里。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "解决了远程coding agent(如Codex Remote)场景下API密钥安全管理的实际问题，有具体命令和使用场景，但属于作者自己维护的小工具、应用面较窄，非前沿模型/工具的新趋势"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干和周边领域都没有实质连接，纯工具使用说明"
-        }
-      ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "datasette-explain 0.2.2",
-      "link": "https://simonwillison.net/2026/Sep/20/datasette-explain/",
-      "date": "2026-09-20",
-      "first_seen": "2026-09-20T23:54:48.484880+00:00",
+      "title": "Cloudflare Python Workers are now generally available",
+      "link": "https://simonwillison.net/2026/Sep/21/cloudflare-python-worker/",
+      "date": "2026-09-21",
+      "first_seen": "2026-09-22T00:37:58.862785+00:00",
       "source_type": "blog",
       "summary": null,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "自己维护的小工具版本更新日志(datasette-explain插件的一处小改动)，按内容本身判断信息量很薄，不算AI实操趋势内容"
+          "reason": "内容是Cloudflare Workers对Python运行时的支持，跟AI完全无关。"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "跟三根主干和周边领域都没有实质连接"
+          "reason": "跟三根主干和周边领域都没有实质连接。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Jev: System One models for Prod, not God — with Diogo Almeida, CEO, TypeSafe AI",
+      "link": "https://www.latent.space/p/jev",
+      "date": "2026-09-21",
+      "first_seen": "2026-09-22T00:37:59.488986+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space访谈TypeSafe AI创始人Diogo Almeida，围绕新发布的Jev模型展开——一种被称为『System One models』的决策模型，只返回置信度/分类等结构化数值而非自然语言。核心论点是RLHF存在mode collapse问题导致模型丢失校准能力，Jev用『RLCD（面向校准决策的强化学习）』替代RLHF/RLVR作为训练目标。访谈还讨论了为什么TypeSafe拒绝公开跑分、认为任务和数据比算力更重要（『最苦的教训』），以及这类模型对未来coding agent架构（绕开KV cache瓶颈、多agent协作）的潜在影响。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入访谈TypeSafe AI创始人，讲清楚Jev这类『决策模型』新范式是什么、为什么重要（RLHF的mode collapse问题、RLCD训练目标、对coding agent架构的影响），是扎实的前沿模型解读。"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "访谈探讨AI作为决策系统/认知架构的新范式，沾根二『AI作为认知方式』的边，但属于对他人产品的二手访谈，非一手反思。"
         }
       ],
       "is_new": true
@@ -450,89 +450,6 @@
         }
       ],
       "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "The contagion of fear",
-      "link": "https://simonwillison.net/2026/Sep/14/the-contagion-of-fear/",
-      "date": "2026-09-14",
-      "first_seen": "2026-09-15T00:21:43.532822+00:00",
-      "source_type": "blog",
-      "summary": "Bryan Cantrill撰文回应前Anthropic员工关于\"AI可能在本世纪末前害死所有人\"的说法，用自己年轻时因不够格却发表技术断言、造成不必要恐慌的往事作类比，主张专家在敲响警钟时更该谨慎克制——尤其是生物武器这类他认为被随口引用、缺乏专业背书的风险场景，应该真正请生物学家/军控专家来评估而不是靠联想制造恐惧。Simon Willison在博文里补充了对应播客节目里Cantrill原话的引用。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "深入讨论AI存在性风险言论的可信度和专家责任，是前沿AI安全叙事里讲得清楚、有分量的一篇"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Humanity’s Last Invention — Richard Socher of Recursive",
-      "link": "https://www.latent.space/p/recursive",
-      "date": "2026-09-14",
-      "first_seen": "2026-09-15T00:21:44.030993+00:00",
-      "source_type": "blog",
-      "summary": "Latent Space访谈Richard Socher(You.com创始人，现创办估值50亿美元的Recursive)，围绕他提出的\"尤里卡机器\"构想——用AI自动化AI研究本身，实现递归自我提升。访谈深入讨论了reward hacking、对Anthropic\"宪法式AI\"有效性的质疑、开源模型的地缘软实力价值，以及AI硬起飞被物理与经济约束低估的观点，还提到Recursive已有的GPU kernel自动优化、AI研究系统跑赢人类等早期成果。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "深度访谈前沿AI创业者，讲清楚递归自我提升、reward hacking、对齐等前沿趋势是什么、为什么重要"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "沾根二AI作为认知方式的边(自动化AI研究、harness/sandbox基础设施)，但是访谈形式的二手内容非本人一手反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Maggie Appleton",
-      "title": "Planning with Agents: Divided Worlds, Boundary Objects, and Thicker Interfaces",
-      "link": "https://maggieappleton.com/planning-agents/",
-      "date": "2026-09-14",
-      "first_seen": "2026-09-15T00:21:41.885459+00:00",
-      "source_type": "blog",
-      "summary": "作者在GitHub Next的一手实践出发，主张当前人机协作界面太\"薄\"——agent只用文本对话向人汇报，缺少让人类介入验证的界面。她提出应该用可视化状态图、实时可操控原型、多方案并行呈现等\"厚界面\"替代纯文本交互，并以设计系统调整、播放器状态机、重试逻辑对比三个真实项目为例。团队正在开发Chopin项目，一个支持多人协作与决策留痕的实时规划原型工具。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "基于GitHub Next一手实践，讲清楚人机agent协作界面该怎么设计、为什么重要，属于扎实的AI实操/趋势内容"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "明确踩中根二AI作为认知方式与护城河在harness不在模型这两条正向母题，且是作者本人一手实践反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Maggie Appleton",
-      "title": "Planning with Agents: Divided Worlds, Boundary Objects, and Thicker Interfaces",
-      "link": "https://maggieappleton.com/planning-agents",
-      "date": "2026-09-14",
-      "first_seen": "2026-09-20T23:54:46.625393+00:00",
-      "source_type": "blog",
-      "summary": "文章探讨人类与AI agent协作规划时的界面设计问题：当前规划界面往往优化的是机器执行而非人类决策，作者主张构建更丰富的“边界对象”(visual/interactive/social呈现)，让agent先做探索性工作、把规划建立在真实反馈而非纯预测上，引用Lucy Suchman的理论并以Chopin等项目为例展开论证。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "系统性讨论AI agent协作规划的界面设计问题——引用Lucy Suchman等学术研究，结合Chopin等实际项目，讲清楚为什么现有规划界面太单薄、该往什么方向做厚，属于讲清楚是什么为什么重要的扎实内容"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "属于周边领域(人机交互/思维工具/动态媒介)、也沾根二(AI作为认知方式)的边，但是设计研究/学术分析而非作者本人的一手经历反思"
-        }
-      ],
-      "is_new": true
     }
   ]
 }
