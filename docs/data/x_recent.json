@@ -1,6 +1,50 @@
 {
   "items": [
     {
+      "person": "Boris Cherny",
+      "title": "I used Opus 5.5 to formally verify the Claude Agent SDK using Lean. A couple short prompts = 16 PRs…",
+      "link": "https://x.com/bcherny/status/2102543349102338309",
+      "date": "2026-09-22",
+      "first_seen": "2026-09-23T00:04:59.466804+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny用Opus 5.5对Claude Agent SDK做形式化验证——用Lean建模,几条简短prompt就产出16个PR,修复了各种bug和竞态条件；他有时会把Lean和TLA+结合起来查数据流、并发和状态管理方面的问题。他认为形式化验证可能是未来找bug(乃至写代码)的新路子。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "Had ChatGPT sometimes crashing on me after updating to macOS 27 and... Astra found a ~14 year old bu…",
+      "link": "https://x.com/steipete/status/2102501642176528743",
+      "date": "2026-09-22",
+      "first_seen": "2026-09-23T00:05:21.398239+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger升级到macOS 27后ChatGPT桌面端偶发崩溃,他用GPT-6 Astra自主排查定位到根因——libuv库里一个存在了约14年的老bug。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @trq212: Opus 5.5 is the result of your feedback.    It communicates clearly, it's cheaper per to…",
+      "link": "https://x.com/bcherny/status/2102440012331814944",
+      "date": "2026-09-22",
+      "first_seen": "2026-09-23T00:04:59.467116+00:00",
+      "source_type": "x",
+      "summary": "转推Thariq Shihipar对Opus 5.5的评价——沟通更清晰、每token更便宜、智能水平接近Fable 5.1,且在各推理强度下都好用(该引用在Simon Willison同日的价格战文章中也有收录)。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "Opus 5.5 is a really good model. It's been my daily driver the last few weeks.  We had Opus 5.5 and…",
+      "link": "https://x.com/bcherny/status/2102439069053747549",
+      "date": "2026-09-22",
+      "first_seen": "2026-09-23T00:04:59.467163+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny用Opus 5.5和Fable 5.1分别把HAProxy从C移植到Rust,两者都通过了几乎全部原有测试,但Opus 5.5用时9.5小时(Fable 5.1为12小时),成本低51%。他表示Opus 5.5已经成为自己最近几周的日常主力模型。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
       "person": "Peter Steinberger",
       "title": "Because this “Meta uses OpenClaw” story is going around. They built their own agent, being inspired.…",
       "link": "https://x.com/steipete/status/2102116206371315854",
@@ -9,7 +53,7 @@
       "source_type": "x",
       "summary": "针对『Meta使用了OpenClaw』的传言进行澄清：Meta实际是受OpenClaw启发后自研了自己的agent，作者对Meta团队的工作表示认可和祝贺，而非暗示对方直接套用了自己的产品。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -20,7 +64,7 @@
       "source_type": "x",
       "summary": "作者（OpenClaw作者）认为自己搭建运行agent的好处在于不受制于任何平台方，不会被随意封禁或限制访问，这是自建/自托管相较于依赖第三方平台的核心价值。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -173,39 +217,6 @@
       "first_seen": "2026-09-17T00:11:00.621358+00:00",
       "source_type": "x",
       "summary": "Boris Cherny（Claude Code团队）宣布Claude Cowork和常规聊天正式合并为一个产品：可以随手问个问题，也可以把整份报告交给Claude处理、合上电脑后它继续跑。目前先向Pro/Max用户逐步开放，后续会持续调优体验。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @edwinarbus: This is really neat! In Stripe's UnseriousT-ShirtShopBench, models were asked to bui…",
-      "link": "https://x.com/bcherny/status/2099979415040274487",
-      "date": "2026-09-15",
-      "first_seen": "2026-09-16T00:00:43.927999+00:00",
-      "source_type": "x",
-      "summary": "Stripe搞了个诙谐的\"UnseriousT-ShirtShopBench\"评测,让各家AI模型试着搭建并运营一家网店,结果几乎所有模型不约而同选择了同一种技术方案。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Excited to have you on board, Graham!",
-      "link": "https://x.com/steipete/status/2099960081207242808",
-      "date": "2026-09-15",
-      "first_seen": "2026-09-16T00:00:45.713859+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger发推欢迎新同事Graham加入团队,内容很短,无具体信息量。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @claudeai: Salesforce in Claude is now available in beta.  It brings your accounts, opportunities…",
-      "link": "https://x.com/bcherny/status/2099940918015168953",
-      "date": "2026-09-15",
-      "first_seen": "2026-09-16T00:00:43.928267+00:00",
-      "source_type": "x",
-      "summary": "\"Salesforce in Claude\"公测上线,把账号、商机、销售管道等CRM数据接入Claude,并提供37个预置流程供参考。",
       "tier": "medium",
       "is_new": false
     }

@@ -2,6 +2,172 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war",
+      "link": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
+      "date": "2026-09-22",
+      "first_seen": "2026-09-23T00:04:51.577299+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison整理Claude Opus 5.5、GPT-6 Sol、GPT-6 Luna同日发布引发的价格战:GPT-6 Luna/Sol价格较上代腰斩,Opus 5.5降价20%且缓存输入降价60%。实测发现Opus 5.5在“max”思考强度下会因为过度推理耗尽12.8万输出token上限、直接卡死拿不到结果(尝试两次都是,每次约20分钟、2.56美元),而Fable 5.1的max模式则表现更稳。他现在把GPT-6 Sol和Opus 5.5设为Codex/Claude Code的默认模型。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "详细拆解Claude Opus 5.5、GPT-6 Sol、GPT-6 Luna三款新模型的定价和性能实测(含pelican测试暴露Opus5.5 max模式的过度思考问题),对日常模型选型直接有参考价值"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干无关"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "🔬 An Oscar, Two Asteroids, and the Algorithm in Your sklearn: John Platt on AI for Science",
+      "link": "https://www.latent.space/p/john-platt",
+      "date": "2026-09-22",
+      "first_seen": "2026-09-23T00:04:52.275142+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space访谈Google研究员John Platt,聊他主导的ERA(经验性科研助手)系统——用Gemini做类蒙特卡洛树搜索式的科学实验迭代,把多种科学问题转化为“可打分任务”来自动求解,已经用于解决凝结尾对气候增暖贡献等长期悬而未决的问题。访谈也聊了他从费曼那里学到的治学态度:工具再强大,也要小心蒙骗自己。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深度访谈,讲清楚Google ERA(自动化科研)系统的原理和AI在气候变化科研中的具体应用案例,门槛不高但内容扎实"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "访谈内容涉及“认知系统”“真做出来的东西才算数”“别蒙骗自己”这类治学态度母题,但是二手访谈整理不是本人一手写作,清单外但值得注意"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "llm 0.36",
+      "link": "https://simonwillison.net/2026/Sep/22/llm/",
+      "date": "2026-09-22",
+      "first_seen": "2026-09-23T00:04:51.577647+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "工具版本更新日志,新模型支持信息与价格战一文重复,其余功能改动偏工具细节"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干无关"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting @therealcornpop",
+      "link": "https://simonwillison.net/2026/Sep/22/therealcornpop/",
+      "date": "2026-09-22",
+      "first_seen": "2026-09-23T00:04:51.577684+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison转引TikTok创作者@therealcornpop的吐槽:AI代写的文案不只是“不是X而是Y”这种AI腔或三段式结构,根本问题是缺乏“具体的声音”——能让人看出作者对所谈之事根本没有真实观点。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "讲的是识别AI生成文案的技巧,不是AI工具实操信息"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "主题命中正向母题“一手不二手,大词过敏是筛选器”(如何辨认缺乏真实观点的AI腔),但是转述TikTok创作者的话,不是Simon本人的一手反思,算二手内容"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "llm-anthropic 0.29",
+      "link": "https://simonwillison.net/2026/Sep/22/llm-anthropic/",
+      "date": "2026-09-22",
+      "first_seen": "2026-09-23T00:04:51.577713+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "仅新增对Opus5.5的调用支持,一行changelog,信息量薄,与价格战一文重复,择一看即可"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干无关"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Ministry of Testing",
+      "title": "What’s preventing flow for testers — and what is it doing to us?",
+      "link": "https://club.ministryoftesting.com/t/what-s-preventing-flow-for-testers-and-what-is-it-doing-to-us/87761",
+      "date": "2026-09-22",
+      "first_seen": "2026-09-23T00:04:54.965771+00:00",
+      "source_type": "blog",
+      "summary": "Ministry of Testing论坛帖子讨论测试人员因频繁在冲刺、发布、自动化、环境等任务间切换而产生的认知负荷问题。发帖人指出AI正在加速代码产出速度,而在测试实践、可测试性和工程能力没跟上的团队里,这些额外负担正在更多地压向测试岗位,已经有人因此转去做开发。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "论坛讨论帖,测试员因上下文切换耗竭,并点出AI加速代码产出后测试端承压更明显,有讨论价值但非方法论或实验"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "llm-typesafe 0.1a0",
+      "link": "https://simonwillison.net/2026/Sep/22/llm-typesafe/",
+      "date": "2026-09-22",
+      "first_seen": "2026-09-23T00:04:51.577736+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison发布llm-typesafe插件,让`llm`命令行工具能调用TypeSafe AI新推出的Jev模型——一个专做是非判断、分类、打分这类决策型任务的LLM,而非常规文本生成,适合工单分类、内容审核等场景。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "作者自己维护的LLM插件版本更新,背后TypeSafe AI的Jev决策模型范式有意思,但本条正文只是工具介绍不是趋势深度解读"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干无关"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Xiaomi MiMo-V2.6-Pro 1T-A42B: the new top Open Weights model, trained for $3M",
+      "link": "https://www.latent.space/p/ainews-xiaomi-mimo-v26-pro-1t-a42b",
+      "date": "2026-09-22",
+      "first_seen": "2026-09-23T00:04:52.276452+00:00",
+      "source_type": "blog",
+      "summary": "小米发布MiMo-V2.6系列模型(Pro/Flash/UltraSpeed),包括原生全模态能力,训练成本约300万美元。技术报告披露其RL训练在批次规模、任务环境和评分器算力三个维度的扩展方法,且承诺开源全部工具链和环境代码(但7000+任务数据集暂未公开)。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "小米发布新旗舰开源模型MiMo-V2.6系列,讲清楚训练规模、RL方法和开源计划,属于前沿模型新发布且解释到位"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "Jev introduces a new shape of LLM - System One, aka Decision Models",
       "link": "https://simonwillison.net/2026/Sep/21/jev/",
       "date": "2026-09-21",
@@ -13,36 +179,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "详细解读Jev这类新型决策模型的原理、定价、适用场景，并提出黑箱和偏见方面的批判性观察，兼具实操信息和独立判断，是扎实的前沿工具解读。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "讨论决策模型的黑箱与偏见问题，触及认识论/批判性思维周边领域，但是评论他人产品而非一手经历。"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Cloudflare Python Workers are now generally available",
-      "link": "https://simonwillison.net/2026/Sep/21/cloudflare-python-worker/",
-      "date": "2026-09-21",
-      "first_seen": "2026-09-22T00:37:58.862785+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "内容是Cloudflare Workers对Python运行时的支持，跟AI完全无关。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干和周边领域都没有实质连接。"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -64,7 +203,7 @@
           "reason": "访谈探讨AI作为决策系统/认知架构的新范式，沾根二『AI作为认知方式』的边，但属于对他人产品的二手访谈，非一手反思。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -374,79 +513,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "报道创业公司TypeSafe发布的快速分类/路由模型登顶HN，但内容以newsletter简讯形式带过，偏轻量新闻通稿"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Gemini Live audio",
-      "link": "https://simonwillison.net/2026/Sep/15/gemini-live/",
-      "date": "2026-09-15",
-      "first_seen": "2026-09-16T00:00:35.782815+00:00",
-      "source_type": "blog",
-      "summary": "Google发布Gemini 3.8 Live与3.8 Live Extended Thinking两款语音对话模型(对标OpenAI的GPT-Live),Simon Willison用刚发布的GPT-6 Astra Extra High读文档、直接生成了一个不依赖任何库的网页语音对话工具:通过WebSocket连接Gemini接口,用Web Audio API做录音和播放,支持打断对话和下载转录记录,代码已开源。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "前沿模型新发布(Gemini 3.8 Live语音模型)+直接可用的实操信息:作者用刚发布的GPT-6 Astra快速搭出实测工具,给出了具体技术实现路径(WebSocket、Web Audio API),讲清楚是什么、怎么用"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Can Skills Learned in Games Transfer to Real-World Work?",
-      "link": "https://www.latent.space/p/good-start-labs",
-      "date": "2026-09-15",
-      "first_seen": "2026-09-16T00:00:36.288169+00:00",
-      "source_type": "blog",
-      "summary": "Good Start Labs探索用游戏训练AI模型的迁移能力:让模型在19世纪铁路游戏《1830》里练交易决策,再测试金融研究任务,发现只有\"多轮终端agent、自主探索环境\"这种训练设计才能让游戏里练出的能力迁移到真实任务上。创始人认为harness设计比模型本身更决定AI能学到什么,团队把游戏内训练轨迹和学习环境本身作为产品卖给前沿AI实验室。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "扎实讲清楚了一个真实AI训练趋势(用游戏做RL训练环境、迁移到真实工作任务),有具体案例(1830铁路游戏训练迁移到金融研究)和创始人访谈细节,不是纯新闻通稿"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "明确命中\"护城河在harness不在模型\"这条正向母题(创始人反复强调训练harness的设计比模型本身更决定AI能学到什么),但这是Latent Space的采访报道,不是作者本人的一手反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Martin Fowler",
-      "title": "Nail the Narrative",
-      "link": "https://martinfowler.com/articles/never-send-slides/nail-your-narrative.html",
-      "date": "2026-09-15",
-      "first_seen": "2026-09-16T00:00:37.410922+00:00",
-      "source_type": "blog",
-      "summary": "Sumeet Gayathri Moghe在Martin Fowler站点撰文,主张做幻灯片前先钉死叙事:先想清楚\"大观点\"(独特观点+利害关系)和受众画像,再从Sparkline、Explainer、Pitch、Hook-Meat-Payoff等六种经典结构里选一种搭骨架,最后用故事板落地,让幻灯片设计变成\"执行\"而不是\"创作\"。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "沾\"写作与表达\"周边领域的边,提供了一套完整的叙事构建方法论,但是二手的框架介绍性质,不是本人一手的深度反思或经历"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] AEF-1 standard emerges for Third Party Evaluators, as Xai, OpenAI, and Anthropic all cosign",
-      "link": "https://www.latent.space/p/ainews-aef-1-standard-emerges-for",
-      "date": "2026-09-15",
-      "first_seen": "2026-09-16T00:00:36.289693+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic发布博客提出\"AEF-1\"标准,承诺让METR等第三方评估机构以类员工身份深度介入安全与对齐工作(工位、门禁卡、公司电脑级别的准入),OpenAI和xAI也签署跟进。文章同时提到跨民主国家协调、以及与中国协调验证合规的设想,是继\"Pacing the Frontier\"后AI安全治理领域的又一次表态。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "AI安全治理层面的重要新动向(Anthropic提出AEF-1第三方评估标准,OpenAI/xAI跟进签署),但偏宏观叙事和政策表态,不是直接影响日常用AI工具的实操信息"
         }
       ],
       "is_new": false
