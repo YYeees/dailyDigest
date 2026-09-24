@@ -2,6 +2,123 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Gemini 3.8 TTS Playground",
+      "link": "https://simonwillison.net/2026/Sep/23/gemini-tts-playground/",
+      "date": "2026-09-23",
+      "first_seen": "2026-09-24T00:16:47.765687+00:00",
+      "source_type": "blog",
+      "summary": "Google发布两个新Gemini文本转语音模型(gemini-3.8-flash-tts/flash-lite-tts)，支持超过2000种声音，可用30秒音频样本克隆自定义声音，并能定义多角色对话(不同人物各自的声音和语气风格)。作者用GPT-6 Astra写了一个bring-your-own-key的playground界面，实测生成1分18秒的双人对话音频耗时约20秒、成本2.74美分。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "详细介绍Gemini新TTS模型(gemini-3.8-flash-tts)特性、亲自实测的生成速度和成本数据，是扎实且门槛不高的新工具介绍"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干和周边领域都没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Shadow roots, explained with live examples",
+      "link": "https://simonwillison.net/2026/Sep/23/shadow-roots/",
+      "date": "2026-09-23",
+      "first_seen": "2026-09-24T00:16:47.765964+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "只是指向外部交互工具的策展链接，正文没有更多说明或教学内容，实操参考价值有限"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干和周边领域都没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Ministry of Testing",
+      "title": "What is the consensus on AI being used to test a work item against it's acceptance criteria and verify it's implemented correctly?",
+      "link": "https://club.ministryoftesting.com/t/what-is-the-consensus-on-ai-being-used-to-test-a-work-item-against-its-acceptance-criteria-and-verify-its-implemented-correctly/87764",
+      "date": "2026-09-23",
+      "first_seen": "2026-09-24T00:16:50.598703+00:00",
+      "source_type": "blog",
+      "summary": "Ministry of Testing论坛帖讨论用AI agent自动验证工作项是否满足验收标准(不是生成测试脚本，而是agent直接判定验收结果并签核)。楼主的公司已经在这么做，但担忧agent输出动辄上千字，其他QA未必真的会读就签字通过；agent还偏好优先用单元测试覆盖缺口，但有些场景明明需要集成或端到端测试才能防住bug。回帖补充了token成本超预期、AI难以完全理解产品决策背后意图等顾虑，双方结论都是认可这个方向但坚持需要人类判断介入。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "一线测试从业者真实讨论用AI agent验证工作项验收标准的实践与顾虑(输出冗长没人真读、token成本超预期、agent偏爱单元测试而忽视集成/e2e测试、AI理解不了产品决策背后的意图)，直接可指导本职测试工作要不要及如何采用这套流程，给high"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "🔬Bio-security is an AI Arms Race - Eric Nguyen (CEO, Radical Numerics)",
+      "link": "https://www.latent.space/p/bio-security-is-an-ai-arms-race-eric",
+      "date": "2026-09-23",
+      "first_seen": "2026-09-24T00:16:48.331759+00:00",
+      "source_type": "blog",
+      "summary": "Radical Numerics联合创始人Eric Nguyen(此前参与Evo/Evo2基因组语言模型开发)访谈，讲基因组语言模型如何通过长上下文和链式推理理解DNA序列，能够像自然语言模型一样递归优化生成结果。他认为AI在生物领域的能力提升同时带来防御和攻击两方面的军备竞赛，目前防御一方处于劣势，Radical Numerics主张推进前沿能力研究来对抗这一风险。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "基因组语言模型与生物安全的深度访谈，技术含量高但属研究level，超出普通使用者的门槛，给medium"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Claude Opus 5.5, the new default model for AINews — and everybody cuts prices 40-50%",
+      "link": "https://www.latent.space/p/ainews-claude-opus-55-the-new-default",
+      "date": "2026-09-23",
+      "first_seen": "2026-09-24T00:16:48.332504+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic发布Claude Opus 5.5，作为新一代默认模型，性能接近Fable 5.1/挑战Astra，API价格比Opus 5便宜40%。发布强调写作质量提升——信息前置、更遵循写作规则，长对话更易读。同期OpenAI发布GPT-6 Sol/Luna并降价，两家都强调效率优化带来的成本下降；Latent Space已将自己的AINews栏目迁移到Opus 5.5生成。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布(Claude Opus 5.5)且讲清楚是什么、为什么重要——价格下调、写作能力提升、基准表现，内容扎实门槛不高"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "SF October 14th: A Birds of a Feather Session on Agentic Engineering",
+      "link": "https://simonwillison.net/2026/Sep/23/bof-agentic-engineering/",
+      "date": "2026-09-23",
+      "first_seen": "2026-09-24T00:16:47.766023+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "旧金山线下活动通知，没有实操信息或行业洞察"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "只是活动预告，不是一手反思或经历，清单外内容本身也没有特别的分量"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war",
       "link": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
       "date": "2026-09-22",
@@ -13,14 +130,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "详细拆解Claude Opus 5.5、GPT-6 Sol、GPT-6 Luna三款新模型的定价和性能实测(含pelican测试暴露Opus5.5 max模式的过度思考问题),对日常模型选型直接有参考价值"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干无关"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -42,73 +154,7 @@
           "reason": "访谈内容涉及“认知系统”“真做出来的东西才算数”“别蒙骗自己”这类治学态度母题,但是二手访谈整理不是本人一手写作,清单外但值得注意"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "llm 0.36",
-      "link": "https://simonwillison.net/2026/Sep/22/llm/",
-      "date": "2026-09-22",
-      "first_seen": "2026-09-23T00:04:51.577647+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "工具版本更新日志,新模型支持信息与价格战一文重复,其余功能改动偏工具细节"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干无关"
-        }
-      ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting @therealcornpop",
-      "link": "https://simonwillison.net/2026/Sep/22/therealcornpop/",
-      "date": "2026-09-22",
-      "first_seen": "2026-09-23T00:04:51.577684+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison转引TikTok创作者@therealcornpop的吐槽:AI代写的文案不只是“不是X而是Y”这种AI腔或三段式结构,根本问题是缺乏“具体的声音”——能让人看出作者对所谈之事根本没有真实观点。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "讲的是识别AI生成文案的技巧,不是AI工具实操信息"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "主题命中正向母题“一手不二手,大词过敏是筛选器”(如何辨认缺乏真实观点的AI腔),但是转述TikTok创作者的话,不是Simon本人的一手反思,算二手内容"
-        }
-      ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "llm-anthropic 0.29",
-      "link": "https://simonwillison.net/2026/Sep/22/llm-anthropic/",
-      "date": "2026-09-22",
-      "first_seen": "2026-09-23T00:04:51.577713+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "仅新增对Opus5.5的调用支持,一行changelog,信息量薄,与价格战一文重复,择一看即可"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干无关"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ministry of Testing",
@@ -125,29 +171,7 @@
           "reason": "论坛讨论帖,测试员因上下文切换耗竭,并点出AI加速代码产出后测试端承压更明显,有讨论价值但非方法论或实验"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "llm-typesafe 0.1a0",
-      "link": "https://simonwillison.net/2026/Sep/22/llm-typesafe/",
-      "date": "2026-09-22",
-      "first_seen": "2026-09-23T00:04:51.577736+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison发布llm-typesafe插件,让`llm`命令行工具能调用TypeSafe AI新推出的Jev模型——一个专做是非判断、分类、打分这类决策型任务的LLM,而非常规文本生成,适合工单分类、内容审核等场景。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "作者自己维护的LLM插件版本更新,背后TypeSafe AI的Jev决策模型范式有意思,但本条正文只是工具介绍不是趋势深度解读"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干无关"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -164,7 +188,7 @@
           "reason": "小米发布新旗舰开源模型MiMo-V2.6系列,讲清楚训练规模、RL方法和开源计划,属于前沿模型新发布且解释到位"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -435,84 +459,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "汇总了OpenAI错位披露框架、Databricks成本、Gas Town关停等多条AI趋势，但本质是社交媒体新闻通稿式汇编，非原创深度分析"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Martin Fowler",
-      "title": "Fragments: September 16",
-      "link": "https://martinfowler.com/fragments/2026-09-16.html",
-      "date": "2026-09-16",
-      "first_seen": "2026-09-17T00:10:53.937178+00:00",
-      "source_type": "blog",
-      "summary": "Martin Fowler本周碎片合集几个要点：①OpenAI被曝5月就曾用agent攻击RubyGems却未披露，Simon Willison质疑这暴露了OpenAI要么无法审查自己的历史攻击记录、要么明知道却选择不通报，两种可能都很糟；②Nate Silver观察到最近agent编程能力的提升，关键不在“更聪明”而在“更持久”（super-persistence），这也是Hugging Face被攻击事件里agent展现的特质；③“Uncle Bob”原本花大力气搭建约束agent的harness，结果agent能力涨得太快，等他做完发现这套harness已经没那么必要了；④Ezra Klein访谈里关于中美AI监管博弈的几个观察，包括美国算力仍是中国8倍、中国的监管密度反而没拖慢近期的进展。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "高信息密度的碎片合集：OpenAI在agentic hacking（攻击RubyGems）事件上未披露的争议、Nate Silver观察到agent进步的关键是“超持久性”而非“超智能”、Uncle Bob发现管控agent的harness正被agent能力提升“架空”——都是扎实的AI趋势观察而非新闻通稿"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "Uncle Bob关于“harness正被架空”的观察沾到根二“护城河在harness，不在模型”这个母题的边，但是Martin Fowler转述评论的二手内容，不是作者本人一手经历"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Claude Cowork and chat are now one Claude",
-      "link": "https://simonwillison.net/2026/Sep/16/one-claude/",
-      "date": "2026-09-16",
-      "first_seen": "2026-09-17T00:10:52.269938+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison评论Claude Cowork和聊天合并为一个产品的公告：认为这标志着Claude本身正在成为一个“通用agent”，呼应了OpenAI早前把Codex桌面应用改名为ChatGPT的动作。他原本打算写一篇梳理Cowork和普通Claude边界的后续文章，现在这个变化替他省了这份工——但具体这次合并在功能和界面上到底带来什么变化，他觉得还需要花时间慢慢摸清楚。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "第三方深度解读Claude Cowork与聊天合并这一产品变化，点出Claude正在变成“通用agent”的定位转向，并类比OpenAI把Codex改名成ChatGPT的动作，讲清楚为什么重要"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Underwriting Superintelligence: Backing Agents you can Sue — Rune Kvist, AIUC",
-      "link": "https://www.latent.space/p/aiuc",
-      "date": "2026-09-16",
-      "first_seen": "2026-09-17T00:10:52.795092+00:00",
-      "source_type": "blog",
-      "summary": "AIUC联合创始人Rune Kvist访谈：公司完成4000万美元A轮融资，客户包括Cursor、Harvey、Lovable、ElevenLabs。核心论点是AI落地的瓶颈已经不是模型能力，而是信任——企业（银行、医院）需要知道agent“会做什么、不会做什么”才敢大规模上线，这跟Waymo能做超人类司机却进不了机场是同一个问题。AIUC-1标准把越狱、幻觉、数据泄漏等风险点拆成具体的技术控制/第三方测试/政策控制，每季度联合Fortune 1000的风险负责人更新，再配合保险公司（如Lloyd's）承保来兜底赔付责任。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "深度访谈AIUC创始人Rune Kvist，讲清楚AI agent的“信任/风险基础设施”（标准+保险）为何正成为AI落地的核心瓶颈而非能力本身，案例扎实（Cursor/Harvey/ElevenLabs等真实客户、4000万美元A轮）"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "谈到AIUC-1标准对agent做越狱/幻觉/数据泄漏的第三方测试、每季度更新标准，沾agent测试/评测基础设施的边，但重点在保险商业模式而非具体测试方法，偏观点/介绍性质"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Jev: a “System One Model” that only decides/classifies/routes/scores — >100x faster, >200x cheaper than small frontier LLMs",
-      "link": "https://www.latent.space/p/ainews-jev-a-system-one-model-that",
-      "date": "2026-09-16",
-      "first_seen": "2026-09-17T00:10:52.805734+00:00",
-      "source_type": "blog",
-      "summary": "AI News报道创业公司TypeSafe发布的“System One Model”——一款只做决策/分类/路由/打分、不写代码不做推理的快速模型，速度比小型前沿LLM快100倍以上、成本低200倍以上，发布当天登顶Hacker News。该模型用“RLCD”（校准决策）方法训练，定位是配合较慢的“System Two”推理模型使用，换取并行采样、低幻觉和可校准性。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "报道创业公司TypeSafe发布的快速分类/路由模型登顶HN，但内容以newsletter简讯形式带过，偏轻量新闻通稿"
         }
       ],
       "is_new": false

@@ -2,6 +2,57 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Gemini 3.8 TTS Playground",
+      "link": "https://simonwillison.net/2026/Sep/23/gemini-tts-playground/",
+      "date": "2026-09-23",
+      "first_seen": "2026-09-24T00:16:47.765687+00:00",
+      "source_type": "blog",
+      "summary": "Google发布两个新Gemini文本转语音模型(gemini-3.8-flash-tts/flash-lite-tts)，支持超过2000种声音，可用30秒音频样本克隆自定义声音，并能定义多角色对话(不同人物各自的声音和语气风格)。作者用GPT-6 Astra写了一个bring-your-own-key的playground界面，实测生成1分18秒的双人对话音频耗时约20秒、成本2.74美分。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "详细介绍Gemini新TTS模型(gemini-3.8-flash-tts)特性、亲自实测的生成速度和成本数据，是扎实且门槛不高的新工具介绍"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Ministry of Testing",
+      "title": "What is the consensus on AI being used to test a work item against it's acceptance criteria and verify it's implemented correctly?",
+      "link": "https://club.ministryoftesting.com/t/what-is-the-consensus-on-ai-being-used-to-test-a-work-item-against-its-acceptance-criteria-and-verify-its-implemented-correctly/87764",
+      "date": "2026-09-23",
+      "first_seen": "2026-09-24T00:16:50.598703+00:00",
+      "source_type": "blog",
+      "summary": "Ministry of Testing论坛帖讨论用AI agent自动验证工作项是否满足验收标准(不是生成测试脚本，而是agent直接判定验收结果并签核)。楼主的公司已经在这么做，但担忧agent输出动辄上千字，其他QA未必真的会读就签字通过；agent还偏好优先用单元测试覆盖缺口，但有些场景明明需要集成或端到端测试才能防住bug。回帖补充了token成本超预期、AI难以完全理解产品决策背后意图等顾虑，双方结论都是认可这个方向但坚持需要人类判断介入。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "一线测试从业者真实讨论用AI agent验证工作项验收标准的实践与顾虑(输出冗长没人真读、token成本超预期、agent偏爱单元测试而忽视集成/e2e测试、AI理解不了产品决策背后的意图)，直接可指导本职测试工作要不要及如何采用这套流程，给high"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Claude Opus 5.5, the new default model for AINews — and everybody cuts prices 40-50%",
+      "link": "https://www.latent.space/p/ainews-claude-opus-55-the-new-default",
+      "date": "2026-09-23",
+      "first_seen": "2026-09-24T00:16:48.332504+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic发布Claude Opus 5.5，作为新一代默认模型，性能接近Fable 5.1/挑战Astra，API价格比Opus 5便宜40%。发布强调写作质量提升——信息前置、更遵循写作规则，长对话更易读。同期OpenAI发布GPT-6 Sol/Luna并降价，两家都强调效率优化带来的成本下降；Latent Space已将自己的AINews栏目迁移到Opus 5.5生成。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布(Claude Opus 5.5)且讲清楚是什么、为什么重要——价格下调、写作能力提升、基准表现，内容扎实门槛不高"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war",
       "link": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
       "date": "2026-09-22",
@@ -15,7 +66,7 @@
           "reason": "详细拆解Claude Opus 5.5、GPT-6 Sol、GPT-6 Luna三款新模型的定价和性能实测(含pelican测试暴露Opus5.5 max模式的过度思考问题),对日常模型选型直接有参考价值"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -37,7 +88,7 @@
           "reason": "直接触及“AI改造测试这门手艺”的核心——用形式化验证方法自动发现人工难以发现的bug,有具体方法和可复现产出"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -54,7 +105,7 @@
           "reason": "深度访谈,讲清楚Google ERA(自动化科研)系统的原理和AI在气候变化科研中的具体应用案例,门槛不高但内容扎实"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -71,7 +122,7 @@
           "reason": "具体的模型对比实测(Opus5.5 vs Fable5.1移植HAProxy),给出完成时间和成本差异,可作为选型参考"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -88,7 +139,7 @@
           "reason": "小米发布新旗舰开源模型MiMo-V2.6系列,讲清楚训练规模、RL方法和开源计划,属于前沿模型新发布且解释到位"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

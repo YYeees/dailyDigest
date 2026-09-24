@@ -1,6 +1,83 @@
 {
   "items": [
     {
+      "person": "Peter Steinberger",
+      "title": "Huh. There is a catch. https://t.co/fFVtXq8frn",
+      "link": "https://x.com/steipete/status/2102889319849713698",
+      "date": "2026-09-23",
+      "first_seen": "2026-09-24T00:16:56.369855+00:00",
+      "source_type": "x",
+      "summary": "针对某张配图发的简短感慨，提到「有个陷阱」，未展开具体细节。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @AnthropicAI: Claude has discovered a previously unknown enzyme system hidden in the DNA of bacte…",
+      "link": "https://x.com/bcherny/status/2102855820111417543",
+      "date": "2026-09-23",
+      "first_seen": "2026-09-24T00:16:55.170639+00:00",
+      "source_type": "x",
+      "summary": "转推Anthropic官方消息：Claude在噬菌体DNA中发现了此前未知的酵素系统，该酵素基因附近还有其他有意思的发现(推文被截断，具体细节未展开)。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "If you've noticed how fast https://t.co/9A6X5iqpbs and the Desktop app have become in the last few w…",
+      "link": "https://x.com/bcherny/status/2102854267782705648",
+      "date": "2026-09-23",
+      "first_seen": "2026-09-24T00:16:55.170929+00:00",
+      "source_type": "x",
+      "summary": "Anthropic工程博客发文讲claude.ai网页版和Desktop应用最近几周明显变快背后的性能优化技巧，面向做应用提速的工程师。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "So cool to have @allietheicon [from Jev/TypeSafe] be part of our ClawCast on Discord! https://t.co/6…",
+      "link": "https://x.com/steipete/status/2102839395766472969",
+      "date": "2026-09-23",
+      "first_seen": "2026-09-24T00:16:56.370097+00:00",
+      "source_type": "x",
+      "summary": "感谢TypeSafe的成员参加他们Discord上的ClawCast节目，无更多实质内容。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "Next version of OpenClaw uses a decision model to automatically decide between steer or queue.   (La…",
+      "link": "https://x.com/steipete/status/2102667004557832497",
+      "date": "2026-09-23",
+      "first_seen": "2026-09-24T00:16:56.370217+00:00",
+      "source_type": "x",
+      "summary": "OpenClaw下一版本引入决策模型，自动判断是打断当前任务(steer)还是排队(queue)，并支持多种本地/API兼容模型和ONNX变体。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @dsp_: I rarely post about our model launches, but I truly enjoy Claude 5.5 and I am really glad…",
+      "link": "https://x.com/bcherny/status/2102582722053148897",
+      "date": "2026-09-23",
+      "first_seen": "2026-09-24T00:16:55.170996+00:00",
+      "source_type": "x",
+      "summary": "转推同事对Claude5.5发布的正面评价，无更多实质信息。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @RobertJBye: BTW we now support multiple accounts in the Claude mobile app https://t.co/3ki7LSgAo…",
+      "link": "https://x.com/bcherny/status/2102582283781976223",
+      "date": "2026-09-23",
+      "first_seen": "2026-09-24T00:16:55.171060+00:00",
+      "source_type": "x",
+      "summary": "Claude手机应用现已支持多账号切换。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
       "person": "Boris Cherny",
       "title": "I used Opus 5.5 to formally verify the Claude Agent SDK using Lean. A couple short prompts = 16 PRs…",
       "link": "https://x.com/bcherny/status/2102543349102338309",
@@ -9,7 +86,7 @@
       "source_type": "x",
       "summary": "Boris Cherny用Opus 5.5对Claude Agent SDK做形式化验证——用Lean建模,几条简短prompt就产出16个PR,修复了各种bug和竞态条件；他有时会把Lean和TLA+结合起来查数据流、并发和状态管理方面的问题。他认为形式化验证可能是未来找bug(乃至写代码)的新路子。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -20,7 +97,7 @@
       "source_type": "x",
       "summary": "Peter Steinberger升级到macOS 27后ChatGPT桌面端偶发崩溃,他用GPT-6 Astra自主排查定位到根因——libuv库里一个存在了约14年的老bug。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -31,7 +108,7 @@
       "source_type": "x",
       "summary": "转推Thariq Shihipar对Opus 5.5的评价——沟通更清晰、每token更便宜、智能水平接近Fable 5.1,且在各推理强度下都好用(该引用在Simon Willison同日的价格战文章中也有收录)。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -42,7 +119,7 @@
       "source_type": "x",
       "summary": "Boris Cherny用Opus 5.5和Fable 5.1分别把HAProxy从C移植到Rust,两者都通过了几乎全部原有测试,但Opus 5.5用时9.5小时(Fable 5.1为12小时),成本低51%。他表示Opus 5.5已经成为自己最近几周的日常主力模型。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -184,39 +261,6 @@
       "first_seen": "2026-09-17T23:56:56.028354+00:00",
       "source_type": "x",
       "summary": "Boris Cherny宣布Claude Projects功能开始推送，称这是他现在写代码最主要依赖的方式，对新体验感到兴奋。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @felixrieseberg: Today, we're combining Cowork and Chat into one Claude.  You can fire off questi…",
-      "link": "https://x.com/bcherny/status/2100307205019107451",
-      "date": "2026-09-16",
-      "first_seen": "2026-09-17T00:11:00.621041+00:00",
-      "source_type": "x",
-      "summary": "转发同事felixrieseberg的说法，重申Cowork和Chat合并成一个Claude：可以先问个简单问题，再转向认真的工作（与Boris Cherny本人稍早那条公告是同一件事）。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "Also today: Claude Docs, Claude Slides, and Claude Design are in every conversation.  Ask Claude for…",
-      "link": "https://x.com/bcherny/status/2100260544087535639",
-      "date": "2026-09-16",
-      "first_seen": "2026-09-17T00:11:00.621313+00:00",
-      "source_type": "x",
-      "summary": "同一波更新里，Claude Docs、Slides、Design也整合进了所有对话：直接跟Claude要一份演示文稿，就能拿到可打开、编辑、导出成PowerPoint或PDF的文件，文档和设计同理，不用再跳去单独的工具。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "Claude Code showed that AI could do real work, not just answer questions. Developers hand Claude a f…",
-      "link": "https://x.com/bcherny/status/2100259951398789487",
-      "date": "2026-09-16",
-      "first_seen": "2026-09-17T00:11:00.621358+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny（Claude Code团队）宣布Claude Cowork和常规聊天正式合并为一个产品：可以随手问个问题，也可以把整份报告交给Claude处理、合上电脑后它继续跑。目前先向Pro/Max用户逐步开放，后续会持续调优体验。",
       "tier": "medium",
       "is_new": false
     }
