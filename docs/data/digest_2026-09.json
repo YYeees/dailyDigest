@@ -1,6 +1,79 @@
 {
   "items": [
     {
+      "person": "Antithesis",
+      "title": "Free log storage with a time machine",
+      "link": "https://antithesis.com/blog/2026/retrologging/",
+      "date": "2026-09-24",
+      "first_seen": "2026-09-25T00:19:14.036277+00:00",
+      "source_type": "blog",
+      "summary": "Antithesis博客技术文章：介绍\"追溯日志(retrologging)\"——利用其确定性虚拟化平台能精确重放任意测试运行的特性，测试时先不保存详细的debug/trace级日志，只在真发现问题时才通过重放执行路径把日志重建出来；实测显示开启这个特性时测试性能开销约44%，远低于传统持续记录详细日志的91%开销，同时省下大量日志存储成本。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "具体技术方法(确定性重放按需重建日志)加可量化性能数据(44% vs 91%开销)，展示确定性仿真测试基础设施的真实能力，不是空泛的功能介绍"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "OpenClaw deleted around 400k LOC of its own tests without much change in code coverage. Modern model…",
+      "link": "https://x.com/steipete/status/2103147927313199260",
+      "date": "2026-09-24",
+      "first_seen": "2026-09-25T00:19:20.199379+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger分享：OpenClaw删掉了自己代码库里约40万行测试代码，代码覆盖率几乎没受影响——他认为现在的模型有\"逢改必写测试\"的毛病，写了大量没用的测试，提到有个skill帮他解决了这个问题。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "具体经验+可验证的现象(删40万行测试代码覆盖率几乎不变)，直接指出模型测试生成过度问题并提到有skill能缓解，能改变明天怎么干活"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Foundries vs Navigators: Lowering the Cost of Science",
+      "link": "https://www.latent.space/p/foundries-vs-navigators-lowering",
+      "date": "2026-09-24",
+      "first_seen": "2026-09-25T00:19:12.202080+00:00",
+      "source_type": "blog",
+      "summary": "Endura Therapeutics创始人一手分享AI如何改变一线科研：软件工程提速但实验本身(湿实验室验证)仍是瓶颈，\"思考变便宜、动手没变便宜\"；他把生物科技公司的应对分成两类——Foundry靠新技术把测量本身做快，Navigator靠把AI用进日常决策与工具搭建来释放思考红利。他细讲了自己公司里代码分析、内部数据看板、疾病靶点两阶段AI筛选(500个初筛到100个深判)如何被AI提速，核心论点是\"以前是能买就不自建，现在是要自建能塑造你怎么想问题的工具\"。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Endura Therapeutics创始人一手讲AI如何提速一线科研，有具体方法和数字论证，不是宏观叙事"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者一手经历，核心论点\"以前能买就不自建，现在要自建能塑造你怎么想问题的工具\"直接踩中\"护城河在harness不在模型\"和\"认知系统不能外包\"两条正向母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Meta Connect 2026: Muse glasses, voice, video, and Charm",
+      "link": "https://www.latent.space/p/ainews-meta-connect-2026-muse-glasses",
+      "date": "2026-09-24",
+      "first_seen": "2026-09-25T00:19:12.203777+00:00",
+      "source_type": "blog",
+      "summary": "Meta Connect 2026发布会梳理：个人智能体Muse新增语音和实时视频交互，即将上线所有Meta眼镜(唤醒词激活)，新增Muse Mail、Mac端computer use、1500+连接器生态(涵盖购物与生产力应用)；同时发布Ray-Ban Meta Gen 3、首款眼镜形态VR设备(1299美元)、FDA认证助听器眼镜、Muse Charm挂件，并收购语音初创WaveForms AI；Wang预告即将发布\"迄今最强\"新模型但本次未随发布会推出。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿AI产品发布会的完整梳理，讲清楚Meta Muse智能体+硬件战略是什么、为什么重要，不是纯通稿"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "Gemini 3.8 TTS Playground",
       "link": "https://simonwillison.net/2026/Sep/23/gemini-tts-playground/",
@@ -15,7 +88,7 @@
           "reason": "详细介绍Gemini新TTS模型(gemini-3.8-flash-tts)特性、亲自实测的生成速度和成本数据，是扎实且门槛不高的新工具介绍"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ministry of Testing",
@@ -32,7 +105,7 @@
           "reason": "一线测试从业者真实讨论用AI agent验证工作项验收标准的实践与顾虑(输出冗长没人真读、token成本超预期、agent偏爱单元测试而忽视集成/e2e测试、AI理解不了产品决策背后的意图)，直接可指导本职测试工作要不要及如何采用这套流程，给high"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -49,7 +122,7 @@
           "reason": "前沿模型新发布(Claude Opus 5.5)且讲清楚是什么、为什么重要——价格下调、写作能力提升、基准表现，内容扎实门槛不高"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

@@ -2,6 +2,105 @@
   "items": [
     {
       "person": "Peter Steinberger",
+      "title": "Afghanistan is more excited about AI than we are?",
+      "link": "https://x.com/steipete/status/2103150483062014436",
+      "date": "2026-09-24",
+      "first_seen": "2026-09-25T00:19:20.199091+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger感慨\"阿富汗对AI的热情比我们还高\"，未展开说明依据。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "OpenClaw deleted around 400k LOC of its own tests without much change in code coverage. Modern model…",
+      "link": "https://x.com/steipete/status/2103147927313199260",
+      "date": "2026-09-24",
+      "first_seen": "2026-09-25T00:19:20.199379+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger分享：OpenClaw删掉了自己代码库里约40万行测试代码，代码覆盖率几乎没受影响——他认为现在的模型有\"逢改必写测试\"的毛病，写了大量没用的测试，提到有个skill帮他解决了这个问题。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @levie: At Box, we've been testing Opus 5.5 on a variety of complex enterprise knowledge work tas…",
+      "link": "https://x.com/bcherny/status/2102996614919094693",
+      "date": "2026-09-24",
+      "first_seen": "2026-09-25T00:19:18.928373+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny转发Box高管的说法：他们在多种复杂企业知识工作任务上测试了Opus 5.5，处理非结构化数据效果不错。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @OmidMogasemi: Projects now support using your local device! Have been using this a ton to let Cl…",
+      "link": "https://x.com/bcherny/status/2102996496732000278",
+      "date": "2026-09-24",
+      "first_seen": "2026-09-25T00:19:18.928679+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny转发：Claude Projects现已支持调用本地设备，能让Claude拉取本地预览构建等，属实操功能更新。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "Who needs VNC when there's browsers. https://t.co/3BneKDTzMW",
+      "link": "https://x.com/steipete/status/2102990776439636089",
+      "date": "2026-09-24",
+      "first_seen": "2026-09-25T00:19:20.199443+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger调侃：与其用VNC，不如直接用浏览器操控agent，一句吐槽未展开。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "When I added vnc support I didn't think of this. 🙃",
+      "link": "https://x.com/steipete/status/2102987769589186661",
+      "date": "2026-09-24",
+      "first_seen": "2026-09-25T00:19:20.199473+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger感叹自己当初给产品加VNC支持时没想到网友会这么用，具体是什么玩法没说清楚。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "Shall we call this the agent wars? We'll see a lot more of that soon on all fronts.",
+      "link": "https://x.com/steipete/status/2102982942037573868",
+      "date": "2026-09-24",
+      "first_seen": "2026-09-25T00:19:20.199497+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger感慨\"agent大战\"要开打，预计各方会有更多agent产品动作，没有展开具体依据。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "It was an honor to meet Donald Knuth at the Computer History Museum today https://t.co/U6bGOidLmw",
+      "link": "https://x.com/bcherny/status/2102971275543216623",
+      "date": "2026-09-24",
+      "first_seen": "2026-09-25T00:19:18.928717+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny记录自己在Computer History Museum与Donald Knuth会面，纯个人轶事，无更多细节。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @ClaudeDevs: Cloud sessions are officially available and out of research preview! They let you ke…",
+      "link": "https://x.com/bcherny/status/2102925295812780412",
+      "date": "2026-09-24",
+      "first_seen": "2026-09-25T00:19:18.928745+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny转发：Claude Code的云端会话(Cloud sessions)正式从研究预览转为全量可用，可以让Claude Code在断开本地连接后继续在云端执行任务。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
       "title": "Huh. There is a catch. https://t.co/fFVtXq8frn",
       "link": "https://x.com/steipete/status/2102889319849713698",
       "date": "2026-09-23",
@@ -9,7 +108,7 @@
       "source_type": "x",
       "summary": "针对某张配图发的简短感慨，提到「有个陷阱」，未展开具体细节。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -20,7 +119,7 @@
       "source_type": "x",
       "summary": "转推Anthropic官方消息：Claude在噬菌体DNA中发现了此前未知的酵素系统，该酵素基因附近还有其他有意思的发现(推文被截断，具体细节未展开)。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -31,7 +130,7 @@
       "source_type": "x",
       "summary": "Anthropic工程博客发文讲claude.ai网页版和Desktop应用最近几周明显变快背后的性能优化技巧，面向做应用提速的工程师。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -42,7 +141,7 @@
       "source_type": "x",
       "summary": "感谢TypeSafe的成员参加他们Discord上的ClawCast节目，无更多实质内容。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -53,7 +152,7 @@
       "source_type": "x",
       "summary": "OpenClaw下一版本引入决策模型，自动判断是打断当前任务(steer)还是排队(queue)，并支持多种本地/API兼容模型和ONNX变体。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -64,7 +163,7 @@
       "source_type": "x",
       "summary": "转推同事对Claude5.5发布的正面评价，无更多实质信息。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -75,7 +174,7 @@
       "source_type": "x",
       "summary": "Claude手机应用现已支持多账号切换。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -229,39 +328,6 @@
       "source_type": "x",
       "summary": "感慨agents加开源工具的组合正被越来越多人发现，属于一句话式的观察，没有展开细节。",
       "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @emollick: What makes Claude Projects so interesting is that it handles teams of agents really we…",
-      "link": "https://x.com/bcherny/status/2100682621093347571",
-      "date": "2026-09-17",
-      "first_seen": "2026-09-17T23:56:56.028075+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny转发Ethan Mollick的观点：Claude Projects的亮点在于能很好地统筹一组agent协作，用户只需和一个主协调agent对话。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "Projects have changed not only how I interact with Claude but how I code.  I stopped managing sessio…",
-      "link": "https://x.com/bcherny/status/2100669598995816511",
-      "date": "2026-09-17",
-      "first_seen": "2026-09-17T23:56:56.028327+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny分享Claude Projects如何改变了他的编码方式：不再手动管理会话，而是随时把想法发给Claude，由它自动拆分成不同工作线程，项目会记住他的工作习惯，现在他大部分代码工作都在这里完成。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "Projects are how I write a lot of my code these days. Really excited for everyone to try the new exp…",
-      "link": "https://x.com/bcherny/status/2100639991244427490",
-      "date": "2026-09-17",
-      "first_seen": "2026-09-17T23:56:56.028354+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny宣布Claude Projects功能开始推送，称这是他现在写代码最主要依赖的方式，对新体验感到兴奋。",
-      "tier": "medium",
       "is_new": false
     }
   ]
