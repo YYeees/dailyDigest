@@ -2,6 +2,61 @@
   "items": [
     {
       "person": "Peter Steinberger",
+      "title": "day of the dead",
+      "link": "https://x.com/steipete/status/2103615459426001163",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:34.575568+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger发的一句极简推文“day of the dead”（亡灵节），没有配文说明具体指什么，缺乏上下文，可能是个梗或隐喻。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @trq212: What is effort really? When do you change it it and why not just use max effort for ever…",
+      "link": "https://x.com/bcherny/status/2103593008331678000",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:33.402807+00:00",
+      "source_type": "x",
+      "summary": "转发的推文探讨“effort（努力程度）”参数到底是什么、什么时候该调整它、为什么不能所有场景都直接用最高档，作者说自己深入研究了这个问题，但推文本身被截断，未展开完整论证。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @ClaudeDevs: Claude Code will now try to find a graceful stopping point when you hit your 5-hour…",
+      "link": "https://x.com/bcherny/status/2103592968557076636",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:33.403063+00:00",
+      "source_type": "x",
+      "summary": "转发消息称Claude Code现在会在用户触及5小时用量上限时，尝试找一个任务的自然停顿点收尾，而不是生硬地在任务中途被切断。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "That sounds 100% like the OC hype cycle we had 8 months ago.  Biggest limitation isn’t the tech, it’…",
+      "link": "https://x.com/steipete/status/2103580623239827941",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:34.575807+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger评论说这波炒作跟8个月前的那轮炒作周期一模一样：技术本身不是最大的限制，真正的瓶颈是想象力和创造力。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "Tag writes >50% of my PRs every day. It also does ~100% of my data analysis, and fixes most of our p…",
+      "link": "https://x.com/bcherny/status/2103538666597691552",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:33.403121+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny分享他在Slack里用Claude（内部代号Tag）的日常用法：每天写他一半以上的PR、几乎全部数据分析、修复大部分产品反馈和bug。它不是普通的Slack机器人，而是主动的、可编程、有记忆、能接连接器。他给了几个示例prompt：让它对已解决的帖子自动打勾、让它端到端复现频道里报的每个bug再提PR修复并通知对应团队review、让它对着异常数据头脑风暴上百个假设并用workflow验证、或者让它做交互式讲解游戏和讲解PPT。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
       "title": "Afghanistan is more excited about AI than we are?",
       "link": "https://x.com/steipete/status/2103150483062014436",
       "date": "2026-09-24",
@@ -9,7 +64,7 @@
       "source_type": "x",
       "summary": "Peter Steinberger感慨\"阿富汗对AI的热情比我们还高\"，未展开说明依据。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -20,7 +75,7 @@
       "source_type": "x",
       "summary": "Peter Steinberger分享：OpenClaw删掉了自己代码库里约40万行测试代码，代码覆盖率几乎没受影响——他认为现在的模型有\"逢改必写测试\"的毛病，写了大量没用的测试，提到有个skill帮他解决了这个问题。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -31,7 +86,7 @@
       "source_type": "x",
       "summary": "Boris Cherny转发Box高管的说法：他们在多种复杂企业知识工作任务上测试了Opus 5.5，处理非结构化数据效果不错。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -42,7 +97,7 @@
       "source_type": "x",
       "summary": "Boris Cherny转发：Claude Projects现已支持调用本地设备，能让Claude拉取本地预览构建等，属实操功能更新。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -53,7 +108,7 @@
       "source_type": "x",
       "summary": "Peter Steinberger调侃：与其用VNC，不如直接用浏览器操控agent，一句吐槽未展开。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -64,7 +119,7 @@
       "source_type": "x",
       "summary": "Peter Steinberger感叹自己当初给产品加VNC支持时没想到网友会这么用，具体是什么玩法没说清楚。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -75,7 +130,7 @@
       "source_type": "x",
       "summary": "Peter Steinberger感慨\"agent大战\"要开打，预计各方会有更多agent产品动作，没有展开具体依据。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -86,7 +141,7 @@
       "source_type": "x",
       "summary": "Boris Cherny记录自己在Computer History Museum与Donald Knuth会面，纯个人轶事，无更多细节。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -97,7 +152,7 @@
       "source_type": "x",
       "summary": "Boris Cherny转发：Claude Code的云端会话(Cloud sessions)正式从研究预览转为全量可用，可以让Claude Code在断开本地连接后继续在云端执行任务。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -294,39 +349,6 @@
       "first_seen": "2026-09-19T23:56:50.323470+00:00",
       "source_type": "x",
       "summary": "对某件事（配图未知，具体所指不明）表达终于解脱了的情绪，内容过短无法判断具体指向。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @trq212: We're adding support for AGENTS.md to Claude Code.   Starting today in version 2.1.277,…",
-      "link": "https://x.com/bcherny/status/2101014069608395196",
-      "date": "2026-09-18",
-      "first_seen": "2026-09-18T23:55:51.324346+00:00",
-      "source_type": "x",
-      "summary": "转发通知Claude Code从2.1.277版本起支持AGENTS.md：文件夹里没有CLAUDE.md时会自动改用AGENTS.md，这是即将推出的harness自定义mod体系里内置的一个例子。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Collaborating on a session is so good. Even see what someone's typing to prevent sending the same to…",
-      "link": "https://x.com/steipete/status/2100989842691871142",
-      "date": "2026-09-18",
-      "first_seen": "2026-09-18T23:55:53.308125+00:00",
-      "source_type": "x",
-      "summary": "描述一种协作会话体验：能实时看到对方正在输入的内容，从而避免重复发送同样的消息给agent。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "love how more and more people discover the awesome combination of agents + oss!",
-      "link": "https://x.com/steipete/status/2100984203588616208",
-      "date": "2026-09-18",
-      "first_seen": "2026-09-18T23:55:53.308183+00:00",
-      "source_type": "x",
-      "summary": "感慨agents加开源工具的组合正被越来越多人发现，属于一句话式的观察，没有展开细节。",
       "tier": "low",
       "is_new": false
     }

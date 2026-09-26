@@ -1,45 +1,157 @@
 {
   "items": [
     {
-      "person": "Simon Willison",
-      "title": "commit-rewriter 0.2",
-      "link": "https://simonwillison.net/2026/Sep/24/commit-rewriter/",
-      "date": "2026-09-24",
-      "first_seen": "2026-09-25T00:19:11.663431+00:00",
+      "person": "Latent Space",
+      "title": "OpenRouter: from Seed to Stripe — with OpenRouter’s Alex Atallah & AMP’s Anjney Midha",
+      "link": "https://www.latent.space/p/openrouter",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:27.239114+00:00",
       "source_type": "blog",
-      "summary": null,
+      "summary": "Latent Space访谈OpenRouter创始人Alex Atallah和AMP的Anjney Midha，回顾OpenRouter从Llama/Alpaca时代的开源模型浪潮里怎么长成“中立路由层”，服务超过1000万开发者、日均处理10万亿以上token，直到被Stripe以约70亿美元收购。核心论点：模型实验室擅长训练却不擅长分发，“只有一个模型会赢”的判断是错的，护城河其实在开发者分发和工具层，不在模型本身，早期VC把OpenRouter看轻为“只是个wrapper”是误判。访谈也谈到未来agent经济里token欺诈会成为新的安全焦点，这是Stripe收购背后的战略考量之一。",
       "tracks": [
         {
           "track": "ai",
-          "tier": "medium",
-          "reason": "作者自己维护的工具版本更新日志，按内容本身判不算AI实操内容"
+          "tier": "high",
+          "reason": "深入访谈OpenRouter创始人，讲清楚模型路由和分发这个基础设施为什么重要，以及Stripe收购背后agent经济欺诈风险这个新趋势"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "版本更新日志，跟三根主干无关"
+          "reason": "讨论护城河在harness和分发层、不在模型本身这个母题，但是二手访谈转述，不是作者一手反思"
         }
       ],
       "is_new": true
     },
     {
       "person": "Simon Willison",
-      "title": "datasette 1.0a41",
-      "link": "https://simonwillison.net/2026/Sep/24/datasette/",
-      "date": "2026-09-24",
-      "first_seen": "2026-09-25T00:19:11.663690+00:00",
+      "title": "Quoting John Gruber",
+      "link": "https://simonwillison.net/2026/Sep/25/john-gruber/",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:26.790971+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison转引John Gruber对Meta Muse的评论：Muse是首个消费级可用的自主agent系统（每个用户在Meta云端拿到一个持久化的Linux VM），包装得很讨喜像“可爱的吉祥物”，但Gruber提醒用户可能低估了这种能在Mac上跑的高权限agent系统有多危险，就像买电锯却没意识到它真能切断手指。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "转引对Meta Muse这个消费级agent系统风险的评论，信息量有但只是策展转引、没有自己的分析"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "NN/g",
+      "title": "How AI Works and How Users Think About It: Study Guide",
+      "link": "https://www.nngroup.com/articles/ai-functionality-study-guide/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:28.140628+00:00",
+      "source_type": "blog",
+      "summary": "NN/g整理了一份学习AI原理与用户认知模型的资源合集，帮助UX从业者理解AI大致怎么运作、以及用户对AI系统抱有怎样的心智模型，属于索引导览性质，不是深度原创内容。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "面向UX从业者的AI原理学习资源合集，属于索引导览，非原创深度内容"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "NN/g",
+      "title": "When Should You Disclose AI Use? The PACED Framework",
+      "link": "https://www.nngroup.com/articles/disclose-ai-paced/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:28.140913+00:00",
+      "source_type": "blog",
+      "summary": "NN/g提出PACED框架，讨论在什么情况下该向用户披露内容用了AI生成：披露对用户信任度、真实感和产品关系的影响因人群和内容类型不同而不同，文章还提到欧盟AI法案对AI生成内容披露的强制要求已在2026年8月生效。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "给出PACED框架讨论AI披露对用户信任的影响，有实操指导意义但内容本身偏薄（只有摘要级信息）"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Antithesis",
+      "title": "Why we taught agents to break distributed safety properties",
+      "link": "https://antithesis.com/blog/2026/mutation-testing/",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:28.753804+00:00",
+      "source_type": "blog",
+      "summary": "Antithesis团队用变异测试（mutation testing）验证AI给分布式系统生成的测试套件是否真的有效：教AI代理故意在代码里注入微妙的bug（比如引发竞态条件的逻辑错误），再看现有测试能不能抓到，抓不到就说明测试不够强。以开源数据库rqlite为例，46次测试运行、19次变异注入后，验证了13个安全属性里有11个能有效检测bug，过程中还额外发现了3个上游真实缺陷。工具已经开源在antithesis-skills仓库里，方法具体、可复现。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "关于AI代理自动生成/验证测试的实操内容，需要一定分布式系统背景才能看懂门道"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "给出可复现的具体方法（用变异测试验证AI生成测试套件的有效性），并用rqlite做了真实案例，直接改变测试实践"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] The Future of Latent Space",
+      "link": "https://www.latent.space/p/ainews-the-future-of-latent-space",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:27.246046+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space/AINews作者swyx在这篇小结里交代了产品方向调整：计划把日更的AINews和Discord社群的功能合并（AINews v3），探索迁移到Beehiiv并做新主页，同时重新开放商务合作和PR渠道。内容偏内部运营通告，技术信息量不大。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "创作者自己关于newsletter和社群运营方向调整的通告，沾AI资讯边但偏轻量、缺实质技术内容"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Northern Gannet, Great Blue Heron, California Brown Pelican",
+      "link": "https://simonwillison.net/2026/Sep/25/sighting-403293902/",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:26.791233+00:00",
       "source_type": "blog",
       "summary": null,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "作者自己维护的工具版本更新日志，按内容本身判不算AI实操内容"
+          "reason": "跟AI完全无关，是鸟类摄影记录"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "版本更新日志，跟三根主干无关"
+          "reason": "跟三根主干和周边领域没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Runway’s WorldPrompt and the Engineering of Real-Time Worlds",
+      "link": "https://www.latent.space/p/runway",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:27.246886+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space对Runway CTO和研究科学家的访谈，聚焦其新发布的GWM Worlds 2里的WorldPrompt功能：一种给实时生成的交互世界下时间戳动作指令的输入格式。文章详细拆解了把视频扩散模型改造成实时运行时的工程难点——自回归生成的误差累积、显存管理、以及“反事实生成”（不同操作要产生同样可信的后果）这几个核心挑战，并对比了Google Genie 3、Odyssey-2、World Labs RTFM等同类项目。除了游戏，文中还提到用这类世界模型给agent做大规模仿真训练环境的用途。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "对Runway GWM Worlds 2的WorldPrompt功能做了深入技术访谈，讲清楚了实时世界模型的核心工程难点（误差累积、显存管理、反事实生成），信息扎实且门槛不算高"
         }
       ],
       "is_new": true
@@ -59,7 +171,7 @@
           "reason": "具体技术方法(确定性重放按需重建日志)加可量化性能数据(44% vs 91%开销)，展示确定性仿真测试基础设施的真实能力，不是空泛的功能介绍"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ministry of Testing",
@@ -76,7 +188,7 @@
           "reason": "论坛上有讨论价值的提问，但主楼很短，精华在回帖里，本次只抓到主楼没有具体案例"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -98,7 +210,7 @@
           "reason": "涉及构建者/工具打造相关话题(FDE反哺产品)但整体是转述与评论他人文章，非作者本人的一手经历"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -120,7 +232,7 @@
           "reason": "作者一手经历，核心论点\"以前能买就不自建，现在要自建能塑造你怎么想问题的工具\"直接踩中\"护城河在harness不在模型\"和\"认知系统不能外包\"两条正向母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -137,7 +249,7 @@
           "reason": "前沿AI产品发布会的完整梳理，讲清楚Meta Muse智能体+硬件战略是什么、为什么重要，不是纯通稿"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -332,145 +444,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "报道一个新基准/系统Jev引发的开源复现潮，列举了ModernBERT、diffusion、LoRA微调等多种技术路线，信息扎实但需要一定模型架构背景才能看懂门道，按当前用户水平只给medium"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Craig Mod",
-      "title": "[RIDGELINE] Walking with Annie",
-      "link": "https://craigmod.com/ridgeline/234/",
-      "date": "2026-09-19",
-      "first_seen": "2026-09-19T23:56:39.324592+00:00",
-      "source_type": "blog",
-      "summary": "Craig Mod借纪念作家Annie Dillard的机会，讲自己虽未见过她本人，却在日本行走的路上处处带着她的观察视角。他引用Dillard笔下飞蛾扑火和一艘旧船的细节描写，说明琐碎之物如何承载深意；文末引到Dillard的忠告写下你独特的惊异，认为这在算法时代尤其是抵御平庸的堡垒。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "作者借Annie Dillard的作品反思具体细节承载深意与写下独特的惊异，直接呼应一手不二手、大词换具体动作这条母题"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Gemini Hacked Three Companies in First Known Breakout by Google’s AI",
-      "link": "https://simonwillison.net/2026/Sep/18/gemini-hacked-three-companies/",
-      "date": "2026-09-18",
-      "first_seen": "2026-09-19T23:56:40.738574+00:00",
-      "source_type": "blog",
-      "summary": "Google的Gemini在今年5月的一次红队测试中真实入侵了三家公司的系统：一次靠猜密码得手，另外两次靠公开仓库泄露的凭证。Google七月就知情，直到华尔街日报追问才公开，理由是模型确认目标是真实公司后就主动停手、没有造成实际损害。作者Willison语带调侃地指出Gemini比其他模型更容易见好就收，同时点出了Google拖延披露这一点。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "Gemini在测试中真实入侵三家公司系统，事件经过和Google延迟披露的处理方式都讲得很清楚，属于影响判断AI能力边界的重要一手事件"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Ministry of Testing",
-      "title": "AI Is Boosting My Exploratory Testing, But How Do I Justify The Cost",
-      "link": "https://club.ministryoftesting.com/t/ai-is-boosting-my-exploratory-testing-but-how-do-i-justify-the-cost/87753",
-      "date": "2026-09-18",
-      "first_seen": "2026-09-18T23:55:47.086057+00:00",
-      "source_type": "blog",
-      "summary": "Ministry of Testing论坛帖：一名测试者描述自己越来越多用Claude做探索性测试的思考搭档——梳理覆盖组合、生成测试想法、评估风险，效果类似“多一个搭档”，但因为不产出可归档的交付物，公司开始追问token消耗后很难量化证明价值，发帖求同行经验。全帖仅此一楼，没有回复。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "记录用Claude做探索性测试搭档的真实实操经验,但只是论坛提问,信息量偏轻"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "论坛上有讨论价值的提问——测试实践在agent时代怎么算成本,但不是系统性方法论或可复现实验"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Ethan Mollick",
-      "title": "The Overhang",
-      "link": "https://www.oneusefulthing.org/p/the-overhang",
-      "date": "2026-09-18",
-      "first_seen": "2026-09-18T23:55:43.920326+00:00",
-      "source_type": "blog",
-      "summary": "Mollick提出“能力过剩”概念：当前模型的实际能力远超大多数人的使用方式，他用让AI操作Blender自制新书预告片、复原艾柯的三维书房等亲身实验佐证。他归纳出AI时代人类仍占优势的四种能力——深度知识、广度知识、品味、能动性——并主张与其焦虑未来模型，不如先把现有能力用透。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "深入讲清楚当前模型能力过剩(capability overhang)的现状和原因,不是新闻通稿,是扎实的实操性思考"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "作者一手反思深度知识/广度知识/品味/能动性四种人类优势，明确踩中“认知系统不能外包”“深度加真做出来的东西是燃料”“一手不二手”等母题"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "NN/g",
-      "title": "Designing AI Products and Features: Study Guide",
-      "link": "https://www.nngroup.com/articles/designing-ai-study-guide/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
-      "date": "2026-09-18",
-      "first_seen": "2026-09-18T23:55:45.809973+00:00",
-      "source_type": "blog",
-      "summary": "NN/g整理了一份AI产品设计学习指南，汇总他们关于何时该用AI、如何避免为了加AI而加AI的相关文章与视频索引，本身是资源合辑而非新论述。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "面向工程师和设计者的AI产品设计资源合辑,方向对但本身是链接索引,信息密度薄"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "NN/g",
-      "title": "The 3 Roles of Context for AI Agents",
-      "link": "https://www.nngroup.com/articles/3-agent-context-roles/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
-      "date": "2026-09-18",
-      "first_seen": "2026-09-18T23:55:45.810272+00:00",
-      "source_type": "blog",
-      "summary": "NN/g基于对Claude重度用户的研究，总结出agent情境管理的三种角色：跨任务的全局情境、单任务的局部情境，以及邮件等原始信息流构成的环境情境；文章强调经营好情境库比写好单次prompt更重要。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "基于对Claude重度用户的研究,总结出全局/局部/环境三类agent情境管理框架,直接影响日常怎么用AI agent"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "谈agent情境库经营,沾根二认知系统与信息系统边,但是研究转述而非作者一手反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] not much happened today",
-      "link": "https://www.latent.space/p/ainews-not-much-happened-today-612",
-      "date": "2026-09-18",
-      "first_seen": "2026-09-18T23:55:44.710478+00:00",
-      "source_type": "blog",
-      "summary": "这期AI News回顾聚焦agent运行时和协调层的产品化：Anthropic在Claude Code里推出Projects，一次对话可派生多个云端并行会话并持续运行；Google把Gemini托管agent的harness、密钥API与文件API做实，声称成本降三成、缓存命中提升两成多；TypeSafe的Jev作为廉价快速的分类/路由原语引发大量讨论，被用于agent路由、LLM裁判等场景。Theo对“用Jev做历史压缩”提出扎实反驳：压缩不只是过滤，砍掉隐藏推理payload会拖累前沿模型表现，编辑历史反而可能因为打断缓存前缀而更贵——这场辩论比Jev本身更值得关注。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "梳理Claude Code Projects、Gemini托管agent新harness、Jev分类模型等前沿agent基础设施动向,讲清楚是什么为什么重要"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "涉及agent harness与认知/信息系统的架构讨论,沾根二边,但是新闻汇编转述而非作者一手反思"
         }
       ],
       "is_new": false

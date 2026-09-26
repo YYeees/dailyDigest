@@ -1,6 +1,91 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "OpenRouter: from Seed to Stripe — with OpenRouter’s Alex Atallah & AMP’s Anjney Midha",
+      "link": "https://www.latent.space/p/openrouter",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:27.239114+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space访谈OpenRouter创始人Alex Atallah和AMP的Anjney Midha，回顾OpenRouter从Llama/Alpaca时代的开源模型浪潮里怎么长成“中立路由层”，服务超过1000万开发者、日均处理10万亿以上token，直到被Stripe以约70亿美元收购。核心论点：模型实验室擅长训练却不擅长分发，“只有一个模型会赢”的判断是错的，护城河其实在开发者分发和工具层，不在模型本身，早期VC把OpenRouter看轻为“只是个wrapper”是误判。访谈也谈到未来agent经济里token欺诈会成为新的安全焦点，这是Stripe收购背后的战略考量之一。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入访谈OpenRouter创始人，讲清楚模型路由和分发这个基础设施为什么重要，以及Stripe收购背后agent经济欺诈风险这个新趋势"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @ClaudeDevs: Claude Code will now try to find a graceful stopping point when you hit your 5-hour…",
+      "link": "https://x.com/bcherny/status/2103592968557076636",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:33.403063+00:00",
+      "source_type": "x",
+      "summary": "转发消息称Claude Code现在会在用户触及5小时用量上限时，尝试找一个任务的自然停顿点收尾，而不是生硬地在任务中途被切断。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Claude Code新增在5小时用量上限时寻找优雅停止点的行为变化，直接影响日常怎么用这个工具"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "Tag writes >50% of my PRs every day. It also does ~100% of my data analysis, and fixes most of our p…",
+      "link": "https://x.com/bcherny/status/2103538666597691552",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:33.403121+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny分享他在Slack里用Claude（内部代号Tag）的日常用法：每天写他一半以上的PR、几乎全部数据分析、修复大部分产品反馈和bug。它不是普通的Slack机器人，而是主动的、可编程、有记忆、能接连接器。他给了几个示例prompt：让它对已解决的帖子自动打勾、让它端到端复现频道里报的每个bug再提PR修复并通知对应团队review、让它对着异常数据头脑风暴上百个假设并用workflow验证、或者让它做交互式讲解游戏和讲解PPT。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Anthropic内部工程师分享用Claude自动化日常工作的具体示例prompt，直接影响日常怎么用AI工具，实操性强"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Antithesis",
+      "title": "Why we taught agents to break distributed safety properties",
+      "link": "https://antithesis.com/blog/2026/mutation-testing/",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:28.753804+00:00",
+      "source_type": "blog",
+      "summary": "Antithesis团队用变异测试（mutation testing）验证AI给分布式系统生成的测试套件是否真的有效：教AI代理故意在代码里注入微妙的bug（比如引发竞态条件的逻辑错误），再看现有测试能不能抓到，抓不到就说明测试不够强。以开源数据库rqlite为例，46次测试运行、19次变异注入后，验证了13个安全属性里有11个能有效检测bug，过程中还额外发现了3个上游真实缺陷。工具已经开源在antithesis-skills仓库里，方法具体、可复现。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "给出可复现的具体方法（用变异测试验证AI生成测试套件的有效性），并用rqlite做了真实案例，直接改变测试实践"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Runway’s WorldPrompt and the Engineering of Real-Time Worlds",
+      "link": "https://www.latent.space/p/runway",
+      "date": "2026-09-25",
+      "first_seen": "2026-09-26T00:24:27.246886+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space对Runway CTO和研究科学家的访谈，聚焦其新发布的GWM Worlds 2里的WorldPrompt功能：一种给实时生成的交互世界下时间戳动作指令的输入格式。文章详细拆解了把视频扩散模型改造成实时运行时的工程难点——自回归生成的误差累积、显存管理、以及“反事实生成”（不同操作要产生同样可信的后果）这几个核心挑战，并对比了Google Genie 3、Odyssey-2、World Labs RTFM等同类项目。除了游戏，文中还提到用这类世界模型给agent做大规模仿真训练环境的用途。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "对Runway GWM Worlds 2的WorldPrompt功能做了深入技术访谈，讲清楚了实时世界模型的核心工程难点（误差累积、显存管理、反事实生成），信息扎实且门槛不算高"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Antithesis",
       "title": "Free log storage with a time machine",
       "link": "https://antithesis.com/blog/2026/retrologging/",
@@ -15,7 +100,7 @@
           "reason": "具体技术方法(确定性重放按需重建日志)加可量化性能数据(44% vs 91%开销)，展示确定性仿真测试基础设施的真实能力，不是空泛的功能介绍"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -32,7 +117,7 @@
           "reason": "具体经验+可验证的现象(删40万行测试代码覆盖率几乎不变)，直接指出模型测试生成过度问题并提到有skill能缓解，能改变明天怎么干活"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -54,7 +139,7 @@
           "reason": "作者一手经历，核心论点\"以前能买就不自建，现在要自建能塑造你怎么想问题的工具\"直接踩中\"护城河在harness不在模型\"和\"认知系统不能外包\"两条正向母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -71,7 +156,7 @@
           "reason": "前沿AI产品发布会的完整梳理，讲清楚Meta Muse智能体+硬件战略是什么、为什么重要，不是纯通稿"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
