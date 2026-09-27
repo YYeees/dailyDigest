@@ -2,6 +2,50 @@
   "items": [
     {
       "person": "Peter Steinberger",
+      "title": "Now I see why some people talk about AGI. This is so clever!",
+      "link": "https://x.com/steipete/status/2103883264054505493",
+      "date": "2026-09-26",
+      "first_seen": "2026-09-27T00:19:52.586219+00:00",
+      "source_type": "x",
+      "summary": "对某个AI能力或演示的惊叹，认为其聪明到让人理解为何有人在谈论AGI，但未说明具体是什么内容。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "Can’t wait to see what you build.",
+      "link": "https://x.com/bcherny/status/2103691327699550598",
+      "date": "2026-09-26",
+      "first_seen": "2026-09-27T00:19:51.082696+00:00",
+      "source_type": "x",
+      "summary": "对某个新发布或活动表达期待，鼓励大家动手创造，未透露具体信息。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "keep thinking",
+      "link": "https://x.com/steipete/status/2103654562523705675",
+      "date": "2026-09-26",
+      "first_seen": "2026-09-27T00:19:52.586426+00:00",
+      "source_type": "x",
+      "summary": "一句简短的自我提醒——继续思考，未展开具体内容。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "The biggest design mistake I made when we moved OC to sqlite: using sync db access. When it was just…",
+      "link": "https://x.com/steipete/status/2103648679169257737",
+      "date": "2026-09-26",
+      "first_seen": "2026-09-27T00:19:52.586457+00:00",
+      "source_type": "x",
+      "summary": "Steinberger反思OpenClaw从同步数据库访问迁移到sqlite时踩的坑：单agent场景下同步访问没问题，但团队并行跑50个session后就成了瓶颈；目前已通过575个PR逐步把系统迁移到异步worker架构，即使是大重构现在也不再可怕。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
       "title": "day of the dead",
       "link": "https://x.com/steipete/status/2103615459426001163",
       "date": "2026-09-25",
@@ -9,7 +53,7 @@
       "source_type": "x",
       "summary": "Peter Steinberger发的一句极简推文“day of the dead”（亡灵节），没有配文说明具体指什么，缺乏上下文，可能是个梗或隐喻。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -20,7 +64,7 @@
       "source_type": "x",
       "summary": "转发的推文探讨“effort（努力程度）”参数到底是什么、什么时候该调整它、为什么不能所有场景都直接用最高档，作者说自己深入研究了这个问题，但推文本身被截断，未展开完整论证。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -31,7 +75,7 @@
       "source_type": "x",
       "summary": "转发消息称Claude Code现在会在用户触及5小时用量上限时，尝试找一个任务的自然停顿点收尾，而不是生硬地在任务中途被切断。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -42,7 +86,7 @@
       "source_type": "x",
       "summary": "Peter Steinberger评论说这波炒作跟8个月前的那轮炒作周期一模一样：技术本身不是最大的限制，真正的瓶颈是想象力和创造力。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -53,7 +97,7 @@
       "source_type": "x",
       "summary": "Boris Cherny分享他在Slack里用Claude（内部代号Tag）的日常用法：每天写他一半以上的PR、几乎全部数据分析、修复大部分产品反馈和bug。它不是普通的Slack机器人，而是主动的、可编程、有记忆、能接连接器。他给了几个示例prompt：让它对已解决的帖子自动打勾、让它端到端复现频道里报的每个bug再提PR修复并通知对应团队review、让它对着异常数据头脑风暴上百个假设并用workflow验证、或者让它做交互式讲解游戏和讲解PPT。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -305,50 +349,6 @@
       "first_seen": "2026-09-20T23:54:57.013148+00:00",
       "source_type": "x",
       "summary": "发布了一个新的基准测试，具体内容和数据未在文字中说明(附图未能解析)。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "The coolest part: roboclaw runs our team server, is live on Discord, talks with gpt-live and knows a…",
-      "link": "https://x.com/steipete/status/2101141707375227372",
-      "date": "2026-09-19",
-      "first_seen": "2026-09-19T23:56:50.323127+00:00",
-      "source_type": "x",
-      "summary": "介绍团队内部工具roboclaw：常驻团队服务器、在Discord上在线、能对接gpt-live语音，还能记住团队正在处理的所有session。作者提到开会时可以直接问它当前和历史session的上下文，省去自己回忆的功夫。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Love having @vhbrzezowski hijacking my sessions and desloping them before the PR lands.  Also hot ti…",
-      "link": "https://x.com/steipete/status/2101139037801283997",
-      "date": "2026-09-19",
-      "first_seen": "2026-09-19T23:56:50.323387+00:00",
-      "source_type": "x",
-      "summary": "分享两条工作流心得：一是喜欢让同事在PR落地前替自己的AI会话去slop化；二是提示可以打开侧边栏，直接让agent帮你把一堆session重新整理归类。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Just landed a new feature, in the latest OC you can now ask your agent “Run this [web app] in crabbo…",
-      "link": "https://x.com/steipete/status/2101114996629570013",
-      "date": "2026-09-19",
-      "first_seen": "2026-09-19T23:56:50.323420+00:00",
-      "source_type": "x",
-      "summary": "OpenClaw新增功能：可以直接让agent把某个网页应用跑进crabbox沙盒，并给出vnc或portal方式查看。这个能力此前只支持云端session，现在本地session一样能用，解决了本地开发中途需要一个盒子来测试的痛点。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "good riddance. https://t.co/veGiNxvCJZ",
-      "link": "https://x.com/steipete/status/2101113900632772732",
-      "date": "2026-09-19",
-      "first_seen": "2026-09-19T23:56:50.323470+00:00",
-      "source_type": "x",
-      "summary": "对某件事（配图未知，具体所指不明）表达终于解脱了的情绪，内容过短无法判断具体指向。",
       "tier": "low",
       "is_new": false
     }

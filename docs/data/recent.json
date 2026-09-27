@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "Kākāpō Party",
+      "link": "https://simonwillison.net/2026/Sep/26/kakapo-party/",
+      "date": "2026-09-26",
+      "first_seen": "2026-09-27T00:19:42.993775+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison用Claude Opus 5.5根据鹦鹉照片生成像素艺术动画代码，再用Claude Code调用Playwright录制浏览器交互过程做出15秒视频，用作大会闭幕演讲素材，展示了'提示生成代码→agent自动化产出成片'的组合工作流。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "演示了用Claude Opus 5.5根据照片生成像素艺术动画、再用Claude Code调用Playwright录制成视频的完整AI工具组合工作流，实操性强但偏演示/娱乐性质，不算系统性技能教学"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "只是一次技术演示记录，未触及三根主干或周边领域的实质内容"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "OpenRouter: from Seed to Stripe — with OpenRouter’s Alex Atallah & AMP’s Anjney Midha",
       "link": "https://www.latent.space/p/openrouter",
@@ -20,29 +42,7 @@
           "reason": "讨论护城河在harness和分发层、不在模型本身这个母题，但是二手访谈转述，不是作者一手反思"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting John Gruber",
-      "link": "https://simonwillison.net/2026/Sep/25/john-gruber/",
-      "date": "2026-09-25",
-      "first_seen": "2026-09-26T00:24:26.790971+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison转引John Gruber对Meta Muse的评论：Muse是首个消费级可用的自主agent系统（每个用户在Meta云端拿到一个持久化的Linux VM），包装得很讨喜像“可爱的吉祥物”，但Gruber提醒用户可能低估了这种能在Mac上跑的高权限agent系统有多危险，就像买电锯却没意识到它真能切断手指。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "转引对Meta Muse这个消费级agent系统风险的评论，信息量有但只是策展转引、没有自己的分析"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干没有实质连接"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "NN/g",
@@ -59,7 +59,7 @@
           "reason": "面向UX从业者的AI原理学习资源合集，属于索引导览，非原创深度内容"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "NN/g",
@@ -76,7 +76,7 @@
           "reason": "给出PACED框架讨论AI披露对用户信任的影响，有实操指导意义但内容本身偏薄（只有摘要级信息）"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Antithesis",
@@ -98,7 +98,7 @@
           "reason": "给出可复现的具体方法（用变异测试验证AI生成测试套件的有效性），并用rqlite做了真实案例，直接改变测试实践"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -115,29 +115,7 @@
           "reason": "创作者自己关于newsletter和社群运营方向调整的通告，沾AI资讯边但偏轻量、缺实质技术内容"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Northern Gannet, Great Blue Heron, California Brown Pelican",
-      "link": "https://simonwillison.net/2026/Sep/25/sighting-403293902/",
-      "date": "2026-09-25",
-      "first_seen": "2026-09-26T00:24:26.791233+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "跟AI完全无关，是鸟类摄影记录"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干和周边领域没有实质连接"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -154,7 +132,7 @@
           "reason": "对Runway GWM Worlds 2的WorldPrompt功能做了深入技术访谈，讲清楚了实时世界模型的核心工程难点（误差累积、显存管理、反事实生成），信息扎实且门槛不算高"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Antithesis",
@@ -427,23 +405,6 @@
           "track": "anchor",
           "tier": "medium",
           "reason": "访谈探讨AI作为决策系统/认知架构的新范式，沾根二『AI作为认知方式』的边，但属于对他人产品的二手访谈，非一手反思。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Here are 6 Clones of Jev in 2 days",
-      "link": "https://www.latent.space/p/ainews-here-are-6-clones-of-jev-in",
-      "date": "2026-09-19",
-      "first_seen": "2026-09-19T23:56:41.211088+00:00",
-      "source_type": "blog",
-      "summary": "Jev发布两天内爆红，全网跟风做出至少6个开源复现版本：从ModernBERT编码器加PPO打分，到基于Diffusion的DiffusionGemmaJev，再到Qwen3.5/Qwen2.5系的LoRA微调方案，各家在参数量和实现思路上差异很大，多数在benchmark上互有胜负。文章也提到一个容易被忽略的点：这些复现用的训练数据基本都是纯合成的。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "报道一个新基准/系统Jev引发的开源复现潮，列举了ModernBERT、diffusion、LoRA微调等多种技术路线，信息扎实但需要一定模型架构背景才能看懂门道，按当前用户水平只给medium"
         }
       ],
       "is_new": false
