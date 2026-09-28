@@ -2,6 +2,28 @@
   "items": [
     {
       "person": "Peter Steinberger",
+      "title": "Same. @useblacksmith has been an amazing sponsor but we need to distribute the load.   My plan is to…",
+      "link": "https://x.com/steipete/status/2104305554760114488",
+      "date": "2026-09-27",
+      "first_seen": "2026-09-28T00:20:28.598816+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger计划用codex agent自主判断哪些测试真正需要运行，以此大幅削减CI负载、把测试频率降到按小时跑一次，回应CI资源紧张、分散赞助商负载的问题。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Amanda Askell",
+      "title": "I wanted to know if I only hate perfume because I've never owned a nice one. So I researched a bunch…",
+      "link": "https://x.com/AmandaAskell/status/2104261424625381528",
+      "date": "2026-09-27",
+      "first_seen": "2026-09-28T00:20:23.783810+00:00",
+      "source_type": "x",
+      "summary": "Amanda Askell买了几款口碑很好的高价香水做实验，想验证自己讨厌香水是不是因为没用过好货，结果确认——她还是觉得所有香水都难闻。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
       "title": "Now I see why some people talk about AGI. This is so clever!",
       "link": "https://x.com/steipete/status/2103883264054505493",
       "date": "2026-09-26",
@@ -9,7 +31,7 @@
       "source_type": "x",
       "summary": "对某个AI能力或演示的惊叹，认为其聪明到让人理解为何有人在谈论AGI，但未说明具体是什么内容。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -20,7 +42,7 @@
       "source_type": "x",
       "summary": "对某个新发布或活动表达期待，鼓励大家动手创造，未透露具体信息。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -31,7 +53,7 @@
       "source_type": "x",
       "summary": "一句简短的自我提醒——继续思考，未展开具体内容。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -42,7 +64,7 @@
       "source_type": "x",
       "summary": "Steinberger反思OpenClaw从同步数据库访问迁移到sqlite时踩的坑：单agent场景下同步访问没问题，但团队并行跑50个session后就成了瓶颈；目前已通过575个PR逐步把系统迁移到异步worker架构，即使是大重构现在也不再可怕。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -339,17 +361,6 @@
       "source_type": "x",
       "summary": "作者（OpenClaw作者）认为自己搭建运行agent的好处在于不受制于任何平台方，不会被随意封禁或限制访问，这是自建/自托管相较于依赖第三方平台的核心价值。",
       "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "New benchmark dropped https://t.co/5lFZNcDNCh",
-      "link": "https://x.com/steipete/status/2101748820237500557",
-      "date": "2026-09-20",
-      "first_seen": "2026-09-20T23:54:57.013148+00:00",
-      "source_type": "x",
-      "summary": "发布了一个新的基准测试，具体内容和数据未在文字中说明(附图未能解析)。",
-      "tier": "low",
       "is_new": false
     }
   ]

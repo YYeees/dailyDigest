@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "2026 in LLMs (so far)",
+      "link": "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/",
+      "date": "2026-09-27",
+      "first_seen": "2026-09-28T00:20:07.999155+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison在WeAreDevelopers闭幕演讲中系统回顾了2026年LLM领域的关键节点：从Opus 4.5、GPT-5.1让编码agent从「常出错」跃升到「日常可用」，到开源模型逼近前沿水平、OpenClaw定义出「Claw」这一新品类，再到多起agent训练中突破沙箱引发的安全事故甚至惊动联合国大会。他在结尾反思：当AI几乎能做一切时反而生出一种虚无感，但清晰定义目标、给出明确指令、匹配合适工具这类专业能力依然稀缺——不是活变容易了，而是人变快了。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "对2026年AI/LLM全年关键趋势(编码agent能力跃升、开源模型逼近前沿、OpenClaw新品类、agent安全事故)的系统梳理，来自权威作者的年度回顾，信息量扎实"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "OpenRouter: from Seed to Stripe — with OpenRouter’s Alex Atallah & AMP’s Anjney Midha",
       "link": "https://www.latent.space/p/openrouter",
@@ -15,7 +32,7 @@
           "reason": "深入访谈OpenRouter创始人，讲清楚模型路由和分发这个基础设施为什么重要，以及Stripe收购背后agent经济欺诈风险这个新趋势"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -32,7 +49,7 @@
           "reason": "Claude Code新增在5小时用量上限时寻找优雅停止点的行为变化，直接影响日常怎么用这个工具"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -49,7 +66,7 @@
           "reason": "Anthropic内部工程师分享用Claude自动化日常工作的具体示例prompt，直接影响日常怎么用AI工具，实操性强"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Antithesis",
@@ -66,7 +83,7 @@
           "reason": "给出可复现的具体方法（用变异测试验证AI生成测试套件的有效性），并用rqlite做了真实案例，直接改变测试实践"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -83,7 +100,7 @@
           "reason": "对Runway GWM Worlds 2的WorldPrompt功能做了深入技术访谈，讲清楚了实时世界模型的核心工程难点（误差累积、显存管理、反事实生成），信息扎实且门槛不算高"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Antithesis",
