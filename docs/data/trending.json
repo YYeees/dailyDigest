@@ -1,43 +1,30 @@
 {
   "items": [
     {
-      "full_name": "alibaba/open-code-review",
-      "url": "https://github.com/alibaba/open-code-review",
-      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-      "language": "Go",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "阿里内部实战打磨出的AI代码审查CLI，用「确定性工程层+Agent层」的混合架构：文件筛选、规则匹配走可控的模板引擎,动态决策交给LLM agent，兼顾稳定性和深度。README给出了50个仓库、200个PR、80+资深工程师参与的benchmark，对比通用agent精度更高、token消耗只有约1/9，不是自吹自擂的demo。适合想学习「如何用deterministic pipeline约束LLM agent」这类工程化AI工具设计思路的人。",
-      "first_seen_date": "2026-09-21",
-      "stars_total": 38390,
-      "stars_period": 15504,
-      "last_snapshot_date": "2026-09-21"
-    },
-    {
-      "full_name": "bilawalsidhu/gods-eye-view",
-      "url": "https://github.com/bilawalsidhu/gods-eye-view",
-      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
-      "language": "JavaScript",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "浏览器端实时地理空间可视化平台，用真实公开数据(飞机、船舶、卫星、地震等)渲染3D地球，并集成OpenAI Realtime API做语音控制、场景理解和AI摘要生成，是模型应用的完整生产级案例。项目工程成熟(CI/CD、详细文档、安全声明)，是“AI+空间数据/多模态交互”方向有代表性的实操样本，值得学习其语音agent与前端数据管道的结合方式。",
-      "first_seen_date": "2026-09-14",
-      "stars_total": 39641,
-      "stars_period": 8111,
-      "last_snapshot_date": "2026-09-21"
-    },
-    {
-      "full_name": "debpalash/VoiceStudio",
-      "url": "https://github.com/debpalash/VoiceStudio",
-      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "full_name": "vectorize-io/hindsight",
+      "url": "https://github.com/vectorize-io/hindsight",
+      "description": "Hindsight: Agent Memory That Learns",
       "language": "Python",
       "difficulty": "intermediate",
       "worth_tier": "high",
-      "recommend_reason": "VoiceStudio是本地部署的语音AI一体化平台，对标ElevenLabs，支持声音克隆、语音合成（646种语言、16个TTS引擎）、转录（11个ASR引擎）、视频配音、有声书制作等，架构上Rust桌面壳+React前端+Python FastAPI后端，还内置AudioSeal水印检测。功能覆盖全面且完全本地运行、注重隐私，是了解「多引擎注册式」语音AI应用架构设计的好范例，不过默认模型权重为CC-BY-NC，商用需换引擎。",
-      "first_seen_date": "2026-09-07",
-      "stars_total": 33549,
-      "stars_period": 7754,
-      "last_snapshot_date": "2026-09-21"
+      "recommend_reason": "面向AI agent的记忆系统，用retain/recall/reflect三段式操作把对话中的事实、经验、观察结构化存储并演化出“心智模型”，宣称在长期记忆任务上优于RAG和知识图谱，并有Virginia Tech的独立benchmark验证，也接入了主流coding agent和框架。是了解“agent memory”这个新方向具体怎么做的一个扎实样本。",
+      "first_seen_date": "2026-09-28",
+      "stars_total": 37370,
+      "stars_period": 11089,
+      "last_snapshot_date": "2026-09-28"
+    },
+    {
+      "full_name": "paperclipai/paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "description": "The open-source app everyone uses to manage agents at work",
+      "language": "TypeScript",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "面向多agent团队的编排/治理平台，提供工单式任务分派、组织架构、Token预算控制、心跳调度等能力，可对接Claude Code、Codex等多种agent运行时。功能设计针对\"同时管理多个AI agent\"这一实际痛点(而不是单agent对话工具)，是学习多agent协作治理架构的一个具体样本，MIT开源且有完整的安装和开发文档支撑其可用性。",
+      "first_seen_date": "2026-08-15",
+      "stars_total": 89967,
+      "stars_period": 7364,
+      "last_snapshot_date": "2026-09-28"
     },
     {
       "full_name": "stablyai/orca",
@@ -48,35 +35,48 @@
       "worth_tier": "high",
       "recommend_reason": "面向多AI编程代理(Claude Code、Codex、Cursor等30+)并行编排的Agent开发环境，支持在独立git worktree中同时运行多个代理、跨桌面/移动/远程SSH使用，并带终端分屏、设计模式检查、GitHub/Linear集成等丰富IDE功能。8753次提交、多平台原生实现说明工程扎实，代表了\"多智能体并行开发工作流\"这一新兴实践的优秀样本。",
       "first_seen_date": "2026-08-15",
-      "stars_total": 73606,
-      "stars_period": 5841,
-      "last_snapshot_date": "2026-09-21"
+      "stars_total": 79633,
+      "stars_period": 6227,
+      "last_snapshot_date": "2026-09-28"
     },
     {
-      "full_name": "Tencent/WeKnora",
-      "url": "https://github.com/Tencent/WeKnora",
-      "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+      "full_name": "cloudflare/security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "由Cloudflare内部漏洞挖掘工具改造成的coding-agent skill，把“发现漏洞”拆解成侦察、覆盖式搜索、候选验证、结构化输出、独立复核、中立报告六个阶段，核心亮点是用不同agent互相验证发现(而非自证)来压低误报率。代表了AI辅助安全审计从“随手扫一下”到“有方法论、可复核”的实践路径。",
+      "first_seen_date": "2026-09-28",
+      "stars_total": 22349,
+      "stars_period": 4805,
+      "last_snapshot_date": "2026-09-28"
+    },
+    {
+      "full_name": "rohitg00/ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "description": "Learn it. Build it. Ship it for others.",
+      "language": "Python",
+      "difficulty": "advanced",
+      "worth_tier": "high",
+      "recommend_reason": "一套从数学基础到生产级Agent系统的完整AI工程课程,523节课分20个阶段,用Python/TypeScript/Rust/Julia提供可运行实现,并配套书籍和技能/MCP产出物。目录结构和提交历史(1764次)显示内容确实落地而非大纲空转,体量和深度要求学习者有一定钻研耐心,是系统学习AI工程实操路径的优秀样本。",
+      "first_seen_date": "2026-08-31",
+      "stars_total": 59322,
+      "stars_period": 3850,
+      "last_snapshot_date": "2026-09-28"
+    },
+    {
+      "full_name": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
       "language": "Go",
       "difficulty": "intermediate",
       "worth_tier": "high",
-      "recommend_reason": "腾讯开源的企业级LLM知识管理平台，整合RAG问答、ReAct智能体推理、自维护Wiki三大能力，支持混合检索(BM25+向量)、GraphRAG、20+LLM提供商和多租户部署。近3000次提交、文档体系完善(API/环境变量齐全)，是RAG/知识库领域工程成熟度高、可直接学习/部署的代表性项目。",
-      "first_seen_date": "2026-09-14",
-      "stars_total": 27996,
-      "stars_period": 5242,
-      "last_snapshot_date": "2026-09-21"
-    },
-    {
-      "full_name": "Tencent/BrowserSkill",
-      "url": "https://github.com/Tencent/BrowserSkill",
-      "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
-      "language": "TypeScript",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "让AI agent复用用户已登录浏览器状态、在独立Agent Window中操作而不打断用户工作，用本地CLI+浏览器扩展+WebSocket桥接实现，遇到验证码/登录等场景可让用户接管。官方支持Cursor、Claude Code、Codex等多个主流agent，架构清晰、代码完整（Rust CLI+扩展+多平台插件），是解决AI agent浏览器自动化\"登录态复用\"这一实际痛点的代表性工具。",
+      "recommend_reason": "阿里内部实战打磨出的AI代码审查CLI，用「确定性工程层+Agent层」的混合架构：文件筛选、规则匹配走可控的模板引擎,动态决策交给LLM agent，兼顾稳定性和深度。README给出了50个仓库、200个PR、80+资深工程师参与的benchmark，对比通用agent精度更高、token消耗只有约1/9，不是自吹自擂的demo。适合想学习「如何用deterministic pipeline约束LLM agent」这类工程化AI工具设计思路的人。",
       "first_seen_date": "2026-09-21",
-      "stars_total": 6049,
-      "stars_period": 4077,
-      "last_snapshot_date": "2026-09-21"
+      "stars_total": 41940,
+      "stars_period": 3727,
+      "last_snapshot_date": "2026-09-28"
     }
   ]
 }

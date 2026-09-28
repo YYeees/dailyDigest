@@ -1523,7 +1523,7 @@
       "language": "TypeScript",
       "difficulty": "beginner",
       "recommend_reason": "Anthropic官方终端agentic编程工具，一行命令安装即可用，覆盖代码理解、git工作流、GitHub issue/PR协作等场景。插件系统和活跃社区让它既是好用的生产力工具，也是学习「agent怎么落地到日常编程」的标杆样本，门槛低但代表性强。",
-      "stars_total": 147121
+      "stars_total": 148352
     },
     {
       "full_name": "microsoft/generative-ai-for-beginners",
@@ -1532,7 +1532,7 @@
       "language": "Jupyter Notebook",
       "difficulty": "beginner",
       "recommend_reason": "微软出品的生成式AI入门课程，21节课覆盖提示工程、文本/图像生成、聊天应用、RAG、AI Agent等主题，Python和TypeScript双语代码示例齐全，支持Azure OpenAI/OpenAI/开源模型多种后端。120k星、50多种语言翻译、持续维护，是生成式AI入门教程里体量最大、最成熟的样本之一。",
-      "stars_total": 120140
+      "stars_total": 120683
     }
   ]
 }
