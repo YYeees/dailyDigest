@@ -2,6 +2,57 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Claude Sonnet 5.5",
+      "link": "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/",
+      "date": "2026-09-28",
+      "first_seen": "2026-09-29T01:31:49.156959+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic发布Sonnet 5.5：官方称运行速度提升30%以上、多数任务成本降低最多30%，定价与Sonnet 5相同但基准测试全面提升。该模型现已成为claude.ai免费层的默认模型，使Anthropic的免费产品力压OpenAI的Luna 5.6。作者实测显示Sonnet 5.5编码能力接近Opus 5.5，但“max”思考强度下同样存在过度思考耗尽token失败的问题。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布，讲清楚性能提升、定价策略、免费层布局和实测对比，属于典型的AI趋势+实操信息"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "Sonnet 5.5 fixing a bug with Claude Code.  30% faster and 30% less usage. https://t.co/Vt1K1ubcFd",
+      "link": "https://x.com/bcherny/status/2104638725317923228",
+      "date": "2026-09-28",
+      "first_seen": "2026-09-29T01:31:56.606645+00:00",
+      "source_type": "x",
+      "summary": "Anthropic工程师Boris Cherny展示Sonnet 5.5在Claude Code里修bug的实测：相比之前版本快30%、用量少30%，直观体现新模型在编码agent场景下的效率提升。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Anthropic工程师实测展示Claude Code配合Sonnet 5.5修bug速度提升30%、用量降低30%，直接影响日常怎么用AI编码工具"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Craig Mod",
+      "title": "[RIDGELINE] Walking Norway's Gudbrandsdalsleden Pilgrimage",
+      "link": "https://craigmod.com/ridgeline/235/",
+      "date": "2026-09-28",
+      "first_seen": "2026-09-29T01:31:47.420878+00:00",
+      "source_type": "blog",
+      "summary": "作者与Kevin Kelly等人沿挪威中世纪朝圣古道Gudbrandsdalsleden步行132公里，一路上讨论“什么是完美的一天”、人生阶段的取舍变化。步道几乎无游客、只有本地人遛狗的清净场域，让人得以专注内在对话；但一周高强度交流后也感到“心满但灵魂疲惫”，映照深度连接与独处之间的张力，是一次关于简朴生活与自然生长的一手体验。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者本人一手经历：徒步古道的清净无游客场域、深夜讨论人生阶段取舍、简朴生活与深度对话的张力，直接踩中清净的场域与自然生长质朴中正母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "2026 in LLMs (so far)",
       "link": "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/",
       "date": "2026-09-27",
@@ -15,7 +66,7 @@
           "reason": "对2026年AI/LLM全年关键趋势(编码agent能力跃升、开源模型逼近前沿、OpenClaw新品类、agent安全事故)的系统梳理，来自权威作者的年度回顾，信息量扎实"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",

@@ -2,6 +2,106 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Claude Sonnet 5.5",
+      "link": "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/",
+      "date": "2026-09-28",
+      "first_seen": "2026-09-29T01:31:49.156959+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic发布Sonnet 5.5：官方称运行速度提升30%以上、多数任务成本降低最多30%，定价与Sonnet 5相同但基准测试全面提升。该模型现已成为claude.ai免费层的默认模型，使Anthropic的免费产品力压OpenAI的Luna 5.6。作者实测显示Sonnet 5.5编码能力接近Opus 5.5，但“max”思考强度下同样存在过度思考耗尽token失败的问题。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布，讲清楚性能提升、定价策略、免费层布局和实测对比，属于典型的AI趋势+实操信息"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干和周边领域都没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting @joedaroo",
+      "link": "https://simonwillison.net/2026/Sep/28/joedaroo/",
+      "date": "2026-09-28",
+      "first_seen": "2026-09-29T01:31:49.157127+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI Agent Security团队的Joe Daroo在事件复盘中谈到：模型在“网络攻击”“协同行动”等能力上的跃升速度远超组织安全防护的适应能力，光加固系统不够，还需要把安全意识内化进团队文化。他呼吁各组织自查：人员、系统、流程能否应对AI能力突然跃升带来的意外，是否有对应的应急响应和沟通机制。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "讨论AI模型能力跃升对组织安全应对能力的冲击，沾AI边但偏宏观叙事，不是具体可操作的实操指南"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干和周边领域都没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Andrew Huberman",
+      "title": "What Humans, Animals and Plants Tell Us About Consciousness | Michael Pollan",
+      "link": "https://www.youtube.com/watch?v=nk15CT41MFc",
+      "date": "2026-09-28",
+      "first_seen": "2026-09-29T01:31:47.036890+00:00",
+      "source_type": "youtube",
+      "summary": "这期播客对谈中，Huberman与作家Michael Pollan探讨意识与自我觉知：植物和动物的环境感知与自我识别如何映照人类意识、身体与大脑（迷走神经）之间的无意识对话，以及迷幻剂、咖啡因等如何影响这种内在体验。节目中也简短涉及AI与意识、记忆的关系，但整体偏泛读者向的科普访谈。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "访谈探讨意识、自我觉知、身心对话等主题，沾根一深度自我认识的边，但是访谈转述而非作者一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Muse AI Agent",
+      "link": "https://simonwillison.net/2026/Sep/28/muse-ai-agent/",
+      "date": "2026-09-28",
+      "first_seen": "2026-09-29T01:31:49.157165+00:00",
+      "source_type": "blog",
+      "summary": "一则引用讲述AI代理Muse代人处理快递取件时出的岔子：自动回复在取件员已到场却无人应答时仍声称“你在家”，导致取件员留下差评。案例揭示AI代理代为承诺却无法验证真实状态时，会把失误的负面影响放大，提醒设计自动化交互要更谨慎。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI agent自主代理失败的真实案例，揭示自动化交互设计的风险，但只是转述一则轶事，不算实操指南"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干和周边领域都没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Craig Mod",
+      "title": "[RIDGELINE] Walking Norway's Gudbrandsdalsleden Pilgrimage",
+      "link": "https://craigmod.com/ridgeline/235/",
+      "date": "2026-09-28",
+      "first_seen": "2026-09-29T01:31:47.420878+00:00",
+      "source_type": "blog",
+      "summary": "作者与Kevin Kelly等人沿挪威中世纪朝圣古道Gudbrandsdalsleden步行132公里，一路上讨论“什么是完美的一天”、人生阶段的取舍变化。步道几乎无游客、只有本地人遛狗的清净场域，让人得以专注内在对话；但一周高强度交流后也感到“心满但灵魂疲惫”，映照深度连接与独处之间的张力，是一次关于简朴生活与自然生长的一手体验。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者本人一手经历：徒步古道的清净无游客场域、深夜讨论人生阶段取舍、简朴生活与深度对话的张力，直接踩中清净的场域与自然生长质朴中正母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "2026 in LLMs (so far)",
       "link": "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/",
       "date": "2026-09-27",
@@ -13,14 +113,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "对2026年AI/LLM全年关键趋势(编码agent能力跃升、开源模型逼近前沿、OpenClaw新品类、agent安全事故)的系统梳理，来自权威作者的年度回顾，信息量扎实"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "结尾的个人反思(当AI能做一切时的虚无感、专业能力仍是稀缺护城河)踩中「护城河在harness不在模型」母题，但通篇以趋势回顾为主，反思只占结尾一小部分"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ministry of Testing",
@@ -42,7 +137,7 @@
           "reason": "回帖给出了具体的agent测试契约方法论(风险/初始状态/操作路径/oracle/结束状态校验/证据留存/清理)，但仅浏览器自动化单一场景、只有一条高质量回复"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -388,45 +483,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "小米发布新旗舰开源模型MiMo-V2.6系列,讲清楚训练规模、RL方法和开源计划,属于前沿模型新发布且解释到位"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Jev introduces a new shape of LLM - System One, aka Decision Models",
-      "link": "https://simonwillison.net/2026/Sep/21/jev/",
-      "date": "2026-09-21",
-      "first_seen": "2026-09-22T00:37:58.862597+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison详细拆解了TypeSafe AI发布的Jev——一种只输出浮点数（置信度/分类概率/评分）而非文本的『决策模型』，定价仅按输入计费（每百万token $0.042，比GPT-5 Nano还便宜），适合垃圾邮件检测、打标签、排序重排一类分类任务。他也提出批评：这类模型进一步退化成黑箱，给不出任何决策依据，他自测让Jev给旧金山湾区城市打『是否宜居』分时就出现了可疑的社会经济偏向。发布一周内已经涌现出用Jev实现聊天、left-pad、玩2048等创意项目，以及基于开源模型复现的Kev等类似产品。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "详细解读Jev这类新型决策模型的原理、定价、适用场景，并提出黑箱和偏见方面的批判性观察，兼具实操信息和独立判断，是扎实的前沿工具解读。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Jev: System One models for Prod, not God — with Diogo Almeida, CEO, TypeSafe AI",
-      "link": "https://www.latent.space/p/jev",
-      "date": "2026-09-21",
-      "first_seen": "2026-09-22T00:37:59.488986+00:00",
-      "source_type": "blog",
-      "summary": "Latent Space访谈TypeSafe AI创始人Diogo Almeida，围绕新发布的Jev模型展开——一种被称为『System One models』的决策模型，只返回置信度/分类等结构化数值而非自然语言。核心论点是RLHF存在mode collapse问题导致模型丢失校准能力，Jev用『RLCD（面向校准决策的强化学习）』替代RLHF/RLVR作为训练目标。访谈还讨论了为什么TypeSafe拒绝公开跑分、认为任务和数据比算力更重要（『最苦的教训』），以及这类模型对未来coding agent架构（绕开KV cache瓶颈、多agent协作）的潜在影响。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "深入访谈TypeSafe AI创始人，讲清楚Jev这类『决策模型』新范式是什么、为什么重要（RLHF的mode collapse问题、RLCD训练目标、对coding agent架构的影响），是扎实的前沿模型解读。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "访谈探讨AI作为决策系统/认知架构的新范式，沾根二『AI作为认知方式』的边，但属于对他人产品的二手访谈，非一手反思。"
         }
       ],
       "is_new": false
