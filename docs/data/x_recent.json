@@ -2,6 +2,28 @@
   "items": [
     {
       "person": "Peter Steinberger",
+      "title": "This is pretty amazing.",
+      "link": "https://x.com/steipete/status/2105048996549116268",
+      "date": "2026-09-29",
+      "first_seen": "2026-09-30T01:08:05.013348+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger发了条“这太赞了”的短推，但没带上下文说明具体在夸什么。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @ClaudeDevs: Claude can now help you build evaluations and hillclimb on them.  In this article, w…",
+      "link": "https://x.com/bcherny/status/2104769987068285110",
+      "date": "2026-09-29",
+      "first_seen": "2026-09-30T01:08:03.771371+00:00",
+      "source_type": "x",
+      "summary": "ClaudeDevs官方公告：Claude Code现在能帮你设计评测（eval）并在评测结果上持续爬坡优化，文章给出了eval设计与调优技能的具体指导思路。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
       "title": "See ya there!",
       "link": "https://x.com/steipete/status/2104702088626557384",
       "date": "2026-09-28",
@@ -9,7 +31,7 @@
       "source_type": "x",
       "summary": "一条简短回应“到时候见”，未见实质内容，应为线下活动/见面的寒暄。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -20,7 +42,7 @@
       "source_type": "x",
       "summary": "Anthropic工程师Boris Cherny展示Sonnet 5.5在Claude Code里修bug的实测：相比之前版本快30%、用量少30%，直观体现新模型在编码agent场景下的效率提升。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -317,50 +339,6 @@
       "source_type": "x",
       "summary": "Claude手机应用现已支持多账号切换。",
       "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "I used Opus 5.5 to formally verify the Claude Agent SDK using Lean. A couple short prompts = 16 PRs…",
-      "link": "https://x.com/bcherny/status/2102543349102338309",
-      "date": "2026-09-22",
-      "first_seen": "2026-09-23T00:04:59.466804+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny用Opus 5.5对Claude Agent SDK做形式化验证——用Lean建模,几条简短prompt就产出16个PR,修复了各种bug和竞态条件；他有时会把Lean和TLA+结合起来查数据流、并发和状态管理方面的问题。他认为形式化验证可能是未来找bug(乃至写代码)的新路子。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Had ChatGPT sometimes crashing on me after updating to macOS 27 and... Astra found a ~14 year old bu…",
-      "link": "https://x.com/steipete/status/2102501642176528743",
-      "date": "2026-09-22",
-      "first_seen": "2026-09-23T00:05:21.398239+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger升级到macOS 27后ChatGPT桌面端偶发崩溃,他用GPT-6 Astra自主排查定位到根因——libuv库里一个存在了约14年的老bug。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @trq212: Opus 5.5 is the result of your feedback.    It communicates clearly, it's cheaper per to…",
-      "link": "https://x.com/bcherny/status/2102440012331814944",
-      "date": "2026-09-22",
-      "first_seen": "2026-09-23T00:04:59.467116+00:00",
-      "source_type": "x",
-      "summary": "转推Thariq Shihipar对Opus 5.5的评价——沟通更清晰、每token更便宜、智能水平接近Fable 5.1,且在各推理强度下都好用(该引用在Simon Willison同日的价格战文章中也有收录)。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "Opus 5.5 is a really good model. It's been my daily driver the last few weeks.  We had Opus 5.5 and…",
-      "link": "https://x.com/bcherny/status/2102439069053747549",
-      "date": "2026-09-22",
-      "first_seen": "2026-09-23T00:04:59.467163+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny用Opus 5.5和Fable 5.1分别把HAProxy从C移植到Rust,两者都通过了几乎全部原有测试,但Opus 5.5用时9.5小时(Fable 5.1为12小时),成本低51%。他表示Opus 5.5已经成为自己最近几周的日常主力模型。",
-      "tier": "high",
       "is_new": false
     }
   ]

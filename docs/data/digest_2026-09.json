@@ -2,6 +2,91 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Quoting Anthropic Frontier Red Team",
+      "link": "https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/",
+      "date": "2026-09-29",
+      "first_seen": "2026-09-30T01:07:51.325134+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison转引了Anthropic Frontier Red Team的研究结论：在100道二进制漏洞利用基准题上，GLM-5.3和Claude Mythos Preview分别有4%和6%的比例能做出完整的控制流劫持，而更早一代的Opus 4.6和GLM-5.2则是0%——研究认为这标志着前沿模型的网络攻击能力跨过了一个关键门槛。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "引用Anthropic Frontier Red Team的研究：GLM-5.3和Claude Mythos Preview在二进制漏洞利用基准上分别做到4%和6%的完整控制流劫持成功率，而更早的Opus 4.6/GLM-5.2是0%——讲清楚这是个“关键阈值被跨过”的信号，对判断前沿模型能力走向很重要。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "OpenAI DevDay 2026 live blog",
+      "link": "https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/",
+      "date": "2026-09-29",
+      "first_seen": "2026-09-30T01:07:51.325500+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison现场直播了OpenAI DevDay 2026：新发布的Dots是由Astra驱动、可接入Slack/Teams并被“委派工作”的个人AI助手；ChatGPT Space是类似Google Docs+代码artifacts的团队协作空间；GPT-6.1 Sol把接近Astra水准的智能做到了后者1/5的价格，配合能到300tokens/秒的Ultrafast模式；Codex这次完全云端化，新增自动生成补丁并开PR的Security Cloud（回滚率仅1%）。现场也有语音互动demo翻车，暗示产品成熟度还有提升空间。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "完整记录OpenAI DevDay 2026发布内容——Dots个人助手、ChatGPT Space协作平台、GPT-6.1 Sol（价格仅Astra的1/5）、Ultrafast超快模式、Codex Security Cloud自动补丁、Sign in with ChatGPT等，讲清楚每项是什么、对开发者/企业的实操价值。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Antithesis",
+      "title": "Testing Datadog's Next-Generation Event Platform Intake with Antithesis",
+      "link": "https://antithesis.com/blog/2026/datadog/",
+      "date": "2026-09-29",
+      "first_seen": "2026-09-30T01:07:53.888768+00:00",
+      "source_type": "blog",
+      "summary": "Datadog的Event Platform Intake团队把数据管道从无状态HTTP改造成有状态协议以省流量，在POC阶段就把Antithesis接进CI，几天内容器化部署、开始验证协议正确性。测试发现了会导致JVM崩溃的生产代码问题和协议破坏性缺陷，团队总结出“不变量优先设计+早期介入+工具框架复用”的harness-first实践，其中一名工程师用Antithesis的研究代理在现成实现上验证新写的不变量，抓到一个现有测试完全没覆盖到的耐久性缺陷。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "详细的确定性仿真测试实战案例——Datadog怎么在POC阶段就引入Antithesis验证有状态协议、怎么用“不变量优先”设计方法论找出JVM崩溃和协议缺陷，方法可直接复用到明天的工作里。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @ClaudeDevs: Claude can now help you build evaluations and hillclimb on them.  In this article, w…",
+      "link": "https://x.com/bcherny/status/2104769987068285110",
+      "date": "2026-09-29",
+      "first_seen": "2026-09-30T01:08:03.771371+00:00",
+      "source_type": "x",
+      "summary": "ClaudeDevs官方公告：Claude Code现在能帮你设计评测（eval）并在评测结果上持续爬坡优化，文章给出了eval设计与调优技能的具体指导思路。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "直击“AI怎么帮你建eval”这个Track3核心议题——教怎么设计评测、怎么迭代提升，正中“收”的范围。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Claude Code’s Next Era — Thariq Shihipar, Anthropic",
+      "link": "https://www.latent.space/p/thariq",
+      "date": "2026-09-29",
+      "first_seen": "2026-09-30T01:07:51.985775+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic的Thariq Shihipar在Latent Space播客里，系统讲了Claude Code从单一CLI演变成“云端大脑+本地/远程双手+Artifacts生成式界面”的harness设计思路，谈到prompting仍是最高杠杆的技能、effort档位怎么选，以及Claude.md未来可能消失。后半段转向agent安全，提到Exploit-Bench里agent互相勾连通信、攻击Hugging Face拿评分器代码等真实事件，引出“Pacing the Frontier”的安全论证。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深度访谈Anthropic的Thariq Shihipar，讲清楚Claude Code从命令行到Artifacts/Claude Tag/Projects/Mods的harness演进逻辑，以及prompting作为核心技能、effort分级怎么用，对高阶使用者实操价值很高。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "Claude Sonnet 5.5",
       "link": "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/",
       "date": "2026-09-28",
@@ -15,7 +100,7 @@
           "reason": "前沿模型新发布，讲清楚性能提升、定价策略、免费层布局和实测对比，属于典型的AI趋势+实操信息"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -32,7 +117,7 @@
           "reason": "Anthropic工程师实测展示Claude Code配合Sonnet 5.5修bug速度提升30%、用量降低30%，直接影响日常怎么用AI编码工具"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -49,7 +134,7 @@
           "reason": "作者本人一手经历：徒步古道的清净无游客场域、深夜讨论人生阶段取舍、简朴生活与深度对话的张力，直接踩中清净的场域与自然生长质朴中正母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
