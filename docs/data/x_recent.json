@@ -1,6 +1,50 @@
 {
   "items": [
     {
+      "person": "Boris Cherny",
+      "title": "RT @dfeinition: I work almost exclusively in Claude Projects now, here are some of the things that s…",
+      "link": "https://x.com/bcherny/status/2105448431972217045",
+      "date": "2026-10-01",
+      "first_seen": "2026-10-01T01:07:12.629673+00:00",
+      "source_type": "x",
+      "summary": "转推一条分享重度使用Claude Projects心得的推文，提到的第一点是对话经常被刷爆(推文被截断，后续要点没抓到)。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "I'm finding inter-agent communication in the chat stream increasingly irritating. Changed the visibi…",
+      "link": "https://x.com/steipete/status/2105362785534361996",
+      "date": "2026-09-30",
+      "first_seen": "2026-10-01T01:07:13.893315+00:00",
+      "source_type": "x",
+      "summary": "觉得多智能体系统里agent之间的对话直接刷屏越来越烦，把OC harness里的显示方式改成默认单行、可展开查看，估计很快会有其他harness跟进这个做法。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "It’s a fierce fight between CI and GitHub on what slows me down. Time to rethink how we work. (love…",
+      "link": "https://x.com/steipete/status/2105341288958869952",
+      "date": "2026-09-30",
+      "first_seen": "2026-10-01T01:07:13.893505+00:00",
+      "source_type": "x",
+      "summary": "吐槽CI和GitHub成了拖慢自己的两大元凶，是时候重新想想怎么干活了(但还是喜欢GitHub，理解他们的难处)。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "This is not only silly, it’s also incredibly easy to work around. Why would Figma do this?",
+      "link": "https://x.com/steipete/status/2105325370602135768",
+      "date": "2026-09-30",
+      "first_seen": "2026-10-01T01:07:13.893530+00:00",
+      "source_type": "x",
+      "summary": "吐槽Figma某个限制措施既蠢又容易绕过，不懂Figma为什么要这么做。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
       "person": "Peter Steinberger",
       "title": "This is pretty amazing.",
       "link": "https://x.com/steipete/status/2105048996549116268",
@@ -9,7 +53,7 @@
       "source_type": "x",
       "summary": "Peter Steinberger发了条“这太赞了”的短推，但没带上下文说明具体在夸什么。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -20,7 +64,7 @@
       "source_type": "x",
       "summary": "ClaudeDevs官方公告：Claude Code现在能帮你设计评测（eval）并在评测结果上持续爬坡优化，文章给出了eval设计与调优技能的具体指导思路。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -251,94 +295,6 @@
       "source_type": "x",
       "summary": "Boris Cherny记录自己在Computer History Museum与Donald Knuth会面，纯个人轶事，无更多细节。",
       "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @ClaudeDevs: Cloud sessions are officially available and out of research preview! They let you ke…",
-      "link": "https://x.com/bcherny/status/2102925295812780412",
-      "date": "2026-09-24",
-      "first_seen": "2026-09-25T00:19:18.928745+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny转发：Claude Code的云端会话(Cloud sessions)正式从研究预览转为全量可用，可以让Claude Code在断开本地连接后继续在云端执行任务。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Huh. There is a catch. https://t.co/fFVtXq8frn",
-      "link": "https://x.com/steipete/status/2102889319849713698",
-      "date": "2026-09-23",
-      "first_seen": "2026-09-24T00:16:56.369855+00:00",
-      "source_type": "x",
-      "summary": "针对某张配图发的简短感慨，提到「有个陷阱」，未展开具体细节。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @AnthropicAI: Claude has discovered a previously unknown enzyme system hidden in the DNA of bacte…",
-      "link": "https://x.com/bcherny/status/2102855820111417543",
-      "date": "2026-09-23",
-      "first_seen": "2026-09-24T00:16:55.170639+00:00",
-      "source_type": "x",
-      "summary": "转推Anthropic官方消息：Claude在噬菌体DNA中发现了此前未知的酵素系统，该酵素基因附近还有其他有意思的发现(推文被截断，具体细节未展开)。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "If you've noticed how fast https://t.co/9A6X5iqpbs and the Desktop app have become in the last few w…",
-      "link": "https://x.com/bcherny/status/2102854267782705648",
-      "date": "2026-09-23",
-      "first_seen": "2026-09-24T00:16:55.170929+00:00",
-      "source_type": "x",
-      "summary": "Anthropic工程博客发文讲claude.ai网页版和Desktop应用最近几周明显变快背后的性能优化技巧，面向做应用提速的工程师。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "So cool to have @allietheicon [from Jev/TypeSafe] be part of our ClawCast on Discord! https://t.co/6…",
-      "link": "https://x.com/steipete/status/2102839395766472969",
-      "date": "2026-09-23",
-      "first_seen": "2026-09-24T00:16:56.370097+00:00",
-      "source_type": "x",
-      "summary": "感谢TypeSafe的成员参加他们Discord上的ClawCast节目，无更多实质内容。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Next version of OpenClaw uses a decision model to automatically decide between steer or queue.   (La…",
-      "link": "https://x.com/steipete/status/2102667004557832497",
-      "date": "2026-09-23",
-      "first_seen": "2026-09-24T00:16:56.370217+00:00",
-      "source_type": "x",
-      "summary": "OpenClaw下一版本引入决策模型，自动判断是打断当前任务(steer)还是排队(queue)，并支持多种本地/API兼容模型和ONNX变体。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @dsp_: I rarely post about our model launches, but I truly enjoy Claude 5.5 and I am really glad…",
-      "link": "https://x.com/bcherny/status/2102582722053148897",
-      "date": "2026-09-23",
-      "first_seen": "2026-09-24T00:16:55.170996+00:00",
-      "source_type": "x",
-      "summary": "转推同事对Claude5.5发布的正面评价，无更多实质信息。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @RobertJBye: BTW we now support multiple accounts in the Claude mobile app https://t.co/3ki7LSgAo…",
-      "link": "https://x.com/bcherny/status/2102582283781976223",
-      "date": "2026-09-23",
-      "first_seen": "2026-09-24T00:16:55.171060+00:00",
-      "source_type": "x",
-      "summary": "Claude手机应用现已支持多账号切换。",
-      "tier": "medium",
       "is_new": false
     }
   ]

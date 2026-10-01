@@ -1,6 +1,62 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "Why Dwarkesh is Wrong about Computer Use + How OpenAI shipped its Jev competitor in 1 Week",
+      "link": "https://www.latent.space/p/devday-2026",
+      "date": "2026-09-30",
+      "first_seen": "2026-10-01T01:07:02.353367+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI Computer Use负责人Ari Weinstein访谈：过去一年Computer Use从'靠截图一步步滚动点按'进化到能用accessibility树/DOM/Playwright/生成代码一次做多步，调试和从失败中恢复的能力大幅提升；App Shots能把整页应用的结构化信息(不只是截图)带进上下文；新的Agents API首次把Computer Use开放给第三方开发者。他还提到一个常见用法：让agent用Computer Use测试agent自己刚写好的软件，开发-测试闭环由agent自己完成。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "OpenAI Computer Use负责人详细讲清楚过去一年的实质进展(debug/恢复能力、多模态输入、App Shots、Agents API开放)，信息量扎实、讲清楚为什么重要"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "I'm finding inter-agent communication in the chat stream increasingly irritating. Changed the visibi…",
+      "link": "https://x.com/steipete/status/2105362785534361996",
+      "date": "2026-09-30",
+      "first_seen": "2026-10-01T01:07:13.893315+00:00",
+      "source_type": "x",
+      "summary": "觉得多智能体系统里agent之间的对话直接刷屏越来越烦，把OC harness里的显示方式改成默认单行、可展开查看，估计很快会有其他harness跟进这个做法。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "一手builder经验，直接命中'护城河在harness，不在模型'——把OC harness里多智能体对话的可见性改成默认单行可展开"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Hamel Husain",
+      "title": "Claude’s new auto eval tool",
+      "link": "https://hamel.dev/blog/posts/claude-auto-evals/",
+      "date": "2026-09-30",
+      "first_seen": "2026-10-01T01:07:02.805672+00:00",
+      "source_type": "blog",
+      "summary": "Hamel Husain和Isaac Flath直播实测了Anthropic新出的Claude Code eval插件(build_eval/hill-climb)。缺点：还没看数据就催着选evaluator、要在markdown文件里人工比对标注(体验很差)、生成的evaluator一个指标里塞了四种检查且描述含糊难懂。优点：一次性发现问题的能力出乎意料地强，覆盖了人机交接、格式、语音agent等多个失败模式。结论：现在还不建议用，但值得关注后续迭代——核心原则没变，eval工具必须先带你理解数据，再决定评什么。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "一手实测Anthropic官方新出的Claude Code eval工具(build_eval/hill-climb)，直接影响怎么用Claude Code做评测，分析具体可操作"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "详细实测报告：指出先选evaluator再看数据的设计缺陷、人工标注体验差、生成的evaluator粒度太粗等具体问题，也指出一次性发现失败模式的能力出乎意料地强；给出明确的'现在该不该用'结论，典型的教怎么测的内容"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "Quoting Anthropic Frontier Red Team",
       "link": "https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/",
@@ -15,7 +71,7 @@
           "reason": "引用Anthropic Frontier Red Team的研究：GLM-5.3和Claude Mythos Preview在二进制漏洞利用基准上分别做到4%和6%的完整控制流劫持成功率，而更早的Opus 4.6/GLM-5.2是0%——讲清楚这是个“关键阈值被跨过”的信号，对判断前沿模型能力走向很重要。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -32,7 +88,7 @@
           "reason": "完整记录OpenAI DevDay 2026发布内容——Dots个人助手、ChatGPT Space协作平台、GPT-6.1 Sol（价格仅Astra的1/5）、Ultrafast超快模式、Codex Security Cloud自动补丁、Sign in with ChatGPT等，讲清楚每项是什么、对开发者/企业的实操价值。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Antithesis",
@@ -49,7 +105,7 @@
           "reason": "详细的确定性仿真测试实战案例——Datadog怎么在POC阶段就引入Antithesis验证有状态协议、怎么用“不变量优先”设计方法论找出JVM崩溃和协议缺陷，方法可直接复用到明天的工作里。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -66,7 +122,7 @@
           "reason": "直击“AI怎么帮你建eval”这个Track3核心议题——教怎么设计评测、怎么迭代提升，正中“收”的范围。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -83,7 +139,7 @@
           "reason": "深度访谈Anthropic的Thariq Shihipar，讲清楚Claude Code从命令行到Artifacts/Claude Tag/Projects/Mods的harness演进逻辑，以及prompting作为核心技能、effort分级怎么用，对高阶使用者实操价值很高。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

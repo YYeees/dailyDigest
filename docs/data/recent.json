@@ -1,6 +1,111 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "Why Dwarkesh is Wrong about Computer Use + How OpenAI shipped its Jev competitor in 1 Week",
+      "link": "https://www.latent.space/p/devday-2026",
+      "date": "2026-09-30",
+      "first_seen": "2026-10-01T01:07:02.353367+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI Computer Use负责人Ari Weinstein访谈：过去一年Computer Use从'靠截图一步步滚动点按'进化到能用accessibility树/DOM/Playwright/生成代码一次做多步，调试和从失败中恢复的能力大幅提升；App Shots能把整页应用的结构化信息(不只是截图)带进上下文；新的Agents API首次把Computer Use开放给第三方开发者。他还提到一个常见用法：让agent用Computer Use测试agent自己刚写好的软件，开发-测试闭环由agent自己完成。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "OpenAI Computer Use负责人详细讲清楚过去一年的实质进展(debug/恢复能力、多模态输入、App Shots、Agents API开放)，信息量扎实、讲清楚为什么重要"
+        },
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "其中一段专门讲用Computer Use agent测试agent自己写的软件、闭环开发-测试流程，是真实用例但只是访谈里的一个片段，不是全篇重点"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "He Built This City",
+      "link": "https://simonwillison.net/2026/Sep/30/he-built-this-city/",
+      "date": "2026-09-30",
+      "first_seen": "2026-10-01T01:07:01.784890+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "游记性质，跟AI无关"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Hamel Husain",
+      "title": "Claude’s new auto eval tool",
+      "link": "https://hamel.dev/blog/posts/claude-auto-evals/",
+      "date": "2026-09-30",
+      "first_seen": "2026-10-01T01:07:02.805672+00:00",
+      "source_type": "blog",
+      "summary": "Hamel Husain和Isaac Flath直播实测了Anthropic新出的Claude Code eval插件(build_eval/hill-climb)。缺点：还没看数据就催着选evaluator、要在markdown文件里人工比对标注(体验很差)、生成的evaluator一个指标里塞了四种检查且描述含糊难懂。优点：一次性发现问题的能力出乎意料地强，覆盖了人机交接、格式、语音agent等多个失败模式。结论：现在还不建议用，但值得关注后续迭代——核心原则没变，eval工具必须先带你理解数据，再决定评什么。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "一手实测Anthropic官方新出的Claude Code eval工具(build_eval/hill-climb)，直接影响怎么用Claude Code做评测，分析具体可操作"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "详细实测报告：指出先选evaluator再看数据的设计缺陷、人工标注体验差、生成的evaluator粒度太粗等具体问题，也指出一次性发现失败模式的能力出乎意料地强；给出明确的'现在该不该用'结论，典型的教怎么测的内容"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] OpenAI DevDay 2026: Dots, 6.1 Sol, Ultrafast, Decisions API, Agents API, Spaces, Marketplace, and 1.2 Billion ChatGPT WAU",
+      "link": "https://www.latent.space/p/ainews-openai-devday-2026-dots-61",
+      "date": "2026-09-30",
+      "first_seen": "2026-10-01T01:07:02.357365+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI DevDay 2026发布一揽子新品：个人助理产品Dots(自带云端Linux电脑)、新模型GPT-6.1 Sol(主打超快推理)、新的Decisions API(低延迟决策/分类，暂时是内部Luna模型的轻量封装)、开放Computer Use的Agents API、办公套件ChatGPT Spaces，以及月活12亿的消费端数据。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "DevDay新品信息量大(Dots/GPT-6.1 Sol/Decisions API)，但写法行话密集、纯资讯汇总压缩，门槛偏高"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Ministry of Testing",
+      "title": "From \"Human → Machine\" to \"Human → AI → Machine\": How Can AI Transform Software Deployment and Production Operations?",
+      "link": "https://club.ministryoftesting.com/t/from-human-machine-to-human-ai-machine-how-can-ai-transform-software-deployment-and-production-operations/87788",
+      "date": "2026-09-30",
+      "first_seen": "2026-10-01T01:07:05.297163+00:00",
+      "source_type": "blog",
+      "summary": "Ministry of Testing论坛帖子讨论AI在生产部署和运维中的角色：一人主张「最小可逆切片」+独立验证的保守路线，强调AI最适合执行已知运维手册、收集回滚指令；另一人类比工业革命，认为该快速拥抱AI工具抢占先发优势。双方都停留在策略层面，没给出具体实践案例。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "讨论AI在生产部署运维中该扮演什么角色，属于AI应用的策略层讨论"
+        },
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "讨论AI改造部署运维(广义可靠性保障)该多谨慎还是多激进，但停留在观点层面，没有具体工具或实验案例"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "Quoting Anthropic Frontier Red Team",
       "link": "https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/",
@@ -13,36 +118,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "引用Anthropic Frontier Red Team的研究：GLM-5.3和Claude Mythos Preview在二进制漏洞利用基准上分别做到4%和6%的完整控制流劫持成功率，而更早的Opus 4.6/GLM-5.2是0%——讲清楚这是个“关键阈值被跨过”的信号，对判断前沿模型能力走向很重要。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "纯研究引用转发，没有个人反思，跟锚点主干无实质连接。"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
-      "link": "https://simonwillison.net/2026/Sep/29/hn-49898129/",
-      "date": "2026-09-29",
-      "first_seen": "2026-09-30T01:07:51.325409+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison在Hacker News评论区指出，GPT-6.1 Sol能以Astra约五分之一的价格做到接近的智能水平；他照例做了pelican骑自行车测试，结果跟GPT-6家族其他型号相比没有明显差异。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "提到GPT-6.1 Sol以Astra五分之一的价格做到接近的智能水平，是有用的选型信息，但这条帖子本身只是HN评论+pelican测试链接的轻量记录，没有展开讲解。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟锚点主干无关。"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -57,14 +135,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "完整记录OpenAI DevDay 2026发布内容——Dots个人助手、ChatGPT Space协作平台、GPT-6.1 Sol（价格仅Astra的1/5）、Ultrafast超快模式、Codex Security Cloud自动补丁、Sign in with ChatGPT等，讲清楚每项是什么、对开发者/企业的实操价值。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "纯发布会现场记录，跟锚点主干无关。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -86,7 +159,7 @@
           "reason": "通篇在追问“AI该不该有良知、该谁负责”，沾根二“AI作为认知方式”的边，且是Fowler本人的思考，但没有直接踩中清单里的具体母题。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Antithesis",
@@ -103,7 +176,7 @@
           "reason": "详细的确定性仿真测试实战案例——Datadog怎么在POC阶段就引入Antithesis验证有状态协议、怎么用“不变量优先”设计方法论找出JVM崩溃和协议缺陷，方法可直接复用到明天的工作里。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -120,7 +193,7 @@
           "reason": "AMD以82亿美元收购World Labs，涉及空间智能新模型Atlas解决稀疏重建问题，是有实质技术含量的行业动态，但篇幅短、偏公告性质，没有展开讲清楚技术原理。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -137,7 +210,7 @@
           "reason": "一周AI圈动态密集打包（新模型发布、benchmark成绩、agent基建），信息量大但走的是新闻通稿式罗列，缺少单点深入讲解。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -159,7 +232,7 @@
           "reason": "大篇幅讨论“护城河在harness不在模型”这一母题，但内容是swyx对Thariq的采访转述，不是用户本人的一手反思。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -454,74 +527,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "前沿AI产品发布会的完整梳理，讲清楚Meta Muse智能体+硬件战略是什么、为什么重要，不是纯通稿"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Gemini 3.8 TTS Playground",
-      "link": "https://simonwillison.net/2026/Sep/23/gemini-tts-playground/",
-      "date": "2026-09-23",
-      "first_seen": "2026-09-24T00:16:47.765687+00:00",
-      "source_type": "blog",
-      "summary": "Google发布两个新Gemini文本转语音模型(gemini-3.8-flash-tts/flash-lite-tts)，支持超过2000种声音，可用30秒音频样本克隆自定义声音，并能定义多角色对话(不同人物各自的声音和语气风格)。作者用GPT-6 Astra写了一个bring-your-own-key的playground界面，实测生成1分18秒的双人对话音频耗时约20秒、成本2.74美分。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "详细介绍Gemini新TTS模型(gemini-3.8-flash-tts)特性、亲自实测的生成速度和成本数据，是扎实且门槛不高的新工具介绍"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Ministry of Testing",
-      "title": "What is the consensus on AI being used to test a work item against it's acceptance criteria and verify it's implemented correctly?",
-      "link": "https://club.ministryoftesting.com/t/what-is-the-consensus-on-ai-being-used-to-test-a-work-item-against-its-acceptance-criteria-and-verify-its-implemented-correctly/87764",
-      "date": "2026-09-23",
-      "first_seen": "2026-09-24T00:16:50.598703+00:00",
-      "source_type": "blog",
-      "summary": "Ministry of Testing论坛帖讨论用AI agent自动验证工作项是否满足验收标准(不是生成测试脚本，而是agent直接判定验收结果并签核)。楼主的公司已经在这么做，但担忧agent输出动辄上千字，其他QA未必真的会读就签字通过；agent还偏好优先用单元测试覆盖缺口，但有些场景明明需要集成或端到端测试才能防住bug。回帖补充了token成本超预期、AI难以完全理解产品决策背后意图等顾虑，双方结论都是认可这个方向但坚持需要人类判断介入。",
-      "tracks": [
-        {
-          "track": "eval",
-          "tier": "high",
-          "reason": "一线测试从业者真实讨论用AI agent验证工作项验收标准的实践与顾虑(输出冗长没人真读、token成本超预期、agent偏爱单元测试而忽视集成/e2e测试、AI理解不了产品决策背后的意图)，直接可指导本职测试工作要不要及如何采用这套流程，给high"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "🔬Bio-security is an AI Arms Race - Eric Nguyen (CEO, Radical Numerics)",
-      "link": "https://www.latent.space/p/bio-security-is-an-ai-arms-race-eric",
-      "date": "2026-09-23",
-      "first_seen": "2026-09-24T00:16:48.331759+00:00",
-      "source_type": "blog",
-      "summary": "Radical Numerics联合创始人Eric Nguyen(此前参与Evo/Evo2基因组语言模型开发)访谈，讲基因组语言模型如何通过长上下文和链式推理理解DNA序列，能够像自然语言模型一样递归优化生成结果。他认为AI在生物领域的能力提升同时带来防御和攻击两方面的军备竞赛，目前防御一方处于劣势，Radical Numerics主张推进前沿能力研究来对抗这一风险。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "基因组语言模型与生物安全的深度访谈，技术含量高但属研究level，超出普通使用者的门槛，给medium"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Claude Opus 5.5, the new default model for AINews — and everybody cuts prices 40-50%",
-      "link": "https://www.latent.space/p/ainews-claude-opus-55-the-new-default",
-      "date": "2026-09-23",
-      "first_seen": "2026-09-24T00:16:48.332504+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic发布Claude Opus 5.5，作为新一代默认模型，性能接近Fable 5.1/挑战Astra，API价格比Opus 5便宜40%。发布强调写作质量提升——信息前置、更遵循写作规则，长对话更易读。同期OpenAI发布GPT-6 Sol/Luna并降价，两家都强调效率优化带来的成本下降；Latent Space已将自己的AINews栏目迁移到Opus 5.5生成。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "前沿模型新发布(Claude Opus 5.5)且讲清楚是什么、为什么重要——价格下调、写作能力提升、基准表现，内容扎实门槛不高"
         }
       ],
       "is_new": false
