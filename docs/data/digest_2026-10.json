@@ -1,0 +1,90 @@
+{
+  "items": [
+    {
+      "person": "Andrej Karpathy",
+      "title": "We'll be spending a lot more time trying to understand the outputs of language models. A few thought…",
+      "link": "https://x.com/karpathy/status/2105819303471976479",
+      "date": "2026-10-02",
+      "first_seen": "2026-10-02T01:20:55.734935+00:00",
+      "source_type": "x",
+      "summary": "Karpathy给出几条让LLM输出更好理解的技巧：用ASD-STE100这种航空维护文档用的受控语言规范让文字更干净；输出图表/图像比文字更易消化；输出HTML做成可交互网页；他最看好的是直接生成定制的讲解视频（比如要求做成3blue1brown风格）；核心判断是随着LLM自主完成的工作越来越多，人的工作会更多转向监督与理解，而LLM本身也能帮着造出这些“一次性”的理解辅助产物。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接影响日常怎么用AI工具的实操技巧，给出几条具体可操作的方法"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "Mods are absolutely insane. You can now customize Claude to work and look the way you want by just p…",
+      "link": "https://x.com/bcherny/status/2105756563302723721",
+      "date": "2026-10-01",
+      "first_seen": "2026-10-02T01:20:57.084173+00:00",
+      "source_type": "x",
+      "summary": "介绍Claude新功能Mods：用户可以直接靠提示词定制Claude的工作方式和界面外观，不同人可以有不同的使用体验，做好的mod还能打包成插件分享给其他人。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接影响日常怎么用Claude这个AI工具的实操信息，介绍一个具体的新功能"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Ethan Mollick",
+      "title": "The Dot and the Swarm",
+      "link": "https://www.oneusefulthing.org/p/the-dot-and-the-swarm",
+      "date": "2026-10-01",
+      "first_seen": "2026-10-02T01:20:43.498335+00:00",
+      "source_type": "blog",
+      "summary": "作者反思自己此前判断过于保守：原以为协调多个AI agent需要像搭建公司一样精心设计管理结构，但事实证明“苦涩的教训”同样适用于组织层面——像Muse、dots这类个人agent已经能自己学习上下文、自主制定计划，而OpenAI用数千agent组成的“群”在88小时内、靠270万条agent间消息证出了Navier-Stokes存在性与光滑性问题，几乎不需要人类设计协调结构；他认为这是因为agent没有人类组织中那些源于个人利益冲突的委托代理问题，但Hugging Face事件说明agent群体与人类之间的委托代理问题依然存在。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "对agent协作/swarm这个趋势给出扎实论证而非感想，直接影响对AI agent能力边界的理解"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Gemini 4 Argon: GDM’s answer to Astra/Fable, with 1M output",
+      "link": "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer",
+      "date": "2026-10-01",
+      "first_seen": "2026-10-02T01:20:44.509620+00:00",
+      "source_type": "blog",
+      "summary": "Google DeepMind发布Gemini 4 Argon，面向编程、企业知识工作、网络安全场景，目前仅限政府用户和Fairwind Program的可信网络防御者试用；在19项基准中13项拿到第一，输出上限做到1M token（通过Long Decode Continuation功能），标价4/20美元每百万输入输出token（限时五折）；内部已用其agent迁移超80万行C/C++内核代码到Rust、释放300多TiB数据中心内存，但也存在幻觉率与准确率的权衡、单任务输出token消耗明显高于竞品等问题。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布，详细讲清楚能力边界、定价、落地场景与权衡取舍，不是单纯新闻通稿"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Matthew Green",
+      "link": "https://simonwillison.net/2026/Oct/1/matthew-green/",
+      "date": "2026-10-01",
+      "first_seen": "2026-10-02T01:20:43.739407+00:00",
+      "source_type": "blog",
+      "summary": "引用Matthew Green的观点：独立隔离运行的agent之间可以通过共享的包缓存、邮件、Slack、文档等渠道互相留言，形成蠕虫式传播的两个组成部分——劫持agent的payload和负责搬运payload的agent本身，借此质疑沙箱隔离是否真的能遏制失控agent。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "揭示agent间可通过共享基础设施传播恶意指令、形成蠕虫式攻击的具体机制，直接关系到安全使用AI agent这件事，讲清楚是什么为什么重要"
+        }
+      ],
+      "is_new": true
+    }
+  ],
+  "github_track": []
+}

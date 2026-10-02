@@ -1,6 +1,94 @@
 {
   "items": [
     {
+      "person": "Andrej Karpathy",
+      "title": "We'll be spending a lot more time trying to understand the outputs of language models. A few thought…",
+      "link": "https://x.com/karpathy/status/2105819303471976479",
+      "date": "2026-10-02",
+      "first_seen": "2026-10-02T01:20:55.734935+00:00",
+      "source_type": "x",
+      "summary": "Karpathy给出几条让LLM输出更好理解的技巧：用ASD-STE100这种航空维护文档用的受控语言规范让文字更干净；输出图表/图像比文字更易消化；输出HTML做成可交互网页；他最看好的是直接生成定制的讲解视频（比如要求做成3blue1brown风格）；核心判断是随着LLM自主完成的工作越来越多，人的工作会更多转向监督与理解，而LLM本身也能帮着造出这些“一次性”的理解辅助产物。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "holy",
+      "link": "https://x.com/steipete/status/2105805164305359019",
+      "date": "2026-10-01",
+      "first_seen": "2026-10-02T01:20:59.272889+00:00",
+      "source_type": "x",
+      "summary": "只有一个词“holy”表达惊讶，没有更多上下文可供判断。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "Mods are absolutely insane. You can now customize Claude to work and look the way you want by just p…",
+      "link": "https://x.com/bcherny/status/2105756563302723721",
+      "date": "2026-10-01",
+      "first_seen": "2026-10-02T01:20:57.084173+00:00",
+      "source_type": "x",
+      "summary": "介绍Claude新功能Mods：用户可以直接靠提示词定制Claude的工作方式和界面外观，不同人可以有不同的使用体验，做好的mod还能打包成插件分享给其他人。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "\"the Waymo effect is what happens when a technology removes the friction of dealing with another hum…",
+      "link": "https://x.com/steipete/status/2105739667174019491",
+      "date": "2026-10-01",
+      "first_seen": "2026-10-02T01:20:59.273180+00:00",
+      "source_type": "x",
+      "summary": "转引他人观点：“Waymo效应”指技术消除了与另一个人打交道所需摩擦这件事本身带来的影响，配了一张图，彼得本人未展开评论。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "i have so many questions",
+      "link": "https://x.com/steipete/status/2105728299255415134",
+      "date": "2026-10-01",
+      "first_seen": "2026-10-02T01:20:59.273214+00:00",
+      "source_type": "x",
+      "summary": "只有一句感叹“我有好多问题”，没有附带更多上下文，内容过短无法判断具体指向。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "I'm speedrunning my filesystem learnings. Turns out, brtfs cow-feature is GREAT for worktrees and te…",
+      "link": "https://x.com/steipete/status/2105720334821261330",
+      "date": "2026-10-01",
+      "first_seen": "2026-10-02T01:20:59.273245+00:00",
+      "source_type": "x",
+      "summary": "分享自己踩的文件系统坑：btrfs的COW特性对worktree友好，但对SQLite是灾难，他的工具OC下一个版本会据此把数据库迁移到NOCOW目录。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "All my oss releases stopped because Apple put up a new dev agreement. And since it's lockstep it blo…",
+      "link": "https://x.com/steipete/status/2105712707592679619",
+      "date": "2026-10-01",
+      "first_seen": "2026-10-02T01:20:59.273274+00:00",
+      "source_type": "x",
+      "summary": "吐槽苹果新开发者协议把自己所有开源项目的发布都卡住了，由于发布流程是联动的，连Linux/Windows版本也被连带堵住。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @ClaudeDevs: https://t.co/sRyO7OigQ7 is our new home for developers building with Claude.   You'l…",
+      "link": "https://x.com/bcherny/status/2105533886424113373",
+      "date": "2026-10-01",
+      "first_seen": "2026-10-02T01:20:57.084403+00:00",
+      "source_type": "x",
+      "summary": "转发Anthropic官方账号公告：ClaudeDevs成为Claude开发者的新聚集地，会提供工程深度解析等内容，目前信息较简短。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
       "person": "Boris Cherny",
       "title": "RT @dfeinition: I work almost exclusively in Claude Projects now, here are some of the things that s…",
       "link": "https://x.com/bcherny/status/2105448431972217045",
@@ -9,7 +97,7 @@
       "source_type": "x",
       "summary": "转推一条分享重度使用Claude Projects心得的推文，提到的第一点是对话经常被刷爆(推文被截断，后续要点没抓到)。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -20,7 +108,7 @@
       "source_type": "x",
       "summary": "觉得多智能体系统里agent之间的对话直接刷屏越来越烦，把OC harness里的显示方式改成默认单行、可展开查看，估计很快会有其他harness跟进这个做法。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -31,7 +119,7 @@
       "source_type": "x",
       "summary": "吐槽CI和GitHub成了拖慢自己的两大元凶，是时候重新想想怎么干活了(但还是喜欢GitHub，理解他们的难处)。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -42,7 +130,7 @@
       "source_type": "x",
       "summary": "吐槽Figma某个限制措施既蠢又容易绕过，不懂Figma为什么要这么做。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -207,94 +295,6 @@
       "source_type": "x",
       "summary": "Boris Cherny分享他在Slack里用Claude（内部代号Tag）的日常用法：每天写他一半以上的PR、几乎全部数据分析、修复大部分产品反馈和bug。它不是普通的Slack机器人，而是主动的、可编程、有记忆、能接连接器。他给了几个示例prompt：让它对已解决的帖子自动打勾、让它端到端复现频道里报的每个bug再提PR修复并通知对应团队review、让它对着异常数据头脑风暴上百个假设并用workflow验证、或者让它做交互式讲解游戏和讲解PPT。",
       "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Afghanistan is more excited about AI than we are?",
-      "link": "https://x.com/steipete/status/2103150483062014436",
-      "date": "2026-09-24",
-      "first_seen": "2026-09-25T00:19:20.199091+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger感慨\"阿富汗对AI的热情比我们还高\"，未展开说明依据。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "OpenClaw deleted around 400k LOC of its own tests without much change in code coverage. Modern model…",
-      "link": "https://x.com/steipete/status/2103147927313199260",
-      "date": "2026-09-24",
-      "first_seen": "2026-09-25T00:19:20.199379+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger分享：OpenClaw删掉了自己代码库里约40万行测试代码，代码覆盖率几乎没受影响——他认为现在的模型有\"逢改必写测试\"的毛病，写了大量没用的测试，提到有个skill帮他解决了这个问题。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @levie: At Box, we've been testing Opus 5.5 on a variety of complex enterprise knowledge work tas…",
-      "link": "https://x.com/bcherny/status/2102996614919094693",
-      "date": "2026-09-24",
-      "first_seen": "2026-09-25T00:19:18.928373+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny转发Box高管的说法：他们在多种复杂企业知识工作任务上测试了Opus 5.5，处理非结构化数据效果不错。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @OmidMogasemi: Projects now support using your local device! Have been using this a ton to let Cl…",
-      "link": "https://x.com/bcherny/status/2102996496732000278",
-      "date": "2026-09-24",
-      "first_seen": "2026-09-25T00:19:18.928679+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny转发：Claude Projects现已支持调用本地设备，能让Claude拉取本地预览构建等，属实操功能更新。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Who needs VNC when there's browsers. https://t.co/3BneKDTzMW",
-      "link": "https://x.com/steipete/status/2102990776439636089",
-      "date": "2026-09-24",
-      "first_seen": "2026-09-25T00:19:20.199443+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger调侃：与其用VNC，不如直接用浏览器操控agent，一句吐槽未展开。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "When I added vnc support I didn't think of this. 🙃",
-      "link": "https://x.com/steipete/status/2102987769589186661",
-      "date": "2026-09-24",
-      "first_seen": "2026-09-25T00:19:20.199473+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger感叹自己当初给产品加VNC支持时没想到网友会这么用，具体是什么玩法没说清楚。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Shall we call this the agent wars? We'll see a lot more of that soon on all fronts.",
-      "link": "https://x.com/steipete/status/2102982942037573868",
-      "date": "2026-09-24",
-      "first_seen": "2026-09-25T00:19:20.199497+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger感慨\"agent大战\"要开打，预计各方会有更多agent产品动作，没有展开具体依据。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "It was an honor to meet Donald Knuth at the Computer History Museum today https://t.co/U6bGOidLmw",
-      "link": "https://x.com/bcherny/status/2102971275543216623",
-      "date": "2026-09-24",
-      "first_seen": "2026-09-25T00:19:18.928717+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny记录自己在Computer History Museum与Donald Knuth会面，纯个人轶事，无更多细节。",
-      "tier": "low",
       "is_new": false
     }
   ]

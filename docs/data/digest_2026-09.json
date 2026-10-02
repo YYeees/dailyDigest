@@ -15,7 +15,7 @@
           "reason": "OpenAI Computer Use负责人详细讲清楚过去一年的实质进展(debug/恢复能力、多模态输入、App Shots、Agents API开放)，信息量扎实、讲清楚为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -32,7 +32,7 @@
           "reason": "一手builder经验，直接命中'护城河在harness，不在模型'——把OC harness里多智能体对话的可见性改成默认单行可展开"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Hamel Husain",
@@ -54,7 +54,7 @@
           "reason": "详细实测报告：指出先选evaluator再看数据的设计缺陷、人工标注体验差、生成的evaluator粒度太粗等具体问题，也指出一次性发现失败模式的能力出乎意料地强；给出明确的'现在该不该用'结论，典型的教怎么测的内容"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -208,6 +208,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Amelia Wattenberger",
+      "title": "Chat is AI’s command line.",
+      "link": "https://wattenberger.com/thoughts/ai-is-still-in-its-terminal-era",
+      "date": "2026-09-27",
+      "first_seen": "2026-10-02T01:20:46.402632+00:00",
+      "source_type": "blog",
+      "summary": "作者认为当前AI界面过度依赖聊天这一种交互范式，但聊天在精细调整和即时反馈上先天不足；回顾Sketchpad、VisiCalc、Xerox Star等界面史上的里程碑，主张AI交互应该支持直接操纵、让计算智能织入界面本身，而不只是做一个更强的对话代理。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入剖析AI界面设计的历史脉络（Sketchpad/VisiCalc/Xerox Star），提出聊天不该是AI交互唯一范式的实操性见解，内容扎实且门槛不高"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Latent Space",

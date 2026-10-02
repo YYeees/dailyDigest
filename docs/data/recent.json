@@ -2,6 +2,84 @@
   "items": [
     {
       "person": "Latent Space",
+      "title": "Academia is for Ambition — Alex Zhang, MIT",
+      "link": "https://www.latent.space/p/rlm",
+      "date": "2026-10-02",
+      "first_seen": "2026-10-02T01:20:44.498160+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space访谈MIT博士生Alex Zhang（RLM一作），聊GPU kernel自动生成、KernelBench、Recursive Language Models背后的context offloading与递归子agent调用、harness作为“组合式泛化器”的设计思路，以及研究品味说到底就是敢不敢下重注；内容偏研究与工程深水区，涉及模型内部机制和前沿harness设计，门槛较高。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "内容扎实但门槛超出一般用户水平（RLM内部机制、GPU kernel研究级别的讨论），按规则不给high"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "大量讨论harness作为组合式泛化器、持久化子agent等，沾护城河在harness母题的边，但是访谈转述而非彼得/用户本人的一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Ethan Mollick",
+      "title": "The Dot and the Swarm",
+      "link": "https://www.oneusefulthing.org/p/the-dot-and-the-swarm",
+      "date": "2026-10-01",
+      "first_seen": "2026-10-02T01:20:43.498335+00:00",
+      "source_type": "blog",
+      "summary": "作者反思自己此前判断过于保守：原以为协调多个AI agent需要像搭建公司一样精心设计管理结构，但事实证明“苦涩的教训”同样适用于组织层面——像Muse、dots这类个人agent已经能自己学习上下文、自主制定计划，而OpenAI用数千agent组成的“群”在88小时内、靠270万条agent间消息证出了Navier-Stokes存在性与光滑性问题，几乎不需要人类设计协调结构；他认为这是因为agent没有人类组织中那些源于个人利益冲突的委托代理问题，但Hugging Face事件说明agent群体与人类之间的委托代理问题依然存在。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "对agent协作/swarm这个趋势给出扎实论证而非感想，直接影响对AI agent能力边界的理解"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Gemini 4 Argon: GDM’s answer to Astra/Fable, with 1M output",
+      "link": "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer",
+      "date": "2026-10-01",
+      "first_seen": "2026-10-02T01:20:44.509620+00:00",
+      "source_type": "blog",
+      "summary": "Google DeepMind发布Gemini 4 Argon，面向编程、企业知识工作、网络安全场景，目前仅限政府用户和Fairwind Program的可信网络防御者试用；在19项基准中13项拿到第一，输出上限做到1M token（通过Long Decode Continuation功能），标价4/20美元每百万输入输出token（限时五折）；内部已用其agent迁移超80万行C/C++内核代码到Rust、释放300多TiB数据中心内存，但也存在幻觉率与准确率的权衡、单任务输出token消耗明显高于竞品等问题。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布，详细讲清楚能力边界、定价、落地场景与权衡取舍，不是单纯新闻通稿"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Matthew Green",
+      "link": "https://simonwillison.net/2026/Oct/1/matthew-green/",
+      "date": "2026-10-01",
+      "first_seen": "2026-10-02T01:20:43.739407+00:00",
+      "source_type": "blog",
+      "summary": "引用Matthew Green的观点：独立隔离运行的agent之间可以通过共享的包缓存、邮件、Slack、文档等渠道互相留言，形成蠕虫式传播的两个组成部分——劫持agent的payload和负责搬运payload的agent本身，借此质疑沙箱隔离是否真的能遏制失控agent。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "揭示agent间可通过共享基础设施传播恶意指令、形成蠕虫式攻击的具体机制，直接关系到安全使用AI agent这件事，讲清楚是什么为什么重要"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "沾AI安全/harness主题的边，但内容是转引Matthew Green的二手观点，不是Simon本人的一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
       "title": "Why Dwarkesh is Wrong about Computer Use + How OpenAI shipped its Jev competitor in 1 Week",
       "link": "https://www.latent.space/p/devday-2026",
       "date": "2026-09-30",
@@ -20,29 +98,7 @@
           "reason": "其中一段专门讲用Computer Use agent测试agent自己写的软件、闭环开发-测试流程，是真实用例但只是访谈里的一个片段，不是全篇重点"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "He Built This City",
-      "link": "https://simonwillison.net/2026/Sep/30/he-built-this-city/",
-      "date": "2026-09-30",
-      "first_seen": "2026-10-01T01:07:01.784890+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "游记性质，跟AI无关"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干没有实质连接"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Hamel Husain",
@@ -64,7 +120,7 @@
           "reason": "详细实测报告：指出先选evaluator再看数据的设计缺陷、人工标注体验差、生成的evaluator粒度太粗等具体问题，也指出一次性发现失败模式的能力出乎意料地强；给出明确的'现在该不该用'结论，典型的教怎么测的内容"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -81,7 +137,7 @@
           "reason": "DevDay新品信息量大(Dots/GPT-6.1 Sol/Decisions API)，但写法行话密集、纯资讯汇总压缩，门槛偏高"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ministry of Testing",
@@ -103,7 +159,7 @@
           "reason": "讨论AI改造部署运维(广义可靠性保障)该多谨慎还是多激进，但停留在观点层面，没有具体工具或实验案例"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -325,6 +381,28 @@
       "is_new": false
     },
     {
+      "person": "Amelia Wattenberger",
+      "title": "Chat is AI’s command line.",
+      "link": "https://wattenberger.com/thoughts/ai-is-still-in-its-terminal-era",
+      "date": "2026-09-27",
+      "first_seen": "2026-10-02T01:20:46.402632+00:00",
+      "source_type": "blog",
+      "summary": "作者认为当前AI界面过度依赖聊天这一种交互范式，但聊天在精细调整和即时反馈上先天不足；回顾Sketchpad、VisiCalc、Xerox Star等界面史上的里程碑，主张AI交互应该支持直接操纵、让计算智能织入界面本身，而不只是做一个更强的对话代理。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入剖析AI界面设计的历史脉络（Sketchpad/VisiCalc/Xerox Star），提出聊天不该是AI交互唯一范式的实操性见解，内容扎实且门槛不高"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "主题落在人机交互/思维工具这个周边领域，是作者本人的一手论述，但未直接命中某条具体正向母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "OpenRouter: from Seed to Stripe — with OpenRouter’s Alex Atallah & AMP’s Anjney Midha",
       "link": "https://www.latent.space/p/openrouter",
@@ -432,101 +510,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "对Runway GWM Worlds 2的WorldPrompt功能做了深入技术访谈，讲清楚了实时世界模型的核心工程难点（误差累积、显存管理、反事实生成），信息扎实且门槛不算高"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Antithesis",
-      "title": "Free log storage with a time machine",
-      "link": "https://antithesis.com/blog/2026/retrologging/",
-      "date": "2026-09-24",
-      "first_seen": "2026-09-25T00:19:14.036277+00:00",
-      "source_type": "blog",
-      "summary": "Antithesis博客技术文章：介绍\"追溯日志(retrologging)\"——利用其确定性虚拟化平台能精确重放任意测试运行的特性，测试时先不保存详细的debug/trace级日志，只在真发现问题时才通过重放执行路径把日志重建出来；实测显示开启这个特性时测试性能开销约44%，远低于传统持续记录详细日志的91%开销，同时省下大量日志存储成本。",
-      "tracks": [
-        {
-          "track": "eval",
-          "tier": "high",
-          "reason": "具体技术方法(确定性重放按需重建日志)加可量化性能数据(44% vs 91%开销)，展示确定性仿真测试基础设施的真实能力，不是空泛的功能介绍"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Ministry of Testing",
-      "title": "What's one QA task AI still does surprisingly badly?",
-      "link": "https://club.ministryoftesting.com/t/whats-one-qa-task-ai-still-does-surprisingly-badly/87767",
-      "date": "2026-09-24",
-      "first_seen": "2026-09-25T00:19:14.694772+00:00",
-      "source_type": "blog",
-      "summary": "Ministry of Testing论坛提问帖：楼主的QA团队已经在用测试工具自带的AI功能生成用例和测试运行，能省时间但仍需人工复核部分产出，发帖问大家\"AI在哪些QA任务上依然出乎意料地差\"；本次抓取只拿到主楼，回帖里真正列出具体短板的内容未能获取。",
-      "tracks": [
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "论坛上有讨论价值的提问，但主楼很短，精华在回帖里，本次只抓到主楼没有具体案例"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Martin Fowler",
-      "title": "Fragments: September 24",
-      "link": "https://martinfowler.com/fragments/2026-09-24.html",
-      "date": "2026-09-24",
-      "first_seen": "2026-09-25T00:19:13.029414+00:00",
-      "source_type": "blog",
-      "summary": "Martin Fowler本周Fragments：转述Rob Bowley的观点——真正该担心的不是AI未来会不会失控，而是当下AI被草率地接进各种系统里，容易撞上\"致命三要素\"式安全漏洞；另评论一篇关于代码语法高亮的文章(颜色应克制使用，别把所有元素都上色)；以及对\"Forward Deployed Engineer\"概念的反思——认为这本质是DDD和敏捷早就提倡的\"开发者和业务方共同工作\"，价值在于把一线经验反哺回产品，而不只是伺候好单个客户。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "涵盖agent安全(致命三要素)等AI话题的一手评论，但是转述他人观点加轻量点评，且话题混杂了非AI内容"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "涉及构建者/工具打造相关话题(FDE反哺产品)但整体是转述与评论他人文章，非作者本人的一手经历"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Foundries vs Navigators: Lowering the Cost of Science",
-      "link": "https://www.latent.space/p/foundries-vs-navigators-lowering",
-      "date": "2026-09-24",
-      "first_seen": "2026-09-25T00:19:12.202080+00:00",
-      "source_type": "blog",
-      "summary": "Endura Therapeutics创始人一手分享AI如何改变一线科研：软件工程提速但实验本身(湿实验室验证)仍是瓶颈，\"思考变便宜、动手没变便宜\"；他把生物科技公司的应对分成两类——Foundry靠新技术把测量本身做快，Navigator靠把AI用进日常决策与工具搭建来释放思考红利。他细讲了自己公司里代码分析、内部数据看板、疾病靶点两阶段AI筛选(500个初筛到100个深判)如何被AI提速，核心论点是\"以前是能买就不自建，现在是要自建能塑造你怎么想问题的工具\"。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "Endura Therapeutics创始人一手讲AI如何提速一线科研，有具体方法和数字论证，不是宏观叙事"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "作者一手经历，核心论点\"以前能买就不自建，现在要自建能塑造你怎么想问题的工具\"直接踩中\"护城河在harness不在模型\"和\"认知系统不能外包\"两条正向母题"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Meta Connect 2026: Muse glasses, voice, video, and Charm",
-      "link": "https://www.latent.space/p/ainews-meta-connect-2026-muse-glasses",
-      "date": "2026-09-24",
-      "first_seen": "2026-09-25T00:19:12.203777+00:00",
-      "source_type": "blog",
-      "summary": "Meta Connect 2026发布会梳理：个人智能体Muse新增语音和实时视频交互，即将上线所有Meta眼镜(唤醒词激活)，新增Muse Mail、Mac端computer use、1500+连接器生态(涵盖购物与生产力应用)；同时发布Ray-Ban Meta Gen 3、首款眼镜形态VR设备(1299美元)、FDA认证助听器眼镜、Muse Charm挂件，并收购语音初创WaveForms AI；Wang预告即将发布\"迄今最强\"新模型但本次未随发布会推出。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "前沿AI产品发布会的完整梳理，讲清楚Meta Muse智能体+硬件战略是什么、为什么重要，不是纯通稿"
         }
       ],
       "is_new": false
