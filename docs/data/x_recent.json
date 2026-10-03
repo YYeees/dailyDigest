@@ -1,6 +1,39 @@
 {
   "items": [
     {
+      "person": "Peter Steinberger",
+      "title": "This was by far my favorite slide at DevDay. Kudos to the team! https://t.co/AQtPzNTZhx",
+      "link": "https://x.com/steipete/status/2106076508020506722",
+      "date": "2026-10-02",
+      "first_seen": "2026-10-03T00:58:59.962651+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger发推称这是他在OpenAI DevDay上最喜欢的一张slide，向团队表示祝贺——纯粹的赞赏，没有涉及自家产品宣传。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Andrej Karpathy",
+      "title": "Cool eval. Simply ask an LLM “Land or Water?” and give it a latitude and longitude coordinate as tex…",
+      "link": "https://x.com/karpathy/status/2105909609487872075",
+      "date": "2026-10-02",
+      "first_seen": "2026-10-03T00:58:57.280647+00:00",
+      "source_type": "x",
+      "summary": "Karpathy展示了一个有趣的eval：让LLM对16200个经纬度坐标判断“陆地还是水域”并把结果可视化成图像，发现模型确实“知道”地球的陆地水域分布——这是从压缩互联网文本中习得隐性知识的生动例证。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Amanda Askell",
+      "title": "Tantalum being discovered in 1802 and turning out to have an isotope with a half life so long that w…",
+      "link": "https://x.com/AmandaAskell/status/2105901984889086203",
+      "date": "2026-10-02",
+      "first_seen": "2026-10-03T00:58:55.858123+00:00",
+      "source_type": "x",
+      "summary": "钽(Tantalum)1802年被发现，其中一种同位素的半衰期长到可能永远观测不到衰变——作者借此调侃这是“命名决定论”的绝佳例子。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
       "person": "Andrej Karpathy",
       "title": "We'll be spending a lot more time trying to understand the outputs of language models. A few thought…",
       "link": "https://x.com/karpathy/status/2105819303471976479",
@@ -9,7 +42,7 @@
       "source_type": "x",
       "summary": "Karpathy给出几条让LLM输出更好理解的技巧：用ASD-STE100这种航空维护文档用的受控语言规范让文字更干净；输出图表/图像比文字更易消化；输出HTML做成可交互网页；他最看好的是直接生成定制的讲解视频（比如要求做成3blue1brown风格）；核心判断是随着LLM自主完成的工作越来越多，人的工作会更多转向监督与理解，而LLM本身也能帮着造出这些“一次性”的理解辅助产物。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -20,7 +53,7 @@
       "source_type": "x",
       "summary": "只有一个词“holy”表达惊讶，没有更多上下文可供判断。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -31,7 +64,7 @@
       "source_type": "x",
       "summary": "介绍Claude新功能Mods：用户可以直接靠提示词定制Claude的工作方式和界面外观，不同人可以有不同的使用体验，做好的mod还能打包成插件分享给其他人。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -42,7 +75,7 @@
       "source_type": "x",
       "summary": "转引他人观点：“Waymo效应”指技术消除了与另一个人打交道所需摩擦这件事本身带来的影响，配了一张图，彼得本人未展开评论。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -53,7 +86,7 @@
       "source_type": "x",
       "summary": "只有一句感叹“我有好多问题”，没有附带更多上下文，内容过短无法判断具体指向。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -64,7 +97,7 @@
       "source_type": "x",
       "summary": "分享自己踩的文件系统坑：btrfs的COW特性对worktree友好，但对SQLite是灾难，他的工具OC下一个版本会据此把数据库迁移到NOCOW目录。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -75,7 +108,7 @@
       "source_type": "x",
       "summary": "吐槽苹果新开发者协议把自己所有开源项目的发布都卡住了，由于发布流程是联动的，连Linux/Windows版本也被连带堵住。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -86,7 +119,7 @@
       "source_type": "x",
       "summary": "转发Anthropic官方账号公告：ClaudeDevs成为Claude开发者的新聚集地，会提供工程深度解析等内容，目前信息较简短。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -229,72 +262,6 @@
       "source_type": "x",
       "summary": "一句简短的自我提醒——继续思考，未展开具体内容。",
       "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "The biggest design mistake I made when we moved OC to sqlite: using sync db access. When it was just…",
-      "link": "https://x.com/steipete/status/2103648679169257737",
-      "date": "2026-09-26",
-      "first_seen": "2026-09-27T00:19:52.586457+00:00",
-      "source_type": "x",
-      "summary": "Steinberger反思OpenClaw从同步数据库访问迁移到sqlite时踩的坑：单agent场景下同步访问没问题，但团队并行跑50个session后就成了瓶颈；目前已通过575个PR逐步把系统迁移到异步worker架构，即使是大重构现在也不再可怕。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "day of the dead",
-      "link": "https://x.com/steipete/status/2103615459426001163",
-      "date": "2026-09-25",
-      "first_seen": "2026-09-26T00:24:34.575568+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger发的一句极简推文“day of the dead”（亡灵节），没有配文说明具体指什么，缺乏上下文，可能是个梗或隐喻。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @trq212: What is effort really? When do you change it it and why not just use max effort for ever…",
-      "link": "https://x.com/bcherny/status/2103593008331678000",
-      "date": "2026-09-25",
-      "first_seen": "2026-09-26T00:24:33.402807+00:00",
-      "source_type": "x",
-      "summary": "转发的推文探讨“effort（努力程度）”参数到底是什么、什么时候该调整它、为什么不能所有场景都直接用最高档，作者说自己深入研究了这个问题，但推文本身被截断，未展开完整论证。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @ClaudeDevs: Claude Code will now try to find a graceful stopping point when you hit your 5-hour…",
-      "link": "https://x.com/bcherny/status/2103592968557076636",
-      "date": "2026-09-25",
-      "first_seen": "2026-09-26T00:24:33.403063+00:00",
-      "source_type": "x",
-      "summary": "转发消息称Claude Code现在会在用户触及5小时用量上限时，尝试找一个任务的自然停顿点收尾，而不是生硬地在任务中途被切断。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "That sounds 100% like the OC hype cycle we had 8 months ago.  Biggest limitation isn’t the tech, it’…",
-      "link": "https://x.com/steipete/status/2103580623239827941",
-      "date": "2026-09-25",
-      "first_seen": "2026-09-26T00:24:34.575807+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger评论说这波炒作跟8个月前的那轮炒作周期一模一样：技术本身不是最大的限制，真正的瓶颈是想象力和创造力。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "Tag writes >50% of my PRs every day. It also does ~100% of my data analysis, and fixes most of our p…",
-      "link": "https://x.com/bcherny/status/2103538666597691552",
-      "date": "2026-09-25",
-      "first_seen": "2026-09-26T00:24:33.403121+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny分享他在Slack里用Claude（内部代号Tag）的日常用法：每天写他一半以上的PR、几乎全部数据分析、修复大部分产品反馈和bug。它不是普通的Slack机器人，而是主动的、可编程、有记忆、能接连接器。他给了几个示例prompt：让它对已解决的帖子自动打勾、让它端到端复现频道里报的每个bug再提PR修复并通知对应团队review、让它对着异常数据头脑风暴上百个假设并用workflow验证、或者让它做交互式讲解游戏和讲解PPT。",
-      "tier": "high",
       "is_new": false
     }
   ]
