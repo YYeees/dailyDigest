@@ -1,6 +1,67 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "We're going to need default hard budget caps on pretty much everything",
+      "link": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
+      "date": "2026-10-03",
+      "first_seen": "2026-10-04T00:23:17.663245+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison呼吁付费API和托管服务应默认提供硬性预算上限——超支直接报错断服务，而不是只发警告邮件，因为编码agent和个人agent让人更容易在无人盯着的情况下跑出失控账单。他指出AWS九月、Google Cloud七月都已经上线了类似的硬性支出上限功能，认为这应该成为行业默认，想不设上限的人应该主动勾选opt-in，而不是让意外账单成为默认风险。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接影响日常怎么用AI编码agent的实操信息：论证为什么付费API/托管服务需要默认硬性预算上限，并点出AWS九月、Google Cloud七月已经上线了类似的硬性支出上限功能，门槛不高、讲清楚了为什么重要"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "是产品/风控层面的建议，没有连到三根主干的具体母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "September sponsors-only newsletter",
+      "link": "https://simonwillison.net/2026/Oct/3/newsletter/",
+      "date": "2026-10-03",
+      "first_seen": "2026-10-04T00:23:17.663436+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "只是付费订阅newsletter的发刊通知，实际内容在付费墙后面看不到，罗列的topic都只是标题"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "通知性质，没有实质内容可连到三根主干"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] not much happened today",
+      "link": "https://www.latent.space/p/ainews-not-much-happened-today-cee",
+      "date": "2026-10-03",
+      "first_seen": "2026-10-04T00:23:18.323758+00:00",
+      "source_type": "blog",
+      "summary": "这期AINews汇编了10月1-2日AI圈动态：OpenAI新发布的GPT-6.1 Sol主打性价比(比GPT-6 Sol便宜39%但分数更高，比Astra便宜81%)；Anthropic的Sonnet 5.5在Agent Arena排名第3、Chat类目第1，目前Anthropic系模型包揽Agent Arena前三；Gemini 4 Argon拿下Text Arena第一。另有多条模型发布的未证实传闻(Fable 5.5、GPT-6 Astra Lite)，以及本地小模型(webAI TwIL-LM3-Pro、Reka RIDM等)和开源决策模型生态的进展。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI News每日汇编，罗列了GPT-6.1 Sol/Sonnet 5.5等新模型定价和Agent Arena榜单变化，信息量大但是转述推特口径的新闻通稿而非深度解读"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "NN/g",
       "title": "The New Big Ball of Mud: Why Agentic AI Systems Turn Fragile",
       "link": "https://www.nngroup.com/articles/big-ball-of-mud-ai/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
@@ -20,7 +81,7 @@
           "reason": "主题紧贴“护城河在harness不在模型”“自然生长质朴中正”等母题，但这是NN/g的研究分析文章，不是作者个人的一手经历反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -42,7 +103,7 @@
           "reason": "结尾讨论了AI时代工程师的测试素养和craft培养问题，沾eval主题的边，但整篇文章重心是组织转型而非测试本身"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -64,7 +125,7 @@
           "reason": "主题沾“护城河在harness不在模型”这条母题的边，但是Latent Space的转述报道，不是作者本人的一手反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -437,28 +498,6 @@
           "track": "eval",
           "tier": "medium",
           "reason": "回帖给出了具体的agent测试契约方法论(风险/初始状态/操作路径/oracle/结束状态校验/证据留存/清理)，但仅浏览器自动化单一场景、只有一条高质量回复"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Amelia Wattenberger",
-      "title": "Chat is AI’s command line.",
-      "link": "https://wattenberger.com/thoughts/ai-is-still-in-its-terminal-era",
-      "date": "2026-09-27",
-      "first_seen": "2026-10-02T01:20:46.402632+00:00",
-      "source_type": "blog",
-      "summary": "作者认为当前AI界面过度依赖聊天这一种交互范式，但聊天在精细调整和即时反馈上先天不足；回顾Sketchpad、VisiCalc、Xerox Star等界面史上的里程碑，主张AI交互应该支持直接操纵、让计算智能织入界面本身，而不只是做一个更强的对话代理。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "深入剖析AI界面设计的历史脉络（Sketchpad/VisiCalc/Xerox Star），提出聊天不该是AI交互唯一范式的实操性见解，内容扎实且门槛不高"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "主题落在人机交互/思维工具这个周边领域，是作者本人的一手论述，但未直接命中某条具体正向母题"
         }
       ],
       "is_new": false

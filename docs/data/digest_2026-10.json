@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "We're going to need default hard budget caps on pretty much everything",
+      "link": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
+      "date": "2026-10-03",
+      "first_seen": "2026-10-04T00:23:17.663245+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison呼吁付费API和托管服务应默认提供硬性预算上限——超支直接报错断服务，而不是只发警告邮件，因为编码agent和个人agent让人更容易在无人盯着的情况下跑出失控账单。他指出AWS九月、Google Cloud七月都已经上线了类似的硬性支出上限功能，认为这应该成为行业默认，想不设上限的人应该主动勾选opt-in，而不是让意外账单成为默认风险。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接影响日常怎么用AI编码agent的实操信息：论证为什么付费API/托管服务需要默认硬性预算上限，并点出AWS九月、Google Cloud七月已经上线了类似的硬性支出上限功能，门槛不高、讲清楚了为什么重要"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "NN/g",
       "title": "The New Big Ball of Mud: Why Agentic AI Systems Turn Fragile",
       "link": "https://www.nngroup.com/articles/big-ball-of-mud-ai/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
@@ -15,7 +32,7 @@
           "reason": "对AI驱动的系统搭建风险给出了扎实的论证和警示，属于面向工程师/建造者的实操提醒"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -32,7 +49,7 @@
           "reason": "详实的一线AI转型案例，有具体数字（60%代码AI生成、人均PR效率提升1.6倍）和方法论（多模型选型、合成数据测试），对工程师有实操参考价值"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -49,7 +66,7 @@
           "reason": "Pi 1.0和Pi Durable是具体的agent harness新发布，讲清楚了新增功能（MCP原生支持、崩溃恢复、多人协作等）是什么、为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrej Karpathy",
