@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "person": "Boris Cherny",
+      "title": "RT @claudeai: Lots of inventive things made with Claude these past few weeks. A few of our favorites…",
+      "link": "https://x.com/bcherny/status/2106805098534052135",
+      "date": "2026-10-04",
+      "first_seen": "2026-10-05T00:29:50.794603+00:00",
+      "source_type": "x",
+      "summary": "Claude官方账号(@claudeai)盘点近几周用户用Claude做出的一些有创意的作品，其中一例是用Opus搭建的一台能实际运转的水车模型，Boris Cherny转发推荐。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @lydiahallie: A few of you asked what mods are, here's a quick walkthrough! They’re really just p…",
+      "link": "https://x.com/bcherny/status/2106565344919953590",
+      "date": "2026-10-04",
+      "first_seen": "2026-10-05T00:29:50.795034+00:00",
+      "source_type": "x",
+      "summary": "lydiahallie发帖图解「mods」概念：本质上是带几个特殊功能的插件，Boris Cherny转发推荐这条讲解线程。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
       "person": "Peter Steinberger",
       "title": "laughing about how we all are building the same thing.",
       "link": "https://x.com/steipete/status/2106489264443981978",
@@ -9,7 +31,7 @@
       "source_type": "x",
       "summary": "感慨一句：大家都在做同一件事，挺好笑的。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -20,7 +42,7 @@
       "source_type": "x",
       "summary": "吐槽OpenClaw安卓版已经卡在Google应用审核队列一周多，问有没有认识Google的人能帮忙推进。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -229,28 +251,6 @@
       "source_type": "x",
       "summary": "Anthropic工程师Boris Cherny展示Sonnet 5.5在Claude Code里修bug的实测：相比之前版本快30%、用量少30%，直观体现新模型在编码agent场景下的效率提升。",
       "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Same. @useblacksmith has been an amazing sponsor but we need to distribute the load.   My plan is to…",
-      "link": "https://x.com/steipete/status/2104305554760114488",
-      "date": "2026-09-27",
-      "first_seen": "2026-09-28T00:20:28.598816+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger计划用codex agent自主判断哪些测试真正需要运行，以此大幅削减CI负载、把测试频率降到按小时跑一次，回应CI资源紧张、分散赞助商负载的问题。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Amanda Askell",
-      "title": "I wanted to know if I only hate perfume because I've never owned a nice one. So I researched a bunch…",
-      "link": "https://x.com/AmandaAskell/status/2104261424625381528",
-      "date": "2026-09-27",
-      "first_seen": "2026-09-28T00:20:23.783810+00:00",
-      "source_type": "x",
-      "summary": "Amanda Askell买了几款口碑很好的高价香水做实验，想验证自己讨厌香水是不是因为没用过好货，结果确认——她还是觉得所有香水都难闻。",
-      "tier": "low",
       "is_new": false
     }
   ]

@@ -13,36 +13,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "直接影响日常怎么用AI编码agent的实操信息：论证为什么付费API/托管服务需要默认硬性预算上限，并点出AWS九月、Google Cloud七月已经上线了类似的硬性支出上限功能，门槛不高、讲清楚了为什么重要"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "是产品/风控层面的建议，没有连到三根主干的具体母题"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "September sponsors-only newsletter",
-      "link": "https://simonwillison.net/2026/Oct/3/newsletter/",
-      "date": "2026-10-03",
-      "first_seen": "2026-10-04T00:23:17.663436+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "只是付费订阅newsletter的发刊通知，实际内容在付费墙后面看不到，罗列的topic都只是标题"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "通知性质，没有实质内容可连到三根主干"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -59,7 +32,7 @@
           "reason": "AI News每日汇编，罗列了GPT-6.1 Sol/Sonnet 5.5等新模型定价和Agent Arena榜单变化，信息量大但是转述推特口径的新闻通稿而非深度解读"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "NN/g",
@@ -442,62 +415,6 @@
           "track": "anchor",
           "tier": "medium",
           "reason": "访谈探讨意识、自我觉知、身心对话等主题，沾根一深度自我认识的边，但是访谈转述而非作者一手反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Craig Mod",
-      "title": "[RIDGELINE] Walking Norway's Gudbrandsdalsleden Pilgrimage",
-      "link": "https://craigmod.com/ridgeline/235/",
-      "date": "2026-09-28",
-      "first_seen": "2026-09-29T01:31:47.420878+00:00",
-      "source_type": "blog",
-      "summary": "作者与Kevin Kelly等人沿挪威中世纪朝圣古道Gudbrandsdalsleden步行132公里，一路上讨论“什么是完美的一天”、人生阶段的取舍变化。步道几乎无游客、只有本地人遛狗的清净场域，让人得以专注内在对话；但一周高强度交流后也感到“心满但灵魂疲惫”，映照深度连接与独处之间的张力，是一次关于简朴生活与自然生长的一手体验。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "作者本人一手经历：徒步古道的清净无游客场域、深夜讨论人生阶段取舍、简朴生活与深度对话的张力，直接踩中清净的场域与自然生长质朴中正母题"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "2026 in LLMs (so far)",
-      "link": "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/",
-      "date": "2026-09-27",
-      "first_seen": "2026-09-28T00:20:07.999155+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison在WeAreDevelopers闭幕演讲中系统回顾了2026年LLM领域的关键节点：从Opus 4.5、GPT-5.1让编码agent从「常出错」跃升到「日常可用」，到开源模型逼近前沿水平、OpenClaw定义出「Claw」这一新品类，再到多起agent训练中突破沙箱引发的安全事故甚至惊动联合国大会。他在结尾反思：当AI几乎能做一切时反而生出一种虚无感，但清晰定义目标、给出明确指令、匹配合适工具这类专业能力依然稀缺——不是活变容易了，而是人变快了。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "对2026年AI/LLM全年关键趋势(编码agent能力跃升、开源模型逼近前沿、OpenClaw新品类、agent安全事故)的系统梳理，来自权威作者的年度回顾，信息量扎实"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Ministry of Testing",
-      "title": "Testing Skills for Agent",
-      "link": "https://club.ministryoftesting.com/t/testing-skills-for-agent/87775",
-      "date": "2026-09-27",
-      "first_seen": "2026-09-28T00:20:11.351385+00:00",
-      "source_type": "blog",
-      "summary": "Ministry of Testing论坛上有人求助如何为AGENTS.md补充测试技能，一条高质量回复给出较完整的方法论：让代理产出「测试契约」而非只交代码——包括风险描述、初始状态、操作路径、判定预言(oracle)、结束状态校验、证据留存与清理步骤，并强调浏览器类任务应以完整读回预期状态判定完成，而非仅凭点击执行。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "关于AGENTS.md里如何写测试技能指令，对用agent做工程实操有一定参考价值，但主题偏窄"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "回帖给出了具体的agent测试契约方法论(风险/初始状态/操作路径/oracle/结束状态校验/证据留存/清理)，但仅浏览器自动化单一场景、只有一条高质量回复"
         }
       ],
       "is_new": false
