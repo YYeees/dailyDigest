@@ -154,5 +154,60 @@
       "is_new": false
     }
   ],
-  "github_track": []
+  "github_track": [
+    {
+      "full_name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "language": "JavaScript",
+      "difficulty": "beginner",
+      "recommend_reason": "给AI编码助手(Claude Code/Cursor等)用的前端设计质量框架,用24个命令+61条确定性检测规则解决'AI生成UI同质化'的问题,离线规则无需调LLM。安装和使用门槛都低(npx一行装,自然语言命令),且有真实案例(Neo Mirai)前后对比,作者有Anthropic frontend-design技能开发背景,是AI辅助设计工具的扎实实践样本。",
+      "stars_total": 76323
+    },
+    {
+      "full_name": "microsoft/AI-For-Beginners",
+      "url": "https://github.com/microsoft/AI-For-Beginners",
+      "description": "12 Weeks, 24 Lessons, AI for All!",
+      "language": "Jupyter Notebook",
+      "difficulty": "beginner",
+      "recommend_reason": "微软官方12周24课的AI入门课程,从符号AI、神经网络到CV/NLP/强化学习/AI伦理全覆盖,PyTorch和TensorFlow双版本notebook配实验任务,50多种语言翻译。零基础可从头学,代码可运行而非纯理论,是AI系统性入门学习路径上权威且完整的样本。",
+      "stars_total": 69442
+    },
+    {
+      "full_name": "moeru-ai/airi",
+      "url": "https://github.com/moeru-ai/airi",
+      "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+      "language": "TypeScript",
+      "difficulty": "beginner",
+      "recommend_reason": "开源复刻'Neuro-sama'式AI虚拟主播,整合30+LLM provider、实时语音交互、VRM/Live2D动画和游戏能力(Minecraft/Factorio),已有Web/桌面/移动三个落地阶段而非单一demo。普通用户直接装应用即可用,50k星标和活跃Discord社区说明项目持续迭代,是'AI陪伴类应用'方向上少有的成熟开源实践样本。",
+      "stars_total": 50036
+    },
+    {
+      "full_name": "VectifyAI/PageIndex",
+      "url": "https://github.com/VectifyAI/PageIndex",
+      "description": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
+      "language": "Python",
+      "difficulty": "beginner",
+      "recommend_reason": "无向量的推理式RAG方案,把文档构建成分层树索引,靠LLM推理遍历而非embedding相似度检索,直接针对'相似性≠相关性'这个向量RAG的真实痛点。3行代码上手,在FinanceBench上98.7%准确率远超向量RAG的50%,索引/查询成本也有具体数字支撑,是RAG技术路线创新的代表性样本。",
+      "stars_total": 38639
+    },
+    {
+      "full_name": "topoteretes/cognee",
+      "url": "https://github.com/topoteretes/cognee",
+      "description": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory with small models for free",
+      "language": "Python",
+      "difficulty": "beginner",
+      "recommend_reason": "给AI agent提供跨会话长期记忆的平台,remember/recall/improve/forget四个操作对应清晰,支持本地小模型免API key运行,也有BEAM框架下的量化基准(10M token场景0.67分)。pip装好即可用,多语言SDK和编辑器集成完整,是agent记忆这个新兴方向里有实际基准支撑的扎实项目。",
+      "stars_total": 31361
+    },
+    {
+      "full_name": "AI4Finance-Foundation/FinGPT",
+      "url": "https://github.com/AI4Finance-Foundation/FinGPT",
+      "description": "FinGPT: Open-Source Financial Large Language Models! Revolutionize 🔥 We release the trained model on HuggingFace.",
+      "language": "Jupyter Notebook",
+      "difficulty": "intermediate",
+      "recommend_reason": "开源金融LLM项目,核心是用LoRA轻量微调(单次训练成本控制在300美元内)而非像BloombergGPT那样全量重训,在情感分析等金融NLP基准上验证超过GPT-4。有HuggingFace Space真实demo、多个基座模型的微调版本和学术会议背书(NeurIPS/IJCAI),提供无GPU的初学者路径降低门槛,是'低成本民主化金融AI'的代表性实践。",
+      "stars_total": 21351
+    }
+  ]
 }
