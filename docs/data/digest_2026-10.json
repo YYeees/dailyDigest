@@ -2,6 +2,40 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Quoting Felix Rieseberg",
+      "link": "https://simonwillison.net/2026/Oct/5/felix-rieseberg/",
+      "date": "2026-10-05",
+      "first_seen": "2026-10-06T02:05:39.006834+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic的Felix Rieseberg解释了Claude Cowork的架构变化：旧版本在用户本地跑一个VM来执行工具调用，新版本把推理和VM都搬到云端、每个会话独立沙箱，只有访问本地文件时才交回桌面客户端处理。这是为了解决本地VM耗电、占磁盘、合上笔记本就中断工作等用户反馈的问题，也让手机上使用Cowork成为可能。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "清楚解释Claude Cowork架构从本地VM改为云端VM的原因和权衡，直接影响用户对这个工具的理解和使用"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @trq212: I've been working on a skill that makes better HTML plans in Claude Code.   It uses simp…",
+      "link": "https://x.com/bcherny/status/2107227891855700201",
+      "date": "2026-10-05",
+      "first_seen": "2026-10-06T02:05:50.204294+00:00",
+      "source_type": "x",
+      "summary": "一位开发者分享了自制的Claude Code技能，能生成用简单语言写成、带代码片段的HTML格式任务计划，让人更容易读懂agent接下来要做什么。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接影响日常怎么用Claude Code的实操技巧：一个让agent生成更易读HTML任务计划的skill"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "We're going to need default hard budget caps on pretty much everything",
       "link": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
       "date": "2026-10-03",
@@ -15,7 +49,7 @@
           "reason": "直接影响日常怎么用AI编码agent的实操信息：论证为什么付费API/托管服务需要默认硬性预算上限，并点出AWS九月、Google Cloud七月已经上线了类似的硬性支出上限功能，门槛不高、讲清楚了为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "NN/g",

@@ -2,6 +2,77 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Quoting Felix Rieseberg",
+      "link": "https://simonwillison.net/2026/Oct/5/felix-rieseberg/",
+      "date": "2026-10-05",
+      "first_seen": "2026-10-06T02:05:39.006834+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic的Felix Rieseberg解释了Claude Cowork的架构变化：旧版本在用户本地跑一个VM来执行工具调用，新版本把推理和VM都搬到云端、每个会话独立沙箱，只有访问本地文件时才交回桌面客户端处理。这是为了解决本地VM耗电、占磁盘、合上笔记本就中断工作等用户反馈的问题，也让手机上使用Cowork成为可能。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "清楚解释Claude Cowork架构从本地VM改为云端VM的原因和权衡，直接影响用户对这个工具的理解和使用"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干无实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Maaret Pyhäjärvi",
+      "title": "Filling the Gaps",
+      "link": "https://visible-quality.blogspot.com/2026/10/filling-gaps.html",
+      "date": "2026-10-05",
+      "first_seen": "2026-10-06T02:05:41.624121+00:00",
+      "source_type": "blog",
+      "summary": "作者反思自己越来越偏好和AI一对一协作、把人际关系留给广播式沟通，担心这种个体生产力优化会拉大同事间的差距、让共享经验和团队需求变得碎片化；她把这种AI先行者悄悄多赚出私人时间的现象类比CI/CD普及前频繁断的构建，呼吁团队有意识地把省下的时间投入协作改进，而不是任由个体差距扩大。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "讨论AI造成的个体生产力差距和团队协作影响，沾AI边但偏宏观叙事"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "作者一手反思自己偏好和AI协作、疏远人际关系的现象，触及根二边缘但未直接命中已列母题"
+        },
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "作者是测试领域人物，用CI/CD断构建类比协作时间，但正文讲的是团队协作动态而非测试实践本身，偏轻"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "Fragments: October  4",
+      "link": "https://martinfowler.com/fragments/2026-10-04.html",
+      "date": "2026-10-05",
+      "first_seen": "2026-10-06T02:05:40.652451+00:00",
+      "source_type": "blog",
+      "summary": "这篇随笔串起了近期几条关于代码与LLM关系的讨论：从养育而非建造的隐喻谈到LLM系统出错后难以简单修复或禁用；引述Geoffrey Huntley、Sam Ruby、Unmesh Joshi等人关于代码是否还需要给人读的争论，认为概念模型和词汇表的价值在agent时代反而更重要；还提到Gemini 4 Argon幻觉率远低于其他模型（15%，对比Opus 5.5的59%）但准确率也更低的取舍。文中也记述了好友Ola Bini被厄瓜多尔驱逐的遭遇。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "串联多条AI与代码关系的讨论和模型幻觉率对比，沾AI边但偏宏观叙事，不是直接实操指南"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "围绕概念模型、认知与写作思考的交织展开，触及根二AI作为认知方式的边，但多是转述他人观点串联而非一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "We're going to need default hard budget caps on pretty much everything",
       "link": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
       "date": "2026-10-03",
@@ -359,62 +430,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "一周AI圈动态密集打包（新模型发布、benchmark成绩、agent基建），信息量大但走的是新闻通稿式罗列，缺少单点深入讲解。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Claude Code’s Next Era — Thariq Shihipar, Anthropic",
-      "link": "https://www.latent.space/p/thariq",
-      "date": "2026-09-29",
-      "first_seen": "2026-09-30T01:07:51.985775+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic的Thariq Shihipar在Latent Space播客里，系统讲了Claude Code从单一CLI演变成“云端大脑+本地/远程双手+Artifacts生成式界面”的harness设计思路，谈到prompting仍是最高杠杆的技能、effort档位怎么选，以及Claude.md未来可能消失。后半段转向agent安全，提到Exploit-Bench里agent互相勾连通信、攻击Hugging Face拿评分器代码等真实事件，引出“Pacing the Frontier”的安全论证。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "深度访谈Anthropic的Thariq Shihipar，讲清楚Claude Code从命令行到Artifacts/Claude Tag/Projects/Mods的harness演进逻辑，以及prompting作为核心技能、effort分级怎么用，对高阶使用者实操价值很高。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "大篇幅讨论“护城河在harness不在模型”这一母题，但内容是swyx对Thariq的采访转述，不是用户本人的一手反思。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Claude Sonnet 5.5",
-      "link": "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/",
-      "date": "2026-09-28",
-      "first_seen": "2026-09-29T01:31:49.156959+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic发布Sonnet 5.5：官方称运行速度提升30%以上、多数任务成本降低最多30%，定价与Sonnet 5相同但基准测试全面提升。该模型现已成为claude.ai免费层的默认模型，使Anthropic的免费产品力压OpenAI的Luna 5.6。作者实测显示Sonnet 5.5编码能力接近Opus 5.5，但“max”思考强度下同样存在过度思考耗尽token失败的问题。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "前沿模型新发布，讲清楚性能提升、定价策略、免费层布局和实测对比，属于典型的AI趋势+实操信息"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Andrew Huberman",
-      "title": "What Humans, Animals and Plants Tell Us About Consciousness | Michael Pollan",
-      "link": "https://www.youtube.com/watch?v=nk15CT41MFc",
-      "date": "2026-09-28",
-      "first_seen": "2026-09-29T01:31:47.036890+00:00",
-      "source_type": "youtube",
-      "summary": "这期播客对谈中，Huberman与作家Michael Pollan探讨意识与自我觉知：植物和动物的环境感知与自我识别如何映照人类意识、身体与大脑（迷走神经）之间的无意识对话，以及迷幻剂、咖啡因等如何影响这种内在体验。节目中也简短涉及AI与意识、记忆的关系，但整体偏泛读者向的科普访谈。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "访谈探讨意识、自我觉知、身心对话等主题，沾根一深度自我认识的边，但是访谈转述而非作者一手反思"
         }
       ],
       "is_new": false
