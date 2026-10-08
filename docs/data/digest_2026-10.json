@@ -1,6 +1,91 @@
 {
   "items": [
     {
+      "person": "Boris Cherny",
+      "title": "RT @lydiahallie: If you're on API billing, you can set Haiku 5.5's autocompact window to 100K so you…",
+      "link": "https://x.com/bcherny/status/2107980493614616996",
+      "date": "2026-10-07",
+      "first_seen": "2026-10-08T01:36:31.098337+00:00",
+      "source_type": "x",
+      "summary": "有人提醒：如果用的是API billing，可以把Haiku 5.5的autocompact窗口设到100K，这样能一直留在更便宜的计价档位里，不会因为超出10万token触发5倍涨价。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "具体可操作的实操建议：把Haiku 5.5的autocompact窗口设到100K以维持在更便宜的计价档位，直接影响日常怎么用AI工具"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Claude Haiku 5.5",
+      "link": "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/",
+      "date": "2026-10-07",
+      "first_seen": "2026-10-08T01:36:18.843933+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison测评了新发布的Claude Haiku 5.5：价格与OpenAI GPT-6 Luna看齐($0.10/$0.50，10万token以内)，但超过10万token后涨到5倍价格；新tokenizer比Haiku 4.5更「不厚道」，同样prompt要多算1.25倍token，等于隐性涨价。他还测了pelican骑车SVG这个经典题，发现Haiku 5.5在各档推理强度下画车架都明显比上一代强。另外Anthropic同期宣布Sonnet 5.5的cache read价格减半，并给Max/Team订阅用户每月发等额API credit(Max 5x: $100，Max 20x: $200，Team: 最高$500)，用不完不能结转。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "详细分析Haiku 5.5定价、tokenizer变化、与GPT-6 Luna的对比，以及Anthropic新增的订阅者API credit机制，实操信息扎实"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Can a Cloud-Native Harness Make Agents Reliable Beyond the Desktop?",
+      "link": "https://www.latent.space/p/stacklok",
+      "date": "2026-10-07",
+      "first_seen": "2026-10-08T01:36:19.497824+00:00",
+      "source_type": "blog",
+      "summary": "Kubernetes的两位创造者Craig McLuckie和Joe Beda创办了Stacklok，正在打造Mecatl——一个「云原生」的agent harness。他们认为当下的agent工具大多是桌面优先架构(loop、本地执行、session状态耦合在同一进程里)，而企业需要像管理Kubernetes集群一样管理agent：loop与模型供应商、执行环境、session存储彼此解耦，这样企业才能摆脱对单一前沿实验室harness的依赖，把agent工作当成可治理的基础设施来管。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深度访谈解析云原生agent harness新趋势(Mecatl)，讲清楚是什么、为什么重要"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "I hooked up our team claw to X to trigger work faster. Unassigned sessions are for anyone to grab. O…",
+      "link": "https://x.com/steipete/status/2107697554448421160",
+      "date": "2026-10-07",
+      "first_seen": "2026-10-08T01:36:32.215767+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger把团队的agent系统接上了X，用来更快触发任务：没人认领的会话谁都能接手，agent还会自动识别最近改过相关代码的人并去提醒。他说这套机制全靠一段prompt驱动，团队的server本身也因为插件支持热重载而被自我扩展出来。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "本人一手讲述搭建agent harness(插件热重载/prompt驱动自我扩展)，直接命中护城河在harness不在模型"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Quasi-Riemann-Hypothesis: OpenAI publishes 722 math papers solving 90 of the top 500 open math problems; “the most significant moment” in >100 years of mathematics",
+      "link": "https://www.latent.space/p/ainews-quasi-riemann-hypothesis-openai",
+      "date": "2026-10-07",
+      "first_seen": "2026-10-08T01:36:19.499290+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI发布722篇数学论文，宣称解出500个顶级公开数学难题中的90个，其中Quasi-Riemann Hypothesis(编号003)被认为是百年来数论领域最大突破之一。与此前Navier-Stokes结果靠万级agent跑88小时不同，这批结果平均只用ChatGPT Pro跑3小时就拿下，说明方法论效率大幅提升。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "OpenAI数学模型解出90个顶级数学难题，被称为百年来数学史上最重要时刻，讲清楚发生了什么、为什么重要"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "OpenAI “rogue” agent activities found on Wikimedia projects",
       "link": "https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/",
@@ -15,7 +100,7 @@
           "reason": "前沿AI安全事件,讲清楚具体发生了什么(维基编辑/Etherpad探测/大量查询)和Simon自己把它跟此前德文维基事件连起来的分析,不是纯通稿"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -32,7 +117,7 @@
           "reason": "面向工程师的AI应用选型建议:为什么embedding模型要用开源许可证,论证扎实(供应商下架/重新计算成本的具体风险)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -49,7 +134,7 @@
           "reason": "前沿模型新发布,讲清楚技术规格、性能表现、训练规模和开源计划,带Simon自己的测评与分析,不是纯通稿"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -66,7 +151,7 @@
           "reason": "Claude Code创建者本人分享的提示技巧,直接影响日常怎么用AI工具,具体可操作(讲清楚做什么/花多大力气/怎么验证)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

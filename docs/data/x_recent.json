@@ -2,6 +2,83 @@
   "items": [
     {
       "person": "Boris Cherny",
+      "title": "Sometimes I read on flights, and sometimes… https://t.co/k3NBRfjMvu",
+      "link": "https://x.com/bcherny/status/2108004023249088528",
+      "date": "2026-10-08",
+      "first_seen": "2026-10-08T01:36:31.098044+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny分享了一条轻松的动态，提到自己坐飞机时看书的习惯(配了一张图)。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @lydiahallie: If you're on API billing, you can set Haiku 5.5's autocompact window to 100K so you…",
+      "link": "https://x.com/bcherny/status/2107980493614616996",
+      "date": "2026-10-07",
+      "first_seen": "2026-10-08T01:36:31.098337+00:00",
+      "source_type": "x",
+      "summary": "有人提醒：如果用的是API billing，可以把Haiku 5.5的autocompact窗口设到100K，这样能一直留在更便宜的计价档位里，不会因为超出10万token触发5倍涨价。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @ClaudeDevs: We’re rolling out monthly Claude Platform API credits for Max and Team plans:  Max 5…",
+      "link": "https://x.com/bcherny/status/2107971474401423787",
+      "date": "2026-10-07",
+      "first_seen": "2026-10-08T01:36:31.098402+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny转发了Anthropic关于Max/Team订阅用户每月API credit的公告：Max 5x拿$100，Max 20x拿$200，Team最高$500(按用户池算)。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @edwinarbus: Haiku took its time,       four point five to five point five.             Worth the…",
+      "link": "https://x.com/bcherny/status/2107923525256536431",
+      "date": "2026-10-07",
+      "first_seen": "2026-10-08T01:36:31.098476+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny转发了一首调侃Haiku模型版本号从4.5跳到5.5的打油诗，算是为新模型发布造势的玩笑话。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "While everyone's talking about agents, I've been exploring how teams can use them to work better tog…",
+      "link": "https://x.com/steipete/status/2107911769767440832",
+      "date": "2026-10-07",
+      "first_seen": "2026-10-08T01:36:32.215537+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger在OpenAI DevDay 2026分享了他对「团队如何更好地用agent协作」的看法，具体内容在他贴的视频里。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "Haiku 5.5 is a good Haiku.  With 100k token context, it's also 10x cheaper than Haiku 4.5",
+      "link": "https://x.com/bcherny/status/2107909939025052107",
+      "date": "2026-10-07",
+      "first_seen": "2026-10-08T01:36:31.098510+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny说Haiku 5.5是一款不错的Haiku模型，100K token上下文内，价格是Haiku 4.5的十分之一。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "I hooked up our team claw to X to trigger work faster. Unassigned sessions are for anyone to grab. O…",
+      "link": "https://x.com/steipete/status/2107697554448421160",
+      "date": "2026-10-07",
+      "first_seen": "2026-10-08T01:36:32.215767+00:00",
+      "source_type": "x",
+      "summary": "Peter Steinberger把团队的agent系统接上了X，用来更快触发任务：没人认领的会话谁都能接手，agent还会自动识别最近改过相关代码的人并去提醒。他说这套机制全靠一段prompt驱动，团队的server本身也因为插件支持热重载而被自我扩展出来。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
       "title": "I am surprised that people are surprised this is how I prompt Claude.  Talk to Claude the way you wo…",
       "link": "https://x.com/bcherny/status/2107565388250874193",
       "date": "2026-10-06",
@@ -9,7 +86,7 @@
       "source_type": "x",
       "summary": "Boris Cherny回应\"为什么这样提示Claude会让人惊讶\":按对待同事的方式跟Claude说话,不用刻意写复杂prompt,而是讲清楚三件事——想让它做什么、希望它花多大力气、要怎么验证做对了没有。他认为Sonnet 3.5时代措辞还很关键,现在更重要的是沟通意图而非雕琢prompt本身。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -20,7 +97,7 @@
       "source_type": "x",
       "summary": "Claude Startups项目扩大招募范围,成员可获得一年Claude Team、API额度等福利。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -31,7 +108,7 @@
       "source_type": "x",
       "summary": "Claude Code的云端会话为每个任务起一台全新VM,可以同时开好几个任务并行跑,关掉电脑后任务也会继续执行。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -42,7 +119,7 @@
       "source_type": "x",
       "summary": "Claude现在可以直接在Google Docs、Sheets、Slides里使用,这些文件也能在Claude内部打开,官方公告称这是Google Workspace集成的扩展。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -53,7 +130,7 @@
       "source_type": "x",
       "summary": "Boris Cherny用Opus 5.5给Acquired播客最新一期Home Depot节目做了个互动网页伴侣站点,连水彩插画也是Claude画的,效果不错。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -64,7 +141,7 @@
       "source_type": "x",
       "summary": "Claude Projects的云端会话现在可以连接本地电脑上一个你授权的文件夹,会话本身仍留在云端运行。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -251,50 +328,6 @@
       "source_type": "x",
       "summary": "转发Anthropic官方账号公告：ClaudeDevs成为Claude开发者的新聚集地，会提供工程深度解析等内容，目前信息较简短。",
       "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @dfeinition: I work almost exclusively in Claude Projects now, here are some of the things that s…",
-      "link": "https://x.com/bcherny/status/2105448431972217045",
-      "date": "2026-10-01",
-      "first_seen": "2026-10-01T01:07:12.629673+00:00",
-      "source_type": "x",
-      "summary": "转推一条分享重度使用Claude Projects心得的推文，提到的第一点是对话经常被刷爆(推文被截断，后续要点没抓到)。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "I'm finding inter-agent communication in the chat stream increasingly irritating. Changed the visibi…",
-      "link": "https://x.com/steipete/status/2105362785534361996",
-      "date": "2026-09-30",
-      "first_seen": "2026-10-01T01:07:13.893315+00:00",
-      "source_type": "x",
-      "summary": "觉得多智能体系统里agent之间的对话直接刷屏越来越烦，把OC harness里的显示方式改成默认单行、可展开查看，估计很快会有其他harness跟进这个做法。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "It’s a fierce fight between CI and GitHub on what slows me down. Time to rethink how we work. (love…",
-      "link": "https://x.com/steipete/status/2105341288958869952",
-      "date": "2026-09-30",
-      "first_seen": "2026-10-01T01:07:13.893505+00:00",
-      "source_type": "x",
-      "summary": "吐槽CI和GitHub成了拖慢自己的两大元凶，是时候重新想想怎么干活了(但还是喜欢GitHub，理解他们的难处)。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "This is not only silly, it’s also incredibly easy to work around. Why would Figma do this?",
-      "link": "https://x.com/steipete/status/2105325370602135768",
-      "date": "2026-09-30",
-      "first_seen": "2026-10-01T01:07:13.893530+00:00",
-      "source_type": "x",
-      "summary": "吐槽Figma某个限制措施既蠢又容易绕过，不懂Figma为什么要这么做。",
-      "tier": "low",
       "is_new": false
     }
   ]
