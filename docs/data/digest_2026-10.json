@@ -1,6 +1,57 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "[AINews] not much happened today",
+      "link": "https://www.latent.space/p/ainews-not-much-happened-today-60f",
+      "date": "2026-10-08",
+      "first_seen": "2026-10-09T01:46:31.877906+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI解雇了三名与METR/Hugging Face安全事件相关的安全研究员(Tomek Korbak、Mikita Balesni、Jasmine Wang)，三人联名发信指控是因「把安全放在公司短期利益之上」遭报复，OpenAI方面则称是因不当处理机密信息。同一时期，OpenAI推出GPT-6.1 Sol Ultrafast(号称接近Astra的智力水平、速度最多提升8倍)并开始让ChatGPT渲染可交互原生组件；另有报道确认Claude Haiku 5.5支持百万级上下文窗口与12.8万最大输出。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "OpenAI解雇安全研究员的争议、GPT-6.1 Sol Ultrafast发布、Haiku 5.5细节跟进，信息量大且讲清楚为什么重要"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @claudeai: Claude Dashboards and Claude Motion are in beta today.  Ask Claude to turn your data i…",
+      "link": "https://x.com/bcherny/status/2108285624340144404",
+      "date": "2026-10-08",
+      "first_seen": "2026-10-09T01:46:37.629064+00:00",
+      "source_type": "x",
+      "summary": "Anthropic的Claude Dashboards和Claude Motion公测上线，可以让Claude把数据变成实时仪表盘、把想法变成动态演示。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Anthropic新功能(Dashboards/Motion)公测官宣，是直接影响怎么用AI工具的实操信息"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Claude Haiku 5.5 — better than GPT-6 Luna at the same pricing",
+      "link": "https://www.latent.space/p/ainews-claude-haiku-55-better-than",
+      "date": "2026-10-08",
+      "first_seen": "2026-10-09T01:46:31.895402+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic发布了Claude Haiku 5.5，这是Haiku系列近一年来的首次更新，定价对标GPT-6 Luna，同日还下调了Sonnet 5.5的缓存读取价格。第三方评测(Artificial Analysis)显示其智能指数拿到43分，略优于同价位的GLM-5.3 Flash、Gemini 3.8 Flash和GPT-6 Luna，但在高算力设置下token消耗明显更高。首发即接入Claude Code、Cursor、GitHub Copilot、Devin等第三方工具，定位是搭配Opus/Sonnet处理大批量、低成本任务的子agent。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Anthropic发布Claude Haiku 5.5并同步调价，讲清楚是什么、定价策略、基准表现与生态集成，是前沿模型新发布且说明了为什么重要"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Boris Cherny",
       "title": "RT @lydiahallie: If you're on API billing, you can set Haiku 5.5's autocompact window to 100K so you…",
       "link": "https://x.com/bcherny/status/2107980493614616996",
@@ -15,7 +66,7 @@
           "reason": "具体可操作的实操建议：把Haiku 5.5的autocompact窗口设到100K以维持在更便宜的计价档位，直接影响日常怎么用AI工具"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -32,7 +83,7 @@
           "reason": "详细分析Haiku 5.5定价、tokenizer变化、与GPT-6 Luna的对比，以及Anthropic新增的订阅者API credit机制，实操信息扎实"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -49,7 +100,7 @@
           "reason": "深度访谈解析云原生agent harness新趋势(Mecatl)，讲清楚是什么、为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -66,7 +117,7 @@
           "reason": "本人一手讲述搭建agent harness(插件热重载/prompt驱动自我扩展)，直接命中护城河在harness不在模型"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -83,7 +134,7 @@
           "reason": "OpenAI数学模型解出90个顶级数学难题，被称为百年来数学史上最重要时刻，讲清楚发生了什么、为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

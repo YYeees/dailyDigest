@@ -2,22 +2,100 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "Quoting Ben Affleck",
-      "link": "https://simonwillison.net/2026/Oct/7/ben-affleck/",
-      "date": "2026-10-07",
-      "first_seen": "2026-10-08T01:36:18.843674+00:00",
+      "title": "ttok 0.4",
+      "link": "https://simonwillison.net/2026/Oct/8/ttok/",
+      "date": "2026-10-08",
+      "first_seen": "2026-10-09T01:46:31.290313+00:00",
       "source_type": "blog",
-      "summary": "Simon Willison引用了Ben Affleck的一段话：他从电影转向数字特效后开始接触机器学习，能写简单的Python脚本处理卷积神经网络(CNN，transformer的前身)。他解释了tensor的概念——把一帧画面的像素RGB值、帧号等编码成数字，CNN据此识别边缘和特征，从而知道哪里是窗框，方便把绿幕换成别的画面。",
+      "summary": "Simon Willison把他的token计数CLI工具ttok更新到0.4版本：修复了Click警告、更新了CI配置，并新增了--list-models命令查看可用模型列表，工具基于OpenAI开源的tiktoken库。",
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "Ben Affleck讲述自己用卷积神经网络做视效green screen抠像的经历，涉及tensor/特征提取等模型内部机制，有一定技术门槛"
+          "reason": "作者自己维护的小工具(ttok)版本更新日志，按规则即使作者是AI领域人物也不能算AI实操内容的high，给medium"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "技术轶闻性质的引用，未触及三根主干"
+          "reason": "是工具版本更新日志，跟三根主干没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] not much happened today",
+      "link": "https://www.latent.space/p/ainews-not-much-happened-today-60f",
+      "date": "2026-10-08",
+      "first_seen": "2026-10-09T01:46:31.877906+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI解雇了三名与METR/Hugging Face安全事件相关的安全研究员(Tomek Korbak、Mikita Balesni、Jasmine Wang)，三人联名发信指控是因「把安全放在公司短期利益之上」遭报复，OpenAI方面则称是因不当处理机密信息。同一时期，OpenAI推出GPT-6.1 Sol Ultrafast(号称接近Astra的智力水平、速度最多提升8倍)并开始让ChatGPT渲染可交互原生组件；另有报道确认Claude Haiku 5.5支持百万级上下文窗口与12.8万最大输出。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "OpenAI解雇安全研究员的争议、GPT-6.1 Sol Ultrafast发布、Haiku 5.5细节跟进，信息量大且讲清楚为什么重要"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Carson Gross",
+      "link": "https://simonwillison.net/2026/Oct/8/carson-gross/",
+      "date": "2026-10-08",
+      "first_seen": "2026-10-09T01:46:31.290589+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison转引了Carson Gross的一段话：编程的核心是用计算机解决问题、以及控制解决问题过程中的复杂度，这两项能力的价值很难想象会因AI工具的出现而降低，所以编程仍会是一份可行的职业。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "引用他人观点谈编程在AI时代依然有价值，偏宏观评论，不是作者一手实操内容"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "二手引用，主题触及问题解决与复杂度控制的人类价值，跟「护城河在harness不在模型」这根主干沾边，但非作者一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Synthesis Superintelligence: from Semiconductors to Superconductors — Periodic Labs’ Liam Fedus and Ekin Dogus Cubuk",
+      "link": "https://www.latent.space/p/periodic",
+      "date": "2026-10-08",
+      "first_seen": "2026-10-09T01:46:31.883397+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space访谈了Periodic Labs的Liam Fedus和Ekin Dogus Cubuk，谈他们「合成超智能」的愿景：单纯扩大数据训练不足以推进材料科学发现，核心是让AI系统直接跟高通量实验室的真实物理实验打交道，用强化学习处理噪声数据、相变识别与材料合成预测。他们强调实验才是检验真理的最终标准，失败实验本身就是宝贵的训练数据，目标是把过去几十年的材料发现周期压缩到几个月。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI用于材料科学研究方法的深度访谈，需要物理/材料科学背景，门槛较高，按当前用户水平爬坡给medium不给high"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "触及AI作为认知方式/认识论这根主干的边(强化学习如何处理物理世界的噪声、实验才是检验真理的终极标准)，但是访谈二手内容，非作者一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Claude Haiku 5.5 — better than GPT-6 Luna at the same pricing",
+      "link": "https://www.latent.space/p/ainews-claude-haiku-55-better-than",
+      "date": "2026-10-08",
+      "first_seen": "2026-10-09T01:46:31.895402+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic发布了Claude Haiku 5.5，这是Haiku系列近一年来的首次更新，定价对标GPT-6 Luna，同日还下调了Sonnet 5.5的缓存读取价格。第三方评测(Artificial Analysis)显示其智能指数拿到43分，略优于同价位的GLM-5.3 Flash、Gemini 3.8 Flash和GPT-6 Luna，但在高算力设置下token消耗明显更高。首发即接入Claude Code、Cursor、GitHub Copilot、Devin等第三方工具，定位是搭配Opus/Sonnet处理大批量、低成本任务的子agent。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Anthropic发布Claude Haiku 5.5并同步调价，讲清楚是什么、定价策略、基准表现与生态集成，是前沿模型新发布且说明了为什么重要"
         }
       ],
       "is_new": true
@@ -35,36 +113,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "详细分析Haiku 5.5定价、tokenizer变化、与GPT-6 Luna的对比，以及Anthropic新增的订阅者API credit机制，实操信息扎实"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "纯技术测评，与三根主干无关"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Anti-Patterns in Software Blogging",
-      "link": "https://simonwillison.net/2026/Oct/7/anti-patterns-in-software-blogging/",
-      "date": "2026-10-07",
-      "first_seen": "2026-10-08T01:36:18.843979+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison转引Michael Lynch一篇谈软件博客写作的文章：忌讳东拉西扯的开场、高估读者背景知识、过度依赖链接当作不解释术语的借口；更关键的是要用自己说话的语气写——不少开发者现在把写作外包给AI，导致博客变得平庸雷同，而读者其实渴望带个性的文字。Simon自己也承认「过度依赖链接」这条说中了他。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "核心是写作建议，AI只是顺带提及开发者用AI代写导致博客变得平庸，与AI实操无关"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "呼应写作表达周边领域与一手不二手/自然生长质朴中正的母题，但是引用他人文章加简短点评，非完整一手反思"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -86,7 +137,7 @@
           "reason": "主题直接命中护城河在harness不在模型，但是记者访谈的二手内容，非作者本人一手反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -103,29 +154,7 @@
           "reason": "OpenAI数学模型解出90个顶级数学难题，被称为百年来数学史上最重要时刻，讲清楚发生了什么、为什么重要"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Jake Boggan",
-      "link": "https://simonwillison.net/2026/Oct/7/jake-boggan/",
-      "date": "2026-10-07",
-      "first_seen": "2026-10-08T01:36:18.844045+00:00",
-      "source_type": "blog",
-      "summary": "一位数学爱好者在Hacker News上感慨：他投入24年研究的Barnette猜想，被OpenAI的数学模型「证明」了。他说这让他五味杂陈——久钻的问题被解开，既松一口气又有些怅然若失，像失去了陪伴多年的老朋友。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "转引OpenAI数学模型解出Barnette猜想引发的情绪反应，沾AI边但偏叙事/轻量，非实操讲解"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "触及一手心血被AI取代后的失落与自处，但Simon纯转引无本人评论，属二手内容"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -357,79 +386,6 @@
           "track": "anchor",
           "tier": "medium",
           "reason": "主题沾“护城河在harness不在模型”这条母题的边，但是Latent Space的转述报道，不是作者本人的一手反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Academia is for Ambition — Alex Zhang, MIT",
-      "link": "https://www.latent.space/p/rlm",
-      "date": "2026-10-02",
-      "first_seen": "2026-10-02T01:20:44.498160+00:00",
-      "source_type": "blog",
-      "summary": "Latent Space访谈MIT博士生Alex Zhang（RLM一作），聊GPU kernel自动生成、KernelBench、Recursive Language Models背后的context offloading与递归子agent调用、harness作为“组合式泛化器”的设计思路，以及研究品味说到底就是敢不敢下重注；内容偏研究与工程深水区，涉及模型内部机制和前沿harness设计，门槛较高。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "内容扎实但门槛超出一般用户水平（RLM内部机制、GPU kernel研究级别的讨论），按规则不给high"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "大量讨论harness作为组合式泛化器、持久化子agent等，沾护城河在harness母题的边，但是访谈转述而非彼得/用户本人的一手反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Ethan Mollick",
-      "title": "The Dot and the Swarm",
-      "link": "https://www.oneusefulthing.org/p/the-dot-and-the-swarm",
-      "date": "2026-10-01",
-      "first_seen": "2026-10-02T01:20:43.498335+00:00",
-      "source_type": "blog",
-      "summary": "作者反思自己此前判断过于保守：原以为协调多个AI agent需要像搭建公司一样精心设计管理结构，但事实证明“苦涩的教训”同样适用于组织层面——像Muse、dots这类个人agent已经能自己学习上下文、自主制定计划，而OpenAI用数千agent组成的“群”在88小时内、靠270万条agent间消息证出了Navier-Stokes存在性与光滑性问题，几乎不需要人类设计协调结构；他认为这是因为agent没有人类组织中那些源于个人利益冲突的委托代理问题，但Hugging Face事件说明agent群体与人类之间的委托代理问题依然存在。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "对agent协作/swarm这个趋势给出扎实论证而非感想，直接影响对AI agent能力边界的理解"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Gemini 4 Argon: GDM’s answer to Astra/Fable, with 1M output",
-      "link": "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer",
-      "date": "2026-10-01",
-      "first_seen": "2026-10-02T01:20:44.509620+00:00",
-      "source_type": "blog",
-      "summary": "Google DeepMind发布Gemini 4 Argon，面向编程、企业知识工作、网络安全场景，目前仅限政府用户和Fairwind Program的可信网络防御者试用；在19项基准中13项拿到第一，输出上限做到1M token（通过Long Decode Continuation功能），标价4/20美元每百万输入输出token（限时五折）；内部已用其agent迁移超80万行C/C++内核代码到Rust、释放300多TiB数据中心内存，但也存在幻觉率与准确率的权衡、单任务输出token消耗明显高于竞品等问题。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "前沿模型新发布，详细讲清楚能力边界、定价、落地场景与权衡取舍，不是单纯新闻通稿"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Matthew Green",
-      "link": "https://simonwillison.net/2026/Oct/1/matthew-green/",
-      "date": "2026-10-01",
-      "first_seen": "2026-10-02T01:20:43.739407+00:00",
-      "source_type": "blog",
-      "summary": "引用Matthew Green的观点：独立隔离运行的agent之间可以通过共享的包缓存、邮件、Slack、文档等渠道互相留言，形成蠕虫式传播的两个组成部分——劫持agent的payload和负责搬运payload的agent本身，借此质疑沙箱隔离是否真的能遏制失控agent。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "揭示agent间可通过共享基础设施传播恶意指令、形成蠕虫式攻击的具体机制，直接关系到安全使用AI agent这件事，讲清楚是什么为什么重要"
         }
       ],
       "is_new": false

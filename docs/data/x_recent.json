@@ -2,6 +2,17 @@
   "items": [
     {
       "person": "Boris Cherny",
+      "title": "RT @claudeai: Claude Dashboards and Claude Motion are in beta today.  Ask Claude to turn your data i…",
+      "link": "https://x.com/bcherny/status/2108285624340144404",
+      "date": "2026-10-08",
+      "first_seen": "2026-10-09T01:46:37.629064+00:00",
+      "source_type": "x",
+      "summary": "Anthropic的Claude Dashboards和Claude Motion公测上线，可以让Claude把数据变成实时仪表盘、把想法变成动态演示。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
       "title": "Sometimes I read on flights, and sometimes… https://t.co/k3NBRfjMvu",
       "link": "https://x.com/bcherny/status/2108004023249088528",
       "date": "2026-10-08",
@@ -9,7 +20,7 @@
       "source_type": "x",
       "summary": "Boris Cherny分享了一条轻松的动态，提到自己坐飞机时看书的习惯(配了一张图)。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -20,7 +31,7 @@
       "source_type": "x",
       "summary": "有人提醒：如果用的是API billing，可以把Haiku 5.5的autocompact窗口设到100K，这样能一直留在更便宜的计价档位里，不会因为超出10万token触发5倍涨价。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -31,7 +42,7 @@
       "source_type": "x",
       "summary": "Boris Cherny转发了Anthropic关于Max/Team订阅用户每月API credit的公告：Max 5x拿$100，Max 20x拿$200，Team最高$500(按用户池算)。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -42,7 +53,7 @@
       "source_type": "x",
       "summary": "Boris Cherny转发了一首调侃Haiku模型版本号从4.5跳到5.5的打油诗，算是为新模型发布造势的玩笑话。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -53,7 +64,7 @@
       "source_type": "x",
       "summary": "Peter Steinberger在OpenAI DevDay 2026分享了他对「团队如何更好地用agent协作」的看法，具体内容在他贴的视频里。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -64,7 +75,7 @@
       "source_type": "x",
       "summary": "Boris Cherny说Haiku 5.5是一款不错的Haiku模型，100K token上下文内，价格是Haiku 4.5的十分之一。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -75,7 +86,7 @@
       "source_type": "x",
       "summary": "Peter Steinberger把团队的agent系统接上了X，用来更快触发任务：没人认领的会话谁都能接手，agent还会自动识别最近改过相关代码的人并去提醒。他说这套机制全靠一段prompt驱动，团队的server本身也因为插件支持热重载而被自我扩展出来。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -240,94 +251,6 @@
       "source_type": "x",
       "summary": "钽(Tantalum)1802年被发现，其中一种同位素的半衰期长到可能永远观测不到衰变——作者借此调侃这是“命名决定论”的绝佳例子。",
       "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Andrej Karpathy",
-      "title": "We'll be spending a lot more time trying to understand the outputs of language models. A few thought…",
-      "link": "https://x.com/karpathy/status/2105819303471976479",
-      "date": "2026-10-02",
-      "first_seen": "2026-10-02T01:20:55.734935+00:00",
-      "source_type": "x",
-      "summary": "Karpathy给出几条让LLM输出更好理解的技巧：用ASD-STE100这种航空维护文档用的受控语言规范让文字更干净；输出图表/图像比文字更易消化；输出HTML做成可交互网页；他最看好的是直接生成定制的讲解视频（比如要求做成3blue1brown风格）；核心判断是随着LLM自主完成的工作越来越多，人的工作会更多转向监督与理解，而LLM本身也能帮着造出这些“一次性”的理解辅助产物。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "holy",
-      "link": "https://x.com/steipete/status/2105805164305359019",
-      "date": "2026-10-01",
-      "first_seen": "2026-10-02T01:20:59.272889+00:00",
-      "source_type": "x",
-      "summary": "只有一个词“holy”表达惊讶，没有更多上下文可供判断。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "Mods are absolutely insane. You can now customize Claude to work and look the way you want by just p…",
-      "link": "https://x.com/bcherny/status/2105756563302723721",
-      "date": "2026-10-01",
-      "first_seen": "2026-10-02T01:20:57.084173+00:00",
-      "source_type": "x",
-      "summary": "介绍Claude新功能Mods：用户可以直接靠提示词定制Claude的工作方式和界面外观，不同人可以有不同的使用体验，做好的mod还能打包成插件分享给其他人。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "\"the Waymo effect is what happens when a technology removes the friction of dealing with another hum…",
-      "link": "https://x.com/steipete/status/2105739667174019491",
-      "date": "2026-10-01",
-      "first_seen": "2026-10-02T01:20:59.273180+00:00",
-      "source_type": "x",
-      "summary": "转引他人观点：“Waymo效应”指技术消除了与另一个人打交道所需摩擦这件事本身带来的影响，配了一张图，彼得本人未展开评论。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "i have so many questions",
-      "link": "https://x.com/steipete/status/2105728299255415134",
-      "date": "2026-10-01",
-      "first_seen": "2026-10-02T01:20:59.273214+00:00",
-      "source_type": "x",
-      "summary": "只有一句感叹“我有好多问题”，没有附带更多上下文，内容过短无法判断具体指向。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "I'm speedrunning my filesystem learnings. Turns out, brtfs cow-feature is GREAT for worktrees and te…",
-      "link": "https://x.com/steipete/status/2105720334821261330",
-      "date": "2026-10-01",
-      "first_seen": "2026-10-02T01:20:59.273245+00:00",
-      "source_type": "x",
-      "summary": "分享自己踩的文件系统坑：btrfs的COW特性对worktree友好，但对SQLite是灾难，他的工具OC下一个版本会据此把数据库迁移到NOCOW目录。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "All my oss releases stopped because Apple put up a new dev agreement. And since it's lockstep it blo…",
-      "link": "https://x.com/steipete/status/2105712707592679619",
-      "date": "2026-10-01",
-      "first_seen": "2026-10-02T01:20:59.273274+00:00",
-      "source_type": "x",
-      "summary": "吐槽苹果新开发者协议把自己所有开源项目的发布都卡住了，由于发布流程是联动的，连Linux/Windows版本也被连带堵住。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @ClaudeDevs: https://t.co/sRyO7OigQ7 is our new home for developers building with Claude.   You'l…",
-      "link": "https://x.com/bcherny/status/2105533886424113373",
-      "date": "2026-10-01",
-      "first_seen": "2026-10-02T01:20:57.084403+00:00",
-      "source_type": "x",
-      "summary": "转发Anthropic官方账号公告：ClaudeDevs成为Claude开发者的新聚集地，会提供工程深度解析等内容，目前信息较简短。",
-      "tier": "medium",
       "is_new": false
     }
   ]
