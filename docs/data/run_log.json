@@ -1,6 +1,18 @@
 {
   "runs": [
     {
+      "timestamp": "2026-10-10T01:37:08.878321+00:00",
+      "label": "digest",
+      "total_cost_usd": 0.8568437000000001,
+      "input_tokens": 3122,
+      "output_tokens": 16531,
+      "cache_creation_input_tokens": 95258,
+      "cache_read_input_tokens": 779154,
+      "duration_ms": 249877,
+      "num_turns": 17,
+      "is_error": false
+    },
+    {
       "timestamp": "2026-10-09T01:49:58.157516+00:00",
       "label": "digest",
       "total_cost_usd": 0.8157629499999999,
@@ -346,18 +358,6 @@
       "cache_read_input_tokens": 1197473,
       "duration_ms": 266258,
       "num_turns": 28,
-      "is_error": false
-    },
-    {
-      "timestamp": "2026-09-13T23:57:43.964285+00:00",
-      "label": "digest",
-      "total_cost_usd": 0.5979918999999999,
-      "input_tokens": 2991,
-      "output_tokens": 10872,
-      "cache_creation_input_tokens": 63838,
-      "cache_read_input_tokens": 604798,
-      "duration_ms": 160348,
-      "num_turns": 14,
       "is_error": false
     }
   ]
