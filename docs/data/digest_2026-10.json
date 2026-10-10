@@ -1,6 +1,57 @@
 {
   "items": [
     {
+      "person": "NN/g",
+      "title": "The New Siri’s Biggest Strength Is Not Intelligence",
+      "link": "https://www.nngroup.com/articles/ai-assistant-context/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "date": "2026-10-09",
+      "first_seen": "2026-10-10T01:33:12.025809+00:00",
+      "source_type": "blog",
+      "summary": "文章借苹果新Siri的成败说明,一个好用的AI助理不需要最聪明的模型,而需要能接入用户个人情境(消息、照片、位置、日程等)的能力,并让用户理解其能力边界——三者缺一不可,情境在跨应用间丢失和用户对AI能力认知不准是常见的UX痛点。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "扎实的AI产品/UX分析,论证'有用的AI助理关键在个人情境接入能力而非模型智能'这一可迁移的设计原则,门槛不高"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "NN/g",
+      "title": "Context Libraries: How AI Power Users Manage Context Engineering",
+      "link": "https://www.nngroup.com/articles/context-libraries/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "date": "2026-10-09",
+      "first_seen": "2026-10-10T01:33:12.026167+00:00",
+      "source_type": "blog",
+      "summary": "NN/g调研发现,Claude重度用户很少编辑、甚至常找不到自己的context文件;大家在context library(markdown文件、MCP连接到Notion/Slack等外部知识源)上投入的精力往往超过写prompt本身,却各自摸索出一套临时方案,普遍怀疑别人做得更好。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接讲清Claude重度用户如何维护context library,对context engineering实操有直接参考价值"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "A new feature for my blog, built using my voice",
+      "link": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/",
+      "date": "2026-10-09",
+      "first_seen": "2026-10-10T01:33:10.126490+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison用ChatGPT Codex的语音模式,边做饭边口述完成了博客新闻通讯索引页的开发——涵盖新数据模型、多个导入脚本和页面设计,半小时语音对话后已接近可发布状态,之后再切换回键盘打字处理精细修改与代码审查。他认为语音模式更适合多任务场景下的构思阶段,精细调整仍需打字,这种组合比纯语音或纯打字更强大。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "完整实操案例:用ChatGPT Codex语音模式边做饭边开发博客新功能,详述流程(语音构思+键盘精修)和适用边界,直接影响怎么用语音驱动coding agent"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] not much happened today",
       "link": "https://www.latent.space/p/ainews-not-much-happened-today-60f",
@@ -15,7 +66,7 @@
           "reason": "OpenAI解雇安全研究员的争议、GPT-6.1 Sol Ultrafast发布、Haiku 5.5细节跟进，信息量大且讲清楚为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -32,7 +83,7 @@
           "reason": "Anthropic新功能(Dashboards/Motion)公测官宣，是直接影响怎么用AI工具的实操信息"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -49,7 +100,7 @@
           "reason": "Anthropic发布Claude Haiku 5.5并同步调价，讲清楚是什么、定价策略、基准表现与生态集成，是前沿模型新发布且说明了为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",

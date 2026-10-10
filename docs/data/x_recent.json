@@ -2,6 +2,28 @@
   "items": [
     {
       "person": "Boris Cherny",
+      "title": "RT @ClaudeDevs: We just let in every Pro and Max user from the Claude Code Projects waitlist!  If yo…",
+      "link": "https://x.com/bcherny/status/2108622500833952088",
+      "date": "2026-10-09",
+      "first_seen": "2026-10-10T01:33:16.523711+00:00",
+      "source_type": "x",
+      "summary": "Claude Code Projects的等待名单已经向所有Pro和Max用户开放,此前是邀请制。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @nateparrott: people really like the versions of Claude Design and Slides built into Claude — usa…",
+      "link": "https://x.com/bcherny/status/2108426253435121800",
+      "date": "2026-10-09",
+      "first_seen": "2026-10-10T01:33:16.524007+00:00",
+      "source_type": "x",
+      "summary": "据Anthropic内部评论转发,Claude内置的Design和Slides功能使用率明显走高,团队表示会继续加大投入。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
       "title": "RT @claudeai: Claude Dashboards and Claude Motion are in beta today.  Ask Claude to turn your data i…",
       "link": "https://x.com/bcherny/status/2108285624340144404",
       "date": "2026-10-08",
@@ -9,7 +31,7 @@
       "source_type": "x",
       "summary": "Anthropic的Claude Dashboards和Claude Motion公测上线，可以让Claude把数据变成实时仪表盘、把想法变成动态演示。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -217,39 +239,6 @@
       "first_seen": "2026-10-04T00:23:26.918002+00:00",
       "source_type": "x",
       "summary": "吐槽OpenClaw安卓版已经卡在Google应用审核队列一周多，问有没有认识Google的人能帮忙推进。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "This was by far my favorite slide at DevDay. Kudos to the team! https://t.co/AQtPzNTZhx",
-      "link": "https://x.com/steipete/status/2106076508020506722",
-      "date": "2026-10-02",
-      "first_seen": "2026-10-03T00:58:59.962651+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger发推称这是他在OpenAI DevDay上最喜欢的一张slide，向团队表示祝贺——纯粹的赞赏，没有涉及自家产品宣传。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Andrej Karpathy",
-      "title": "Cool eval. Simply ask an LLM “Land or Water?” and give it a latitude and longitude coordinate as tex…",
-      "link": "https://x.com/karpathy/status/2105909609487872075",
-      "date": "2026-10-02",
-      "first_seen": "2026-10-03T00:58:57.280647+00:00",
-      "source_type": "x",
-      "summary": "Karpathy展示了一个有趣的eval：让LLM对16200个经纬度坐标判断“陆地还是水域”并把结果可视化成图像，发现模型确实“知道”地球的陆地水域分布——这是从压缩互联网文本中习得隐性知识的生动例证。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Amanda Askell",
-      "title": "Tantalum being discovered in 1802 and turning out to have an isotope with a half life so long that w…",
-      "link": "https://x.com/AmandaAskell/status/2105901984889086203",
-      "date": "2026-10-02",
-      "first_seen": "2026-10-03T00:58:55.858123+00:00",
-      "source_type": "x",
-      "summary": "钽(Tantalum)1802年被发现，其中一种同位素的半衰期长到可能永远观测不到衰变——作者借此调侃这是“命名决定论”的绝佳例子。",
       "tier": "low",
       "is_new": false
     }
