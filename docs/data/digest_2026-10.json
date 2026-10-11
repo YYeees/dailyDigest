@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "[AINews] TypeSafe/Jev at >$100M ARR, $7.5B valuation 3 weeks after launch",
+      "link": "https://www.latent.space/p/ainews-typesafejev-at-100m-arr-75b",
+      "date": "2026-10-10",
+      "first_seen": "2026-10-11T00:42:50.900883+00:00",
+      "source_type": "blog",
+      "summary": "Decision models(单次前向传播返回概率/分类/打分等结构化答案)正成为新产品品类,OpenAI、微软、Perplexity、Cloudflare、Liquid等厂商同期跟进,vLLM、LangChain等生态也已接入支持。同时Claude方面迎来多项更新:Managed Agents动态workflow公测(单次最多调度1000个子agent并合并结果)、Claude Code Projects向所有等待名单上的Pro/Max用户开放、Opus 5.5 fast mode上线但按用量计费不含在订阅内。多agent团队协作在成本上暂未体现优势,实测比单agent贵1.8~5.1倍;LangChain测算显示按任务路由到合适模型可将Open SWE中位成本降64%。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "报道decision models这一新产品品类的兴起(OpenAI/微软/Perplexity/Cloudflare/Liquid等同期跟进)以及Claude Managed Agents动态workflow公测、Opus 5.5 fast mode等直接影响日常用AI工具方式的实操信息,信息扎实"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "NN/g",
       "title": "The New Siri’s Biggest Strength Is Not Intelligence",
       "link": "https://www.nngroup.com/articles/ai-assistant-context/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
@@ -15,7 +32,7 @@
           "reason": "扎实的AI产品/UX分析,论证'有用的AI助理关键在个人情境接入能力而非模型智能'这一可迁移的设计原则,门槛不高"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "NN/g",
@@ -32,7 +49,7 @@
           "reason": "直接讲清Claude重度用户如何维护context library,对context engineering实操有直接参考价值"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -49,7 +66,7 @@
           "reason": "完整实操案例:用ChatGPT Codex语音模式边做饭边开发博客新功能,详述流程(语音构思+键盘精修)和适用边界,直接影响怎么用语音驱动coding agent"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",

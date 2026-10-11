@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "person": "Peter Steinberger",
+      "title": "not as clear-cut, but also yes",
+      "link": "https://x.com/steipete/status/2109022454224150707",
+      "date": "2026-10-10",
+      "first_seen": "2026-10-11T00:43:01.133194+00:00",
+      "source_type": "x",
+      "summary": "回应某个说法时表示不算非黑即白,但大体同意。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Peter Steinberger",
+      "title": "JavaScript is not a serious language 🙃 https://t.co/7yeq9rr025",
+      "link": "https://x.com/steipete/status/2109008513855087082",
+      "date": "2026-10-10",
+      "first_seen": "2026-10-11T00:43:01.133416+00:00",
+      "source_type": "x",
+      "summary": "吐槽JavaScript不是一门严肃的语言。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
       "person": "Boris Cherny",
       "title": "RT @ClaudeDevs: We just let in every Pro and Max user from the Claude Code Projects waitlist!  If yo…",
       "link": "https://x.com/bcherny/status/2108622500833952088",
@@ -9,7 +31,7 @@
       "source_type": "x",
       "summary": "Claude Code Projects的等待名单已经向所有Pro和Max用户开放,此前是邀请制。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -20,7 +42,7 @@
       "source_type": "x",
       "summary": "据Anthropic内部评论转发,Claude内置的Design和Slides功能使用率明显走高,团队表示会继续加大投入。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -218,28 +240,6 @@
       "source_type": "x",
       "summary": "lydiahallie发帖图解「mods」概念：本质上是带几个特殊功能的插件，Boris Cherny转发推荐这条讲解线程。",
       "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "laughing about how we all are building the same thing.",
-      "link": "https://x.com/steipete/status/2106489264443981978",
-      "date": "2026-10-03",
-      "first_seen": "2026-10-04T00:23:26.917688+00:00",
-      "source_type": "x",
-      "summary": "感慨一句：大家都在做同一件事，挺好笑的。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Do I know anyone at Google who could help? We're now over a week in review limbo for OpenClaw's Andr…",
-      "link": "https://x.com/steipete/status/2106446147791597774",
-      "date": "2026-10-03",
-      "first_seen": "2026-10-04T00:23:26.918002+00:00",
-      "source_type": "x",
-      "summary": "吐槽OpenClaw安卓版已经卡在Google应用审核队列一周多，问有没有认识Google的人能帮忙推进。",
-      "tier": "low",
       "is_new": false
     }
   ]
