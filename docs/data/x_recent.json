@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "person": "Andrej Karpathy",
+      "title": "Dusting off this tweet from April because this gap in shared understanding of LLM capability is *wid…",
+      "link": "https://x.com/karpathy/status/2109361546505966046",
+      "date": "2026-10-11",
+      "first_seen": "2026-10-12T01:03:55.973380+00:00",
+      "source_type": "x",
+      "summary": "Karpathy提出一个「认知漏斗」模型：绝大多数人几乎没接触过LLM，普通用户只见过平庸的聊天机器人，极少数专业人士(约0.2%)已能用前沿agent完成过去数月的工程项目，而内部少数人(约5000人)看到的是数千agent协作数周完成重大项目的景象。他认为这种割裂正在加剧，源于影响力随问题规模放大、能力分布本身参差不齐(在可验证、数字化、经济价值高的领域更强)，以及访问权限的差异。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
       "person": "Peter Steinberger",
       "title": "not as clear-cut, but also yes",
       "link": "https://x.com/steipete/status/2109022454224150707",
@@ -9,7 +20,7 @@
       "source_type": "x",
       "summary": "回应某个说法时表示不算非黑即白,但大体同意。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -20,7 +31,7 @@
       "source_type": "x",
       "summary": "吐槽JavaScript不是一门严肃的语言。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -217,28 +228,6 @@
       "first_seen": "2026-10-06T02:05:50.204567+00:00",
       "source_type": "x",
       "summary": "Claude现在可以被直接加入Slack群组私信，像添加普通成员一样，会在话题串里回复并保留上下文。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @claudeai: Lots of inventive things made with Claude these past few weeks. A few of our favorites…",
-      "link": "https://x.com/bcherny/status/2106805098534052135",
-      "date": "2026-10-04",
-      "first_seen": "2026-10-05T00:29:50.794603+00:00",
-      "source_type": "x",
-      "summary": "Claude官方账号(@claudeai)盘点近几周用户用Claude做出的一些有创意的作品，其中一例是用Opus搭建的一台能实际运转的水车模型，Boris Cherny转发推荐。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @lydiahallie: A few of you asked what mods are, here's a quick walkthrough! They’re really just p…",
-      "link": "https://x.com/bcherny/status/2106565344919953590",
-      "date": "2026-10-04",
-      "first_seen": "2026-10-05T00:29:50.795034+00:00",
-      "source_type": "x",
-      "summary": "lydiahallie发帖图解「mods」概念：本质上是带几个特殊功能的插件，Boris Cherny转发推荐这条讲解线程。",
       "tier": "medium",
       "is_new": false
     }
