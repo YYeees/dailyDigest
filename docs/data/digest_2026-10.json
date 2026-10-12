@@ -462,6 +462,24 @@
   ],
   "github_track": [
     {
+      "full_name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "difficulty": "beginner",
+      "recommend_reason": "Matt Pocock维护的一批可直接复用的Claude Code/Codex/Copilot等agent提示词和工作流,解决agent常见失败模式(对齐不清、过度啰嗦、代码质量、架构腐化),比如/grill-me先访谈对齐需求、/tdd强制红绿重构循环。20余个skill都有文档说明适用场景,拿来即用门槛低,是agent工作流实操的优秀参考样本。",
+      "stars_total": 286322
+    },
+    {
+      "full_name": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "language": "TypeScript",
+      "difficulty": "beginner",
+      "recommend_reason": "给Claude Code等多种agent做跨session持久记忆的工具,用生命周期hook捕获session活动、AI压缩成摘要、SQLite+向量库做语义检索,未来session按需注入相关上下文。单命令安装(npx claude-mem install),工程完整(3000+ commit、分层记忆管理token成本),是\"agent记忆\"这个常见痛点的扎实实践案例。",
+      "stars_total": 99760
+    },
+    {
       "full_name": "pbakaus/impeccable",
       "url": "https://github.com/pbakaus/impeccable",
       "description": "The design language that makes your AI harness better at design.",
@@ -496,24 +514,6 @@
       "difficulty": "beginner",
       "recommend_reason": "无向量的推理式RAG方案,把文档构建成分层树索引,靠LLM推理遍历而非embedding相似度检索,直接针对'相似性≠相关性'这个向量RAG的真实痛点。3行代码上手,在FinanceBench上98.7%准确率远超向量RAG的50%,索引/查询成本也有具体数字支撑,是RAG技术路线创新的代表性样本。",
       "stars_total": 38639
-    },
-    {
-      "full_name": "topoteretes/cognee",
-      "url": "https://github.com/topoteretes/cognee",
-      "description": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory with small models for free",
-      "language": "Python",
-      "difficulty": "beginner",
-      "recommend_reason": "给AI agent提供跨会话长期记忆的平台,remember/recall/improve/forget四个操作对应清晰,支持本地小模型免API key运行,也有BEAM框架下的量化基准(10M token场景0.67分)。pip装好即可用,多语言SDK和编辑器集成完整,是agent记忆这个新兴方向里有实际基准支撑的扎实项目。",
-      "stars_total": 31361
-    },
-    {
-      "full_name": "AI4Finance-Foundation/FinGPT",
-      "url": "https://github.com/AI4Finance-Foundation/FinGPT",
-      "description": "FinGPT: Open-Source Financial Large Language Models! Revolutionize 🔥 We release the trained model on HuggingFace.",
-      "language": "Jupyter Notebook",
-      "difficulty": "intermediate",
-      "recommend_reason": "开源金融LLM项目,核心是用LoRA轻量微调(单次训练成本控制在300美元内)而非像BloombergGPT那样全量重训,在情感分析等金融NLP基准上验证超过GPT-4。有HuggingFace Space真实demo、多个基座模型的微调版本和学术会议背书(NeurIPS/IJCAI),提供无GPU的初学者路径降低门槛,是'低成本民主化金融AI'的代表性实践。",
-      "stars_total": 21351
     }
   ]
 }

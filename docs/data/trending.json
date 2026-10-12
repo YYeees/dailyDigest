@@ -1,69 +1,30 @@
 {
   "items": [
     {
-      "full_name": "debpalash/VoiceStudio",
-      "url": "https://github.com/debpalash/VoiceStudio",
-      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
-      "language": "Python",
-      "difficulty": "intermediate",
+      "full_name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "difficulty": "beginner",
       "worth_tier": "high",
-      "recommend_reason": "VoiceStudio是本地部署的语音AI一体化平台，对标ElevenLabs，支持声音克隆、语音合成（646种语言、16个TTS引擎）、转录（11个ASR引擎）、视频配音、有声书制作等，架构上Rust桌面壳+React前端+Python FastAPI后端，还内置AudioSeal水印检测。功能覆盖全面且完全本地运行、注重隐私，是了解「多引擎注册式」语音AI应用架构设计的好范例，不过默认模型权重为CC-BY-NC，商用需换引擎。",
-      "first_seen_date": "2026-09-07",
-      "stars_total": 53182,
-      "stars_period": 14689,
-      "last_snapshot_date": "2026-10-05"
+      "recommend_reason": "Matt Pocock维护的一批可直接复用的Claude Code/Codex/Copilot等agent提示词和工作流,解决agent常见失败模式(对齐不清、过度啰嗦、代码质量、架构腐化),比如/grill-me先访谈对齐需求、/tdd强制红绿重构循环。20余个skill都有文档说明适用场景,拿来即用门槛低,是agent工作流实操的优秀参考样本。",
+      "first_seen_date": "2026-10-12",
+      "stars_total": 286322,
+      "stars_period": 10330,
+      "last_snapshot_date": "2026-10-12"
     },
     {
-      "full_name": "vectorize-io/hindsight",
-      "url": "https://github.com/vectorize-io/hindsight",
-      "description": "Hindsight: Agent Memory That Learns",
-      "language": "Python",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "面向AI agent的记忆系统，用retain/recall/reflect三段式操作把对话中的事实、经验、观察结构化存储并演化出“心智模型”，宣称在长期记忆任务上优于RAG和知识图谱，并有Virginia Tech的独立benchmark验证，也接入了主流coding agent和框架。是了解“agent memory”这个新方向具体怎么做的一个扎实样本。",
-      "first_seen_date": "2026-09-28",
-      "stars_total": 45511,
-      "stars_period": 10623,
-      "last_snapshot_date": "2026-10-05"
-    },
-    {
-      "full_name": "paperclipai/paperclip",
-      "url": "https://github.com/paperclipai/paperclip",
-      "description": "The open-source app everyone uses to manage agents at work",
+      "full_name": "tester-army/e2e",
+      "url": "https://github.com/tester-army/e2e",
+      "description": "Next generation e2e testing framework for web and mobile apps.",
       "language": "TypeScript",
       "difficulty": "intermediate",
       "worth_tier": "high",
-      "recommend_reason": "面向多agent团队的编排/治理平台，提供工单式任务分派、组织架构、Token预算控制、心跳调度等能力，可对接Claude Code、Codex等多种agent运行时。功能设计针对\"同时管理多个AI agent\"这一实际痛点(而不是单agent对话工具)，是学习多agent协作治理架构的一个具体样本，MIT开源且有完整的安装和开发文档支撑其可用性。",
-      "first_seen_date": "2026-08-15",
-      "stars_total": 97210,
-      "stars_period": 8732,
-      "last_snapshot_date": "2026-10-05"
-    },
-    {
-      "full_name": "NVIDIA/OpenShell",
-      "url": "https://github.com/NVIDIA/OpenShell",
-      "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
-      "language": "Rust",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "NVIDIA出品的AI agent安全运行时,通过内核级沙箱隔离+凭证按需注入、形式验证的策略审查,解决agent需要文件/API/凭证访问权限但又带来安全风险的核心矛盾。基础使用一行命令即可,但策略配置需要理解文件系统/网络/进程规则,门槛中等;多语言SDK、Brev Cloud真实集成、1625次提交,是agent安全基础设施的扎实样本。",
-      "first_seen_date": "2026-10-05",
-      "stars_total": 14874,
-      "stars_period": 5996,
-      "last_snapshot_date": "2026-10-05"
-    },
-    {
-      "full_name": "rohitg00/ai-engineering-from-scratch",
-      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
-      "description": "Learn it. Build it. Ship it for others.",
-      "language": "Python",
-      "difficulty": "advanced",
-      "worth_tier": "high",
-      "recommend_reason": "一套从数学基础到生产级Agent系统的完整AI工程课程,523节课分20个阶段,用Python/TypeScript/Rust/Julia提供可运行实现,并配套书籍和技能/MCP产出物。目录结构和提交历史(1764次)显示内容确实落地而非大纲空转,体量和深度要求学习者有一定钻研耐心,是系统学习AI工程实操路径的优秀样本。",
-      "first_seen_date": "2026-08-31",
-      "stars_total": 63941,
-      "stars_period": 4904,
-      "last_snapshot_date": "2026-10-05"
+      "recommend_reason": "用自然语言描述目标、让AI agent驱动浏览器/移动端完成e2e测试的框架,agent.act()/assert()调用模型、首次跑录制动作、后续重放尽量避免重复调模型以省成本。732次commit、9.1k star,多端(Playwright web+iOS/Android模拟器)支持成熟,是\"AI改造测试\"方向里少见的真正可用实现,不是纯demo。",
+      "first_seen_date": "2026-10-12",
+      "stars_total": 9080,
+      "stars_period": 6440,
+      "last_snapshot_date": "2026-10-12"
     },
     {
       "full_name": "Panniantong/Agent-Reach",
@@ -74,9 +35,48 @@
       "worth_tier": "high",
       "recommend_reason": "给AI agent提供统一CLI去读取/搜索Twitter、Reddit、YouTube、GitHub、B站、小红书等多平台内容，零API费用。README显示这不是薄壳套皮：用yt-dlp、feedparser、gh cli等成熟工具做多后端fallback路由，还有`agent-reach doctor`诊断各渠道健康状态，且有实际维护记录（如B站接口被封后切换方案）。是学习「怎么给agent接好用的外部工具链」的扎实案例，但需要Python环境和部分平台的登录配置。",
       "first_seen_date": "2026-09-21",
-      "stars_total": 90924,
-      "stars_period": 4789,
-      "last_snapshot_date": "2026-10-05"
+      "stars_total": 96059,
+      "stars_period": 5461,
+      "last_snapshot_date": "2026-10-12"
+    },
+    {
+      "full_name": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "description": "Write HTML. Render video. Built for agents.",
+      "language": "TypeScript",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "将HTML/CSS/动画确定性渲染为MP4视频的框架，核心定位是“为AI agent设计”——用平文本HTML代替React组件(对比Remotion)，让AI也能直接编写视频内容，并提供20个可复用技能供Claude/Cursor等agent调用。有7个功能性npm包、完整CLI和测试基线，是“AI生成内容”方向具代表性的工具实践。",
+      "first_seen_date": "2026-09-14",
+      "stars_total": 61026,
+      "stars_period": 4223,
+      "last_snapshot_date": "2026-10-12"
+    },
+    {
+      "full_name": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "language": "TypeScript",
+      "difficulty": "beginner",
+      "worth_tier": "high",
+      "recommend_reason": "给Claude Code等多种agent做跨session持久记忆的工具,用生命周期hook捕获session活动、AI压缩成摘要、SQLite+向量库做语义检索,未来session按需注入相关上下文。单命令安装(npx claude-mem install),工程完整(3000+ commit、分层记忆管理token成本),是\"agent记忆\"这个常见痛点的扎实实践案例。",
+      "first_seen_date": "2026-10-12",
+      "stars_total": 99760,
+      "stars_period": 3803,
+      "last_snapshot_date": "2026-10-12"
+    },
+    {
+      "full_name": "rohitg00/ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "description": "Learn it. Build it. Ship it for others.",
+      "language": "Python",
+      "difficulty": "advanced",
+      "worth_tier": "high",
+      "recommend_reason": "一套从数学基础到生产级Agent系统的完整AI工程课程,523节课分20个阶段,用Python/TypeScript/Rust/Julia提供可运行实现,并配套书籍和技能/MCP产出物。目录结构和提交历史(1764次)显示内容确实落地而非大纲空转,体量和深度要求学习者有一定钻研耐心,是系统学习AI工程实操路径的优秀样本。",
+      "first_seen_date": "2026-08-31",
+      "stars_total": 67534,
+      "stars_period": 3687,
+      "last_snapshot_date": "2026-10-12"
     }
   ]
 }
