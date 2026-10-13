@@ -2,6 +2,40 @@
   "items": [
     {
       "person": "Latent Space",
+      "title": "How Anthropic’s Dynamic Workflows Coordinate Claude Agents",
+      "link": "https://www.latent.space/p/claude-dynamic-workflows",
+      "date": "2026-10-12",
+      "first_seen": "2026-10-13T02:52:33.749632+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic的CJ Avilla和Harrison Stall在AI Engineer NYC介绍了Claude Managed Agents的新功能dynamic workflows（内部称flows）：由主agent自己规划、编写编排程序、派发子agent完成任务，不再需要开发者手动配置协调者和agent名单。Q&A里谈到预算控制（agent运行时不知道预算，靠开发者设置session budget）、用“dreaming”机制整理记忆库、子agent间通过共享文件系统交换信息但不能直接互相发消息等细节。Flows成本比单agent高很多，但官方强调是为了啃大项目、把test-time compute砸向难题。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "报道Anthropic新发布的dynamic workflows（flows）功能，讲清楚是什么、怎么运作、成本和局限，属于前沿工具新发布且讲透彻"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Craig Mod",
+      "title": "[RIDGELINE] Walking and Not Walking a Castle in Italy",
+      "link": "https://craigmod.com/ridgeline/236/",
+      "date": "2026-10-12",
+      "first_seen": "2026-10-13T02:52:30.987140+00:00",
+      "source_type": "blog",
+      "summary": "Craig Mod记叙自己代替Kevin Kelly参加在意大利Rocca Sinibalda城堡举办的五天艺术家驻留活动的经历。原本期待获得写作时间，却被一群思维活跃的创作者冲击，不得不重新校正预期、放下积累已久的过度怀疑。他的感悟是：有时候对平时会拒绝的事说“是”，反而是好事。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "一手记叙在意大利城堡艺术驻留中放下过度怀疑、对平时会拒绝的事说“是”，呼应反射母题“综合强拆解弱，往不顺手那半偏心练”"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
       "title": "[AINews] TypeSafe/Jev at >$100M ARR, $7.5B valuation 3 weeks after launch",
       "link": "https://www.latent.space/p/ainews-typesafejev-at-100m-arr-75b",
       "date": "2026-10-10",
@@ -15,7 +49,7 @@
           "reason": "报道decision models这一新产品品类的兴起(OpenAI/微软/Perplexity/Cloudflare/Liquid等同期跟进)以及Claude Managed Agents动态workflow公测、Opus 5.5 fast mode等直接影响日常用AI工具方式的实操信息,信息扎实"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "NN/g",

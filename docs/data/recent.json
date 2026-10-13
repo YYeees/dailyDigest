@@ -2,6 +2,128 @@
   "items": [
     {
       "person": "Latent Space",
+      "title": "How Anthropic’s Dynamic Workflows Coordinate Claude Agents",
+      "link": "https://www.latent.space/p/claude-dynamic-workflows",
+      "date": "2026-10-12",
+      "first_seen": "2026-10-13T02:52:33.749632+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic的CJ Avilla和Harrison Stall在AI Engineer NYC介绍了Claude Managed Agents的新功能dynamic workflows（内部称flows）：由主agent自己规划、编写编排程序、派发子agent完成任务，不再需要开发者手动配置协调者和agent名单。Q&A里谈到预算控制（agent运行时不知道预算，靠开发者设置session budget）、用“dreaming”机制整理记忆库、子agent间通过共享文件系统交换信息但不能直接互相发消息等细节。Flows成本比单agent高很多，但官方强调是为了啃大项目、把test-time compute砸向难题。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "报道Anthropic新发布的dynamic workflows（flows）功能，讲清楚是什么、怎么运作、成本和局限，属于前沿工具新发布且讲透彻"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "聚焦harness/多agent编排设计，贴合“护城河在harness，不在模型”母题，但是会议报道的二手转述，非用户一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Hello Python 3.15, goodbye 3.10, and now I can use 3.11",
+      "link": "https://simonwillison.net/2026/Oct/12/python-3-15/",
+      "date": "2026-10-12",
+      "first_seen": "2026-10-13T02:52:32.553459+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "通用Python发布笔记，仅附带提到LLM CLI工具的懒加载优化，不构成AI实操内容"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "与锚点三根主干及周边领域无关"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "web-edit 0.1a0",
+      "link": "https://simonwillison.net/2026/Oct/12/web-edit/",
+      "date": "2026-10-12",
+      "first_seen": "2026-10-13T02:52:32.553708+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison用Codex Remote和GPT-6 Astra Extra High写了一个叫web-edit的小工具：一个跑在Tailscale网络里的文件浏览/编辑网页应用，用CodeMirror 6做编辑器。起因是他想从手机上编辑凭据文件，又不想把凭据内容喂给LLM，于是让AI帮他搭了这个独立于对话之外的编辑界面。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "编程agent实战案例：用Codex Remote和GPT-6 Astra构建个人工具，演示AI辅助开发的实际应用"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "亲手搭建自己的文件编辑harness，刻意把敏感凭据挡在LLM之外，沾“构建者活法”周边领域，非直接命中正向母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Ministry of Testing",
+      "title": "What do we call all latent and non-detectable bugs?",
+      "link": "https://club.ministryoftesting.com/t/what-do-we-call-all-latent-and-non-detectable-bugs/87816",
+      "date": "2026-10-12",
+      "first_seen": "2026-10-13T02:52:36.445111+00:00",
+      "source_type": "blog",
+      "summary": "Ministry of Testing论坛上有人提问：该用什么统一术语来形容那些风险极低、不值得修复的缺陷（如死代码里的bug、代码风格问题、低效但无影响的代码、重复代码等），现有的heisenbug/dormant bug等词都不太贴切。截至目前帖子还没有回复。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "测试社区对低风险/不可检测缺陷该叫什么统一术语的提问，属于有讨论价值的论坛提问，但目前0回帖"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "datasette-ports 0.4",
+      "link": "https://simonwillison.net/2026/Oct/12/datasette-ports/",
+      "date": "2026-10-12",
+      "first_seen": "2026-10-13T02:52:32.553816+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "作者自己维护的小工具版本更新日志，内容是进程/端口检测调试辅助，与AI无关"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "与三根主干及周边领域无关"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Craig Mod",
+      "title": "[RIDGELINE] Walking and Not Walking a Castle in Italy",
+      "link": "https://craigmod.com/ridgeline/236/",
+      "date": "2026-10-12",
+      "first_seen": "2026-10-13T02:52:30.987140+00:00",
+      "source_type": "blog",
+      "summary": "Craig Mod记叙自己代替Kevin Kelly参加在意大利Rocca Sinibalda城堡举办的五天艺术家驻留活动的经历。原本期待获得写作时间，却被一群思维活跃的创作者冲击，不得不重新校正预期、放下积累已久的过度怀疑。他的感悟是：有时候对平时会拒绝的事说“是”，反而是好事。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "一手记叙在意大利城堡艺术驻留中放下过度怀疑、对平时会拒绝的事说“是”，呼应反射母题“综合强拆解弱，往不顺手那半偏心练”"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
       "title": "Building AI for Reliable Execution: Lessons From Industrial Robotics",
       "link": "https://www.latent.space/p/standard-bots",
       "date": "2026-10-10",
@@ -288,72 +410,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "AI新闻周报式汇总多个开源模型发布,信息密度高但属于推特快报体裁的宏观叙事,不是单一主题的深度讲解"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Felix Rieseberg",
-      "link": "https://simonwillison.net/2026/Oct/5/felix-rieseberg/",
-      "date": "2026-10-05",
-      "first_seen": "2026-10-06T02:05:39.006834+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic的Felix Rieseberg解释了Claude Cowork的架构变化：旧版本在用户本地跑一个VM来执行工具调用，新版本把推理和VM都搬到云端、每个会话独立沙箱，只有访问本地文件时才交回桌面客户端处理。这是为了解决本地VM耗电、占磁盘、合上笔记本就中断工作等用户反馈的问题，也让手机上使用Cowork成为可能。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "清楚解释Claude Cowork架构从本地VM改为云端VM的原因和权衡，直接影响用户对这个工具的理解和使用"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Maaret Pyhäjärvi",
-      "title": "Filling the Gaps",
-      "link": "https://visible-quality.blogspot.com/2026/10/filling-gaps.html",
-      "date": "2026-10-05",
-      "first_seen": "2026-10-06T02:05:41.624121+00:00",
-      "source_type": "blog",
-      "summary": "作者反思自己越来越偏好和AI一对一协作、把人际关系留给广播式沟通，担心这种个体生产力优化会拉大同事间的差距、让共享经验和团队需求变得碎片化；她把这种AI先行者悄悄多赚出私人时间的现象类比CI/CD普及前频繁断的构建，呼吁团队有意识地把省下的时间投入协作改进，而不是任由个体差距扩大。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "讨论AI造成的个体生产力差距和团队协作影响，沾AI边但偏宏观叙事"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "作者一手反思自己偏好和AI协作、疏远人际关系的现象，触及根二边缘但未直接命中已列母题"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "作者是测试领域人物，用CI/CD断构建类比协作时间，但正文讲的是团队协作动态而非测试实践本身，偏轻"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Martin Fowler",
-      "title": "Fragments: October  4",
-      "link": "https://martinfowler.com/fragments/2026-10-04.html",
-      "date": "2026-10-05",
-      "first_seen": "2026-10-06T02:05:40.652451+00:00",
-      "source_type": "blog",
-      "summary": "这篇随笔串起了近期几条关于代码与LLM关系的讨论：从养育而非建造的隐喻谈到LLM系统出错后难以简单修复或禁用；引述Geoffrey Huntley、Sam Ruby、Unmesh Joshi等人关于代码是否还需要给人读的争论，认为概念模型和词汇表的价值在agent时代反而更重要；还提到Gemini 4 Argon幻觉率远低于其他模型（15%，对比Opus 5.5的59%）但准确率也更低的取舍。文中也记述了好友Ola Bini被厄瓜多尔驱逐的遭遇。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "串联多条AI与代码关系的讨论和模型幻觉率对比，沾AI边但偏宏观叙事，不是直接实操指南"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "围绕概念模型、认知与写作思考的交织展开，触及根二AI作为认知方式的边，但多是转述他人观点串联而非一手反思"
         }
       ],
       "is_new": false
