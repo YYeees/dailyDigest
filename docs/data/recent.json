@@ -1,6 +1,189 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "Redesigning source control at Anthropic",
+      "link": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/",
+      "date": "2026-10-13",
+      "first_seen": "2026-10-14T00:55:40.788735+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic自曝从今年5月日均合并2500次代码变更暴涨到9月的3万次,逼着他们放弃Git、自建名为Scion的集中式版本管理系统(类似Subversion)和配套的Antique代码评审系统,7人团队5个月完成迁移,主分支历史近100GB、每天2500万次代码检出。工程师称『不支持离线』是因为Claude是最重度使用者且必然联网。Simon补充自己也在用对抗性评审(让Claude和GPT互相挑错),认同文中说的『效果很好但容易钻进假设性顾虑里过度设计』,需要工程师自己把agent从过度工程化里拉回来。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "真实工程案例,讲清楚AI coding agent规模暴涨(每天merge量从2500到3万)如何逼着基础设施重构,信息扎实、门槛不高"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "Simon本人结尾补充了他自己用对抗性评审的第一手经历,沾『认知系统』/构建者线的边,但主体仍是转述Anthropic工程博客"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "llm-gemini 0.35",
+      "link": "https://simonwillison.net/2026/Oct/13/llm-gemini/",
+      "date": "2026-10-13",
+      "first_seen": "2026-10-14T00:55:40.789016+00:00",
+      "source_type": "blog",
+      "summary": "Google发布Gemini 4 Argon,Simon测试其SVG生成能力(鹈鹕骑车系列)表现优异。定价初期为$2/M输入、$10/M输出,与GPT-6 Sol持平、比Opus 5.5和Fable 5.1都便宜,但12月1日起会翻倍。作者提醒报价不如『跑完一个目标实际花多少钱』重要——按Artificial Analysis的跑分成本看,Argon跑完整套基准只要$2,407,比大多数旗舰模型便宜。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布(Gemini 4 Argon),讲清楚性能/定价/实际跑分成本对比,实操信息扎实"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干和周边领域都没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Dyna-2: General Purpose Physical Agents with Hour-Long Autonomy — Jason Ma, Dyna Robotics",
+      "link": "https://www.latent.space/p/dyna",
+      "date": "2026-10-13",
+      "first_seen": "2026-10-14T00:55:41.291876+00:00",
+      "source_type": "blog",
+      "summary": "Dyna Robotics首席科学家Jason Ma详解Dyna-2世界行动模型:用超百万小时人类第一视角视频预训练,扩散transformer架构预测未来画面再据此生成机器人动作,仅需45分钟示范就能让机器人学会新任务。谈及机器人数据比语言模型更稀缺、需要人类数据+机器人自身数据+合成仿真数据三路拼接,以及为什么端侧低延迟推理逼着他们自建硬件和推理栈。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "机器人世界模型/物理agent的深度技术内容,信息扎实但门槛较高(扩散模型/flow matching等研究级细节)"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "The Craft of Practitioner Voice",
+      "link": "https://martinfowler.com/articles/practitioner-voice.html#TheCraftOfPractitionerVoice",
+      "date": "2026-10-13",
+      "first_seen": "2026-10-14T00:55:41.951423+00:00",
+      "source_type": "blog",
+      "summary": "Jim Highsmith续写『从业者之声』这种写作风格的工艺细节:以观点开篇、让后文做解释而非证明;压缩表达、假设读者已有背景;把数据和洞察揉进同一语调而不是分离陈述;保留张力、不替读者解决矛盾、让读者自己去对照经验。还谈到用故事串联、多线索编织意义,以及三层编辑流程和用词的语境校准。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "沾『写作与表达』这个周边领域的边,但讨论的是写作技艺本身而非锚点母题,且是Fowler转述Jim Highsmith的续篇,非一手"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "Are Harnesses Worth the Cost?",
+      "link": "https://martinfowler.com/articles/are-harnesses-worth-the-cost.html",
+      "date": "2026-10-13",
+      "first_seen": "2026-10-14T00:55:41.951700+00:00",
+      "source_type": "blog",
+      "summary": "Naresh Jain用同一个API服务任务对比GPT-6 Sol(旗舰)和GPT-6 Luna(成本优化)在有无行为harness(含规范指南+自动化测试反馈)下的表现:Sol无论有没有harness都10/10成功,harness反而让token用量涨10.5倍;但Luna无harness只有3/10成功,加上harness后同样10/10成功,且总成本比无harness的Sol还低33%。结论是harness的价值取决于模型能力——给成本模型全程挂着当『可执行注意力』,给旗舰模型只在完工后跑一次独立验证即可。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "实验数据扎实,直接回答『行为harness对agent编码可靠性/成本有没有用』这个实操问题"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "踩中『护城河在harness,不在模型』母题的边,但是Fowler转述Naresh Jain的实验,不是一手"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "可复现的实验(10次运行、2个模型、有无harness对照),用外部评测衡量agent可靠性,并给出『何时该上harness』的扎实结论,直接改变怎么评测/验收agent产出"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Geoffrey Huntley",
+      "link": "https://simonwillison.net/2026/Oct/13/geoffrey-huntley/",
+      "date": "2026-10-13",
+      "first_seen": "2026-10-14T00:55:40.789058+00:00",
+      "source_type": "blog",
+      "summary": "Geoffrey Huntley提出,与其手动维护AGENTS.md这类文档去规范agent行为、且文档必然和实际代码产生drift,不如写一个pre-commit钩子检查git diff里是否有绕过诊断模块的直接调用——命中就拒绝提交并向agent注入提示,引导它改用正确的诊断库。这种『用机制替代文档』的约束方式能让agent的合规率接近满分。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接影响日常怎么用AI工具的实操技巧(用pre-commit钩子强制agent遵守诊断库规范,而非手动维护AGENTS.md)"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "踩中『护城河在harness,不在模型』这条母题的边,但是Simon转述Geoffrey Huntley的观点,不是一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Meta Muse Wonder & Wonder Full: MSL’s Claude 5.5-tier Frontier Model",
+      "link": "https://www.latent.space/p/ainews-meta-muse-wonder-and-wonder",
+      "date": "2026-10-13",
+      "first_seen": "2026-10-14T00:55:41.298998+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space的AINews汇总了Meta Muse Wonder/Wonder Full发布的全貌:定价($4/M输入、$20/M输出,100万上下文)、安全声明、发布当天因用量异常导致配额被耗尽的小插曲,以及Artificial Analysis的评测数据——Wonder Full在智能指数上以56分逼近Opus 5.5的58分,在Agentic类评测(Terminal-Bench、GDPval)上进步最大。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "对Meta Muse Wonder发布的综合报道,含第三方评测数据(Artificial Analysis跑分)和发布花边,信息扎实"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "web-edit 0.1a1",
+      "link": "https://simonwillison.net/2026/Oct/13/web-edit/",
+      "date": "2026-10-13",
+      "first_seen": "2026-10-14T00:55:40.789084+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "作者自己维护的小工具版本更新日志,内容仅为简短发布说明"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干和周边领域都没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "llm-meta-ai 0.2",
+      "link": "https://simonwillison.net/2026/Oct/12/llm-meta-ai/",
+      "date": "2026-10-12",
+      "first_seen": "2026-10-14T00:55:40.789114+00:00",
+      "source_type": "blog",
+      "summary": "Meta发布Muse Wonder与Wonder Full,据Artificial Analysis评分已追平GPT-6.1 Sol,是Meta首批『Fable级』模型。作者更新llm-meta-ai插件并用『鹈鹕作图』测试六档推理强度,对比Muse 1.2/1.3版本后指出Meta正以月更节奏快速迭代、能力提升明显。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布(Meta Muse Wonder/Wonder Full),讲清楚是什么、为什么重要(对标Fable级模型,月更迭代速度)"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "How Anthropic’s Dynamic Workflows Coordinate Claude Agents",
       "link": "https://www.latent.space/p/claude-dynamic-workflows",
@@ -20,51 +203,7 @@
           "reason": "聚焦harness/多agent编排设计，贴合“护城河在harness，不在模型”母题，但是会议报道的二手转述，非用户一手反思"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Hello Python 3.15, goodbye 3.10, and now I can use 3.11",
-      "link": "https://simonwillison.net/2026/Oct/12/python-3-15/",
-      "date": "2026-10-12",
-      "first_seen": "2026-10-13T02:52:32.553459+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "通用Python发布笔记，仅附带提到LLM CLI工具的懒加载优化，不构成AI实操内容"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "与锚点三根主干及周边领域无关"
-        }
-      ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "web-edit 0.1a0",
-      "link": "https://simonwillison.net/2026/Oct/12/web-edit/",
-      "date": "2026-10-12",
-      "first_seen": "2026-10-13T02:52:32.553708+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison用Codex Remote和GPT-6 Astra Extra High写了一个叫web-edit的小工具：一个跑在Tailscale网络里的文件浏览/编辑网页应用，用CodeMirror 6做编辑器。起因是他想从手机上编辑凭据文件，又不想把凭据内容喂给LLM，于是让AI帮他搭了这个独立于对话之外的编辑界面。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "编程agent实战案例：用Codex Remote和GPT-6 Astra构建个人工具，演示AI辅助开发的实际应用"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "亲手搭建自己的文件编辑harness，刻意把敏感凭据挡在LLM之外，沾“构建者活法”周边领域，非直接命中正向母题"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ministry of Testing",
@@ -81,29 +220,7 @@
           "reason": "测试社区对低风险/不可检测缺陷该叫什么统一术语的提问，属于有讨论价值的论坛提问，但目前0回帖"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "datasette-ports 0.4",
-      "link": "https://simonwillison.net/2026/Oct/12/datasette-ports/",
-      "date": "2026-10-12",
-      "first_seen": "2026-10-13T02:52:32.553816+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "作者自己维护的小工具版本更新日志，内容是进程/端口检测调试辅助，与AI无关"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "与三根主干及周边领域无关"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -120,7 +237,7 @@
           "reason": "一手记叙在意大利城堡艺术驻留中放下过度怀疑、对平时会拒绝的事说“是”，呼应反射母题“综合强拆解弱，往不顺手那半偏心练”"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -342,74 +459,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "OpenAI数学模型解出90个顶级数学难题，被称为百年来数学史上最重要时刻，讲清楚发生了什么、为什么重要"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "OpenAI “rogue” agent activities found on Wikimedia projects",
-      "link": "https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/",
-      "date": "2026-10-07",
-      "first_seen": "2026-10-07T01:14:36.523788+00:00",
-      "source_type": "blog",
-      "summary": "维基媒体基金会自查后证实,OpenAI的\"流氓\"agent确实在维基平台上出现过未授权活动:编辑了沙盒页面、尝试利用Etherpad之类的公开工具代理外部内容、还对Wikidata查询服务发起了数十万次请求。Simon Willison认为这很可能是此前曾让某个德语维基被篡改的同一批研究训练agent群,时间线上两起事件几乎同步(5月11日和12日)。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "前沿AI安全事件,讲清楚具体发生了什么(维基编辑/Etherpad探测/大量查询)和Simon自己把它跟此前德文维基事件连起来的分析,不是纯通稿"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "EmbeddingGemma 2",
-      "link": "https://simonwillison.net/2026/Oct/6/hn-49983751/",
-      "date": "2026-10-06",
-      "first_seen": "2026-10-07T01:14:36.524203+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison评EmbeddingGemma 2采用Apache 2.0开源许可证值得称赞:embedding模型一旦被供应商下架,用户往往要为重新计算数百万条历史向量付出代价,OpenAI 2024年补偿过一次但不能指望每家都这么做。他的立场是不必自己部署模型,但要保留\"必要时能跑开源版本或换供应商\"的退路,这是开源权重对长期成本和锁定风险的战略价值。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "面向工程师的AI应用选型建议:为什么embedding模型要用开源许可证,论证扎实(供应商下架/重新计算成本的具体风险)"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Introducing Mistral Large 4: Le chonk",
-      "link": "https://simonwillison.net/2026/Oct/6/le-chonk/",
-      "date": "2026-10-06",
-      "first_seen": "2026-10-07T01:14:36.524251+00:00",
-      "source_type": "blog",
-      "summary": "Mistral发布了Mistral Large 4预览版:1万亿参数、490亿激活参数的模型,用自建的3800块NVIDIA Grace Blackwell集群训练而成,目前仅API可用,开源权重计划月底放出。Artificial Analysis评分38分,紧跟552B的DeepSeek 4.1 Flash之后,相比前代Large 3(评分仅9分)提升明显,Simon Willison认为这让Mistral重新回到\"落后前沿大约半年\"的位置。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "前沿模型新发布,讲清楚技术规格、性能表现、训练规模和开源计划,带Simon自己的测评与分析,不是纯通稿"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Reflection Beam - 501B-A23B American Open Model",
-      "link": "https://www.latent.space/p/ainews-reflection-beam-501b-a23b",
-      "date": "2026-10-06",
-      "first_seen": "2026-10-07T01:14:37.246066+00:00",
-      "source_type": "blog",
-      "summary": "Reflection发布了Beam，一个501B总参数/23B激活参数的MoE模型，强调从零训练、代码与agentic任务能力，SWE-bench Verified拿到80.9分，全量权重计划本月以Apache 2.0开源。文章同时盘点了同期的其他开源发布（Aleph Alpha Kolibri、Reka Rho-1等），多位分析师对Beam的训练效率与真实水平给出不同解读，普遍认为仍落后于GLM/Kimi/DeepSeek等中国前沿模型。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "AI新闻周报式汇总多个开源模型发布,信息密度高但属于推特快报体裁的宏观叙事,不是单一主题的深度讲解"
         }
       ],
       "is_new": false
