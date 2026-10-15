@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "Crossing the Threshold: How OpenAI and Anthropic Approach Autonomy and Safety in Financial Agents",
+      "link": "https://www.latent.space/p/crossing-the-threshold",
+      "date": "2026-10-14",
+      "first_seen": "2026-10-15T00:19:03.218256+00:00",
+      "source_type": "blog",
+      "summary": "AI Engineer NYC上，OpenAI/Anthropic/Two Sigma/Bloomberg都在讲同一件事：金融agent的自主权要靠'管控放在哪'而不是'限制有多少'来保安全。OpenAI讲'可用性阈值'；Two Sigma用可组合的guardrails+自动分类器把琐碎决策和重要决策分流，避免审批疲劳；Anthropic强调给agent建身份/权限层、让它只能'提议'不能直接'执行'；Bloomberg主张把安全检查放在模型外部(作用域凭证、工具调用管控、出站流量限制、审计、kill switch)。核心一句话：装刹车是为了能更快地跑。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "具体讲清楚金融agent自主权与安全管控的架构模式(guardrails/trust layer/人在回路设计)，对理解怎么构建安全的agent系统有直接实操价值。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "AI is mass decompiling games. That's both awesome and scary.",
+      "link": "https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/",
+      "date": "2026-10-14",
+      "first_seen": "2026-10-15T00:19:02.831620+00:00",
+      "source_type": "blog",
+      "summary": "独立游戏开发者Popcar撰文讨论AI正在批量反编译游戏的浪潮：好的一面是推动老游戏保存、移植到WebAssembly等新平台，让买断制游戏不因服务器关停而报废；坏的一面是任何软件都可能被无授权反编译并挪用，付费产品可能被迫'被开源'、竞争对手可抄对手代码，冲击整个科技行业。Simon认为这篇文章把两面都讲到了，值得一看。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深度分析AI批量反编译带来的游戏保存机遇和软件产权风险这一真实趋势，讲清楚是什么、为什么重要，不是纯新闻通稿。"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "Redesigning source control at Anthropic",
       "link": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/",
@@ -15,7 +49,7 @@
           "reason": "真实工程案例,讲清楚AI coding agent规模暴涨(每天merge量从2500到3万)如何逼着基础设施重构,信息扎实、门槛不高"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -32,7 +66,7 @@
           "reason": "前沿模型新发布(Gemini 4 Argon),讲清楚性能/定价/实际跑分成本对比,实操信息扎实"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -54,7 +88,7 @@
           "reason": "可复现的实验(10次运行、2个模型、有无harness对照),用外部评测衡量agent可靠性,并给出『何时该上harness』的扎实结论,直接改变怎么评测/验收agent产出"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -71,7 +105,7 @@
           "reason": "直接影响日常怎么用AI工具的实操技巧(用pre-commit钩子强制agent遵守诊断库规范,而非手动维护AGENTS.md)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -88,7 +122,7 @@
           "reason": "对Meta Muse Wonder发布的综合报道,含第三方评测数据(Artificial Analysis跑分)和发布花边,信息扎实"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -105,7 +139,7 @@
           "reason": "前沿模型新发布(Meta Muse Wonder/Wonder Full),讲清楚是什么、为什么重要(对标Fable级模型,月更迭代速度)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
