@@ -1,6 +1,74 @@
 {
   "items": [
     {
+      "person": "Boris Cherny",
+      "title": "Over the last few years, we have made significant progress on prompt injection for Claude models. As…",
+      "link": "https://x.com/bcherny/status/2110791698611855624",
+      "date": "2026-10-15",
+      "first_seen": "2026-10-16T00:07:08.327893+00:00",
+      "source_type": "x",
+      "summary": "Anthropic宣布与Gray Swan合作举办prompt injection红队竞赛，称这几年在Claude的prompt injection防御上已有明显进展，随着agent能做的事越来越多，解决这个问题对全行业都越来越紧迫。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "重要AI安全行业动态：Anthropic与Gray Swan合作举办prompt injection红队竞赛，直接关系到agent时代AI工具的安全可信度"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Anthropic tells investors quarterly revenue up nearly 50% to $16.8bn ahead of IPO",
+      "link": "https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/",
+      "date": "2026-10-15",
+      "first_seen": "2026-10-16T00:07:01.641045+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic在IPO前向投资者披露：Q3营收达168亿美元，环比增长近50%，每花1美元算力成本带来1.70美元营收，调整后营业利润率11%。文章还指出竞争对手'蒸馏'Anthropic模型一度占其收入5-7%，Q3已被大幅削减，且公司不再强调'年化运行率'这一说法。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿AI公司动态，讲清楚是什么为什么重要：Anthropic季度营收增至168亿美元，披露蒸馏占收入5-7%并已大幅削减等具体细节"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Antithesis",
+      "title": "Your agent can now ship reliable distributed systems",
+      "link": "https://antithesis.com/blog/2026/time-traveling-agents/",
+      "date": "2026-10-15",
+      "first_seen": "2026-10-16T00:07:04.561883+00:00",
+      "source_type": "blog",
+      "summary": "Antithesis展示了让AI agent在确定性仿真环境中用'多元宇宙调试器'自动复现、调查并修复生产级bug的能力，以etcd和HashiCorp Raft的真实历史bug为例，agent能回溯到故障时刻检查系统状态、验证修复方案，实现从写代码到充分验证的完整闭环，不需要人工介入。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "具体方法+真实案例：Antithesis让agent用'多元宇宙调试器'在确定性仿真环境里自动复现、调查、修复真实生产bug（以etcd、HashiCorp Raft为例），直接论证AI之后测试/调试这行会怎么变"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @ClaudeDevs: We've been working hard on making the Claude Code desktop app great for running lots…",
+      "link": "https://x.com/bcherny/status/2110627630945079624",
+      "date": "2026-10-15",
+      "first_seen": "2026-10-16T00:07:08.328193+00:00",
+      "source_type": "x",
+      "summary": "Claude Code桌面版新增多session并排运行能力，方便同时跑多个任务。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接影响日常怎么用AI工具的实操信息：Claude Code桌面版支持多session并排运行"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "Crossing the Threshold: How OpenAI and Anthropic Approach Autonomy and Safety in Financial Agents",
       "link": "https://www.latent.space/p/crossing-the-threshold",
@@ -15,7 +83,7 @@
           "reason": "具体讲清楚金融agent自主权与安全管控的架构模式(guardrails/trust layer/人在回路设计)，对理解怎么构建安全的agent系统有直接实操价值。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -32,7 +100,7 @@
           "reason": "深度分析AI批量反编译带来的游戏保存机遇和软件产权风险这一真实趋势，讲清楚是什么、为什么重要，不是纯新闻通稿。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

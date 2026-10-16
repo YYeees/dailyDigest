@@ -1,6 +1,106 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "Chirp Pong",
+      "link": "https://simonwillison.net/2026/Oct/15/chirp-pong/",
+      "date": "2026-10-15",
+      "first_seen": "2026-10-16T00:07:01.640783+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison用Claude Opus在Claude Code里生成了Chirp Pong：两台手机靠近，通过麦克风捕捉的音频噪声传递游戏状态，实现无网络的双人Pong对战实验。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "编程agent实战案例，偏娱乐/演示性质的内容：用Claude Code生成一个靠手机麦克风音频联机的双人Pong游戏"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Martin Fowler",
+      "title": "When Software Meets Hardware",
+      "link": "https://martinfowler.com/articles/software-meets-hardware.html",
+      "date": "2026-10-15",
+      "first_seen": "2026-10-16T00:07:03.248194+00:00",
+      "source_type": "blog",
+      "summary": "作者Kuldeep Singh分享了现代化一支80万个电池供电物联网传感器车队的一手经验：软件工程的基本原则（快速反馈、自动化测试、可观测性等）依然成立，但在电量、断连、大规模部署等物理约束下，'合理默认值'需要重新设定——比如为断连场景设计、把能耗当成软件关注点、同步设计部署与恢复流程。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "沾'质朴中正慢的构建者活法'这一周边领域的边：作者一手分享了在电池供电物联网传感器的物理约束下，如何调整软件工程常规实践（自动化测试、可观测性等）的默认做法，但不是直接讨论锚点清单里的具体母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Anthropic tells investors quarterly revenue up nearly 50% to $16.8bn ahead of IPO",
+      "link": "https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/",
+      "date": "2026-10-15",
+      "first_seen": "2026-10-16T00:07:01.641045+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic在IPO前向投资者披露：Q3营收达168亿美元，环比增长近50%，每花1美元算力成本带来1.70美元营收，调整后营业利润率11%。文章还指出竞争对手'蒸馏'Anthropic模型一度占其收入5-7%，Q3已被大幅削减，且公司不再强调'年化运行率'这一说法。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿AI公司动态，讲清楚是什么为什么重要：Anthropic季度营收增至168亿美元，披露蒸馏占收入5-7%并已大幅削减等具体细节"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Antithesis",
+      "title": "Your agent can now ship reliable distributed systems",
+      "link": "https://antithesis.com/blog/2026/time-traveling-agents/",
+      "date": "2026-10-15",
+      "first_seen": "2026-10-16T00:07:04.561883+00:00",
+      "source_type": "blog",
+      "summary": "Antithesis展示了让AI agent在确定性仿真环境中用'多元宇宙调试器'自动复现、调查并修复生产级bug的能力，以etcd和HashiCorp Raft的真实历史bug为例，agent能回溯到故障时刻检查系统状态、验证修复方案，实现从写代码到充分验证的完整闭环，不需要人工介入。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "展示AI agent的新能力（自动调试修复），有技术深度但偏向特定工程受众，不是面向普通用户的实操指南"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "具体方法+真实案例：Antithesis让agent用'多元宇宙调试器'在确定性仿真环境里自动复现、调查、修复真实生产bug（以etcd、HashiCorp Raft为例），直接论证AI之后测试/调试这行会怎么变"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Modal’s $1B ARR, $16B Series D makes it NYC’s newest AI Infra Decacorn, 3x usage and 3x valuation in 5 months, 15x in 1 yr",
+      "link": "https://www.latent.space/p/ainews-modals-1b-arr-16b-series-d",
+      "date": "2026-10-15",
+      "first_seen": "2026-10-16T00:07:02.140865+00:00",
+      "source_type": "blog",
+      "summary": "Modal完成16亿美元D轮融资，估值大涨，5个月内用量和估值均增长3倍，过去一年用量增长15倍；文章回顾了其Sandbox产品从2023年至今的爆发式增长。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI infra公司融资新闻，沾AI边但偏宏观叙事/资讯，不是实操指南"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "Crossing the Threshold: How OpenAI and Anthropic Approach Autonomy and Safety in Financial Agents",
       "link": "https://www.latent.space/p/crossing-the-threshold",
@@ -20,29 +120,7 @@
           "reason": "三方方案都在讲'管控放在模型外、靠harness而不是模型本身'，对应护城河在harness不在模型这条母题，但是会议报道转述、非作者本人一手经历，打medium不打high。"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Tree Appreciator",
-      "link": "https://simonwillison.net/2026/Oct/14/tree-appreciator/",
-      "date": "2026-10-14",
-      "first_seen": "2026-10-15T00:19:02.831307+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison用Claude iPhone App(非Claude Code)让Opus 5.5 Max做了个three.js找不同小游戏'Tree Appreciator'：两棵算法生成的树找差异，带配乐和成就系统。他提到只告诉模型'make sure it is fun'这句话效果出乎意料地好，模型跑了3小时7分钟才交付，成品相当耐玩——是vibe coding娱乐性产出的一个样本。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "编程agent实战案例，偏娱乐/演示性质(vibe coding小游戏)，符合medium里显式列出的那条。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "娱乐性vibe coding案例，跟三根主干无实质连接。"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -59,7 +137,7 @@
           "reason": "AI x Bio科研场景的深度访谈，需要生物化学背景才看得懂门道，按用户水平爬坡超出，归medium不给high。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -74,14 +152,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "深度分析AI批量反编译带来的游戏保存机遇和软件产权风险这一真实趋势，讲清楚是什么、为什么重要，不是纯新闻通稿。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干和周边领域无实质连接。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ministry of Testing",
@@ -98,7 +171,7 @@
           "reason": "论坛讨论管理层把AI implementation职责强压给QA岗位、用'AI agent能力几乎无所不能'当借口压低招聘标准，是测试实践在agent时代怎么变的真实一线信号，但楼主提问为主、回帖单薄(仅一条且无深入分析)，归medium。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -115,7 +188,7 @@
           "reason": "AI新闻周报体裁(twitter recap+多条新闻)，信息量大但偏news roundup而非深度讲透一件事，Gemini 4 Argon的GA/定价/内部应用数据有实质细节，归medium。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -427,62 +500,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "完整实操案例:用ChatGPT Codex语音模式边做饭边开发博客新功能,详述流程(语音构思+键盘精修)和适用边界,直接影响怎么用语音驱动coding agent"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] not much happened today",
-      "link": "https://www.latent.space/p/ainews-not-much-happened-today-60f",
-      "date": "2026-10-08",
-      "first_seen": "2026-10-09T01:46:31.877906+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI解雇了三名与METR/Hugging Face安全事件相关的安全研究员(Tomek Korbak、Mikita Balesni、Jasmine Wang)，三人联名发信指控是因「把安全放在公司短期利益之上」遭报复，OpenAI方面则称是因不当处理机密信息。同一时期，OpenAI推出GPT-6.1 Sol Ultrafast(号称接近Astra的智力水平、速度最多提升8倍)并开始让ChatGPT渲染可交互原生组件；另有报道确认Claude Haiku 5.5支持百万级上下文窗口与12.8万最大输出。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "OpenAI解雇安全研究员的争议、GPT-6.1 Sol Ultrafast发布、Haiku 5.5细节跟进，信息量大且讲清楚为什么重要"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Synthesis Superintelligence: from Semiconductors to Superconductors — Periodic Labs’ Liam Fedus and Ekin Dogus Cubuk",
-      "link": "https://www.latent.space/p/periodic",
-      "date": "2026-10-08",
-      "first_seen": "2026-10-09T01:46:31.883397+00:00",
-      "source_type": "blog",
-      "summary": "Latent Space访谈了Periodic Labs的Liam Fedus和Ekin Dogus Cubuk，谈他们「合成超智能」的愿景：单纯扩大数据训练不足以推进材料科学发现，核心是让AI系统直接跟高通量实验室的真实物理实验打交道，用强化学习处理噪声数据、相变识别与材料合成预测。他们强调实验才是检验真理的最终标准，失败实验本身就是宝贵的训练数据，目标是把过去几十年的材料发现周期压缩到几个月。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "AI用于材料科学研究方法的深度访谈，需要物理/材料科学背景，门槛较高，按当前用户水平爬坡给medium不给high"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "触及AI作为认知方式/认识论这根主干的边(强化学习如何处理物理世界的噪声、实验才是检验真理的终极标准)，但是访谈二手内容，非作者一手反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Claude Haiku 5.5 — better than GPT-6 Luna at the same pricing",
-      "link": "https://www.latent.space/p/ainews-claude-haiku-55-better-than",
-      "date": "2026-10-08",
-      "first_seen": "2026-10-09T01:46:31.895402+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic发布了Claude Haiku 5.5，这是Haiku系列近一年来的首次更新，定价对标GPT-6 Luna，同日还下调了Sonnet 5.5的缓存读取价格。第三方评测(Artificial Analysis)显示其智能指数拿到43分，略优于同价位的GLM-5.3 Flash、Gemini 3.8 Flash和GPT-6 Luna，但在高算力设置下token消耗明显更高。首发即接入Claude Code、Cursor、GitHub Copilot、Devin等第三方工具，定位是搭配Opus/Sonnet处理大批量、低成本任务的子agent。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "Anthropic发布Claude Haiku 5.5并同步调价，讲清楚是什么、定价策略、基准表现与生态集成，是前沿模型新发布且说明了为什么重要"
         }
       ],
       "is_new": false

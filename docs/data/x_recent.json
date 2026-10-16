@@ -1,6 +1,83 @@
 {
   "items": [
     {
+      "person": "Peter Steinberger",
+      "title": "crabbox is underrated",
+      "link": "https://x.com/steipete/status/2110795475075084471",
+      "date": "2026-10-15",
+      "first_seen": "2026-10-16T00:07:09.125303+00:00",
+      "source_type": "x",
+      "summary": "推荐了一个叫crabbox的工具，称其'被低估'，但没有展开说明具体是什么、好在哪里。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "Over the last few years, we have made significant progress on prompt injection for Claude models. As…",
+      "link": "https://x.com/bcherny/status/2110791698611855624",
+      "date": "2026-10-15",
+      "first_seen": "2026-10-16T00:07:08.327893+00:00",
+      "source_type": "x",
+      "summary": "Anthropic宣布与Gray Swan合作举办prompt injection红队竞赛，称这几年在Claude的prompt injection防御上已有明显进展，随着agent能做的事越来越多，解决这个问题对全行业都越来越紧迫。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Amanda Askell",
+      "title": "I really like the movie \"don't look up\" but it's also made it hard for me to go back to having red h…",
+      "link": "https://x.com/AmandaAskell/status/2110737494119710896",
+      "date": "2026-10-15",
+      "first_seen": "2026-10-16T00:07:06.376220+00:00",
+      "source_type": "x",
+      "summary": "调侃电影《别抬头》让她很难再回去染红发，纯属生活趣闻。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @felixrieseberg: Hi, I'm Felix. I'm an eng lead working on Claude. I love watching people take fl…",
+      "link": "https://x.com/bcherny/status/2110628140070670497",
+      "date": "2026-10-15",
+      "first_seen": "2026-10-16T00:07:08.328115+00:00",
+      "source_type": "x",
+      "summary": "Claude团队工程负责人Felix的自我介绍推文，无实质信息量。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @ChadMoran: What did @AnthropicAI do with his latest Claude Desktop update? I feel like there was…",
+      "link": "https://x.com/bcherny/status/2110628043387719735",
+      "date": "2026-10-15",
+      "first_seen": "2026-10-16T00:07:08.328158+00:00",
+      "source_type": "x",
+      "summary": "转推猜测Claude Desktop近期更新背后可能是系统提示词/harness层面的较大升级，属推测未证实。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "RT @ClaudeDevs: We've been working hard on making the Claude Code desktop app great for running lots…",
+      "link": "https://x.com/bcherny/status/2110627630945079624",
+      "date": "2026-10-15",
+      "first_seen": "2026-10-16T00:07:08.328193+00:00",
+      "source_type": "x",
+      "summary": "Claude Code桌面版新增多session并排运行能力，方便同时跑多个任务。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Amanda Askell",
+      "title": "I think about this passage a lot. https://t.co/EFVwPlorAJ",
+      "link": "https://x.com/AmandaAskell/status/2110560531501449485",
+      "date": "2026-10-15",
+      "first_seen": "2026-10-16T00:07:06.376506+00:00",
+      "source_type": "x",
+      "summary": "分享了一段她常反复想起的话（配图），没有展开说具体内容。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
       "person": "Boris Cherny",
       "title": "RT @AnthropicAI: New on our Engineering blog: Creating in-house source control.   In May, we merged…",
       "link": "https://x.com/bcherny/status/2110073054479143217",
@@ -86,28 +163,6 @@
       "source_type": "x",
       "summary": "据Anthropic内部评论转发,Claude内置的Design和Slides功能使用率明显走高,团队表示会继续加大投入。",
       "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @claudeai: Claude Dashboards and Claude Motion are in beta today.  Ask Claude to turn your data i…",
-      "link": "https://x.com/bcherny/status/2108285624340144404",
-      "date": "2026-10-08",
-      "first_seen": "2026-10-09T01:46:37.629064+00:00",
-      "source_type": "x",
-      "summary": "Anthropic的Claude Dashboards和Claude Motion公测上线，可以让Claude把数据变成实时仪表盘、把想法变成动态演示。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "Sometimes I read on flights, and sometimes… https://t.co/k3NBRfjMvu",
-      "link": "https://x.com/bcherny/status/2108004023249088528",
-      "date": "2026-10-08",
-      "first_seen": "2026-10-08T01:36:31.098044+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny分享了一条轻松的动态，提到自己坐飞机时看书的习惯(配了一张图)。",
-      "tier": "low",
       "is_new": false
     }
   ]
