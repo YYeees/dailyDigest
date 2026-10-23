@@ -2,17 +2,6 @@
   "items": [
     {
       "person": "Boris Cherny",
-      "title": "Agent Skills started as an experiment in Claude Code. Many across the industry have come to adopt it…",
-      "link": "https://x.com/bcherny/status/2113333859907747871",
-      "date": "2026-10-22",
-      "first_seen": "2026-10-23T02:43:26.125733+00:00",
-      "source_type": "x",
-      "summary": "转发Claude Code团队关于Agent Skills捐赠给Agentic AI Foundation的公告（与此前报道重复）。",
-      "tier": "low",
-      "is_new": true
-    },
-    {
-      "person": "Boris Cherny",
       "title": "RT @claudeai: We’re opening a research preview of Claude Duet, a new app where Claude works as a pro…",
       "link": "https://x.com/bcherny/status/2113060750252274088",
       "date": "2026-10-22",
@@ -20,39 +9,6 @@
       "source_type": "x",
       "summary": "转发Claude官方账号公告：开放Claude Duet研究预览，一个Claude作为主动agent工作的新应用，会带着已经准备好的内容主动找你。",
       "tier": "high",
-      "is_new": true
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "That PHP vulnerability that’s gonna cause havoc this week was found with… GPT‑5.6 Sol.",
-      "link": "https://x.com/steipete/status/2112913060709228764",
-      "date": "2026-10-21",
-      "first_seen": "2026-10-23T02:43:27.349303+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger指出这周引发轩然大波的PHP漏洞，是用GPT-5.6 Sol发现的。",
-      "tier": "medium",
-      "is_new": true
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "See you at @Cloudflare Connect tomorrow! Will be chatting with @dok2001 about agents https://t.co/P4…",
-      "link": "https://x.com/steipete/status/2112735411688857770",
-      "date": "2026-10-21",
-      "first_seen": "2026-10-23T02:43:27.349545+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger预告将参加Cloudflare Connect活动，和人聊agent话题。",
-      "tier": "low",
-      "is_new": true
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Kinda sad how many of the replies here are now clearly slop. My claw mutes most of these automatical…",
-      "link": "https://x.com/steipete/status/2112604111229382763",
-      "date": "2026-10-20",
-      "first_seen": "2026-10-23T02:43:27.349589+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger感慨现在社交媒体上很多回复明显是AI“水货”（slop），他的工具会自动屏蔽大部分这类内容，他好奇这些人到底图什么。",
-      "tier": "low",
       "is_new": true
     },
     {
@@ -78,61 +34,6 @@
       "is_new": true
     },
     {
-      "person": "Boris Cherny",
-      "title": "RT @ClaudeDevs: We launched OSS Scanner, which gives critical open source projects free, periodic vu…",
-      "link": "https://x.com/bcherny/status/2112304315566334005",
-      "date": "2026-10-19",
-      "first_seen": "2026-10-23T02:43:26.126042+00:00",
-      "source_type": "x",
-      "summary": "转发Claude Devs公告，宣传新上线的OSS Scanner——为重要开源项目提供免费、常态化的AI漏洞扫描（与此前Anthropic Cyber Mission公告重复）。",
-      "tier": "low",
-      "is_new": true
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "AI;DR",
-      "link": "https://x.com/steipete/status/2111918049116987476",
-      "date": "2026-10-18",
-      "first_seen": "2026-10-23T02:43:27.349714+00:00",
-      "source_type": "x",
-      "summary": "内容过短，仅标题“AI;DR”（玩味TL;DR），无法判断具体内容。",
-      "tier": "low",
-      "is_new": true
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @bunjavascript: In the next version of Bun  bun lint is a 26x faster ESLint-compatible linter wit…",
-      "link": "https://x.com/bcherny/status/2111300255534968986",
-      "date": "2026-10-17",
-      "first_seen": "2026-10-23T02:43:26.126078+00:00",
-      "source_type": "x",
-      "summary": "转发提到Bun下一版本将内置bun lint，一个兼容ESLint、速度快26倍、内置1000多条规则的linter。",
-      "tier": "low",
-      "is_new": true
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @ClaudeDevs: We keep improving performance across Claude, and you may have noticed it starts resp…",
-      "link": "https://x.com/bcherny/status/2111209976974999749",
-      "date": "2026-10-16",
-      "first_seen": "2026-10-23T02:43:26.126110+00:00",
-      "source_type": "x",
-      "summary": "转发Claude Devs团队公告：Claude Code现在会对传输内容做gzip压缩，让响应速度更快。",
-      "tier": "medium",
-      "is_new": true
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @claudeai: Six projects from the last few weeks that caught our attention:  A wildfire analysis p…",
-      "link": "https://x.com/bcherny/status/2111207336551612623",
-      "date": "2026-10-16",
-      "first_seen": "2026-10-23T02:43:26.126175+00:00",
-      "source_type": "x",
-      "summary": "转发Claude官方账号展示的六个近期社区项目，包括一个能在地图上展示野火蔓延过程的分析工具原型等。",
-      "tier": "low",
-      "is_new": true
-    },
-    {
       "person": "Amanda Askell",
       "title": "the rocket car is cool and i want one",
       "link": "https://x.com/AmandaAskell/status/2111167134533611801",
@@ -141,28 +42,6 @@
       "source_type": "x",
       "summary": "Amanda Askell转发评论：火箭车很酷，她也想要一台。",
       "tier": "low",
-      "is_new": true
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "Don't sleep on Claude Slides. This is how I make slide decks now -- no more googling \"iphone frame s…",
-      "link": "https://x.com/bcherny/status/2111158659971699136",
-      "date": "2026-10-16",
-      "first_seen": "2026-10-23T02:43:26.126208+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny推荐Claude Slides做幻灯片——现在做演示文稿不用再去搜“iPhone边框SVG”之类的素材了。",
-      "tier": "medium",
-      "is_new": true
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "I could not imagine being productive without Claude Code Review. It runs on all of my PRs, and catch…",
-      "link": "https://x.com/bcherny/status/2111158313463525518",
-      "date": "2026-10-16",
-      "first_seen": "2026-10-23T02:43:26.126238+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny(Claude Code团队)分享他离不开Claude Code Review的体验——这个功能会自动跑在他所有的PR上，几乎能在合并前抓住所有bug，是团队能保持高质量又跑得快的“秘诀”之一。",
-      "tier": "medium",
       "is_new": true
     }
   ]

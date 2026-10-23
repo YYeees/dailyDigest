@@ -82,3 +82,49 @@ class TestEvalNotFloored(unittest.TestCase):
             items = self._export_one(tmp, "high")
         tracks = {t["track"]: t["tier"] for t in items[0]["tracks"]}
         self.assertEqual(tracks.get("eval"), "high", "真判了high的eval照常出现")
+
+
+class TestXHighOnlyPersons(unittest.TestCase):
+    """X_HIGH_ONLY_PERSONS里的人，X只展示三个track任一判high的；其他X源照旧不限tier。"""
+
+    def _export(self, tmp, rows):
+        import sqlite3, json
+        from datetime import datetime, timezone
+        import fetch, export_recent
+
+        db = Path(tmp) / "t.db"
+        conn = sqlite3.connect(db)
+        fetch.init_db(conn)
+        now = datetime.now(timezone.utc).isoformat()
+        for guid, person, ai, anchor, ev in rows:
+            conn.execute(
+                "INSERT INTO items (guid, person, source_name, source_type, title, link,"
+                " published, summary, has_full_text, first_seen_at, ai_tier, anchor_tier,"
+                " eval_tier, digest_summary, ranked_at)"
+                " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                (guid, person, "s", "x", "T", "https://x/" + guid,
+                 now, "s", 1, now, ai, anchor, ev, "摘要", now),
+            )
+        conn.commit()
+        conn.close()
+
+        orig_db, orig_out = export_recent.DB_PATH, export_recent.OUT_DIR
+        export_recent.DB_PATH = str(db)
+        export_recent.OUT_DIR = Path(tmp) / "out"
+        try:
+            export_recent.export(pipeline_run=False)
+            data = json.loads((Path(tmp) / "out" / "x_recent.json").read_text(encoding="utf-8"))
+        finally:
+            export_recent.DB_PATH, export_recent.OUT_DIR = orig_db, orig_out
+        return {i["link"].rsplit("/", 1)[1] for i in data["items"]}
+
+    def test_filters_only_listed_persons(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            shown = self._export(tmp, [
+                ("boris_low", "Boris Cherny", "medium", "low", "low"),
+                ("boris_ai_high", "Boris Cherny", "high", "low", "low"),
+                ("peter_eval_high", "Peter Steinberger", "low", "low", "high"),
+                ("karpathy_low", "Andrej Karpathy", "low", "low", "low"),
+            ])
+        self.assertEqual(shown, {"boris_ai_high", "peter_eval_high", "karpathy_low"})

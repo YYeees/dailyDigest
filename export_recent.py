@@ -11,6 +11,7 @@
   占满整个板块。
 - X单独一份扁平列表，不限tier——用户要的是"知道更新了、大概聊了什么"，不是被优先级过滤掉
   的精选，所以X每条都要有digest_summary(哪怕low)。
+  例外(2026-10-23)：config.X_HIGH_ONLY_PERSONS里的人量太大，X只展示三个track任一判high的。
 
 2026-08-16追加两条：
 - HIGH_ONLY_PERSONS里的人，发布在HIGH_ONLY_RECENT_DAYS天以内的内容不分tier全部展示(哪怕
@@ -35,7 +36,7 @@ from pathlib import Path
 
 from config import (
     ALWAYS_ARCHIVE_TITLE_PREFIXES, DB_PATH, HIGH_ONLY_PERSON_LIMIT, HIGH_ONLY_PERSONS,
-    HIGH_ONLY_RECENT_DAYS, RECENT_WINDOW_DAYS,
+    HIGH_ONLY_RECENT_DAYS, RECENT_WINDOW_DAYS, X_HIGH_ONLY_PERSONS,
 )
 from new_flags import load_prev_items, mark_new
 
@@ -132,6 +133,9 @@ def export(pipeline_run=False):
           AND excluded_reason IS NULL
         ORDER BY published DESC
     """, (cutoff,)):
+        if row["person"] in X_HIGH_ONLY_PERSONS and "high" not in (
+                row["ai_tier"], row["anchor_tier"], row["eval_tier"]):
+            continue
         x_items.append({
             "person": row["person"],
             "title": row["title"],

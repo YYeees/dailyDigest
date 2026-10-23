@@ -45,6 +45,13 @@ ALWAYS_DISPLAY_TYPES = {"x"}
 # 哪天想重新收，last_tweets只能捞回最近一页。
 X_SKIP_RETWEETS = {"Peter Steinberger"}
 
+# 这些人的X内容收回到"只展示high档"(2026-10-23)，是ALWAYS_DISPLAY_TYPES的例外。
+# 用户说"内容太多，基本不咋看"：过去30天Boris 50条(high 11)、Peter 46条(high 2)，
+# 另两位X源各3~5条，X板块几乎被他俩占满。选了只留high而不是撤源(撤源是Dalio/Andy那次的做法)。
+# high看三个track任一个，跟月度归档(export_json.py)同一口径。照常入库、照常写digest_summary，
+# 只在导出x_recent.json时过滤，哪天想放宽，从这里删人即可，历史条目不丢。
+X_HIGH_ONLY_PERSONS = {"Boris Cherny", "Peter Steinberger"}
+
 # 内容归档/展示的统一规则(2026-08-15定案，替代之前的flow/feature分类)：
 # - high档：不管来源，永久进月度归档
 # - medium档：不管来源，只在RECENT_WINDOW_DAYS内的"最新"页面展示，不归档
