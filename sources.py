@@ -51,24 +51,58 @@ SOURCES = [
     {"person": "Hamel Husain", "type": "blog", "name": "Hamel Husain (hamel.dev)",
      "url": "https://hamel.dev/index.xml"},
 
-    {"person": "Martin Fowler", "type": "blog", "name": "Martin Fowler",
-     "url": "https://martinfowler.com/feed.atom"},
+    {"person": "Shreya Shankar", "type": "blog", "name": "Shreya Shankar",
+     "url": "https://sh-reya.com/rss.xml"},
 
-    {"person": "NN/g", "type": "blog", "name": "NN/g (Nielsen Norman Group)",
-     "url": "https://www.nngroup.com/feed/rss/"},
+    {"person": "Eugene Yan", "type": "blog", "name": "Eugene Yan",
+     "url": "https://eugeneyan.com/rss/"},
 
-    {"person": "Amelia Wattenberger", "type": "blog", "name": "Amelia Wattenberger",
-     "url": "https://wattenberger.com/rss.xml"},
+    {"person": "Jason Liu", "type": "blog", "name": "Jason Liu (jxnl.co)",
+     "url": "https://jxnl.co/feed_rss_created.xml"},
 
-    {"person": "Maaret Pyhäjärvi", "type": "blog", "name": "Maaret Pyhäjärvi (Visible Quality)",
-     "url": "https://visible-quality.blogspot.com/feeds/posts/default"},
+    {"person": "Hugo Bowne-Anderson", "type": "blog", "name": "Hugo Bowne-Anderson (Vanishing Gradients)",
+     "url": "https://hugobowne.substack.com/feed"},
 
-    {"person": "Antithesis", "type": "blog", "name": "Antithesis (自主测试/确定性仿真)",
-     "url": "https://antithesis.com/blog/rss.xml"},
-
-    {"person": "Ministry of Testing", "type": "blog", "name": "Ministry of Testing Club(论坛)",
-     "url": "https://club.ministryoftesting.com/latest.rss"},
+    {"person": "Arvind Narayanan & Sayash Kapoor", "type": "blog", "name": "AI as Normal Technology",
+     "url": "https://www.normaltech.ai/feed"},
 ]
+# 2026-10-23换了一轮方向：撤掉软件测试和UX两类信源，改成围着Hamel Husain的AI eval圈子加人。
+# 用户原话"去掉之前里面关于eval的信息源，去掉关于ux交互的信息源"，这里的"eval"指的是
+# 2026-09-12为测试方向加的那批(见下面的旧记录)，不是Hamel那种LLM评测——Hamel本人留着。
+#
+# 撤掉的(想加回来从git history捞，URL和实测理由都在下面的旧记录里)：
+#   测试方向：Martin Fowler、Maaret Pyhäjärvi、Antithesis、Ministry of Testing
+#   UX方向：NN/g、Amelia Wattenberger
+#   Maggie Appleton/Andy Matuschak/Craig Mod/kepano是2026-08-13第一批的思维工具类，不算这次
+#   说的"UX交互"，没动。
+#
+# 新加的(2026-10-23实测；名单从Hamel的"Your AI Product Needs Evals"里他点名推荐和致谢的人出发)：
+#   Shreya Shankar  0条/90天，最近一篇2026-05("In Defense of AI Evals, for Everyone")。
+#     跟Hamel合开evals课的那位，伯克利做数据系统/LLM评测的博士。sh-reya.com是她本人主页。
+#     极慢，但量少不刷屏，跟Hamel同一个思路。
+#   Eugene Yan  0条/90天，最近2026-06("Patterns for Building Cybersecurity Evals")。
+#     Hamel那篇的审稿人之一，"What We Learned from a Year of Building with LLMs"的合著者。
+#     eugeneyan.com本人站。
+#   Jason Liu  0条/90天，最近2026-07。Hamel推荐读他讲RAG分级的文章。**用jxnl.co不用
+#     jxnl.github.io**——后者是旧址，停在2026-05。注意他近期内容大量是Codex使用笔记
+#     ("Six levels of complexity in a Codex morning brief")，跟eval不总沾边，按内容判tier。
+#   Hugo Bowne-Anderson  20条/90天，是这批里最勤的。Vanishing Gradients播客主持人，Hamel那篇
+#     就是从他节目里的对谈整理出来的。substack同时放文章和播客文字稿，标题里有直接的eval实操
+#     ("Claude's fraud detector looked excellent. It leaked the answer.")。
+#   AI as Normal Technology  6条/90天。Arvind Narayanan和Sayash Kapoor(原AI Snake Oil)，
+#     不是Hamel圈子里的人，但他们做HAL agent评测榜、专门批评benchmark怎么被做烂，正好补
+#     "评测本身靠不靠谱"这一面("New paper: Emerging trends in AI agent evaluation")。
+#     噪音是AI政策/安全话题，靠逐条判tier过滤。
+#
+# 查过没加的：
+#   Eppo博客 —— Hamel推荐它讲A/B测试，但没有RSS，而且Eppo已被Datadog收购，博客基本停了
+#     (最新是"Eppo is now part of Datadog")。Datadog自己的博客79条/90天全是产品稿。
+#     旧文章值得当参考资料手动读，不适合进管线。
+#   Ben Recht(argmin.net) 20条/90天，讲评测的统计根基，但偏学术，多数跟LLM无关，先不加。
+#   Lilian Weng 内容深但不专注eval；Chip Huyen的feed停在2025-01；Bryan Bischof、Charles Frye、
+#     Braintrust、LangChain博客都没有可用feed或停更。
+#
+# ---- 以下是2026-09-12的旧记录，涉及的测试/UX信源已于2026-10-23撤掉 ----
 # 2026-09-12第二批，全部服务eval track(AI怎么改造测试这门手艺)，同样实测过再选：
 #   Maaret Pyhäjärvi 8条/90天。芬兰的一线测试员，她在真拿自己的工作做实验而不是评论AI
 #     ("Why would I even want to generate test cases with AI?""Benchmarking results -
