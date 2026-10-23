@@ -7,7 +7,7 @@
       "date": "2026-10-22",
       "first_seen": "2026-10-23T02:43:26.125993+00:00",
       "source_type": "x",
-      "summary": "转发Claude官方账号公告：开放Claude Duet研究预览，一个Claude作为主动agent工作的新应用，会带着已经准备好的内容主动找你。",
+      "summary": "Claude官方开放了新应用Claude Duet的试用，Claude会像主动干活的助手一样，带着准备好的东西来找你。",
       "tier": "high",
       "is_new": true
     },
@@ -18,7 +18,7 @@
       "date": "2026-10-20",
       "first_seen": "2026-10-23T02:43:27.349646+00:00",
       "source_type": "x",
-      "summary": "Peter Steinberger分享：两周前启动一个agent loop把OpenClaw的Web前端从Lit迁移到Solid 2.0，6天后完成Lit的移除，又花一周把代码模式迁移成Solid风格的写法，全程基本是自动的，他只是每隔一天查看一次进度，总共跑了约600个PR。结果是JS和CSS体积更小，更新颗粒度更精细，整体响应更跟手。",
+      "summary": "Peter Steinberger让一个agent自己跑了两周，把OpenClaw的网页前端整个换成了另一个框架，他只是隔天看一眼进度。结果页面更小，反应也更快。",
       "tier": "high",
       "is_new": true
     },
@@ -29,7 +29,7 @@
       "date": "2026-10-20",
       "first_seen": "2026-10-23T02:43:27.349682+00:00",
       "source_type": "x",
-      "summary": "Peter Steinberger分享：他这个周末把项目迁移到tsrs（可直接替换），OC场景下速度提升约5倍。他感慨：微软当年用一个团队、两年时间把TS编译器重写成Go，现在用agent跑几周就能做出明显更好的东西。",
+      "summary": "Peter Steinberger把项目换到了tsrs，一个TypeScript编译器的替代品，速度快了约5倍。他感慨大厂一个团队花大工夫重写的东西，现在用agent几周就能做得更好。",
       "tier": "high",
       "is_new": true
     },
@@ -40,7 +40,7 @@
       "date": "2026-10-16",
       "first_seen": "2026-10-23T02:43:22.460045+00:00",
       "source_type": "x",
-      "summary": "Amanda Askell转发评论：火箭车很酷，她也想要一台。",
+      "summary": "Amanda Askell转发评论说，火箭车很酷，她也想要一台。",
       "tier": "low",
       "is_new": true
     }

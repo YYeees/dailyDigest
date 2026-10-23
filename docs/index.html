@@ -4,366 +4,226 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>7日内关注 · Daily Digest</title>
+<!-- 竹简上的毛笔字(志莽行书)：text= 只下载用得到的那两百来个字，文件很小 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap&text=%E5%AE%9A%E9%A3%8E%E6%B3%A2%E4%B8%89%E6%9C%88%E4%B8%83%E6%97%A5%E6%B2%99%E6%B9%96%E9%81%93%E4%B8%AD%E9%81%87%E9%9B%A8%E5%85%B7%E5%85%88%E5%8E%BB%E5%90%8C%E8%A1%8C%E7%9A%86%E7%8B%BC%E7%8B%88%E4%BD%99%E7%8B%AC%E4%B8%8D%E8%A7%89%E5%B7%B2%E8%80%8C%E9%81%82%E6%99%B4%E6%95%85%E4%BD%9C%E6%AD%A4%E8%AF%8D%E8%8E%AB%E5%90%AC%E7%A9%BF%E6%9E%97%E6%89%93%E5%8F%B6%E5%A3%B0%E4%BD%95%E5%A6%A8%E5%90%9F%E5%95%B8%E4%B8%94%E5%BE%90%E7%AB%B9%E6%9D%96%E8%8A%92%E9%9E%8B%E8%BD%BB%E8%83%9C%E9%A9%AC%E8%B0%81%E6%80%95%E4%B8%80%E8%93%91%E7%83%9F%E4%BB%BB%E5%B9%B3%E7%94%9F%E6%96%99%E5%B3%AD%E6%98%A5%E5%90%B9%E9%85%92%E9%86%92%E5%BE%AE%E5%86%B7%E5%B1%B1%E5%A4%B4%E6%96%9C%E7%85%A7%E5%8D%B4%E7%9B%B8%E8%BF%8E%E5%9B%9E%E9%A6%96%E5%90%91%E6%9D%A5%E8%90%A7%E7%91%9F%E5%A4%84%E5%BD%92%E4%B9%9F%E6%97%A0%E4%B8%B4%E6%B1%9F%E4%BB%99%E5%A4%9C%E9%A5%AE%E4%B8%9C%E5%9D%A1%E5%A4%8D%E9%86%89%E4%BB%BF%E4%BD%9B%E6%9B%B4%E5%AE%B6%E7%AB%A5%E9%BC%BB%E6%81%AF%E9%9B%B7%E9%B8%A3%E6%95%B2%E9%97%A8%E9%83%BD%E5%BA%94%E5%80%9A%E9%95%BF%E6%81%A8%E8%BA%AB%E9%9D%9E%E6%88%91%E6%9C%89%E6%97%B6%E5%BF%98%E8%90%A5%E9%98%91%E9%9D%99%E7%B8%A0%E7%BA%B9%E5%B0%8F%E8%88%9F%E4%BB%8E%E9%80%9D%E6%B5%B7%E5%AF%84%E6%B5%A3%E6%BA%AA%E7%BB%86%E6%99%93%E5%AF%92%E6%B7%A1%E7%96%8F%E6%9F%B3%E5%AA%9A%E6%BB%A9%E5%85%A5%E6%B7%AE%E6%B8%85%E6%B4%9B%E6%B8%90%E6%BC%AB%E9%9B%AA%E6%B2%AB%E4%B9%B3%E8%8A%B1%E6%B5%AE%E5%8D%88%E7%9B%8F%E8%93%BC%E8%8C%B8%E8%92%BF%E7%AC%8B%E8%AF%95%E7%9B%98%E4%BA%BA%E9%97%B4%E5%91%B3%E6%98%AF%E6%AC%A2%E8%8B%8F%E8%BD%BC">
 <style>
+  /* 2026-10-24改版：白底、苹方、按天分组；high是带摘要的头条，medium收成一行简讯点开看摘要；
+     右侧深色X面板 + 鼠尾草绿仓库面板；刊头下面一卷会随风轻摆、自己书写的竹简。 */
   :root {
-    --bg: #F0EEE6;
-    --card: #FAF9F5;
-    --text: #141413;
-    --muted: #5F5E57;
-    --border: #DDDAD0;
-    --accent: #B5522A;
-    --high: #B5522A;
-    --medium: #716F67;
-    --tag-high-bg: #cbcadb;
-    --tag-ai-bg: #bcd1ca;
-    --tag-anchor-bg: #bcd1ca;
-    --tag-eval-bg: #d8c6a8;
-    --today-bg: var(--card);
-    --today-border: var(--accent);
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", sans-serif;
+    --bg: #FFFFFF; --ink: #1A1917; --soft: #3F3C37; --faint: #7A756B;
+    --rule: #E6E2D9; --accent: #A8461F; --hover: #F6F4EF;
+    --up: #3F7D4E; --dark: #1B1A19; --dark-ink: #F3EFE7; --dark-soft: #BDB7AC;
+    --sage: #E3E8DE; --sage-rule: #CFD7C8;
   }
   * { box-sizing: border-box; }
-  html { font-size: 16px; scroll-behavior: smooth; }
+  html { -webkit-font-smoothing: antialiased; }
   body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", Helvetica, Arial, sans-serif;
-    line-height: 1.75;
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--sans); font-size: 17px; line-height: 1.9; letter-spacing: .02em;
   }
-  header {
-    padding: 24px 24px 10px;
-    max-width: 720px;
-    width: 94%;
-    margin: 0 auto;
-  }
-  h1 { font-size: 1.5rem; margin: 0 0 14px; font-weight: 700; }
-  h2.section-title {
-    font-family: -apple-system, "PingFang SC", sans-serif;
-    font-size: 0.95rem;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 8px;
-    margin: 0;
-  }
-  h2.section-title .hint {
-    text-transform: none;
-    letter-spacing: normal;
-    font-weight: 400;
-    opacity: 0.8;
-  }
-  nav {
-    font-family: -apple-system, "PingFang SC", sans-serif;
-    font-size: 0.9rem;
-    margin-bottom: 14px;
-  }
-  nav a { color: var(--muted); text-decoration: none; }
-  nav a:hover { color: var(--accent); }
-  nav a.active { color: var(--text); font-weight: 600; }
-  main { max-width: 740px; width: 94%; margin: 0 auto; padding: 10px 24px 60px; }
-  .side-nav {
-    display: none;
-    position: fixed;
-    left: max(24px, calc(50% - 720px / 2 - 180px - 75px));
-    top: 130px;
-    flex-direction: column;
-    gap: 4px;
-    font-family: -apple-system, "PingFang SC", sans-serif;
-    font-size: 0.88rem;
-  }
-  @media (min-width: 1100px) {
-    .side-nav { display: flex; }
-  }
-  .side-nav a {
-    color: var(--muted);
-    text-decoration: none;
-    padding: 7px 14px;
-    border-left: 2px solid var(--border);
-    transition: color 0.15s ease, border-color 0.15s ease;
-  }
-  .side-nav a:hover { color: var(--accent); border-left-color: var(--accent); }
-  section.board { margin-top: 36px; scroll-margin-top: 32px; }
+  a { color: inherit; text-decoration: none; }
 
-  /* ---- 超过可见条数时限高+滚动，X动态板块和GitHub Trending板块共用 ---- */
-  .scroll-thin.scrollable {
-    overflow-y: auto;
-    padding-right: 6px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--border) transparent;
-  }
-  .scroll-thin.scrollable::-webkit-scrollbar { width: 5px; }
-  .scroll-thin.scrollable::-webkit-scrollbar-track { background: transparent; }
-  .scroll-thin.scrollable::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  .page { max-width: 720px; margin: 0 auto; padding: 72px 16px 120px; }
 
-  /* ---- X动态板块 —— 紧凑单行列表 ---- */
-  .flow-list { margin-top: 10px; }
-  .flow-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 7.5px 10px;
-    border-left: 3px solid var(--border);
-    text-decoration: none;
-    color: var(--text);
-    font-family: -apple-system, "PingFang SC", sans-serif;
-  }
-  .flow-item:hover { background: var(--card); }
-  .flow-item.high { border-left-color: var(--high); }
-  .flow-item.medium { border-left-color: var(--medium); }
-  .flow-item.today { border-left-width: 4px; border-left-color: var(--today-border); }
-  .flow-icon { display: inline-flex; flex-shrink: 0; margin-top: 6px; }
-  .flow-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    flex-shrink: 0;
-    width: 132px;
-  }
-  .flow-person {
-    font-weight: 700;
-    font-size: 0.85rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .flow-text {
-    font-size: 0.95rem;
-    color: var(--text);
-    flex: 1;
-    min-width: 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-align: justify;
-  }
-  .flow-date {
-    font-size: 0.75rem;
-    color: var(--muted);
-    white-space: nowrap;
+  /* ---- 刊头 ---- */
+  .mast { margin-bottom: 40px; }
+  .mast .date { font-size: 13px; line-height: 1.6; color: var(--faint); letter-spacing: .08em; }
+  .mast h1 { font-size: 2.4rem; font-weight: 600; margin: 6px 0 10px; letter-spacing: .02em; }
+  .mast .lede { color: var(--soft); font-size: 1.02rem; margin: 0; }
+  .mast nav { margin-top: 18px; font-size: 13px; color: var(--faint); }
+  .mast nav a { color: var(--soft); border-bottom: 1px solid var(--rule); }
+
+  /* 刊头和第一天之间的竹简：宽度跟正文栏一致，上下边缘柔化 */
+  .band {
+    display: block; width: 100%; height: 106px; margin: 0 0 8px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%);
   }
 
-  /* ---- 卡片通用样式 ---- */
-  .card-grid, .card-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-    margin-top: 12px;
+  /* ---- 点文章上的分类标签筛选；筛选中在顶上露一行提示，点"看全部"或再点一次标签退出 ---- */
+  .tg { cursor: pointer; padding: 2px 0; border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
+  .tg:hover { color: var(--ink); border-bottom-color: var(--faint); }
+  .tg.on { color: var(--accent); font-weight: 600; }
+  .tg + .tg::before { content: "·"; margin: 0 6px; color: var(--faint); font-weight: 400; }
+  .filter-on {
+    display: flex; align-items: baseline; gap: 12px; padding: 12px 0;
+    border-bottom: 1px solid var(--rule); font-size: 14px; color: var(--soft);
   }
-  @media (min-width: 760px) {
-    .card-grid { grid-template-columns: 1fr 1fr; }
+  .filter-on b { color: var(--accent); }
+  .filter-on a { margin-left: auto; cursor: pointer; color: var(--soft); border-bottom: 1px solid var(--rule); }
+  .filter-on a:hover { color: var(--ink); }
+  .filter-on[hidden] { display: none; }
+
+  /* ---- 按天分组；日期吸顶，滚动时当天的日期停在顶上，滚到下一天被顶掉 ---- */
+  .day { margin-top: 56px; }
+  #days > .day:first-child { margin-top: 36px; }
+  .day-head {
+    display: flex; align-items: flex-end; gap: 14px;
+    padding: 14px 0 12px; border-bottom: 1px solid var(--ink);
+    position: sticky; top: 0; z-index: 3;
+    background: rgba(255, 255, 255, .72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   }
-  .item {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px 18px;
-  }
-  .item.medium { opacity: 0.88; }
-  .item.today { border: 2px solid var(--today-border); }
-  .item-meta {
-    font-family: -apple-system, "PingFang SC", sans-serif;
-    font-size: 0.92rem;
-    color: var(--muted);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-  }
-  .source-type { display: inline-flex; align-items: center; }
-  .tier-tag {
-    font-family: -apple-system, "PingFang SC", sans-serif;
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 999px;
-    color: #fff;
-  }
-  .tier-high { background: var(--tag-high-bg); color: var(--text); }
-  .tier-medium { background: var(--tag-high-bg); color: var(--text); }
-  .category-tag {
-    font-family: -apple-system, "PingFang SC", sans-serif;
-    font-size: 0.78rem;
-    font-weight: 600;
-    padding: 1px 9px;
-    border-radius: 999px;
-    color: var(--text);
-    background: var(--border);
-  }
-  .category-ai { background: var(--tag-ai-bg); }
-  .category-anchor { background: var(--tag-anchor-bg); }
-  .category-eval { background: var(--tag-eval-bg); }
-  .item a.title {
-    display: block;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--text);
-    text-decoration: none;
-    margin: 8px 0 8px;
-    line-height: 1.45;
-  }
-  .item a.title:hover { color: var(--accent); }
+  .day-head .num { font-size: 3rem; line-height: 1; font-weight: 300; letter-spacing: -.02em; color: var(--accent); }
+  .day-head .lbl { font-size: 14px; line-height: 1.5; font-weight: 600; padding-bottom: 4px; }
+  .day-head .lbl span { display: block; font-weight: 400; color: var(--faint); font-size: 12.5px; }
+  .day-head .n { margin-left: auto; font-size: 13px; color: var(--faint); padding-bottom: 4px; }
+
+  /* 头条(high)：来源、标题、摘要；点标题或空白处都打开原文 */
+  .lead { display: block; padding: 24px 0; border-bottom: 1px solid var(--rule); cursor: pointer; }
+  .src { font-size: 13px; color: var(--faint); display: flex; gap: 8px; align-items: center; }
+  .src .who { color: var(--soft); font-weight: 600; }
+  .src .new { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .src .tracks { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; }
+  .lead h3 { font-size: 1.32rem; line-height: 1.55; font-weight: 600; margin: 10px 0 12px; }
+  .lead p { margin: 0; color: var(--soft); font-size: 1rem; line-height: 1.95; }
+  .lead:hover h3 { color: var(--accent); }
+
+  /* 简讯(medium)：一行；点空白处展开摘要，点标题打开原文 */
+  .briefs { padding: 6px 0 4px; }
+  .brief { display: block; padding: 15px 0; border-bottom: 1px dashed var(--rule); cursor: pointer; border-radius: 10px; }
+  .brief:last-child { border-bottom: 0; }
+  .brief .row { display: flex; gap: 14px; align-items: baseline; }
+  .brief .t { flex: 1; font-size: 1rem; font-weight: 500; line-height: 1.6; }
+  .brief .t a:hover { color: var(--accent); }
+  .brief .who { font-size: 13px; color: var(--faint); white-space: nowrap; }
+  /* grid-template-rows 0fr→1fr 做高度动画，不用猜摘要有多高 */
+  .brief .more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .25s ease; }
+  .brief.open .more { grid-template-rows: 1fr; }
+  .brief .more > div { overflow: hidden; }
+  .brief .more p { margin: 0; color: var(--soft); font-size: 1rem; line-height: 1.95; }
+  .brief .tgs { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 13px; color: var(--faint); }
+  /* 展开时这一条变成临时头条：标题跟头条一样粗，淡底色跟上下分开。左右用负margin把底色往外扩，
+     文字仍跟其他行对齐 */
+  .brief { transition: background .2s, padding .2s, margin .2s; }
+  .brief.open { background: var(--hover); border-bottom-color: transparent; margin: 6px -18px; padding: 20px 18px 22px; }
+  @media (max-width: 760px) { .brief.open { margin: 6px -12px; padding: 18px 12px 20px; } }
+  .brief.open .t { font-weight: 600; }
+  .brief.open .more p { padding-top: 12px; }
+
   /* 「记一笔」——一键在写作收件箱(独立Obsidian vault)新建一条临时笔记。
-     回路的另一头是scripts/scan_inbox.py:靠笔记frontmatter里的source匹配回digest.db。 */
-  /* 跟同一行的tier-tag等高(padding 1px + 1px描边 = tier-tag的2px padding),但不加粗、
-     用描边不用填充——那两个是"这条内容是什么"的状态标签,这个是可点的动作,要弱化让路。 */
+     回路的另一头是scripts/scan_inbox.py:靠笔记frontmatter里的source匹配回digest.db。
+     未记态是个待发生的动作,阅读时没有存在的理由,悬停那一条才浮现;已记态是关于这条内容的事实,
+     一直显示。用opacity而不是display:none —— 位置照常占着,浮现时标签不会左右跳。 */
   .note-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 26px;
-    height: 26px;
-    color: var(--muted);
-    background: transparent;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    transition: color .15s, border-color .15s, background .15s;
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 24px; height: 24px; color: var(--faint);
+    border: 1px solid var(--rule); border-radius: 999px;
+    opacity: 0; transition: opacity .15s, color .15s, border-color .15s, background .15s;
   }
   /* 未记:空心笔(只描边)。已记:实心笔。同形状不同填充,切换时尺寸完全不变。 */
   .note-btn svg { fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linejoin: round; }
-  .note-btn:hover { color: var(--text); border-color: var(--muted); }
-  /* 按"动作 vs 信息"拆:未记态是个待发生的动作,阅读时没有存在的理由,hover卡片才浮现;
-     已记态是关于这条内容的事实,属于这一行,一直显示(见下面 .noted 覆盖回来)。
-     用opacity而不是display:none —— 位置照常占着,hover时标签不会左右跳。 */
-  .note-btn { opacity: 0; transition: opacity .15s, color .15s, border-color .15s, background .15s; }
-  .item:hover .note-btn,
-  .note-btn:focus-visible,
-  .note-btn.noted { opacity: 1; }
-  /* 触屏没有hover,一直显示 */
+  .note-btn:hover { color: var(--ink); border-color: var(--faint); }
+  .lead:hover .note-btn, .brief.open .note-btn, .note-btn:focus-visible, .note-btn.noted { opacity: 1; }
   @media (hover: none) { .note-btn { opacity: 1; } }
-  /* 「已记」不能弱化:它是这套回路唯一的产物(你为这条写过东西=ground truth),也是
-     一屏卡片里最该一眼扫到的信息。而且它是可点的(跳回那条笔记)——之前用虚线+半透明
-     等于把活按钮画成了disabled,是可用性错误。用主色描边+勾:比未记态重,但仍是描边,
-     跟旁边填充的AI/锚点/tier标签(系统的判断)分开——这个是你自己的标记。 */
-  /* 去掉描边但保留1px透明边:盒模型不变,两个状态等宽等高,标签行不会因为切换状态而跳动。
-     digest首先是个阅读界面,已记态靠"实心+主色"认出来就够,不需要再加一圈框去抢注意力。 */
   .note-btn.noted { color: var(--accent); border-color: transparent; }
-  .note-btn.noted svg { fill: currentColor; stroke: currentColor; }
-  .note-btn.noted:hover { color: var(--accent); background: rgba(181, 82, 42, 0.08); }
-  .meta-left { display: inline-flex; align-items: center; gap: 6px; }
-  .meta-left .source-type svg { width: 20px; height: 20px; display: block; }
-  .meta-right { display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
-  .item p { margin: 0; font-size: 1.02rem; color: var(--text); text-align: justify; }
+  .note-btn.noted svg { fill: currentColor; }
+  .note-btn.noted:hover { background: rgba(168, 70, 31, .08); }
 
-  /* ---- 运行日志板块 —— 每次定时任务的token用量/费用摘要 ---- */
-  .run-log-list {
-    margin-top: 10px;
-    font-family: -apple-system, "PingFang SC", sans-serif;
-    font-size: 0.85rem;
-  }
-  .run-log-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 4px 10px;
-    padding: 7px 10px;
-    border-bottom: 1px solid var(--border);
-  }
-  .run-log-row:last-child { border-bottom: none; }
-  .run-log-time { flex-shrink: 0; width: 150px; color: var(--muted); }
-  .run-log-label { flex-shrink: 0; width: 110px; font-weight: 600; }
-  .run-log-cost { flex-shrink: 0; width: 76px; color: var(--accent); font-weight: 600; }
-  .run-log-tokens { flex: 1; min-width: 220px; color: var(--muted); }
+  /* ---- 侧栏：深色X面板 + 鼠尾草绿仓库面板 ---- */
+  .aside { margin-top: 80px; display: grid; gap: 48px; }
+  @media (min-width: 760px) { .aside { grid-template-columns: 1fr 1fr; } }
+  .aside > div { border-radius: 14px; padding: 18px 20px 6px; }
+  .aside h4 { font-size: 13px; font-weight: 600; letter-spacing: .1em; margin: 0 0 6px; padding-bottom: 4px; }
+  .panel-x { background: var(--dark); }
+  .panel-x h4 { color: var(--dark-soft); }
+  .panel-gh { background: var(--sage); }
+  .panel-gh h4 { color: var(--soft); }
+  .mini { display: block; padding: 14px 0; border-top: 1px solid var(--rule); font-size: .92rem; line-height: 1.75; }
+  .panel-x .mini { border-top-color: #34322F; }
+  .panel-gh .mini { border-top-color: var(--sage-rule); }
+  .mini .who { display: block; font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+  .mini .who em { font-style: normal; font-weight: 400; color: var(--faint); margin-left: 6px; font-size: 12.5px; }
+  .panel-x .who, .panel-x .who a { color: var(--dark-ink); }
+  .panel-x .who a:hover { color: var(--accent); }
+  /* X和仓库的说明：收起时排满两行、行尾省略号，点开后同一段接着往下排 */
+  .mini .txt { color: var(--soft); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+  .panel-x .txt { color: var(--dark-soft); }
+  .mini.open .txt { display: block; }
+  .mini.more { cursor: pointer; }
+  .repo .name { font-size: 15px; line-height: 1.4; font-weight: 600; word-break: break-all; }
+  .repo .name span { font-weight: 400; color: var(--faint); }
+  .repo .name a:hover { color: var(--accent); }
+  .repo .txt { margin: 4px 0 6px; }
+  .repo .meta { display: flex; gap: 12px; font-size: 12.5px; color: var(--faint); }
+  .repo .meta .up { color: var(--up); font-weight: 600; }
 
-  /* ---- 板块3：GitHub Trending —— 独立筛选器 + 卡片 ---- */
-  .filters { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
-  select {
-    font-family: -apple-system, "PingFang SC", sans-serif;
-    font-size: 0.88rem;
-    font-weight: 500;
-    padding: 7px 32px 7px 13px;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    background-color: var(--card);
-    color: var(--muted);
-    appearance: none;
-    -webkit-appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="%235F5E57" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    cursor: pointer;
-    transition: border-color 0.15s ease;
-  }
-  select:hover { border-color: var(--accent); }
-  select:focus { outline: none; border-color: var(--accent); }
-  .tag.diff-tag { background: var(--border); color: var(--muted); }
-  .tag-row { display: inline-flex; gap: 6px; }
-  .tag {
-    font-family: -apple-system, "PingFang SC", sans-serif;
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 999px;
-    color: #fff;
+  /* 宽屏：正文720不变，X和GitHub挪到右侧做吸顶边栏，用宽度但不拉长正文行 */
+  @media (min-width: 1220px) {
+    .page {
+      max-width: 1160px; display: grid; column-gap: 72px;
+      grid-template-columns: minmax(0, 720px) 360px; justify-content: center;
+    }
+    .mast { grid-column: 1 / -1; }
+    #feed, .foot { grid-column: 1; }
+    .aside {
+      grid-column: 2; grid-row: 2 / span 2; align-self: start;
+      position: sticky; top: 40px; margin-top: 0;
+      grid-template-columns: 1fr; gap: 40px;
+      max-height: calc(100vh - 80px); overflow-y: auto; scrollbar-width: none;
+    }
+    .aside::-webkit-scrollbar { display: none; }
+    .mini { font-size: .9rem; }
   }
 
-  .empty {
-    font-family: -apple-system, "PingFang SC", sans-serif;
-    color: var(--muted);
-    font-size: 0.9rem;
-    padding: 14px 0;
+  /* ---- 页脚：最近一次更新 + 收起来的运行日志 ---- */
+  .foot { margin-top: 72px; font-size: 12.5px; color: var(--faint); }
+  .foot summary { cursor: pointer; list-style: none; text-align: center; }
+  .foot summary::-webkit-details-marker { display: none; }
+  .foot summary:hover { color: var(--soft); }
+  .run-row { display: flex; flex-wrap: wrap; gap: 2px 12px; padding: 7px 0; border-bottom: 1px solid var(--rule); }
+  .run-row .time { width: 140px; }
+  .run-row .label { width: 104px; color: var(--soft); font-weight: 600; }
+  .run-row .cost { width: 70px; color: var(--accent); font-weight: 600; }
+  .run-row .err { color: var(--accent); }
+  .run-row .tok { flex: 1; min-width: 220px; }
+  .empty { color: var(--faint); font-size: .95rem; padding: 14px 0; }
+
+  /* ===== 动效 ===== */
+  /* 悬停：背后浮起一层淡底色(伪元素往左右多扩一点，文字不动)，标题旁滑出 ↗ */
+  .lead, .brief { position: relative; isolation: isolate; }
+  .lead::before, .brief::before {
+    content: ""; position: absolute; inset: 4px -16px; z-index: -1; border-radius: 12px;
+    background: var(--hover); opacity: 0; transition: opacity .2s ease;
+  }
+  @media (max-width: 760px) { .lead::before, .brief::before { inset: 4px -10px; } }
+  @media (hover: hover) { .lead:hover::before, .brief:not(.open):hover::before { opacity: 1; } }
+  .go {
+    display: inline-block; margin-left: 6px; font-weight: 400; color: var(--accent);
+    opacity: 0; transform: translate(-4px, 2px); transition: opacity .2s, transform .2s;
+  }
+  .lead:hover .go, .brief .t a:hover .go { opacity: 1; transform: translate(0, 0); }
+  /* 打开页面、切换分类时，一条接一条往上浮出来 */
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+  .lead, .brief, .day-head { animation: rise .45s ease backwards; animation-delay: calc(var(--d, 0) * 40ms); }
+  /* 系统开了"减弱动态效果"就全关 */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before { animation: none !important; transition: none !important; }
   }
 </style>
 </head>
 <body>
-<header>
-  <h1>7日内关注</h1>
-  <nav><a class="active" href="index.html">7日内关注</a> · <a href="digest.html">月度 Digest</a></nav>
-</header>
-<nav class="side-nav">
-  <a href="#board-x">X动态</a>
-  <a href="#board-content">最近更新</a>
-  <a href="#board-trending">GitHub Trending</a>
-  <a href="#board-runlog">运行日志</a>
-</nav>
-<main>
-  <section class="board" id="board-x">
-    <h2 class="section-title">X动态 <span class="hint">· Amanda Askell / Andrej Karpathy / Ray Dalio · 最近7天</span></h2>
-    <div id="xBoard" class="flow-list scroll-thin"></div>
+<div class="page">
+  <header class="mast">
+    <div class="date" id="today"></div>
+    <h1>7日内关注</h1>
+    <p class="lede" id="lede"></p>
+    <nav><a href="digest.html">月度归档</a></nav>
+  </header>
+  <main id="feed">
+    <canvas class="band" id="band" aria-hidden="true"></canvas>
+    <div class="filter-on" id="filterOn" hidden></div>
+    <div id="days"></div>
+  </main>
+  <section class="aside">
+    <div class="panel-x" id="board-x"><h4>他们在 X 上说</h4><div id="x"></div></div>
+    <div class="panel-gh"><h4>本周在涨的仓库</h4><div id="gh"></div></div>
   </section>
-
-  <section class="board" id="board-content">
-    <h2 class="section-title">最近更新 <span class="hint">· 最近7天</span></h2>
-    <div class="filters">
-      <select id="contentTrackFilter">
-        <option value="">类型：全部</option>
-        <option value="ai">AI</option>
-        <option value="anchor">锚点</option>
-        <option value="eval">Eval</option>
-      </select>
-      <select id="contentTierFilter">
-        <option value="">推荐度：全部</option>
-        <option value="high">High</option>
-        <option value="medium">Medium</option>
-      </select>
-    </div>
-    <div id="contentBoard" class="card-list"></div>
-  </section>
-
-  <section class="board" id="board-trending">
-    <h2 class="section-title">GitHub Trending <span class="hint">· AI High Stars</span></h2>
-    <div class="filters">
-      <select id="tierFilter">
-        <option value="">值得关注程度：全部</option>
-        <option value="high">High</option>
-        <option value="medium">Medium</option>
-      </select>
-      <select id="difficultyFilter">
-        <option value="">难度：全部</option>
-        <option value="beginner">入门</option>
-        <option value="intermediate">进阶</option>
-        <option value="advanced">较难</option>
-      </select>
-    </div>
-    <div id="trendingBoard" class="card-list scroll-thin"></div>
-  </section>
-
-  <section class="board" id="board-runlog">
-    <h2 class="section-title">运行日志 <span class="hint">· 每次定时任务的token用量/费用，明细见仓库logs/目录</span></h2>
-    <div id="runLogBoard" class="run-log-list scroll-thin"></div>
-  </section>
-</main>
+  <details class="foot">
+    <summary>最近一次更新 <span id="lastRun"></span> · 运行日志</summary>
+    <div id="runLog"></div>
+  </details>
+</div>
 
 <!--SITE-CONFIG-->
 <script>
@@ -372,47 +232,20 @@
 // 公开站都自动跟着走,不会两边慢慢漂开。公开站跟私有站的差别只有下面这几处guard。
 const IS_PUBLIC = !!window.PUBLIC_SITE;
 
-// 内联SVG,不依赖外部图片请求。
-const TYPE_ICON = {
-  youtube: {
-    label: 'YouTube',
-    svg: '<svg width="34" height="24" viewBox="0 0 28 20"><rect width="28" height="20" rx="4" fill="#FF0000"/><path d="M11 6l8 4-8 4V6z" fill="#fff"/></svg>',
-  },
-  podcast: {
-    label: '播客',
-    svg: '<svg width="24" height="24" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#8B5CF6"/><rect x="10" y="5" width="4" height="9" rx="2" fill="#fff"/><path d="M7 11a5 5 0 0 0 10 0" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/><line x1="12" y1="16" x2="12" y2="19" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><line x1="9" y1="19" x2="15" y2="19" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>',
-  },
-  blog: {
-    label: '文章',
-    svg: '<svg width="24" height="24" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#FF8C00"/><rect x="5.5" y="4" width="13" height="16" rx="1.5" fill="#fff"/><line x1="8" y1="8.5" x2="15.5" y2="8.5" stroke="#FF8C00" stroke-width="1.4" stroke-linecap="round"/><line x1="8" y1="11.8" x2="15.5" y2="11.8" stroke="#FF8C00" stroke-width="1.4" stroke-linecap="round"/><line x1="8" y1="15.1" x2="12.5" y2="15.1" stroke="#FF8C00" stroke-width="1.4" stroke-linecap="round"/></svg>',
-  },
-  x: {
-    label: 'X',
-    svg: '<svg width="24" height="24" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#000"/><path d="M6 6l12 12M18 6L6 18" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
-  },
-};
+const TRACK_LABEL = { ai: 'AI', anchor: '锚点', eval: 'Eval' };
+const WEEK = '日一二三四五六';
+const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 
 // "刚更新"高亮完全由导出脚本算好写进JSON的`is_new`字段决定，前端不做任何时间运算——
-// 页面什么时候打开高亮都一样，一次更新到下一次更新之间不会自己变。判定规则和踩过的坑
-// (日历日换日线、26小时滚动窗口跨了两次抓取)见项目根目录new_flags.py的文件头注释。
-
-// ---- 最近更新板块：AI实操+关注锚点合并。右上角两类独立标签：
-// 内容类型(可能1-2个，中性色) + 推荐程度(该条目命中的最佳tier，彩色) ----
-const TRACK_LABEL = { ai: 'AI', anchor: '锚点', eval: 'Eval' };
-const TIER_LABEL = { high: 'High', medium: 'Medium' };
-const TIER_ORDER = { high: 0, medium: 1 };
+// 判定规则和踩过的坑见项目根目录new_flags.py的文件头注释。
 
 // ---- 「记一笔」:在写作收件箱里新建/打开一条临时笔记 ----
 // 走官方 obsidian://new。官方URI只支持"新建"不支持"追加"——这正是收件箱定成"一条一文件"
-// 的原因(不用为了追加去装Advanced URI插件)。vault名就是那个文件夹名。
-// 正文第一行那个markdown链接是整条反馈回路的接头:页面自动填,URL跟digest.db的link字段
-// 逐字节相同,scan_inbox.py精确匹配即可。用[标题](链接)而不是frontmatter里塞一行裸URL,
-// 是因为笔记是给人读的——三个月后翻回来,看见的该是文章标题,点一下就能回去重读。
-//
+// 的原因。正文第一行那个markdown链接是整条反馈回路的接头:页面自动填,URL跟digest.db的link字段
+// 逐字节相同,scan_inbox.py精确匹配即可。
 // 同一篇点第二次不能再走`new`:obsidian://new撞名会另建一个"xxx 1.md",笔记就散了。
-// 所以用localStorage记住已经记过的link,之后改走`open`直接跳到那条笔记上。
-// localStorage是逐浏览器的、可能被清掉——清掉的后果只是某条会多建一次文件,不影响数据,
-// 所以读写都包在try里,取不到就当没记过。
+// 所以用localStorage记住已经记过的link,之后改走`open`。localStorage可能被清掉——后果只是
+// 某条会多建一次文件,不影响数据,所以读写都包在try里,取不到就当没记过。
 const INBOX_VAULT = 'writing-inbox';
 const NOTED_KEY = 'digest-noted-links-v1';
 
@@ -420,7 +253,6 @@ function notedLinks() {
   try { return new Set(JSON.parse(localStorage.getItem(NOTED_KEY) || '[]')); }
   catch (e) { return new Set(); }
 }
-
 function setNoted(link, on) {
   try {
     const s = notedLinks();
@@ -428,64 +260,41 @@ function setNoted(link, on) {
     localStorage.setItem(NOTED_KEY, JSON.stringify([...s]));
   } catch (e) { /* 隐私模式/禁用站点数据:记不住就下次再建一个,不该让点击失败 */ }
 }
-
-function attrEscape(s) {
-  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
-}
-
 function inboxNoteName(item) {
   const slug = (item.title || '').trim()
     .replace(/[\\/:*?"<>|#^[\]]/g, ' ')   // 文件名非法字符 + Obsidian的保留字符
     .replace(/\s+/g, ' ').trim().slice(0, 60);
   return `${item.date} ${slug}`;
 }
-
-function inboxHref(item, noted) {
-  const name = inboxNoteName(item);
-  const vault = `vault=${encodeURIComponent(INBOX_VAULT)}`;
-  if (noted) {
-    return `obsidian://open?${vault}&file=${encodeURIComponent(name)}`;
-  }
-  // 方括号会把markdown链接语法拆掉(Craig Mod的"[RIDGELINE] ..."就带方括号),换成圆括号。
-  const anchor = (item.title || '').trim().replace(/[[\]]/g, m => (m === '[' ? '(' : ')'));
-  // source填信息来源(人或刊物,如"Simon Willison"/"Latent Space")。双引号会撑破YAML,
-  // 换成单引号——名字里带冒号的源(有的播客标题就带)不加引号会直接把frontmatter弄坏。
-  const from = (item.person || '').replace(/"/g, "'");
-  const content = `---\nsource: "${from}"\ndate: ${item.date}\n---\n\n[${anchor}](${item.link})\n\n`;
-  return `obsidian://new?${vault}`
-    + `&name=${encodeURIComponent(name)}`
-    + `&content=${encodeURIComponent(content)}`;
-}
-
-// 笔的图标:内联SVG,跟source-type那几个图标一个路子(不依赖外部图片)。未记态描边、
-// 已记态填充——同一个形状靠"空心/实心"区分状态,是最省视觉重量的一种做法,digest首先
-// 是阅读界面。**不用星号**:星号的语义是收藏,而"收藏"是明确否掉过的方向,这个标记的
-// 意思是"我为这条写过东西",不是"以后再看"。
-const PEN_SVG = '<svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true">'
-  + '<path d="M11.1 1.9a1.3 1.3 0 0 1 1.9 0l1.1 1.1a1.3 1.3 0 0 1 0 1.9l-7.6 7.6-3.4.9.9-3.4z"/>'
-  + '</svg>';
-
-function noteBtn(item) {
-  // 公开站没有本地Obsidian收件箱,这个按钮点了也没意义
-  if (IS_PUBLIC) return '';
-  const noted = notedLinks().has(item.link);
-  // data-new-href存着"新建"那条链接:右键取消标记后要能换回去。
-  return `<a class="note-btn${noted ? ' noted' : ''}"`
-    + ` href="${attrEscape(inboxHref(item, noted))}"`
-    + ` data-link="${attrEscape(item.link)}" data-name="${attrEscape(inboxNoteName(item))}"`
-    + ` data-new-href="${attrEscape(inboxHref(item, false))}"`
-    + ` title="${noted ? '打开已记的那条笔记（右键取消标记）' : '在写作收件箱里记一笔'}">${PEN_SVG}</a>`;
-}
-
 function openHref(name) {
   return `obsidian://open?vault=${encodeURIComponent(INBOX_VAULT)}&file=${encodeURIComponent(name)}`;
 }
-
-// 右键取消已记标记。为什么需要这个:点「记录」时Chrome可能弹"是否打开Obsidian",而**页面
-// 收不到你在那个弹框上点了确定还是取消**——外部协议链接没有回调,只能假定成功。点了取消
-// 就会出现"标成已记但笔记不存在",再点走open又打不开,这一条就卡死了。右键给一条退路。
-// (Chrome弹框上勾"总是允许"之后就不再弹,这个问题也就不出现了。)
-document.addEventListener('contextmenu', function (e) {
+function inboxHref(item, noted) {
+  const name = inboxNoteName(item);
+  if (noted) return openHref(name);
+  // 方括号会把markdown链接语法拆掉(Craig Mod的"[RIDGELINE] ..."就带方括号),换成圆括号。
+  const anchor = (item.title || '').trim().replace(/[[\]]/g, m => (m === '[' ? '(' : ')'));
+  // source填信息来源。双引号会撑破YAML,换成单引号。
+  const from = (item.person || '').replace(/"/g, "'");
+  const content = `---\nsource: "${from}"\ndate: ${item.date}\n---\n\n[${anchor}](${item.link})\n\n`;
+  return `obsidian://new?vault=${encodeURIComponent(INBOX_VAULT)}`
+    + `&name=${encodeURIComponent(name)}&content=${encodeURIComponent(content)}`;
+}
+// 笔的图标:未记态描边、已记态填充。**不用星号**:星号的语义是收藏,而"收藏"是明确否掉过的方向。
+const PEN_SVG = '<svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true">'
+  + '<path d="M11.1 1.9a1.3 1.3 0 0 1 1.9 0l1.1 1.1a1.3 1.3 0 0 1 0 1.9l-7.6 7.6-3.4.9.9-3.4z"/></svg>';
+function noteBtn(item) {
+  if (IS_PUBLIC) return '';   // 公开站没有本地Obsidian收件箱
+  const noted = notedLinks().has(item.link);
+  // data-new-href存着"新建"那条链接:右键取消标记后要能换回去。
+  return `<a class="note-btn${noted ? ' noted' : ''}" href="${esc(inboxHref(item, noted))}"`
+    + ` data-link="${esc(item.link)}" data-name="${esc(inboxNoteName(item))}"`
+    + ` data-new-href="${esc(inboxHref(item, false))}"`
+    + ` title="${noted ? '打开已记的那条笔记（右键取消标记）' : '在写作收件箱里记一笔'}">${PEN_SVG}</a>`;
+}
+// 右键取消已记标记:点「记录」时浏览器可能弹"是否打开Obsidian",页面收不到你点了确定还是取消,
+// 只能假定成功。点了取消就会出现"标成已记但笔记不存在",右键给一条退路。
+document.addEventListener('contextmenu', e => {
   const btn = e.target.closest && e.target.closest('.note-btn.noted');
   if (!btn) return;
   e.preventDefault();
@@ -494,209 +303,314 @@ document.addEventListener('contextmenu', function (e) {
   btn.href = btn.dataset.newHref;
   btn.title = '在写作收件箱里记一笔（点了没反应？右键可取消标记）';
 });
-
-// 事件委托:卡片是innerHTML整块重渲染的(筛选器一动就重来),挂在document上才不会掉。
-document.addEventListener('click', function (e) {
+document.addEventListener('click', e => {
   const btn = e.target.closest && e.target.closest('.note-btn');
   if (!btn || btn.classList.contains('noted')) return;
   setNoted(btn.dataset.link, true);
   // **必须setTimeout**:监听器跑在浏览器执行默认跳转之前,在这里直接改href,本次点击就会
-  // 跳到还不存在的那条笔记上,笔记建不出来(2026-08-24踩过)。推到下一个tick,等默认跳转
-  // 带着当前的new链接发出去之后再改状态,下次点这个按钮才走open。
-  setTimeout(function () {
+  // 跳到还不存在的那条笔记上(2026-08-24踩过)。推到下一个tick再改状态。
+  setTimeout(() => {
     btn.classList.add('noted');
     btn.title = '打开已记的那条笔记（右键取消标记）';
     btn.href = openHref(btn.dataset.name);
   }, 0);
 });
 
-function renderContentItem(item) {
-  const desc = item.summary || (item.tracks[0] && item.tracks[0].reason) || '';
-  const type = TYPE_ICON[item.source_type] || { svg: '🔗', label: item.source_type || '' };
-  const todayClass = item.is_new ? ' today' : '';
-  const bestTier = item.tracks.reduce((best, t) => (TIER_ORDER[t.tier] < TIER_ORDER[best] ? t.tier : best), 'medium');
-  const categoryTags = item.tracks.map(t => `<span class="category-tag category-${t.track}">${TRACK_LABEL[t.track]}</span>`).join('');
-  return `
-    <div class="item ${bestTier}${todayClass}">
-      <div class="item-meta">
-        <span class="meta-left">
-          <span class="source-type" title="${type.label}">${type.svg}</span>
-          ${item.person} · ${item.date}
-        </span>
-        <span class="meta-right">
-          ${noteBtn(item)}
-          ${categoryTags}
-          <span class="tier-tag tier-${bestTier}">${TIER_LABEL[bestTier]}</span>
-        </span>
-      </div>
-      <a class="title" href="${item.link}" target="_blank" rel="noopener">${item.title}</a>
-      <p>${desc}</p>
+// ---- 内容列表 ----
+let RECENT = [];
+let FILTER = '';
+let SEQ = 0;  // 浮现动画的先后，每次重排从0数起，超过12条的一起出来，免得后面等太久
+const delay = () => `style="--d:${Math.min(SEQ++, 12)}"`;
+const GO = '<span class="go" aria-hidden="true">↗</span>';
+
+// 选了某个分类时按那个分类自己的tier分头条/简讯，没选时任一分类high就算头条
+function best(i) {
+  const ts = FILTER ? i.tracks.filter(t => t.track === FILTER) : i.tracks;
+  return ts.some(t => t.tier === 'high') ? 'high' : 'medium';
+}
+function tags(i) {
+  return i.tracks.map(t => `<span class="tg${t.track === FILTER ? ' on' : ''}" data-track="${t.track}"`
+    + ` title="只看${TRACK_LABEL[t.track]}">${TRACK_LABEL[t.track]}</span>`).join('');
+}
+const summaryOf = i => i.summary || (i.tracks[0] && i.tracks[0].reason) || '';
+
+function dayHead(iso, n) {
+  const d = new Date(iso + 'T00:00:00');
+  const t = new Date(); t.setHours(0, 0, 0, 0);
+  const diff = Math.round((t - d) / 864e5);
+  const rel = diff === 0 ? '今天' : diff === 1 ? '昨天' : `周${WEEK[d.getDay()]}`;
+  const sub = diff <= 1 ? `${d.getMonth() + 1}月 · 周${WEEK[d.getDay()]}` : `${d.getMonth() + 1}月`;
+  return `<div class="day-head" ${delay()}><span class="num">${d.getDate()}</span>`
+    + `<span class="lbl">${rel}<span>${sub}</span></span><span class="n">${n} 篇</span></div>`;
+}
+function leadHTML(i) {
+  return `<div class="lead" data-link="${esc(i.link)}" ${delay()}>
+    <div class="src">${i.is_new ? '<span class="new" title="刚更新"></span>' : ''}<span class="who">${esc(i.person)}</span>
+      <span class="tracks">${noteBtn(i)}${tags(i)}</span></div>
+    <h3><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}${GO}</a></h3>
+    <p>${esc(summaryOf(i))}</p></div>`;
+}
+function briefHTML(i) {
+  return `<div class="brief" ${delay()}>
+    <div class="row">
+      <span class="t"><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}${GO}</a></span>
+      <span class="who">${esc(i.person)}</span>
     </div>
-  `;
+    <div class="more"><div><p>${esc(summaryOf(i))}</p><div class="tgs">${tags(i)}${noteBtn(i)}</div></div></div>
+  </div>`;
+}
+function listHTML(list) {
+  const leads = list.filter(i => best(i) === 'high');
+  const briefs = list.filter(i => best(i) !== 'high');
+  return leads.map(leadHTML).join('')
+    + (briefs.length ? `<div class="briefs">${briefs.map(briefHTML).join('')}</div>` : '');
+}
+function renderDays() {
+  SEQ = 0;
+  const items = RECENT.filter(i => !FILTER || i.tracks.some(t => t.track === FILTER));
+  const byDay = {};
+  items.forEach(i => (byDay[i.date] ||= []).push(i));
+  document.getElementById('days').innerHTML = Object.keys(byDay).sort().reverse()
+    .map(day => `<section class="day">${dayHead(day, byDay[day].length)}${listHTML(byDay[day])}</section>`)
+    .join('') || '<p class="empty">最近七天没有内容。</p>';
+}
+function renderFilter() {
+  const el = document.getElementById('filterOn');
+  el.hidden = !FILTER;
+  if (!FILTER) return;
+  const n = RECENT.filter(i => i.tracks.some(t => t.track === FILTER)).length;
+  el.innerHTML = `<span>只看 <b>${TRACK_LABEL[FILTER]}</b>，最近七天 ${n} 篇</span><a data-clear>看全部</a>`;
+}
+function setFilter(k) {
+  FILTER = k;
+  renderFilter();
+  renderDays();
+  document.getElementById('feed').scrollIntoView({ behavior: 'smooth' });
 }
 
-let contentItems = [];
-
-function renderContent() {
-  const track = document.getElementById('contentTrackFilter').value;
-  const tier = document.getElementById('contentTierFilter').value;
-  const filtered = contentItems.filter(i =>
-    (!track || i.tracks.some(t => t.track === track)) &&
-    (!tier || i.tracks.some(t => t.tier === tier))
-  );
-  const el = document.getElementById('contentBoard');
-  el.innerHTML = filtered.length
-    ? filtered.map(renderContentItem).join('')
-    : '<div class="empty">没有符合条件的内容</div>';
-}
+// 点击分发：分类标签→筛选；头条空白处→打开原文；简讯/侧栏空白处→展开收起。
+// 链接(标题、记一笔)交给浏览器默认行为，不在这里处理。
+document.addEventListener('click', e => {
+  const tg = e.target.closest('[data-track]');
+  if (tg) { setFilter(tg.dataset.track === FILTER ? '' : tg.dataset.track); return; }
+  if (e.target.closest('[data-clear]')) { setFilter(''); return; }
+  if (e.target.closest('a')) return;
+  const lead = e.target.closest('.lead');
+  if (lead) { window.open(lead.dataset.link, '_blank', 'noopener'); return; }
+  const fold = e.target.closest('.brief, .mini.more');
+  if (fold) fold.classList.toggle('open');
+});
 
 async function loadRecent() {
-  const res = await fetch('data/recent.json');
-  const data = await res.json();
-  contentItems = data.items;
-  document.getElementById('contentTrackFilter').addEventListener('change', renderContent);
-  document.getElementById('contentTierFilter').addEventListener('change', renderContent);
-  renderContent();
+  const data = await (await fetch('data/recent.json')).json();
+  RECENT = data.items;
+  const high = RECENT.filter(i => i.tracks.some(t => t.tier === 'high')).length;
+  document.getElementById('lede').textContent = `过去七天 ${RECENT.length} 篇，值得细读的 ${high} 篇。`;
+  renderDays();
 }
 
-// ---- X动态板块 ----
-function renderXItem(i) {
-  const type = TYPE_ICON[i.source_type] || { svg: '🔗', label: i.source_type || '' };
-  const todayClass = i.is_new ? ' today' : '';
-  const text = i.summary || i.title;
-  return `
-    <a class="flow-item ${i.tier}${todayClass}" href="${i.link}" target="_blank" rel="noopener" title="${text.replace(/"/g, '&quot;')}">
-      <span class="flow-icon" title="${type.label}">${type.svg}</span>
-      <span class="flow-meta">
-        <span class="flow-person">${i.person}</span>
-        <span class="flow-date">${i.date}</span>
-      </span>
-      <span class="flow-text">${text}</span>
-    </a>
-  `;
+// ---- 侧栏：X 和 GitHub ----
+// 说明文字收起时两行；只有真被截断的才标成可展开(窗口宽度一变，能不能展开也跟着变)
+function markFoldable() {
+  document.querySelectorAll('.mini').forEach(m => {
+    if (m.classList.contains('open')) return;
+    const t = m.querySelector('.txt');
+    m.classList.toggle('more', t.scrollHeight > t.clientHeight + 1);
+  });
 }
-
-const X_VISIBLE_COUNT = 6;
+addEventListener('resize', markFoldable);
 
 async function loadX() {
-  const res = await fetch('data/x_recent.json');
-  const data = await res.json();
-  const el = document.getElementById('xBoard');
-  el.innerHTML = data.items.length
-    ? data.items.map(renderXItem).join('')
+  const data = await (await fetch('data/x_recent.json')).json();
+  document.getElementById('x').innerHTML = data.items.length
+    ? data.items.map(i => `<div class="mini xpost">
+        <span class="who"><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.person)}</a><em>${(i.date || '').slice(5)}</em></span>
+        <div class="txt">${esc(i.summary || i.title)}</div></div>`).join('')
     : '<div class="empty">最近7天没有新动态</div>';
-
-  capVisibleHeight(el, X_VISIBLE_COUNT);
+  markFoldable();
 }
-
-// 超过count条时，把容器高度锁定在正好显示这么多条(含grid的行间距)，多出来的靠滚动条翻——
-// 按实际渲染出来的前N条高度算，不用猜一个固定像素数(字号/行数变了也不用跟着改)。
-function capVisibleHeight(el, count) {
-  if (el.children.length > count) {
-    let height = 0;
-    for (let idx = 0; idx < count; idx++) height += el.children[idx].getBoundingClientRect().height;
-    const gap = parseFloat(getComputedStyle(el).rowGap) || 0;
-    height += gap * (count - 1);
-    el.style.maxHeight = height + 'px';
-    el.classList.add('scrollable');
-  } else {
-    el.style.maxHeight = '';
-    el.classList.remove('scrollable');
-  }
-}
-
-// ---- 板块3：GitHub Trending ----
-const DIFFICULTY_LABEL = { beginner: '入门', intermediate: '进阶', advanced: '较难' };
-let trendingItems = [];
-
-function renderTrendingItem(item) {
-  const stars = item.stars_total != null ? `★ ${item.stars_total.toLocaleString()}` : '';
-  // 这块板子是按"本期新增star"排序的(见scripts/export_trending.py文件头)，把排序依据显示出来，
-  // 否则读者看到的顺序没有任何可见理由——常驻的大仓库和这周真的在涨的仓库长得一模一样
-  const gained = item.stars_period ? ` · 本周 +${item.stars_period.toLocaleString()}` : '';
-  const diffTag = item.difficulty
-    ? `<span class="category-tag">${DIFFICULTY_LABEL[item.difficulty] || item.difficulty}</span>`
-    : '';
-  return `
-    <div class="item ${item.worth_tier}">
-      <div class="item-meta">
-        <span class="meta-left">${item.language || ''} · ${stars}${gained}</span>
-        <span class="meta-right">
-          ${diffTag}
-          <span class="tier-tag tier-${item.worth_tier}">${TIER_LABEL[item.worth_tier] || item.worth_tier}</span>
-        </span>
-      </div>
-      <a class="title" href="${item.url}" target="_blank" rel="noopener">${item.full_name}</a>
-      <p>${item.recommend_reason || item.description || ''}</p>
-    </div>
-  `;
-}
-
-const TRENDING_VISIBLE_COUNT = 3;
-
-function renderTrending() {
-  const tier = document.getElementById('tierFilter').value;
-  const difficulty = document.getElementById('difficultyFilter').value;
-  const filtered = trendingItems.filter(i =>
-    (!tier || i.worth_tier === tier) && (!difficulty || i.difficulty === difficulty)
-  );
-  const el = document.getElementById('trendingBoard');
-  el.innerHTML = filtered.length
-    ? filtered.map(renderTrendingItem).join('')
-    : '<div class="empty">没有符合条件的项目</div>';
-  capVisibleHeight(el, TRENDING_VISIBLE_COUNT);
-}
-
 async function loadTrending() {
-  const res = await fetch('data/trending.json');
-  const data = await res.json();
-  trendingItems = data.items;
-  document.getElementById('tierFilter').addEventListener('change', renderTrending);
-  document.getElementById('difficultyFilter').addEventListener('change', renderTrending);
-  renderTrending();
+  const data = await (await fetch('data/trending.json')).json();
+  document.getElementById('gh').innerHTML = data.items.map(i => {
+    const [owner, name] = i.full_name.split('/');
+    return `<div class="mini repo">
+      <div class="name"><a href="${esc(i.url)}" target="_blank" rel="noopener"><span>${esc(owner)} / </span>${esc(name)}</a></div>
+      <div class="txt">${esc(i.recommend_reason || i.description || '')}</div>
+      <div class="meta">${i.language ? `<span>${esc(i.language)}</span>` : ''}<span>★ ${(i.stars_total || 0).toLocaleString()}</span>
+        ${i.stars_period ? `<span class="up">本周 +${i.stars_period.toLocaleString()}</span>` : ''}</div></div>`;
+  }).join('') || '<div class="empty">还没有数据</div>';
+  markFoldable();
 }
 
-// ---- 板块4：运行日志 ----
-const RUNLOG_VISIBLE_COUNT = 5;
+// ---- 页脚运行日志 ----
 const RUNLOG_LABEL = { digest: '内容 Digest', trending: 'GitHub Trending' };
-
-function renderRunLogItem(r) {
-  const label = RUNLOG_LABEL[r.label] || r.label;
-  const cost = r.total_cost_usd != null ? `$${r.total_cost_usd.toFixed(4)}` : '—';
-  const time = r.timestamp ? r.timestamp.replace('T', ' ').slice(0, 16) + ' UTC' : '';
-  const errTag = r.is_error ? '<span class="tier-tag tier-medium">失败</span>' : '';
-  return `
-    <div class="run-log-row">
-      <span class="run-log-time">${time}</span>
-      <span class="run-log-label">${label}</span>
-      <span class="run-log-cost">${cost}</span>
-      <span class="run-log-tokens">input ${r.input_tokens ?? '—'} · output ${r.output_tokens ?? '—'} · cache写 ${r.cache_creation_input_tokens ?? '—'} · cache读 ${r.cache_read_input_tokens ?? '—'}</span>
-      ${errTag}
-    </div>
-  `;
-}
-
+const fmtTime = ts => (ts ? ts.replace('T', ' ').slice(0, 16) + ' UTC' : '');
 async function loadRunLog() {
-  const res = await fetch('data/run_log.json');
-  const data = await res.json();
-  const el = document.getElementById('runLogBoard');
-  el.innerHTML = data.runs && data.runs.length
-    ? data.runs.map(renderRunLogItem).join('')
-    : '<div class="empty">还没有运行记录</div>';
-  capVisibleHeight(el, RUNLOG_VISIBLE_COUNT);
+  const data = await (await fetch('data/run_log.json')).json();
+  const runs = data.runs || [];
+  document.getElementById('lastRun').textContent = runs.length ? fmtTime(runs[0].timestamp) : '';
+  document.getElementById('runLog').innerHTML = runs.map(r => `<div class="run-row">
+      <span class="time">${fmtTime(r.timestamp)}</span>
+      <span class="label">${RUNLOG_LABEL[r.label] || esc(r.label)}</span>
+      <span class="cost">${r.total_cost_usd != null ? '$' + r.total_cost_usd.toFixed(4) : '—'}</span>
+      <span class="tok">input ${r.input_tokens ?? '—'} · output ${r.output_tokens ?? '—'} · cache写 ${r.cache_creation_input_tokens ?? '—'} · cache读 ${r.cache_read_input_tokens ?? '—'}</span>
+      ${r.is_error ? '<span class="err">失败</span>' : ''}</div>`).join('') || '<div class="empty">还没有运行记录</div>';
 }
 
+const today = new Date();
+document.getElementById('today').textContent =
+  `${today.getFullYear()}年${today.getMonth() + 1}月${today.getDate()}日 星期${WEEK[today.getDay()]}`;
 if (IS_PUBLIC) {
   // 公开站不导出x_recent.json:X是不限tier全展示的,里面混着跟AI无关的个人动态。
-  // 板块连同侧栏入口一起撤掉,留着只会fetch 404 + 一块空板子。
   document.getElementById('board-x').remove();
-  document.querySelector('.side-nav a[href="#board-x"]').remove();
 }
-
 loadRecent();
 if (!IS_PUBLIC) loadX();
 loadTrending();
 loadRunLog();
+
+// ---- 刊头下面的竹简 ----
+// 手削的竹片(宽窄、长短、深浅各不同)用细绳编起来，黑白两色，随一阵阵的风轻轻摆；
+// 苏轼《定风波》(带小序)《临江仙》《浣溪沙》用行书从右往左、从上到下一个字一个字写上去，写满淡去再从头写
+(function slips() {
+  const cv = document.getElementById('band');
+  const ctx = cv.getContext('2d');
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const CYCLE = 60, PER = 5, FONT = 10;  // 一轮60秒：前70%书写，后面停一会儿再淡去
+  const TEXT = '定风波  三月七日沙湖道中遇雨雨具先去同行皆狼狈余独不觉已而遂晴故作此词    莫听穿林打叶声何妨吟啸且徐行竹杖芒鞋轻胜马谁怕一蓑烟雨任平生 料峭春风吹酒醒微冷山头斜照却相迎回首向来萧瑟处归去也无风雨也无晴  临江仙  夜饮东坡醒复醉归来仿佛三更家童鼻息已雷鸣敲门都不应倚杖听江声 长恨此身非我有何时忘却营营夜阑风静縠纹平小舟从此逝江海寄余生    浣溪沙  细雨斜风作晓寒淡烟疏柳媚晴滩入淮清洛渐漫漫 雪沫乳花浮午盏蓼茸蒿笋试春盘人间有味是清欢     苏轼';  // 空格=留空的格子
+  const CORD = [.15, .85];               // 两道编绳在竹片上的位置
+  let W, H, slips = [], top, len;
+  let seed = 11;  // 固定种子：每次打开竹子长得一样
+  const rnd = () => ((seed = Math.imul(seed ^ (seed >>> 15), 2246822507) + 0x9E3779B9 | 0) >>> 0) / 4294967295;
+
+  function build() {
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    W = cv.clientWidth || 720; H = cv.clientHeight || 106;
+    cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    len = H * .86; top = (H - len) / 2;
+    seed = 11; slips = [];
+    for (let x = 2; ;) {
+      const w = 11 + rnd() * 2.4;
+      if (x + w > W - 2) break;
+      const grain = [];
+      for (let g = 0, n = 1 + (rnd() < .6); g < n; g++) grain.push({ x: .25 + rnd() * .5, y0: rnd() * .3, y1: .6 + rnd() * .4 });
+      const chars = [];
+      for (let c = 0; c < PER; c++) chars.push({ a: .66 + rnd() * .28, rot: (rnd() - .5) * .12, dx: (rnd() - .5) * 1.2 });
+      slips.push({
+        x, w, chars, grain,
+        len: len * (.965 + rnd() * .05), off: (rnd() - .5) * 2.6,
+        tone: .02 + rnd() * .018,          // 墨色的深浅
+        ph: rnd() * 6.28,                  // 每片自己的一点相位，风吹过时不完全同步
+      });
+      x += w + 2.4 + rnd() * 1.3;
+    }
+    // 第一片贴左边、最后一片贴右边，中间多出来的空隙平均分给每道缝
+    const x0 = slips[0].x, last = slips[slips.length - 1];
+    const spare = W - (last.x + last.w - x0);
+    slips.forEach((sl, k) => { sl.x = sl.x - x0 + spare * k / (slips.length - 1); });
+  }
+
+  // 风：一道波从左往右推；风力时强时弱，像一阵一阵吹过来
+  let T = 0;
+  const gust = () => Math.max(.25, .6 + .3 * Math.sin(T * .21) + .15 * Math.sin(T * .53 + 1.3));
+  function pose(sl) {
+    if (still) return { dx: 0, dy: 0, a: 0 };
+    const g = gust(), x = sl.x, w = T * .9;
+    return {
+      dx: Math.sin(x * .021 - w * .9 + sl.ph * .2) * .5 * g,
+      dy: (Math.sin(x * .016 - w) * 1.6 + Math.sin(x * .045 - w * 1.7 + sl.ph) * .4) * g,
+      a: (Math.sin(x * .013 - w * 1.1) * .03 + Math.sin(x * .037 - w * 1.6 + sl.ph) * .01) * g,
+    };
+  }
+  // 竹片坐标系里的点 → 画布坐标(绕上方编绳那一点偏转，再整体平移)
+  function place(sl, ps, lx, ly) {
+    const cx = sl.x + sl.w / 2, cy = top + sl.off + sl.len * CORD[0];
+    const c = Math.cos(ps.a), s = Math.sin(ps.a);
+    const ux = lx - cx, uy = ly - cy;
+    return [cx + ux * c - uy * s + ps.dx, cy + ux * s + uy * c + ps.dy];
+  }
+
+  function draw(phase) {
+    ctx.clearRect(0, 0, W, H);
+    const writing = Math.min(phase / .7, 1);
+    const fade = phase > .85 ? 1 - (phase - .85) / .15 : 1;
+    const n = slips.length, poses = slips.map(pose);
+    ctx.font = `${FONT}px "Zhi Mang Xing", "Kaiti SC", "STKaiti", serif`;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+
+    slips.forEach((sl, k) => {
+      const ps = poses[k], t0 = top + sl.off;
+      ctx.save();
+      const [px, py] = place(sl, ps, sl.x + sl.w / 2, t0 + sl.len * CORD[0]);
+      ctx.translate(px, py); ctx.rotate(ps.a); ctx.translate(-(sl.x + sl.w / 2), -(t0 + sl.len * CORD[0]));
+      // 竹片：淡墨平涂，四角略圆；一侧边缘深一点像竹片的侧面；里面一两道若有若无的竹纹
+      ctx.fillStyle = `rgba(26,25,23,${sl.tone})`;
+      ctx.beginPath();
+      ctx.roundRect ? ctx.roundRect(sl.x, t0, sl.w, sl.len, 1.6) : ctx.rect(sl.x, t0, sl.w, sl.len);
+      ctx.fill();
+      ctx.fillStyle = 'rgba(26,25,23,.04)';
+      ctx.fillRect(sl.x + sl.w - 1.2, t0 + 1, 1.2, sl.len - 2);
+      ctx.strokeStyle = 'rgba(26,25,23,.035)'; ctx.lineWidth = .6;
+      ctx.beginPath();
+      for (const g of sl.grain) { const gx = sl.x + sl.w * g.x; ctx.moveTo(gx, t0 + sl.len * g.y0); ctx.lineTo(gx, t0 + sl.len * g.y1); }
+      ctx.stroke();
+      // 字：右起第几片 × 每片第几个字 = 阅读顺序，按这个顺序一个字一个字淡入
+      const col = n - 1 - k, y0 = t0 + sl.len * CORD[0], step = (sl.len * (CORD[1] - CORD[0])) / PER;
+      ctx.fillStyle = '#1A1917';
+      sl.chars.forEach((ch, c) => {
+        const idx = col * PER + c;
+        if (idx >= TEXT.length || TEXT[idx] === ' ') return;  // 写完就停，左边剩下的竹片留白
+        const ink = still ? 1 : Math.max(0, Math.min(1, writing * TEXT.length - idx)) * fade;
+        if (!ink) return;
+        ctx.globalAlpha = ch.a * ink;
+        ctx.save();
+        ctx.translate(sl.x + sl.w / 2 + ch.dx, y0 + step * (c + .5));
+        ctx.rotate(ch.rot);
+        ctx.fillText(TEXT[idx], 0, 0);
+        ctx.restore();
+      });
+      ctx.globalAlpha = 1;
+      ctx.restore();
+    });
+
+    // 编绳：在竹片上绕过(两道斜线)，竹片之间微微下垂
+    ctx.strokeStyle = 'rgba(26,25,23,.38)'; ctx.lineWidth = .9; ctx.lineCap = 'round';
+    for (const f of CORD) {
+      ctx.beginPath();
+      let prev = null;
+      slips.forEach((sl, k) => {
+        const ps = poses[k], y = top + sl.off + sl.len * f;
+        const L = place(sl, ps, sl.x - .4, y), R = place(sl, ps, sl.x + sl.w + .4, y);
+        if (prev) {
+          const mx = (prev[0] + L[0]) / 2, my = (prev[1] + L[1]) / 2 + 1.1;
+          ctx.moveTo(prev[0], prev[1]); ctx.quadraticCurveTo(mx, my, L[0], L[1]);
+        }
+        for (const o of [-1.3, .5]) {
+          const a = place(sl, ps, sl.x - .4, y + o), b = place(sl, ps, sl.x + sl.w + .4, y + o + 1.6);
+          ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]);
+        }
+        prev = R;
+      });
+      ctx.stroke();
+    }
+  }
+
+  const t0 = performance.now();
+  let last = 0;
+  function loop(now) {
+    requestAnimationFrame(loop);
+    if (document.hidden || now - last < 33) return;   // 切到别的标签页就停，30帧够了
+    last = now;
+    T = (now - t0) / 1000;
+    draw((T % CYCLE) / CYCLE);
+  }
+  build(); draw(still ? 1 : 0);
+  // 等毛笔字体下载完再重画一次，不然先出来的是系统楷体
+  document.fonts && document.fonts.load(`${FONT}px "Zhi Mang Xing"`, TEXT.replace(/ /g, '')).then(() => draw(still ? 1 : 0)).catch(() => {});
+  addEventListener('resize', () => { build(); draw(still ? 1 : 0); });
+  if (!still) requestAnimationFrame(loop);
+})();
 </script>
 </body>
 </html>

@@ -7,7 +7,7 @@
       "date": "2026-10-22",
       "first_seen": "2026-10-23T02:42:40.703653+00:00",
       "source_type": "blog",
-      "summary": null,
+      "summary": "Simon Willison分享了荷兰乐队DE STAAT的一支音乐视频。纯属趣闻，跟AI关系不大，可以跳过。",
       "tracks": [
         {
           "track": "ai",
@@ -20,7 +20,7 @@
           "reason": "与三根主干无实质连接"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -29,7 +29,7 @@
       "date": "2026-10-22",
       "first_seen": "2026-10-23T02:42:43.804001+00:00",
       "source_type": "blog",
-      "summary": "OpenAI正式发布Decisions API，用GPT-6 Luna提供低成本、低延迟的二元/结构化判断服务，定位是给需要大量重复、简单判断场景（比如自动化评测里的合规/失败检测）的轻量级替代方案，对应此前Hamel Husain测评中提到的“OpenAI Decisions”。",
+      "summary": "OpenAI推出Decisions API，专门做“是或否”这类简单判断，背后用的是GPT-6 Luna，主打又快又便宜。它瞄准的是那种要大量重复做简单判断的场景，比如自动化评测里判断“这条回答合不合格”。Hamel Husain同一周的评测里它效果最好，两篇可以对照着看。",
       "tracks": [
         {
           "track": "ai",
@@ -42,7 +42,7 @@
           "reason": "与自动化评测/判断工具选型相关,但是产品公告而非方法论分析,降一档"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -51,7 +51,7 @@
       "date": "2026-10-22",
       "first_seen": "2026-10-23T02:42:40.703905+00:00",
       "source_type": "blog",
-      "summary": "Simon Willison评论Anthropic把Agent Skills捐给Agentic AI Foundation的消息（去年12月他就预测过这个结果），并分享了一个小技巧：他用自己网站接的datasette-mcp插件，直接问Claude“用simonwillison.net MCP查一下我是不是说过想让skills被捐给标准化组织”，省去了自己翻博客的功夫（与此前Anthropic的Agent Skills捐赠公告重复，择一看即可）。",
+      "summary": "Simon Willison评论Anthropic捐出Agent Skills这件事，他去年就预测过会这样。顺带演示了一个小技巧：让Claude通过他网站的接口直接查“我以前是不是说过这个”，省得自己翻博客。跟Anthropic官方那篇是同一件事，二选一看就行。",
       "tracks": [
         {
           "track": "ai",
@@ -64,7 +64,7 @@
           "reason": "与三根主干无实质连接"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -73,7 +73,7 @@
       "date": "2026-10-22",
       "first_seen": "2026-10-23T02:42:41.162102+00:00",
       "source_type": "blog",
-      "summary": "Latent Space访谈AI基础设施公司Modal的CEO Erik Bernhardsson:公司年化营收已过10亿美元,刚完成160亿美元估值的7.5亿美元D轮融资,sandbox(agent执行代码的隔离环境)业务从几乎要被砍掉的边缘产品,长成了公司营收的三分之一。核心论点是GPU需求的形状不是'矩形'(传统容量合同按固定时段固定数量买),而是全天波动的,Modal的生意本质是把成千上万客户的需求池化、让容量能被小颗粒度弹性使用。公司现在要跟近25家云厂商打交道,还建了专门的采购团队应对GPU容量紧张的现状。",
+      "summary": "Latent Space采访算力平台Modal的CEO，讲GPU需求其实全天忽高忽低，而传统合同是按固定时段固定数量买的。Modal的生意就是把成千上万客户的需求拼在一起，让算力能被切成小块按需用。有意思的是，给agent跑代码用的隔离环境原本差点被砍掉，现在撑起了公司三分之一的收入。",
       "tracks": [
         {
           "track": "ai",
@@ -81,29 +81,7 @@
           "reason": "AI基础设施行业深度访谈,内容扎实(sandbox经济占比/融资/容量管理技术细节),但偏商业/infra叙事,受众较窄"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Armin Ronacher",
-      "link": "https://simonwillison.net/2026/Oct/22/armin-ronacher/",
-      "date": "2026-10-22",
-      "first_seen": "2026-10-23T02:42:40.703966+00:00",
-      "source_type": "blog",
-      "summary": "引用Armin Ronacher就近期AI发现大量陈年软件漏洞一事的调侃：“AI虽然好玩，但过去30年我们写了太多烂软件，现在宇宙开始为我们的罪孽实施报应了”。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "简短但有共鸣度的洞察(AI正在揪出30年积累的烂软件债),但缺乏展开论述"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "与三根主干无实质连接"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -112,7 +90,7 @@
       "date": "2026-10-22",
       "first_seen": "2026-10-23T02:42:41.170148+00:00",
       "source_type": "blog",
-      "summary": "Latent Space访谈金融交易AI工具Moshi创始人Anekha Sokhal，她提到AI Engineer大会上很多工程师感到压力——管理层现在说“你就是整个团队”，原本需要10人团队做的系统现在要一个人用agent搭完。她把Moshi形容为“Bloomberg+Claude+Netflix的混血”，核心是给交易员做跨数据源（时间序列/新闻/另类数据/个人私有数据）的推荐系统，而不是单纯的聊天助手或仪表盘。她还谈到自建模型vs用现成方案的权衡——有自己的工程团队时更倾向自建。",
+      "summary": "Latent Space采访金融AI工具Moshi的创始人，她说现在工程师常听到管理层讲“你就是整个团队”，原来一个团队的活要一个人带着agent干完。她把Moshi定位成给交易员用的推荐系统，把行情、新闻和个人数据串起来，而不是又一个聊天助手。如果你关心agent怎样改变工程师的工作量和压力，这期可以听听。",
       "tracks": [
         {
           "track": "ai",
@@ -120,7 +98,7 @@
           "reason": "有具体的行业趋势观察('你就是整个团队'的压力现象/推荐系统设计思路),但偏个人访谈叙事"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -129,7 +107,7 @@
       "date": "2026-10-22",
       "first_seen": "2026-10-23T02:42:41.172454+00:00",
       "source_type": "blog",
-      "summary": "Latent Space报道同一PHP核心漏洞事件的另一面：这是OpenAI今年8月推出的“Patch the Planet”计划（配合10亿美元的Daybreak网络安全模型补贴）资助的研究成果之一，安全公司Calif用GPT-5.6 Sol独立发现；文章认为这标志着行业史上最大规模的一次“自愿安全审查”正式开始(与此前Simon Willison报道的PHP官方披露事件为同一起)。",
+      "summary": "Latent Space报道PHP那个大漏洞的另一面：发现它的研究是OpenAI一个安全资助计划出的钱，用的也是OpenAI的模型。这个计划今年夏天才启动，专门资助用AI给开源软件查漏洞。跟Simon Willison那篇是同一件事，这篇多了一个判断，AI大规模查漏洞已经开始了。",
       "tracks": [
         {
           "track": "ai",
@@ -142,7 +120,7 @@
           "reason": "与此前更详细的PHP漏洞报道重复,降一档"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -151,7 +129,7 @@
       "date": "2026-10-22",
       "first_seen": "2026-10-23T02:43:16.270131+00:00",
       "source_type": "blog",
-      "summary": "Anthropic把Agent Skills这个开放标准捐赠给Linux基金会旗下的Agentic AI Foundation（此前MCP也捐给了同一个基金会）。Skill是一个包含SKILL.md文件（教agent做特定任务/领域的程序性知识）加脚本/参考资料的文件夹，自2025年12月发布以来已被ChatGPT、Cursor、GitHub Copilot、VS Code等70多个agent平台集成，累计发布100万个skill、安装近2.8亿次。",
+      "summary": "Anthropic把Agent Skills这个开放标准捐赠给Linux基金会旗下的Agentic AI Foundation，此前MCP也捐给了同一个基金会。Skill就是一个文件夹，里面放着教agent做某类任务的说明和脚本，发布不到一年，ChatGPT、Cursor、GitHub Copilot等70多个平台都已接入。交给中立基金会以后，它更像一个行业通用标准，而不是Anthropic一家的功能。",
       "tracks": [
         {
           "track": "ai",
@@ -159,7 +137,7 @@
           "reason": "重要的开放标准进展,具体数字扎实(70+平台集成/100万skill/2.8亿次安装),讲清楚是什么为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -168,7 +146,7 @@
       "date": "2026-10-22",
       "first_seen": "2026-10-23T02:43:16.297233+00:00",
       "source_type": "blog",
-      "summary": "Anthropic与Theorem合作展示：Claude现在能对123个真实开源库的编译后（RISC-V汇编级）代码做大规模形式化验证——证明程序在任意小于64MB的输入下都不会崩溃，这在过去只有像seL4这种极端关键的项目才负担得起（实现用了2人年，形式化验证反而用了20人年）。方法是把现有的fuzz测试转换成“这个测试永远通过”的规格，让Claude写证明、Rocq证明检查器核验。过程中Claude发现并修复了数百个bug，其中一些是经过万亿次测试运行都没被模糊测试找到的边界情况（比如需要精确20MB特定排列的输入才触发）。证明代码量极大（约1.8亿行Rocq），但完全不需要人工审查——只需要信任RISC-V/Linux语义模型和证明检查器本身。更重要的趋势：新模型用的token更少（Opus 5.5比Opus 5少40%），而且证明可以像代码一样被复用（共享工作区让agent互相抄对方的证明，token消耗再降17%）。这篇文章把形式化验证定位成“继静态类型、测试框架之后”下一个会从小众变成标配的正确性工具，预示测试行业可能从“靠概率的模糊测试”走向“可证明的正确性保证”。",
+      "summary": "Anthropic用Claude给123个真实的开源库做了形式化验证，也就是用数学证明程序在各种输入下都不会崩溃，这件事以前贵到只有极少数关键项目才做得起。做法是把现有的测试改写成“这个测试永远通过”的命题，Claude写证明，再由专门的检查程序逐步核对，过程中还找出了几百个跑了无数次测试都没发现的bug。对做测试的人来说，它意味着确保软件正确，可能从“多跑测试碰运气”走向“直接证明没问题”。",
       "tracks": [
         {
           "track": "ai",
@@ -181,7 +159,7 @@
           "reason": "直接命中'确定性仿真测试'与测试实践变迁——把fuzz测试转化为可证明的正确性保证,预示测试行业范式转变"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -190,7 +168,7 @@
       "date": "2026-10-21",
       "first_seen": "2026-10-23T02:42:40.704033+00:00",
       "source_type": "blog",
-      "summary": "PHP基金会紧急发布安全更新，修复两个远程代码执行（RCE）漏洞，因为协调披露流程泄露、一家安全公司误发了概念验证视频，导致提前一天多公开，期间已有漏洞利用在传播。文章披露了原始发现时间线：安全公司Calif（今年8月，用GPT-5.6 Sol发现）和被Google收购的Wiz（用Gemini 4 Argon+GPT-5.6 Sol+自研工具Wiz Atlas）分别独立用AI工具发现了同一个PHP核心漏洞，并先后确认了针对Drupal和WordPress的未授权RCE利用方式。这是AI自主挖掘重大基础设施级漏洞、进而引发行业协调响应的一次真实案例。",
+      "summary": "PHP紧急修复了两个能让黑客远程控制服务器的漏洞。原本计划好的披露被一家安全公司误发的演示视频打乱，补丁出来前攻击代码就已经在传。这些漏洞是两家安全公司分别用AI找出来的，算是AI自己挖出基础设施级大漏洞、逼得整个行业紧急响应的第一个真实案例。",
       "tracks": [
         {
           "track": "ai",
@@ -203,7 +181,7 @@
           "reason": "直接命中'AI自主找bug'——真实、高影响力案例展示AI发现重大基础设施级漏洞的能力"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -212,7 +190,7 @@
       "date": "2026-10-21",
       "first_seen": "2026-10-23T02:42:41.173965+00:00",
       "source_type": "blog",
-      "summary": "这篇文章提出“注意力接口”（Attention Interface）概念来描述agent harness的演变方向：harness原本是agent对接机器的接口（提示词->命令/编辑文件），现在逐渐变成agent对接人类注意力的接口（决定什么时候打断你、给你看什么、要你做什么决定）。作者用Claude Mods（能钩入Claude Code任意执行节点、自定义渲染和行为的插件）把这个接口“翻转过来”，自己和Claude一起设计自己想要被打断、被提示的方式——比如“You Should Know”插件曾经提醒他某个文件有未提交的旧改动，避免被新一轮演示代码不小心覆盖掉。作者把这个方式和ChatGPT的Intelligent UI（模型自己在预设组件库里选界面，零配置但零控制）、Cursor的PR自动审批（团队定规则，但交互流程是Cursor定的）对比，指出三者的核心差异是“谁来设计这个注意力接口”。文章也坦诚了mod的代价——噪音（几乎每个回合都会触发提醒，反而让人开始忽略）、成本（每次检查都要重新读一遍对话）、信任（mod不跑在沙箱里，能读写所有文件、看到所有prompt）。",
+      "summary": "作者认为harness，也就是包在模型外面的那层程序，正在从“帮agent操作电脑”变成“决定什么时候打扰你、给你看什么”。他用Claude Code的插件亲手设计了自己想被提醒的方式，并跟ChatGPT、Cursor的做法对比，区别在于这套规则由谁来定。文章也老实讲了代价，提醒太多反而会被忽略，插件权限也大得让人不放心。",
       "tracks": [
         {
           "track": "ai",
@@ -225,7 +203,7 @@
           "reason": "明确命中'护城河在harness不在模型'——作者一手实践经验,通过Claude Mods重新设计自己与agent协作时的注意力分配方式"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -234,7 +212,7 @@
       "date": "2026-10-21",
       "first_seen": "2026-10-23T02:42:41.175313+00:00",
       "source_type": "blog",
-      "summary": "DeepSeek开源了其生产级推理框架DeepInfer（基于vLLM定制，含SGLang/TRT-LLM参考），号称能做到每天155万亿token的服务量、推理毛利率超过80%、81天回本周期，是开源推理技术栈对标OpenAI/Anthropic等闭源方案的一次重要释放。",
+      "summary": "DeepSeek开源了自己线上在用的推理框架，也就是让模型高效响应请求的那套服务程序。它号称每天能处理海量请求、利润率超过八成，不到三个月就能回本。这等于把闭源大厂的看家本领摊开给了所有人，自己部署模型的团队值得关注。",
       "tracks": [
         {
           "track": "ai",
@@ -242,7 +220,7 @@
           "reason": "重要的开源推理基础设施发布,数据具体(155T token/天/80%毛利),但新闻摘要聚合性质"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -251,7 +229,7 @@
       "date": "2026-10-21",
       "first_seen": "2026-10-23T02:42:41.176908+00:00",
       "source_type": "blog",
-      "summary": "Latent Space访谈应用AI咨询公司Tenex：他们按“故事点”（工作产出）而不是工时给工程师发薪，目前最高薪和最低薪工程师大约差4倍（不是预想的10倍），主要约束不是“有人灌水故事点”而是“怎么给非编码工作（架构设计/理解客户需求）算报酬”。他们还搭建了“MetaHarness”——把项目计划、决策记录连同代码一起提交进git，这样agent接手任务时不仅看到写了什么代码，还能看到“为什么这样做”的理由。文中给出了企业AI落地的具体阶段分布：约90%企业已给员工发了通用LLM，但只有约50%给工程团队上了coding agent，而把agent用在非工程类生产工作上的企业只有5%左右——这是企业AI落地“最后一公里”的最大断层。目前公司内部模型偏好是Opus 5.5（配合通过Claude Code订阅接入AMP用），成本上大约是人均token花费和人均工资1:1到2:1。",
+      "summary": "Latent Space采访AI咨询公司Tenex，他们按工作产出而不是工时给工程师发钱，难题反而是架构设计这类不写代码的工作该怎么算。他们还把计划和决策理由跟代码一起存进仓库，让agent接手时知道“为什么这么做”。文中最扎心的观察是，大多数企业都给员工发了聊天AI，但真把agent用到工程以外工作上的只有5%左右。",
       "tracks": [
         {
           "track": "ai",
@@ -264,7 +242,7 @@
           "reason": "MetaHarness概念命中'护城河在harness不在模型',但是转述访谈而非作者一手反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -273,12 +251,29 @@
       "date": "2026-10-21",
       "first_seen": "2026-10-23T02:42:43.804364+00:00",
       "source_type": "blog",
-      "summary": "OpenAI与PerturbAI、Scripps Research合作，用上千个分布式AI agent分析数百万脑细胞的数据，挖掘出有潜力的新研究线索。",
+      "summary": "OpenAI和两家科研机构合作，让上千个AI agent分头分析数百万个脑细胞的数据，找出值得继续研究的新线索。这是让大批agent分工协作做真实科研的一个例子，跟一个agent从头做到尾的用法不太一样。",
       "tracks": [
         {
           "track": "ai",
           "tier": "high",
           "reason": "具体的科研实践案例(上千分布式agent分析脑细胞数据),命中criterion③应用案例(WebFetch 403仅凭摘要判断)"
+        }
+      ],
+      "is_new": false
+    },
+    {
+      "person": "Craig Mod",
+      "title": "[RODEN] Digger Is Good, Notebooks, Please Be Weirder",
+      "link": "https://craigmod.com/roden/119/",
+      "date": "2026-10-21",
+      "first_seen": "2026-10-23T02:42:39.048773+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "仅是旅行/天气的生活琐事,未深入到质朴中正的构建者活法母题"
         }
       ],
       "is_new": true
@@ -290,7 +285,7 @@
       "date": "2026-10-20",
       "first_seen": "2026-10-23T02:42:40.704116+00:00",
       "source_type": "blog",
-      "summary": "Simon Willison记录了他用coding agent（主要是Claude Code）“vibe coding”一个即时战略游戏Battle Drones的完整过程（12个大版本，321次commit）：从能玩但不好玩的v1，到他直接说“让它更好玩一点”后Ultracode模式跑了一整晚、自己模拟了1200场对局来重新平衡数值的v4，再到3D化、agent对战模式、随机地图生成器，最后甚至做出了用手机麦克风声音信号实现双人联机对战的功能。他坦言“几乎没有审查过任何代码”，用的还是自己几乎不会的TypeScript，并反思这种创作方式带来的真实愧疚感——“我感觉自己还没有资格做出这么好的东西，毕竟我在这个领域经验这么少”。他总结的经验包括：静态HTML+JS是做游戏的好媒介、给Claude一个图像生成API key就能让它自己生成素材并迭代、复现/联机功能需要确定性仿真引擎（不同浏览器的三角函数实现有细微差异都会导致不同步）、“构建配套工具”几乎是免费的（Claude会主动给自己写调试工具）。",
+      "summary": "Simon Willison几乎不看代码，用Claude Code一路“vibe coding”出一个即时战略游戏，从能玩但不好玩，做到能靠手机麦克风的声音联机对战。中间他只说了一句“让它更好玩”，Claude就自己跑了一整晚、模拟上千场对局来调平衡。他也坦白了做出好东西却觉得自己不配的那份愧疚，还总结了几条做游戏的实操经验。",
       "tracks": [
         {
           "track": "ai",
@@ -303,7 +298,7 @@
           "reason": "命中反射母题'上游原创vs下游组合'——作者一手、持续地反思自己几乎没审查代码却做出高质量成品的'愧疚感'和创作归属问题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -312,7 +307,7 @@
       "date": "2026-10-20",
       "first_seen": "2026-10-23T02:42:41.180894+00:00",
       "source_type": "blog",
-      "summary": "Latent Space访谈SF Compute创始人Evan Conrad，聊GPU算力交易市场如何从“转租集群”发展成一个真正的“物理结算”期货市场——买家拿到的是可用的计算资源而不是现金，这涉及中断容忍度、存储恢复速度、GPU代际差异等复杂的“商品分级”问题。目前市场流动性还很低（只有5%的产能挂在订单簿上），但已经出现明显的套利空间（B300推理每小时能赚40美元，租用成本才5-6美元）。",
+      "summary": "Latent Space采访SF Compute的创始人，讲GPU算力怎样从转租集群变成像期货一样能交易的商品。难点在于算力不像石油那样整齐划一，能不能被中断、显卡是哪一代，都会影响它值多少钱。这个市场现在还很小，但已经有明显的差价可赚。",
       "tracks": [
         {
           "track": "ai",
@@ -320,7 +315,7 @@
           "reason": "AI基础设施相关(GPU算力交易市场)的深度访谈,内容扎实但偏小众金融市场叙事,非直接AI实操指南"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ethan Mollick",
@@ -329,7 +324,7 @@
       "date": "2026-10-20",
       "first_seen": "2026-10-23T02:42:40.470427+00:00",
       "source_type": "blog",
-      "summary": "Ethan Mollick用新书出版契机回顾AI过去30个月的进展：METR长时程基准显示AI能独立完成的工作时长每几个月翻倍，从2024年的4分钟涨到2026年4月的17小时，之后这个基准“测不动了”（有研究认为现在数字是17周）；同样难度的问题现在的AI使用成本只是以前的几百分之一。他提出了与AI协作的第三种模式“conjurer”（召唤者）——不同于之前“半人马”（分工）和“电子人”（融合）两种让你一直“在循环内”的模式，conjurer是按需召唤agent、分配任务、评估产出，是目前最强大但也最容易“失去对AI具体在做什么的控制”的协作方式。这篇文章配图全部由他口头指导Opus 5.5在Claude Projects里派生多个子agent完成，过去要花他几个小时的研究/绘图/排版/配图/引用工作，现在几分钟就搞定，他甚至只需要说“做得更好点”这种含糊指令。",
+      "summary": "Ethan Mollick借新书出版，用图表回顾AI这30个月的进展：AI能独立干完的活越来越长，同样难度的问题成本却降到了原来的几百分之一。他提出一种叫“召唤者”的协作方式，按需叫来一批agent分活再自己验收，威力最大，也最容易搞不清AI到底在干什么。这篇文章的配图本身就是他用这种方式让Claude做的。",
       "tracks": [
         {
           "track": "ai",
@@ -337,7 +332,7 @@
           "reason": "权威的AI能力趋势回顾,具体数据扎实(METR基准进展/成本下降),提出实用框架(centaur/cyborg/conjurer三种协作模式)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Hamel Husain",
@@ -346,7 +341,7 @@
       "date": "2026-10-20",
       "first_seen": "2026-10-23T02:42:41.733965+00:00",
       "source_type": "blog",
-      "summary": "Hamel Husain详细对比了几个“决策模型”（TypeSafe Jev、Perplexity Decider、Liquid d1、Cloudflare Clef、OpenAI Decisions）作为LLM judge的低成本替代方案在自动化评测中的表现：默认0.5的判定阈值往往不是最优，需要用数据专门调优（给出可以直接喂给coding agent的调优prompt）；比较了各模型在精确率/召回率/成本上的权衡，OpenAI Decisions（用GPT-6 Luna）效果最好但成本是Perplexity的4.5倍；文章还讨论了模型给出的“概率分数”是否可信（概率校准），给出了检测和校正的具体方法。核心建议：先定好业务可接受的最低精确率/召回率，再在满足要求的模型里按成本做选择，全程要用自己的数据实测而非直接套用默认设置。",
+      "summary": "Hamel Husain比较了几款专门做“是或否”判断的小模型，看它们能不能代替昂贵的大模型当评测裁判。他发现默认的判定标准往往不是最好的，要用自己的数据去调，还给了一段能直接交给coding agent去调的提示词。核心建议是先定好你能接受的准确度，再在达标的模型里挑最便宜的。",
       "tracks": [
         {
           "track": "ai",
@@ -359,7 +354,7 @@
           "reason": "直接命中'LLM/agent产品怎么建eval、eval工具怎么选'——系统对比多个决策模型做自动化评测的精确率/召回率/成本/概率校准"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -368,7 +363,7 @@
       "date": "2026-10-20",
       "first_seen": "2026-10-23T02:43:16.299900+00:00",
       "source_type": "blog",
-      "summary": "Anthropic展示了一次由非专业机构（金融研究公司Citrini Research）发起、Claude主导设计的蝎毒抗体药物早期探索：针对4个地区5种蝎子神经毒素，Claude自主生成31.8万个蛋白候选设计，筛选出211个送去湿实验室检测，其中17个被确认为有效结合蛋白（命中率与同类蛋白设计项目持平的18%）。两位独立专家认为这是有前景的第一步——蝎毒蛰伤每年造成超过120万人受伤、3250人以上死亡，但因为商业回报低几乎没人投入新药研发，这类“被忽视的热带病”可能是AI药物设计最先产生实际影响的领域之一。团队强调结合蛋白只是第一步，离真正的抗毒血清还有很长的路（体外细胞实验/活体动物实验/安全性和可负担性）。",
+      "summary": "一家金融研究公司借助Claude，针对几种蝎子毒素设计了大量候选蛋白质，送去实验室检测后，有17个确实能和毒素结合。这是研发新抗毒药物的第一步，离真正能用的药还很远。蝎子蜇伤每年伤及上百万人，却很少有药厂愿意投钱，这类被忽视的病可能是AI设计药物最先派上用场的地方。",
       "tracks": [
         {
           "track": "ai",
@@ -376,7 +371,7 @@
           "reason": "极具体的科研实践案例,数据扎实(31.8万候选设计/211个测试/17个确认结合),讲清楚是什么为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Arvind Narayanan & Sayash Kapoor",
@@ -385,7 +380,7 @@
       "date": "2026-10-19",
       "first_seen": "2026-10-23T02:42:43.117530+00:00",
       "source_type": "blog",
-      "summary": "普林斯顿团队联合斯坦福、英国AI安全研究所、布鲁金斯学会发布论文，系统梳理AI agent评测领域的33个新兴趋势，涵盖方法论、研究议程和评测生态三个维度。核心观察：agent评测比模型评测复杂得多——不仅要看最终结果还要看整条执行轨迹（有没有走捷径），评测本身的工程成本已经高到有些benchmark评测一次要花几万美元；而且“能力层面测出来的结果”不保证能转化到真实场景（比如METR的随机对照实验发现，agent工具实际上让软件开发任务完成时间变长了，与预期相反）。文章呼吁更多跨学科背景的评测者加入，现有的评测者也要正视自己方法论的局限。",
+      "summary": "普林斯顿等机构的团队发了一篇论文，梳理AI agent评测领域正在出现的新趋势。重点是agent评测比模型评测难得多，不光要看结果，还要看它一路是怎么做的、有没有走捷径，有的评测跑一次就要花几万美元。他们还提醒，测出来的能力不一定能用到真实工作里，有实验发现用了agent工具反而让开发变慢了。",
       "tracks": [
         {
           "track": "ai",
@@ -398,7 +393,7 @@
           "reason": "直接命中'LLM/agent产品怎么建eval、eval工具怎么选、自动化评测靠不靠谱'——系统梳理agent评测的方法论和生态系统问题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -407,7 +402,7 @@
       "date": "2026-10-19",
       "first_seen": "2026-10-23T02:42:43.804444+00:00",
       "source_type": "blog",
-      "summary": "OpenAI分享了如何提升ChatGPT在“低资源编程语言”（训练数据稀缺的语言）上的编程能力，新增了针对SQLite扩展开发和COBOL迁移等场景的专项评测。",
+      "summary": "OpenAI讲他们怎样提升ChatGPT写冷门编程语言的能力，比如很老的COBOL，这类语言能拿来训练的资料很少。他们为此专门设计了新的评测，覆盖给数据库写扩展、把老系统迁移出来这类真实场景。",
       "tracks": [
         {
           "track": "ai",
@@ -415,7 +410,7 @@
           "reason": "具体的能力提升+真实场景评测(SQLite扩展/COBOL迁移),讲清楚是什么为什么重要(WebFetch 403仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -424,15 +419,15 @@
       "date": "2026-10-19",
       "first_seen": "2026-10-23T02:42:39.049026+00:00",
       "source_type": "blog",
-      "summary": "Craig Mod分享他如何从“随手拿一本样书当笔记本用”的偶然发现，一步步做出了一本他理想中的笔记本产品，并在网店开卖。",
+      "summary": "Craig Mod讲他偶然把一本样书当笔记本用，越用越顺手，后来一步步做出了自己理想中的散步笔记本，现在放在网店里卖。",
       "tracks": [
         {
           "track": "anchor",
-          "tier": "medium",
+          "tier": "high",
           "reason": "命中周边领域'质朴中正慢的构建者活法'——作者一手经历做出自己理想中的笔记本,但是轻松小品文非深度母题命中"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -441,7 +436,7 @@
       "date": "2026-10-17",
       "first_seen": "2026-10-23T02:42:41.185896+00:00",
       "source_type": "blog",
-      "summary": "Latent Space AI News摘要本周两个新开源模型发布：Meta的Muse Spark Open（816B参数MoE，42B激活，在Artificial Analysis智能指数上是美国开源模型最高分39分）和Reflection的Beam 1.0（501B参数MoE，23B激活，Apache 2.0协议，附带训练用的Mirror CLI harness和安全报告开源）。两者在不同基准上各有优劣，Reflection Beam在代码类评测中排名靠前但在幻觉率上偏高（47%）。",
+      "summary": "Latent Space这期速报介绍了两个新发布的开源大模型，分别来自Meta和Reflection，都是只激活一小部分参数来省算力的大模型。Reflection把训练用的工具和安全报告也一起开源了，写代码的评测成绩靠前，但胡编乱造的比例偏高。想跟进开源模型的进展可以扫一眼。",
       "tracks": [
         {
           "track": "ai",
@@ -449,7 +444,7 @@
           "reason": "包含具体的开源模型发布信息(架构/跑分数字),但是新闻摘要聚合性质"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -458,7 +453,7 @@
       "date": "2026-10-16",
       "first_seen": "2026-10-23T02:42:40.704279+00:00",
       "source_type": "blog",
-      "summary": "引用Claude Code团队关于如何做代码评审的文章：他们认为“有没有人读过这段代码”是个不精确的替代指标，真正该问的是“这个改动可能哪里出错、该用什么检查（自动或人工）来抓住它”。这个问题意识的转变也改变了评审发生的时机——过去评审是“写完代码->开PR->等同事看”这种流程末端的关卡，现在评审持续运行，更像写代码时的拼写检查，大多数改动在被要求给人看之前已经被Claude审查并修正过至少一次，这样能把人的注意力留给更高层次的问题。",
+      "summary": "Simon Willison引用Claude Code团队对代码评审的看法：该问的不是“有没有人读过这段代码”，而是“它可能哪里出错，用什么检查能抓住”。于是评审不再是写完之后等同事看的一道关卡，而是像拼写检查一样边写边做。大多数改动在给人看之前，Claude已经审过改过一轮，人的注意力就能留给更大的问题。",
       "tracks": [
         {
           "track": "ai",
@@ -466,7 +461,7 @@
           "reason": "简练但扎实的实操洞见,重新定义了AI时代代码评审的问法(从'有没有人读'变成'用什么检查手段'),改变了评审发生的时机"
         }
       ],
-      "is_new": true
+      "is_new": false
     }
   ]
 }
