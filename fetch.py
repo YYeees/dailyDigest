@@ -12,6 +12,7 @@ import feedparser
 
 from config import DB_PATH, DIGEST_START_DATE
 from content_extract import extract_body
+from listing_scraper import ListingError, scrape_listing
 from sources import SOURCES
 
 
@@ -93,6 +94,14 @@ def normalize_entry(source, entry):
     }
 
 
+def wanted_categories(source, entry):
+    """配了include_categories的源，只收带白名单分类标签的条目(OpenAI的feed靠这个滤掉客户案例)。"""
+    allowed = source.get("include_categories")
+    if not allowed:
+        return True
+    return any(tag.get("term") in allowed for tag in entry.get("tags", []))
+
+
 def fetch_all():
     conn = sqlite3.connect(DB_PATH)
     init_db(conn)
@@ -100,14 +109,28 @@ def fetch_all():
     total_new = 0
     failed = []
     for source in SOURCES:
-        parsed = feedparser.parse(source["url"])
-        if parsed.bozo and not parsed.entries:
-            print(f"[FAIL] {source['name']} ({source['url']}) — {parsed.bozo_exception}")
-            failed.append(source["name"])
-            continue
+        if "listing_urls" in source:
+            # 没有RSS的源，见listing_scraper.py文件头
+            def is_known(url, name=source["name"]):
+                return conn.execute("SELECT 1 FROM items WHERE guid = ?", (f"{name}::{url}",)).fetchone() is not None
+            try:
+                entries = scrape_listing(source, is_known)
+            except ListingError as e:
+                print(f"[FAIL] {source['name']} — {e}")
+                failed.append(source["name"])
+                continue
+        else:
+            parsed = feedparser.parse(source["url"])
+            if parsed.bozo and not parsed.entries:
+                print(f"[FAIL] {source['name']} ({source['url']}) — {parsed.bozo_exception}")
+                failed.append(source["name"])
+                continue
+            entries = parsed.entries
 
         new_count = 0
-        for entry in parsed.entries:
+        for entry in entries:
+            if not wanted_categories(source, entry):
+                continue
             record = normalize_entry(source, entry)
             cur = conn.execute(
                 "SELECT 1 FROM items WHERE guid = ?", (record["guid"],)
@@ -123,7 +146,7 @@ def fetch_all():
             new_count += 1
         conn.commit()
         total_new += new_count
-        print(f"[OK] {source['name']}: {len(parsed.entries)}条 in feed, {new_count}条新增")
+        print(f"[OK] {source['name']}: {len(entries)}条 in feed, {new_count}条新增")
 
     conn.close()
     print(f"\n共新增 {total_new} 条")

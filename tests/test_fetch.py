@@ -75,3 +75,18 @@ class TestContentOnlyForRankableItems(unittest.TestCase):
         entry = self._entry(2026)
         del entry["published_parsed"]
         self.assertIsNone(normalize_entry(self.SOURCE, entry)["content"])
+
+
+class TestWantedCategories(unittest.TestCase):
+    """OpenAI的feed靠分类白名单滤掉客户案例，见sources.py。"""
+
+    def test_no_whitelist_keeps_everything(self):
+        from fetch import wanted_categories
+        self.assertTrue(wanted_categories({"name": "S"}, {"tags": []}))
+
+    def test_whitelist(self):
+        from fetch import wanted_categories
+        source = {"name": "S", "include_categories": ["Research", "Product"]}
+        self.assertTrue(wanted_categories(source, {"tags": [{"term": "Research"}]}))
+        self.assertFalse(wanted_categories(source, {"tags": [{"term": "Company"}]}))
+        self.assertFalse(wanted_categories(source, {}))  # 没分类的客户案例

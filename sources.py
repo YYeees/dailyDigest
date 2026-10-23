@@ -65,7 +65,30 @@ SOURCES = [
 
     {"person": "Arvind Narayanan & Sayash Kapoor", "type": "blog", "name": "AI as Normal Technology",
      "url": "https://www.normaltech.ai/feed"},
+
+    {"person": "OpenAI", "type": "blog", "name": "OpenAI (官方技术与发布)",
+     "url": "https://openai.com/news/rss.xml",
+     "include_categories": ["Research", "Publication", "Engineering", "Applied AI", "Safety", "Product"]},
+
+    {"person": "Anthropic", "type": "blog", "name": "Anthropic (官方新闻与研究)",
+     "base_url": "https://www.anthropic.com",
+     "listing_urls": ["https://www.anthropic.com/news", "https://www.anthropic.com/research"],
+     "article_path_pattern": r"^/(news|research)/(?!team/)[A-Za-z0-9-]+$"},
 ]
+# 2026-10-23加两家官方渠道，用户要"官方更新的技术或者重磅的文章"。
+#   OpenAI  官方feed 189条/90天，9月拒过一次(见下面旧记录里"OpenAI Blog 153条/90天全是产品
+#     公关和客户案例")。这次靠每条自带的<category>标签做白名单(fetch.py的wanted_categories)：
+#     近90天 Research 7、Publication 6、Engineering 5、Applied AI 3、Safety 11、Product 32，
+#     合计约60条。滤掉的是没分类的客户案例41、Company 37、Startup 16、Global Affairs 17、
+#     Security 9。Product留着是因为新模型/新API发布都在这一类，代价是混进"ChatGPT Ads扩到
+#     26个国家"这种稿子，交给ai_tier去判。feed不给正文(summary只有一句)，精判要WebFetch。
+#   Anthropic  没有RSS(anthropic.com、claude.com的/rss.xml全是404)，走listing_scraper.py读
+#     /news和/research两个列表页。原先的/engineering已经并进/research(比如
+#     /research/claude-code-best-practices)，不用单独抓。列表页上的分类页链接
+#     (/news/product、/news/policy这些)每天会被打开一遍再因为没有发布时间被丢掉，十来次
+#     请求，换来的是不用维护分类名单。官网改版导致一个链接都解析不出来时fetch.py会报FAIL。
+#     查过没用的：GitHub上Olshansk/rss-feeds这类第三方爬虫生成的feed——内容虽是官方的，但
+#     链路在别人手里，违反文件头"一手渠道"的规矩。
 # 2026-10-23换了一轮方向：撤掉软件测试和UX两类信源，改成围着Hamel Husain的AI eval圈子加人。
 # 用户原话"去掉之前里面关于eval的信息源，去掉关于ux交互的信息源"，这里的"eval"指的是
 # 2026-09-12为测试方向加的那批(见下面的旧记录)，不是Hamel那种LLM评测——Hamel本人留着。
