@@ -91,6 +91,40 @@
       "is_new": false
     },
     {
+      "person": "OpenAI",
+      "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
+      "link": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
+      "date": "2026-07-29",
+      "first_seen": "2026-10-23T02:42:43.806084+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI发现在API调用中开启两个设置——保留推理痕迹（retain reasoning）和启用压缩（compaction）——能让GPT-5.6在ARC-AGI-3基准上的分数提升两倍以上，是开发者可以直接套用的具体配置技巧。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接可操作的API配置技巧(保留推理痕迹+启用压缩),讲清楚原理和效果(WebFetch 403仅凭摘要判断)"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Scientific computing in the age of agentic AI",
+      "link": "https://openai.com/index/scientific-computing-agentic-ai",
+      "date": "2026-07-28",
+      "first_seen": "2026-10-23T02:42:43.806130+00:00",
+      "source_type": "blog",
+      "summary": "field report显示科学家开始用AI coding agent改造科学计算工作流，在基因组学等领域加速了软件开发和科研发现的速度。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "面向科研/工程场景的真实应用案例(field report),讲清楚科学家如何用coding agent加速基因组学等领域研究(WebFetch 403仅凭摘要判断)"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "Codex from 0 to 10M Users: Building ChatGPT Work — Akshay Nathan, OpenAI",
       "link": "https://www.latent.space/p/chatgpt-work",
@@ -263,7 +297,7 @@
           "reason": "作者一手反思：通过一战历史(舞台剧《战马》+阅读)追问人如何面对大规模苦难，正是根一透过历史镜头追问人如何活成自己、如何自处"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Maggie Appleton",
@@ -373,6 +407,57 @@
       "is_new": false
     },
     {
+      "person": "OpenAI",
+      "title": "ChatGPT is now a partner for your most ambitious work",
+      "link": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
+      "date": "2026-07-09",
+      "first_seen": "2026-10-23T02:42:43.806326+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI推出ChatGPT Work，一个可跨应用、跨文件操作、可持续工作数小时的agent，面向需要长时间推进复杂项目的场景，把一个目标直接执行成成品。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "新发布的ChatGPT Work agent有具体能力描述(跨应用跨文件操作/持续数小时/目标直接执行成品),讲清楚是什么为什么重要(WebFetch 403,仅凭摘要判断)"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
+      "link": "https://openai.com/index/gpt-5-6",
+      "date": "2026-07-09",
+      "first_seen": "2026-10-23T02:42:43.806347+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI发布GPT-5.6，主打“每token更高智能密度”，在性能提升的同时优化了单位成本的性价比，并为重度任务提供更大的按需算力。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布,摘要讲清楚核心卖点(每token更高智能密度/性价比提升/按需更大算力),WebFetch 403仅凭摘要判断"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Separating signal from noise in coding evaluations",
+      "link": "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
+      "date": "2026-07-08",
+      "first_seen": "2026-10-23T02:42:43.806391+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI分析指出主流coding评测基准SWE-Bench Pro存在可靠性和准确性问题，影响了对模型编程能力的评估结论，提示在用benchmark判断模型编程水平时需要谨慎。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "直接命中'自动化评测靠不靠谱':指出SWE-Bench Pro这个热门coding基准存在可靠性和准确性问题"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Martin Fowler",
       "title": "Experiences with local models for coding",
       "link": "https://martinfowler.com/articles/exploring-gen-ai/local-models-for-coding-experiences.html",
@@ -422,6 +507,28 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Jason Liu",
+      "title": "If You Want Taste, You're Gonna Have to Eat",
+      "link": "https://jxnl.co/writing/2026/07/05/taste/",
+      "date": "2026-07-05",
+      "first_seen": "2026-10-23T02:42:42.500116+00:00",
+      "source_type": "blog",
+      "summary": "文章提出AI让创作能力几近免费后，稀缺的是“品味”——对什么会被喜爱的判断力和敢于偏离大众审美的勇气。作者给出具体练习：深度浸入而非走捷径（如去餐厅吃饭而非只看菜单）、追溯创作者背景、无导航漫游，用以对抗AI工具带来的注意力流失，重建一手的审美判断。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "面向AI时代普通使用者的深刻洞见:AI让执行能力几近免费后,稀缺的是品味/注意力判断力,给出具体可操作的练习方法"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "直接命中'一手不二手'母题(去餐厅吃饭而非看菜单/试穿而非看图)与'认知系统不能外包'，是作者本人一手反思"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Antithesis",
