@@ -4,7 +4,7 @@
 (yyeees.github.io/AIDailyNews/)没关,留作备份线路。
 
 跟私有站的关系:**公开站是私有站的严格子集**。这个脚本不碰digest.db,只读docs/下已经导出好
-的产物做过滤——这样tier规则、HIGH_ONLY_PERSONS、always_archive那套判断逻辑只有一份
+的产物做过滤——这样tier规则、HIGH_ONLY_PERSONS、ALWAYS_ARCHIVE_PERSONS那套判断逻辑只有一份
 (在export_recent.py/export_json.py里),不会因为两个脚本各自实现一遍而慢慢判出两种结果。
 
 公开的边界(2026-09-02跟用户定的):

@@ -64,12 +64,14 @@ HIGH_ONLY_PERSONS = {"Simon Willison"}
 HIGH_ONLY_PERSON_LIMIT = 7
 HIGH_ONLY_RECENT_DAYS = 1
 
-# Craig Mod的Ridgeline newsletter——用户明确说很喜欢，不想被ai_tier/anchor_tier的判断结果
-# 筛掉(2026-08-16定案)：不管判成什么档，都要写digest_summary，且不受"只有high档才永久归档"/
-# "medium档只在7天窗口展示"这两条规则限制，全部永久展示。craigmod.com/index.xml这个feed本身没有
-# 分类字段，只能靠标题前缀"[RIDGELINE]"识别——同一个feed里的Roden/Essays newsletter前缀不同，
-# 不在这条例外范围内。
-ALWAYS_ARCHIVE_TITLE_PREFIXES = {"[RIDGELINE]"}
+# 用户明确说很喜欢、不想被ai_tier/anchor_tier的判断结果筛掉的人：每条都写digest_summary，且不受
+# "只有high档才永久归档"/"medium档只在7天窗口展示"这两条规则限制，全部永久展示，没判到medium的
+# 在锚点track保底显示成medium(不覆盖数据库里的真实判断结果)。
+#   2026-08-16 起先只放行Craig Mod的Ridgeline newsletter，靠标题前缀"[RIDGELINE]"识别。
+#   2026-10-23 改成按人放行：加Teo Crawford(摄影vlog，三个track都不沾，不放行就一直判low不露面)，
+#     用户原话"和craig有点像，对我的意义""我喜欢他的视频，可以不做过滤"；同时说"craig mod也可以
+#     放到和teo crawford一起"，Craig整个feed(含Roden/Essays)都放行，标题前缀那条规则就删了。
+ALWAYS_ARCHIVE_PERSONS = {"Craig Mod", "Teo Crawford"}
 
 # GitHub Trending展示数量上限(2026-08-15定案)：不用展示太多，只要综合最值得推荐的。
 TRENDING_DAILY_LIMIT = 6    # index.html"7日内关注"页Trending板块

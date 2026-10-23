@@ -24,12 +24,11 @@ import sqlite3
 from collections import defaultdict
 from pathlib import Path
 
-from config import ALWAYS_ARCHIVE_TITLE_PREFIXES, DB_PATH, DIGEST_START_DATE, TRENDING_MONTHLY_LIMIT
+from config import (
+    ALWAYS_ARCHIVE_PERSONS, DB_PATH, DIGEST_START_DATE, TRENDING_MONTHLY_LIMIT,
+)
 from new_flags import load_prev_items, mark_new
 
-
-def always_archive(title):
-    return any(title.startswith(p) for p in ALWAYS_ARCHIVE_TITLE_PREFIXES)
 
 OUT_DIR = Path("docs/data")
 
@@ -85,7 +84,7 @@ def export():
         ORDER BY published DESC
     """, (DIGEST_START_DATE,)):
         if not (row["ai_tier"] == "high" or row["anchor_tier"] == "high"
-                or row["eval_tier"] == "high" or always_archive(row["title"])):
+                or row["eval_tier"] == "high" or row["person"] in ALWAYS_ARCHIVE_PERSONS):
             continue
         month = row["published"][:7]  # YYYY-MM
 
@@ -94,11 +93,11 @@ def export():
             if row[tier_field] == "high":
                 tracks.append({"track": track_name, "tier": "high", "reason": row[reason_field] or ""})
 
-        if not tracks and always_archive(row["title"]):
-            # Ridgeline没到high档也被强制归档——锚点track保底显示成medium(不覆盖真实判断结果)。
+        if not tracks and row["person"] in ALWAYS_ARCHIVE_PERSONS:
+            # ALWAYS_ARCHIVE_PERSONS没到high档也被强制归档——锚点track保底显示成medium(不覆盖真实判断结果)。
             tracks.append({
                 "track": "anchor", "tier": "medium",
-                "reason": row["anchor_reason"] or "Craig Mod Ridgeline，用户偏好锚点内容",
+                "reason": row["anchor_reason"] or f"{row['person']}，用户明确要求不分tier展示",
             })
 
         entry = item_dict(row)

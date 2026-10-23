@@ -38,7 +38,7 @@ from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from config import (  # noqa: E402
-    ALWAYS_ARCHIVE_TITLE_PREFIXES, ALWAYS_DISPLAY_TYPES, DB_PATH,
+    ALWAYS_ARCHIVE_PERSONS, ALWAYS_DISPLAY_TYPES, DB_PATH,
 )
 
 DEFAULT_INBOX = Path(os.environ.get("WRITING_INBOX", "~/uxye/writing-inbox")).expanduser()
@@ -194,7 +194,7 @@ def classify_by_visibility(conn):
     """把已排序的条目分成"上过页面的"和"判low从没露过面的"两堆。
 
     展示与否的时间窗口(RECENT_WINDOW_DAYS等)是按跑批当时算的、事后重建不出来,所以
-    "上过页面"是个近似:tier到medium、或X(不限tier)、或Ridgeline(标题前缀例外)。
+    "上过页面"是个近似:tier到medium、或X(不限tier)、或ALWAYS_ARCHIVE_PERSONS里的人。
     """
     order = {"high": 0, "medium": 1, "low": 2}
     shown, blind = [], []
@@ -207,9 +207,7 @@ def classify_by_visibility(conn):
         tier = min(tiers, key=lambda t: order[t]) if tiers else "low"
         item = {"guid": guid, "person": person, "title": title, "tier": tier,
                 "link": link, "published": (published or "")[:10]}
-        always = stype in ALWAYS_DISPLAY_TYPES or any(
-            title.startswith(pfx) for pfx in ALWAYS_ARCHIVE_TITLE_PREFIXES
-        )
+        always = stype in ALWAYS_DISPLAY_TYPES or person in ALWAYS_ARCHIVE_PERSONS
         (shown if tier in ("high", "medium") or always else blind).append(item)
     return shown, blind
 
@@ -242,12 +240,12 @@ def report_eval(notes, conn):
     """在"已排过序"的条目上算:系统判的档位,跟你实际记了笔记的重合度。
 
     **只有上过页面的条目才可能有笔记**——digest只展示high/medium(加三条例外:X不限tier、
-    Ridgeline、HIGH_ONLY_PERSONS当天的)。判low的绝大多数你根本没机会看到,更没机会记。
+    ALWAYS_ARCHIVE_PERSONS、HIGH_ONLY_PERSONS当天的)。判low的绝大多数你根本没机会看到,更没机会记。
     所以这份报告只能测**准确率**(判high的里有多少你真用上了),测不了**召回率**
     (你本会觉得有用的内容里,有多少被判low默默筛掉了)。后者要靠抽检,见文件头。
 
     展示与否的时间窗口(RECENT_WINDOW_DAYS等)是按跑批当时算的,事后重建不出来,
-    所以这里的"上过页面"是个近似:tier到medium、或X、或Ridgeline。
+    所以这里的"上过页面"是个近似:tier到medium、或X、或ALWAYS_ARCHIVE_PERSONS。
 
     只统计ranked_at不为空的条目——没排过序的(启用日期之前的历史存档)不是这套标准判的,
     算进来会污染结果。
@@ -271,7 +269,7 @@ def report_eval(notes, conn):
         if not items:
             continue
         hit = [i for i in items if i["guid"] in noted]
-        label = tier if tier != "low" else "low(经X/Ridgeline等例外露面)"
+        label = tier if tier != "low" else "low(经X/ALWAYS_ARCHIVE_PERSONS等例外露面)"
         print(f"  判 {label:28} {len(items):4} 条 → 你记了 {len(hit):3} 条 "
               f"({len(hit) / len(items) * 100:.0f}%)")
 

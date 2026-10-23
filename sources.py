@@ -24,6 +24,12 @@ SOURCES = [
     {"person": "Andrew Huberman", "type": "youtube", "name": "Andrew Huberman (YouTube)",
      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC2D2CMWXMOVWx7giW1n3LIg"},
 
+    {"person": "Teo Crawford", "type": "youtube", "name": "Teo Crawford (YouTube)",
+     "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCgHJi_FdfoFGyRl_RYp361A"},
+
+    {"person": "Greg Isenberg", "type": "youtube", "name": "Greg Isenberg (YouTube)",
+     "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCPjNBjflYl0-HQtUvOx0Ibw"},
+
     {"person": "Maggie Appleton", "type": "blog", "name": "Maggie Appleton",
      "url": "https://maggieappleton.com/rss.xml"},
 
@@ -66,6 +72,9 @@ SOURCES = [
     {"person": "Arvind Narayanan & Sayash Kapoor", "type": "blog", "name": "AI as Normal Technology",
      "url": "https://www.normaltech.ai/feed"},
 
+    {"person": "Matt Pocock", "type": "blog", "name": "Matt Pocock (skills 仓库版本更新)",
+     "url": "https://github.com/mattpocock/skills/releases.atom"},
+
     {"person": "OpenAI", "type": "blog", "name": "OpenAI (官方技术与发布)",
      "url": "https://openai.com/news/rss.xml",
      "include_categories": ["Research", "Publication", "Engineering", "Applied AI", "Safety", "Product"]},
@@ -75,6 +84,20 @@ SOURCES = [
      "listing_urls": ["https://www.anthropic.com/news", "https://www.anthropic.com/research"],
      "article_path_pattern": r"^/(news|research)/(?!team/)[A-Za-z0-9-]+$"},
 ]
+# 2026-10-23加Teo Crawford(YouTube @TeoCrawford)：胶片/街拍摄影和日本慢生活vlog，约两周一条。
+#   用户原话"和craig有点像，对我的意义""我喜欢他的视频，可以不做过滤"，所以进了
+#   config.ALWAYS_ARCHIVE_PERSONS，不分tier全展示(Craig Mod同天也整个放进去了，原先只放行Ridgeline)。身份：频道页@TeoCrawford本人，2013年开的号，
+#   "What 10 Years of making videos looks like."是他自己的十年回顾。
+#   同天看过没加：Tina Huang(偏vlog和入门，用户想学的是怎么做视频，管线帮不上)。
+# 同天加Greg Isenberg(YouTube)：讲AI时代的小生意机会，跟用户的溯流项目方向相关，一周两三条。
+#   营销味重("Meta Muse Will Create 1,000 Millionaires")，但没进任何特殊名单，普通规则只展示
+#   medium/high，标题党多半判low自然滤掉。他的Startup Ideas Podcast和newsletter跟视频基本是
+#   同一批内容，只跟一个渠道。
+# 同天加Matt Pocock，**跟的是github.com/mattpocock/skills的releases.atom，不是他的YouTube**：
+#   用户被"Skills for Real Engineers"(仓库简介)吸引，但担心信息太杂。YouTube 10-13到10-16几天就
+#   十来条短视频；releases从6月到10月一共7个版本，每个都带完整changelog正文(8000多字)，type记成
+#   blog是为了让正文进精判。标题只是"v1.3.1"这种版本号，判tier要看正文别看标题。
+#   aihero.dev/rss.xml看过不用：课程章节和文章混在一起，日期乱序。
 # 2026-10-23加两家官方渠道，用户要"官方更新的技术或者重磅的文章"。
 #   OpenAI  官方feed 189条/90天，9月拒过一次(见下面旧记录里"OpenAI Blog 153条/90天全是产品
 #     公关和客户案例")。这次靠每条自带的<category>标签做白名单(fetch.py的wanted_categories)：

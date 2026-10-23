@@ -36,7 +36,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from config import (  # noqa: E402
-    ALWAYS_ARCHIVE_TITLE_PREFIXES, ALWAYS_SUMMARIZE_TYPES, DB_PATH, DEEP_READ_ELIGIBLE_TYPES,
+    ALWAYS_ARCHIVE_PERSONS, ALWAYS_SUMMARIZE_TYPES, DB_PATH, DEEP_READ_ELIGIBLE_TYPES,
     DIGEST_START_DATE, PENDING_CONTENT_BUDGET, VALID_TIERS,
 )
 from content_extract import is_truncated  # noqa: E402
@@ -65,7 +65,7 @@ def cmd_pending(args):
         item = dict(row)
         item["always_summarize"] = (
             item["source_type"] in ALWAYS_SUMMARIZE_TYPES
-            or any(item["title"].startswith(p) for p in ALWAYS_ARCHIVE_TITLE_PREFIXES)
+            or item["person"] in ALWAYS_ARCHIVE_PERSONS
         )
         body = item.pop("content", None)
         item["content_chars"] = len(body or "")
