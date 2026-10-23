@@ -99,12 +99,13 @@ def export(pipeline_run=False):
                 high_only_counts[key] += 1
             tracks.append({"track": track_name, "tier": tier, "reason": row[reason_field] or ""})
 
-        if not tracks and row["person"] in ALWAYS_ARCHIVE_PERSONS:
-            # ALWAYS_ARCHIVE_PERSONS：ai/anchor两个track都没到medium，但用户明确要求不管tier全展示——
-            # 归到锚点track，tier保底显示成medium(不覆盖数据库里的真实判断结果)。
-            tracks.append({
-                "track": "anchor", "tier": "medium",
-                "reason": row["anchor_reason"] or f"{row['person']}，用户明确要求不分tier展示",
+        if row["person"] in ALWAYS_ARCHIVE_PERSONS:
+            # 用户要求这些人的内容默认高优先级(2026-10-23)：不管判成什么，锚点track一律展示成high，
+            # 排在ai后面(前端按tracks顺序画标签)。只动展示层，不覆盖数据库里的真实判断结果。
+            tracks = [t for t in tracks if t["track"] != "anchor"]
+            tracks.insert(1 if tracks and tracks[0]["track"] == "ai" else 0, {
+                "track": "anchor", "tier": "high",
+                "reason": row["anchor_reason"] or f"{row['person']}，用户要求默认高优先级",
             })
 
         if not tracks:

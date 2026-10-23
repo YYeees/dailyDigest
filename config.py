@@ -65,8 +65,9 @@ HIGH_ONLY_PERSON_LIMIT = 7
 HIGH_ONLY_RECENT_DAYS = 1
 
 # 用户明确说很喜欢、不想被ai_tier/anchor_tier的判断结果筛掉的人：每条都写digest_summary，且不受
-# "只有high档才永久归档"/"medium档只在7天窗口展示"这两条规则限制，全部永久展示，没判到medium的
-# 在锚点track保底显示成medium(不覆盖数据库里的真实判断结果)。
+# "只有high档才永久归档"/"medium档只在7天窗口展示"这两条规则限制，全部永久展示。锚点track一律
+# 展示成high(2026-10-23用户说"Teo和craig的所有内容默认为高优先级")，原先是没判到medium的保底成medium。
+# 只动展示层，不覆盖数据库里的真实判断结果。
 #   2026-08-16 起先只放行Craig Mod的Ridgeline newsletter，靠标题前缀"[RIDGELINE]"识别。
 #   2026-10-23 改成按人放行：加Teo Crawford(摄影vlog，三个track都不沾，不放行就一直判low不露面)，
 #     用户原话"和craig有点像，对我的意义""我喜欢他的视频，可以不做过滤"；同时说"craig mod也可以

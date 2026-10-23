@@ -131,7 +131,7 @@ class TestXHighOnlyPersons(unittest.TestCase):
 
 
 class TestAlwaysArchivePersons(unittest.TestCase):
-    """ALWAYS_ARCHIVE_PERSONS里的人：三个track全判low也照样展示，锚点保底medium。"""
+    """ALWAYS_ARCHIVE_PERSONS里的人：三个track全判low也照样展示，锚点一律展示成high。"""
 
     def test_low_item_still_shows_as_anchor_medium(self):
         import sqlite3, json, tempfile
@@ -165,5 +165,38 @@ class TestAlwaysArchivePersons(unittest.TestCase):
                 export_recent.DB_PATH, export_recent.OUT_DIR = orig_db, orig_out
 
         self.assertEqual([i["person"] for i in items], ["Teo Crawford"], "名单外的人判low照旧不展示")
-        self.assertEqual(items[0]["tracks"], [{"track": "anchor", "tier": "medium",
-                                               "reason": "Teo Crawford，用户明确要求不分tier展示"}])
+        self.assertEqual(items[0]["tracks"], [{"track": "anchor", "tier": "high",
+                                               "reason": "Teo Crawford，用户要求默认高优先级"}])
+
+    def test_existing_tracks_kept_and_anchor_raised(self):
+        import sqlite3, json, tempfile
+        from datetime import datetime, timezone
+        import fetch, export_recent
+
+        with tempfile.TemporaryDirectory() as tmp:
+            db = Path(tmp) / "t.db"
+            conn = sqlite3.connect(db)
+            fetch.init_db(conn)
+            now = datetime.now(timezone.utc).isoformat()
+            conn.execute(
+                "INSERT INTO items (guid, person, source_name, source_type, title, link,"
+                " published, summary, has_full_text, first_seen_at, ai_tier, ai_reason, anchor_tier,"
+                " anchor_reason, eval_tier, digest_summary, ranked_at)"
+                " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                ("craig", "Craig Mod", "s", "blog", "[RODEN] x", "https://x/craig",
+                 now, "s", 1, now, "medium", "a", "medium", "b", "low", "摘要", now),
+            )
+            conn.commit()
+            conn.close()
+
+            orig_db, orig_out = export_recent.DB_PATH, export_recent.OUT_DIR
+            export_recent.DB_PATH = str(db)
+            export_recent.OUT_DIR = Path(tmp) / "out"
+            try:
+                export_recent.export(pipeline_run=False)
+                items = json.loads((Path(tmp) / "out" / "recent.json").read_text(encoding="utf-8"))["items"]
+            finally:
+                export_recent.DB_PATH, export_recent.OUT_DIR = orig_db, orig_out
+
+        self.assertEqual([(t["track"], t["tier"]) for t in items[0]["tracks"]],
+                         [("ai", "medium"), ("anchor", "high")], "ai照真实判断，锚点抬成high且排在ai后面")
