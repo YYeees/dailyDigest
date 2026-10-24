@@ -74,6 +74,23 @@
       "is_new": false
     },
     {
+      "person": "Greg Isenberg",
+      "title": "OpenAI DevDay: Dots, Agents & $100B Opportunities",
+      "link": "https://www.youtube.com/watch?v=Y_RevX5yMq8",
+      "date": "2026-09-29",
+      "first_seen": "2026-10-24T00:15:21.920803+00:00",
+      "source_type": "youtube",
+      "summary": "Greg Isenberg看完了Sam Altman在OpenAI DevDay 2026上将近一小时的演讲，从二十多项发布里挑出他认为最可能带来大机会的三四项来讲，包括个人agent平台Dots、新出的Decisions API，以及带电脑操作能力的Agents API。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "完整梳理了OpenAI DevDay二十多项发布里最重要的几个，包括个人agent平台Dots、Decisions API、带电脑操作能力的Agents API，讲清楚了为什么这几个值得关注"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "OpenAI",
       "title": "Introducing GPT-6.1 Sol",
       "link": "https://openai.com/index/introducing-gpt-6-1-sol",
@@ -88,7 +105,7 @@
           "reason": "明确的性价比选型信息(接近旗舰智能/五分之一价格),直接影响模型选型决策(WebFetch 403仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -385,6 +402,23 @@
       "is_new": false
     },
     {
+      "person": "Teo Crawford",
+      "title": "My most used camera settings for film photography.",
+      "link": "https://www.youtube.com/watch?v=njfVX4ROVBw",
+      "date": "2026-09-24",
+      "first_seen": "2026-10-24T00:15:21.835889+00:00",
+      "source_type": "youtube",
+      "summary": "Teo Crawford分享了他拍胶片时最常用的相机设置，是一期偏技巧分享的视频，适合对胶片摄影感兴趣的人参考。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "摄影技巧，不触及锚点三根主干"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] Meta Connect 2026: Muse glasses, voice, video, and Charm",
       "link": "https://www.latent.space/p/ainews-meta-connect-2026-muse-glasses",
@@ -416,7 +450,7 @@
           "reason": "新颖的agent行为实验,数据扎实(模型选择影响大于指令/61%偏好匹配率),讲清楚是什么为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -484,7 +518,7 @@
           "reason": "重大前沿能力展示(自主发现新酶系统),讲清楚过程和意义,有专家背书"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -557,7 +591,7 @@
           "reason": "开发者直接可用的技术改进(缓存命中率/诊断/断点),直接影响日常怎么用AI工具(WebFetch 403仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -574,7 +608,7 @@
           "reason": "新模型发布,明确的能力/成本选型信息,直接影响日常用AI工具的选型决策(WebFetch 403仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -800,7 +834,7 @@
           "reason": "具体数据扎实展示前沿模型能力(30+模型4倍加速/十万token级建模),讲清楚是什么为什么重要且代码开源"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -866,6 +900,23 @@
           "track": "ai",
           "tier": "high",
           "reason": "重要的安全透明度机制(跟踪/调查/披露模型错位行为)+六份具体案例报告,讲清楚是什么为什么重要(WebFetch 403仅凭摘要判断)"
+        }
+      ],
+      "is_new": false
+    },
+    {
+      "person": "Teo Crawford",
+      "title": "Street Photography with a 10 year old MFT camera.",
+      "link": "https://www.youtube.com/watch?v=CVlwYOjGNUs",
+      "date": "2026-09-16",
+      "first_seen": "2026-10-24T00:15:21.835925+00:00",
+      "source_type": "youtube",
+      "summary": "Teo Crawford用一台十年前的M43相机去扫街，记录了一天的街头摄影过程，是器材加旅拍结合的日常向视频。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "街拍，不触及锚点三根主干"
         }
       ],
       "is_new": true
@@ -970,7 +1021,7 @@
           "reason": "深度分析近期agent失控事件,讲清楚是什么为什么重要,且含可操作的控制技术细节(沙箱/最小权限/自动审查模式),部分命中criterion②"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Maggie Appleton",
@@ -1252,7 +1303,7 @@
           "reason": "具体的科研实践案例(实验室用agent搜索抗菌分子),命中criterion③应用案例(WebFetch 403仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -1320,7 +1371,7 @@
           "reason": "面向开发者的新API能力,具体功能清单(全双工/自定义声音/电话接入),是独立于消费端语音功能的开发者向发布(WebFetch 403仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -1337,7 +1388,7 @@
           "reason": "面向开发者的重要新平台(托管云agent服务),讲清楚具体能力(编排/长会话/工具调用),直接影响怎么构建AI应用(WebFetch 403仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andy Matuschak",
@@ -1405,7 +1456,7 @@
           "reason": "重大AI安全事件的深度取证分析,具体披露了模型如何在明知/应知环境真实的情况下仍采取有害行动,讲清楚是什么为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -1473,7 +1524,7 @@
           "reason": "具体的科研实践案例(MIT研究者用agent自主跑量子实验/校准qubit),命中criterion③应用案例(WebFetch 403仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -1551,7 +1602,7 @@
           "reason": "AI在千禧年大奖难题上的重大突破尝试,讲清楚是什么为什么重要(WebFetch 403仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -1653,7 +1704,7 @@
           "reason": "内部真实数据展示coding agent如何加速AI研究本身,是具体的趋势/实操信息(WebFetch 403仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -1738,7 +1789,7 @@
           "reason": "重大AI能力里程碑,讲清楚是什么为什么重要,数据具体(11天/1300万行Lean/2.95万定理)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -1789,7 +1840,7 @@
           "reason": "新一代旗舰模型正式发布,摘要讲清楚核心卖点(computer use/编程/网络安全/科学能力全面领先),讲清楚是什么为什么重要(WebFetch 403仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",

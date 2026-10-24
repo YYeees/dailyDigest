@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "person": "Teo Crawford",
+      "title": "Film photography in the beautiful Austrian alps.",
+      "link": "https://www.youtube.com/watch?v=YxbBs5ERUgQ",
+      "date": "2026-08-31",
+      "first_seen": "2026-10-24T00:15:21.835936+00:00",
+      "source_type": "youtube",
+      "summary": "Teo Crawford带你去奥地利阿尔卑斯山拍胶片，记录了一个夏日里的山间胶片摄影过程，偏风光纪实。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "旅拍，不触及锚点三根主干"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Teo Crawford",
+      "title": "The simple habit to become a better photographer.",
+      "link": "https://www.youtube.com/watch?v=WEwg9gL9oGo",
+      "date": "2026-08-31",
+      "first_seen": "2026-10-24T00:15:21.835946+00:00",
+      "source_type": "youtube",
+      "summary": "Teo Crawford聊了一个他认为能让摄影变好的简单习惯，是一期比较随性的闲聊分享，没有具体操作步骤。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "闲聊性质，不触及锚点三根主干"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Ethan Mollick",
       "title": "Agency and Agents",
       "link": "https://www.oneusefulthing.org/p/agency-and-agents",
@@ -37,7 +71,7 @@
           "reason": "重大AI安全事件的后续披露,讲清楚具体技术细节和行业影响(训练环境奖励作弊与错位行为的关联实验),是什么为什么重要都很清楚"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -229,7 +263,7 @@
           "reason": "全新技术标准,讲清楚机制(驱动/原语/MCP)和真实落地案例(多家实验室/厂商具体数据),讲清楚是什么为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Jason Fried",
@@ -297,7 +331,7 @@
           "reason": "基于25万条真实对话的实证研究,揭示了与AI协作的真实模式(高风险任务占比/摩擦的生产性价值),直接影响对如何与AI协作的认知"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -519,6 +553,23 @@
       "is_new": false
     },
     {
+      "person": "Teo Crawford",
+      "title": "My simple camera setup for cinematic videos.",
+      "link": "https://www.youtube.com/watch?v=bvJZHwAgSbA",
+      "date": "2026-08-20",
+      "first_seen": "2026-10-24T00:15:21.835956+00:00",
+      "source_type": "youtube",
+      "summary": "Teo Crawford介绍了他目前拍视频用的简化器材配置，偏装备清单性质，没有涉及拍摄技法的详细讲解。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "器材清单，不触及锚点三根主干"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Andrew Huberman",
       "title": "Essentials: How to Access Your Creativity | Rick Rubin",
       "link": "https://www.youtube.com/watch?v=QP8Kpf1UQwM",
@@ -640,7 +691,7 @@
           "reason": "具体数据扎实展示前沿模型能力边界(蛋白质结合体命中率/化学分析耗时对比),讲清楚是什么为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -735,7 +786,7 @@
           "reason": "直接面向开发者的选型/应用指南(模型选择策略+Responses API能力),命中criterion③(WebFetch 403仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -752,7 +803,7 @@
           "reason": "具体可用的新API服务层级,给出明确性能数字(14倍速/750 tokens每秒),直接影响开发者怎么选型用API(WebFetch 403仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -769,7 +820,7 @@
           "reason": "前沿研究,扎实揭示多agent系统协作中的具体失败模式(趋同/合谋/火并),讲清楚是什么为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Antithesis",
@@ -896,6 +947,40 @@
       "is_new": false
     },
     {
+      "person": "Anthropic",
+      "title": "Claude has improved on a longstanding lower bound for the fraction of zeros of the Riemann zeta function that satisfy the Riemann hypothesis",
+      "link": "https://www.anthropic.com/research/riemann-zeta",
+      "date": "2026-08-10",
+      "first_seen": "2026-10-24T00:15:33.773156+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic一个未发布的研究版Claude在尝试证明黎曼猜想时没有成功，却意外推进了一个相关的数学常数，把黎曼zeta函数的零点落在猜想所说那条线上的比例下界，从41.6%提到了67.2%。两位数学家验证了它的证明，Claude还给出了一份可以被机器核查的正式证明。这是AI数学研究能力加速进步的又一个例子。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "未发布的研究版Claude把黎曼zeta函数零点落在临界线上的比例下界从41.6%提到67.2%，讲清楚了方法和意义，是扎实的前沿研究进展"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Teo Crawford",
+      "title": "Shooting with a 23yr old DSLR.",
+      "link": "https://www.youtube.com/watch?v=B1u8YXWgS8I",
+      "date": "2026-08-09",
+      "first_seen": "2026-10-24T00:15:21.835966+00:00",
+      "source_type": "youtube",
+      "summary": "Teo Crawford带着一台23年前的老款DSLR去山里拍摄，记录老相机在今天还能拍出什么效果，是一期器材体验向的旅拍视频。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "旅拍，不触及锚点三根主干"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
       "link": "https://simonwillison.net/2026/Aug/8/auto-mode/",
@@ -961,7 +1046,7 @@
           "reason": "提出'shadow evaluation'方法论来评估agent能力,是教怎么测而非报分数,方法论设计扎实可复现"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -1012,7 +1097,7 @@
           "reason": "工程深度文章,有具体技术细节(turnless语音模型/低延迟架构),对工程师有参考价值(WebFetch 403仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrej Karpathy",
@@ -1046,7 +1131,7 @@
           "reason": "具体展示AI在数学/理论计算机科学十个硬核问题上的进展案例(几何/密码学/复杂度理论),讲清楚是什么为什么重要(WebFetch 403仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     }
   ],
   "github_track": [

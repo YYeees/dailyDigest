@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "person": "Teo Crawford",
+      "title": "Why buy a camera when you have a phone?",
+      "link": "https://www.youtube.com/watch?v=CPOvJ8uqCgU",
+      "date": "2026-07-31",
+      "first_seen": "2026-10-24T00:15:21.835976+00:00",
+      "source_type": "youtube",
+      "summary": "Teo Crawford聊了聊为什么专业相机依然值得买，而不是只用手机拍照，是一期偏观点的闲聊视频，没有具体器材测评数据。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "摄影闲聊，不触及锚点三根主干"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Martin Fowler",
       "title": "The Conductor Developer",
       "link": "https://martinfowler.com/rachels-ramblings/conductor-developer.html",
@@ -105,7 +122,7 @@
           "reason": "直接可操作的API配置技巧(保留推理痕迹+启用压缩),讲清楚原理和效果(WebFetch 403仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -122,7 +139,7 @@
           "reason": "面向科研/工程场景的真实应用案例(field report),讲清楚科学家如何用coding agent加速基因组学等领域研究(WebFetch 403仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -208,6 +225,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Teo Crawford",
+      "title": "How I made a commercial for GoPro.",
+      "link": "https://www.youtube.com/watch?v=XfOGmdA2lUM",
+      "date": "2026-07-23",
+      "first_seen": "2026-10-24T00:15:21.835986+00:00",
+      "source_type": "youtube",
+      "summary": "Teo Crawford分享了他给GoPro拍一支短广告的完整过程，从策划到成片，顺便带了一段摩托车题材的素材。偏幕后花絮和拍摄思路，没有技术教程细节。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "拍摄花絮，不触及锚点三根主干"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Ethan Mollick",
@@ -421,7 +455,7 @@
           "reason": "新发布的ChatGPT Work agent有具体能力描述(跨应用跨文件操作/持续数小时/目标直接执行成品),讲清楚是什么为什么重要(WebFetch 403,仅凭摘要判断)"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -438,7 +472,7 @@
           "reason": "前沿模型新发布,摘要讲清楚核心卖点(每token更高智能密度/性价比提升/按需更大算力),WebFetch 403仅凭摘要判断"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -455,7 +489,7 @@
           "reason": "直接命中'自动化评测靠不靠谱':指出SWE-Bench Pro这个热门coding基准存在可靠性和准确性问题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -526,6 +560,23 @@
           "track": "anchor",
           "tier": "high",
           "reason": "直接命中'一手不二手'母题(去餐厅吃饭而非看菜单/试穿而非看图)与'认知系统不能外包'，是作者本人一手反思"
+        }
+      ],
+      "is_new": false
+    },
+    {
+      "person": "Teo Crawford",
+      "title": "2 hours of Japan Slice of Life. | Sony A7IV",
+      "link": "https://www.youtube.com/watch?v=mQZVH05Xzdw",
+      "date": "2026-07-03",
+      "first_seen": "2026-10-24T00:15:21.835996+00:00",
+      "source_type": "youtube",
+      "summary": "这是Teo Crawford这季日本旅拍视频的收尾，用Sony A7IV记录了多段日本街头与自然风光的慢生活画面。全片没有解说教程，就是两小时沉浸式的观光短片。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "旅拍vlog，不触及锚点三根主干"
         }
       ],
       "is_new": true

@@ -2,6 +2,17 @@
   "items": [
     {
       "person": "Boris Cherny",
+      "title": "RT @ClaudeDevs: We’re adding support for MCP Tasks and Elicitations in Claude.  Tasks let Claude giv…",
+      "link": "https://x.com/bcherny/status/2113781429436092466",
+      "date": "2026-10-23",
+      "first_seen": "2026-10-24T00:15:41.906135+00:00",
+      "source_type": "x",
+      "summary": "Claude要支持MCP协议里的Tasks和Elicitations了，Tasks能让插件把深度研究这类耗时久的任务交给Claude在后台跑完再回报结果。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
       "title": "RT @claudeai: We’re opening a research preview of Claude Duet, a new app where Claude works as a pro…",
       "link": "https://x.com/bcherny/status/2113060750252274088",
       "date": "2026-10-22",
@@ -9,7 +20,7 @@
       "source_type": "x",
       "summary": "Claude官方开放了新应用Claude Duet的试用，Claude会像主动干活的助手一样，带着准备好的东西来找你。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -20,7 +31,7 @@
       "source_type": "x",
       "summary": "Peter Steinberger让一个agent自己跑了两周，把OpenClaw的网页前端整个换成了另一个框架，他只是隔天看一眼进度。结果页面更小，反应也更快。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -31,18 +42,7 @@
       "source_type": "x",
       "summary": "Peter Steinberger把项目换到了tsrs，一个TypeScript编译器的替代品，速度快了约5倍。他感慨大厂一个团队花大工夫重写的东西，现在用agent几周就能做得更好。",
       "tier": "high",
-      "is_new": true
-    },
-    {
-      "person": "Amanda Askell",
-      "title": "the rocket car is cool and i want one",
-      "link": "https://x.com/AmandaAskell/status/2111167134533611801",
-      "date": "2026-10-16",
-      "first_seen": "2026-10-23T02:43:22.460045+00:00",
-      "source_type": "x",
-      "summary": "Amanda Askell转发评论说，火箭车很酷，她也想要一台。",
-      "tier": "low",
-      "is_new": true
+      "is_new": false
     }
   ]
 }
