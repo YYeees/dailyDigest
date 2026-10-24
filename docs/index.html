@@ -61,6 +61,10 @@
   .filter-on a { margin-left: auto; cursor: pointer; color: var(--soft); border-bottom: 1px solid var(--rule); }
   .filter-on a:hover { color: var(--ink); }
   .filter-on[hidden] { display: none; }
+  /* 来源名(公司/作者)也能点来筛选，跟分类标签同一套：悬停出下划线，选中变强调色 */
+  [data-who] { cursor: pointer; border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
+  [data-who]:hover { color: var(--ink); border-bottom-color: var(--faint); }
+  [data-who].on { color: var(--accent); }
 
   /* ---- 按天分组；日期吸顶，滚动时当天的日期停在顶上，滚到下一天被顶掉 ---- */
   .day { margin-top: 56px; }
@@ -327,6 +331,7 @@ document.addEventListener('click', e => {
 // ---- 内容列表 ----
 let RECENT = [];
 let FILTER = '';
+let WHO = '';  // 按来源筛，跟FILTER互斥：选了一个就清掉另一个
 let SEQ = 0;  // 浮现动画的先后，每次重排从0数起，超过12条的一起出来，免得后面等太久
 const delay = () => `style="--d:${Math.min(SEQ++, 12)}"`;
 const GO = '<span class="go" aria-hidden="true">↗</span>';
@@ -340,6 +345,10 @@ function tags(i) {
   return i.tracks.map(t => `<span class="tg${t.track === FILTER ? ' on' : ''}" data-track="${t.track}"`
     + ` title="只看${TRACK_LABEL[t.track]}">${TRACK_LABEL[t.track]}</span>`).join('');
 }
+function who(i) {
+  return `<span class="who${i.person === WHO ? ' on' : ''}" data-who="${esc(i.person)}" title="只看${esc(i.person)}">${esc(i.person)}</span>`;
+}
+const match = i => (!FILTER || i.tracks.some(t => t.track === FILTER)) && (!WHO || i.person === WHO);
 const summaryOf = i => i.summary || (i.tracks[0] && i.tracks[0].reason) || '';
 
 function dayHead(iso, n) {
@@ -353,7 +362,7 @@ function dayHead(iso, n) {
 }
 function leadHTML(i) {
   return `<div class="lead" data-link="${esc(i.link)}" ${delay()}>
-    <div class="src">${i.is_new ? '<span class="new" title="刚更新"></span>' : ''}<span class="who">${esc(i.person)}</span>
+    <div class="src">${i.is_new ? '<span class="new" title="刚更新"></span>' : ''}${who(i)}
       <span class="tracks">${noteBtn(i)}${tags(i)}</span></div>
     <h3><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}${GO}</a></h3>
     <p>${esc(summaryOf(i))}</p></div>`;
@@ -362,7 +371,7 @@ function briefHTML(i) {
   return `<div class="brief" ${delay()}>
     <div class="row">
       <span class="t"><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}${GO}</a></span>
-      <span class="who">${esc(i.person)}</span>
+      ${who(i)}
     </div>
     <div class="more"><div><p>${esc(summaryOf(i))}</p><div class="tgs">${tags(i)}${noteBtn(i)}</div></div></div>
   </div>`;
@@ -375,7 +384,7 @@ function listHTML(list) {
 }
 function renderDays() {
   SEQ = 0;
-  const items = RECENT.filter(i => !FILTER || i.tracks.some(t => t.track === FILTER));
+  const items = RECENT.filter(match);
   const byDay = {};
   items.forEach(i => (byDay[i.date] ||= []).push(i));
   document.getElementById('days').innerHTML = Object.keys(byDay).sort().reverse()
@@ -384,23 +393,26 @@ function renderDays() {
 }
 function renderFilter() {
   const el = document.getElementById('filterOn');
-  el.hidden = !FILTER;
-  if (!FILTER) return;
-  const n = RECENT.filter(i => i.tracks.some(t => t.track === FILTER)).length;
-  el.innerHTML = `<span>只看 <b>${TRACK_LABEL[FILTER]}</b>，最近七天 ${n} 篇</span><a data-clear>看全部</a>`;
+  el.hidden = !FILTER && !WHO;
+  if (el.hidden) return;
+  const name = FILTER ? TRACK_LABEL[FILTER] : esc(WHO);
+  el.innerHTML = `<span>只看 <b>${name}</b>，最近七天 ${RECENT.filter(match).length} 篇</span><a data-clear>看全部</a>`;
 }
-function setFilter(k) {
+function setFilter(k, w = '') {
   FILTER = k;
+  WHO = w;
   renderFilter();
   renderDays();
   document.getElementById('feed').scrollIntoView({ behavior: 'smooth' });
 }
 
-// 点击分发：分类标签→筛选；头条空白处→打开原文；简讯/侧栏空白处→展开收起。
+// 点击分发：分类标签、来源名→筛选；头条空白处→打开原文；简讯/侧栏空白处→展开收起。
 // 链接(标题、记一笔)交给浏览器默认行为，不在这里处理。
 document.addEventListener('click', e => {
   const tg = e.target.closest('[data-track]');
   if (tg) { setFilter(tg.dataset.track === FILTER ? '' : tg.dataset.track); return; }
+  const w = e.target.closest('[data-who]');
+  if (w) { setFilter('', w.dataset.who === WHO ? '' : w.dataset.who); return; }
   if (e.target.closest('[data-clear]')) { setFilter(''); return; }
   if (e.target.closest('a')) return;
   const lead = e.target.closest('.lead');
