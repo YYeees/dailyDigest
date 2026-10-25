@@ -43,7 +43,7 @@ ALWAYS_DISPLAY_TYPES = {"x"}
 # 注意是在抓取阶段丢掉、不写进items表，所以也省掉了这些条目的摘要生成开销
 # (X走ALWAYS_SUMMARIZE_TYPES，每条都要写digest_summary)。代价是丢了就找不回来，
 # 哪天想重新收，last_tweets只能捞回最近一页。
-X_SKIP_RETWEETS = {"Peter Steinberger"}
+X_SKIP_RETWEETS = {"Peter Steinberger", "SpaceX Super Intelligence", "Grok Bot", "Cursor"}
 
 # 这些人的X内容收回到"只展示high档"(2026-10-23)，是ALWAYS_DISPLAY_TYPES的例外。
 # 用户说"内容太多，基本不咋看"：过去30天Boris 50条(high 11)、Peter 46条(high 2)，

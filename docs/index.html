@@ -192,7 +192,7 @@
   .empty { color: var(--faint); font-size: .95rem; padding: 14px 0; }
 
   /* ===== 动效 ===== */
-  /* 悬停：背后浮起一层淡底色(伪元素往左右多扩一点，文字不动)，标题旁滑出 ↗ */
+  /* 悬停：背后浮起一层淡底色(伪元素往左右多扩一点，文字不动) */
   .lead, .brief { position: relative; isolation: isolate; }
   .lead::before, .brief::before {
     content: ""; position: absolute; inset: 4px -16px; z-index: -1; border-radius: 12px;
@@ -200,11 +200,6 @@
   }
   @media (max-width: 760px) { .lead::before, .brief::before { inset: 4px -10px; } }
   @media (hover: hover) { .lead:hover::before, .brief:not(.open):hover::before { opacity: 1; } }
-  .go {
-    display: inline-block; margin-left: 6px; font-weight: 400; color: var(--accent);
-    opacity: 0; transform: translate(-4px, 2px); transition: opacity .2s, transform .2s;
-  }
-  .lead:hover .go, .brief .t a:hover .go { opacity: 1; transform: translate(0, 0); }
   /* 打开页面、切换分类时，一条接一条往上浮出来 */
   @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
   .lead, .brief, .day-head { animation: rise .45s ease backwards; animation-delay: calc(var(--d, 0) * 40ms); }
@@ -334,7 +329,6 @@ let FILTER = '';
 let WHO = '';  // 按来源筛，跟FILTER互斥：选了一个就清掉另一个
 let SEQ = 0;  // 浮现动画的先后，每次重排从0数起，超过12条的一起出来，免得后面等太久
 const delay = () => `style="--d:${Math.min(SEQ++, 12)}"`;
-const GO = '<span class="go" aria-hidden="true">↗</span>';
 
 // 选了某个分类时按那个分类自己的tier分头条/简讯，没选时任一分类high就算头条
 function best(i) {
@@ -364,13 +358,13 @@ function leadHTML(i) {
   return `<div class="lead" data-link="${esc(i.link)}" ${delay()}>
     <div class="src">${i.is_new ? '<span class="new" title="刚更新"></span>' : ''}${who(i)}
       <span class="tracks">${noteBtn(i)}${tags(i)}</span></div>
-    <h3><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}${GO}</a></h3>
+    <h3><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></h3>
     <p>${esc(summaryOf(i))}</p></div>`;
 }
 function briefHTML(i) {
   return `<div class="brief" ${delay()}>
     <div class="row">
-      <span class="t"><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}${GO}</a></span>
+      <span class="t"><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></span>
       ${who(i)}
     </div>
     <div class="more"><div><p>${esc(summaryOf(i))}</p><div class="tgs">${tags(i)}${noteBtn(i)}</div></div></div>

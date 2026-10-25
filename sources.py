@@ -85,6 +85,9 @@ SOURCES = [
      "base_url": "https://www.anthropic.com",
      "listing_urls": ["https://www.anthropic.com/news", "https://www.anthropic.com/research"],
      "article_path_pattern": r"^/(news|research)/(?!team/)[A-Za-z0-9-]+$"},
+
+    {"person": "Google", "type": "blog", "name": "Google DeepMind (官方博客)",
+     "url": "https://deepmind.google/blog/rss.xml"},
 ]
 # 2026-10-23加Teo Crawford(YouTube @TeoCrawford)：胶片/街拍摄影和日本慢生活vlog，约两周一条。
 #   用户原话"和craig有点像，对我的意义""我喜欢他的视频，可以不做过滤"，所以进了
@@ -121,6 +124,16 @@ SOURCES = [
 #     请求，换来的是不用维护分类名单。官网改版导致一个链接都解析不出来时fetch.py会报FAIL。
 #     查过没用的：GitHub上Olshansk/rss-feeds这类第三方爬虫生成的feed——内容虽是官方的，但
 #     链路在别人手里，违反文件头"一手渠道"的规矩。
+# 2026-10-25加Google，用户要把大厂单独放一块"观摩巨头之间的竞争"，点名要Google和xAI。
+#   Google  走deepmind.google/blog/rss.xml，近90天28条，Gemini新模型发布都在这里。混着森林
+#     测绘、抗菌肽这类科学稿，交给ai_tier去判。feed不带正文(summary只有一两百字符)，精判要
+#     WebFetch，跟OpenAI一样。person记成"Google"不记"Google DeepMind"，跟OpenAI/Anthropic
+#     一样按公司名，前端好归成一组。
+#     看过没用的：blog.google/technology/ai/rss(20条全是产品公关和地区新闻)、
+#     research.google/blog/rss(偏医疗地理等应用研究，跟前沿模型竞争关系不大)。
+#   xAI  没加，找不到能稳定抓的一手渠道：x.ai全站对脚本返回403；X上@xai已经停更，简介写
+#     "Now at @SpaceXAI"，但TwitterAPI.io查不到这个账号；@grok是产品号，近一个月全是转发
+#     @imagine的宣传视频。docs.x.ai/docs/release-notes能打开，但只有API变更。
 # 2026-10-23换了一轮方向：撤掉软件测试和UX两类信源，改成围着Hamel Husain的AI eval圈子加人。
 # 用户原话"去掉之前里面关于eval的信息源，去掉关于ux交互的信息源"，这里的"eval"指的是
 # 2026-09-12为测试方向加的那批(见下面的旧记录)，不是Hamel那种LLM评测——Hamel本人留着。
@@ -231,7 +244,21 @@ X_SOURCES = [
     {"person": "Andrej Karpathy", "x_username": "karpathy"},
     {"person": "Boris Cherny", "x_username": "bcherny"},
     {"person": "Peter Steinberger", "x_username": "steipete"},
+    {"person": "SpaceX Super Intelligence", "x_username": "SpaceXSI"},
+    {"person": "Grok Bot", "x_username": "bot"},
+    {"person": "Cursor", "x_username": "cursor_ai"},
 ]
+# 2026-10-25加xAI一家三个号，用户要单独看大厂之间的竞争，点名要xAI。x.ai全站对脚本403、没有RSS，只能走X。
+#   用户原话"xai收购了cursor，spacex和他们也是一个大家庭""grok bot还蛮火的"。
+#   身份都查TwitterAPI.io的user/info核实过，三个都是蓝标Business认证：
+#   - @SpaceXSI  name="SpaceX Super Intelligence"，xAI并进SpaceX后的官方号，208万粉。旧号@xai
+#     简介写"Now at @SpaceXAI"，但那个handle查不到，实际在发的是这个(Grok 4.7、Grok Voice 3.0
+#     都是它发的)。近三周20条里16条原创。
+#   - @bot  name="Grok Bot"，46万粉，几乎每天一条功能更新，全是原创。
+#   - @cursor_ai  name="Cursor"，49万粉，"Cursor is now part of The X Subscription"是它自己发的。
+#   看过没加：@grok(近一个月几乎全是转发@imagine的宣传视频)、@imagine(Grok Imagine，宣传片为主)、
+#   @elonmusk(大半是政治和转发)。
+#   cursor.com自己的blog/changelog也没接：跟这边同一批发布，只跟一个渠道。
 # 2026-09-12撤掉Ray Dalio(@RayDalio)和Andy Matuschak(@andy_matuschak)的X源——用户说
 # "我发现我不咋点开"，是读者行为的反馈，不是这两个账号抓取有问题。
 # 两点注意：
