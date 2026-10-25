@@ -9,7 +9,7 @@
       "source_type": "x",
       "summary": "Claude要支持MCP协议里的Tasks和Elicitations了，Tasks能让插件把深度研究这类耗时久的任务交给Claude在后台跑完再回报结果。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
