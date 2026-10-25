@@ -151,6 +151,15 @@
   /* X和仓库的说明：收起时排满两行、行尾省略号，点开后同一段接着往下排 */
   .mini .txt { color: var(--soft); text-align: justify; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
   .panel-x .txt { color: var(--dark-soft); }
+  /* X面板只露前四条，其余在面板里滚动(高度由fitX()按第四条的底边算，条目高矮不一) */
+  /* 滚动条只在滚动时出现，停下来一会儿就藏起来(用户要求)：靠JS在滚动时挂上.scrolling。
+     只写::-webkit-scrollbar、不写标准的scrollbar-width：Chrome见到标准属性就改用系统滚动条，
+     这里的显隐控制就不起作用了 */
+  #x { position: relative; overflow-y: auto; margin-right: -12px; padding-right: 12px; }
+  #x::-webkit-scrollbar { width: 4px; }
+  #x::-webkit-scrollbar-track, #x::-webkit-scrollbar-thumb { background: transparent; border-radius: 2px; }
+  #x.scrolling::-webkit-scrollbar-track { background: #2A2826; }
+  #x.scrolling::-webkit-scrollbar-thumb { background: #6B665E; }
   .mini.open .txt { display: block; }
   .mini.more { cursor: pointer; }
   .repo .name { font-size: 15px; line-height: 1.4; font-weight: 600; word-break: break-all; }
@@ -434,6 +443,24 @@ function markFoldable() {
 }
 addEventListener('resize', markFoldable);
 
+const X_VISIBLE = 4;
+function fitX() {
+  const box = document.getElementById('x');
+  const minis = box.querySelectorAll('.mini');
+  const last = minis[X_VISIBLE - 1];
+  box.style.maxHeight = minis.length > X_VISIBLE ? `${last.offsetTop + last.offsetHeight}px` : '';
+}
+addEventListener('resize', fitX);
+{
+  const box = document.getElementById('x');
+  let idle;
+  box.addEventListener('scroll', () => {
+    box.classList.add('scrolling');
+    clearTimeout(idle);
+    idle = setTimeout(() => box.classList.remove('scrolling'), 800);
+  }, { passive: true });
+}
+
 async function loadX() {
   const data = await (await fetch('data/x_recent.json')).json();
   document.getElementById('x').innerHTML = data.items.length
@@ -442,6 +469,7 @@ async function loadX() {
         <div class="txt">${esc(i.summary || i.title)}</div></div>`).join('')
     : '<div class="empty">最近7天没有新动态</div>';
   markFoldable();
+  fitX();
 }
 async function loadTrending() {
   const data = await (await fetch('data/trending.json')).json();
