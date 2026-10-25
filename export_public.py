@@ -19,6 +19,8 @@
   个人动态,展示规则跟"只公开AI"直接冲突。
 - GitHub Trending照常放:那份导出本来就只有ai_related=1的仓库。
 - 运行日志(费用/token)照常放:run_log.json里只有花费和用量,没有任何内容或prompt。
+- **月度归档不公开**(2026-10-25定):digest.html、digest_*.json、months.json都不导出,首页
+  的入口链接也在导出时摘掉。不靠前端藏:文件根本不在公开仓里,直接敲URL也只会404。
 
 字段走**白名单**不走黑名单(见PUBLIC_ITEM_FIELDS):以后往items表/导出里加新字段,默认是
 不出去的,不会因为忘了在这里补一条排除规则就漏出去。
@@ -46,13 +48,15 @@ PUBLIC_ITEM_FIELDS = ("person", "title", "link", "date", "source_type", "summary
 # 原样搬运的数据文件:内容本身已经满足公开边界,不需要过滤。
 COPY_AS_IS = ("trending.json", "run_log.json")
 
-HTML_PAGES = ("index.html", "digest.html")
+HTML_PAGES = ("index.html",)
 
 # 光靠JS在运行时删掉锚点筛选器是不够的:HTML源码里还留着"锚点"两个字,查看源代码就能看见
 # 有这么个隐藏分类。这里在导出时就从文本里摘干净。每条都是精确匹配、命中即换,配合下面
 # 那句"产物里不许再出现锚点"的断言——哪天前端改了措辞导致这里匹配不上,跑批会当场炸,
 # 而不是悄悄把字眼发出去。
 HTML_STRIPS = (
+    # 月度归档不公开,入口一起摘掉(配合下面"产物里不许再出现digest.html"的断言)
+    ('    <nav><a href="digest.html">月度归档</a></nav>\n', ""),
     ('        <option value="anchor">锚点</option>\n', ""),
     ('        <option value="eval">Eval</option>\n', ""),
     # eval track的样式也摘掉:CSS本身泄露不了内容,但留着等于告诉读源码的人"还有第三条track"
@@ -124,7 +128,7 @@ def audit(paths):
 
 def export():
     if OUT.exists():
-        shutil.rmtree(OUT)   # 全量重建:上一次导出的残留(比如某个月份被清空了)不该留在公开站
+        shutil.rmtree(OUT)   # 全量重建:上一次导出的残留(比如下线了的月度归档)不该留在公开站
     OUT_DATA.mkdir(parents=True)
 
     written = []
@@ -134,25 +138,6 @@ def export():
     write_json(OUT_DATA / "recent.json", {"items": items})
     written.append(OUT_DATA / "recent.json")
     print(f"[OK] recent.json — {len(items)}条 (私有站{len(recent['items'])}条)")
-
-    months = []
-    for src in sorted(DOCS_DATA.glob("digest_*.json")):
-        data = json.loads(src.read_text(encoding="utf-8"))
-        month_items = public_items(data.get("items", []))
-        github = data.get("github_track", [])
-        if not month_items and not github:
-            print(f"[跳过] {src.name} — 过滤后没有可公开的内容")
-            continue
-        dst = OUT_DATA / src.name
-        write_json(dst, {"items": month_items, "github_track": github})
-        written.append(dst)
-        months.append(src.stem.replace("digest_", ""))
-        print(f"[OK] {src.name} — {len(month_items)}条 (私有站{len(data.get('items', []))}条) github:{len(github)}个")
-
-    months.sort(reverse=True)
-    write_json(OUT_DATA / "months.json", {"months": months})
-    written.append(OUT_DATA / "months.json")
-    print(f"[OK] months.json — {months}")
 
     for name in COPY_AS_IS:
         shutil.copy2(DOCS_DATA / name, OUT_DATA / name)
@@ -174,13 +159,13 @@ def export():
         html = html.replace(SITE_CONFIG_MARKER, SITE_CONFIG_SCRIPT)
         for old_text, new_text in HTML_STRIPS:
             html = html.replace(old_text, new_text)
-        for residue in ("锚点", "eval"):
+        for residue in ("锚点", "eval", "digest.html"):
             if residue in html:
                 raise SystemExit(
                     f"[中止] docs/{name} 剥离后仍残留`{residue}`字样,HTML_STRIPS该更新了,不导出。"
                 )
         (OUT / name).write_text(html, encoding="utf-8")
-        print(f"[OK] {name} — 已注入公开站开关、剥掉锚点/eval字样")
+        print(f"[OK] {name} — 已注入公开站开关、剥掉锚点/eval字样和月度入口")
 
     # Jekyll会吃掉下划线开头的文件;这个站是纯静态产物,不需要它插手
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
