@@ -48,7 +48,7 @@ python3 scripts/rank_items.py pending --with-content
 - `body_source == "rss"` → **不要WebFetch**。初筛已经看过正文了，tier就是终值。任一track是`medium`/`high`时基于正文写一段`digest_summary`(最多三句话，写法和长度照`RANKING_CRITERIA.md`的「`digest_summary`怎么写」一节，不是摘录)。
 - `body_source == "fetch"` 且初筛任一track是`medium`或`high` → 用WebFetch工具抓一次`link`的全文，基于全文重新判断该track的tier(可以推翻初筛结果)，并写`digest_summary`。全文读完就丢，不要写入任何文件、不要存进结果JSON。
 - `body_source == "none"` 且初筛任一track是`medium`/`high` → 不追加抓取，基于已有的`summary`字段写一段轻提炼作为`digest_summary`。X的`summary`是英文推文原文，写成中文概要(1~2句，同样照「`digest_summary`怎么写」那节的规则)，不要照抄英文。
-- `always_summarize == true`(X，或`config.ALWAYS_ARCHIVE_PERSONS`里的人，目前是Craig Mod和Teo Crawford) → 不管三个track判成什么，都要写中文`digest_summary`。X是"7日内关注"页"X动态"板块不管tier全展示；名单里的人是用户明确说很喜欢、不想被判断结果筛掉，全部永久展示。这类如果`body_source`是`"fetch"`但初筛三个track都`low`，不用额外WebFetch全文，直接基于已有`summary`写轻提炼即可，跟`"none"`走同样的轻量路径。
+- `always_summarize == true`(X，或`config.ALWAYS_ARCHIVE_PERSONS`里的人，目前是Craig Mod、Teo Crawford和Dan Koe) → 不管三个track判成什么，都要写中文`digest_summary`。X是"7日内关注"页"X动态"板块不管tier全展示；名单里的人是用户明确说很喜欢、不想被判断结果筛掉，全部永久展示。这类如果`body_source`是`"fetch"`但初筛三个track都`low`，不用额外WebFetch全文，直接基于已有`summary`写轻提炼即可，跟`"none"`走同样的轻量路径。
 - 其余情况(三个track都`low`且`always_summarize == false`) → 维持low，`digest_summary`留空(null)。
 
 三个track判完后，再对照`RANKING_CRITERIA.md`最后的"内容排除"一节检查一遍——目前只对Peter Steinberger的X内容生效(宣发/广告，2026-09-12加；原来那条Ray Dalio的规则已随他的X源一起撤掉)，命中就在结果里加`excluded_reason`(一句话理由)，其余字段照常写，导出时会被过滤掉。

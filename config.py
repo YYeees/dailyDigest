@@ -72,7 +72,9 @@ HIGH_ONLY_RECENT_DAYS = 1
 #   2026-10-23 改成按人放行：加Teo Crawford(摄影vlog，三个track都不沾，不放行就一直判low不露面)，
 #     用户原话"和craig有点像，对我的意义""我喜欢他的视频，可以不做过滤"；同时说"craig mod也可以
 #     放到和teo crawford一起"，Craig整个feed(含Roden/Essays)都放行，标题前缀那条规则就删了。
-ALWAYS_ARCHIVE_PERSONS = {"Craig Mod", "Teo Crawford"}
+#   2026-10-25 加Dan Koe(newsletter future/proof)：写自我成长和一人公司，偶尔才讲AI，不放行多半判low；
+#     用户说"放进不过滤清单，优先级高"。
+ALWAYS_ARCHIVE_PERSONS = {"Craig Mod", "Teo Crawford", "Dan Koe"}
 
 # GitHub Trending展示数量上限(2026-08-15定案)：不用展示太多，只要综合最值得推荐的。
 TRENDING_DAILY_LIMIT = 6    # index.html"7日内关注"页Trending板块

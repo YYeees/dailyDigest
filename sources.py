@@ -29,6 +29,8 @@ SOURCES = [
 
     {"person": "Greg Isenberg", "type": "youtube", "name": "Greg Isenberg (YouTube)",
      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCPjNBjflYl0-HQtUvOx0Ibw"},
+    {"person": "Dan Koe", "type": "blog", "name": "Dan Koe (future/proof newsletter)",
+     "url": "https://letters.thedankoe.com/feed"},
 
     {"person": "Maggie Appleton", "type": "blog", "name": "Maggie Appleton",
      "url": "https://maggieappleton.com/rss.xml"},
@@ -93,6 +95,13 @@ SOURCES = [
 #   营销味重("Meta Muse Will Create 1,000 Millionaires")，但没进任何特殊名单，普通规则只展示
 #   medium/high，标题党多半判low自然滤掉。他的Startup Ideas Podcast和newsletter跟视频基本是
 #   同一批内容，只跟一个渠道。
+# 2026-10-25加Dan Koe，跟的是他的Substack newsletter future/proof(letters.thedankoe.com)，不是YouTube。
+#   身份：官网thedankoe.com首页直接链过去，Substack简介署名DAN KOE。
+#   用户要求不过滤、默认高优先级，进了config.ALWAYS_ARCHIVE_PERSONS。
+#   newsletter近90天8篇，feed带全文(1.8万到5万字符)，type记成blog让正文进精判。
+#   YouTube(@DanKoeTalks)近90天12条，但大半是Shorts、feed不带描述，长视频标题和newsletter
+#   基本是同一篇("You need to be delusional..."两边都有)，跟Greg Isenberg一样只跟一个渠道。
+#   thedankoe.com/letters/feed停在2025-08，是搬去Substack前的旧档，别接。
 # 同天加Matt Pocock，**跟的是github.com/mattpocock/skills的releases.atom，不是他的YouTube**：
 #   用户被"Skills for Real Engineers"(仓库简介)吸引，但担心信息太杂。YouTube 10-13到10-16几天就
 #   十来条短视频；releases从6月到10月一共7个版本，每个都带完整changelog正文(8000多字)，type记成
