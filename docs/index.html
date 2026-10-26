@@ -332,6 +332,48 @@ document.addEventListener('click', e => {
   }, 0);
 });
 
+// ---- 阅读记录：哪些点开了原文、哪些只看了摘要 ----
+// 发到 clicks/ 目录里的 Worker，存进 D1。点了没点要和"当时页面上有什么"对照着看，
+// 所以打开页面时先发一条 view，带上主列表的全部链接和顺序，后面才算得出点击率。
+// 公开站不发：别人的点击不是我们要的数据。
+const TRACK_URL = 'https://digest-clicks.yyeees.workers.dev';
+const PAGE_ID = Math.random().toString(36).slice(2, 10);   // 把同一次打开页面的事件串起来
+function track(ev) {
+  if (IS_PUBLIC) return;
+  // sendBeacon 在跳去原文、关标签页时也能发出去；text/plain 不触发 CORS 预检
+  try { navigator.sendBeacon(TRACK_URL, new Blob([JSON.stringify({ ...ev, page: PAGE_ID })], { type: 'text/plain' })); }
+  catch (e) { /* 记不上就算了，不能影响阅读 */ }
+}
+// 条目在主列表里的位置：第几天(0=最新一天)、当天第几条、头条还是简讯。分析位置偏差要用。
+function itemCtx(el) {
+  const card = el.closest('.lead, .brief');
+  if (!card) return null;
+  const day = card.closest('.day');
+  const days = [...document.querySelectorAll('#days .day')];
+  return {
+    day_idx: days.indexOf(day),
+    pos: [...day.querySelectorAll('.lead, .brief')].indexOf(card),
+    kind: card.classList.contains('lead') ? 'lead' : 'brief',
+  };
+}
+function itemMeta(link) {
+  const i = RECENT.find(x => x.link === link);
+  return i ? { person: i.person, date: i.date, tier: best(i) } : {};
+}
+function trackOpen(link, el, how) {
+  const ctx = itemCtx(el);
+  const area = ctx ? 'main' : el.closest('#x') ? 'x' : el.closest('#gh') ? 'gh' : 'other';
+  track({ type: 'click', link, area, how, filter: FILTER || WHO || '', ...ctx, ...(ctx ? itemMeta(link) : {}) });
+}
+// click 管左键(含 Cmd/Ctrl 点击在新标签打开)，auxclick 管中键。右键菜单里"在新标签页打开"收不到，只能漏掉。
+function onLinkPress(e) {
+  if (e.type === 'auxclick' && e.button !== 1) return;
+  const a = e.target.closest && e.target.closest('a[target="_blank"]');
+  if (a) trackOpen(a.getAttribute('href'), a, e.type === 'auxclick' || e.metaKey || e.ctrlKey ? 'newtab' : 'click');
+}
+document.addEventListener('click', onLinkPress);
+document.addEventListener('auxclick', onLinkPress);
+
 // ---- 内容列表 ----
 let RECENT = [];
 let FILTER = '';
@@ -419,9 +461,13 @@ document.addEventListener('click', e => {
   if (e.target.closest('[data-clear]')) { setFilter(''); return; }
   if (e.target.closest('a')) return;
   const lead = e.target.closest('.lead');
-  if (lead) { window.open(lead.dataset.link, '_blank', 'noopener'); return; }
+  if (lead) { trackOpen(lead.dataset.link, lead, 'card'); window.open(lead.dataset.link, '_blank', 'noopener'); return; }
   const fold = e.target.closest('.brief, .mini.more');
-  if (fold) fold.classList.toggle('open');
+  if (!fold) return;
+  fold.classList.toggle('open');
+  // 简讯的摘要默认收着，展开说明想看摘要；收起不记
+  const a = fold.classList.contains('brief') && fold.classList.contains('open') && fold.querySelector('a');
+  if (a) track({ type: 'expand', link: a.getAttribute('href'), filter: FILTER || WHO || '', ...itemCtx(a), ...itemMeta(a.getAttribute('href')) });
 });
 
 async function loadRecent() {
@@ -430,6 +476,8 @@ async function loadRecent() {
   const high = RECENT.filter(i => i.tracks.some(t => t.tier === 'high')).length;
   document.getElementById('lede').textContent = `过去七天 ${RECENT.length} 篇，值得细读的 ${high} 篇。`;
   renderDays();
+  track({ type: 'view', links: [...document.querySelectorAll('#days .lead, #days .brief')]
+    .map(c => c.dataset.link || c.querySelector('a').getAttribute('href')) });
 }
 
 // ---- 侧栏：X 和 GitHub ----

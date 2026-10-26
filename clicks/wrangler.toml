@@ -1,0 +1,8 @@
+name = "digest-clicks"
+main = "src/worker.js"
+compatibility_date = "2026-10-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "digest-clicks"
+database_id = "3be74339-bfb7-448d-93fd-19b546904cd0"
