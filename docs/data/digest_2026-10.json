@@ -1767,6 +1767,24 @@
       "stars_total": 286322
     },
     {
+      "full_name": "TauricResearch/TradingAgents",
+      "url": "https://github.com/TauricResearch/TradingAgents",
+      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "language": "Python",
+      "difficulty": "intermediate",
+      "recommend_reason": "模拟交易公司架构的多agent框架——分析师agent(基本面/情绪/新闻/技术面)、多空辩论agent、交易员/风控agent分层决策,支持多LLM厂商、SEC EDGAR数据、回测、Docker部署,配了arXiv论文且明确声明仅供研究不构成投资建议,是多agent系统设计的一个扎实样本。",
+      "stars_total": 114607
+    },
+    {
+      "full_name": "google-gemini/gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+      "language": "TypeScript",
+      "difficulty": "beginner",
+      "recommend_reason": "Google官方的Gemini终端agent CLI,支持代码理解/生成/调试、多模态输入(PDF/图片/草图生成应用)、MCP扩展、OAuth/API key/Vertex多种认证方式,10万+star、6500+commits,是主流大厂AI编程agent里维护最活跃的旗舰项目之一,跟Claude Code可以直接对照学习。",
+      "stars_total": 108382
+    },
+    {
       "full_name": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
       "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
@@ -1776,6 +1794,15 @@
       "stars_total": 99760
     },
     {
+      "full_name": "vllm-project/vllm",
+      "url": "https://github.com/vllm-project/vllm",
+      "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+      "language": "Python",
+      "difficulty": "advanced",
+      "recommend_reason": "LLM推理服务的事实标准框架之一,PagedAttention、连续批处理、多硬件支持、200+模型架构,生态成熟(9万+star、2000+贡献者)。理解它的设计是理解\"LLM推理怎么做才高效\"的最佳案例,但需要系统软件/模型部署背景才能真正读懂。",
+      "stars_total": 95493
+    },
+    {
       "full_name": "pbakaus/impeccable",
       "url": "https://github.com/pbakaus/impeccable",
       "description": "The design language that makes your AI harness better at design.",
@@ -1783,33 +1810,6 @@
       "difficulty": "beginner",
       "recommend_reason": "给AI编码助手(Claude Code/Cursor等)用的前端设计质量框架,用24个命令+61条确定性检测规则解决'AI生成UI同质化'的问题,离线规则无需调LLM。安装和使用门槛都低(npx一行装,自然语言命令),且有真实案例(Neo Mirai)前后对比,作者有Anthropic frontend-design技能开发背景,是AI辅助设计工具的扎实实践样本。",
       "stars_total": 76323
-    },
-    {
-      "full_name": "microsoft/AI-For-Beginners",
-      "url": "https://github.com/microsoft/AI-For-Beginners",
-      "description": "12 Weeks, 24 Lessons, AI for All!",
-      "language": "Jupyter Notebook",
-      "difficulty": "beginner",
-      "recommend_reason": "微软官方12周24课的AI入门课程,从符号AI、神经网络到CV/NLP/强化学习/AI伦理全覆盖,PyTorch和TensorFlow双版本notebook配实验任务,50多种语言翻译。零基础可从头学,代码可运行而非纯理论,是AI系统性入门学习路径上权威且完整的样本。",
-      "stars_total": 69442
-    },
-    {
-      "full_name": "moeru-ai/airi",
-      "url": "https://github.com/moeru-ai/airi",
-      "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
-      "language": "TypeScript",
-      "difficulty": "beginner",
-      "recommend_reason": "开源复刻'Neuro-sama'式AI虚拟主播,整合30+LLM provider、实时语音交互、VRM/Live2D动画和游戏能力(Minecraft/Factorio),已有Web/桌面/移动三个落地阶段而非单一demo。普通用户直接装应用即可用,50k星标和活跃Discord社区说明项目持续迭代,是'AI陪伴类应用'方向上少有的成熟开源实践样本。",
-      "stars_total": 50036
-    },
-    {
-      "full_name": "VectifyAI/PageIndex",
-      "url": "https://github.com/VectifyAI/PageIndex",
-      "description": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
-      "language": "Python",
-      "difficulty": "beginner",
-      "recommend_reason": "无向量的推理式RAG方案,把文档构建成分层树索引,靠LLM推理遍历而非embedding相似度检索,直接针对'相似性≠相关性'这个向量RAG的真实痛点。3行代码上手,在FinanceBench上98.7%准确率远超向量RAG的50%,索引/查询成本也有具体数字支撑,是RAG技术路线创新的代表性样本。",
-      "stars_total": 38639
     }
   ]
 }

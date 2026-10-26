@@ -1227,7 +1227,7 @@
       "language": "TypeScript",
       "difficulty": "intermediate",
       "recommend_reason": "开源AI编程Agent，build(全权限执行)和plan(只读分析、执行命令前需授权)双Agent模式覆盖了从代码探索到实际开发的不同信任级别，CLI和桌面端(macOS/Windows/Linux)都有，安装渠道成熟。已核实该仓库原属sst组织、现迁移到anomalyco(sst/opencode会跳转到这里)，不是冒名蹭热度的仓库，是AI编程Agent赛道有代表性的成熟项目。",
-      "stars_total": 207137
+      "stars_total": 221518
     },
     {
       "full_name": "anthropics/skills",
@@ -1248,6 +1248,15 @@
       "stars_total": 168182
     },
     {
+      "full_name": "Comfy-Org/ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
+      "language": "Python",
+      "difficulty": "intermediate",
+      "recommend_reason": "节点式可视化工作流引擎，支持Stable Diffusion/Flux/视频生成等主流开源模型的本地离线运行，是扩散模型应用生态里最成熟、影响力最大的GUI/后端之一(12万+ star、每周更新)。虽然不是新项目，但作为学习\"如何搭建可复用AI生成工作流\"的范例极具代表性，文档和生态都非常完善。",
+      "stars_total": 142939
+    },
+    {
       "full_name": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
       "description": "💫 Toolkit to help you get started with Spec-Driven Development",
@@ -1255,15 +1264,6 @@
       "difficulty": "intermediate",
       "recommend_reason": "GitHub官方出品的规范驱动开发(SDD)工具包，把\"先写清楚规范再让AI编码\"拆解成constitution/specify/plan/tasks/implement等七步斜杠命令，并配套Specify CLI和对30+种AI编码助手的集成，是目前\"AI辅助工程化开发流程\"领域最有代表性的官方实践之一，扎实可用而非demo。",
       "stars_total": 136412
-    },
-    {
-      "full_name": "Comfy-Org/ComfyUI",
-      "url": "https://github.com/Comfy-Org/ComfyUI",
-      "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
-      "language": "Python",
-      "difficulty": "intermediate",
-      "recommend_reason": "节点式可视化工作流引擎，支持Stable Diffusion/Flux/视频生成等主流开源模型的本地离线运行，是扩散模型应用生态里最成熟、影响力最大的GUI/后端之一(12万+ star、每周更新)。虽然不是新项目，但作为学习\"如何搭建可复用AI生成工作流\"的范例极具代表性，文档和生态都非常完善。",
-      "stars_total": 127823
     },
     {
       "full_name": "openai/codex",
