@@ -15,29 +15,7 @@
           "reason": "深入讲清楚月之暗面开源模型Kimi K3.1 Pro的发布、独立测评结果和争议，不是单纯新闻通稿"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "battledrones v14: Compass Rose, a four player map",
-      "link": "https://simonwillison.net/2026/Oct/24/battledrones/",
-      "date": "2026-10-24",
-      "first_seen": "2026-10-24T23:59:03.363884+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison给自己做的对战机器人游戏发布了新版本，这次加了一张支持四人同玩的地图。他只写了一句提示词交给Claude Opus 5.5，模型就把地图设计和联机代码都改好了。算是感受一句话就能让AI接手游玩功能开发这类轻量工作流的小例子。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "作者自己游戏项目的版本更新日志，用一句提示词让Claude Opus 5.5完成新地图和联机代码，属于演示性质的编程agent实战案例"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "只是游戏功能更新记录，没有涉及三根主干的一手反思"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -172,6 +150,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Google",
+      "title": "Beyond tree cover: mapping the world’s forest types",
+      "link": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
+      "date": "2026-10-22",
+      "first_seen": "2026-10-25T23:47:55.660104+00:00",
+      "source_type": "blog",
+      "summary": "Google DeepMind联合多个机构做了一个叫ForTy的全球森林分类地图，把地球上的森林分成原始林、人工林、种植园林等6种类型，还给出了逐年的变化数据。它能看出以前地图看不出的变化，比如一片原始森林被砍了之后又种成单一品种的木材林，这种森林还在但已经变了的情况，验证准确率达到了90%。这套数据能帮企业和监管机构落实欧盟的森林砍伐监管法规，追踪森林到底变成了什么，而不只是知道森林消失了没有。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚了具体技术方法（训练标注点识别森林类型转变）和验证准确率，并说明了对环保监管政策的实际支持"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Latent Space",
@@ -425,6 +420,28 @@
       "is_new": false
     },
     {
+      "person": "Dan Koe",
+      "title": "The influencer is dead. The Age of Experience is here.",
+      "link": "https://letters.thedankoe.com/p/the-influencer-is-dead-the-age-of",
+      "date": "2026-10-20",
+      "first_seen": "2026-10-25T23:47:44.421098+00:00",
+      "source_type": "blog",
+      "summary": "这篇说短视频网红和纯卖课的个人品牌都在过气，未来属于把社交媒体当成副产品、靠一份能留下来的作品说话的手艺人。作者的核心论点是，AI时代唯一没法被复制的东西是你自己独一无二的视角，这跟锚点清单里一手不二手的想法是同一个意思，只是被包装成了创作者变现的论证。他给了一套用Eden或接了Eden的Claude做选题研究、找表达角度的具体提示词，但整体还是在为自己的产品导流。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "给了一套用Eden或接了Eden的Claude做选题研究、找表达角度的具体提示词，有实操信息，但整体是创作者变现内容"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "核心论点（AI时代唯一没法复制的是你自己的视角）跟锚点清单'一手不二手'母题是同一个意思，但被包装成创作者变现的论证，非纯粹反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Ethan Mollick",
       "title": "30 Months on the Exponential (in Charts)",
       "link": "https://www.oneusefulthing.org/p/30-months-on-the-exponential-in-charts",
@@ -532,23 +549,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "具体的能力提升+真实场景评测(SQLite扩展/COBOL迁移),讲清楚是什么为什么重要(WebFetch 403仅凭摘要判断)"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Craig Mod",
-      "title": "[RIDGELINE] A Notebook Fit for a Walk",
-      "link": "https://craigmod.com/ridgeline/237/",
-      "date": "2026-10-19",
-      "first_seen": "2026-10-23T02:42:39.049026+00:00",
-      "source_type": "blog",
-      "summary": "Craig Mod讲他偶然把一本样书当笔记本用，越用越顺手，后来一步步做出了自己理想中的散步笔记本，现在放在网店里卖。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "命中周边领域'质朴中正慢的构建者活法'——作者一手经历做出自己理想中的笔记本,但是轻松小品文非深度母题命中"
         }
       ],
       "is_new": false

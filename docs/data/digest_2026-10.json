@@ -15,7 +15,7 @@
           "reason": "深入讲清楚月之暗面开源模型Kimi K3.1 Pro的发布、独立测评结果和争议，不是单纯新闻通稿"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -69,6 +69,28 @@
       "is_new": false
     },
     {
+      "person": "Cursor",
+      "title": "Cursor can now control your computer.  Agents can drive desktop apps like the iOS Simulator to test…",
+      "link": "https://x.com/cursor_ai/status/2113661506634305834",
+      "date": "2026-10-23",
+      "first_seen": "2026-10-25T23:48:12.705538+00:00",
+      "source_type": "x",
+      "summary": "Cursor的agent现在可以直接操作电脑桌面应用了，比如打开iOS模拟器，自己跑一遍刚写好的功能看效果对不对。这相当于agent有了手去真实环境里验证自己写的代码，不再只是看代码对不对，而是真的跑起来测一遍。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "agent获得了操作桌面应用、真实运行环境验证自己写的功能的能力，是具体且重要的新能力"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "agent直接驱动iOS模拟器这类桌面应用来测试自己构建的功能，正中eval track'视觉测试接agent'这一条"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "AI Is Getting Good at Math. Here’s Why.",
       "link": "https://latent.space/p/ai-is-getting-good-at-math/",
@@ -118,6 +140,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Google",
+      "title": "Beyond tree cover: mapping the world’s forest types",
+      "link": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
+      "date": "2026-10-22",
+      "first_seen": "2026-10-25T23:47:55.660104+00:00",
+      "source_type": "blog",
+      "summary": "Google DeepMind联合多个机构做了一个叫ForTy的全球森林分类地图，把地球上的森林分成原始林、人工林、种植园林等6种类型，还给出了逐年的变化数据。它能看出以前地图看不出的变化，比如一片原始森林被砍了之后又种成单一品种的木材林，这种森林还在但已经变了的情况，验证准确率达到了90%。这套数据能帮企业和监管机构落实欧盟的森林砍伐监管法规，追踪森林到底变成了什么，而不只是知道森林消失了没有。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚了具体技术方法（训练标注点识别森林类型转变）和验证准确率，并说明了对环保监管政策的实际支持"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Boris Cherny",
@@ -271,6 +310,23 @@
       "is_new": false
     },
     {
+      "person": "Grok Bot",
+      "title": "We use Grok Bot to spot incidents in our support queue and quickly respond to every associated ticke…",
+      "link": "https://x.com/bot/status/2112645531076096330",
+      "date": "2026-10-20",
+      "first_seen": "2026-10-25T23:48:11.868700+00:00",
+      "source_type": "x",
+      "summary": "有团队分享了用Grok Bot处理支持工单的例子，一次事故里它在大约10分钟内处理完204张关联工单，整个过程只需要一名工程师批准。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "给出具体量化结果（10分钟处理204张工单，一人审批），是实打实的agent能力案例"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "Battle Drones - a vibe coded RTS with audio-based multiplayer",
       "link": "https://simonwillison.net/2026/Oct/20/battledrones/",
@@ -308,6 +364,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Dan Koe",
+      "title": "The influencer is dead. The Age of Experience is here.",
+      "link": "https://letters.thedankoe.com/p/the-influencer-is-dead-the-age-of",
+      "date": "2026-10-20",
+      "first_seen": "2026-10-25T23:47:44.421098+00:00",
+      "source_type": "blog",
+      "summary": "这篇说短视频网红和纯卖课的个人品牌都在过气，未来属于把社交媒体当成副产品、靠一份能留下来的作品说话的手艺人。作者的核心论点是，AI时代唯一没法被复制的东西是你自己独一无二的视角，这跟锚点清单里一手不二手的想法是同一个意思，只是被包装成了创作者变现的论证。他给了一套用Eden或接了Eden的Claude做选题研究、找表达角度的具体提示词，但整体还是在为自己的产品导流。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "核心论点（AI时代唯一没法复制的是你自己的视角）跟锚点清单'一手不二手'母题是同一个意思，但被包装成创作者变现的论证，非纯粹反思"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Ethan Mollick",
@@ -553,6 +626,23 @@
       "is_new": false
     },
     {
+      "person": "Google",
+      "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
+      "link": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+      "date": "2026-10-15",
+      "first_seen": "2026-10-25T23:47:55.660361+00:00",
+      "source_type": "blog",
+      "summary": "Google DeepMind用自家的Antigravity平台加上ProtNLM模型，帮研究人员在UniProt数据库里的几百万条蛋白序列里筛选新的抗菌肽。平台能让AI agent同时跑结构预测、基因组学比对和文献综合这几种生物信息学工具，最后锁定了一个对呼吸道感染病原体有效的候选分子，已经进入实验室验证。这把原本要花几天、跨好几个工具手动拼起来的搜索流程，压缩成了一次协作式会话，对抗生素耐药性这个全球健康危机来说，意味着新药研发的门槛被实质性降低了。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚了具体工作流（多工具AI agent协同筛选数据库）和实际成果（锁定候选分子进入实验室验证）"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Teo Crawford",
       "title": "What 10 Years of making videos looks like.",
       "link": "https://www.youtube.com/watch?v=MM65INAQUyc",
@@ -655,6 +745,23 @@
       "is_new": false
     },
     {
+      "person": "SpaceX Super Intelligence",
+      "title": "Introducing Grok Voice 3.0, the world’s most intelligent speech-to-speech model.  It excels at resol…",
+      "link": "https://x.com/SpaceXSI/status/2110416580899168305",
+      "date": "2026-10-14",
+      "first_seen": "2026-10-25T23:48:10.885440+00:00",
+      "source_type": "x",
+      "summary": "SpaceX Super Intelligence推出了Grok Voice 3.0，官方说这是目前最聪明的语音对话模型，擅长处理客服电话，响应时间不到一秒，价格比其他顶尖模型更便宜。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "新旗舰语音模型发布，给出具体对比优势（响应速度、成本），是实打实的能力/成本声明"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "AI is mass decompiling games. That's both awesome and scary.",
       "link": "https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/",
@@ -670,6 +777,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Google",
+      "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
+      "link": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+      "date": "2026-10-14",
+      "first_seen": "2026-10-25T23:47:55.660429+00:00",
+      "source_type": "blog",
+      "summary": "Google DeepMind和新加坡政府合作做了一个在手机本地运行的反诈骗AI，用轻量级Gemma模型微调而成，不用把聊天内容传到云端就能识别社交工程诈骗。它分两步走，先用一个轻量筛选器快速过滤可疑信息，再用微调过的模型分析整段对话确认是不是诈骗。新加坡这几年因诈骗损失了40多亿新元，这个项目想找到一种既能拦诈骗又不侵犯隐私的做法，给其他国家提供一个可以照着做的样本。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚了具体技术方案（两阶段本地管道、零云端数据外传）和真实政府合作案例，有量化的社会影响数据"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Simon Willison",
@@ -704,6 +828,57 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Google",
+      "title": "Developing Gemini 4 Argon responsibly and safely",
+      "link": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+      "date": "2026-10-13",
+      "first_seen": "2026-10-25T23:47:55.660483+00:00",
+      "source_type": "blog",
+      "summary": "Google公开了给Gemini 4 Argon配的安全防护体系，包括输入筛选、模型自检和持续监控三层实时防护，还建了一套能实时读取模型内部推理过程来抓异常行为的监控系统。文章提到这个模型本身在代码审查和网络安全上很能干，比如帮Wiz公司挖出了医院软件里的严重漏洞，这也是为什么需要配套这么重的防护。这体现了Google在模型能力越强、越需要怎么平衡能力和滥用风险上的具体思路。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚了具体的安全防护架构（三层实时防护、误对齐监控系统）和真实案例（帮Wiz发现医院软件漏洞），不是空洞通稿"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Cursor",
+      "title": "Gemini 4 Argon is now available in Cursor!  It scores 52.8% on CursorBench at default effort, on par…",
+      "link": "https://x.com/cursor_ai/status/2110087611763368271",
+      "date": "2026-10-13",
+      "first_seen": "2026-10-25T23:48:12.705905+00:00",
+      "source_type": "x",
+      "summary": "Cursor接入了Gemini 4 Argon，默认强度下在CursorBench打出52.8%，跟Opus 5.5基本打平，价格是每百万输入token2美元、输出token10美元。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "给出具体榜单成绩和价格，直接影响用户选模型的决策"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Google",
+      "title": "Gemini 4 Argon for Robotics",
+      "link": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+      "date": "2026-10-13",
+      "first_seen": "2026-10-25T23:47:55.660509+00:00",
+      "source_type": "blog",
+      "summary": "Google把Gemini 4 Argon也做成了机器人专用版本，在物理推理基准测试里拿到87%的成绩，能看懂三维空间里的物理关系该怎么解决。演示里它让Boston Dynamics的Spot机器人学会了用脚踏打开垃圾桶，还能把真实机器人拍到的视频重建成物理仿真环境用来训练。这标志着AI在理解物理世界、执行复杂多步机械任务上又往前走了一步，对机器人自动化和制造业有实际意义。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "给出具体基准测试数字（物理推理87%）和多个应用实例，讲清楚了机器人专用版本的技术突破"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Martin Fowler",
@@ -1061,6 +1236,23 @@
       "is_new": false
     },
     {
+      "person": "Cursor",
+      "title": "Claude Haiku 5.5 is now available in Cursor!  On shorter requests, it costs 10x less than Claude Hai…",
+      "link": "https://x.com/cursor_ai/status/2107897245282799864",
+      "date": "2026-10-07",
+      "first_seen": "2026-10-25T23:48:12.706040+00:00",
+      "source_type": "x",
+      "summary": "Cursor接入了Claude Haiku 5.5，官方说处理短请求时，价格只要上一代Haiku 4.5的十分之一。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "给出具体的价格对比（短请求成本降到十分之一），直接影响用户选模型的成本决策"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "Can a Cloud-Native Harness Make Agents Reliable Beyond the Desktop?",
       "link": "https://www.latent.space/p/stacklok",
@@ -1146,6 +1338,23 @@
       "is_new": false
     },
     {
+      "person": "Cursor",
+      "title": "You can now control agents on your computer from your phone.  Check in, reply, or start new tasks fr…",
+      "link": "https://x.com/cursor_ai/status/2107618653701296162",
+      "date": "2026-10-06",
+      "first_seen": "2026-10-25T23:48:12.706073+00:00",
+      "source_type": "x",
+      "summary": "Cursor现在可以从手机上控制电脑上跑的agent了，用iOS App就能查看进度、回复，或者直接开一个新任务。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "具体的移动端远程控制能力，直接影响日常怎么管理agent工作流"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "EmbeddingGemma 2",
       "link": "https://simonwillison.net/2026/Oct/6/hn-49983751/",
@@ -1195,6 +1404,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Google",
+      "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
+      "link": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+      "date": "2026-10-06",
+      "first_seen": "2026-10-25T23:47:55.660553+00:00",
+      "source_type": "blog",
+      "summary": "Google发布了EmbeddingGemma 2，一个能在手机本地跑的轻量级多模态嵌入模型，文本、代码、图片、音频、视频都能处理。它体积很小，在Pixel 11 Pro上纯文本模式只占191MB内存，代码嵌入效果也比上一代有明显提升。这种模型能让开发者在普通消费级硬件上搭建本地媒体搜索、检索增强生成这类应用，数据完全不用传到云端，对注重隐私的场景很实用。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚了具体技术规格（设备端运行、低内存占用、代码嵌入效果提升）和实际应用场景，对做本地RAG的开发者有直接参考价值"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "OpenAI",
@@ -1270,6 +1496,40 @@
       "is_new": false
     },
     {
+      "person": "Dan Koe",
+      "title": "Full Course: How To Turn Your Interests Into Profitable a Lifestyle Business",
+      "link": "https://letters.thedankoe.com/p/full-course-how-to-turn-your-interests",
+      "date": "2026-10-05",
+      "first_seen": "2026-10-25T23:47:44.422856+00:00",
+      "source_type": "blog",
+      "summary": "这篇是Dan Koe免费公开的完整课程，教怎么把自己的兴趣变成一人生意，先画一张内容地图把兴趣拆成大话题、细分话题和具体选题，再搭一套最简软件栈做流量、收邮箱、收款和存想法这四件事。里面提到可以用Claude接上Eden的MCP去研究哪些帖子视频火过，照着那个角度给自己的产品起名字和定方向。整体还是在为他自己的Eden产品做导流，AI部分是研究辅助工具，不是核心内容。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "商业变现课程，跟三根主干无实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Cursor",
+      "title": "You can now steer Cursor SDK agents while they run.  run.steer() adds your message to the next turn.…",
+      "link": "https://x.com/cursor_ai/status/2107141004482793827",
+      "date": "2026-10-05",
+      "first_seen": "2026-10-25T23:48:12.706104+00:00",
+      "source_type": "x",
+      "summary": "Cursor SDK现在支持在agent运行过程中实时插话，调用run.steer()就能把你的新消息加到下一轮对话里，如果某个子agent正在做任务，它会先转到后台继续干活。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "给出了具体的SDK接口能力（运行中插话、子agent转后台继续工作），对用SDK搭agent的开发者有直接实操价值"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "We're going to need default hard budget caps on pretty much everything",
       "link": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
@@ -1285,6 +1545,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Cursor",
+      "title": "When Rollouts catches a regression, it finds the offending PR and opens an issue. One click starts a…",
+      "link": "https://x.com/cursor_ai/status/2106066782155157603",
+      "date": "2026-10-02",
+      "first_seen": "2026-10-25T23:48:12.706135+00:00",
+      "source_type": "x",
+      "summary": "Cursor的Rollouts功能现在更进一步，发现回归问题后会自动找到导致问题的那个PR并开一个issue，点一下就能启动云端agent去修复它。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "给出具体的自动化修复链路（定位PR、开issue、一键启动云端agent修复），直接影响agent部署后的处理流程"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "NN/g",

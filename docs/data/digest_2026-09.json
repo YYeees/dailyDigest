@@ -18,6 +18,40 @@
       "is_new": false
     },
     {
+      "person": "Google",
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "link": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+      "date": "2026-09-30",
+      "first_seen": "2026-10-25T23:47:55.660577+00:00",
+      "source_type": "blog",
+      "summary": "Google发布了新一代旗舰模型Gemini 4 Argon，专门冲着复杂工程、企业知识工作和网络防御这几个场景优化。它把输出长度大幅扩展到了100万token，支持更深的多步推理，在真实软件工程任务测试里拿到77.9%的新纪录。因为能力边界扩得比较猛，Google这次没有直接全量放开，先给网络安全防御者试用，之后才会逐步扩大到开发者和普通用户。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "重大旗舰模型发布，给出具体突破数字（输出扩到100万token、软件工程任务77.9%新纪录）并说明了分阶段开放的谨慎策略"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Grok Bot",
+      "title": "Grok Bot is now more powerful for building software.  Bots can hand off coding tasks to Cursor, mana…",
+      "link": "https://x.com/bot/status/2105373767568621895",
+      "date": "2026-09-30",
+      "first_seen": "2026-10-25T23:48:11.868948+00:00",
+      "source_type": "x",
+      "summary": "Grok Bot在写软件这件事上变得更能干了，现在可以把编码任务甩给Cursor去做，用GitHub和Origin插件管理PR，还能把做出来的东西录成视频演示发给你看。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "具体的软件开发agent能力（任务移交给Cursor、PR管理插件、视频演示），直接影响开发者的工作流"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Peter Steinberger",
       "title": "I'm finding inter-agent communication in the chat stream increasingly irritating. Changed the visibi…",
       "link": "https://x.com/steipete/status/2105362785534361996",
@@ -33,6 +67,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Google",
+      "title": "Introducing SynthID Bio",
+      "link": "https://deepmind.google/blog/introducing-synthid-bio/",
+      "date": "2026-09-30",
+      "first_seen": "2026-10-25T23:47:55.660598+00:00",
+      "source_type": "blog",
+      "summary": "Google DeepMind做了一个给AI设计的蛋白质加隐形水印的技术，通过微调氨基酸选择和3D结构来嵌入可检测的信号，同时不影响蛋白质本来的生物功能。团队用三种蛋白质做了验证，加水印后的蛋白质跟没加水印的在结合能力和生物活性上完全一样。这项技术想解决的问题是，AI现在能设计出绕过传统DNA合成筛查的全新蛋白序列，水印能帮DNA合成商和公共数据库分辨出哪些是可信来源设计的。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚了技术方法（微调氨基酸选择和3D结构嵌入水印）和具体验证实验，解决了AI设计蛋白质绕过传统筛查的安全问题"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Hamel Husain",
@@ -88,7 +139,7 @@
           "reason": "完整梳理了OpenAI DevDay二十多项发布里最重要的几个，包括个人agent平台Dots、Decisions API、带电脑操作能力的Agents API，讲清楚了为什么这几个值得关注"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -416,7 +467,7 @@
           "reason": "摄影技巧，不触及锚点三根主干"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -453,6 +504,23 @@
       "is_new": false
     },
     {
+      "person": "Cursor",
+      "title": "Introducing Rollouts.  Rollouts write a monitoring plan, then watch changes as they deploy.   Deploy…",
+      "link": "https://x.com/cursor_ai/status/2102861817160904808",
+      "date": "2026-09-23",
+      "first_seen": "2026-10-25T23:48:12.706293+00:00",
+      "source_type": "x",
+      "summary": "Cursor推出了Rollouts功能，agent部署改动前会先写一份监控计划，然后在改动上线的过程中持续观察。部署会经过验证，所以回归问题能在用户看到之前就被发现，这让agent做的变更也有了类似人工测试的质量把关。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "引入部署前写监控计划、部署中持续验证的具体机制，直接影响agent做变更时的质量把关方式"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "Gemini 3.8 TTS Playground",
       "link": "https://simonwillison.net/2026/Sep/23/gemini-tts-playground/",
@@ -485,6 +553,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Cursor",
+      "title": "We've reduced token costs in Cursor by 7% with no drop in agent quality.  Savings came from tighter…",
+      "link": "https://x.com/cursor_ai/status/2102786814633464159",
+      "date": "2026-09-23",
+      "first_seen": "2026-10-25T23:48:12.706328+00:00",
+      "source_type": "x",
+      "summary": "Cursor把token消耗降了7%，但agent的效果没有变差。省下来的成本来自更精简的提示词、按需加载工具、更好的缓存，以及压缩过的文件读取方式。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚了具体的工程优化手段（精简提示词/按需加载工具/缓存/压缩文件读取）且不损失效果，对做agent工程的人有直接参考价值"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Latent Space",
@@ -611,6 +696,23 @@
       "is_new": false
     },
     {
+      "person": "Cursor",
+      "title": "Claude Opus 5.5 is now available in Cursor!  It's the new top model on CursorBench at 57.8% (Max) an…",
+      "link": "https://x.com/cursor_ai/status/2102448392773435706",
+      "date": "2026-09-22",
+      "first_seen": "2026-10-25T23:48:12.706362+00:00",
+      "source_type": "x",
+      "summary": "Cursor接入了Claude Opus 5.5，在CursorBench榜单上以57.8%的成绩成为新的第一，而且每个任务的价格比上一代Opus 5便宜了40%。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "给出具体榜单成绩和价格对比，直接影响用户选模型的决策，实操价值高"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Boris Cherny",
       "title": "Opus 5.5 is a really good model. It's been my daily driver the last few weeks.  We had Opus 5.5 and…",
       "link": "https://x.com/bcherny/status/2102439069053747549",
@@ -677,6 +779,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Dan Koe",
+      "title": "How to launch into a completely new life",
+      "link": "https://letters.thedankoe.com/p/how-to-launch-into-a-completely-new-ef8",
+      "date": "2026-09-19",
+      "first_seen": "2026-10-25T23:47:44.426360+00:00",
+      "source_type": "blog",
+      "summary": "这篇讲行为改变的两阶段模型，先靠强烈的动机或对现状的厌恶把自己炸出舒适区，再靠环境、信号、行为、奖励这套习惯回路把新行为变成自动反应。作者用健身和写作变现两个例子具体演示了怎么设计这四步。内容是标准的习惯科学加自助框架，跟AI、锚点清单里的主题都没有直接关系。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "通用习惯科学/自助框架，未触及锚点三根主干具体母题"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Craig Mod",
@@ -919,7 +1038,7 @@
           "reason": "街拍，不触及锚点三根主干"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -1097,6 +1216,23 @@
       "is_new": false
     },
     {
+      "person": "Dan Koe",
+      "title": "You need to be delusional if you want to succeed",
+      "link": "https://letters.thedankoe.com/p/you-need-to-be-delusional-if-you",
+      "date": "2026-09-12",
+      "first_seen": "2026-10-25T23:47:44.427791+00:00",
+      "source_type": "blog",
+      "summary": "这篇讲的是设定不切实际目标的心理学，作者认为普通人定的现实目标注定走向平庸，只有定一个连自己都觉得不可能、期限短到离谱的目标，才会逼着大脑重新组织注意力。他举了乔布斯的现实扭曲力场和自己达成月入10万美元的经历做例子，说目标不是用来精确达成的终点，而是用来过滤每天该做什么的透镜。这篇基本是他惯常的自助鸡汤风格，跟AI、锚点清单里的主题都没有直接关系。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "通用目标设定心理学，未触及锚点三根主干具体母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Boris Cherny",
       "title": "RT @DarioAmodei: We Must Pace the Frontier: I’ve written a new essay on why the AI industry should s…",
       "link": "https://x.com/bcherny/status/2098807271241482468",
@@ -1253,6 +1389,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Cursor",
+      "title": "Introducing Projects, a new way of working in Cursor.  Rather than creating a chat for every task, y…",
+      "link": "https://x.com/cursor_ai/status/2098162488013455784",
+      "date": "2026-09-10",
+      "first_seen": "2026-10-25T23:48:12.706392+00:00",
+      "source_type": "x",
+      "summary": "Cursor推出了Projects，用一个持续存在的协调agent代替给每个任务单独开一个对话。这个agent会一直在线，主动管理工作并调度子agent，还会随着使用不断变聪明。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "引入持续在线的协调agent代替逐任务开对话的工作方式，是具体且影响日常使用习惯的新功能"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Simon Willison",
@@ -1571,6 +1724,23 @@
       "is_new": false
     },
     {
+      "person": "Google",
+      "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
+      "link": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+      "date": "2026-09-08",
+      "first_seen": "2026-10-25T23:47:55.660761+00:00",
+      "source_type": "blog",
+      "summary": "Google DeepMind做了一个数据库，给人类基因组里几十亿种可能的单字母DNA变异都标注了一个影响分数，编码区和非编码区都覆盖了。研究人员已经用它在罕见病研究里找到了跟癫痫脑病相关的基因变异，规模比此前的AlphaFold数据库大30倍。这个数据库现在已经免费对学术界开放，能帮科学家更快锁定致病的基因变异。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚了技术方法（AVI评分）、具体医学研究案例（癫痫脑病相关变异）和数据规模，不是空洞通稿"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Ministry of Testing",
       "title": "Is agentic AI testing real?",
       "link": "https://club.ministryoftesting.com/t/is-agentic-ai-testing-real/87724",
@@ -1671,6 +1841,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Dan Koe",
+      "title": "The One-Human Business: How To Earn In The Age of AI",
+      "link": "https://letters.thedankoe.com/p/the-one-human-business-how-to-earn",
+      "date": "2026-09-06",
+      "first_seen": "2026-10-25T23:47:44.429136+00:00",
+      "source_type": "blog",
+      "summary": "Dan Koe这篇讲怎么靠AI把一个人做成一支团队，用自己的兴趣加社交媒体加AI拼出一个一人公司。他给了一套具体的AI角色清单，比如品牌策略师、内容策略师、长文专家、短文专家，说这套角色原本要花50万美元年薪请人才能做到。文章同时也在推销他自己的Eden工具和写作训练营，AI部分更像是实操清单而不是深入的技术讲解。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "商业/个人品牌叙事，跟三根主干无实质连接"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Simon Willison",
@@ -1826,6 +2013,23 @@
       "is_new": false
     },
     {
+      "person": "Google",
+      "title": "Introducing WeatherNext 3, our most advanced and accurate global weather AI model",
+      "link": "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/",
+      "date": "2026-09-03",
+      "first_seen": "2026-10-25T23:47:55.660788+00:00",
+      "source_type": "blog",
+      "summary": "Google发布了新一代气象AI模型WeatherNext 3，用实时卫星数据生成每小时一次的高分辨率天气预报，分辨率比上一代提升了5倍，降水预测的准确度也提高了60%。它已经接入搜索、地图和Gemini这些产品。这件事的意义在于，过去只有发达国家才用得起的高精度本地化天气预报，现在发展中国家也能用上了。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "给出具体性能提升数字（分辨率提升5倍、降水预测准确度提升60%）和实际落地场景，讲清楚了技术突破和影响面"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "OpenAI",
       "title": "GPT-6 Astra: A new generation of intelligence",
       "link": "https://openai.com/index/gpt-6-astra",
@@ -1841,6 +2045,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Cursor",
+      "title": "You can now run Cursor cloud agents on your infrastructure, including pools of machines that automat…",
+      "link": "https://x.com/cursor_ai/status/2095257412781396114",
+      "date": "2026-09-02",
+      "first_seen": "2026-10-25T23:48:12.706453+00:00",
+      "source_type": "x",
+      "summary": "Cursor现在支持把云端agent跑在用户自己的基础设施上，包括能按需求自动扩缩容的机器池。这样agent可以直接访问内部服务或专用硬件，但调度和控制逻辑还是留在Cursor这边，相当于把agent的执行环境和大脑拆开了。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接影响开发者怎么用Cursor的agent功能，能接入自己的基础设施和专用硬件，是具体可用的新能力"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Martin Fowler",

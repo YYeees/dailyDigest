@@ -15,7 +15,7 @@
           "reason": "摄影闲聊，不触及锚点三根主干"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -55,6 +55,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Google",
+      "title": "Gemini Robotics ER 2: powering robotics with video understanding, task orchestration, and multi-robot collaboration",
+      "link": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/",
+      "date": "2026-07-30",
+      "first_seen": "2026-10-25T23:47:55.661023+00:00",
+      "source_type": "blog",
+      "summary": "Google推出了Gemini Robotics ER 2，相当于给机器人配了一个专门负责判断的大脑，能通过视频实时追踪任务进度、安排多步操作，还能协调多台机器人一起干活。比如它能让Boston Dynamics的Spot机器人听懂一句自然语言指令就去取东西，官方测试里进度追踪准确率达到57%，遇到人靠近时会主动停下来。这意味着机器人的实体任务不再需要完全靠预先编程，已经可以通过Gemini API提供给开发者使用。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "给出具体准确率数字和Boston Dynamics实例，讲清楚了机器人推理大脑的实际能力和安全改进"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Martin Fowler",
@@ -159,6 +176,23 @@
       "is_new": false
     },
     {
+      "person": "Google",
+      "title": "Gemini Robotics 2 brings whole body intelligence to robots",
+      "link": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+      "date": "2026-07-28",
+      "first_seen": "2026-10-25T23:47:55.661062+00:00",
+      "source_type": "blog",
+      "summary": "Google DeepMind发布了Gemini Robotics 2，让机器人第一次具备全身协同的智能控制，能独立完成把浇水壶放进指定垃圾桶这类需要多步判断的任务，还能在几个小时内适应全新的机器人身体。团队同时配了专门的安全基准，用来检验机器人会不会拒绝不安全指令、能不能察觉到人靠近。这标志着机器人正从只能做重复动作，转向能在真实环境里自己判断该怎么做。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚了全身协同控制、灵巧操作、安全基准等具体技术突破，标志机器人从预编程走向通用物理智能"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Martin Fowler",
       "title": "The Orchestrator's Tax",
       "link": "https://martinfowler.com/articles/orchestrator-tax.html",
@@ -210,6 +244,23 @@
       "is_new": false
     },
     {
+      "person": "Dan Koe",
+      "title": "How to remember everything you read... don't",
+      "link": "https://letters.thedankoe.com/p/how-to-remember-everything-you-read",
+      "date": "2026-07-25",
+      "first_seen": "2026-10-25T23:47:44.436853+00:00",
+      "source_type": "blog",
+      "summary": "这篇反对死记硬背式的阅读学习法，提出学习本质是一个有目标才会产生的反馈过程，不是单纯往脑子里塞内容。作者给了一套具体搭法：用Claude Code打开Obsidian笔记库，分别建一个存想法的skill和一个整理收件箱、打标签、建反向链接的skill，让AI替自己维护笔记系统。这个思路属于卡片笔记/数字花园这类笔记法的AI化实践，但文章同时也在推销他自己的Eden应用。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "命中卡片笔记/数字花园周边领域，但文章同时是Eden产品推广，非纯一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Jason Fried",
       "title": "Mistaking making for the thing you've made",
       "link": "https://world.hey.com/jason/mistaking-making-for-the-thing-you-ve-made-bd348df9",
@@ -241,7 +292,7 @@
           "reason": "拍摄花絮，不触及锚点三根主干"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ethan Mollick",
@@ -366,6 +417,40 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Google",
+      "title": "Our approach to bioresilience",
+      "link": "https://deepmind.google/blog/our-approach-to-bioresilience/",
+      "date": "2026-07-16",
+      "first_seen": "2026-10-25T23:47:55.661150+00:00",
+      "source_type": "blog",
+      "summary": "Google DeepMind和Isomorphic Labs公开了他们应对生物安全风险的联合方案，已经展开超过15项合作。具体做法包括用SynthID水印技术筛查风险DNA序列，用AlphaEvolve加快测序数据分析来更早发现病原体，并向可信研究者开放最新AI系统加速疫苗设计。这套方案想解决的是同一件事的两面：既不让AI被滥用来制造生物威胁，又不耽误AI真正能帮上忙的公共卫生场景。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚了DeepMind和Isomorphic Labs防止AI被滥用、同时用AI加速疫苗设计和病原体检测的具体做法，不是空洞通稿"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Dan Koe",
+      "title": "The writing habit that saved my brain (and my future)",
+      "link": "https://letters.thedankoe.com/p/the-writing-habit-that-saved-my-brain",
+      "date": "2026-07-15",
+      "first_seen": "2026-10-25T23:47:44.438977+00:00",
+      "source_type": "blog",
+      "summary": "Dan Koe这篇讲他怎么靠每天写作这件小事，换来了比囤资产更稀缺的那种杠杆，也就是个人品牌和读者注意力。里面提到一个具体做法：用Claude Code打开Obsidian笔记库，让它自动把新想法归类、打标签、建立关联，相当于用AI帮自己维护一个不断生长的笔记系统。文章大部分篇幅还是在推广他自己做的Eden这款笔记工具，AI部分只是其中一小段。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "涉及写作与表达、卡片笔记/数字花园这类周边领域，但主要是产品推广非一手反思"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Martin Fowler",
@@ -565,6 +650,23 @@
       "is_new": false
     },
     {
+      "person": "Dan Koe",
+      "title": "The most profitable skill of the 21st century (not AI)",
+      "link": "https://letters.thedankoe.com/p/the-most-profitable-skill-of-the",
+      "date": "2026-07-03",
+      "first_seen": "2026-10-25T23:47:44.440573+00:00",
+      "source_type": "blog",
+      "summary": "Dan Koe这篇讲的是他认为比学AI更重要的技能，理解人性，也就是说服和营销背后的心理机制。他给出一套写作框架，围绕人对生存、身份和自我实现的心理张力来抓住读者注意力。文章同时也是他写作训练营的广告，内容偏个人品牌和营销方法论，跟AI实操关系不大。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "通用营销/自助框架，跟锚点三根主干没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Teo Crawford",
       "title": "2 hours of Japan Slice of Life. | Sony A7IV",
       "link": "https://www.youtube.com/watch?v=mQZVH05Xzdw",
@@ -579,7 +681,7 @@
           "reason": "旅拍vlog，不触及锚点三根主干"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Antithesis",

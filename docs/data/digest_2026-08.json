@@ -15,7 +15,7 @@
           "reason": "旅拍，不触及锚点三根主干"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Teo Crawford",
@@ -32,7 +32,7 @@
           "reason": "闲聊性质，不触及锚点三根主干"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ethan Mollick",
@@ -198,6 +198,23 @@
       "is_new": false
     },
     {
+      "person": "Dan Koe",
+      "title": "We are in the middle of the digital renaissance, please take advantage of it",
+      "link": "https://letters.thedankoe.com/p/we-are-in-the-middle-of-the-digital",
+      "date": "2026-08-27",
+      "first_seen": "2026-10-25T23:47:44.430969+00:00",
+      "source_type": "blog",
+      "summary": "这篇把面对AI的人分成三类，排斥AI的纯粹派、把一切决定都外包给AI的自动机，以及作者主张的第三种，用AI接住机械性工作、自己负责判断和品味的数字文艺复兴人。他给了几条用AI的具体建议，先想清楚自己要什么、对输出保持高标准、持续迭代而不是指望AI一次做对。整体还是在为他的内容创业方法论做铺垫，不是深入的技术内容。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "主要是个人品牌/商业叙事，未触及AI作为认知方式这一母题的实质内容"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Martin Fowler",
       "title": "Making Your Data Ready for Agentic AI",
       "link": "https://martinfowler.com/articles/making-data-ready-for-agentic-ai.html",
@@ -213,6 +230,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Google",
+      "title": "Piloting the world's first double-blind AI evaluations",
+      "link": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
+      "date": "2026-08-27",
+      "first_seen": "2026-10-25T23:47:55.660895+00:00",
+      "source_type": "blog",
+      "summary": "Google DeepMind试验了一种双盲AI评测方法，用谷歌云的机密计算环境，让出题方看不到模型本身，模型方也看不到具体题目。这解决了评测这行一直头疼的两难：模型如果提前见过题目，成绩就会失真，但不给模型方留信息又没法保护模型的技术细节。这个方法论对安全评估、网络安全这类敏感场景的评测尤其关键，相当于用技术手段换掉了死板的信任机制。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "直接是在讲怎么建立靠谱的AI评测方法论（用密码学手段防止模型偷看题目、防止基准污染），命中eval track核心"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Latent Space",
@@ -567,7 +601,7 @@
           "reason": "器材清单，不触及锚点三根主干"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -607,6 +641,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Dan Koe",
+      "title": "Give me 20 minutes and i’ll make you impossible to manipulate",
+      "link": "https://letters.thedankoe.com/p/give-me-20-minutes-and-ill-make-you",
+      "date": "2026-08-19",
+      "first_seen": "2026-10-25T23:47:44.432629+00:00",
+      "source_type": "blog",
+      "summary": "这篇把人的思维分成三个层次，盲从权威的NPC、靠自己判断的主角、能同时装着好几种视角灵活切换的programmer，核心论点是认知灵活度而不是智商决定你过得好不好。作者认为短视频喂养的碎片信息会把人困在低层次思维里，解药是刻意筛选信息来源、多问问题、多读长文章。这个话题沾着深度自我认识这条主干的边，但讲法是他惯常的自助鸡汤风格，不是一手经历反思。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "清单外但沾深度自我认识这根主干的边（认知发展阶段、信息环境对思维的影响），是他惯常的自助风格，非一手反思"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Martin Fowler",
@@ -874,6 +925,23 @@
       "is_new": false
     },
     {
+      "person": "Google",
+      "title": "Putting sign language AI into users’ hands",
+      "link": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
+      "date": "2026-08-12",
+      "first_seen": "2026-10-25T23:47:55.660981+00:00",
+      "source_type": "blog",
+      "summary": "Google DeepMind发布了手语转文字模型SL2T，能把美国手语实时转换成英文文本，已经装进Pixel 11手机的输入法和实时字幕功能里。它靠摄像头追踪全身动作来理解手语的语法，而不是像早期手套方案那样只认识手部动作对应的英语单词，训练数据覆盖了50种手语。这项技术意义在于，手语使用者第一次能像听人用语音输入一样自然地用手语打字。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚了技术路径（计算机视觉追踪全身动作理解手语语法）、训练数据规模和实际产品落地（Pixel 11）"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Craig Mod",
       "title": "[ESSAYS] A Swarm of Blood Robots",
       "link": "https://craigmod.com/essays/robot_blood/",
@@ -961,7 +1029,7 @@
           "reason": "未发布的研究版Claude把黎曼zeta函数零点落在临界线上的比例下界从41.6%提到67.2%，讲清楚了方法和意义，是扎实的前沿研究进展"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Teo Crawford",
@@ -976,6 +1044,23 @@
           "track": "anchor",
           "tier": "high",
           "reason": "旅拍，不触及锚点三根主干"
+        }
+      ],
+      "is_new": false
+    },
+    {
+      "person": "Dan Koe",
+      "title": "The Art Of Strategic Thinking (How To Become Wildly Successful)",
+      "link": "https://letters.thedankoe.com/p/strategy-vs-tactics-how-to-actually",
+      "date": "2026-08-08",
+      "first_seen": "2026-10-25T23:47:44.434348+00:00",
+      "source_type": "blog",
+      "summary": "这篇用下棋打比方讲策略思维，核心是先把自己摆到更有利的位置，机会和战术才会自己冒出来。作者借宫本武藏的几条原则，搭了一套从愿景、调研、准备到执行、适应的人生策略框架。内容偏通用的个人发展和商业鸡汤，跟AI、锚点清单里的主题都没有直接关系。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "通用商业/个人发展框架，未触及锚点三根主干具体母题"
         }
       ],
       "is_new": true

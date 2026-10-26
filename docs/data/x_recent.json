@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "person": "Andrej Karpathy",
+      "title": "RT @Tristan0x: If you've ever wondered why smart TVs are so cheap, this is why.  @log4j rooted his S…",
+      "link": "https://x.com/karpathy/status/2114384346815820050",
+      "date": "2026-10-25",
+      "first_seen": "2026-10-25T23:48:06.067153+00:00",
+      "source_type": "x",
+      "summary": "Andrej Karpathy转发了一条关于智能电视为什么便宜的讨论，原帖作者说他把三星电视root之后发现里面有一个一直开着的隐藏麦克风。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
       "person": "Boris Cherny",
       "title": "RT @ClaudeDevs: We’re adding support for MCP Tasks and Elicitations in Claude.  Tasks let Claude giv…",
       "link": "https://x.com/bcherny/status/2113781429436092466",
@@ -12,6 +23,61 @@
       "is_new": false
     },
     {
+      "person": "Grok Bot",
+      "title": "Grok Bot can now save your logins, cards, and contact information.  Add them once, and Bot securely…",
+      "link": "https://x.com/bot/status/2113717946019397910",
+      "date": "2026-10-23",
+      "first_seen": "2026-10-25T23:48:11.868268+00:00",
+      "source_type": "x",
+      "summary": "Grok Bot现在能帮你记住账号密码、银行卡和联系方式，只用添加一次，以后它会安全地记着这些信息替你使用。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Cursor",
+      "title": "Cursor can now control your computer.  Agents can drive desktop apps like the iOS Simulator to test…",
+      "link": "https://x.com/cursor_ai/status/2113661506634305834",
+      "date": "2026-10-23",
+      "first_seen": "2026-10-25T23:48:12.705538+00:00",
+      "source_type": "x",
+      "summary": "Cursor的agent现在可以直接操作电脑桌面应用了，比如打开iOS模拟器，自己跑一遍刚写好的功能看效果对不对。这相当于agent有了手去真实环境里验证自己写的代码，不再只是看代码对不对，而是真的跑起来测一遍。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Grok Bot",
+      "title": "Grok Bot can now use Calendar, Reminders, Contacts, and more apps on your phone.  Rolling out now on…",
+      "link": "https://x.com/bot/status/2113393684209176718",
+      "date": "2026-10-22",
+      "first_seen": "2026-10-25T23:48:11.868520+00:00",
+      "source_type": "x",
+      "summary": "Grok Bot现在能用你手机上的日历、提醒事项、联系人等应用了，这个功能已经开始在iOS和安卓上推送。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "SpaceX Super Intelligence",
+      "title": "Proud to be a part of this important initiative from NVIDIA",
+      "link": "https://x.com/SpaceXSI/status/2113365443931148624",
+      "date": "2026-10-22",
+      "first_seen": "2026-10-25T23:48:10.885149+00:00",
+      "source_type": "x",
+      "summary": "SpaceX Super Intelligence说很荣幸参与NVIDIA的一个重要项目，但没有具体说明是什么项目。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Grok Bot",
+      "title": "Grok Bot can now use your 1Password account.  Approve the logins you want to share, and your Bot sig…",
+      "link": "https://x.com/bot/status/2113332983226831339",
+      "date": "2026-10-22",
+      "first_seen": "2026-10-25T23:48:11.868567+00:00",
+      "source_type": "x",
+      "summary": "Grok Bot现在可以用你的1Password账号了，批准要共享的登录信息后，Bot能帮你自动登录，这个功能接下来几天会逐步推送给用户。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
       "person": "Boris Cherny",
       "title": "RT @claudeai: We’re opening a research preview of Claude Duet, a new app where Claude works as a pro…",
       "link": "https://x.com/bcherny/status/2113060750252274088",
@@ -21,6 +87,39 @@
       "summary": "Claude官方开放了新应用Claude Duet的试用，Claude会像主动干活的助手一样，带着准备好的东西来找你。",
       "tier": "high",
       "is_new": false
+    },
+    {
+      "person": "Grok Bot",
+      "title": "Grok Bot can now build reports, memos, and dashboards.  Ask Bot for a page, then edit it together or…",
+      "link": "https://x.com/bot/status/2112992872857252082",
+      "date": "2026-10-21",
+      "first_seen": "2026-10-25T23:48:11.868634+00:00",
+      "source_type": "x",
+      "summary": "Grok Bot现在能直接生成报告、备忘录和仪表盘，你可以让它做一页内容，然后一起编辑，或者让它自己保持更新。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "SpaceX Super Intelligence",
+      "title": "Use Grok 4.7 in Viktor",
+      "link": "https://x.com/SpaceXSI/status/2112959750786953386",
+      "date": "2026-10-21",
+      "first_seen": "2026-10-25T23:48:10.885389+00:00",
+      "source_type": "x",
+      "summary": "SpaceX Super Intelligence宣布可以在Viktor里用Grok 4.7了，没有更多说明。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Grok Bot",
+      "title": "We use Grok Bot to spot incidents in our support queue and quickly respond to every associated ticke…",
+      "link": "https://x.com/bot/status/2112645531076096330",
+      "date": "2026-10-20",
+      "first_seen": "2026-10-25T23:48:11.868700+00:00",
+      "source_type": "x",
+      "summary": "有团队分享了用Grok Bot处理支持工单的例子，一次事故里它在大约10分钟内处理完204张关联工单，整个过程只需要一名工程师批准。",
+      "tier": "high",
+      "is_new": true
     },
     {
       "person": "Peter Steinberger",
@@ -43,6 +142,17 @@
       "summary": "Peter Steinberger把项目换到了tsrs，一个TypeScript编译器的替代品，速度快了约5倍。他感慨大厂一个团队花大工夫重写的东西，现在用agent几周就能做得更好。",
       "tier": "high",
       "is_new": false
+    },
+    {
+      "person": "Grok Bot",
+      "title": "Grok Bot is now one step closer.  Set it as your iPhone's Action Button and press it to talk with Bo…",
+      "link": "https://x.com/bot/status/2112252507762368684",
+      "date": "2026-10-19",
+      "first_seen": "2026-10-25T23:48:11.868734+00:00",
+      "source_type": "x",
+      "summary": "Grok Bot现在可以设成iPhone的动作按钮，按一下就能直接跟Bot对话。",
+      "tier": "medium",
+      "is_new": true
     }
   ]
 }
