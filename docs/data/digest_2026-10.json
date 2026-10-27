@@ -1,6 +1,57 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "GPT-6.1 Terra",
+      "link": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/",
+      "date": "2026-10-26",
+      "first_seen": "2026-10-27T01:06:29.179922+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison拆解了OpenAI新模型GPT-6.1 Terra，说它的定位类似Anthropic产品线里的Sonnet，不是最便宜也不是最强，反而最难判断什么时候该用。他还找了OpenAI员工的点评和自己一贯的鹈鹕骑车测试来对比效果，Terra的报价大约是上一代Terra和同系列Sol的一半，比最便宜的Luna贵了一截。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入解读新模型的定位、定价和实测效果，讲清楚了为什么重要，门槛不高"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "webframe: evaluated as a scraper and a sandbox",
+      "link": "https://simonwillison.net/2026/Oct/26/webframe-evaluation/",
+      "date": "2026-10-26",
+      "first_seen": "2026-10-27T01:06:29.180183+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison找Claude Opus去深度测试一个叫webframe的小工具，看它能不能当网页抓取器和沙盒用，还跑了几个原型项目验证效果。结论是跑得快、够轻量，抓取能力接近他自己做的shot-scraper，但视口尺寸、页面卡住、浏览器控制这些细节上还有不少毛边。这整个过程也是一次示范，演示怎么把AI当研究助手去系统性评测一个开源项目。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "示范了怎么用Claude当研究助手系统性评测一个开发工具，方法和结论都具体，门槛不高"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Working with academic communities to build scientific understanding",
+      "link": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+      "date": "2026-10-26",
+      "first_seen": "2026-10-27T01:06:33.265230+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI展示了模型在Kakeya猜想、指数时间假设和量子色动力学几个硬核数学物理问题上取得的具体结果，并说明研究者可以怎么核实和接着往下做。这类进展说明AI正在从解题工具变成能参与前沿研究的合作者，值得关注AI能力边界的人看一眼。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "展示模型在Kakeya猜想、指数时间假设、量子色动力学等具体硬核问题上的研究成果，内容扎实，说明AI正在参与前沿研究"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] Kimi 3.1 Pro 104BA-2.8T: Fable-5.1-Class Open Weights narrows Closed-AI lead to 1 month... and Pro Highspeed API with 2-3× speed",
       "link": "https://latent.space/p/ainews-kimi-31/",
@@ -88,7 +139,7 @@
           "reason": "agent直接驱动iOS模拟器这类桌面应用来测试自己构建的功能，正中eval track'视觉测试接agent'这一条"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -156,7 +207,7 @@
           "reason": "讲清楚了具体技术方法（训练标注点识别森林类型转变）和验证准确率，并说明了对环保监管政策的实际支持"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -324,7 +375,7 @@
           "reason": "给出具体量化结果（10分钟处理204张工单，一人审批），是实打实的agent能力案例"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -380,7 +431,7 @@
           "reason": "核心论点（AI时代唯一没法复制的是你自己的视角）跟锚点清单'一手不二手'母题是同一个意思，但被包装成创作者变现的论证，非纯粹反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ethan Mollick",
@@ -640,7 +691,7 @@
           "reason": "讲清楚了具体工作流（多工具AI agent协同筛选数据库）和实际成果（锁定候选分子进入实验室验证）"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Teo Crawford",
@@ -759,7 +810,7 @@
           "reason": "新旗舰语音模型发布，给出具体对比优势（响应速度、成本），是实打实的能力/成本声明"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -793,7 +844,7 @@
           "reason": "讲清楚了具体技术方案（两阶段本地管道、零云端数据外传）和真实政府合作案例，有量化的社会影响数据"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -844,7 +895,7 @@
           "reason": "讲清楚了具体的安全防护架构（三层实时防护、误对齐监控系统）和真实案例（帮Wiz发现医院软件漏洞），不是空洞通稿"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Cursor",
@@ -861,7 +912,7 @@
           "reason": "给出具体榜单成绩和价格，直接影响用户选模型的决策"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Google",
@@ -878,7 +929,7 @@
           "reason": "给出具体基准测试数字（物理推理87%）和多个应用实例，讲清楚了机器人专用版本的技术突破"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -1250,7 +1301,7 @@
           "reason": "给出具体的价格对比（短请求成本降到十分之一），直接影响用户选模型的成本决策"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -1352,7 +1403,7 @@
           "reason": "具体的移动端远程控制能力，直接影响日常怎么管理agent工作流"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -1420,7 +1471,7 @@
           "reason": "讲清楚了具体技术规格（设备端运行、低内存占用、代码嵌入效果提升）和实际应用场景，对做本地RAG的开发者有直接参考价值"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -1510,7 +1561,7 @@
           "reason": "商业变现课程，跟三根主干无实质连接"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Cursor",
@@ -1527,7 +1578,7 @@
           "reason": "给出了具体的SDK接口能力（运行中插话、子agent转后台继续工作），对用SDK搭agent的开发者有直接实操价值"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -1561,7 +1612,7 @@
           "reason": "给出具体的自动化修复链路（定位PR、开issue、一键启动云端agent修复），直接影响agent部署后的处理流程"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "NN/g",

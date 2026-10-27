@@ -1,6 +1,174 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "GPT-6.1 Terra",
+      "link": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/",
+      "date": "2026-10-26",
+      "first_seen": "2026-10-27T01:06:29.179922+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison拆解了OpenAI新模型GPT-6.1 Terra，说它的定位类似Anthropic产品线里的Sonnet，不是最便宜也不是最强，反而最难判断什么时候该用。他还找了OpenAI员工的点评和自己一贯的鹈鹕骑车测试来对比效果，Terra的报价大约是上一代Terra和同系列Sol的一半，比最便宜的Luna贵了一截。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入解读新模型的定位、定价和实测效果，讲清楚了为什么重要，门槛不高"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干和周边领域没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Lex Fridman",
+      "title": "#503 – AI Crisis in Math: Navier-Stokes, Riemann Hypothesis & Complexity Theory",
+      "link": "https://lexfridman.com/math-ai-crisis/?utm_source=rss&utm_medium=rss&utm_campaign=math-ai-crisis",
+      "date": "2026-10-26",
+      "first_seen": "2026-10-27T01:06:26.638605+00:00",
+      "source_type": "podcast",
+      "summary": "这期节目请了三位数学家，聊AI最近在纳维斯托克斯方程、黎曼猜想变体这些数学难题上的突破，也讨论AI到底能不能产生真正意义上的新数学。内容偏研究讨论，门槛比较高，适合对数学和AI能力边界感兴趣的人。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "讨论AI在数学难题上的突破和能不能产生新数学，内容扎实但技术门槛超出一般使用者，按难度爬坡规则判medium"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Jason Koebler",
+      "link": "https://simonwillison.net/2026/Oct/26/jason-koebler/",
+      "date": "2026-10-26",
+      "first_seen": "2026-10-27T01:06:29.180147+00:00",
+      "source_type": "blog",
+      "summary": "记者Jason Koebler发现一个现象，大科技公司基本没有真人客服，不少人碰到普通技术故障后转向ChatGPT求助，结果ChatGPT反而告诉他们这是有新闻价值的事，建议联系404 Media来报道。这条被Simon Willison转引，算是AI在客服场景里瞎出主意的一个真实案例。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "记录了ChatGPT在客服场景里瞎出主意误导用户的真实案例，沾AI边但内容轻量，是一条引用"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干和周边领域没有实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Greg Isenberg",
+      "title": "The $1,000/hour 1-person AI business",
+      "link": "https://www.youtube.com/watch?v=HKNpCwG3nlc",
+      "date": "2026-10-26",
+      "first_seen": "2026-10-27T01:06:27.028556+00:00",
+      "source_type": "youtube",
+      "summary": "这期播客里嘉宾分享了怎么用AI搭的营销落地页去找水管工、空调维修这类传统行业小老板签单，从筛客户到谈价格一套流程都讲了。核心思路是这些老板不缺预算，缺的是像样的获客页面和跟进话术，会用编程agent的人能把这事做成一个服务生意。内容偏实战案例分享，更像创业打法演示而不是技术教程。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "编程agent实战案例，偏创业打法演示性质"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "webframe: evaluated as a scraper and a sandbox",
+      "link": "https://simonwillison.net/2026/Oct/26/webframe-evaluation/",
+      "date": "2026-10-26",
+      "first_seen": "2026-10-27T01:06:29.180183+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison找Claude Opus去深度测试一个叫webframe的小工具，看它能不能当网页抓取器和沙盒用，还跑了几个原型项目验证效果。结论是跑得快、够轻量，抓取能力接近他自己做的shot-scraper，但视口尺寸、页面卡住、浏览器控制这些细节上还有不少毛边。这整个过程也是一次示范，演示怎么把AI当研究助手去系统性评测一个开源项目。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "示范了怎么用Claude当研究助手系统性评测一个开发工具，方法和结论都具体，门槛不高"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "展示了用AI搭建评测流程的具体做法，沾根二认知方式的边，但工具评测不是一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Working with academic communities to build scientific understanding",
+      "link": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+      "date": "2026-10-26",
+      "first_seen": "2026-10-27T01:06:33.265230+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI展示了模型在Kakeya猜想、指数时间假设和量子色动力学几个硬核数学物理问题上取得的具体结果，并说明研究者可以怎么核实和接着往下做。这类进展说明AI正在从解题工具变成能参与前沿研究的合作者，值得关注AI能力边界的人看一眼。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "展示模型在Kakeya猜想、指数时间假设、量子色动力学等具体硬核问题上的研究成果，内容扎实，说明AI正在参与前沿研究"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "ChatGPT’s expanding world of work",
+      "link": "https://openai.com/index/chatgpt-expanding-world-of-work",
+      "date": "2026-10-26",
+      "first_seen": "2026-10-27T01:06:33.265511+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI整理了Signals数据，覆盖近100个国家的165种工作场景，看人们实际怎么用ChatGPT处理工作、这种用法随时间怎么变化。文章没有展开太多具体案例，更像是一份宏观使用趋势概览。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "展示ChatGPT在全球工作场景里的宏观使用趋势数据，偏宏观叙事，没有具体到怎么用"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Introducing GPT-6.1 Terra",
+      "link": "https://openai.com/index/introducing-gpt-6-1-terra",
+      "date": "2026-10-26",
+      "first_seen": "2026-10-27T01:06:33.265560+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI发布新模型GPT-6.1 Terra，主打视觉推理和计算机操作能力，官方说它能看懂技术图纸、填表、剪视频这类日常办公任务。这是一篇偏通稿的发布公告，没有展开讲这次升级具体强在哪里。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "新模型发布，带来视觉推理和计算机操作能力提升，但是官方发布通稿，没有展开说明意义"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "Anthropic files S-1 with the SEC for proposed initial public offering",
+      "link": "https://www.anthropic.com/news/s1-sec",
+      "date": "2026-10-26",
+      "first_seen": "2026-10-27T01:06:39.067645+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic向美国证监会提交了S-1注册声明，为上市做准备，计划以代码ANT在纳斯达克挂牌。公告本身是法律文本，股票发行规模和定价区间目前还没公布。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Anthropic提交IPO申请是重要的行业动态，但公告是法律文本，没有展开说明意义"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] Kimi 3.1 Pro 104BA-2.8T: Fable-5.1-Class Open Weights narrows Closed-AI lead to 1 month... and Pro Highspeed API with 2-3× speed",
       "link": "https://latent.space/p/ainews-kimi-31/",
@@ -166,7 +334,7 @@
           "reason": "讲清楚了具体技术方法（训练标注点识别森林类型转变）和验证准确率，并说明了对环保监管政策的实际支持"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -439,7 +607,7 @@
           "reason": "核心论点（AI时代唯一没法复制的是你自己的视角）跟锚点清单'一手不二手'母题是同一个意思，但被包装成创作者变现的论证，非纯粹反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ethan Mollick",
@@ -476,79 +644,6 @@
           "track": "eval",
           "tier": "high",
           "reason": "直接命中'LLM/agent产品怎么建eval、eval工具怎么选'——系统对比多个决策模型做自动化评测的精确率/召回率/成本/概率校准"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Anthropic",
-      "title": "How Claude designed protein binders against scorpion neurotoxins",
-      "link": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
-      "date": "2026-10-20",
-      "first_seen": "2026-10-23T02:43:16.299900+00:00",
-      "source_type": "blog",
-      "summary": "一家金融研究公司借助Claude，针对几种蝎子毒素设计了大量候选蛋白质，送去实验室检测后，有17个确实能和毒素结合。这是研发新抗毒药物的第一步，离真正能用的药还很远。蝎子蜇伤每年伤及上百万人，却很少有药厂愿意投钱，这类被忽视的病可能是AI设计药物最先派上用场的地方。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "极具体的科研实践案例,数据扎实(31.8万候选设计/211个测试/17个确认结合),讲清楚是什么为什么重要"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Arvind Narayanan & Sayash Kapoor",
-      "title": "New paper: Emerging trends in AI agent evaluation",
-      "link": "https://www.normaltech.ai/p/new-paper-emerging-trends-in-ai-agent",
-      "date": "2026-10-19",
-      "first_seen": "2026-10-23T02:42:43.117530+00:00",
-      "source_type": "blog",
-      "summary": "普林斯顿等机构的团队发了一篇论文，梳理AI agent评测领域正在出现的新趋势。重点是agent评测比模型评测难得多，不光要看结果，还要看它一路是怎么做的、有没有走捷径，有的评测跑一次就要花几万美元。他们还提醒，测出来的能力不一定能用到真实工作里，有实验发现用了agent工具反而让开发变慢了。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "研究论文级别的agent评测生态系统梳理,内容扎实但属研究论文级别不给high"
-        },
-        {
-          "track": "eval",
-          "tier": "high",
-          "reason": "直接命中'LLM/agent产品怎么建eval、eval工具怎么选、自动化评测靠不靠谱'——系统梳理agent评测的方法论和生态系统问题"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Greg Isenberg",
-      "title": "Meta Muse Will Create 1,000 Millionaires",
-      "link": "https://www.youtube.com/watch?v=tpZOU1ugODQ",
-      "date": "2026-10-19",
-      "first_seen": "2026-10-24T00:15:21.920736+00:00",
-      "source_type": "youtube",
-      "summary": "Greg Isenberg讲了怎么靠Meta Muse挖Facebook群组、Marketplace和Instagram上的信息，撮合买家和卖家赚钱，灵感来自他自己请不到合适月嫂代理后动手做的尝试。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "具体示范了怎么用Meta Muse挖Facebook群组和Marketplace信息来做买卖双方匹配生意，是实操案例"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "Advancing coding in low‑resource programming languages",
-      "link": "https://openai.com/index/low-resource-programming-languages",
-      "date": "2026-10-19",
-      "first_seen": "2026-10-23T02:42:43.804444+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI讲他们怎样提升ChatGPT写冷门编程语言的能力，比如很老的COBOL，这类语言能拿来训练的资料很少。他们为此专门设计了新的评测，覆盖给数据库写扩展、把老系统迁移出来这类真实场景。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "具体的能力提升+真实场景评测(SQLite扩展/COBOL迁移),讲清楚是什么为什么重要(WebFetch 403仅凭摘要判断)"
         }
       ],
       "is_new": false
