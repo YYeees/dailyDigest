@@ -2,6 +2,184 @@
   "items": [
     {
       "person": "Simon Willison",
+      "title": "Game Boy Color on My Conference Badge",
+      "link": "https://simonwillison.net/2026/Oct/27/game-boy-color-on-my-conference-badge/",
+      "date": "2026-10-27",
+      "first_seen": "2026-10-28T00:58:12.251669+00:00",
+      "source_type": "blog",
+      "summary": "这届GitHub Universe的会议徽章本身就是一块全彩小电脑，开发者Steve Francia借助Gemini的帮助在上面跑起了NES和Game Boy模拟器，徽章翻过来还能当游戏手柄按。Simon Willison记录的是这个好玩的硬件黑客故事，本身信息量不大，适合随手一看。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "编程agent实战案例,偏娱乐演示性质,是会议徽章跑游戏模拟器的趣闻而非严肃实操内容"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "是Willison转述别人做的硬件黑客故事,不是他本人的一手经历"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "How Anthropic ships Claude with Claude: Separating the Brain from the Hands",
+      "link": "https://latent.space/p/opus55/",
+      "date": "2026-10-27",
+      "first_seen": "2026-10-28T00:58:13.317460+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic工程负责人Katelyn Lesse和产品负责人Angela Jiang详细讲了Opus 5.5怎么做出来的，核心比喻是把agent的大脑和手分开：大脑负责对话记录和推理，手是真正执行代码的沙盒，沙盒挂了也不会丢掉整个对话。他们还聊到为什么要锁住模型的思考过程防止被蒸馏，以及怎么判断一个新模型能不能安全上线。对关心agent架构怎么设计的人，这是少见的一手工程细节。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Anthropic工程与产品负责人详细讲Opus 5.5怎么做出来的,agent大脑与手分离架构讲得透彻,一手工程细节"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "访谈核心是护城河在harness不在模型这条正向母题,由实际做这件事的工程负责人口述,属于一手经验"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "How Anthropic ships the #1 LLM in the World safely: Separating the Brain from the Hands",
+      "link": "https://latent.space/p/how_anthropic_ships_the_1_llm_in_the_world_safely_separating_the_brain_from_the_hands/",
+      "date": "2026-10-27",
+      "first_seen": "2026-10-28T00:58:13.328141+00:00",
+      "source_type": "blog",
+      "summary": "这是Latent Space对Anthropic工程负责人Katelyn Lesse和产品负责人Angela Jiang的播客访谈，围绕Opus 5.5发布和Claude平台的工程设计展开，核心比喻是把agent的大脑和手分开。这条本身只有分段时间轴和链接，下方另有一篇含完整文字稿的版本信息量更全。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "与下方同一期播客的完整文字稿文章重复,这条只有分段时间轴和链接,信息量少一截,择一看即可"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "同样与下方完整版重复,护城河在harness母题同样沾边但信息量不如完整版"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Google",
+      "title": "Genie 4: A new generation of world simulation",
+      "link": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+      "date": "2026-10-27",
+      "first_seen": "2026-10-28T00:58:23.932251+00:00",
+      "source_type": "blog",
+      "summary": "Google DeepMind发布了新一代世界模型Genie 4，能用自然语言实时生成并交互式修改照片级逼真的虚拟世界。这一代新加了原生音效生成，场景里的风声、水声和角色对话都是模型自己生成的，而不是另外叠加的音轨。它还能让Gemini当导演，把一个长目标拆成多个步骤去执行，让虚拟世界里的因果关系更可靠。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布,讲清楚世界模型Genie 4实时生成交互式虚拟世界的新能力和原理,为什么重要"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Coding From the Himalayas With an Offline AI Agent",
+      "link": "https://latent.space/p/offline-coding/",
+      "date": "2026-10-27",
+      "first_seen": "2026-10-28T00:58:13.328428+00:00",
+      "source_type": "blog",
+      "summary": "作者搬到喜马拉雅山麓以后常遇到断网断电，于是试了试编程agent能不能完全离线干活。他用开源工具OpenCode配合本地跑的Ollama和开源模型Qwen，断网后让agent读代码、定位bug并修好，自己再用原有测试验证结果。结论是离线agent能应付小范围的具体任务，但还没法验证能不能扛住更大的项目。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "完整实操指南,讲清楚怎么用OpenCode配本地Ollama跑开源模型做离线编程agent,附带真实测试过程和局限"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "作者因为搬到喜马拉雅山麓常断网而主动选择离线工作方式,沾清净的场域这条候选母题的边,但全文主体是技术教程不是对这个选择本身的反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Anthropic files for $2T IPO in 2 weeks: 1400% growth rate, 48% of revenue through cloud partners, 85% margin, $1B op profit in Q2, $134B cash in bank and $10B lifetime burn",
+      "link": "https://latent.space/p/ainews-anthropic-s1/",
+      "date": "2026-10-27",
+      "first_seen": "2026-10-28T00:58:13.329997+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic提交了IPO招股书，这篇是Latent Space对关键数字的速读。增长率、利润率、账上现金这些指标被摘出来配图讲清楚，公司定位也从聊天机器人换成了虚拟同事这个说法。如果想快速搞懂这次IPO说了什么，这篇比原始文件好读很多。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Anthropic IPO招股书的数字速读,沾AI边但属于宏观商业叙事,不是实操内容"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "Early progress on accelerating drug development with Claude",
+      "link": "https://www.anthropic.com/research/early-progress-drug-development",
+      "date": "2026-10-27",
+      "first_seen": "2026-10-28T00:58:23.762694+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic和多家药企合作，把Claude用进新药研发的每一步，而不只是设计新分子本身。比如一款抗癌细胞疗法的关键基因片段被改短七成，药效反而更好；一份新药申报文件的撰写时间从三个月压缩到几小时。这是目前关于AI能不能啃下硬核专业工作最详实的一批案例。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "六家药企合作案例详实,讲清楚Claude在新药研发各环节具体怎么用、效果如何,不是空泛通稿"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "Expanding our partnership with GSA to bring Claude to all levels of government",
+      "link": "https://www.anthropic.com/news/expanding-partnership-gsa",
+      "date": "2026-10-27",
+      "first_seen": "2026-10-28T00:58:23.764134+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic和美国联邦总务署扩大合作，给各级政府机构的Claude订阅大幅打折，目前已有约五百个美国联邦、州、地方政府在用Claude。案例包括几分钟内处理完原本要两三天的勒索软件攻击，一个州两天内把近千个接口迁移到新框架。对关心AI能不能真正进入传统机构的人，这篇给了不少具体案例。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "政府合作与打折政策的企业公告,偏宏观叙事和自我推广,案例列举有一定信息量但不深入"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "How AI agents shape experts’ judgment calls",
+      "link": "https://www.anthropic.com/research/agents-judgment-calls",
+      "date": "2026-10-27",
+      "first_seen": "2026-10-28T00:58:23.764580+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic让五十位有经验的分析师用Claude Code做一份数据分析，并悄悄给每个人的agent随机设定一个倾向。结果分析师选跟agent一致选项的比例高达八成六，哪怕事先已经有自己的判断，agent一反对也大多会改主意。更值得在意的是，多数人事后还觉得这个结论是自己独立想出来的。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "严肃研究但讲得清楚易懂,揭示专家跟agent协作时判断力被悄悄左右的真实数据,对怎么跟AI共事有实操启发"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "直接印证认知系统不能外包这条母题,但这是Anthropic的研究,不是用户或作者本人的一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
       "title": "GPT-6.1 Terra",
       "link": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/",
       "date": "2026-10-26",
@@ -13,14 +191,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "深入解读新模型的定位、定价和实测效果，讲清楚了为什么重要，门槛不高"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干和周边领域没有实质连接"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Lex Fridman",
@@ -37,29 +210,7 @@
           "reason": "讨论AI在数学难题上的突破和能不能产生新数学，内容扎实但技术门槛超出一般使用者，按难度爬坡规则判medium"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Jason Koebler",
-      "link": "https://simonwillison.net/2026/Oct/26/jason-koebler/",
-      "date": "2026-10-26",
-      "first_seen": "2026-10-27T01:06:29.180147+00:00",
-      "source_type": "blog",
-      "summary": "记者Jason Koebler发现一个现象，大科技公司基本没有真人客服，不少人碰到普通技术故障后转向ChatGPT求助，结果ChatGPT反而告诉他们这是有新闻价值的事，建议联系404 Media来报道。这条被Simon Willison转引，算是AI在客服场景里瞎出主意的一个真实案例。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "记录了ChatGPT在客服场景里瞎出主意误导用户的真实案例，沾AI边但内容轻量，是一条引用"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干和周边领域没有实质连接"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -76,7 +227,7 @@
           "reason": "编程agent实战案例，偏创业打法演示性质"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -91,14 +242,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "示范了怎么用Claude当研究助手系统性评测一个开发工具，方法和结论都具体，门槛不高"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "展示了用AI搭建评测流程的具体做法，沾根二认知方式的边，但工具评测不是一手反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -115,7 +261,7 @@
           "reason": "展示模型在Kakeya猜想、指数时间假设、量子色动力学等具体硬核问题上的研究成果，内容扎实，说明AI正在参与前沿研究"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -132,7 +278,7 @@
           "reason": "展示ChatGPT在全球工作场景里的宏观使用趋势数据，偏宏观叙事，没有具体到怎么用"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -149,7 +295,7 @@
           "reason": "新模型发布，带来视觉推理和计算机操作能力提升，但是官方发布通稿，没有展开说明意义"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -166,7 +312,7 @@
           "reason": "Anthropic提交IPO申请是重要的行业动态，但公告是法律文本，没有展开说明意义"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -527,123 +673,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "具体的科研实践案例(上千分布式agent分析脑细胞数据),命中criterion③应用案例(WebFetch 403仅凭摘要判断)"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Craig Mod",
-      "title": "[RODEN] Digger Is Good, Notebooks, Please Be Weirder",
-      "link": "https://craigmod.com/roden/119/",
-      "date": "2026-10-21",
-      "first_seen": "2026-10-23T02:42:39.048773+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "仅是旅行/天气的生活琐事,未深入到质朴中正的构建者活法母题"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Battle Drones - a vibe coded RTS with audio-based multiplayer",
-      "link": "https://simonwillison.net/2026/Oct/20/battledrones/",
-      "date": "2026-10-20",
-      "first_seen": "2026-10-23T02:42:40.704116+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison几乎不看代码，用Claude Code一路“vibe coding”出一个即时战略游戏，从能玩但不好玩，做到能靠手机麦克风的声音联机对战。中间他只说了一句“让它更好玩”，Claude就自己跑了一整晚、模拟上千场对局来调平衡。他也坦白了做出好东西却觉得自己不配的那份愧疚，还总结了几条做游戏的实操经验。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "极具体、持续多轮的vibe coding深度实践记录,含完整prompt过程和真实技术教训(确定性仿真/音频联机/工具近乎免费)"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "命中反射母题'上游原创vs下游组合'——作者一手、持续地反思自己几乎没审查代码却做出高质量成品的'愧疚感'和创作归属问题"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "The Programmable Data Center — Evan Conrad, SF Compute",
-      "link": "https://www.latent.space/p/sfcompute2",
-      "date": "2026-10-20",
-      "first_seen": "2026-10-23T02:42:41.180894+00:00",
-      "source_type": "blog",
-      "summary": "Latent Space采访SF Compute的创始人，讲GPU算力怎样从转租集群变成像期货一样能交易的商品。难点在于算力不像石油那样整齐划一，能不能被中断、显卡是哪一代，都会影响它值多少钱。这个市场现在还很小，但已经有明显的差价可赚。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "AI基础设施相关(GPU算力交易市场)的深度访谈,内容扎实但偏小众金融市场叙事,非直接AI实操指南"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Dan Koe",
-      "title": "The influencer is dead. The Age of Experience is here.",
-      "link": "https://letters.thedankoe.com/p/the-influencer-is-dead-the-age-of",
-      "date": "2026-10-20",
-      "first_seen": "2026-10-25T23:47:44.421098+00:00",
-      "source_type": "blog",
-      "summary": "这篇说短视频网红和纯卖课的个人品牌都在过气，未来属于把社交媒体当成副产品、靠一份能留下来的作品说话的手艺人。作者的核心论点是，AI时代唯一没法被复制的东西是你自己独一无二的视角，这跟锚点清单里一手不二手的想法是同一个意思，只是被包装成了创作者变现的论证。他给了一套用Eden或接了Eden的Claude做选题研究、找表达角度的具体提示词，但整体还是在为自己的产品导流。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "给了一套用Eden或接了Eden的Claude做选题研究、找表达角度的具体提示词，有实操信息，但整体是创作者变现内容"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "核心论点（AI时代唯一没法复制的是你自己的视角）跟锚点清单'一手不二手'母题是同一个意思，但被包装成创作者变现的论证，非纯粹反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Ethan Mollick",
-      "title": "30 Months on the Exponential (in Charts)",
-      "link": "https://www.oneusefulthing.org/p/30-months-on-the-exponential-in-charts",
-      "date": "2026-10-20",
-      "first_seen": "2026-10-23T02:42:40.470427+00:00",
-      "source_type": "blog",
-      "summary": "Ethan Mollick借新书出版，用图表回顾AI这30个月的进展：AI能独立干完的活越来越长，同样难度的问题成本却降到了原来的几百分之一。他提出一种叫“召唤者”的协作方式，按需叫来一批agent分活再自己验收，威力最大，也最容易搞不清AI到底在干什么。这篇文章的配图本身就是他用这种方式让Claude做的。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "权威的AI能力趋势回顾,具体数据扎实(METR基准进展/成本下降),提出实用框架(centaur/cyborg/conjurer三种协作模式)"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Hamel Husain",
-      "title": "How To Use Decision Models for Evals",
-      "link": "https://hamel.dev/blog/posts/decision-model-evals/",
-      "date": "2026-10-20",
-      "first_seen": "2026-10-23T02:42:41.733965+00:00",
-      "source_type": "blog",
-      "summary": "Hamel Husain比较了几款专门做“是或否”判断的小模型，看它们能不能代替昂贵的大模型当评测裁判。他发现默认的判定标准往往不是最好的，要用自己的数据去调，还给了一段能直接交给coding agent去调的提示词。核心建议是先定好你能接受的准确度，再在达标的模型里挑最便宜的。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "极扎实的评测方法论实操指南,命中criterion③(选型/应用指南),有具体可执行的调优prompt和数据"
-        },
-        {
-          "track": "eval",
-          "tier": "high",
-          "reason": "直接命中'LLM/agent产品怎么建eval、eval工具怎么选'——系统对比多个决策模型做自动化评测的精确率/召回率/成本/概率校准"
         }
       ],
       "is_new": false

@@ -1,6 +1,96 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "How Anthropic ships Claude with Claude: Separating the Brain from the Hands",
+      "link": "https://latent.space/p/opus55/",
+      "date": "2026-10-27",
+      "first_seen": "2026-10-28T00:58:13.317460+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic工程负责人Katelyn Lesse和产品负责人Angela Jiang详细讲了Opus 5.5怎么做出来的，核心比喻是把agent的大脑和手分开：大脑负责对话记录和推理，手是真正执行代码的沙盒，沙盒挂了也不会丢掉整个对话。他们还聊到为什么要锁住模型的思考过程防止被蒸馏，以及怎么判断一个新模型能不能安全上线。对关心agent架构怎么设计的人，这是少见的一手工程细节。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Anthropic工程与产品负责人详细讲Opus 5.5怎么做出来的,agent大脑与手分离架构讲得透彻,一手工程细节"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "访谈核心是护城河在harness不在模型这条正向母题,由实际做这件事的工程负责人口述,属于一手经验"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Google",
+      "title": "Genie 4: A new generation of world simulation",
+      "link": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+      "date": "2026-10-27",
+      "first_seen": "2026-10-28T00:58:23.932251+00:00",
+      "source_type": "blog",
+      "summary": "Google DeepMind发布了新一代世界模型Genie 4，能用自然语言实时生成并交互式修改照片级逼真的虚拟世界。这一代新加了原生音效生成，场景里的风声、水声和角色对话都是模型自己生成的，而不是另外叠加的音轨。它还能让Gemini当导演，把一个长目标拆成多个步骤去执行，让虚拟世界里的因果关系更可靠。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布,讲清楚世界模型Genie 4实时生成交互式虚拟世界的新能力和原理,为什么重要"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Coding From the Himalayas With an Offline AI Agent",
+      "link": "https://latent.space/p/offline-coding/",
+      "date": "2026-10-27",
+      "first_seen": "2026-10-28T00:58:13.328428+00:00",
+      "source_type": "blog",
+      "summary": "作者搬到喜马拉雅山麓以后常遇到断网断电，于是试了试编程agent能不能完全离线干活。他用开源工具OpenCode配合本地跑的Ollama和开源模型Qwen，断网后让agent读代码、定位bug并修好，自己再用原有测试验证结果。结论是离线agent能应付小范围的具体任务，但还没法验证能不能扛住更大的项目。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "完整实操指南,讲清楚怎么用OpenCode配本地Ollama跑开源模型做离线编程agent,附带真实测试过程和局限"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "Early progress on accelerating drug development with Claude",
+      "link": "https://www.anthropic.com/research/early-progress-drug-development",
+      "date": "2026-10-27",
+      "first_seen": "2026-10-28T00:58:23.762694+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic和多家药企合作，把Claude用进新药研发的每一步，而不只是设计新分子本身。比如一款抗癌细胞疗法的关键基因片段被改短七成，药效反而更好；一份新药申报文件的撰写时间从三个月压缩到几小时。这是目前关于AI能不能啃下硬核专业工作最详实的一批案例。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "六家药企合作案例详实,讲清楚Claude在新药研发各环节具体怎么用、效果如何,不是空泛通稿"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "How AI agents shape experts’ judgment calls",
+      "link": "https://www.anthropic.com/research/agents-judgment-calls",
+      "date": "2026-10-27",
+      "first_seen": "2026-10-28T00:58:23.764580+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic让五十位有经验的分析师用Claude Code做一份数据分析，并悄悄给每个人的agent随机设定一个倾向。结果分析师选跟agent一致选项的比例高达八成六，哪怕事先已经有自己的判断，agent一反对也大多会改主意。更值得在意的是，多数人事后还觉得这个结论是自己独立想出来的。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "严肃研究但讲得清楚易懂,揭示专家跟agent协作时判断力被悄悄左右的真实数据,对怎么跟AI共事有实操启发"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "GPT-6.1 Terra",
       "link": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/",
@@ -15,7 +105,7 @@
           "reason": "深入解读新模型的定位、定价和实测效果，讲清楚了为什么重要，门槛不高"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -32,7 +122,7 @@
           "reason": "示范了怎么用Claude当研究助手系统性评测一个开发工具，方法和结论都具体，门槛不高"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -49,7 +139,7 @@
           "reason": "展示模型在Kakeya猜想、指数时间假设、量子色动力学等具体硬核问题上的研究成果，内容扎实，说明AI正在参与前沿研究"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",

@@ -2,6 +2,28 @@
   "items": [
     {
       "person": "Cursor",
+      "title": "New in Cursor design mode: Annotate.  Give agents visual prompts: edit elements, draw on the page, a…",
+      "link": "https://x.com/cursor_ai/status/2115159585548021814",
+      "date": "2026-10-27",
+      "first_seen": "2026-10-28T00:58:36.891707+00:00",
+      "source_type": "x",
+      "summary": "Cursor的设计模式里新加了一个标注功能，可以直接在页面元素上画图或做批注，把这些可视化提示交给agent去改界面，还能按不同屏幕尺寸预览效果。这是给用AI写前端界面的人一个更直观的指挥方式，不用全靠文字描述要改哪里。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Grok Bot",
+      "title": "Our sales operations team built Shared Bots that help reps move deals faster.  Account Intel Bot upd…",
+      "link": "https://x.com/bot/status/2115130760009273501",
+      "date": "2026-10-27",
+      "first_seen": "2026-10-28T00:58:36.025629+00:00",
+      "source_type": "x",
+      "summary": "这条推文介绍的是销售团队内部用的几个agent机器人，一个自动在通话后更新客户关系系统，一个负责准备报价单，一个负责审核非标准条款并转交审批。本质是企业内部agentic工作流的一个小案例，信息量不大。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Cursor",
       "title": "DeepSeek V4.1 Flash is now available in Cursor!  Every effort level sits on the CursorBench cost fro…",
       "link": "https://x.com/cursor_ai/status/2114839997568405608",
       "date": "2026-10-26",
@@ -9,7 +31,7 @@
       "source_type": "x",
       "summary": "Cursor上线了DeepSeek V4.1 Flash模型，可以在设置里的Models里开启试用。官方说它在性价比榜单CursorBench上目前最划算，各档算力消耗都处在成本前沿。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Cursor",
@@ -20,7 +42,7 @@
       "source_type": "x",
       "summary": "Cursor推出了Agent SDK，可以用Markdown写prompt、用TypeScript写工具来定义agent，还能托管在他们的基础设施上跑。自带的eval功能可以衡量每次改动效果，方便持续优化agent表现。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrej Karpathy",
@@ -130,39 +152,6 @@
       "source_type": "x",
       "summary": "SpaceX Super Intelligence宣布可以在Viktor里用Grok 4.7了，没有更多说明。",
       "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Grok Bot",
-      "title": "We use Grok Bot to spot incidents in our support queue and quickly respond to every associated ticke…",
-      "link": "https://x.com/bot/status/2112645531076096330",
-      "date": "2026-10-20",
-      "first_seen": "2026-10-25T23:48:11.868700+00:00",
-      "source_type": "x",
-      "summary": "有团队分享了用Grok Bot处理支持工单的例子，一次事故里它在大约10分钟内处理完204张关联工单，整个过程只需要一名工程师批准。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Two weeks ago I kicked off a loop to move OpenClaw's Lit-based Web frontend to Solid 2.0.  Took ~6 d…",
-      "link": "https://x.com/steipete/status/2112597162924351909",
-      "date": "2026-10-20",
-      "first_seen": "2026-10-23T02:43:27.349646+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger让一个agent自己跑了两周，把OpenClaw的网页前端整个换成了另一个框架，他只是隔天看一眼进度。结果页面更小，反应也更快。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Peter Steinberger",
-      "title": "Moved to tsrs over the weekend. Drop-in replacement. Around 5x faster for OC.  Kind of amazing that…",
-      "link": "https://x.com/steipete/status/2112571535731106013",
-      "date": "2026-10-20",
-      "first_seen": "2026-10-23T02:43:27.349682+00:00",
-      "source_type": "x",
-      "summary": "Peter Steinberger把项目换到了tsrs，一个TypeScript编译器的替代品，速度快了约5倍。他感慨大厂一个团队花大工夫重写的东西，现在用agent几周就能做得更好。",
-      "tier": "high",
       "is_new": false
     }
   ]
