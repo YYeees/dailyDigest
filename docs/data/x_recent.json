@@ -9,7 +9,7 @@
       "source_type": "x",
       "summary": "Cursor的设计模式里新加了一个标注功能，可以直接在页面元素上画图或做批注，把这些可视化提示交给agent去改界面，还能按不同屏幕尺寸预览效果。这是给用AI写前端界面的人一个更直观的指挥方式，不用全靠文字描述要改哪里。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Grok Bot",
@@ -20,7 +20,7 @@
       "source_type": "x",
       "summary": "这条推文介绍的是销售团队内部用的几个agent机器人，一个自动在通话后更新客户关系系统，一个负责准备报价单，一个负责审核非标准条款并转交审批。本质是企业内部agentic工作流的一个小案例，信息量不大。",
       "tier": "low",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Cursor",
@@ -118,39 +118,6 @@
       "first_seen": "2026-10-25T23:48:11.868567+00:00",
       "source_type": "x",
       "summary": "Grok Bot现在可以用你的1Password账号了，批准要共享的登录信息后，Bot能帮你自动登录，这个功能接下来几天会逐步推送给用户。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @claudeai: We’re opening a research preview of Claude Duet, a new app where Claude works as a pro…",
-      "link": "https://x.com/bcherny/status/2113060750252274088",
-      "date": "2026-10-22",
-      "first_seen": "2026-10-23T02:43:26.125993+00:00",
-      "source_type": "x",
-      "summary": "Claude官方开放了新应用Claude Duet的试用，Claude会像主动干活的助手一样，带着准备好的东西来找你。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Grok Bot",
-      "title": "Grok Bot can now build reports, memos, and dashboards.  Ask Bot for a page, then edit it together or…",
-      "link": "https://x.com/bot/status/2112992872857252082",
-      "date": "2026-10-21",
-      "first_seen": "2026-10-25T23:48:11.868634+00:00",
-      "source_type": "x",
-      "summary": "Grok Bot现在能直接生成报告、备忘录和仪表盘，你可以让它做一页内容，然后一起编辑，或者让它自己保持更新。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "SpaceX Super Intelligence",
-      "title": "Use Grok 4.7 in Viktor",
-      "link": "https://x.com/SpaceXSI/status/2112959750786953386",
-      "date": "2026-10-21",
-      "first_seen": "2026-10-25T23:48:10.885389+00:00",
-      "source_type": "x",
-      "summary": "SpaceX Super Intelligence宣布可以在Viktor里用Grok 4.7了，没有更多说明。",
       "tier": "low",
       "is_new": false
     }

@@ -1,6 +1,96 @@
 {
   "items": [
     {
+      "person": "Greg Isenberg",
+      "title": "$100M ARR Founder: The Next Big AI Opportunity",
+      "link": "https://www.youtube.com/watch?v=st61aKW8P5A",
+      "date": "2026-10-28",
+      "first_seen": "2026-10-29T01:31:47.333424+00:00",
+      "source_type": "youtube",
+      "summary": "Greg Isenberg采访了Gamma联合创始人Jon Noronha，聊的核心概念是agent harness，也就是让agent动手做事、自查结果再交付的一整套工具链。Jon说一份Gamma的PPT背后要跑大约20个模型、200次调用，光检查排版就要好几轮。他觉得做垂直agent产品的机会在于用户主观判断强、还想要人把关的领域，护城河来自独特产品直觉、自有数据，或者把AI和真实物理世界结合起来的生意。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入讲agent harness这个构建者核心概念，附Gamma真实产品案例和选品方法论，门槛不高又扎实"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Google",
+      "title": "Gemini 4 Carbon: Our next frontier model",
+      "link": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+      "date": "2026-10-28",
+      "first_seen": "2026-10-29T01:32:01.893818+00:00",
+      "source_type": "blog",
+      "summary": "Google发布新模型Gemini 4 Carbon，主打网络安全防御能力和能连续干几天活的长任务能力，比如独立修复大型代码库里的bug。它识别和修复安全漏洞的表现比上一代提升了两倍多，撒谎和作弊的概率也明显降低，提示注入攻击基本防得住。目前先给网络安全从业者开放，之后再逐步推广给普通开发者和企业。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "新一代前沿模型发布，附具体benchmark和安全性数据，讲清楚能力边界，不是空泛通稿"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "GitHub Octoverse 2026",
+      "link": "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/",
+      "date": "2026-10-28",
+      "first_seen": "2026-10-29T01:31:49.925663+00:00",
+      "source_type": "blog",
+      "summary": "GitHub发布的2026年Octoverse报告显示，agent写代码已经把开发节奏推到了新高度，现在每月有2.2亿个PR被合并，提交数一年内涨了三倍多，新建仓库数量也翻了一倍。报告还用大模型给这些仓库按地区和行业分类，想说明agent工程正在整体改变GitHub上的开发规模。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "GitHub官方年度数据显示agent工程对开发规模的量级冲击，是重要的行业趋势信号"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "The October inflection point for vibe game development",
+      "link": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
+      "date": "2026-10-28",
+      "first_seen": "2026-10-29T01:31:49.925738+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison说2026年10月是用AI做游戏的一个转折点，Claude Opus 5.5在建模、配乐和游戏设计上的进步，让AI终于能做出真正好玩而不只是看起来像游戏的东西。他举了四个自己做的例子，从单次生成的找茬小游戏到支持多人对战的即时战略游戏，每个花的功夫都不超过四小时。他认为这会让更多没写过代码的人也能做游戏，但也会引来游戏圈对AI内容的争议。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型能力新趋势讲清楚是什么为什么重要，Opus 5.5在建模配乐游戏设计上的进步，附具体可验证案例"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者本人一手记录用AI构建产品的完整过程和反思，踩中深度加真做出来的东西是燃料这条母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Anthropic ends Coding Interviews: \"Hunger beats tenure\"",
+      "link": "https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/",
+      "date": "2026-10-28",
+      "first_seen": "2026-10-29T01:31:51.193690+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space的AI新闻汇总里，头条讲Anthropic一位招聘经理宣布不再考编程面试题，理由是Claude写代码已经比候选人强。他给新人工程师的建议是少写需求文档，直接用周末时间攒出能跑的原型，而且一次只做一个好点子。这反映招聘标准正从会不会写代码转向能不能拿出有商业价值的东西。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接讲AI对编程面试和招聘标准的实质冲击，附具体建议，不是纯新闻通稿"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "How Anthropic ships Claude with Claude: Separating the Brain from the Hands",
       "link": "https://latent.space/p/opus55/",
@@ -20,7 +110,7 @@
           "reason": "访谈核心是护城河在harness不在模型这条正向母题,由实际做这件事的工程负责人口述,属于一手经验"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Google",
@@ -37,7 +127,7 @@
           "reason": "前沿模型新发布,讲清楚世界模型Genie 4实时生成交互式虚拟世界的新能力和原理,为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -54,7 +144,7 @@
           "reason": "完整实操指南,讲清楚怎么用OpenCode配本地Ollama跑开源模型做离线编程agent,附带真实测试过程和局限"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -71,7 +161,7 @@
           "reason": "六家药企合作案例详实,讲清楚Claude在新药研发各环节具体怎么用、效果如何,不是空泛通稿"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -88,7 +178,7 @@
           "reason": "严肃研究但讲得清楚易懂,揭示专家跟agent协作时判断力被悄悄左右的真实数据,对怎么跟AI共事有实操启发"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

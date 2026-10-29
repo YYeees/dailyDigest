@@ -2,22 +2,178 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "Game Boy Color on My Conference Badge",
-      "link": "https://simonwillison.net/2026/Oct/27/game-boy-color-on-my-conference-badge/",
-      "date": "2026-10-27",
-      "first_seen": "2026-10-28T00:58:12.251669+00:00",
+      "title": "Quoting Ted Sanders",
+      "link": "https://simonwillison.net/2026/Oct/28/ted-sanders/",
+      "date": "2026-10-28",
+      "first_seen": "2026-10-29T01:31:49.925466+00:00",
       "source_type": "blog",
-      "summary": "这届GitHub Universe的会议徽章本身就是一块全彩小电脑，开发者Steve Francia借助Gemini的帮助在上面跑起了NES和Game Boy模拟器，徽章翻过来还能当游戏手柄按。Simon Willison记录的是这个好玩的硬件黑客故事，本身信息量不大，适合随手一看。",
+      "summary": "Simon Willison转引Ted Sanders解释OpenAI模型命名规则的一段话。模型表现是多维的，擅长数学的模型不一定擅长讲笑话，但模型越大通常越可靠、越贵，也越记得住冷门知识。版本号同时体现发布顺序、和其他版本的相似度，以及这次升级的幅度大小。",
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "编程agent实战案例,偏娱乐演示性质,是会议徽章跑游戏模拟器的趣闻而非严肃实操内容"
+          "reason": "解释AI厂商模型命名规则背后的逻辑，有助理解行业，但偏知识性，不直接改变怎么用AI"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "是Willison转述别人做的硬件黑客故事,不是他本人的一手经历"
+          "reason": "跟三根主干无关"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Why Agents Love Supabase",
+      "link": "https://latent.space/p/supabase/",
+      "date": "2026-10-28",
+      "first_seen": "2026-10-29T01:31:51.192835+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space采访了Supabase的两位创始人，聊agent为什么偏爱用Supabase做后端。关键是本地开发不用装Docker了，数据库结构能像代码一样存进Git里管理和追溯，计算也能挨着数据库跑。这些对人类开发者本来就是减负，对会反复搭建环境的agent来说更是直接省掉了大段摩擦。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "讲清楚agent为什么偏爱某个后端的具体技术原因，但主题聚焦单一厂商产品，偏基础设施选型"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Greg Isenberg",
+      "title": "$100M ARR Founder: The Next Big AI Opportunity",
+      "link": "https://www.youtube.com/watch?v=st61aKW8P5A",
+      "date": "2026-10-28",
+      "first_seen": "2026-10-29T01:31:47.333424+00:00",
+      "source_type": "youtube",
+      "summary": "Greg Isenberg采访了Gamma联合创始人Jon Noronha，聊的核心概念是agent harness，也就是让agent动手做事、自查结果再交付的一整套工具链。Jon说一份Gamma的PPT背后要跑大约20个模型、200次调用，光检查排版就要好几轮。他觉得做垂直agent产品的机会在于用户主观判断强、还想要人把关的领域，护城河来自独特产品直觉、自有数据，或者把AI和真实物理世界结合起来的生意。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深入讲agent harness这个构建者核心概念，附Gamma真实产品案例和选品方法论，门槛不高又扎实"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "主题正中护城河在harness不在模型这条母题，但是访谈转述Jon的经历，不是作者本人一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Google",
+      "title": "Gemini 4 Carbon: Our next frontier model",
+      "link": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+      "date": "2026-10-28",
+      "first_seen": "2026-10-29T01:32:01.893818+00:00",
+      "source_type": "blog",
+      "summary": "Google发布新模型Gemini 4 Carbon，主打网络安全防御能力和能连续干几天活的长任务能力，比如独立修复大型代码库里的bug。它识别和修复安全漏洞的表现比上一代提升了两倍多，撒谎和作弊的概率也明显降低，提示注入攻击基本防得住。目前先给网络安全从业者开放，之后再逐步推广给普通开发者和企业。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "新一代前沿模型发布，附具体benchmark和安全性数据，讲清楚能力边界，不是空泛通稿"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "GitHub Octoverse 2026",
+      "link": "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/",
+      "date": "2026-10-28",
+      "first_seen": "2026-10-29T01:31:49.925663+00:00",
+      "source_type": "blog",
+      "summary": "GitHub发布的2026年Octoverse报告显示，agent写代码已经把开发节奏推到了新高度，现在每月有2.2亿个PR被合并，提交数一年内涨了三倍多，新建仓库数量也翻了一倍。报告还用大模型给这些仓库按地区和行业分类，想说明agent工程正在整体改变GitHub上的开发规模。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "GitHub官方年度数据显示agent工程对开发规模的量级冲击，是重要的行业趋势信号"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "纯数据转述，没有作者本人的反思或构建经历"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "The October inflection point for vibe game development",
+      "link": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
+      "date": "2026-10-28",
+      "first_seen": "2026-10-29T01:31:49.925738+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison说2026年10月是用AI做游戏的一个转折点，Claude Opus 5.5在建模、配乐和游戏设计上的进步，让AI终于能做出真正好玩而不只是看起来像游戏的东西。他举了四个自己做的例子，从单次生成的找茬小游戏到支持多人对战的即时战略游戏，每个花的功夫都不超过四小时。他认为这会让更多没写过代码的人也能做游戏，但也会引来游戏圈对AI内容的争议。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型能力新趋势讲清楚是什么为什么重要，Opus 5.5在建模配乐游戏设计上的进步，附具体可验证案例"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者本人一手记录用AI构建产品的完整过程和反思，踩中深度加真做出来的东西是燃料这条母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Terk Terkowitz",
+      "link": "https://simonwillison.net/2026/Oct/28/terk-terkowitz/",
+      "date": "2026-10-28",
+      "first_seen": "2026-10-29T01:31:49.925827+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison转引亚马逊工程管理层的一句话：如果你的工作用不上现在的AI工具，这不是失败，而是一个值得记录下来、跟经理讨论的发现。亚马逊认为，能说清楚AI在哪些工作上还帮不上忙，本身就是工程师该有的判断力。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "亚马逊官方对工程师使用AI工具的期待说明，有职场参考价值，但偏宏观表态而非操作指南"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "是企业管理话语，不是作者本人的一手反思"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Anthropic ends Coding Interviews: \"Hunger beats tenure\"",
+      "link": "https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/",
+      "date": "2026-10-28",
+      "first_seen": "2026-10-29T01:31:51.193690+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space的AI新闻汇总里，头条讲Anthropic一位招聘经理宣布不再考编程面试题，理由是Claude写代码已经比候选人强。他给新人工程师的建议是少写需求文档，直接用周末时间攒出能跑的原型，而且一次只做一个好点子。这反映招聘标准正从会不会写代码转向能不能拿出有商业价值的东西。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接讲AI对编程面试和招聘标准的实质冲击，附具体建议，不是纯新闻通稿"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "AI for Science expands to foundations and institutions",
+      "link": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+      "date": "2026-10-28",
+      "first_seen": "2026-10-29T01:32:01.371027+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic把AI for Science项目从个人研究者扩展到机构和基金会，给20家科研组织提供免费Claude算力，支持神经科学、天文、基因组学等领域的具体项目。比如普林斯顿团队用它画出果蝇全脑神经连接图，约翰霍普金斯团队借天文测量方法给肿瘤切片拍照分析。这标志着AI辅助科研从个例合作走向建制化推广。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Anthropic官方项目扩张公告，以列合作机构为主，缺少对新趋势的深入解读"
         }
       ],
       "is_new": true
@@ -42,7 +198,7 @@
           "reason": "访谈核心是护城河在harness不在模型这条正向母题,由实际做这件事的工程负责人口述,属于一手经验"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -64,7 +220,7 @@
           "reason": "同样与下方完整版重复,护城河在harness母题同样沾边但信息量不如完整版"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Google",
@@ -81,7 +237,7 @@
           "reason": "前沿模型新发布,讲清楚世界模型Genie 4实时生成交互式虚拟世界的新能力和原理,为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -103,7 +259,7 @@
           "reason": "作者因为搬到喜马拉雅山麓常断网而主动选择离线工作方式,沾清净的场域这条候选母题的边,但全文主体是技术教程不是对这个选择本身的反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -120,7 +276,7 @@
           "reason": "Anthropic IPO招股书的数字速读,沾AI边但属于宏观商业叙事,不是实操内容"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -137,7 +293,7 @@
           "reason": "六家药企合作案例详实,讲清楚Claude在新药研发各环节具体怎么用、效果如何,不是空泛通稿"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -154,7 +310,7 @@
           "reason": "政府合作与打折政策的企业公告,偏宏观叙事和自我推广,案例列举有一定信息量但不深入"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -176,7 +332,7 @@
           "reason": "直接印证认知系统不能外包这条母题,但这是Anthropic的研究,不是用户或作者本人的一手反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -517,162 +673,6 @@
           "track": "eval",
           "tier": "medium",
           "reason": "与此前更详细的PHP漏洞报道重复,降一档"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Anthropic",
-      "title": "Donating Agent Skills to the Agentic AI Foundation",
-      "link": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
-      "date": "2026-10-22",
-      "first_seen": "2026-10-23T02:43:16.270131+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic把Agent Skills这个开放标准捐赠给Linux基金会旗下的Agentic AI Foundation，此前MCP也捐给了同一个基金会。Skill就是一个文件夹，里面放着教agent做某类任务的说明和脚本，发布不到一年，ChatGPT、Cursor、GitHub Copilot等70多个平台都已接入。交给中立基金会以后，它更像一个行业通用标准，而不是Anthropic一家的功能。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "重要的开放标准进展,具体数字扎实(70+平台集成/100万skill/2.8亿次安装),讲清楚是什么为什么重要"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Anthropic",
-      "title": "LLMs are making formal software verification feasible at a much larger scale",
-      "link": "https://www.anthropic.com/research/formal-verification",
-      "date": "2026-10-22",
-      "first_seen": "2026-10-23T02:43:16.297233+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic用Claude给123个真实的开源库做了形式化验证，也就是用数学证明程序在各种输入下都不会崩溃，这件事以前贵到只有极少数关键项目才做得起。做法是把现有的测试改写成“这个测试永远通过”的命题，Claude写证明，再由专门的检查程序逐步核对，过程中还找出了几百个跑了无数次测试都没发现的bug。对做测试的人来说，它意味着确保软件正确，可能从“多跑测试碰运气”走向“直接证明没问题”。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "极重大的技术突破,数据扎实(123个库/1.8亿行Rocq证明/发现十年未被发现的bug),讲清楚是什么为什么重要"
-        },
-        {
-          "track": "eval",
-          "tier": "high",
-          "reason": "直接命中'确定性仿真测试'与测试实践变迁——把fuzz测试转化为可证明的正确性保证,预示测试行业范式转变"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Greg Isenberg",
-      "title": "The 9 Stages of AI Agent Adoption, Explained",
-      "link": "https://www.youtube.com/watch?v=nRl-7Yhmbog",
-      "date": "2026-10-21",
-      "first_seen": "2026-10-24T00:15:21.920502+00:00",
-      "source_type": "youtube",
-      "summary": "Greg Isenberg梳理了围绕AI agent正在发生的一连串冲突：亚马逊封杀Meta的Muse，达美航空把第三方订票agent当成未授权的自动化行为，Yelp开始对agent访问收费。他把agent类比成一个拿着信用卡的顾客，而不是单纯替人读网页的工具，借此解释这些摩擦背后的逻辑。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "梳理了亚马逊封杀Meta agent、达美把第三方订票agent当未授权行为、Yelp对agent收费等一连串真实冲突案例，扎实地讲清楚了AI agent在商业世界里正在引发的摩擦和为什么重要"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Today's PHP Security Release, and How We're Strengthening PHP Security",
-      "link": "https://simonwillison.net/2026/Oct/21/php-security-release/",
-      "date": "2026-10-21",
-      "first_seen": "2026-10-23T02:42:40.704033+00:00",
-      "source_type": "blog",
-      "summary": "PHP紧急修复了两个能让黑客远程控制服务器的漏洞。原本计划好的披露被一家安全公司误发的演示视频打乱，补丁出来前攻击代码就已经在传。这些漏洞是两家安全公司分别用AI找出来的，算是AI自己挖出基础设施级大漏洞、逼得整个行业紧急响应的第一个真实案例。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "重大真实安全事件的完整时间线,具体披露AI工具(GPT-5.6 Sol/Gemini)独立发现影响70%网络的PHP核心漏洞"
-        },
-        {
-          "track": "eval",
-          "tier": "high",
-          "reason": "直接命中'AI自主找bug'——真实、高影响力案例展示AI发现重大基础设施级漏洞的能力"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Claude Mods: Flipping the Harness Inside Out",
-      "link": "https://www.latent.space/p/claude-mods",
-      "date": "2026-10-21",
-      "first_seen": "2026-10-23T02:42:41.173965+00:00",
-      "source_type": "blog",
-      "summary": "作者认为harness，也就是包在模型外面的那层程序，正在从“帮agent操作电脑”变成“决定什么时候打扰你、给你看什么”。他用Claude Code的插件亲手设计了自己想被提醒的方式，并跟ChatGPT、Cursor的做法对比，区别在于这套规则由谁来定。文章也老实讲了代价，提醒太多反而会被忽略，插件权限也大得让人不放心。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "原创且深刻的概念框架('注意力接口'),具体实例扎实(You Should Know/Next Steps Supervisor),横向对比ChatGPT/Cursor的类似设计并坦诚讨论代价"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "明确命中'护城河在harness不在模型'——作者一手实践经验,通过Claude Mods重新设计自己与agent协作时的注意力分配方式"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] DeepSeek DeepInfer: Open Source SOTA Inference running 155T toks/day/cluster making $22m/day at ~80% margin for a 81 day payback",
-      "link": "https://www.latent.space/p/ainews-deepseek-deepinfer-open-source",
-      "date": "2026-10-21",
-      "first_seen": "2026-10-23T02:42:41.175313+00:00",
-      "source_type": "blog",
-      "summary": "DeepSeek开源了自己线上在用的推理框架，也就是让模型高效响应请求的那套服务程序。它号称每天能处理海量请求、利润率超过八成，不到三个月就能回本。这等于把闭源大厂的看家本领摊开给了所有人，自己部署模型的团队值得关注。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "重要的开源推理基础设施发布,数据具体(155T token/天/80%毛利),但新闻摘要聚合性质"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "AI for the Fortune 2000: How Tenex Builds an AI-Native SDLC — Alex Lieberman & CJ Hess",
-      "link": "https://www.latent.space/p/tenex",
-      "date": "2026-10-21",
-      "first_seen": "2026-10-23T02:42:41.176908+00:00",
-      "source_type": "blog",
-      "summary": "Latent Space采访AI咨询公司Tenex，他们按工作产出而不是工时给工程师发钱，难题反而是架构设计这类不写代码的工作该怎么算。他们还把计划和决策理由跟代码一起存进仓库，让agent接手时知道“为什么这么做”。文中最扎心的观察是，大多数企业都给员工发了聊天AI，但真把agent用到工程以外工作上的只有5%左右。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "极具体的企业AI落地实操洞见(按产出付薪模型/MetaHarness/企业落地阶段分布数据),命中criterion②③"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "MetaHarness概念命中'护城河在harness不在模型',但是转述访谈而非作者一手反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "Using thousands of AI agents to uncover new leads in biological data",
-      "link": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
-      "date": "2026-10-21",
-      "first_seen": "2026-10-23T02:42:43.804364+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI和两家科研机构合作，让上千个AI agent分头分析数百万个脑细胞的数据，找出值得继续研究的新线索。这是让大批agent分工协作做真实科研的一个例子，跟一个agent从头做到尾的用法不太一样。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "具体的科研实践案例(上千分布式agent分析脑细胞数据),命中criterion③应用案例(WebFetch 403仅凭摘要判断)"
         }
       ],
       "is_new": false
