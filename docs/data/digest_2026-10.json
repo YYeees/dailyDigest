@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "Building a multiplayer game world with autonomous Fable-class models",
+      "link": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/",
+      "date": "2026-10-29",
+      "first_seen": "2026-10-30T01:32:19.154832+00:00",
+      "source_type": "blog",
+      "summary": "独立开发者Jacob Sansbury讲了他们怎么用一群自主运行的Fable模型agent来开发多人游戏Spawn，玩家一句话就能在游戏里造出城堡和龙。他们的agent直接改线上代码每小时发布一次，一小时不发布就算重大事故，出问题能在半分钟内精准回滚。作者还提到换成GPT-6 Astra处理安全问题时，agent直接把所有功能关掉了事，可见模型选择很关键。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "真实案例讲清楚自主agent在生产环境大规模运作的具体做法和模型选型取舍，直接影响怎么用AI工具"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Can Frontier Models See Past a Decoy? Elorian Tests Visual Reasoning",
+      "link": "https://latent.space/p/elorian/",
+      "date": "2026-10-29",
+      "first_seen": "2026-10-30T01:32:20.675765+00:00",
+      "source_type": "blog",
+      "summary": "创业公司Elorian发布了新的视觉推理模型Glimpse，还联合推出了一个叫DecoyCount的测试，专门检验模型是不是真的在数数，还是靠视觉套路蒙对答案。结果是包括GPT-6 Astra在内的主流模型准确率都不到五成，Glimpse自己测出来刚过五成。创始人认为让模型一边生成图像一边推理，才是补上这个短板的办法。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "深度采访加解释，讲清楚视觉推理和世界模型的区别及为什么重要，不是纯新闻通稿"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Greg Isenberg",
       "title": "$100M ARR Founder: The Next Big AI Opportunity",
       "link": "https://www.youtube.com/watch?v=st61aKW8P5A",
@@ -15,7 +49,7 @@
           "reason": "深入讲agent harness这个构建者核心概念，附Gamma真实产品案例和选品方法论，门槛不高又扎实"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Google",
@@ -32,7 +66,7 @@
           "reason": "新一代前沿模型发布，附具体benchmark和安全性数据，讲清楚能力边界，不是空泛通稿"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -49,7 +83,7 @@
           "reason": "GitHub官方年度数据显示agent工程对开发规模的量级冲击，是重要的行业趋势信号"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -71,7 +105,7 @@
           "reason": "作者本人一手记录用AI构建产品的完整过程和反思，踩中深度加真做出来的东西是燃料这条母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -88,7 +122,7 @@
           "reason": "直接讲AI对编程面试和招聘标准的实质冲击，附具体建议，不是纯新闻通稿"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",

@@ -87,39 +87,6 @@
       "summary": "Cursor的agent现在可以直接操作电脑桌面应用了，比如打开iOS模拟器，自己跑一遍刚写好的功能看效果对不对。这相当于agent有了手去真实环境里验证自己写的代码，不再只是看代码对不对，而是真的跑起来测一遍。",
       "tier": "high",
       "is_new": false
-    },
-    {
-      "person": "Grok Bot",
-      "title": "Grok Bot can now use Calendar, Reminders, Contacts, and more apps on your phone.  Rolling out now on…",
-      "link": "https://x.com/bot/status/2113393684209176718",
-      "date": "2026-10-22",
-      "first_seen": "2026-10-25T23:48:11.868520+00:00",
-      "source_type": "x",
-      "summary": "Grok Bot现在能用你手机上的日历、提醒事项、联系人等应用了，这个功能已经开始在iOS和安卓上推送。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "SpaceX Super Intelligence",
-      "title": "Proud to be a part of this important initiative from NVIDIA",
-      "link": "https://x.com/SpaceXSI/status/2113365443931148624",
-      "date": "2026-10-22",
-      "first_seen": "2026-10-25T23:48:10.885149+00:00",
-      "source_type": "x",
-      "summary": "SpaceX Super Intelligence说很荣幸参与NVIDIA的一个重要项目，但没有具体说明是什么项目。",
-      "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Grok Bot",
-      "title": "Grok Bot can now use your 1Password account.  Approve the logins you want to share, and your Bot sig…",
-      "link": "https://x.com/bot/status/2113332983226831339",
-      "date": "2026-10-22",
-      "first_seen": "2026-10-25T23:48:11.868567+00:00",
-      "source_type": "x",
-      "summary": "Grok Bot现在可以用你的1Password账号了，批准要共享的登录信息后，Bot能帮你自动登录，这个功能接下来几天会逐步推送给用户。",
-      "tier": "low",
-      "is_new": false
     }
   ]
 }
