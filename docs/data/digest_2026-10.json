@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "person": "Boris Cherny",
+      "title": "We're removing the 5-hour limit for verified Ultra accounts.",
+      "link": "https://x.com/bcherny/status/2116222842413142111",
+      "date": "2026-10-30",
+      "first_seen": "2026-10-31T07:49:10.487012+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny 宣布，将取消已验证 Ultra 账户的五小时使用限制。这条推文未说明其他额度或适用条件是否变化。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "取消已验证 Ultra 账户的时段限额，直接影响日常 AI 工具使用安排。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Cursor",
+      "title": "We identified a security incident affecting a modified Claude Code VS Code extension accessed throug…",
+      "link": "https://x.com/cursor_ai/status/2116074289053175808",
+      "date": "2026-10-30",
+      "first_seen": "2026-10-31T07:49:15.210135+00:00",
+      "source_type": "x",
+      "summary": "Cursor 通报，其扩展市场曾出现被恶意修改的 Claude Code 扩展，并称已下架处理后恢复市场。公告提醒用户查看受影响情况，并更新到 Claude Code for VS Code 2.1.314。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "涉及 AI 编程工具扩展市场的恶意软件事件，给出直接影响日常使用的升级提醒。"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "Building a multiplayer game world with autonomous Fable-class models",
       "link": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/",
@@ -15,7 +49,7 @@
           "reason": "真实案例讲清楚自主agent在生产环境大规模运作的具体做法和模型选型取舍，直接影响怎么用AI工具"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -32,7 +66,7 @@
           "reason": "深度采访加解释，讲清楚视觉推理和世界模型的区别及为什么重要，不是纯新闻通稿"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",

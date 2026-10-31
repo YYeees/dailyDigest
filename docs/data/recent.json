@@ -1,23 +1,96 @@
 {
   "items": [
     {
-      "person": "Simon Willison",
-      "title": "API credits benefit for eligible ChatGPT subscriptions",
-      "link": "https://simonwillison.net/2026/Oct/29/api-credits/",
-      "date": "2026-10-29",
-      "first_seen": "2026-10-30T01:32:19.154539+00:00",
+      "person": "Latent Space",
+      "title": "[AINews] Google admits AI Mode hurts Search revenue; -15% $500B drop worst since 2004 IPO. AI Bear Market coming?",
+      "link": "https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/",
+      "date": "2026-10-31",
+      "first_seen": "2026-10-31T07:48:55.081869+00:00",
       "source_type": "blog",
-      "summary": "OpenAI跟进了Anthropic早先的做法，给花钱更高档位订阅ChatGPT的用户发等额的API额度，可以直接拿去调用OpenAI的API。作者本人订阅了两家的服务，觉得这下用API做公开演示的成本都被订阅费覆盖了，挺划算。",
+      "summary": "Latent Space 借 Google 财报讨论一个矛盾：AI 直接给出答案，让用户更少点开原始网页，也可能削弱搜索自己的广告收入。作者引用管理层对 AI 搜索变现较弱的说明，同时承认公开数据不足以做严格分析。值得留意的是摘要与信息来源的关系，文章对市场走势的延伸仍是评论。",
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "直接影响日常怎么用AI工具的实操信息，但内容单薄只是一条订阅福利播报"
+          "reason": "从搜索收入讨论 AI 商业化张力，属于宏观趋势评论。"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "跟三根主干和周边领域都没有实质连接"
+          "reason": "指出摘要替代原始来源的张力，连接信息消费与一手来源，但属于二手评论。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "dbreunig/nesformer",
+      "link": "https://simonwillison.net/2026/Oct/30/nesformer/",
+      "date": "2026-10-30",
+      "first_seen": "2026-10-31T07:48:54.029848+00:00",
+      "source_type": "blog",
+      "summary": "Drew Breunig 把任天堂游戏机的处理器模拟器做进了 Qwen 的模型权重，能运行经典游戏，只是速度很慢。Simon 分享了他让 Claude 探索并实现这个点子的提示词，还提到 agent 找到了旧的兼容性测试来核对行为。适合看看编程 agent 能把多离谱的实验做成，暂时不是日常工具指南。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "把模型权重做成游戏机模拟器，是有趣的 agent 编程演示，非日常应用指南。"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "主要展示技术实验，未展开认知方式或构建者的一手反思。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Community safety report and new protections for teens",
+      "link": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+      "date": "2026-10-30",
+      "first_seen": "2026-10-31T07:48:58.314554+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI 的公告简介称，将加强 ChatGPT 的暴力预防措施，包括扩大防护范围、更早介入风险，以及公开报告公共安全情况。标题同时提到面向青少年的新保护措施。原文访问受限，目前只能确认这些方向，具体如何实施仍需查看官方全文。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "介绍 ChatGPT 防暴力与青少年保护方向，属于产品安全动态；全文被 HTTP 403 拦截，仅依据 feed 简介保守判断。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Building AIE CODE: The top Coding Agent Conference",
+      "link": "https://latent.space/p/ainews-building-aie-code-the-top-coding-agent-conference/",
+      "date": "2026-10-30",
+      "first_seen": "2026-10-31T07:48:55.083306+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space 介绍今年编程 agent 大会的策展思路，重点放在扩大产出时如何减少低质内容、小模型驱动的软件，以及小团队挑战复杂软件。文章能帮人了解组织者关注哪些工程趋势，但主要是议程介绍和售票宣传，具体做法仍要等演讲展开。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "以编程 agent 大会策展与售票为主，趋势线索有参考价值但缺少具体实操。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Greg Isenberg",
+      "title": "SaaS is dead?",
+      "link": "https://www.youtube.com/watch?v=AqqjH_uv-_w",
+      "date": "2026-10-29",
+      "first_seen": "2026-10-31T07:48:51.544728+00:00",
+      "source_type": "youtube",
+      "summary": "Greg Isenberg 认为，AI 让软件更容易做出来，单纯按账号卖工具的生意会承压。他提出先免费提供工具，再向用户销售代办任务的 AI 和人工服务，并用饮食记录应用举例。适合想了解 AI 产品如何收费的人参考，但这是他的商业判断。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "讨论 AI 改变软件收费方式，属于宏观商业观点而非扎实的工具实操。"
         }
       ],
       "is_new": true
@@ -35,14 +108,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "真实案例讲清楚自主agent在生产环境大规模运作的具体做法和模型选型取舍，直接影响怎么用AI工具"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "贴近护城河在harness不在模型这条母题，但是Simon转述他人文章，不是作者本人一手经历"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -59,7 +127,7 @@
           "reason": "官方模型行为准则更新，重要但本身偏宏观政策叙事，WebFetch遇403无法读全文核实深度"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -76,29 +144,7 @@
           "reason": "深度采访加解释，讲清楚视觉推理和世界模型的区别及为什么重要，不是纯新闻通稿"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Ben Hylak",
-      "link": "https://simonwillison.net/2026/Oct/29/ben-hylak/",
-      "date": "2026-10-29",
-      "first_seen": "2026-10-30T01:32:19.154875+00:00",
-      "source_type": "blog",
-      "summary": "产品经理Ben Hylak开玩笑说，以后每个他用的产品都该变成一个没有界面的MCP服务，直接喂给agent，用户不用管底层细节，除了他自己做的产品，因为用户很喜欢那个界面。这是对agent化趋势和自家产品定位的一句自嘲。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "沾AI边但偏轻量的一句调侃，涉及产品agent化趋势但没有展开论证"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "跟三根主干和周边领域都没有实质连接"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Matt Pocock",
@@ -120,7 +166,7 @@
           "reason": "其中一条改动是用强制变异比对来防止测试假阳性，沾测试方法论的边但嵌在版本日志里偏轻"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -137,7 +183,7 @@
           "reason": "新模型发布信息量大，但整体是推特benchmark速报拼接体，偏纯新闻通稿，没有讲清楚为什么重要"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -556,96 +602,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "Anthropic提交IPO申请是重要的行业动态，但公告是法律文本，没有展开说明意义"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Kimi 3.1 Pro 104BA-2.8T: Fable-5.1-Class Open Weights narrows Closed-AI lead to 1 month... and Pro Highspeed API with 2-3× speed",
-      "link": "https://latent.space/p/ainews-kimi-31/",
-      "date": "2026-10-24",
-      "first_seen": "2026-10-24T23:59:04.126219+00:00",
-      "source_type": "blog",
-      "summary": "这是Latent Space整理的一周AI新闻，重点是月之暗面发布的开源模型Kimi K3.1 Pro，独立测评显示它已经逼近Claude、GPT这些closed前沿模型的能力，价格却便宜不少。文章同时梳理了OpenAI和Anthropic各自测出的agent越界行为和安全隐患，以及几款新发布的agent开发工具。信息密度很高，适合一次性补完这周AI圈的动态。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "深入讲清楚月之暗面开源模型Kimi K3.1 Pro的发布、独立测评结果和争议，不是单纯新闻通稿"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Introducing Kimi K3.1 Pro",
-      "link": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
-      "date": "2026-10-23",
-      "first_seen": "2026-10-24T00:15:23.673830+00:00",
-      "source_type": "blog",
-      "summary": "月之暗面发布了Kimi K3.1 Pro，先在API上线，承诺11月4日前放出完整权重。定价比Claude Opus 5.5便宜，跑分上和Opus 5.5、GPT-6 Astra接近，作者用他常年的鹈鹕骑自行车SVG测试跑了一遍，画得还算准，只是对称性有点小瑕疵。这是最早一批逼近顶级闭源模型水平的准开源模型之一。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "新发布的接近开源权重的前沿模型，讲清楚定价、跑分和实测效果，属于值得关注的前沿模型动态"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Teo Crawford",
-      "title": "Stop shooting at random shutter speeds.",
-      "link": "https://www.youtube.com/watch?v=5wNgKrLvyjA",
-      "date": "2026-10-23",
-      "first_seen": "2026-10-24T00:15:21.835640+00:00",
-      "source_type": "youtube",
-      "summary": "Teo Crawford讲了他常用的几档快门速度和对应的拍摄效果，是一期实用小技巧分享，适合想提升拍摄手法的人看。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "摄影技巧，不触及锚点三根主干"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "AI Is Getting Good at Math. Here’s Why.",
-      "link": "https://latent.space/p/ai-is-getting-good-at-math/",
-      "date": "2026-10-23",
-      "first_seen": "2026-10-24T00:15:24.361452+00:00",
-      "source_type": "blog",
-      "summary": "这篇分析了今年AI连续攻克多个数学难题背后的共同规律，从OpenAI找到一个46年未解的反例，到Anthropic推进黎曼猜想相关的下界，作者发现每个突破背后都有一条可拆成几步提示的思路链。文章提出，人类解题是广度优先地试多个方向，边探索边放弃，这和AI的解题方式不一样，理解这个差异能帮忙判断AI接下来可能先攻克哪类问题。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "系统分析了AI最近连续攻克多个数学难题背后共同的模式，不是单纯报道结果，讲清楚了为什么这些问题能被攻克"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "分析人类和AI解题方式的差异，触及认知系统这条主干，但是第三方分析不是作者一手经历"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Black October",
-      "link": "https://latent.space/p/ainews-black-october/",
-      "date": "2026-10-23",
-      "first_seen": "2026-10-24T00:15:24.363116+00:00",
-      "source_type": "blog",
-      "summary": "这期AI新闻汇总了两天内扎堆爆出的安全事件：PHP、GitLab等基础软件被曝严重漏洞，供应链工具查出带恶意代码或密钥泄露，还有黑客团伙用开源的agent渗透测试框架几分钟内攻入上千个微软365账户。文章提到不少漏洞最先是AI模型发现的，也引发了AI到底是帮防守还是帮进攻的争论。想了解当下AI和网络安全交织现状的，这篇信息量很大。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "汇总了过去48小时里一连串由AI加速发现和利用的安全漏洞与供应链事件，讲清楚了各事件的因果和影响，是扎实的趋势报道"
         }
       ],
       "is_new": false

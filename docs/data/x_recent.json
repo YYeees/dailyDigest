@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "person": "Boris Cherny",
+      "title": "We're removing the 5-hour limit for verified Ultra accounts.",
+      "link": "https://x.com/bcherny/status/2116222842413142111",
+      "date": "2026-10-30",
+      "first_seen": "2026-10-31T07:49:10.487012+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny 宣布，将取消已验证 Ultra 账户的五小时使用限制。这条推文未说明其他额度或适用条件是否变化。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Cursor",
+      "title": "We identified a security incident affecting a modified Claude Code VS Code extension accessed throug…",
+      "link": "https://x.com/cursor_ai/status/2116074289053175808",
+      "date": "2026-10-30",
+      "first_seen": "2026-10-31T07:49:15.210135+00:00",
+      "source_type": "x",
+      "summary": "Cursor 通报，其扩展市场曾出现被恶意修改的 Claude Code 扩展，并称已下架处理后恢复市场。公告提醒用户查看受影响情况，并更新到 Claude Code for VS Code 2.1.314。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
       "person": "Cursor",
       "title": "New in Cursor design mode: Annotate.  Give agents visual prompts: edit elements, draw on the page, a…",
       "link": "https://x.com/cursor_ai/status/2115159585548021814",
@@ -53,39 +75,6 @@
       "source_type": "x",
       "summary": "Andrej Karpathy转发了一条关于智能电视为什么便宜的讨论，原帖作者说他把三星电视root之后发现里面有一个一直开着的隐藏麦克风。",
       "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @ClaudeDevs: We’re adding support for MCP Tasks and Elicitations in Claude.  Tasks let Claude giv…",
-      "link": "https://x.com/bcherny/status/2113781429436092466",
-      "date": "2026-10-23",
-      "first_seen": "2026-10-24T00:15:41.906135+00:00",
-      "source_type": "x",
-      "summary": "Claude要支持MCP协议里的Tasks和Elicitations了，Tasks能让插件把深度研究这类耗时久的任务交给Claude在后台跑完再回报结果。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Grok Bot",
-      "title": "Grok Bot can now save your logins, cards, and contact information.  Add them once, and Bot securely…",
-      "link": "https://x.com/bot/status/2113717946019397910",
-      "date": "2026-10-23",
-      "first_seen": "2026-10-25T23:48:11.868268+00:00",
-      "source_type": "x",
-      "summary": "Grok Bot现在能帮你记住账号密码、银行卡和联系方式，只用添加一次，以后它会安全地记着这些信息替你使用。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Cursor",
-      "title": "Cursor can now control your computer.  Agents can drive desktop apps like the iOS Simulator to test…",
-      "link": "https://x.com/cursor_ai/status/2113661506634305834",
-      "date": "2026-10-23",
-      "first_seen": "2026-10-25T23:48:12.705538+00:00",
-      "source_type": "x",
-      "summary": "Cursor的agent现在可以直接操作电脑桌面应用了，比如打开iOS模拟器，自己跑一遍刚写好的功能看效果对不对。这相当于agent有了手去真实环境里验证自己写的代码，不再只是看代码对不对，而是真的跑起来测一遍。",
-      "tier": "high",
       "is_new": false
     }
   ]
