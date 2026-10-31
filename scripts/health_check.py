@@ -136,19 +136,20 @@ def check_claude_result(path):
     except (FileNotFoundError, json.JSONDecodeError) as exc:
         return _fail(f"读不到claude运行结果{path}：{exc}")
     if data.get("is_error"):
-        return _fail(f"claude自报运行出错：{str(data.get('result'))[:300]}")
-    return _ok("claude运行结果无自报错误")
+        return _fail(f"执行代理自报运行出错：{str(data.get('result'))[:300]}")
+    return _ok("执行代理运行结果无自报错误")
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--claude-result", help="claude -p --output-format json的输出文件")
+    parser.add_argument("--agent-result", "--claude-result", dest="agent_result",
+                        help="Codex 或 Claude 的标准运行结果 JSON")
     args = parser.parse_args()
 
     checks = [check_worktree_clean, check_no_pending, check_x_credits, check_x_not_silent]
     results = [c() for c in checks]
-    if args.claude_result:
-        results.append(check_claude_result(args.claude_result))
+    if args.agent_result:
+        results.append(check_claude_result(args.agent_result))
 
     failed = results.count(False)
     if failed:

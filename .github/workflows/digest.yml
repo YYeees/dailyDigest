@@ -6,6 +6,10 @@ on:
     - cron: '0 22 * * *'
   workflow_dispatch: {}
 
+concurrency:
+  group: digest-content-writer
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -25,41 +29,33 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
-      - name: Install Claude Code CLI
-        run: npm install -g @anthropic-ai/claude-code
+      - name: Install Codex CLI
+        run: npm install -g @openai/codex@0.163.0
 
       - name: Configure git identity
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Run run-digest skill
+      - name: Run run-digest skill with Codex
         env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
           TWITTERAPI_IO_KEY: ${{ secrets.TWITTERAPI_IO_KEY }}
-          # 订阅token认证默认会给prompt cache用1小时TTL(写入价格2倍基准价)，但这个job全程
-          # 只有几分钟，5分钟TTL(写入价格1.25倍)完全够用，强制5分钟能省一截cache写入的钱
-          # (2026-08-17查claude CLI源码确认有这个开关，见run_log.json里cache_creation的
-          # ephemeral_1h_input_tokens远高于ephemeral_5m_input_tokens)。
-          FORCE_PROMPT_CACHING_5M: "1"
-        run: |
-          claude -p "调用 run-digest 这个skill，完整跑一遍流程：抓取新内容、两段式判断优先级、生成摘要、导出前端JSON、git commit+push。这是无人值守的定时任务，commit+push不需要额外确认，直接做。" \
-            --permission-mode bypassPermissions --output-format json | tee /tmp/claude_result.json
+        run: python3 scripts/run_codex.py digest --result /tmp/codex_result.json
 
-      # claude -p只要正常退出就是exit 0，哪怕它一条都没排、只是卡在提问上(2026-08-20就是
-      # 这样白跑一次还报success)。所以要单独查结果状态，查不过就让job红，Actions会发邮件。
       - name: Health check
+        if: always()
         env:
           TWITTERAPI_IO_KEY: ${{ secrets.TWITTERAPI_IO_KEY }}
-        run: python3 scripts/health_check.py --claude-result /tmp/claude_result.json
+        run: python3 scripts/health_check.py --agent-result /tmp/codex_result.json
 
       # always(): 自检没过也要把这次的花费记下来，别因为报警就丢了成本数据
       - name: Log token usage and cost
         if: always()
         run: |
-          python3 scripts/log_usage.py /tmp/claude_result.json --label digest
+          python3 scripts/log_usage.py /tmp/codex_result.json --label digest
           git add logs/digest.jsonl docs/data/run_log.json
           git diff --cached --quiet || git commit -m "Log digest run usage/cost"
           git push
