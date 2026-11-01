@@ -9,7 +9,7 @@
       "source_type": "x",
       "summary": "Boris Cherny 宣布，将取消已验证 Ultra 账户的五小时使用限制。这条推文未说明其他额度或适用条件是否变化。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Cursor",
@@ -20,7 +20,7 @@
       "source_type": "x",
       "summary": "Cursor 通报，其扩展市场曾出现被恶意修改的 Claude Code 扩展，并称已下架处理后恢复市场。公告提醒用户查看受影响情况，并更新到 Claude Code for VS Code 2.1.314。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Cursor",

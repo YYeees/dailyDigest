@@ -1,6 +1,50 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "How We Took Over ChatGPT Accounts",
+      "link": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
+      "date": "2026-10-31",
+      "first_seen": "2026-11-01T00:41:25.227510+00:00",
+      "source_type": "blog",
+      "summary": "Simon梳理了一起已修复的ChatGPT漏洞：用户打开别人分享的页面，就可能让不可信内容越过隔离边界，读取私人数据或代替用户操作。问题来自多个看似独立的网页功能连在一起，单独限制脚本并没有挡住整条攻击链。对做测试的人，这个案例提醒我们要沿着真实数据流检查边界，不能只看每个组件是否各自设了防护。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "完整解释不可信预览内容如何跨越隔离边界，可用于设计AI产品的安全测试场景。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Agents Prompt People: Using Agents for Long-Horizon Financial Work",
+      "link": "https://latent.space/p/arca/",
+      "date": "2026-10-31",
+      "first_seen": "2026-11-01T00:41:25.982589+00:00",
+      "source_type": "blog",
+      "summary": "Arca的工程负责人介绍，金融顾问怎样让AI接手跨越多天的分析工作，又把资金操作留给人。关键不只是选模型，还包括持续记住任务进展、明确每次交接，并用确定的规则限制代理能做什么。文章也谈到怎样把员工反馈和运行记录变成改进依据，适合想理解代理如何进入真实业务、可靠性又该怎么守住的人。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "通过真实金融工作流讲清长期任务的记忆、模型选择与人工交接，工程师容易理解和借鉴。"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "构建者的一手经验直接体现护城河在运行框架，以及信息处理可交给代理而决策仍由人承担。"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "给出确定性权限限制、代码查询校验和利用运行记录改进系统的具体质量保障做法。"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Boris Cherny",
       "title": "We're removing the 5-hour limit for verified Ultra accounts.",
       "link": "https://x.com/bcherny/status/2116222842413142111",
@@ -15,7 +59,7 @@
           "reason": "取消已验证 Ultra 账户的时段限额，直接影响日常 AI 工具使用安排。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Cursor",
@@ -32,7 +76,7 @@
           "reason": "涉及 AI 编程工具扩展市场的恶意软件事件，给出直接影响日常使用的升级提醒。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

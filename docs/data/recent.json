@@ -1,6 +1,82 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "How We Took Over ChatGPT Accounts",
+      "link": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
+      "date": "2026-10-31",
+      "first_seen": "2026-11-01T00:41:25.227510+00:00",
+      "source_type": "blog",
+      "summary": "Simon梳理了一起已修复的ChatGPT漏洞：用户打开别人分享的页面，就可能让不可信内容越过隔离边界，读取私人数据或代替用户操作。问题来自多个看似独立的网页功能连在一起，单独限制脚本并没有挡住整条攻击链。对做测试的人，这个案例提醒我们要沿着真实数据流检查边界，不能只看每个组件是否各自设了防护。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "剖析AI产品的真实安全漏洞，但理解跨页面通信和脚本限制绕过需要技术背景。"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "侧重网页安全攻击链，没有实质展开认知方式或锚点母题。"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "完整解释不可信预览内容如何跨越隔离边界，可用于设计AI产品的安全测试场景。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "datasette-llm 0.1a9",
+      "link": "https://simonwillison.net/2026/Oct/31/datasette-llm/",
+      "date": "2026-10-31",
+      "first_seen": "2026-11-01T00:41:25.227841+00:00",
+      "source_type": "blog",
+      "summary": "Simon给Datasette的AI插件做了一项小更新：启动时会沿用LLM工具里已经设好的默认模型，不必再单独指定。它省去的是接入数据库代理时的一步重复配置，没有改变代理的主要能力。如果你正在用这套工具，可以点开看新的启动方式；其他读者把它当作一条轻量更新即可。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "作者维护的小工具更新日志，介绍默认模型配置的小幅体验改进。"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "仅是插件配置更新，没有展开认知工具或构建者反思。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Agents Prompt People: Using Agents for Long-Horizon Financial Work",
+      "link": "https://latent.space/p/arca/",
+      "date": "2026-10-31",
+      "first_seen": "2026-11-01T00:41:25.982589+00:00",
+      "source_type": "blog",
+      "summary": "Arca的工程负责人介绍，金融顾问怎样让AI接手跨越多天的分析工作，又把资金操作留给人。关键不只是选模型，还包括持续记住任务进展、明确每次交接，并用确定的规则限制代理能做什么。文章也谈到怎样把员工反馈和运行记录变成改进依据，适合想理解代理如何进入真实业务、可靠性又该怎么守住的人。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "通过真实金融工作流讲清长期任务的记忆、模型选择与人工交接，工程师容易理解和借鉴。"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "构建者的一手经验直接体现护城河在运行框架，以及信息处理可交给代理而决策仍由人承担。"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "给出确定性权限限制、代码查询校验和利用运行记录改进系统的具体质量保障做法。"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] Google admits AI Mode hurts Search revenue; -15% $500B drop worst since 2004 IPO. AI Bear Market coming?",
       "link": "https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/",
@@ -20,29 +96,7 @@
           "reason": "指出摘要替代原始来源的张力，连接信息消费与一手来源，但属于二手评论。"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "dbreunig/nesformer",
-      "link": "https://simonwillison.net/2026/Oct/30/nesformer/",
-      "date": "2026-10-30",
-      "first_seen": "2026-10-31T07:48:54.029848+00:00",
-      "source_type": "blog",
-      "summary": "Drew Breunig 把任天堂游戏机的处理器模拟器做进了 Qwen 的模型权重，能运行经典游戏，只是速度很慢。Simon 分享了他让 Claude 探索并实现这个点子的提示词，还提到 agent 找到了旧的兼容性测试来核对行为。适合看看编程 agent 能把多离谱的实验做成，暂时不是日常工具指南。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "把模型权重做成游戏机模拟器，是有趣的 agent 编程演示，非日常应用指南。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "主要展示技术实验，未展开认知方式或构建者的一手反思。"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -59,7 +113,7 @@
           "reason": "介绍 ChatGPT 防暴力与青少年保护方向，属于产品安全动态；全文被 HTTP 403 拦截，仅依据 feed 简介保守判断。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -76,7 +130,7 @@
           "reason": "以编程 agent 大会策展与售票为主，趋势线索有参考价值但缺少具体实操。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -93,7 +147,7 @@
           "reason": "讨论 AI 改变软件收费方式，属于宏观商业观点而非扎实的工具实操。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
