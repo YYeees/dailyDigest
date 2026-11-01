@@ -1,6 +1,18 @@
 {
   "runs": [
     {
+      "timestamp": "2026-11-01T00:42:15.511856+00:00",
+      "label": "digest",
+      "total_cost_usd": null,
+      "input_tokens": 313974,
+      "output_tokens": 2105,
+      "cache_creation_input_tokens": null,
+      "cache_read_input_tokens": 294656,
+      "duration_ms": 63952,
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
       "timestamp": "2026-10-31T07:50:40.380593+00:00",
       "label": "digest",
       "total_cost_usd": null,
@@ -346,18 +358,6 @@
       "cache_read_input_tokens": 452100,
       "duration_ms": 100869,
       "num_turns": 12,
-      "is_error": false
-    },
-    {
-      "timestamp": "2026-10-04T00:25:18.232466+00:00",
-      "label": "digest",
-      "total_cost_usd": 0.5461229499999999,
-      "input_tokens": 2991,
-      "output_tokens": 8316,
-      "cache_creation_input_tokens": 61527,
-      "cache_read_input_tokens": 590899,
-      "duration_ms": 133680,
-      "num_turns": 14,
       "is_error": false
     }
   ]
