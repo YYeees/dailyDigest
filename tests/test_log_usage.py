@@ -43,6 +43,16 @@ class TestBuildEntries(unittest.TestCase):
         self.assertIsNone(summary["input_tokens"])
         self.assertIsNone(summary["total_cost_usd"])
 
+    def test_subscription_metadata_survives_without_inventing_cost(self):
+        result = {"provider": "codex-chatgpt", "billing_mode": "subscription",
+                  "usage": {"input_tokens": 300, "cache_read_input_tokens": 250}}
+        detail, summary = build_entries(result, "digest", "2026-11-01T00:00:00Z")
+        for entry in (detail, summary):
+            self.assertEqual(entry["provider"], "codex-chatgpt")
+            self.assertEqual(entry["billing_mode"], "subscription")
+            self.assertIsNone(entry["total_cost_usd"])
+        self.assertEqual(summary["cache_read_input_tokens"], 250)
+
 
 class TestRunLogKeep(unittest.TestCase):
     def test_trims_to_keep_limit(self):

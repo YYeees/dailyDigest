@@ -39,7 +39,8 @@ gh run list --repo YYeees/dailyDigest --workflow digest.yml --limit 3
 不要对旧版失败任务点击 Re-run 来验证迁移，那会使用旧提交的 Claude 工作流。
 
 CLI 在临时目录读取登录文件，结束后删除；不上传凭据或原始代理对话。
-运行日志继续使用现有结构，订阅调用的美元费用显示为未知，不伪造 API 价格。
+运行日志保存订阅计费标记，网站显示“已含订阅”和实际 token 用量。
+CLI 未提供单次美元账单；不套用 Claude 价格，也不把订阅用量伪装成 API 费用。
 两个工作流共用写入队列，避免同时推送数据库造成冲突。
 
 OAuth 刷新可能轮换凭据。GitHub Secret 不会自动接收 CLI 刷新后的文件，

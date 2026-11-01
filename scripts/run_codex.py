@@ -31,6 +31,7 @@ def summarize(events, returncode, duration_ms):
         reason = "Codex subscription usage/rate limit reached; check the account and retry later"
     return {
         "provider": "codex-chatgpt",
+        "billing_mode": "subscription",
         "is_error": failed,
         # Do not publish raw model/tool output; it can contain fetched content.
         "result": reason if failed else "Codex completed",

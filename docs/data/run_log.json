@@ -10,7 +10,9 @@
       "cache_read_input_tokens": 294656,
       "duration_ms": 63952,
       "num_turns": 1,
-      "is_error": false
+      "is_error": false,
+      "provider": "codex-chatgpt",
+      "billing_mode": "subscription"
     },
     {
       "timestamp": "2026-10-31T07:50:40.380593+00:00",
@@ -22,7 +24,9 @@
       "cache_read_input_tokens": 408960,
       "duration_ms": 121201,
       "num_turns": 1,
-      "is_error": false
+      "is_error": false,
+      "provider": "codex-chatgpt",
+      "billing_mode": "subscription"
     },
     {
       "timestamp": "2026-10-31T01:25:17.002963+00:00",

@@ -47,6 +47,10 @@ def build_entries(result, label, timestamp):
         "num_turns": result.get("num_turns"),
         "is_error": result.get("is_error"),
     }
+    # Preserve billing provenance: subscription usage has no per-run dollar bill.
+    for key in ("provider", "billing_mode"):
+        if result.get(key):
+            detail_entry[key] = summary_entry[key] = result[key]
     return detail_entry, summary_entry
 
 
@@ -73,7 +77,8 @@ def main():
     run_log_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
     cost = summary_entry["total_cost_usd"]
-    cost_str = f"${cost:.4f}" if cost is not None else "未知"
+    cost_str = ("已含订阅（无单次美元账单）" if summary_entry.get("billing_mode") == "subscription"
+                else f"${cost:.4f}" if cost is not None else "未知")
     print(
         f"[OK] 记录{args.label}这次运行: 费用{cost_str}, "
         f"tokens(input={summary_entry['input_tokens']}, output={summary_entry['output_tokens']}, "

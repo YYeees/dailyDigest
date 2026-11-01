@@ -535,6 +535,12 @@ async function loadTrending() {
 // ---- 页脚运行日志 ----
 const RUNLOG_LABEL = { digest: '内容 Digest', trending: 'GitHub Trending' };
 const fmtTime = ts => (ts ? ts.replace('T', ' ').slice(0, 16) + ' UTC' : '');
+function runCost(r) {
+  if (r.billing_mode === 'subscription') {
+    return '<span title="使用 ChatGPT/Codex 订阅额度；未提供单次美元费用，也未按 API 价格估算">已含订阅</span>';
+  }
+  return r.total_cost_usd != null ? '$' + r.total_cost_usd.toFixed(4) : '费用未知';
+}
 async function loadRunLog() {
   const data = await (await fetch('data/run_log.json')).json();
   const runs = data.runs || [];
@@ -542,7 +548,7 @@ async function loadRunLog() {
   document.getElementById('runLog').innerHTML = runs.map(r => `<div class="run-row">
       <span class="time">${fmtTime(r.timestamp)}</span>
       <span class="label">${RUNLOG_LABEL[r.label] || esc(r.label)}</span>
-      <span class="cost">${r.total_cost_usd != null ? '$' + r.total_cost_usd.toFixed(4) : '—'}</span>
+      <span class="cost">${runCost(r)}</span>
       <span class="tok">input ${r.input_tokens ?? '—'} · output ${r.output_tokens ?? '—'} · cache写 ${r.cache_creation_input_tokens ?? '—'} · cache读 ${r.cache_read_input_tokens ?? '—'}</span>
       ${r.is_error ? '<span class="err">失败</span>' : ''}</div>`).join('') || '<div class="empty">还没有运行记录</div>';
 }
