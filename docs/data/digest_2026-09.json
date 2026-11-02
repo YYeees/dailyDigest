@@ -2257,7 +2257,7 @@
       "language": "Shell",
       "difficulty": "intermediate",
       "recommend_reason": "面向编码agent的方法论框架，把brainstorm-plan-TDD-review-merge整个软件开发流程结构化为可执行的skill库，支持14+个agent平台。文档专业、有实际skill实现和测试框架，体现出真实的工程严谨性，是“AI辅助软件开发方法论”方向有代表性的学习样本。",
-      "stars_total": 286194
+      "stars_total": 310655
     },
     {
       "full_name": "microsoft/markitdown",
@@ -2302,7 +2302,7 @@
       "language": "Jupyter Notebook",
       "difficulty": "beginner",
       "recommend_reason": "微软出品的生成式AI入门课程，21节课覆盖提示工程、文本/图像生成、聊天应用、RAG、AI Agent等主题，Python和TypeScript双语代码示例齐全，支持Azure OpenAI/OpenAI/开源模型多种后端。120k星、50多种语言翻译、持续维护，是生成式AI入门教程里体量最大、最成熟的样本之一。",
-      "stars_total": 122159
+      "stars_total": 122768
     }
   ]
 }

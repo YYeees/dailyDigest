@@ -1,6 +1,45 @@
 {
   "items": [
     {
+      "full_name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "language": "JavaScript",
+      "difficulty": "beginner",
+      "worth_tier": "high",
+      "recommend_reason": "给AI编码助手(Claude Code/Cursor等)用的前端设计质量框架,用24个命令+61条确定性检测规则解决'AI生成UI同质化'的问题,离线规则无需调LLM。安装和使用门槛都低(npx一行装,自然语言命令),且有真实案例(Neo Mirai)前后对比,作者有Anthropic frontend-design技能开发背景,是AI辅助设计工具的扎实实践样本。",
+      "first_seen_date": "2026-10-05",
+      "stars_total": 99397,
+      "stars_period": 12017,
+      "last_snapshot_date": "2026-11-02"
+    },
+    {
+      "full_name": "Nutlope/hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "difficulty": "beginner",
+      "worth_tier": "high",
+      "recommend_reason": "把网页设计方向、真实素材和浏览器检查串成可安装的设计 Skill，还能单独审计或重设计现有页面。README 给出了主题选择、响应式检查和重设计前后功能核对的完整流程，适合学习怎样用明确约束和反馈改善 AI 生成界面。",
+      "first_seen_date": "2026-11-02",
+      "stars_total": 44927,
+      "stars_period": 11566,
+      "last_snapshot_date": "2026-11-02"
+    },
+    {
+      "full_name": "HKUDS/DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "description": "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
+      "language": "Python",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "把资料阅读、带来源的问答、练习、研究和可编辑记忆整合成学习工作区，并支持多种检索后端与外部代理。README 有完整容器试用和模块化安装路线，也解释了共享上下文与记忆证据，是学习知识库应用如何形成持续学习流程的扎实样本。",
+      "first_seen_date": "2026-11-02",
+      "stars_total": 53714,
+      "stars_period": 10982,
+      "last_snapshot_date": "2026-11-02"
+    },
+    {
       "full_name": "cloudflare/security-audit-skill",
       "url": "https://github.com/cloudflare/security-audit-skill",
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
@@ -9,74 +48,35 @@
       "worth_tier": "high",
       "recommend_reason": "由Cloudflare内部漏洞挖掘工具改造成的coding-agent skill，把“发现漏洞”拆解成侦察、覆盖式搜索、候选验证、结构化输出、独立复核、中立报告六个阶段，核心亮点是用不同agent互相验证发现(而非自证)来压低误报率。代表了AI辅助安全审计从“随手扫一下”到“有方法论、可复核”的实践路径。",
       "first_seen_date": "2026-09-28",
-      "stars_total": 46899,
-      "stars_period": 15072,
-      "last_snapshot_date": "2026-10-26"
+      "stars_total": 56426,
+      "stars_period": 10069,
+      "last_snapshot_date": "2026-11-02"
     },
     {
-      "full_name": "debpalash/VoiceStudio",
-      "url": "https://github.com/debpalash/VoiceStudio",
-      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
-      "language": "Python",
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
       "difficulty": "intermediate",
       "worth_tier": "high",
-      "recommend_reason": "VoiceStudio是本地部署的语音AI一体化平台，对标ElevenLabs，支持声音克隆、语音合成（646种语言、16个TTS引擎）、转录（11个ASR引擎）、视频配音、有声书制作等，架构上Rust桌面壳+React前端+Python FastAPI后端，还内置AudioSeal水印检测。功能覆盖全面且完全本地运行、注重隐私，是了解「多引擎注册式」语音AI应用架构设计的好范例，不过默认模型权重为CC-BY-NC，商用需换引擎。",
-      "first_seen_date": "2026-09-07",
-      "stars_total": 86826,
-      "stars_period": 11837,
-      "last_snapshot_date": "2026-10-26"
-    },
-    {
-      "full_name": "stablyai/orca",
-      "url": "https://github.com/stablyai/orca",
-      "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
-      "language": "TypeScript",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "面向多AI编程代理(Claude Code、Codex、Cursor等30+)并行编排的Agent开发环境，支持在独立git worktree中同时运行多个代理、跨桌面/移动/远程SSH使用，并带终端分屏、设计模式检查、GitHub/Linear集成等丰富IDE功能。8753次提交、多平台原生实现说明工程扎实，代表了\"多智能体并行开发工作流\"这一新兴实践的优秀样本。",
-      "first_seen_date": "2026-08-15",
-      "stars_total": 105823,
-      "stars_period": 9622,
-      "last_snapshot_date": "2026-10-26"
-    },
-    {
-      "full_name": "anomalyco/opencode",
-      "url": "https://github.com/anomalyco/opencode",
-      "description": "The open source coding agent.",
-      "language": "TypeScript",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "开源AI编程Agent，build(全权限执行)和plan(只读分析、执行命令前需授权)双Agent模式覆盖了从代码探索到实际开发的不同信任级别，CLI和桌面端(macOS/Windows/Linux)都有，安装渠道成熟。已核实该仓库原属sst组织、现迁移到anomalyco(sst/opencode会跳转到这里)，不是冒名蹭热度的仓库，是AI编程Agent赛道有代表性的成熟项目。",
-      "first_seen_date": "2026-08-16",
-      "stars_total": 221518,
-      "stars_period": 5921,
-      "last_snapshot_date": "2026-10-26"
-    },
-    {
-      "full_name": "heygen-com/hyperframes",
-      "url": "https://github.com/heygen-com/hyperframes",
-      "description": "Write HTML. Render video. Built for agents.",
-      "language": "TypeScript",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "将HTML/CSS/动画确定性渲染为MP4视频的框架，核心定位是“为AI agent设计”——用平文本HTML代替React组件(对比Remotion)，让AI也能直接编写视频内容，并提供20个可复用技能供Claude/Cursor等agent调用。有7个功能性npm包、完整CLI和测试基线，是“AI生成内容”方向具代表性的工具实践。",
+      "recommend_reason": "面向编码agent的方法论框架，把brainstorm-plan-TDD-review-merge整个软件开发流程结构化为可执行的skill库，支持14+个agent平台。文档专业、有实际skill实现和测试框架，体现出真实的工程严谨性，是“AI辅助软件开发方法论”方向有代表性的学习样本。",
       "first_seen_date": "2026-09-14",
-      "stars_total": 72163,
-      "stars_period": 5612,
-      "last_snapshot_date": "2026-10-26"
+      "stars_total": 310655,
+      "stars_period": 5896,
+      "last_snapshot_date": "2026-11-02"
     },
     {
-      "full_name": "Comfy-Org/ComfyUI",
-      "url": "https://github.com/Comfy-Org/ComfyUI",
-      "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
-      "language": "Python",
-      "difficulty": "intermediate",
+      "full_name": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "language": "TypeScript",
+      "difficulty": "beginner",
       "worth_tier": "high",
-      "recommend_reason": "节点式可视化工作流引擎，支持Stable Diffusion/Flux/视频生成等主流开源模型的本地离线运行，是扩散模型应用生态里最成熟、影响力最大的GUI/后端之一(12万+ star、每周更新)。虽然不是新项目，但作为学习\"如何搭建可复用AI生成工作流\"的范例极具代表性，文档和生态都非常完善。",
-      "first_seen_date": "2026-08-15",
-      "stars_total": 142939,
-      "stars_period": 4790,
-      "last_snapshot_date": "2026-10-26"
+      "recommend_reason": "给Claude Code等多种agent做跨session持久记忆的工具,用生命周期hook捕获session活动、AI压缩成摘要、SQLite+向量库做语义检索,未来session按需注入相关上下文。单命令安装(npx claude-mem install),工程完整(3000+ commit、分层记忆管理token成本),是\"agent记忆\"这个常见痛点的扎实实践案例。",
+      "first_seen_date": "2026-10-12",
+      "stars_total": 109366,
+      "stars_period": 5852,
+      "last_snapshot_date": "2026-11-02"
     }
   ]
 }

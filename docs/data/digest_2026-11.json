@@ -18,5 +18,60 @@
       "is_new": true
     }
   ],
-  "github_track": []
+  "github_track": [
+    {
+      "full_name": "Leonxlnx/taste-skill",
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "description": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages",
+      "language": "JavaScript",
+      "difficulty": "beginner",
+      "recommend_reason": "让编程代理先选视觉方向和真实图片，再用浏览器截图反复检查网页与应用界面。README 说明了桌面界面专用规则、素材授权和运行环境，是学习设计反馈闭环的完整样本；一次构建耗时和 token 用量较大。",
+      "stars_total": 107834
+    },
+    {
+      "full_name": "remotion-dev/remotion",
+      "url": "https://github.com/remotion-dev/remotion",
+      "description": "🎥 Make videos programmatically with React",
+      "language": "TypeScript",
+      "difficulty": "intermediate",
+      "recommend_reason": "把视频表示为可编程的网页组件，并明确提供代理制作视频与 Agent Skills 的学习入口。README 同时给出交互编辑、批量渲染和应用嵌入路径，适合学习把 AI 视频创作接到可重复修改的代码工作流；需要一定前端基础，部分公司使用还需商业许可。",
+      "stars_total": 69770
+    },
+    {
+      "full_name": "HKUDS/DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "description": "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
+      "language": "Python",
+      "difficulty": "intermediate",
+      "recommend_reason": "把资料阅读、带来源的问答、练习、研究和可编辑记忆整合成学习工作区，并支持多种检索后端与外部代理。README 有完整容器试用和模块化安装路线，也解释了共享上下文与记忆证据，是学习知识库应用如何形成持续学习流程的扎实样本。",
+      "stars_total": 53714
+    },
+    {
+      "full_name": "AstrBotDevs/AstrBot",
+      "url": "https://github.com/AstrBotDevs/AstrBot",
+      "description": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+      "language": "Python",
+      "difficulty": "beginner",
+      "recommend_reason": "把多种聊天平台、模型服务、知识库、MCP 和插件接到同一个 AI 助手平台，并提供 Web 管理界面。README 给出命令行、容器和桌面等部署路线，适合从实际聊天场景学习模型、工具与渠道如何组合，深入集成仍需配置平台凭证。",
+      "stars_total": 45526
+    },
+    {
+      "full_name": "Nutlope/hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "difficulty": "beginner",
+      "recommend_reason": "把网页设计方向、真实素材和浏览器检查串成可安装的设计 Skill，还能单独审计或重设计现有页面。README 给出了主题选择、响应式检查和重设计前后功能核对的完整流程，适合学习怎样用明确约束和反馈改善 AI 生成界面。",
+      "stars_total": 44927
+    },
+    {
+      "full_name": "milind-soni/OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "language": "TypeScript",
+      "difficulty": "beginner",
+      "recommend_reason": "把本机 Claude、Codex 和 Grok 组织成聊天联系人式的代理团队，提供操作批准、共享频道和可导入团队配置。README 给出桌面安装、已有登录复用及可选云电脑的清楚路径，适合尝试多代理协作；不同系统的电脑控制能力仍有差异，云电脑和应用连接也依赖第三方服务。",
+      "stars_total": 10588
+    }
+  ]
 }
