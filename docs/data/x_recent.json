@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "person": "Andrej Karpathy",
+      "title": "Weekend hack: HackerTube. I was annoyed with YouTube's recommendations so I had Claude filter down 4…",
+      "link": "https://x.com/karpathy/status/2116957135661945283",
+      "date": "2026-11-01",
+      "first_seen": "2026-11-02T01:15:29.373298+00:00",
+      "source_type": "x",
+      "summary": "Karpathy用Claude从Hacker News多年评论中挑出被反复推荐的视频，做成无需登录的观看网站，并用视频中间的画面替代刻意吸睛的封面。他分享了自己主要靠对话完成开发与部署的过程，也开放了整理后的数据，方便别人做出符合自己口味的版本。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
       "person": "Boris Cherny",
       "title": "We're removing the 5-hour limit for verified Ultra accounts.",
       "link": "https://x.com/bcherny/status/2116222842413142111",
@@ -64,17 +75,6 @@
       "source_type": "x",
       "summary": "Cursor推出了Agent SDK，可以用Markdown写prompt、用TypeScript写工具来定义agent，还能托管在他们的基础设施上跑。自带的eval功能可以衡量每次改动效果，方便持续优化agent表现。",
       "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Andrej Karpathy",
-      "title": "RT @Tristan0x: If you've ever wondered why smart TVs are so cheap, this is why.  @log4j rooted his S…",
-      "link": "https://x.com/karpathy/status/2114384346815820050",
-      "date": "2026-10-25",
-      "first_seen": "2026-10-25T23:48:06.067153+00:00",
-      "source_type": "x",
-      "summary": "Andrej Karpathy转发了一条关于智能电视为什么便宜的讨论，原帖作者说他把三星电视root之后发现里面有一个一直开着的隐藏麦克风。",
-      "tier": "low",
       "is_new": false
     }
   ]

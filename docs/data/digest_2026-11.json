@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "person": "Andrej Karpathy",
+      "title": "Weekend hack: HackerTube. I was annoyed with YouTube's recommendations so I had Claude filter down 4…",
+      "link": "https://x.com/karpathy/status/2116957135661945283",
+      "date": "2026-11-01",
+      "first_seen": "2026-11-02T01:15:29.373298+00:00",
+      "source_type": "x",
+      "summary": "Karpathy用Claude从Hacker News多年评论中挑出被反复推荐的视频，做成无需登录的观看网站，并用视频中间的画面替代刻意吸睛的封面。他分享了自己主要靠对话完成开发与部署的过程，也开放了整理后的数据，方便别人做出符合自己口味的版本。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "亲手借助AI改造推荐环境，以具体作品回应清净的场域和有选择地应对信息纷扰。"
+        }
+      ],
+      "is_new": true
+    }
+  ],
+  "github_track": []
+}
