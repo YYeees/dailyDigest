@@ -2,8 +2,8 @@ name: Daily Digest
 
 on:
   schedule:
-    # 每天UTC 22:00(北京时间早6点)跑一次，赶在用户早上打开网页之前把当天内容准备好。
-    - cron: '0 22 * * *'
+    # 每天UTC 22:17(北京时间早6:17)跑一次，赶在用户早上打开网页之前把当天内容准备好。
+    - cron: '17 22 * * *'
   workflow_dispatch: {}
 
 concurrency:
