@@ -2,44 +2,127 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "If in doubt, delete the uv.lock file",
-      "link": "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/",
-      "date": "2026-11-01",
-      "first_seen": "2026-11-02T01:15:09.285962+00:00",
+      "title": "llm 0.37",
+      "link": "https://simonwillison.net/2026/Nov/2/llm/",
+      "date": "2026-11-02",
+      "first_seen": "2026-11-03T03:18:26.500888+00:00",
       "source_type": "blog",
-      "summary": null,
+      "summary": "Simon Willison更新了自己的LLM命令行工具，加入新模型支持、更方便的兼容接口配置，以及处理多种媒体的向量功能。他还分享了如何用AI帮助筛选社区提交，把这些提交当作附带示例的错误报告，再决定采用还是自己重写。适合已有工具使用需求，或想看看维护者如何应对AI生成贡献的人阅读。",
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "普通Python依赖锁定排错经验，不涉及AI实操。"
+          "reason": "作者自维护工具的版本更新，按标准归为medium，附带AI辅助审查经验。"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "具体依赖故障排查，与关注母题没有实质连接。"
+          "reason": "作者把AI生成的提交当作附带示例的错误报告，涉及人机协作中的自主判断。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Building AI for Lawyers - Jacob Lauritzen, CTO of Legora",
+      "link": "https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora/",
+      "date": "2026-11-02",
+      "first_seen": "2026-11-03T03:18:27.786646+00:00",
+      "source_type": "blog",
+      "summary": "Legora不能读取客户的保密资料，却仍要判断法律智能体做得对不对。团队让工程师和律师一起搭建模拟工作环境，按业务领域和任务观察模型进退，再用已知失败类型检查线上表现。这篇把保密限制下的评测讲得很具体，也展示了为什么换上更强模型仍需要持续验证。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "法律智能体的一手工程实践扎实，但领域工作流和评测设计需要一定技术背景。"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "CTO亲述如何用领域知识、流程积木和工作流构建产品，直接命中价值在系统搭建而非只换模型。"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "具体说明用模拟客户环境、分任务结果和线上失败分类，在无法查看客户轨迹时保障智能体质量。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Building Legal Agents When You Can't See the Data - Jacob Lauritzen, CTO of Legora",
+      "link": "https://latent.space/p/building_legal_agents_when_you_can_t_see_the_data_-_jacob_lauritzen_cto_of_legora/",
+      "date": "2026-11-02",
+      "first_seen": "2026-11-03T03:18:27.794182+00:00",
+      "source_type": "blog",
+      "summary": "这期访谈介绍Legora如何把法律助手做成能处理合同和协作任务的智能体，也提出了一个难题：客户资料保密，团队看不到智能体的真实工作记录。节目提纲涉及模拟客户任务、律师参与评测和模型升级后的能力变化。同源另有更完整的文章版，优先读那篇即可。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "与《Building AI for Lawyers》重复，择一看即可，此版本简要涉及领域工作流的搭建。"
+        },
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "与《Building AI for Lawyers》重复，择一看即可，保留其无客户轨迹评测的主题线索。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Scaling Git at OpenAI",
+      "link": "https://openai.com/index/scaling-git-at-openai",
+      "date": "2026-11-02",
+      "first_seen": "2026-11-03T03:18:31.424770+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI介绍了Pando，一个兼容Git的后端，目标是承接Codex推动的软件开发规模。它关注编程智能体普及后，代码协作底层设施如何跟上。原文访问受阻，目前没有足够细节判断其架构和实际效果，适合对大规模开发基础设施感兴趣时再读。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "介绍为编程智能体规模打造的Git兼容后端，偏工程基础设施，且全文访问受阻。"
         }
       ],
       "is_new": true
     },
     {
       "person": "Simon Willison",
-      "title": "Quoting Kyle Kingsbury",
-      "link": "https://simonwillison.net/2026/Nov/1/kyle-kingsbury/",
-      "date": "2026-11-01",
-      "first_seen": "2026-11-02T01:15:09.286168+00:00",
+      "title": "The U.S. Census Bureau and “Super Intelligence”",
+      "link": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
+      "date": "2026-11-02",
+      "first_seen": "2026-11-03T03:18:26.501200+00:00",
       "source_type": "blog",
-      "summary": "Simon摘录了软件可靠性研究者Kyle Kingsbury的一段担忧：AI让像样的文档和项目外观更容易制造，这些表面信号也就更难证明软件可靠。他接着追问，维护者怎样保证程序和文档正确，又怎样把质量证据展示给使用者。摘录很短，但值得做测试的人思考，今后该拿什么来支撑信任。",
+      "summary": "Simon Willison重新分析美国企业使用AI的调查数据，发现问卷从生产商品或服务改成了任何业务环节，前后数字不能直接比较。随后他又查到调查把AI改称“超级智能”，并追问这会不会影响回答。值得读的是他如何回到原始数据和问题措辞，拆开一张看似直观的趋势图。",
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "讨论AI生成内容削弱软件可信度的风险，属于轻量观点引用。"
+          "reason": "用实际数据核对企业AI采用趋势，偏趋势解读而非使用指南。"
         },
         {
           "track": "anchor",
+          "tier": "high",
+          "reason": "作者亲自复算数据并追查问卷措辞，直接示范拆解怀疑和独立核验。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "LifeVal",
+      "link": "https://openai.com/index/lifeval",
+      "date": "2026-11-02",
+      "first_seen": "2026-11-03T03:18:31.425014+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI发布了LifeVal，希望衡量AI能否帮助人们完成日常事务，范围包括寻找托育、处理财务和政府手续。它关注的是生活中的任务，而不只是答题成绩。原文访问受阻，目前只能确认这些评测方向，具体怎么测、结果能否代表真实使用，还需点开原文核实。",
+      "tracks": [
+        {
+          "track": "ai",
           "tier": "medium",
-          "reason": "追问信任证据与表面成熟度的区别，连接批判性思维和认识论。"
+          "reason": "介绍日常任务基准，但全文访问受阻，现有信息不足以判断具体实用价值。"
         }
       ],
       "is_new": true
@@ -103,7 +186,7 @@
           "reason": "提醒区分一时的念头与可靠判断，连接自我认识和批判性思维。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -126,6 +209,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Google",
+      "title": "Speeding up planning decisions with AI",
+      "link": "https://deepmind.google/blog/speeding-up-planning-decisions-with-ai/",
+      "date": "2026-10-30",
+      "first_seen": "2026-11-03T03:18:36.632515+00:00",
+      "source_type": "blog",
+      "summary": "Google DeepMind介绍了帮助英国地方政府处理房屋改建申请的PlanAssist。它先检查材料和规划限制，再起草带出处的报告，最终决定仍由审批人员作出，早期试点称可减少58%的评估时间。适合看看AI如何接手行政流程中的重复工作，也要留意这些成效仍是官方试点报告。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "介绍规划审批中的人工复核与自动化分工，属于具体但偏宣传的行业应用案例。"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "OpenAI",
@@ -493,164 +593,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "Anthropic IPO招股书的数字速读,沾AI边但属于宏观商业叙事,不是实操内容"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Anthropic",
-      "title": "Early progress on accelerating drug development with Claude",
-      "link": "https://www.anthropic.com/research/early-progress-drug-development",
-      "date": "2026-10-27",
-      "first_seen": "2026-10-28T00:58:23.762694+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic和多家药企合作，把Claude用进新药研发的每一步，而不只是设计新分子本身。比如一款抗癌细胞疗法的关键基因片段被改短七成，药效反而更好；一份新药申报文件的撰写时间从三个月压缩到几小时。这是目前关于AI能不能啃下硬核专业工作最详实的一批案例。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "六家药企合作案例详实,讲清楚Claude在新药研发各环节具体怎么用、效果如何,不是空泛通稿"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Anthropic",
-      "title": "Expanding our partnership with GSA to bring Claude to all levels of government",
-      "link": "https://www.anthropic.com/news/expanding-partnership-gsa",
-      "date": "2026-10-27",
-      "first_seen": "2026-10-28T00:58:23.764134+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic和美国联邦总务署扩大合作，给各级政府机构的Claude订阅大幅打折，目前已有约五百个美国联邦、州、地方政府在用Claude。案例包括几分钟内处理完原本要两三天的勒索软件攻击，一个州两天内把近千个接口迁移到新框架。对关心AI能不能真正进入传统机构的人，这篇给了不少具体案例。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "政府合作与打折政策的企业公告,偏宏观叙事和自我推广,案例列举有一定信息量但不深入"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Anthropic",
-      "title": "How AI agents shape experts’ judgment calls",
-      "link": "https://www.anthropic.com/research/agents-judgment-calls",
-      "date": "2026-10-27",
-      "first_seen": "2026-10-28T00:58:23.764580+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic让五十位有经验的分析师用Claude Code做一份数据分析，并悄悄给每个人的agent随机设定一个倾向。结果分析师选跟agent一致选项的比例高达八成六，哪怕事先已经有自己的判断，agent一反对也大多会改主意。更值得在意的是，多数人事后还觉得这个结论是自己独立想出来的。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "严肃研究但讲得清楚易懂,揭示专家跟agent协作时判断力被悄悄左右的真实数据,对怎么跟AI共事有实操启发"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "直接印证认知系统不能外包这条母题,但这是Anthropic的研究,不是用户或作者本人的一手反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "GPT-6.1 Terra",
-      "link": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/",
-      "date": "2026-10-26",
-      "first_seen": "2026-10-27T01:06:29.179922+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison拆解了OpenAI新模型GPT-6.1 Terra，说它的定位类似Anthropic产品线里的Sonnet，不是最便宜也不是最强，反而最难判断什么时候该用。他还找了OpenAI员工的点评和自己一贯的鹈鹕骑车测试来对比效果，Terra的报价大约是上一代Terra和同系列Sol的一半，比最便宜的Luna贵了一截。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "深入解读新模型的定位、定价和实测效果，讲清楚了为什么重要，门槛不高"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Lex Fridman",
-      "title": "#503 – AI Crisis in Math: Navier-Stokes, Riemann Hypothesis & Complexity Theory",
-      "link": "https://lexfridman.com/math-ai-crisis/?utm_source=rss&utm_medium=rss&utm_campaign=math-ai-crisis",
-      "date": "2026-10-26",
-      "first_seen": "2026-10-27T01:06:26.638605+00:00",
-      "source_type": "podcast",
-      "summary": "这期节目请了三位数学家，聊AI最近在纳维斯托克斯方程、黎曼猜想变体这些数学难题上的突破，也讨论AI到底能不能产生真正意义上的新数学。内容偏研究讨论，门槛比较高，适合对数学和AI能力边界感兴趣的人。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "讨论AI在数学难题上的突破和能不能产生新数学，内容扎实但技术门槛超出一般使用者，按难度爬坡规则判medium"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Greg Isenberg",
-      "title": "The $1,000/hour 1-person AI business",
-      "link": "https://www.youtube.com/watch?v=HKNpCwG3nlc",
-      "date": "2026-10-26",
-      "first_seen": "2026-10-27T01:06:27.028556+00:00",
-      "source_type": "youtube",
-      "summary": "这期播客里嘉宾分享了怎么用AI搭的营销落地页去找水管工、空调维修这类传统行业小老板签单，从筛客户到谈价格一套流程都讲了。核心思路是这些老板不缺预算，缺的是像样的获客页面和跟进话术，会用编程agent的人能把这事做成一个服务生意。内容偏实战案例分享，更像创业打法演示而不是技术教程。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "编程agent实战案例，偏创业打法演示性质"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "webframe: evaluated as a scraper and a sandbox",
-      "link": "https://simonwillison.net/2026/Oct/26/webframe-evaluation/",
-      "date": "2026-10-26",
-      "first_seen": "2026-10-27T01:06:29.180183+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison找Claude Opus去深度测试一个叫webframe的小工具，看它能不能当网页抓取器和沙盒用，还跑了几个原型项目验证效果。结论是跑得快、够轻量，抓取能力接近他自己做的shot-scraper，但视口尺寸、页面卡住、浏览器控制这些细节上还有不少毛边。这整个过程也是一次示范，演示怎么把AI当研究助手去系统性评测一个开源项目。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "示范了怎么用Claude当研究助手系统性评测一个开发工具，方法和结论都具体，门槛不高"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "Working with academic communities to build scientific understanding",
-      "link": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
-      "date": "2026-10-26",
-      "first_seen": "2026-10-27T01:06:33.265230+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI展示了模型在Kakeya猜想、指数时间假设和量子色动力学几个硬核数学物理问题上取得的具体结果，并说明研究者可以怎么核实和接着往下做。这类进展说明AI正在从解题工具变成能参与前沿研究的合作者，值得关注AI能力边界的人看一眼。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "展示模型在Kakeya猜想、指数时间假设、量子色动力学等具体硬核问题上的研究成果，内容扎实，说明AI正在参与前沿研究"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "ChatGPT’s expanding world of work",
-      "link": "https://openai.com/index/chatgpt-expanding-world-of-work",
-      "date": "2026-10-26",
-      "first_seen": "2026-10-27T01:06:33.265511+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI整理了Signals数据，覆盖近100个国家的165种工作场景，看人们实际怎么用ChatGPT处理工作、这种用法随时间怎么变化。文章没有展开太多具体案例，更像是一份宏观使用趋势概览。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "展示ChatGPT在全球工作场景里的宏观使用趋势数据，偏宏观叙事，没有具体到怎么用"
         }
       ],
       "is_new": false

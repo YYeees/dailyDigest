@@ -1,6 +1,45 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "Building AI for Lawyers - Jacob Lauritzen, CTO of Legora",
+      "link": "https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora/",
+      "date": "2026-11-02",
+      "first_seen": "2026-11-03T03:18:27.786646+00:00",
+      "source_type": "blog",
+      "summary": "Legora不能读取客户的保密资料，却仍要判断法律智能体做得对不对。团队让工程师和律师一起搭建模拟工作环境，按业务领域和任务观察模型进退，再用已知失败类型检查线上表现。这篇把保密限制下的评测讲得很具体，也展示了为什么换上更强模型仍需要持续验证。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "CTO亲述如何用领域知识、流程积木和工作流构建产品，直接命中价值在系统搭建而非只换模型。"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "具体说明用模拟客户环境、分任务结果和线上失败分类，在无法查看客户轨迹时保障智能体质量。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "The U.S. Census Bureau and “Super Intelligence”",
+      "link": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
+      "date": "2026-11-02",
+      "first_seen": "2026-11-03T03:18:26.501200+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison重新分析美国企业使用AI的调查数据，发现问卷从生产商品或服务改成了任何业务环节，前后数字不能直接比较。随后他又查到调查把AI改称“超级智能”，并追问这会不会影响回答。值得读的是他如何回到原始数据和问题措辞，拆开一张看似直观的趋势图。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者亲自复算数据并追查问卷措辞，直接示范拆解怀疑和独立核验。"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Andrej Karpathy",
       "title": "Weekend hack: HackerTube. I was annoyed with YouTube's recommendations so I had Claude filter down 4…",
       "link": "https://x.com/karpathy/status/2116957135661945283",
@@ -15,7 +54,7 @@
           "reason": "亲手借助AI改造推荐环境，以具体作品回应清净的场域和有选择地应对信息纷扰。"
         }
       ],
-      "is_new": true
+      "is_new": false
     }
   ],
   "github_track": [

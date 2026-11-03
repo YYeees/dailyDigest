@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "person": "Grok Bot",
+      "title": "Our team built a Team Bot that gives everyone at the company on-demand access to a data scientist.…",
+      "link": "https://x.com/bot/status/2117349540168876334",
+      "date": "2026-11-02",
+      "first_seen": "2026-11-03T03:18:45.549577+00:00",
+      "source_type": "x",
+      "summary": "Grok Bot团队介绍了一个面向公司员工的数据分析机器人，可帮助产品经理调查使用情况、营销人员衡量活动效果，也能制作仪表盘和跟踪指标。推文主要展示用途，没有展开实现方法或结果验证。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
       "person": "Andrej Karpathy",
       "title": "Weekend hack: HackerTube. I was annoyed with YouTube's recommendations so I had Claude filter down 4…",
       "link": "https://x.com/karpathy/status/2116957135661945283",
@@ -9,7 +20,7 @@
       "source_type": "x",
       "summary": "Karpathy用Claude从Hacker News多年评论中挑出被反复推荐的视频，做成无需登录的观看网站，并用视频中间的画面替代刻意吸睛的封面。他分享了自己主要靠对话完成开发与部署的过程，也开放了整理后的数据，方便别人做出符合自己口味的版本。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -53,28 +64,6 @@
       "source_type": "x",
       "summary": "这条推文介绍的是销售团队内部用的几个agent机器人，一个自动在通话后更新客户关系系统，一个负责准备报价单，一个负责审核非标准条款并转交审批。本质是企业内部agentic工作流的一个小案例，信息量不大。",
       "tier": "low",
-      "is_new": false
-    },
-    {
-      "person": "Cursor",
-      "title": "DeepSeek V4.1 Flash is now available in Cursor!  Every effort level sits on the CursorBench cost fro…",
-      "link": "https://x.com/cursor_ai/status/2114839997568405608",
-      "date": "2026-10-26",
-      "first_seen": "2026-10-27T01:06:53.769113+00:00",
-      "source_type": "x",
-      "summary": "Cursor上线了DeepSeek V4.1 Flash模型，可以在设置里的Models里开启试用。官方说它在性价比榜单CursorBench上目前最划算，各档算力消耗都处在成本前沿。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Cursor",
-      "title": "The Agent SDK is now available.  Define agents as code, with prompts in Markdown and tools in TypeSc…",
-      "link": "https://x.com/cursor_ai/status/2114793714531102901",
-      "date": "2026-10-26",
-      "first_seen": "2026-10-27T01:06:53.769358+00:00",
-      "source_type": "x",
-      "summary": "Cursor推出了Agent SDK，可以用Markdown写prompt、用TypeScript写工具来定义agent，还能托管在他们的基础设施上跑。自带的eval功能可以衡量每次改动效果，方便持续优化agent表现。",
-      "tier": "medium",
       "is_new": false
     }
   ]
