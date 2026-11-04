@@ -1,23 +1,150 @@
 {
   "items": [
     {
-      "person": "Simon Willison",
-      "title": "llm 0.37",
-      "link": "https://simonwillison.net/2026/Nov/2/llm/",
-      "date": "2026-11-02",
-      "first_seen": "2026-11-03T03:18:26.500888+00:00",
+      "person": "Google",
+      "title": "Agentic cheminformatics with Google Antigravity",
+      "link": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+      "date": "2026-11-03",
+      "first_seen": "2026-11-04T02:24:54.863271+00:00",
       "source_type": "blog",
-      "summary": "Simon Willison更新了自己的LLM命令行工具，加入新模型支持、更方便的兼容接口配置，以及处理多种媒体的向量功能。他还分享了如何用AI帮助筛选社区提交，把这些提交当作附带示例的错误报告，再决定采用还是自己重写。适合已有工具使用需求，或想看看维护者如何应对AI生成贡献的人阅读。",
+      "summary": "Google展示如何让Antigravity配合化学技能包，串起文献检索、分子整理、预测建模和候选药物设计。语言模型负责协调流程，专业工具负责计算，研究者可以在交互界面检查数据与结果。它值得参考的是如何把领域工具接进agent，同时明确计算建议仍须实验验证。",
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "作者自维护工具的版本更新，按标准归为medium，附带AI辅助审查经验。"
+          "reason": "展示专业化学领域的agent工作流，方法具体但行业门槛较高。"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "作者把AI生成的提交当作附带示例的错误报告，涉及人机协作中的自主判断。"
+          "reason": "用领域技能和确定性工具约束agent，并保留科学家审查，连接harness与人机协作。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Dan Koe",
+      "title": "The most lucrative AI business to start in 2027",
+      "link": "https://letters.thedankoe.com/p/the-most-lucrative-ai-business-to",
+      "date": "2026-11-03",
+      "first_seen": "2026-11-04T02:24:39.653125+00:00",
+      "source_type": "blog",
+      "summary": "Dan Koe提出用AI搭建一个人的内容团队，替自己或客户完成定位、选题、起草和发布。文章的具体做法是先访谈真实经历和独特观点，再结合已有作品与内容研究建立素材库，让人负责方向和最终改写。适合想把写作变成业务的人参考，不过其中也夹有不少自家工具推广。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "给出AI辅助内容业务流程，但大量篇幅推广自家工具和创业机会。"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "结合个人创作经验讨论表达与独特视角，但主轴是品牌获客而非深度自我认识。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "link": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+      "date": "2026-11-03",
+      "first_seen": "2026-11-04T02:24:41.895052+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison在自己的笔记本上复现了让模型读取神经网络参数、猜出它在玩什么游戏的实验，有成功也有失败。他特意区分了直接读参数与借助代码修改模型，提醒不要把不同能力混在一起夸大。值得读的不只是结果，还有他如何亲手验证一个热门研究主张。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "提供本地模型读参数的可复现实验与失败例子，但研究背景和运行成本超出日常AI使用。"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者亲自复现实验并拆分无工具推理与代码辅助修改，体现一手求证和对夸大叙事的怀疑。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Accelerating engineering for the physical world",
+      "link": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+      "date": "2026-11-03",
+      "first_seen": "2026-11-04T02:24:46.913963+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI介绍ChatGPT和Codex如何参与实体工程工作，涉及计算机辅助设计、电路板设计和仿真。它提供了一个观察方向：AI编程工具的用途正在延伸到软件之外。此次原文访问被拒绝，只能根据官方简介介绍主题，具体做法和效果需要点开原文核对。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "介绍AI在实体工程中的应用，全文HTTP 403不可读，仅能按RSS简介保守判断。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] LLMs can read & write neural network weights: \"Weight Space Programming\" cuts Autoresearch out of the RSI loop",
+      "link": "https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of/",
+      "date": "2026-11-03",
+      "first_seen": "2026-11-04T02:24:43.137497+00:00",
+      "source_type": "blog",
+      "summary": "这期AI新闻关注一个新实验：让大模型直接阅读和修改小型神经网络的内部参数，而不是先写训练程序。文章把它放进AI自主改进的讨论中，也提醒目前展示主要局限于简单游戏和小模型。适合了解这个新方向，但还不能据此认定模型已经能普遍改进自己。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "介绍直接读写模型参数的研究进展，但属于研究级解读，尚非普通用户实操指南。"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "讨论模型理解与自我改进的边界，连接AI作为认知方式，但主要是二手转述。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "I discovered a sound that leaks your exact location (and it's everywhere) - YouTube",
+      "link": "https://simonwillison.net/2026/Nov/3/a-sound-that-leaks-your-exact-location/",
+      "date": "2026-11-03",
+      "first_seen": "2026-11-04T02:24:41.895322+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "利用飞机声定位的隐私案例，与AI使用没有实质关系。"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "主要是声音定位技巧，未展开相关认知或生活母题。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "October sponsors-only newsletter",
+      "link": "https://simonwillison.net/2026/Nov/3/october-newsletter/",
+      "date": "2026-11-03",
+      "first_seen": "2026-11-04T02:24:41.895392+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison发布了新一期订阅月报，目录涉及AI做游戏、漏洞发现、模型发布和他当前使用的工具。公开页面只有主题预告，完整内容需要订阅，适合先看目录判断是否值得追读，不能把这份预告当成完整的使用指南。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI月报的订阅推广，仅公开目录，无法据此评价付费正文的深度。"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "公开预告没有展开认知方式或一手反思。"
         }
       ],
       "is_new": true
@@ -47,7 +174,7 @@
           "reason": "具体说明用模拟客户环境、分任务结果和线上失败分类，在无法查看客户轨迹时保障智能体质量。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -69,7 +196,7 @@
           "reason": "与《Building AI for Lawyers》重复，择一看即可，保留其无客户轨迹评测的主题线索。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -86,7 +213,7 @@
           "reason": "介绍为编程智能体规模打造的Git兼容后端，偏工程基础设施，且全文访问受阻。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -98,17 +225,12 @@
       "summary": "Simon Willison重新分析美国企业使用AI的调查数据，发现问卷从生产商品或服务改成了任何业务环节，前后数字不能直接比较。随后他又查到调查把AI改称“超级智能”，并追问这会不会影响回答。值得读的是他如何回到原始数据和问题措辞，拆开一张看似直观的趋势图。",
       "tracks": [
         {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "用实际数据核对企业AI采用趋势，偏趋势解读而非使用指南。"
-        },
-        {
           "track": "anchor",
           "tier": "high",
           "reason": "作者亲自复算数据并追查问卷措辞，直接示范拆解怀疑和独立核验。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -123,6 +245,28 @@
           "track": "ai",
           "tier": "medium",
           "reason": "介绍日常任务基准，但全文访问受阻，现有信息不足以判断具体实用价值。"
+        }
+      ],
+      "is_new": false
+    },
+    {
+      "person": "Anthropic",
+      "title": "Progress on provable inference for large language models",
+      "link": "https://www.anthropic.com/research/provable-inference",
+      "date": "2026-11-02",
+      "first_seen": "2026-11-04T02:24:54.642176+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic介绍一种给模型回答附上数学证明的方法，让用户核对回答是否真的来自指定模型，同时不泄露模型内部参数。文章还讲了怎样用形式化验证，也就是数学证明，检查Claude参与构建的系统，并坦承快速代码与证明之间仍有缺口。对做测试的人，值得看的是哪些保证能被证明，哪些仍要靠测试和人工审查。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "用密码学证明模型身份的前沿研究，技术门槛较高且仍是原型。"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "展示以形式化证明、可信验证器和对照测试核验AI生成系统的方法，并明确证明与实现间的信任缺口。"
         }
       ],
       "is_new": true
@@ -225,7 +369,7 @@
           "reason": "介绍规划审批中的人工复核与自动化分工，属于具体但偏宣传的行业应用案例。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -476,123 +620,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "直接讲AI对编程面试和招聘标准的实质冲击，附具体建议，不是纯新闻通稿"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Anthropic",
-      "title": "AI for Science expands to foundations and institutions",
-      "link": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
-      "date": "2026-10-28",
-      "first_seen": "2026-10-29T01:32:01.371027+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic把AI for Science项目从个人研究者扩展到机构和基金会，给20家科研组织提供免费Claude算力，支持神经科学、天文、基因组学等领域的具体项目。比如普林斯顿团队用它画出果蝇全脑神经连接图，约翰霍普金斯团队借天文测量方法给肿瘤切片拍照分析。这标志着AI辅助科研从个例合作走向建制化推广。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "Anthropic官方项目扩张公告，以列合作机构为主，缺少对新趋势的深入解读"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "How Anthropic ships Claude with Claude: Separating the Brain from the Hands",
-      "link": "https://latent.space/p/opus55/",
-      "date": "2026-10-27",
-      "first_seen": "2026-10-28T00:58:13.317460+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic工程负责人Katelyn Lesse和产品负责人Angela Jiang详细讲了Opus 5.5怎么做出来的，核心比喻是把agent的大脑和手分开：大脑负责对话记录和推理，手是真正执行代码的沙盒，沙盒挂了也不会丢掉整个对话。他们还聊到为什么要锁住模型的思考过程防止被蒸馏，以及怎么判断一个新模型能不能安全上线。对关心agent架构怎么设计的人，这是少见的一手工程细节。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "Anthropic工程与产品负责人详细讲Opus 5.5怎么做出来的,agent大脑与手分离架构讲得透彻,一手工程细节"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "访谈核心是护城河在harness不在模型这条正向母题,由实际做这件事的工程负责人口述,属于一手经验"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "How Anthropic ships the #1 LLM in the World safely: Separating the Brain from the Hands",
-      "link": "https://latent.space/p/how_anthropic_ships_the_1_llm_in_the_world_safely_separating_the_brain_from_the_hands/",
-      "date": "2026-10-27",
-      "first_seen": "2026-10-28T00:58:13.328141+00:00",
-      "source_type": "blog",
-      "summary": "这是Latent Space对Anthropic工程负责人Katelyn Lesse和产品负责人Angela Jiang的播客访谈，围绕Opus 5.5发布和Claude平台的工程设计展开，核心比喻是把agent的大脑和手分开。这条本身只有分段时间轴和链接，下方另有一篇含完整文字稿的版本信息量更全。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "与下方同一期播客的完整文字稿文章重复,这条只有分段时间轴和链接,信息量少一截,择一看即可"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "同样与下方完整版重复,护城河在harness母题同样沾边但信息量不如完整版"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Google",
-      "title": "Genie 4: A new generation of world simulation",
-      "link": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
-      "date": "2026-10-27",
-      "first_seen": "2026-10-28T00:58:23.932251+00:00",
-      "source_type": "blog",
-      "summary": "Google DeepMind发布了新一代世界模型Genie 4，能用自然语言实时生成并交互式修改照片级逼真的虚拟世界。这一代新加了原生音效生成，场景里的风声、水声和角色对话都是模型自己生成的，而不是另外叠加的音轨。它还能让Gemini当导演，把一个长目标拆成多个步骤去执行，让虚拟世界里的因果关系更可靠。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "前沿模型新发布,讲清楚世界模型Genie 4实时生成交互式虚拟世界的新能力和原理,为什么重要"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Coding From the Himalayas With an Offline AI Agent",
-      "link": "https://latent.space/p/offline-coding/",
-      "date": "2026-10-27",
-      "first_seen": "2026-10-28T00:58:13.328428+00:00",
-      "source_type": "blog",
-      "summary": "作者搬到喜马拉雅山麓以后常遇到断网断电，于是试了试编程agent能不能完全离线干活。他用开源工具OpenCode配合本地跑的Ollama和开源模型Qwen，断网后让agent读代码、定位bug并修好，自己再用原有测试验证结果。结论是离线agent能应付小范围的具体任务，但还没法验证能不能扛住更大的项目。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "完整实操指南,讲清楚怎么用OpenCode配本地Ollama跑开源模型做离线编程agent,附带真实测试过程和局限"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "作者因为搬到喜马拉雅山麓常断网而主动选择离线工作方式,沾清净的场域这条候选母题的边,但全文主体是技术教程不是对这个选择本身的反思"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Anthropic files for $2T IPO in 2 weeks: 1400% growth rate, 48% of revenue through cloud partners, 85% margin, $1B op profit in Q2, $134B cash in bank and $10B lifetime burn",
-      "link": "https://latent.space/p/ainews-anthropic-s1/",
-      "date": "2026-10-27",
-      "first_seen": "2026-10-28T00:58:13.329997+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic提交了IPO招股书，这篇是Latent Space对关键数字的速读。增长率、利润率、账上现金这些指标被摘出来配图讲清楚，公司定位也从聊天机器人换成了虚拟同事这个说法。如果想快速搞懂这次IPO说了什么，这篇比原始文件好读很多。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "Anthropic IPO招股书的数字速读,沾AI边但属于宏观商业叙事,不是实操内容"
         }
       ],
       "is_new": false

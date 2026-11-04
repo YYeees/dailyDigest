@@ -2,6 +2,28 @@
   "items": [
     {
       "person": "Grok Bot",
+      "title": "Try the new shopping experience in Grok Bot.  Find the best deal, compare items, and have Bot track…",
+      "link": "https://x.com/bot/status/2117736249444507834",
+      "date": "2026-11-03",
+      "first_seen": "2026-11-04T02:25:17.425504+00:00",
+      "source_type": "x",
+      "summary": "Grok Bot宣布加入购物功能，可以查找优惠、比较商品并跟踪订单。推文没有展开使用步骤或效果。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "Signing in to your company's plugins one by one is annoying, so we let Claude auto-connect to them n…",
+      "link": "https://x.com/bcherny/status/2117693181651542387",
+      "date": "2026-11-03",
+      "first_seen": "2026-11-04T02:25:13.141392+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny介绍Claude插件的新连接方式：Team和Enterprise管理员统一配置后，同事首次使用插件时就会自动连接，省去逐个登录的步骤。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Grok Bot",
       "title": "Our team built a Team Bot that gives everyone at the company on-demand access to a data scientist.…",
       "link": "https://x.com/bot/status/2117349540168876334",
       "date": "2026-11-02",
@@ -9,7 +31,7 @@
       "source_type": "x",
       "summary": "Grok Bot团队介绍了一个面向公司员工的数据分析机器人，可帮助产品经理调查使用情况、营销人员衡量活动效果，也能制作仪表盘和跟踪指标。推文主要展示用途，没有展开实现方法或结果验证。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrej Karpathy",
@@ -42,28 +64,6 @@
       "source_type": "x",
       "summary": "Cursor 通报，其扩展市场曾出现被恶意修改的 Claude Code 扩展，并称已下架处理后恢复市场。公告提醒用户查看受影响情况，并更新到 Claude Code for VS Code 2.1.314。",
       "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Cursor",
-      "title": "New in Cursor design mode: Annotate.  Give agents visual prompts: edit elements, draw on the page, a…",
-      "link": "https://x.com/cursor_ai/status/2115159585548021814",
-      "date": "2026-10-27",
-      "first_seen": "2026-10-28T00:58:36.891707+00:00",
-      "source_type": "x",
-      "summary": "Cursor的设计模式里新加了一个标注功能，可以直接在页面元素上画图或做批注，把这些可视化提示交给agent去改界面，还能按不同屏幕尺寸预览效果。这是给用AI写前端界面的人一个更直观的指挥方式，不用全靠文字描述要改哪里。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Grok Bot",
-      "title": "Our sales operations team built Shared Bots that help reps move deals faster.  Account Intel Bot upd…",
-      "link": "https://x.com/bot/status/2115130760009273501",
-      "date": "2026-10-27",
-      "first_seen": "2026-10-28T00:58:36.025629+00:00",
-      "source_type": "x",
-      "summary": "这条推文介绍的是销售团队内部用的几个agent机器人，一个自动在通话后更新客户关系系统，一个负责准备报价单，一个负责审核非标准条款并转交审批。本质是企业内部agentic工作流的一个小案例，信息量不大。",
-      "tier": "low",
       "is_new": false
     }
   ]

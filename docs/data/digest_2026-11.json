@@ -1,6 +1,57 @@
 {
   "items": [
     {
+      "person": "Boris Cherny",
+      "title": "Signing in to your company's plugins one by one is annoying, so we let Claude auto-connect to them n…",
+      "link": "https://x.com/bcherny/status/2117693181651542387",
+      "date": "2026-11-03",
+      "first_seen": "2026-11-04T02:25:13.141392+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny介绍Claude插件的新连接方式：Team和Enterprise管理员统一配置后，同事首次使用插件时就会自动连接，省去逐个登录的步骤。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "说明团队管理员统一配置插件后自动连接的具体变化，直接影响日常使用。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Dan Koe",
+      "title": "The most lucrative AI business to start in 2027",
+      "link": "https://letters.thedankoe.com/p/the-most-lucrative-ai-business-to",
+      "date": "2026-11-03",
+      "first_seen": "2026-11-04T02:24:39.653125+00:00",
+      "source_type": "blog",
+      "summary": "Dan Koe提出用AI搭建一个人的内容团队，替自己或客户完成定位、选题、起草和发布。文章的具体做法是先访谈真实经历和独特观点，再结合已有作品与内容研究建立素材库，让人负责方向和最终改写。适合想把写作变成业务的人参考，不过其中也夹有不少自家工具推广。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "结合个人创作经验讨论表达与独特视角，但主轴是品牌获客而非深度自我认识。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "link": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+      "date": "2026-11-03",
+      "first_seen": "2026-11-04T02:24:41.895052+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison在自己的笔记本上复现了让模型读取神经网络参数、猜出它在玩什么游戏的实验，有成功也有失败。他特意区分了直接读参数与借助代码修改模型，提醒不要把不同能力混在一起夸大。值得读的不只是结果，还有他如何亲手验证一个热门研究主张。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者亲自复现实验并拆分无工具推理与代码辅助修改，体现一手求证和对夸大叙事的怀疑。"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "Building AI for Lawyers - Jacob Lauritzen, CTO of Legora",
       "link": "https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora/",
@@ -20,7 +71,7 @@
           "reason": "具体说明用模拟客户环境、分任务结果和线上失败分类，在无法查看客户轨迹时保障智能体质量。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -35,6 +86,23 @@
           "track": "anchor",
           "tier": "high",
           "reason": "作者亲自复算数据并追查问卷措辞，直接示范拆解怀疑和独立核验。"
+        }
+      ],
+      "is_new": false
+    },
+    {
+      "person": "Anthropic",
+      "title": "Progress on provable inference for large language models",
+      "link": "https://www.anthropic.com/research/provable-inference",
+      "date": "2026-11-02",
+      "first_seen": "2026-11-04T02:24:54.642176+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic介绍一种给模型回答附上数学证明的方法，让用户核对回答是否真的来自指定模型，同时不泄露模型内部参数。文章还讲了怎样用形式化验证，也就是数学证明，检查Claude参与构建的系统，并坦承快速代码与证明之间仍有缺口。对做测试的人，值得看的是哪些保证能被证明，哪些仍要靠测试和人工审查。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "展示以形式化证明、可信验证器和对照测试核验AI生成系统的方法，并明确证明与实现间的信任缺口。"
         }
       ],
       "is_new": true
