@@ -25,7 +25,7 @@
           "reason": "讨论基准过拟合、对照基线与独立复现，具有评测讨论价值，但缺少可操作的完整方法。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -47,7 +47,7 @@
           "reason": "局部修复说明没有实质锚点连接。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -64,7 +64,7 @@
           "reason": "AI安全产品部署渠道更新，属于轻量产品消息，正文HTTP 403，判断仅基于提要。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Maggie Appleton",
@@ -86,7 +86,7 @@
           "reason": "作者从数字花园和GitHub Next的一手实践出发，把自己的判断写清并做成原型，直接命中一手创造与深度加实物。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -103,7 +103,7 @@
           "reason": "图像生成与编辑能力更新具有实用相关性，但正文HTTP 403，仅凭简短提要不足以判高。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -125,7 +125,7 @@
           "reason": "研究者详细反思人与Claude如何分工、推翻彼此建议并核查错误，命中认知不能外包与共建认知系统。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Google",
@@ -325,7 +325,7 @@
           "reason": "从感知、放慢节奏与个人成长切入自我认识和清净场域，但现有材料是访谈介绍。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",

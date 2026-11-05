@@ -9,7 +9,7 @@
       "source_type": "x",
       "summary": "Boris Cherny转发消息称，Claude Code的后台子agent现在会消耗更少的使用额度。抓到的推文后半段被截断，具体计算方式和适用条件需要查看原帖。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Grok Bot",
@@ -20,7 +20,7 @@
       "source_type": "x",
       "summary": "Grok Bot宣布新增打电话功能。这条推文没有说明使用方式、适用范围或限制，感兴趣可以查看所附链接。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Grok Bot",
