@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "person": "Boris Cherny",
+      "title": "RT @ClaudeDevs: Background subagents in Claude Code now use less of your usage limit.  A running sub…",
+      "link": "https://x.com/bcherny/status/2118130958679605322",
+      "date": "2026-11-04",
+      "first_seen": "2026-11-05T02:23:58.638714+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny转发消息称，Claude Code的后台子agent现在会消耗更少的使用额度。抓到的推文后半段被截断，具体计算方式和适用条件需要查看原帖。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Grok Bot",
+      "title": "Grok Bot can now make phone calls. https://t.co/eFghrfwTtz",
+      "link": "https://x.com/bot/status/2118043939592942052",
+      "date": "2026-11-04",
+      "first_seen": "2026-11-05T02:24:02.309089+00:00",
+      "source_type": "x",
+      "summary": "Grok Bot宣布新增打电话功能。这条推文没有说明使用方式、适用范围或限制，感兴趣可以查看所附链接。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
       "person": "Grok Bot",
       "title": "Try the new shopping experience in Grok Bot.  Find the best deal, compare items, and have Bot track…",
       "link": "https://x.com/bot/status/2117736249444507834",
@@ -9,7 +31,7 @@
       "source_type": "x",
       "summary": "Grok Bot宣布加入购物功能，可以查找优惠、比较商品并跟踪订单。推文没有展开使用步骤或效果。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -20,7 +42,7 @@
       "source_type": "x",
       "summary": "Boris Cherny介绍Claude插件的新连接方式：Team和Enterprise管理员统一配置后，同事首次使用插件时就会自动连接，省去逐个登录的步骤。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Grok Bot",

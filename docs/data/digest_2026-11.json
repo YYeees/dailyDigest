@@ -2,6 +2,57 @@
   "items": [
     {
       "person": "Boris Cherny",
+      "title": "RT @ClaudeDevs: Background subagents in Claude Code now use less of your usage limit.  A running sub…",
+      "link": "https://x.com/bcherny/status/2118130958679605322",
+      "date": "2026-11-04",
+      "first_seen": "2026-11-05T02:23:58.638714+00:00",
+      "source_type": "x",
+      "summary": "Boris Cherny转发消息称，Claude Code的后台子agent现在会消耗更少的使用额度。抓到的推文后半段被截断，具体计算方式和适用条件需要查看原帖。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Claude Code后台子agent额度变化直接影响日常使用，但推文被截断，只能确认开头明示的信息。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Maggie Appleton",
+      "title": "Fortune Telling and Speculative Design",
+      "link": "https://maggieappleton.com/fortune-telling",
+      "date": "2026-11-04",
+      "first_seen": "2026-11-05T02:23:32.480779+00:00",
+      "source_type": "blog",
+      "summary": "Maggie Appleton分享在GitHub Next探索未来软件的做法：先收集微小变化，再提出判断，最后做出能让人看见和讨论的原型。她用数字花园、个人软件和家庭AI助手等亲身案例，解释如何推演后续影响，也提醒判断要有证据支撑。值得读的是把模糊直觉变成具体作品，再让作品反过来修正想法的方法。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者从数字花园和GitHub Next的一手实践出发，把自己的判断写清并做成原型，直接命中一手创造与深度加实物。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "Investigating vault particles with Claude",
+      "link": "https://www.anthropic.com/research/investigating-vault-particles-with-claude",
+      "date": "2026-11-04",
+      "first_seen": "2026-11-05T02:23:42.766641+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic的生物研究团队讲述如何让Claude参与寻找、分离和解析一种功能仍不清楚的蛋白质外壳。AI帮助他们加快流程，也曾写错实验方案、漏掉分析步骤，研究者必须靠专业判断纠偏。这篇值得看的不只是发现本身，还有一线研究者如何分工、质疑AI建议，以及在陌生领域识别错误的困难。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "研究者详细反思人与Claude如何分工、推翻彼此建议并核查错误，命中认知不能外包与共建认知系统。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
       "title": "Signing in to your company's plugins one by one is annoying, so we let Claude auto-connect to them n…",
       "link": "https://x.com/bcherny/status/2117693181651542387",
       "date": "2026-11-03",
@@ -15,7 +66,7 @@
           "reason": "说明团队管理员统一配置插件后自动连接的具体变化，直接影响日常使用。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Dan Koe",
@@ -32,7 +83,7 @@
           "reason": "结合个人创作经验讨论表达与独特视角，但主轴是品牌获客而非深度自我认识。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -49,7 +100,7 @@
           "reason": "作者亲自复现实验并拆分无工具推理与代码辅助修改，体现一手求证和对夸大叙事的怀疑。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -105,7 +156,7 @@
           "reason": "展示以形式化证明、可信验证器和对照测试核验AI生成系统的方法，并明确证明与实现间的信任缺口。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrej Karpathy",
