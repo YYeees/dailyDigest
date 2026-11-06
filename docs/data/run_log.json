@@ -1,6 +1,20 @@
 {
   "runs": [
     {
+      "timestamp": "2026-11-06T02:33:27.763903+00:00",
+      "label": "digest",
+      "total_cost_usd": null,
+      "input_tokens": 358049,
+      "output_tokens": 2819,
+      "cache_creation_input_tokens": null,
+      "cache_read_input_tokens": 320512,
+      "duration_ms": 107182,
+      "num_turns": 1,
+      "is_error": false,
+      "provider": "codex-chatgpt",
+      "billing_mode": "subscription"
+    },
+    {
       "timestamp": "2026-11-05T02:33:50.144672+00:00",
       "label": "digest",
       "total_cost_usd": null,
@@ -362,18 +376,6 @@
       "cache_read_input_tokens": 639636,
       "duration_ms": 180472,
       "num_turns": 15,
-      "is_error": false
-    },
-    {
-      "timestamp": "2026-10-10T01:37:08.878321+00:00",
-      "label": "digest",
-      "total_cost_usd": 0.8568437000000001,
-      "input_tokens": 3122,
-      "output_tokens": 16531,
-      "cache_creation_input_tokens": 95258,
-      "cache_read_input_tokens": 779154,
-      "duration_ms": 249877,
-      "num_turns": 17,
       "is_error": false
     }
   ]
