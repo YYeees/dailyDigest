@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "person": "Cursor",
+      "title": "You can now build live apps in Cursor and share them with a link.  Agents have made it easier to wri…",
+      "link": "https://x.com/cursor_ai/status/2118458629091426304",
+      "date": "2026-11-05",
+      "first_seen": "2026-11-06T02:32:19.390406+00:00",
+      "source_type": "x",
+      "summary": "Cursor宣布可以直接构建上线应用并通过链接分享，从描述需求到配置数据库、执行安全检查和部署都交给agent完成。对想把本地小工具交给别人使用的人，这是值得关注的工作流更新，但推文没有展开安全检查的覆盖范围。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "介绍从描述需求到数据库配置和部署的完整应用工作流，直接影响Cursor使用方式。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Google",
+      "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+      "link": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
+      "date": "2026-11-05",
+      "first_seen": "2026-11-06T02:32:07.067496+00:00",
+      "source_type": "blog",
+      "summary": "Google更新Gemini Omni 1.2 Flash，支持生成最长15秒的视频，价格比上一版降低30%。更实用的变化是可以沿着同一段视频继续对话修改背景、人物或光线，不必每次从头生成，文章也展示了参考图与角色一致性的例子。做短片或产品演示可以看看这些新流程，同时留意它对高速动作和复杂物理效果仍有局限。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清视频模型更新、对话编辑流程与生成限制，直接帮助创作者选择和使用工具。"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Boris Cherny",
       "title": "RT @ClaudeDevs: Background subagents in Claude Code now use less of your usage limit.  A running sub…",
       "link": "https://x.com/bcherny/status/2118130958679605322",
@@ -15,7 +49,7 @@
           "reason": "Claude Code后台子agent额度变化直接影响日常使用，但推文被截断，只能确认开头明示的信息。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Maggie Appleton",
@@ -32,7 +66,7 @@
           "reason": "作者从数字花园和GitHub Next的一手实践出发，把自己的判断写清并做成原型，直接命中一手创造与深度加实物。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -49,7 +83,7 @@
           "reason": "研究者详细反思人与Claude如何分工、推翻彼此建议并核查错误，命中认知不能外包与共建认知系统。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",

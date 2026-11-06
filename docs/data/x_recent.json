@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "person": "Cursor",
+      "title": "You can now build live apps in Cursor and share them with a link.  Agents have made it easier to wri…",
+      "link": "https://x.com/cursor_ai/status/2118458629091426304",
+      "date": "2026-11-05",
+      "first_seen": "2026-11-06T02:32:19.390406+00:00",
+      "source_type": "x",
+      "summary": "Cursor宣布可以直接构建上线应用并通过链接分享，从描述需求到配置数据库、执行安全检查和部署都交给agent完成。对想把本地小工具交给别人使用的人，这是值得关注的工作流更新，但推文没有展开安全检查的覆盖范围。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
       "person": "Boris Cherny",
       "title": "RT @ClaudeDevs: Background subagents in Claude Code now use less of your usage limit.  A running sub…",
       "link": "https://x.com/bcherny/status/2118130958679605322",

@@ -1,6 +1,106 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "Quoting Paul Ford",
+      "link": "https://simonwillison.net/2026/Nov/5/paul-ford/",
+      "date": "2026-11-05",
+      "first_seen": "2026-11-06T02:31:57.474941+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison摘录Paul Ford的一句话：浏览器已经是很强大的应用平台，而使用这些能力的成本还在不断降低。这是一条关于网页作为创作和应用载体的短提醒，没有展开具体例子或实现方法。如果你关心思维工具为什么越来越容易做出来，可以顺着引用去读Ford的原文。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "只谈浏览器应用能力，没有明确AI信息。"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "涉及动态媒介与工具可及性，但只是二手短引文，未展开论证。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Google",
+      "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+      "link": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
+      "date": "2026-11-05",
+      "first_seen": "2026-11-06T02:32:07.067496+00:00",
+      "source_type": "blog",
+      "summary": "Google更新Gemini Omni 1.2 Flash，支持生成最长15秒的视频，价格比上一版降低30%。更实用的变化是可以沿着同一段视频继续对话修改背景、人物或光线，不必每次从头生成，文章也展示了参考图与角色一致性的例子。做短片或产品演示可以看看这些新流程，同时留意它对高速动作和复杂物理效果仍有局限。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清视频模型更新、对话编辑流程与生成限制，直接帮助创作者选择和使用工具。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
+      "link": "https://openai.com/index/introducing-gpt-6-cyber",
+      "date": "2026-11-05",
+      "first_seen": "2026-11-06T02:32:01.180766+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI宣布GPT‑6 Cyber，官方简介称它用于寻找可利用的安全漏洞并开发修复方案，同时强调只在授权范围内工作。这与AI如何参与安全测试有关，但本次原文访问受阻，尚无法确认实际操作方式、适用条件和局限，建议点开原文后再判断是否适合自己的项目。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "全文抓取返回403，仅据官方简介暂判为安全模型发布，能力与用法尚无法核实。"
+        },
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "介绍自主找漏洞与修复的模型，涉及AI测试工具，但全文不可读，缺少可核实的实践细节。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] It's Swapping Season",
+      "link": "https://latent.space/p/ainews-it-s-swapping-season/",
+      "date": "2026-11-05",
+      "first_seen": "2026-11-06T02:31:58.337640+00:00",
+      "source_type": "blog",
+      "summary": "这期AI行业简报主要整理团队换人和公司收购，包括Claude Code产品负责人转投OpenAI，以及几家开发工具公司的整合。现有正文更像行业动向速览，也夹有作者大会的宣传，没有展开工具能力或具体用法。想追踪AI编程工具背后的人与公司可以看看，寻找实操指南则不必优先读。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "以人员流动、收购与活动宣传为主，是轻量行业动态而非深入实操。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "How scientists use Claude",
+      "link": "https://www.anthropic.com/research/how-researchers-use-claude",
+      "date": "2026-11-05",
+      "first_seen": "2026-11-06T02:32:06.831819+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic分析研究人员如何使用Claude，发现最常见的用途是分析数据和写作，而科学家最看重的提出问题与收集数据，用得反而少。报告把这些差异与模型能力、实验室里的实际操作限制联系起来，也讨论专用科研工具能否填补缺口。值得读的是哪些环节已经能交给AI，哪些仍是研究者自己的核心工作，而不是把未来产出预测当成已经实现的成绩。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "基于真实科研会话分析采用趋势，内容扎实但偏宏观研究，缺少普通用户可直接照做的指南。"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "对照科研任务与实际使用，提供理解人机认知分工的实证材料。"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] Behind Latent Space: Kill My SaaS, Jev & AI in 2026 | AIEi Shanghai",
       "link": "https://latent.space/p/ainews-behind-latent-space-kill-my-saas-jev-ai-in-2026-aiei-shanghai/",
@@ -23,28 +123,6 @@
           "track": "eval",
           "tier": "medium",
           "reason": "讨论基准过拟合、对照基线与独立复现，具有评测讨论价值，但缺少可操作的完整方法。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "datasette-llm 0.1a10",
-      "link": "https://simonwillison.net/2026/Nov/4/datasette-llm/",
-      "date": "2026-11-04",
-      "first_seen": "2026-11-05T02:23:33.728262+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison修复了Datasette的LLM集成插件中的一个问题：演示站点原本没有正确地把可用模型限制在配置名单内。这条内容只说明修复对象，没有展开排查过程或测试方法。正在部署这套插件的人可以查看更新，普通AI使用者不必专门追踪。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "自维护AI插件的小修复，不能因作者身份提升为通用AI指南。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "局部修复说明没有实质锚点连接。"
         }
       ],
       "is_new": false
@@ -496,113 +574,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "以编程 agent 大会策展与售票为主，趋势线索有参考价值但缺少具体实操。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Greg Isenberg",
-      "title": "SaaS is dead?",
-      "link": "https://www.youtube.com/watch?v=AqqjH_uv-_w",
-      "date": "2026-10-29",
-      "first_seen": "2026-10-31T07:48:51.544728+00:00",
-      "source_type": "youtube",
-      "summary": "Greg Isenberg 认为，AI 让软件更容易做出来，单纯按账号卖工具的生意会承压。他提出先免费提供工具，再向用户销售代办任务的 AI 和人工服务，并用饮食记录应用举例。适合想了解 AI 产品如何收费的人参考，但这是他的商业判断。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "讨论 AI 改变软件收费方式，属于宏观商业观点而非扎实的工具实操。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Building a multiplayer game world with autonomous Fable-class models",
-      "link": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/",
-      "date": "2026-10-29",
-      "first_seen": "2026-10-30T01:32:19.154832+00:00",
-      "source_type": "blog",
-      "summary": "独立开发者Jacob Sansbury讲了他们怎么用一群自主运行的Fable模型agent来开发多人游戏Spawn，玩家一句话就能在游戏里造出城堡和龙。他们的agent直接改线上代码每小时发布一次，一小时不发布就算重大事故，出问题能在半分钟内精准回滚。作者还提到换成GPT-6 Astra处理安全问题时，agent直接把所有功能关掉了事，可见模型选择很关键。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "真实案例讲清楚自主agent在生产环境大规模运作的具体做法和模型选型取舍，直接影响怎么用AI工具"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "An updated Model Spec for more capable and beneficial AI",
-      "link": "https://openai.com/index/updated-model-spec",
-      "date": "2026-10-29",
-      "first_seen": "2026-10-30T01:32:23.786956+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI更新了指导模型行为的Model Spec文档，提出五条核心价值，目标是让能力更强的AI做出更稳妥的判断，尊重用户的自主权，同时忠实执行用户真正的意图。这份文档决定了ChatGPT和API背后的模型被怎么训练去应对边界情况。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "官方模型行为准则更新，重要但本身偏宏观政策叙事，WebFetch遇403无法读全文核实深度"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Can Frontier Models See Past a Decoy? Elorian Tests Visual Reasoning",
-      "link": "https://latent.space/p/elorian/",
-      "date": "2026-10-29",
-      "first_seen": "2026-10-30T01:32:20.675765+00:00",
-      "source_type": "blog",
-      "summary": "创业公司Elorian发布了新的视觉推理模型Glimpse，还联合推出了一个叫DecoyCount的测试，专门检验模型是不是真的在数数，还是靠视觉套路蒙对答案。结果是包括GPT-6 Astra在内的主流模型准确率都不到五成，Glimpse自己测出来刚过五成。创始人认为让模型一边生成图像一边推理，才是补上这个短板的办法。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "深度采访加解释，讲清楚视觉推理和世界模型的区别及为什么重要，不是纯新闻通稿"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Matt Pocock",
-      "title": "v1.3.2",
-      "link": "https://github.com/mattpocock/skills/releases/tag/v1.3.2",
-      "date": "2026-10-29",
-      "first_seen": "2026-10-30T01:32:23.077615+00:00",
-      "source_type": "blog",
-      "summary": "Matt Pocock给他维护的Claude Code技能库发了一次版本更新，里面有个对测试很有意思的改法：修bug流程里新增一步，故意对代码做一次变异再比对差异，确保测试真的检测到了问题，而不是看起来变红其实什么都没测到。其余大多是技能库自身的体验修复，普适性没那么强。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "作者自己维护的Claude Code技能库版本更新日志，沾AI边但偏项目自身维护记录"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "其中一条改动是用强制变异比对来防止测试假阳性，沾测试方法论的边但嵌在版本日志里偏轻"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Gemini 4 Carbon tops leaderboards, launches for cyber defenders",
-      "link": "https://latent.space/p/ainews-gemini-4-carbon/",
-      "date": "2026-10-29",
-      "first_seen": "2026-10-30T01:32:20.676825+00:00",
-      "source_type": "blog",
-      "summary": "Google发布了新模型Gemini 4 Carbon，在多个独立榜单上拿下第一，尤其是网络安全和长链条任务表现突出，目前只开放给受信任的安全防御团队用。编程类评测上它比Claude Opus 5.5便宜，但分数还略逊一筹，呈现出各家模型紧咬着比拼的局面。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "新模型发布信息量大，但整体是推特benchmark速报拼接体，偏纯新闻通稿，没有讲清楚为什么重要"
         }
       ],
       "is_new": false
