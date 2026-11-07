@@ -1,6 +1,50 @@
 {
   "items": [
     {
+      "person": "Anthropic",
+      "title": "Teaching AI to build scientific models",
+      "link": "https://www.anthropic.com/research/teaching-ai-to-build-scientific-models",
+      "date": "2026-11-06",
+      "first_seen": "2026-11-07T01:59:50.456174+00:00",
+      "source_type": "blog",
+      "summary": "研究者讨论AI如何帮助建立科学模型，也提醒我们，拟合出漂亮结果不代表理解了真实世界。同一批数据可能支持多种解释，真正有用的是知道哪些结论有证据、哪些仍不确定，以及下一次实验该排除什么。如果你关心与AI一起思考时如何保留自己的判断，这篇提供了很具体的科学例子。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "研究者一手反思拟合答案与真正理解的区别，强调比较失败方案和保留不确定性，命中认知不能外包。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "The components of agent memory",
+      "link": "https://www.anthropic.com/research/components-of-agent-memory",
+      "date": "2026-11-06",
+      "first_seen": "2026-11-07T01:59:50.458790+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic分享了给智能体设计记忆的经验：记得多未必有用，更重要的是保存经过验证的规则，并定期回看原始记录纠错。文章用游戏和文档问答实验说明，过期笔记、机械的记录要求，以及多人同时改写同一页，都可能拖累结果。想改进AI助手的长期记忆，或验证这类功能到底有没有帮助，这篇很值得读。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "以具体实验讲清智能体记忆的筛选、纠错和分层组织，能直接指导日常记忆文件与上下文设计。"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "工程团队一手展示如何靠记忆组织和后台复盘改善智能体，直接命中护城河在harness与认知系统构建。"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "通过有无记忆、提示规则及知识库组织的对照实验定位失败，并展示回查原始记录和避免并发覆盖的质量保障方法。"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Cursor",
       "title": "You can now build live apps in Cursor and share them with a link.  Agents have made it easier to wri…",
       "link": "https://x.com/cursor_ai/status/2118458629091426304",
@@ -15,7 +59,7 @@
           "reason": "介绍从描述需求到数据库配置和部署的完整应用工作流，直接影响Cursor使用方式。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Google",
@@ -32,7 +76,7 @@
           "reason": "讲清视频模型更新、对话编辑流程与生成限制，直接帮助创作者选择和使用工具。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",

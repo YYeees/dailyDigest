@@ -2,22 +2,137 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "Quoting Paul Ford",
-      "link": "https://simonwillison.net/2026/Nov/5/paul-ford/",
-      "date": "2026-11-05",
-      "first_seen": "2026-11-06T02:31:57.474941+00:00",
+      "title": "Quoting Nilay Patel",
+      "link": "https://simonwillison.net/2026/Nov/6/nilay-patel/",
+      "date": "2026-11-06",
+      "first_seen": "2026-11-07T01:59:39.470762+00:00",
       "source_type": "blog",
-      "summary": "Simon Willison摘录Paul Ford的一句话：浏览器已经是很强大的应用平台，而使用这些能力的成本还在不断降低。这是一条关于网页作为创作和应用载体的短提醒，没有展开具体例子或实现方法。如果你关心思维工具为什么越来越容易做出来，可以顺着引用去读Ford的原文。",
+      "summary": "Simon摘录了Nilay Patel对AI行业的批评：公众承担了基础设施和劣质内容带来的成本，却未必感受到产品足够有用。他认为行业需要做出让人自然愿意使用的产品，而不是继续依赖宣传说服。作为一段鲜明的反方观点，它适合用来检视技术热潮里的价值主张，但并不提供系统论证或实操方法。",
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "只谈浏览器应用能力，没有明确AI信息。"
+          "reason": "围绕AI产品价值与社会成本提出批评，属于宏观观点，缺少工具实操。"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "涉及动态媒介与工具可及性，但只是二手短引文，未展开论证。"
+          "reason": "从实际生活收益审视技术叙事，连接批判性思维，但属于二手摘引。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Controlling Biology - Fabian Theis, Helmholtz Munich",
+      "link": "https://latent.space/p/controlling-biology-fabian-theis-helmholtz-munich/",
+      "date": "2026-11-06",
+      "first_seen": "2026-11-07T01:59:40.514867+00:00",
+      "source_type": "blog",
+      "summary": "这篇访谈介绍用AI建立虚拟细胞的研究方向，也解释为什么更复杂的模型有时看起来还不如简单猜测。问题可能出在评分方式，也可能是研究任务本身还不足以发挥复杂模型的价值。除了了解AI与生物学的交叉进展，它也提醒我们，判断模型有没有进步，得先检查问题和评价标准是否合理。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "讨论AI虚拟细胞与生物数据的新方向，内容扎实但专业背景要求较高。"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "对问题定义、模型复杂度和证据之间关系的讨论连接批判性思维，但主要是访谈转述。"
+        },
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "指出评测指标可能奖励无信息的平均预测，提供审视AI模型基线与指标有效性的具体案例。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Inkling 2 Small: 17A-594B trained in 68 hours on 12T tokens, beating Muse Spark",
+      "link": "https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark/",
+      "date": "2026-11-06",
+      "first_seen": "2026-11-07T01:59:40.515831+00:00",
+      "source_type": "blog",
+      "summary": "这篇简讯介绍Thinking Machines的新开放权重模型Inkling 2 Small，重点是较快的训练过程，以及围绕可定制性展开的产品方向。作者认为它显示这家新实验室开始持续交付成果，但正文更多是概览和外链，缺少深入的使用比较。如果你想跟踪开放模型的新参与者，可以把它当作继续查阅的入口。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "概述开放权重模型的训练效率与可定制方向，但正文偏简短转述，缺少普通用户可用的选型细节。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Measuring how AI agents handle everyday wet-lab science",
+      "link": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+      "date": "2026-11-06",
+      "first_seen": "2026-11-07T01:59:43.991160+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI介绍了一套面向日常实验室工作的智能体评测，关注它们能否读懂原始实验数据并处理实际科研任务。它把观察范围从知识问答移向具体工作，对了解专业场景如何评估AI有参考价值。原文暂时无法访问，这里只能依据官方简介介绍，评测方法和局限仍需点开确认。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "介绍实验室任务中的智能体能力评测，但全文抓取返回403，仅能依据发布简介判断。"
+        },
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "以真实实验数据设计智能体任务评测，值得关注，但全文不可读，方法细节尚未核实。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "Teaching AI to build scientific models",
+      "link": "https://www.anthropic.com/research/teaching-ai-to-build-scientific-models",
+      "date": "2026-11-06",
+      "first_seen": "2026-11-07T01:59:50.456174+00:00",
+      "source_type": "blog",
+      "summary": "研究者讨论AI如何帮助建立科学模型，也提醒我们，拟合出漂亮结果不代表理解了真实世界。同一批数据可能支持多种解释，真正有用的是知道哪些结论有证据、哪些仍不确定，以及下一次实验该排除什么。如果你关心与AI一起思考时如何保留自己的判断，这篇提供了很具体的科学例子。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "系统解释AI辅助科学建模的进展与局限，但涉及统计推断与科研背景，实操门槛较高。"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "研究者一手反思拟合答案与真正理解的区别，强调比较失败方案和保留不确定性，命中认知不能外包。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "The components of agent memory",
+      "link": "https://www.anthropic.com/research/components-of-agent-memory",
+      "date": "2026-11-06",
+      "first_seen": "2026-11-07T01:59:50.458790+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic分享了给智能体设计记忆的经验：记得多未必有用，更重要的是保存经过验证的规则，并定期回看原始记录纠错。文章用游戏和文档问答实验说明，过期笔记、机械的记录要求，以及多人同时改写同一页，都可能拖累结果。想改进AI助手的长期记忆，或验证这类功能到底有没有帮助，这篇很值得读。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "以具体实验讲清智能体记忆的筛选、纠错和分层组织，能直接指导日常记忆文件与上下文设计。"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "工程团队一手展示如何靠记忆组织和后台复盘改善智能体，直接命中护城河在harness与认知系统构建。"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "通过有无记忆、提示规则及知识库组织的对照实验定位失败，并展示回查原始记录和避免并发覆盖的质量保障方法。"
         }
       ],
       "is_new": true
@@ -37,7 +152,7 @@
           "reason": "讲清视频模型更新、对话编辑流程与生成限制，直接帮助创作者选择和使用工具。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -59,7 +174,7 @@
           "reason": "介绍自主找漏洞与修复的模型，涉及AI测试工具，但全文不可读，缺少可核实的实践细节。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -76,7 +191,7 @@
           "reason": "以人员流动、收购与活动宣传为主，是轻量行业动态而非深入实操。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -98,7 +213,7 @@
           "reason": "对照科研任务与实际使用，提供理解人机认知分工的实证材料。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -523,57 +638,6 @@
           "track": "anchor",
           "tier": "medium",
           "reason": "指出摘要替代原始来源的张力，连接信息消费与一手来源，但属于二手评论。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Google",
-      "title": "Speeding up planning decisions with AI",
-      "link": "https://deepmind.google/blog/speeding-up-planning-decisions-with-ai/",
-      "date": "2026-10-30",
-      "first_seen": "2026-11-03T03:18:36.632515+00:00",
-      "source_type": "blog",
-      "summary": "Google DeepMind介绍了帮助英国地方政府处理房屋改建申请的PlanAssist。它先检查材料和规划限制，再起草带出处的报告，最终决定仍由审批人员作出，早期试点称可减少58%的评估时间。适合看看AI如何接手行政流程中的重复工作，也要留意这些成效仍是官方试点报告。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "介绍规划审批中的人工复核与自动化分工，属于具体但偏宣传的行业应用案例。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "Community safety report and new protections for teens",
-      "link": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
-      "date": "2026-10-30",
-      "first_seen": "2026-10-31T07:48:58.314554+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI 的公告简介称，将加强 ChatGPT 的暴力预防措施，包括扩大防护范围、更早介入风险，以及公开报告公共安全情况。标题同时提到面向青少年的新保护措施。原文访问受限，目前只能确认这些方向，具体如何实施仍需查看官方全文。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "介绍 ChatGPT 防暴力与青少年保护方向，属于产品安全动态；全文被 HTTP 403 拦截，仅依据 feed 简介保守判断。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Building AIE CODE: The top Coding Agent Conference",
-      "link": "https://latent.space/p/ainews-building-aie-code-the-top-coding-agent-conference/",
-      "date": "2026-10-30",
-      "first_seen": "2026-10-31T07:48:55.083306+00:00",
-      "source_type": "blog",
-      "summary": "Latent Space 介绍今年编程 agent 大会的策展思路，重点放在扩大产出时如何减少低质内容、小模型驱动的软件，以及小团队挑战复杂软件。文章能帮人了解组织者关注哪些工程趋势，但主要是议程介绍和售票宣传，具体做法仍要等演讲展开。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "以编程 agent 大会策展与售票为主，趋势线索有参考价值但缺少具体实操。"
         }
       ],
       "is_new": false

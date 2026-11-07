@@ -9,7 +9,7 @@
       "source_type": "x",
       "summary": "Cursor宣布可以直接构建上线应用并通过链接分享，从描述需求到配置数据库、执行安全检查和部署都交给agent完成。对想把本地小工具交给别人使用的人，这是值得关注的工作流更新，但推文没有展开安全检查的覆盖范围。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -74,28 +74,6 @@
       "first_seen": "2026-11-02T01:15:29.373298+00:00",
       "source_type": "x",
       "summary": "Karpathy用Claude从Hacker News多年评论中挑出被反复推荐的视频，做成无需登录的观看网站，并用视频中间的画面替代刻意吸睛的封面。他分享了自己主要靠对话完成开发与部署的过程，也开放了整理后的数据，方便别人做出符合自己口味的版本。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "We're removing the 5-hour limit for verified Ultra accounts.",
-      "link": "https://x.com/bcherny/status/2116222842413142111",
-      "date": "2026-10-30",
-      "first_seen": "2026-10-31T07:49:10.487012+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny 宣布，将取消已验证 Ultra 账户的五小时使用限制。这条推文未说明其他额度或适用条件是否变化。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Cursor",
-      "title": "We identified a security incident affecting a modified Claude Code VS Code extension accessed throug…",
-      "link": "https://x.com/cursor_ai/status/2116074289053175808",
-      "date": "2026-10-30",
-      "first_seen": "2026-10-31T07:49:15.210135+00:00",
-      "source_type": "x",
-      "summary": "Cursor 通报，其扩展市场曾出现被恶意修改的 Claude Code 扩展，并称已下架处理后恢复市场。公告提醒用户查看受影响情况，并更新到 Claude Code for VS Code 2.1.314。",
       "tier": "high",
       "is_new": false
     }
