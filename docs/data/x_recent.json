@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "person": "Andrej Karpathy",
+      "title": "Earlier this week Tristan published his top YouTube channels: https://t.co/NZ3UCNo6cT Which looked e…",
+      "link": "https://x.com/karpathy/status/2119114537442189652",
+      "date": "2026-11-07",
+      "first_seen": "2026-11-08T01:29:40.990813+00:00",
+      "source_type": "x",
+      "summary": "Karpathy把一份YouTube频道推荐做成了TristanTube，集中浏览技术视频，还加入了适合靠着看的电视模式。他说这是用Claude Code几分钟一次生成的，展示了把个人学习需求快速做成工具的可能。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
       "person": "Cursor",
       "title": "You can now build live apps in Cursor and share them with a link.  Agents have made it easier to wri…",
       "link": "https://x.com/cursor_ai/status/2118458629091426304",
