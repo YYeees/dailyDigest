@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "How Stanford Teaches AI-Native Engineering — Mihail Eric, Monaco",
+      "link": "https://latent.space/p/cs146s/",
+      "date": "2026-11-08",
+      "first_seen": "2026-11-09T01:45:54.134724+00:00",
+      "source_type": "blog",
+      "summary": "编程智能体能轻松完成旧作业后，斯坦福这门课改让学生参与真实开源项目，学会解释修改并接受维护者审查。访谈还拆开了团队怎样配置上下文、搭建能复现故障的运行环境，以及为何代码审查成了新瓶颈。适合想把个人使用经验变成团队工作方式的人，也提醒我们保留对代码和设计的理解。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "以课程与真实团队实践讲解上下文管理、技能配置和智能体工作环境，适合工程师系统学习。"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "受访者结合亲自教学和团队建设，讨论运行环境与人对代码的理解，直接命中认知不能外包和护城河在运行框架。"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Anthropic",
       "title": "Teaching AI to build scientific models",
       "link": "https://www.anthropic.com/research/teaching-ai-to-build-scientific-models",
@@ -15,7 +37,7 @@
           "reason": "研究者一手反思拟合答案与真正理解的区别，强调比较失败方案和保留不确定性，命中认知不能外包。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -42,7 +64,7 @@
           "reason": "通过有无记忆、提示规则及知识库组织的对照实验定位失败，并展示回查原始记录和避免并发覆盖的质量保障方法。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Cursor",

@@ -9,7 +9,7 @@
       "source_type": "x",
       "summary": "Karpathy把一份YouTube频道推荐做成了TristanTube，集中浏览技术视频，还加入了适合靠着看的电视模式。他说这是用Claude Code几分钟一次生成的，展示了把个人学习需求快速做成工具的可能。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Cursor",
@@ -75,17 +75,6 @@
       "source_type": "x",
       "summary": "Grok Bot团队介绍了一个面向公司员工的数据分析机器人，可帮助产品经理调查使用情况、营销人员衡量活动效果，也能制作仪表盘和跟踪指标。推文主要展示用途，没有展开实现方法或结果验证。",
       "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Andrej Karpathy",
-      "title": "Weekend hack: HackerTube. I was annoyed with YouTube's recommendations so I had Claude filter down 4…",
-      "link": "https://x.com/karpathy/status/2116957135661945283",
-      "date": "2026-11-01",
-      "first_seen": "2026-11-02T01:15:29.373298+00:00",
-      "source_type": "x",
-      "summary": "Karpathy用Claude从Hacker News多年评论中挑出被反复推荐的视频，做成无需登录的观看网站，并用视频中间的画面替代刻意吸睛的封面。他分享了自己主要靠对话完成开发与部署的过程，也开放了整理后的数据，方便别人做出符合自己口味的版本。",
-      "tier": "high",
       "is_new": false
     }
   ]

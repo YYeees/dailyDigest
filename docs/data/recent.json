@@ -2,22 +2,71 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
-      "link": "https://simonwillison.net/2026/Nov/7/link-rel-next/",
-      "date": "2026-11-07",
-      "first_seen": "2026-11-08T01:29:22.333137+00:00",
+      "title": "parse_number() as a SQLite extension: C vs Rust",
+      "link": "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/",
+      "date": "2026-11-08",
+      "first_seen": "2026-11-09T01:45:53.080205+00:00",
       "source_type": "blog",
-      "summary": null,
+      "summary": "Simon 遛狗时想到一个数据库小功能，便让 Claude 比较用 C 和 Rust 实现的性能、代码复杂度与文件大小。发现差距来自数字解析方式后，他继续追问，让模型优化实现，并整理成带测试和随机输入检查的研究报告。它展示了怎样把一个好奇的问题推进成可验证的实验，底层性能细节需要一些编程基础。",
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "讨论Datasette分页与Firefox预取行为，属于普通Web工程问题，与AI使用无关。"
+          "reason": "用聊天式提示比较并优化数据库扩展，是具体的智能体实验案例，但涉及底层性能细节。"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "浏览器兼容性问题没有实质展开锚点主题。"
+          "reason": "亲自从日常好奇出发做出可运行实验，连接人机共建与动手探索，但未深入反思认知方式。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "How Stanford Teaches AI-Native Engineering — Mihail Eric, Monaco",
+      "link": "https://latent.space/p/cs146s/",
+      "date": "2026-11-08",
+      "first_seen": "2026-11-09T01:45:54.134724+00:00",
+      "source_type": "blog",
+      "summary": "编程智能体能轻松完成旧作业后，斯坦福这门课改让学生参与真实开源项目，学会解释修改并接受维护者审查。访谈还拆开了团队怎样配置上下文、搭建能复现故障的运行环境，以及为何代码审查成了新瓶颈。适合想把个人使用经验变成团队工作方式的人，也提醒我们保留对代码和设计的理解。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "以课程与真实团队实践讲解上下文管理、技能配置和智能体工作环境，适合工程师系统学习。"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "受访者结合亲自教学和团队建设，讨论运行环境与人对代码的理解，直接命中认知不能外包和护城河在运行框架。"
+        },
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "实质讨论智能体代码审查、可验证环境和复现故障，但偏实践概览，没有完整测试方案。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[One Million AI Engineer Special] How Stanford Teaches AI-Native Engineering — Mihail Eric, Monaco",
+      "link": "https://latent.space/p/one_million_ai_engineer_special_how_stanford_teaches_ai-native_engineering_mihail_eric_monaco/",
+      "date": "2026-11-08",
+      "first_seen": "2026-11-09T01:45:54.148217+00:00",
+      "source_type": "blog",
+      "summary": "这期访谈介绍斯坦福如何教学生使用编程智能体，以及这些方法怎样用到真实团队。课程让学生给开源项目提交修改，再由维护者审查，重点是理解代码和设计取舍。与同源完整版是同一期内容，想看课程和团队实践的展开，优先点完整版即可。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "与同源《How Stanford Teaches AI-Native Engineering》重复，完整版信息更全，择一看即可。"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "与同源完整版重复，涉及智能体运行环境和人保持理解力的实践。"
         }
       ],
       "is_new": true
@@ -37,7 +86,7 @@
           "reason": "围绕Anthropic上市预期与AI市场估值的宏观评论，正文主要引向播客，缺少实操内容。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -550,28 +599,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "介绍日常任务基准，但全文访问受阻，现有信息不足以判断具体实用价值。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Anthropic",
-      "title": "Progress on provable inference for large language models",
-      "link": "https://www.anthropic.com/research/provable-inference",
-      "date": "2026-11-02",
-      "first_seen": "2026-11-04T02:24:54.642176+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic介绍一种给模型回答附上数学证明的方法，让用户核对回答是否真的来自指定模型，同时不泄露模型内部参数。文章还讲了怎样用形式化验证，也就是数学证明，检查Claude参与构建的系统，并坦承快速代码与证明之间仍有缺口。对做测试的人，值得看的是哪些保证能被证明，哪些仍要靠测试和人工审查。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "用密码学证明模型身份的前沿研究，技术门槛较高且仍是原型。"
-        },
-        {
-          "track": "eval",
-          "tier": "high",
-          "reason": "展示以形式化证明、可信验证器和对照测试核验AI生成系统的方法，并明确证明与实现间的信任缺口。"
         }
       ],
       "is_new": false
