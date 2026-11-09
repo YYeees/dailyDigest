@@ -1,69 +1,43 @@
 {
   "items": [
     {
-      "full_name": "pbakaus/impeccable",
-      "url": "https://github.com/pbakaus/impeccable",
-      "description": "The design language that makes your AI harness better at design.",
-      "language": "JavaScript",
+      "full_name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
       "difficulty": "beginner",
       "worth_tier": "high",
-      "recommend_reason": "给AI编码助手(Claude Code/Cursor等)用的前端设计质量框架,用24个命令+61条确定性检测规则解决'AI生成UI同质化'的问题,离线规则无需调LLM。安装和使用门槛都低(npx一行装,自然语言命令),且有真实案例(Neo Mirai)前后对比,作者有Anthropic frontend-design技能开发背景,是AI辅助设计工具的扎实实践样本。",
-      "first_seen_date": "2026-10-05",
-      "stars_total": 99397,
-      "stars_period": 12017,
-      "last_snapshot_date": "2026-11-02"
+      "recommend_reason": "Matt Pocock维护的一批可直接复用的Claude Code/Codex/Copilot等agent提示词和工作流,解决agent常见失败模式(对齐不清、过度啰嗦、代码质量、架构腐化),比如/grill-me先访谈对齐需求、/tdd强制红绿重构循环。20余个skill都有文档说明适用场景,拿来即用门槛低,是agent工作流实操的优秀参考样本。",
+      "first_seen_date": "2026-10-12",
+      "stars_total": 318599,
+      "stars_period": 9635,
+      "last_snapshot_date": "2026-11-09"
     },
     {
-      "full_name": "Nutlope/hallmark",
-      "url": "https://github.com/Nutlope/hallmark",
-      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
-      "language": "CSS",
-      "difficulty": "beginner",
-      "worth_tier": "high",
-      "recommend_reason": "把网页设计方向、真实素材和浏览器检查串成可安装的设计 Skill，还能单独审计或重设计现有页面。README 给出了主题选择、响应式检查和重设计前后功能核对的完整流程，适合学习怎样用明确约束和反馈改善 AI 生成界面。",
-      "first_seen_date": "2026-11-02",
-      "stars_total": 44927,
-      "stars_period": 11566,
-      "last_snapshot_date": "2026-11-02"
-    },
-    {
-      "full_name": "HKUDS/DeepTutor",
-      "url": "https://github.com/HKUDS/DeepTutor",
-      "description": "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
+      "full_name": "D4Vinci/Scrapling",
+      "url": "https://github.com/D4Vinci/Scrapling",
+      "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here:https://discord.gg/EMgGbDceNQand follow here for daily tips and tricks:https://x.com/Scrapling_dev",
       "language": "Python",
       "difficulty": "intermediate",
       "worth_tier": "high",
-      "recommend_reason": "把资料阅读、带来源的问答、练习、研究和可编辑记忆整合成学习工作区，并支持多种检索后端与外部代理。README 有完整容器试用和模块化安装路线，也解释了共享上下文与记忆证据，是学习知识库应用如何形成持续学习流程的扎实样本。",
+      "recommend_reason": "把HTTP请求、浏览器渲染、页面解析和可恢复爬虫放进同一套Python接口，还提供MCP、Agent Skill和面向RAG的数据处理依赖。README给出了单页提取、并发抓取、断点恢复和导出的具体示例，适合学习如何给智能体接入可复用的网页数据获取工具。安装时要区分解析器、浏览器抓取和AI扩展，按实际需要添加依赖。",
+      "first_seen_date": "2026-11-09",
+      "stars_total": 99917,
+      "stars_period": 8342,
+      "last_snapshot_date": "2026-11-09"
+    },
+    {
+      "full_name": "milind-soni/OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "language": "TypeScript",
+      "difficulty": "beginner",
+      "worth_tier": "high",
+      "recommend_reason": "把本机 Claude、Codex 和 Grok 组织成聊天联系人式的代理团队，提供操作批准、共享频道和可导入团队配置。README 给出桌面安装、已有登录复用及可选云电脑的清楚路径，适合尝试多代理协作；不同系统的电脑控制能力仍有差异，云电脑和应用连接也依赖第三方服务。",
       "first_seen_date": "2026-11-02",
-      "stars_total": 53714,
-      "stars_period": 10982,
-      "last_snapshot_date": "2026-11-02"
-    },
-    {
-      "full_name": "cloudflare/security-audit-skill",
-      "url": "https://github.com/cloudflare/security-audit-skill",
-      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
-      "language": "JavaScript",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "由Cloudflare内部漏洞挖掘工具改造成的coding-agent skill，把“发现漏洞”拆解成侦察、覆盖式搜索、候选验证、结构化输出、独立复核、中立报告六个阶段，核心亮点是用不同agent互相验证发现(而非自证)来压低误报率。代表了AI辅助安全审计从“随手扫一下”到“有方法论、可复核”的实践路径。",
-      "first_seen_date": "2026-09-28",
-      "stars_total": 56426,
-      "stars_period": 10069,
-      "last_snapshot_date": "2026-11-02"
-    },
-    {
-      "full_name": "obra/superpowers",
-      "url": "https://github.com/obra/superpowers",
-      "description": "An agentic skills framework & software development methodology that works.",
-      "language": "Shell",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "面向编码agent的方法论框架，把brainstorm-plan-TDD-review-merge整个软件开发流程结构化为可执行的skill库，支持14+个agent平台。文档专业、有实际skill实现和测试框架，体现出真实的工程严谨性，是“AI辅助软件开发方法论”方向有代表性的学习样本。",
-      "first_seen_date": "2026-09-14",
-      "stars_total": 310655,
-      "stars_period": 5896,
-      "last_snapshot_date": "2026-11-02"
+      "stars_total": 18368,
+      "stars_period": 7621,
+      "last_snapshot_date": "2026-11-09"
     },
     {
       "full_name": "thedotmack/claude-mem",
@@ -74,9 +48,35 @@
       "worth_tier": "high",
       "recommend_reason": "给Claude Code等多种agent做跨session持久记忆的工具,用生命周期hook捕获session活动、AI压缩成摘要、SQLite+向量库做语义检索,未来session按需注入相关上下文。单命令安装(npx claude-mem install),工程完整(3000+ commit、分层记忆管理token成本),是\"agent记忆\"这个常见痛点的扎实实践案例。",
       "first_seen_date": "2026-10-12",
-      "stars_total": 109366,
-      "stars_period": 5852,
-      "last_snapshot_date": "2026-11-02"
+      "stars_total": 114937,
+      "stars_period": 6443,
+      "last_snapshot_date": "2026-11-09"
+    },
+    {
+      "full_name": "Nutlope/hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "difficulty": "beginner",
+      "worth_tier": "high",
+      "recommend_reason": "把网页设计方向、真实素材和浏览器检查串成可安装的设计 Skill，还能单独审计或重设计现有页面。README 给出了主题选择、响应式检查和重设计前后功能核对的完整流程，适合学习怎样用明确约束和反馈改善 AI 生成界面。",
+      "first_seen_date": "2026-11-02",
+      "stars_total": 51011,
+      "stars_period": 6356,
+      "last_snapshot_date": "2026-11-09"
+    },
+    {
+      "full_name": "github/spec-kit",
+      "url": "https://github.com/github/spec-kit",
+      "description": "💫 Toolkit to help you get started with Spec-Driven Development",
+      "language": "Python",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "GitHub官方出品的规范驱动开发(SDD)工具包，把\"先写清楚规范再让AI编码\"拆解成constitution/specify/plan/tasks/implement等七步斜杠命令，并配套Specify CLI和对30+种AI编码助手的集成，是目前\"AI辅助工程化开发流程\"领域最有代表性的官方实践之一，扎实可用而非demo。",
+      "first_seen_date": "2026-08-15",
+      "stars_total": 148735,
+      "stars_period": 4045,
+      "last_snapshot_date": "2026-11-09"
     }
   ]
 }

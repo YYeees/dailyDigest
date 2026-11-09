@@ -1236,7 +1236,7 @@
       "language": "Python",
       "difficulty": "beginner",
       "recommend_reason": "Anthropic官方维护的Agent Skills参考库，用Markdown+YAML就能定义Claude可动态加载的技能，门槛很低。包含48+个覆盖创意、文档处理、企业工作流的示例，部分（如docx/pdf处理）附带可读源码。是理解Claude技能扩展机制、学习如何给AI助手写可复用指令模块的权威一手资料，不是玩具项目。",
-      "stars_total": 186387
+      "stars_total": 189717
     },
     {
       "full_name": "firecrawl/firecrawl",
@@ -1254,7 +1254,7 @@
       "language": "Python",
       "difficulty": "intermediate",
       "recommend_reason": "GitHub官方出品的规范驱动开发(SDD)工具包，把\"先写清楚规范再让AI编码\"拆解成constitution/specify/plan/tasks/implement等七步斜杠命令，并配套Specify CLI和对30+种AI编码助手的集成，是目前\"AI辅助工程化开发流程\"领域最有代表性的官方实践之一，扎实可用而非demo。",
-      "stars_total": 145040
+      "stars_total": 148735
     },
     {
       "full_name": "Comfy-Org/ComfyUI",

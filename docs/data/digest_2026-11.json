@@ -278,6 +278,15 @@
   ],
   "github_track": [
     {
+      "full_name": "garrytan/gstack",
+      "url": "https://github.com/garrytan/gstack",
+      "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+      "language": "TypeScript",
+      "difficulty": "intermediate",
+      "recommend_reason": "用一组技能将需求讨论、方案评审、代码审查、真实浏览器测试和发布连接起来，并让上一步的文档与测试计划传到下一步。README给出了先试需求讨论、审查和QA的具体入口，尤其值得学习复现缺陷、补回归测试与保留证据的做法。功能多、安装依赖也多，不同智能体宿主的支持程度不同，可先挑一个工作环节验证效果。",
+      "stars_total": 140803
+    },
+    {
       "full_name": "Leonxlnx/taste-skill",
       "url": "https://github.com/Leonxlnx/taste-skill",
       "description": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages",
@@ -285,6 +294,24 @@
       "difficulty": "beginner",
       "recommend_reason": "让编程代理先选视觉方向和真实图片，再用浏览器截图反复检查网页与应用界面。README 说明了桌面界面专用规则、素材授权和运行环境，是学习设计反馈闭环的完整样本；一次构建耗时和 token 用量较大。",
       "stars_total": 107834
+    },
+    {
+      "full_name": "D4Vinci/Scrapling",
+      "url": "https://github.com/D4Vinci/Scrapling",
+      "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here:https://discord.gg/EMgGbDceNQand follow here for daily tips and tricks:https://x.com/Scrapling_dev",
+      "language": "Python",
+      "difficulty": "intermediate",
+      "recommend_reason": "把HTTP请求、浏览器渲染、页面解析和可恢复爬虫放进同一套Python接口，还提供MCP、Agent Skill和面向RAG的数据处理依赖。README给出了单页提取、并发抓取、断点恢复和导出的具体示例，适合学习如何给智能体接入可复用的网页数据获取工具。安装时要区分解析器、浏览器抓取和AI扩展，按实际需要添加依赖。",
+      "stars_total": 99917
+    },
+    {
+      "full_name": "lobehub/lobehub",
+      "url": "https://github.com/lobehub/lobehub",
+      "description": "🤯 LobeHub - Super-Agents on Your Team. Add super-agents to the chats your team already uses.They take on work by themselves and get better every week.",
+      "language": "TypeScript",
+      "difficulty": "beginner",
+      "recommend_reason": "提供把模型、技能、资源库、记忆和团队聊天接到一起的智能体工作空间，支持任务跟踪与定时执行。README列出外部编程智能体接入、可编辑记忆和GitHub检查失败后返回任务的工作链路，适合普通使用者实践持续的人机协作。可先使用托管入口，自托管则涉及数据库、缓存和文件存储等额外组件。",
+      "stars_total": 84434
     },
     {
       "full_name": "remotion-dev/remotion",
@@ -302,34 +329,7 @@
       "language": "Python",
       "difficulty": "intermediate",
       "recommend_reason": "把资料阅读、带来源的问答、练习、研究和可编辑记忆整合成学习工作区，并支持多种检索后端与外部代理。README 有完整容器试用和模块化安装路线，也解释了共享上下文与记忆证据，是学习知识库应用如何形成持续学习流程的扎实样本。",
-      "stars_total": 53714
-    },
-    {
-      "full_name": "AstrBotDevs/AstrBot",
-      "url": "https://github.com/AstrBotDevs/AstrBot",
-      "description": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
-      "language": "Python",
-      "difficulty": "beginner",
-      "recommend_reason": "把多种聊天平台、模型服务、知识库、MCP 和插件接到同一个 AI 助手平台，并提供 Web 管理界面。README 给出命令行、容器和桌面等部署路线，适合从实际聊天场景学习模型、工具与渠道如何组合，深入集成仍需配置平台凭证。",
-      "stars_total": 45526
-    },
-    {
-      "full_name": "Nutlope/hallmark",
-      "url": "https://github.com/Nutlope/hallmark",
-      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
-      "language": "CSS",
-      "difficulty": "beginner",
-      "recommend_reason": "把网页设计方向、真实素材和浏览器检查串成可安装的设计 Skill，还能单独审计或重设计现有页面。README 给出了主题选择、响应式检查和重设计前后功能核对的完整流程，适合学习怎样用明确约束和反馈改善 AI 生成界面。",
-      "stars_total": 44927
-    },
-    {
-      "full_name": "milind-soni/OpenMausBot",
-      "url": "https://github.com/milind-soni/OpenMausBot",
-      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
-      "language": "TypeScript",
-      "difficulty": "beginner",
-      "recommend_reason": "把本机 Claude、Codex 和 Grok 组织成聊天联系人式的代理团队，提供操作批准、共享频道和可导入团队配置。README 给出桌面安装、已有登录复用及可选云电脑的清楚路径，适合尝试多代理协作；不同系统的电脑控制能力仍有差异，云电脑和应用连接也依赖第三方服务。",
-      "stars_total": 10588
+      "stars_total": 57057
     }
   ]
 }
