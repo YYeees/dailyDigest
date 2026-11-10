@@ -2,22 +2,186 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "parse_number() as a SQLite extension: C vs Rust",
-      "link": "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/",
-      "date": "2026-11-08",
-      "first_seen": "2026-11-09T01:45:53.080205+00:00",
+      "title": "llm-anthropic 0.31",
+      "link": "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-10T04:10:50.130252+00:00",
       "source_type": "blog",
-      "summary": "Simon 遛狗时想到一个数据库小功能，便让 Claude 比较用 C 和 Rust 实现的性能、代码复杂度与文件大小。发现差距来自数字解析方式后，他继续追问，让模型优化实现，并整理成带测试和随机输入检查的研究报告。它展示了怎样把一个好奇的问题推进成可验证的实验，底层性能细节需要一些编程基础。",
+      "summary": "Simon Willison更新了自己的命令行模型插件，加入对新Claude模型的支持，并给出调用示例。他还用同一个绘图任务比较不同思考强度，发现最高档可能耗尽预算却没有结果。主要适合正在用这套工具的人查看，也提醒我们思考强度开到最大，并不保证得到更好的输出。",
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "用聊天式提示比较并优化数据库扩展，是具体的智能体实验案例，但涉及底层性能细节。"
+          "reason": "作者维护的小工具更新日志，加入模型支持并记录最高思考强度失败，按标准定为中档。"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "亲自从日常好奇出发做出可运行实验，连接人机共建与动手探索，但未深入反思认知方式。"
+          "reason": "没有展开认知方式或关注母题。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Locating the source of a mysterious beep with Claude",
+      "link": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-10T04:10:50.130462+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison让Claude写出一个用多台手机和电脑共同监听的工具，最终找到了藏在箱子里的报警器。更有意思的是，他让智能体读取声音记录、在线修改设备代码，再通过拍手和回放确认定位是否靠谱。文章展示了如何给编程智能体接上现实世界的反馈，也保留了从粗糙原型逐步调到能用的过程。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "用智能体定位家中蜂鸣声的实战案例，主要是项目演示，按标准不升为高档。"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者亲手搭建感知与反馈环境解决生活问题，具体体现与模型共建及系统约束的重要性。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Ethan Mollick",
+      "title": "Fable 5.2 and Jagged AGI",
+      "link": "https://www.oneusefulthing.org/p/fable-52-and-jagged-agi",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-10T04:10:49.925189+00:00",
+      "source_type": "blog",
+      "summary": "Ethan Mollick用新Claude做创业方案、文学课程和持续生成的虚拟世界，发现它能完成复杂工作，却常常察觉不到成果已经冗长、无趣或失控。尤其值得看的是，多智能体为了通过固定画面的评分不断优化，最后还把自己困在越来越厚的规则里。这些一手实验说明，检查事实和代码还不够，目标是否值得、整体体验好不好，仍需要人持续判断。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "通过跨领域的一手实验解释新模型的能力和使用边界，面向普通用户且有具体干预经验。"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者亲自观察多智能体协作失控与人工判断的作用，直接呼应认知不能外包和系统约束设计。"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "具体揭示固定截图评分被优化、评审规则膨胀及正确性检查漏掉整体质量，能改变智能体质量保障实践。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "What Frontier Labs Buy: A Data Deep Dive with Handshake AI — Garrett Lord & Team",
+      "link": "https://latent.space/p/handshake/",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-10T04:10:51.225026+00:00",
+      "source_type": "blog",
+      "summary": "这期访谈把模型训练和评测用的专业任务环境直接搬到屏幕上，展示银行业务、科学图像和文件操作中的真实失败。最值得看的是，模型能背出规则却不会在任务中应用，还可能钻评分器的空子，而只看最终回复会漏掉关键行为。对设计智能体测试的人来说，它具体说明了为什么要检查执行过程，并让领域专家参与判断。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "提供前沿实验室采购训练数据与专业任务环境的行业观察，但篇幅长且专业门槛较高。"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "专家判断与评分规则的落差呼应独立判断，主要仍是访谈转述。"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "展示真实任务环境、过程轨迹检查、部分得分及评分器被钻空子的案例，可直接启发智能体评测设计。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Control Room: A central system to track and stop model workloads across our research infrastructure",
+      "link": "https://openai.com/index/control-room",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-10T04:10:54.577653+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI介绍了用于追踪研究基础设施中模型任务的Control Room，称它可以在出现安全问题时迅速停止相关运行。它关注的是模型开始执行任务以后，怎样保持可观察、可控制。原文此次访问被拒绝，目前只能依据官方简介了解用途，具体实现与适用边界仍需点开原文确认。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "研究基础设施的模型工作负载管控与人工智能工程相关，但全文被拒绝访问，暂据简介保守判断。"
+        },
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "涉及模型运行监控与紧急停止的可靠性保障，但全文无法访问，具体方法尚不能核实。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "The Web Is More Than Enough, by Paul Ford",
+      "link": "https://simonwillison.net/2026/Nov/9/hn-50421091/",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-10T04:10:50.130525+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison让Claude把一个依赖三维图形库的作品改写成只用浏览器原生能力的版本，模型在同一段对话里完成了转换。两个版本的画面并不完全相同，原来的代码也更容易读。这是一个轻量的小实验，可以看看编程智能体在减少项目依赖时能做到什么，也能看到“能运行”和“完全等价”之间的差别。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "属于用编程智能体制作三维效果的轻量演示。"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "没有展开思维工具或认知方式的实质讨论。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Hide your slop PR descriptions behind <details><summary>",
+      "link": "https://simonwillison.net/2026/Nov/9/details-summary/",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-10T04:10:50.130545+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison发现，智能体写的变更说明即使准确完整，也常常长到让人不想读。他现在先放一段由自己挑选和认可的简短介绍，把模型生成的完整说明折叠在后面，必要时再展开。文章附有实际例子，适合直接借来改善人工智能参与开发时的沟通，也提醒人类判断应该放在读者最先看到的位置。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "给出可立即应用的人工智能编程协作写法，并有真实合并请求示例。"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者亲述用人工编辑判断保护读者注意力，直接呼应认知系统不能外包与写作表达。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "Claude can design electronic prototypes from start to finish",
+      "link": "https://www.anthropic.com/research/claude-electronics-design",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-10T04:11:00.853714+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic展示了Claude从电路设计、外壳建模到编写固件的完整硬件开发过程，工程师按设计制造的原型可以正常工作。文章讲清楚模型怎样查资料、推翻错误布局并处理制造约束，也说明原型尚未经过完整的安全与可靠性验证。值得看的是人工智能开始把多个工程步骤串起来，以及离可交付产品还差哪些环节。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "以完整硬件原型与明确局限解释模型能力的新进展，内容扎实且容易理解。"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "提供智能体连接现实工具的构建案例，但主线不是认知反思。"
         }
       ],
       "is_new": true
@@ -47,7 +211,7 @@
           "reason": "实质讨论智能体代码审查、可验证环境和复现故障，但偏实践概览，没有完整测试方案。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -69,7 +233,7 @@
           "reason": "与同源完整版重复，涉及智能体运行环境和人保持理解力的实践。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -482,123 +646,6 @@
           "track": "anchor",
           "tier": "medium",
           "reason": "讨论模型理解与自我改进的边界，连接AI作为认知方式，但主要是二手转述。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Building AI for Lawyers - Jacob Lauritzen, CTO of Legora",
-      "link": "https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora/",
-      "date": "2026-11-02",
-      "first_seen": "2026-11-03T03:18:27.786646+00:00",
-      "source_type": "blog",
-      "summary": "Legora不能读取客户的保密资料，却仍要判断法律智能体做得对不对。团队让工程师和律师一起搭建模拟工作环境，按业务领域和任务观察模型进退，再用已知失败类型检查线上表现。这篇把保密限制下的评测讲得很具体，也展示了为什么换上更强模型仍需要持续验证。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "法律智能体的一手工程实践扎实，但领域工作流和评测设计需要一定技术背景。"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "CTO亲述如何用领域知识、流程积木和工作流构建产品，直接命中价值在系统搭建而非只换模型。"
-        },
-        {
-          "track": "eval",
-          "tier": "high",
-          "reason": "具体说明用模拟客户环境、分任务结果和线上失败分类，在无法查看客户轨迹时保障智能体质量。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Building Legal Agents When You Can't See the Data - Jacob Lauritzen, CTO of Legora",
-      "link": "https://latent.space/p/building_legal_agents_when_you_can_t_see_the_data_-_jacob_lauritzen_cto_of_legora/",
-      "date": "2026-11-02",
-      "first_seen": "2026-11-03T03:18:27.794182+00:00",
-      "source_type": "blog",
-      "summary": "这期访谈介绍Legora如何把法律助手做成能处理合同和协作任务的智能体，也提出了一个难题：客户资料保密，团队看不到智能体的真实工作记录。节目提纲涉及模拟客户任务、律师参与评测和模型升级后的能力变化。同源另有更完整的文章版，优先读那篇即可。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "与《Building AI for Lawyers》重复，择一看即可，此版本简要涉及领域工作流的搭建。"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "与《Building AI for Lawyers》重复，择一看即可，保留其无客户轨迹评测的主题线索。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "Scaling Git at OpenAI",
-      "link": "https://openai.com/index/scaling-git-at-openai",
-      "date": "2026-11-02",
-      "first_seen": "2026-11-03T03:18:31.424770+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI介绍了Pando，一个兼容Git的后端，目标是承接Codex推动的软件开发规模。它关注编程智能体普及后，代码协作底层设施如何跟上。原文访问受阻，目前没有足够细节判断其架构和实际效果，适合对大规模开发基础设施感兴趣时再读。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "介绍为编程智能体规模打造的Git兼容后端，偏工程基础设施，且全文访问受阻。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "The U.S. Census Bureau and “Super Intelligence”",
-      "link": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
-      "date": "2026-11-02",
-      "first_seen": "2026-11-03T03:18:26.501200+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison重新分析美国企业使用AI的调查数据，发现问卷从生产商品或服务改成了任何业务环节，前后数字不能直接比较。随后他又查到调查把AI改称“超级智能”，并追问这会不会影响回答。值得读的是他如何回到原始数据和问题措辞，拆开一张看似直观的趋势图。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "作者亲自复算数据并追查问卷措辞，直接示范拆解怀疑和独立核验。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Andrew Huberman",
-      "title": "Access the Sublime & Live Your Best Life | Robert Greene",
-      "link": "https://www.youtube.com/watch?v=y-fRFiTrrg4",
-      "date": "2026-11-02",
-      "first_seen": "2026-11-05T02:23:31.786770+00:00",
-      "source_type": "youtube",
-      "summary": "Robert Greene在这期访谈里谈如何从日常生活中重新获得惊奇感，把注意力从手机和社交比较中移开。节目介绍提到放慢节奏、手写、观察自然，以及从童年兴趣寻找自己的方向，也谈到他中风后的体会。想借心理与哲学视角想想如何自处，可以从这期长访谈入手。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "从感知、放慢节奏与个人成长切入自我认识和清净场域，但现有材料是访谈介绍。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "LifeVal",
-      "link": "https://openai.com/index/lifeval",
-      "date": "2026-11-02",
-      "first_seen": "2026-11-03T03:18:31.425014+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI发布了LifeVal，希望衡量AI能否帮助人们完成日常事务，范围包括寻找托育、处理财务和政府手续。它关注的是生活中的任务，而不只是答题成绩。原文访问受阻，目前只能确认这些评测方向，具体怎么测、结果能否代表真实使用，还需点开原文核实。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "介绍日常任务基准，但全文访问受阻，现有信息不足以判断具体实用价值。"
         }
       ],
       "is_new": false

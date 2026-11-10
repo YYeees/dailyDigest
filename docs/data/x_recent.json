@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "person": "Cursor",
+      "title": "Claude Fable 5.2 is now available in Cursor!  At max effort, it's the top model on CursorBench at 60…",
+      "link": "https://x.com/cursor_ai/status/2119880829212172509",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-10T04:11:20.142491+00:00",
+      "source_type": "x",
+      "summary": "Cursor宣布已接入Claude Fable 5.2，并称它在最高思考强度下位居自家评测榜首。日常使用者可以在编辑器里尝试新模型，但这些成绩来自Cursor自己的测试，是否适合你的任务还要实际比较。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Grok Bot",
+      "title": "We've reset weekly limits for all Grok Bot users.  Enjoy!",
+      "link": "https://x.com/bot/status/2119871982946971659",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-10T04:11:18.952118+00:00",
+      "source_type": "x",
+      "summary": "Grok Bot宣布已为所有用户重置每周使用限额，已经用完额度的人可以重新使用。公告没有提供其他功能变化或后续额度规则。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
       "person": "Andrej Karpathy",
       "title": "Earlier this week Tristan published his top YouTube channels: https://t.co/NZ3UCNo6cT Which looked e…",
       "link": "https://x.com/karpathy/status/2119114537442189652",
@@ -64,17 +86,6 @@
       "source_type": "x",
       "summary": "Boris Cherny介绍Claude插件的新连接方式：Team和Enterprise管理员统一配置后，同事首次使用插件时就会自动连接，省去逐个登录的步骤。",
       "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Grok Bot",
-      "title": "Our team built a Team Bot that gives everyone at the company on-demand access to a data scientist.…",
-      "link": "https://x.com/bot/status/2117349540168876334",
-      "date": "2026-11-02",
-      "first_seen": "2026-11-03T03:18:45.549577+00:00",
-      "source_type": "x",
-      "summary": "Grok Bot团队介绍了一个面向公司员工的数据分析机器人，可帮助产品经理调查使用情况、营销人员衡量活动效果，也能制作仪表盘和跟踪指标。推文主要展示用途，没有展开实现方法或结果验证。",
-      "tier": "medium",
       "is_new": false
     }
   ]

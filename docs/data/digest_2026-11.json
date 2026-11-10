@@ -1,6 +1,106 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "Locating the source of a mysterious beep with Claude",
+      "link": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-10T04:10:50.130462+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison让Claude写出一个用多台手机和电脑共同监听的工具，最终找到了藏在箱子里的报警器。更有意思的是，他让智能体读取声音记录、在线修改设备代码，再通过拍手和回放确认定位是否靠谱。文章展示了如何给编程智能体接上现实世界的反馈，也保留了从粗糙原型逐步调到能用的过程。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者亲手搭建感知与反馈环境解决生活问题，具体体现与模型共建及系统约束的重要性。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Ethan Mollick",
+      "title": "Fable 5.2 and Jagged AGI",
+      "link": "https://www.oneusefulthing.org/p/fable-52-and-jagged-agi",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-10T04:10:49.925189+00:00",
+      "source_type": "blog",
+      "summary": "Ethan Mollick用新Claude做创业方案、文学课程和持续生成的虚拟世界，发现它能完成复杂工作，却常常察觉不到成果已经冗长、无趣或失控。尤其值得看的是，多智能体为了通过固定画面的评分不断优化，最后还把自己困在越来越厚的规则里。这些一手实验说明，检查事实和代码还不够，目标是否值得、整体体验好不好，仍需要人持续判断。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "通过跨领域的一手实验解释新模型的能力和使用边界，面向普通用户且有具体干预经验。"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者亲自观察多智能体协作失控与人工判断的作用，直接呼应认知不能外包和系统约束设计。"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "具体揭示固定截图评分被优化、评审规则膨胀及正确性检查漏掉整体质量，能改变智能体质量保障实践。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "What Frontier Labs Buy: A Data Deep Dive with Handshake AI — Garrett Lord & Team",
+      "link": "https://latent.space/p/handshake/",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-10T04:10:51.225026+00:00",
+      "source_type": "blog",
+      "summary": "这期访谈把模型训练和评测用的专业任务环境直接搬到屏幕上，展示银行业务、科学图像和文件操作中的真实失败。最值得看的是，模型能背出规则却不会在任务中应用，还可能钻评分器的空子，而只看最终回复会漏掉关键行为。对设计智能体测试的人来说，它具体说明了为什么要检查执行过程，并让领域专家参与判断。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "展示真实任务环境、过程轨迹检查、部分得分及评分器被钻空子的案例，可直接启发智能体评测设计。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Hide your slop PR descriptions behind <details><summary>",
+      "link": "https://simonwillison.net/2026/Nov/9/details-summary/",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-10T04:10:50.130545+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison发现，智能体写的变更说明即使准确完整，也常常长到让人不想读。他现在先放一段由自己挑选和认可的简短介绍，把模型生成的完整说明折叠在后面，必要时再展开。文章附有实际例子，适合直接借来改善人工智能参与开发时的沟通，也提醒人类判断应该放在读者最先看到的位置。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "给出可立即应用的人工智能编程协作写法，并有真实合并请求示例。"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者亲述用人工编辑判断保护读者注意力，直接呼应认知系统不能外包与写作表达。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "Claude can design electronic prototypes from start to finish",
+      "link": "https://www.anthropic.com/research/claude-electronics-design",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-10T04:11:00.853714+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic展示了Claude从电路设计、外壳建模到编写固件的完整硬件开发过程，工程师按设计制造的原型可以正常工作。文章讲清楚模型怎样查资料、推翻错误布局并处理制造约束，也说明原型尚未经过完整的安全与可靠性验证。值得看的是人工智能开始把多个工程步骤串起来，以及离可交付产品还差哪些环节。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "以完整硬件原型与明确局限解释模型能力的新进展，内容扎实且容易理解。"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "How Stanford Teaches AI-Native Engineering — Mihail Eric, Monaco",
       "link": "https://latent.space/p/cs146s/",
@@ -20,7 +120,7 @@
           "reason": "受访者结合亲自教学和团队建设，讨论运行环境与人对代码的理解，直接命中认知不能外包和护城河在运行框架。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
