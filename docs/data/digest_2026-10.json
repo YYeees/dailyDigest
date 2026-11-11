@@ -15,6 +15,23 @@
           "reason": "完整解释不可信预览内容如何跨越隔离边界，可用于设计AI产品的安全测试场景。"
         }
       ],
+      "is_new": false
+    },
+    {
+      "person": "Teo Crawford",
+      "title": "Why you should photograph your home.",
+      "link": "https://www.youtube.com/watch?v=VHQvfVpCaJ4",
+      "date": "2026-10-31",
+      "first_seen": "2026-11-11T01:58:37.831772+00:00",
+      "source_type": "youtube",
+      "summary": "Teo 分享自己在家拍摄的照片，把镜头转向熟悉的生活环境。这次内容适合想从身边寻找拍摄题材的人，现有简介没有展开具体拍摄方法。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "以家中摄影连接日常观察与个人表达。"
+        }
+      ],
       "is_new": true
     },
     {
@@ -42,7 +59,7 @@
           "reason": "给出确定性权限限制、代码查询校验和利用运行记录改进系统的具体质量保障做法。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",

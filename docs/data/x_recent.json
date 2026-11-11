@@ -2,6 +2,39 @@
   "items": [
     {
       "person": "Cursor",
+      "title": "Your agents can now coordinate with your teammatesâ€™ agents.  Projects has been rebuilt for multipl…",
+      "link": "https://x.com/cursor_ai/status/2120295553309565139",
+      "date": "2026-11-10",
+      "first_seen": "2026-11-11T01:59:20.976369+00:00",
+      "source_type": "x",
+      "summary": "Cursor 宣布重做 Projects，让团队成员和各自的代理在同一个工作区协作。重点从个人使用代理转向团队协调，适合正在把编程代理引入多人项目的人关注。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Grok Bot",
+      "title": "Grok Bot can now join your personal or company tailnets on Tailscale.  Use it to securely reach priv…",
+      "link": "https://x.com/bot/status/2120279511707386263",
+      "date": "2026-11-10",
+      "first_seen": "2026-11-11T01:59:18.737896+00:00",
+      "source_type": "x",
+      "summary": "Grok Bot 现在可以加入个人或公司的 Tailscale 私有网络，访问内部工具、应用和私有 MCP 服务。适合希望把代理接到内部工作环境的人关注。",
+      "tier": "high",
+      "is_new": true
+    },
+    {
+      "person": "Cursor",
+      "title": "Gemini 4 Carbon is now available in Cursor!  At high effort, it's the top model on CursorBench at 60…",
+      "link": "https://x.com/cursor_ai/status/2120193584670580857",
+      "date": "2026-11-10",
+      "first_seen": "2026-11-11T01:59:20.976579+00:00",
+      "source_type": "x",
+      "summary": "Cursor 宣布已接入 Gemini 4 Carbon，并引用自家编程榜单说明其表现。适合正在选择编辑器内模型的用户关注，榜单成绩不等于你的项目效果。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Cursor",
       "title": "Claude Fable 5.2 is now available in Cursor!  At max effort, it's the top model on CursorBench at 60…",
       "link": "https://x.com/cursor_ai/status/2119880829212172509",
       "date": "2026-11-09",
@@ -9,7 +42,7 @@
       "source_type": "x",
       "summary": "Cursor宣布已接入Claude Fable 5.2，并称它在最高思考强度下位居自家评测榜首。日常使用者可以在编辑器里尝试新模型，但这些成绩来自Cursor自己的测试，是否适合你的任务还要实际比较。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Grok Bot",
@@ -20,7 +53,7 @@
       "source_type": "x",
       "summary": "Grok Bot宣布已为所有用户重置每周使用限额，已经用完额度的人可以重新使用。公告没有提供其他功能变化或后续额度规则。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrej Karpathy",
@@ -64,28 +97,6 @@
       "source_type": "x",
       "summary": "Grok Bot宣布新增打电话功能。这条推文没有说明使用方式、适用范围或限制，感兴趣可以查看所附链接。",
       "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Grok Bot",
-      "title": "Try the new shopping experience in Grok Bot.  Find the best deal, compare items, and have Bot track…",
-      "link": "https://x.com/bot/status/2117736249444507834",
-      "date": "2026-11-03",
-      "first_seen": "2026-11-04T02:25:17.425504+00:00",
-      "source_type": "x",
-      "summary": "Grok Bot宣布加入购物功能，可以查找优惠、比较商品并跟踪订单。推文没有展开使用步骤或效果。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "Signing in to your company's plugins one by one is annoying, so we let Claude auto-connect to them n…",
-      "link": "https://x.com/bcherny/status/2117693181651542387",
-      "date": "2026-11-03",
-      "first_seen": "2026-11-04T02:25:13.141392+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny介绍Claude插件的新连接方式：Team和Enterprise管理员统一配置后，同事首次使用插件时就会自动连接，省去逐个登录的步骤。",
-      "tier": "high",
       "is_new": false
     }
   ]

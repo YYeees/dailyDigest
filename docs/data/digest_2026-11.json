@@ -1,6 +1,169 @@
 {
   "items": [
     {
+      "person": "Cursor",
+      "title": "Your agents can now coordinate with your teammatesâ€™ agents.  Projects has been rebuilt for multipl…",
+      "link": "https://x.com/cursor_ai/status/2120295553309565139",
+      "date": "2026-11-10",
+      "first_seen": "2026-11-11T01:59:20.976369+00:00",
+      "source_type": "x",
+      "summary": "Cursor 宣布重做 Projects，让团队成员和各自的代理在同一个工作区协作。重点从个人使用代理转向团队协调，适合正在把编程代理引入多人项目的人关注。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "团队成员与代理共享协作空间，直接影响工具使用。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Grok Bot",
+      "title": "Grok Bot can now join your personal or company tailnets on Tailscale.  Use it to securely reach priv…",
+      "link": "https://x.com/bot/status/2120279511707386263",
+      "date": "2026-11-10",
+      "first_seen": "2026-11-11T01:59:18.737896+00:00",
+      "source_type": "x",
+      "summary": "Grok Bot 现在可以加入个人或公司的 Tailscale 私有网络，访问内部工具、应用和私有 MCP 服务。适合希望把代理接到内部工作环境的人关注。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "说明连接私有网络工具的新增使用方式。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Designing for Agents — Zeno Rocha, Resend",
+      "link": "https://latent.space/p/resend/",
+      "date": "2026-11-10",
+      "first_seen": "2026-11-11T01:58:41.066907+00:00",
+      "source_type": "blog",
+      "summary": "Resend 创始人谈如何让开发工具更容易被 AI 代理找到和使用，从可直接读取的价格表讲到工具调用返回的数据量。他会展开代理实际调用，检查哪些内容占满上下文，适合正在设计文档或代理工具的人借用这种观察方式。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "提供文档可读性与工具返回大小的具体代理设计建议。"
+        },
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "创始人用一手构建经历解释如何改善代理工作环境。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "NaiveAI Promises 2,100 Tokens per Second. How Well Does It Code?",
+      "link": "https://latent.space/p/naiveai/",
+      "date": "2026-11-10",
+      "first_seen": "2026-11-11T01:58:41.067624+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space 实测 NaiveAI 的高速模型，把生成速度、等待时间和做出来的应用放在一起比较。结果显示，吐字快仍可能因为思考太长而拖慢任务，文章也坦承没有检查答题正确率，适合学习怎样看穿单一速度指标。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "用真实应用与响应时间比较帮助理解快速模型的取舍。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Google",
+      "title": "Gemini 4 Carbon is now available",
+      "link": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+      "date": "2026-11-10",
+      "first_seen": "2026-11-11T01:58:50.503605+00:00",
+      "source_type": "blog",
+      "summary": "Google 将 Gemini 4 Carbon 开放给更多开发者和用户，定位是需要长时间推理的复杂编程、知识工作与科研任务。文章也展示了多代理分工和反复检查的工作方式，适合判断什么时候该用更强模型，以及为什么任务总成本更值得关注。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "解释Carbon的适用任务、可用入口及多代理工作流。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Google",
+      "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+      "link": "https://deepmind.google/blog/introducing-alphaproof-code/",
+      "date": "2026-11-10",
+      "first_seen": "2026-11-11T01:58:50.503795+00:00",
+      "source_type": "blog",
+      "summary": "Google 用 AlphaProof Code 为 Signal 核心加密实现的关键安全性质写出数学证明，再由专门程序检查。人类先审查要证明的目标，团队还把修复过的漏洞放回隔离版本，确认系统能证明其不安全，值得做测试的人关注这种质量保障方式。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "清楚说明AI证明真实软件安全性的工作方式与意义。"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "解释规格审查、机器检查证明与植入历史漏洞的验证流程。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
+      "link": "https://simonwillison.net/2026/Nov/10/muse-ember/",
+      "date": "2026-11-10",
+      "first_seen": "2026-11-11T01:58:40.136682+00:00",
+      "source_type": "blog",
+      "summary": "Simon 试用了 Meta 的轻量模型 Muse Ember，把它与同档模型的收费和实际表现放在一起看。他特别提醒，长输入会改变价格，模型思考时消耗的字数也不同，选型应看完成任务的总成本，而不只看标价。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "结合长上下文收费与亲测，提供小模型选型思路。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Fable 5.2 retakes World #1 LLM spot as $ANT IPO roadshow begins",
+      "link": "https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/",
+      "date": "2026-11-10",
+      "first_seen": "2026-11-11T01:58:41.068825+00:00",
+      "source_type": "blog",
+      "summary": "这篇梳理 Claude Fable 新版本的能力和费用变化，提醒每个字更便宜，不代表完成任务的账单更低。模型会花更多时间检查工作，推理强度也影响成本，适合在升级之前理解该怎样比较实际使用代价。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "解释新模型成本、推理强度与实际任务费用的差异。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Prompting Claude Fable 5.2",
+      "link": "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/",
+      "date": "2026-11-10",
+      "first_seen": "2026-11-11T01:58:40.136726+00:00",
+      "source_type": "blog",
+      "summary": "Simon 摘录了 Anthropic 对 Claude Fable 的提示建议：明确告诉模型代码库由它负责，会影响它是否主动整理重复代码。小任务实验中，这种表述比不说明归属时更常触发重构，值得在希望代理长期维护项目时试用。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "给出能直接尝试的编程代理提示方式及对照结果。"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "Locating the source of a mysterious beep with Claude",
       "link": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
@@ -13,6 +176,23 @@
           "track": "anchor",
           "tier": "high",
           "reason": "作者亲手搭建感知与反馈环境解决生活问题，具体体现与模型共建及系统约束的重要性。"
+        }
+      ],
+      "is_new": false
+    },
+    {
+      "person": "Google",
+      "title": "Gemini Robotics 2.5 accelerates real-world general dexterity",
+      "link": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-11T01:58:50.503819+00:00",
+      "source_type": "blog",
+      "summary": "Google 发布 Gemini Robotics 2.5，展示机器人处理柔软物体、使用工具，以及在汽车生产线上整理零件的进展。文章也介绍靠近人时的安全控制和专门测试危险指令的数据集，适合了解机器人从演示走向现场还要解决什么。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "用生产线案例解释机器人模型的新能力与应用边界。"
         }
       ],
       "is_new": true
@@ -42,6 +222,23 @@
           "reason": "具体揭示固定截图评分被优化、评审规则膨胀及正确性检查漏掉整体质量，能改变智能体质量保障实践。"
         }
       ],
+      "is_new": false
+    },
+    {
+      "person": "Greg Isenberg",
+      "title": "AI Agents are too good at marketing now",
+      "link": "https://www.youtube.com/watch?v=uJuxenfe-NU",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-11T01:58:37.920010+00:00",
+      "source_type": "youtube",
+      "summary": "这期演示如何让 AI 代理真正接手营销工作，重点是先准备业务数据、广告平台权限和创作工具。嘉宾解释为什么要把数据集中起来再让代理查询，也展示广告生成流程，适合想把聊天助手接进实际业务的人。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "展示可借用的营销代理数据与工具配置方法。"
+        }
+      ],
       "is_new": true
     },
     {
@@ -59,7 +256,7 @@
           "reason": "展示真实任务环境、过程轨迹检查、部分得分及评分器被钻空子的案例，可直接启发智能体评测设计。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -81,7 +278,7 @@
           "reason": "作者亲述用人工编辑判断保护读者注意力，直接呼应认知系统不能外包与写作表达。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -98,7 +295,7 @@
           "reason": "以完整硬件原型与明确局限解释模型能力的新进展，内容扎实且容易理解。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
