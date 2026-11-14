@@ -60,8 +60,9 @@
   .tg:hover { color: var(--ink); border-bottom-color: var(--faint); }
   .tg.on { color: var(--accent); font-weight: 600; }
   /* 等级：HIGH 土橙、MEDIUM 灰、LOW 最浅；LOW 的轨道只展示，不能点 */
-  .tg { white-space: nowrap; }
-  .tier { font-weight: 500; letter-spacing: .1em; margin-left: 3px; }
+  .tg { white-space: nowrap; text-transform: uppercase; }
+  /* 等级只显示一个：HIGH 土橙、MEDIUM 灰、LOW 最浅，跟前面的轨道名隔开一点 */
+  .tier { font-weight: 500; letter-spacing: .1em; margin-left: 12px; white-space: nowrap; }
   .tier-high { color: var(--date); }
   .tier-medium { color: var(--who); }
   .tier-low { color: #C2BEB4; }
@@ -117,7 +118,8 @@
     .lead h3 { font-size: 20px; }
     .brief .t { font-size: 16.5px; }
     .brief .row { flex-wrap: wrap; row-gap: 4px; }
-    .brief .side { width: 100%; }
+    .brief .side { width: 100%; flex-wrap: wrap; row-gap: 2px; white-space: normal; }
+    .brief .side .who { white-space: normal; }
     .src { flex-wrap: wrap; row-gap: 4px; }
     .src .tracks { margin-left: 0; width: 100%; }
   }
@@ -131,37 +133,25 @@
   .src .tracks { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; }
   .lead h3 { font-family: var(--title); font-size: 24px; line-height: 1.3; font-weight: 400; margin: 8px 0 10px; letter-spacing: 0;
              color: var(--ink); -webkit-text-stroke: .3px currentColor; font-feature-settings: "onum" 1; }
-  .lead p, .brief .more p, .mini .txt { font-family: "CJK Quotes", var(--sans); }
+  .lead p, .mini .txt { font-family: "CJK Quotes", var(--sans); }
   .lead p { margin: 0; color: var(--soft); font-size: 15px; line-height: 1.85; text-align: justify; }
   .lead:hover h3 a { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
 
   /* 简讯(medium)：一行；点空白处展开摘要，点标题打开原文 */
   .briefs { padding: 6px 0 24px; }
-  .brief { display: block; padding: 15px 0; border-bottom: 1px dashed var(--rule); cursor: pointer; border-radius: 10px; }
+  .brief { display: block; padding: 16px 0 18px; border-bottom: 1px solid var(--rule); border-radius: 10px; }
   .brief:last-child { border-bottom: 0; }
   .brief .row { display: flex; gap: 14px; align-items: baseline; }
   .brief .t { flex: 1; font-family: var(--title); font-size: 18px; font-weight: 400; line-height: 1.45; letter-spacing: 0;
               color: var(--ink); -webkit-text-stroke: .2px currentColor; font-feature-settings: "onum" 1; }
   .brief .t a:hover { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
   .brief .who { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--who); white-space: nowrap; }
-  /* 简讯右侧：[标注] 标签 · 人名，同一行 */
+  /* 简讯右侧：[记一笔][标注] 轨道 等级 · 人名，同一行；摘要直接显示在标题下面 */
   .brief .side { display: inline-flex; align-items: center; white-space: nowrap; font-size: 11px; letter-spacing: .12em;
                  text-transform: uppercase; color: var(--faint); }
   .brief .side .tgline .tg + .tg::before { content: "·"; margin: 0 6px; color: var(--faint); }
   .brief .side .dot { margin: 0 8px; color: var(--faint); }
-  /* grid-template-rows 0fr→1fr 做高度动画，不用猜摘要有多高 */
-  .brief .more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .25s ease; }
-  .brief.open .more { grid-template-rows: 1fr; }
-  .brief .more > div { overflow: hidden; }
-  .brief .more p { margin: 0; color: var(--soft); font-size: 15px; line-height: 1.85; text-align: justify; }
-  .brief .tgs { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); }
-  /* 展开时这一条变成临时头条：标题跟头条一样粗，淡底色跟上下分开。左右用负margin把底色往外扩，
-     文字仍跟其他行对齐 */
-  .brief { transition: background .2s, padding .2s, margin .2s; }
-  .brief.open { background: var(--hover); border-bottom-color: transparent; margin: 6px -18px; padding: 20px 18px 22px; }
-  @media (max-width: 760px) { .brief.open { margin: 6px -12px; padding: 18px 12px 20px; } }
-  .brief.open .t { -webkit-text-stroke: .35px currentColor; }
-  .brief.open .more p { padding-top: 12px; }
+  .brief .sum { margin: 6px 0 0; color: var(--soft); font-size: 15px; line-height: 1.85; text-align: justify; font-family: "CJK Quotes", var(--sans); }
 
   /* 「记一笔」——一键在写作收件箱(独立Obsidian vault)新建一条临时笔记。
      回路的另一头是scripts/scan_inbox.py:靠笔记frontmatter里的source匹配回digest.db。
@@ -176,7 +166,7 @@
   /* 未记:空心笔(只描边)。已记:实心笔。同形状不同填充,切换时尺寸完全不变。 */
   .note-btn svg { fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linejoin: round; }
   .note-btn:hover { color: var(--ink); border-color: var(--faint); }
-  .lead:hover .note-btn, .brief.open .note-btn, .note-btn:focus-visible, .note-btn.noted { opacity: 1; }
+  .lead:hover .note-btn, .brief:hover .note-btn, .note-btn:focus-visible, .note-btn.noted { opacity: 1; }
   @media (hover: none) { .note-btn { opacity: 1; } }
   .note-btn.noted { color: var(--accent); border-color: transparent; }
   .note-btn.noted svg { fill: currentColor; }
@@ -283,7 +273,7 @@
 // 公开站都自动跟着走,不会两边慢慢漂开。公开站跟私有站的差别只有下面这几处guard。
 const IS_PUBLIC = !!window.PUBLIC_SITE;
 
-const TRACK_LABEL = { ai: 'AI', anchor: '锚点', eval: 'Eval' };
+const TRACK_LABEL = { ai: 'AI', anchor: 'Anchor', eval: 'Eval' };
 const WEEK = '日一二三四五六';
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 
@@ -421,19 +411,18 @@ function best(i) {
   const ts = FILTER ? i.tracks.filter(t => t.track === FILTER) : i.tracks;
   return ts.some(t => t.tier === 'high') ? 'high' : 'medium';
 }
-// 标签：轨道 + 管线判的真实等级(来自recent.json的tiers)。只列判到MEDIUM/HIGH的轨道——
-// 一排LOW信息量小、还把页面弄碎(2026-11-14用户说丑)；三条都是LOW的(靠特殊规则上的页面)只标一个淡淡的LOW。
-function tags(i) {
+// 标签(2026-11-14 用户定)：命中的轨道名全部列出(AI · ANCHOR · EVAL)，等级只显示一个——
+// 三条轨道里管线判得最高的那个(来自recent.json的tiers，真实判断)。轨道名可以点来筛选。
+const TIER_RANK = { high: 3, medium: 2, low: 1 };
+function topTier(i) {
   const tiers = i.tiers || Object.fromEntries(i.tracks.map(t => [t.track, t.tier]));
-  const shown = new Set(i.tracks.map(t => t.track));
-  const hits = Object.keys(TRACK_LABEL).filter(k => ['high', 'medium'].includes(tiers[k]));
-  if (!hits.length) return '<span class="tg tg-low" title="三条线都判的是 low，按特殊规则展示">LOW</span>';
-  return hits.map(k => {
-    const lvl = `<b class="tier tier-${tiers[k]}">${tiers[k].toUpperCase()}</b>`;
-    return shown.has(k)
-      ? `<span class="tg${k === FILTER ? ' on' : ''}" data-track="${k}" title="只看${TRACK_LABEL[k]}">${TRACK_LABEL[k]} ${lvl}</span>`
-      : `<span class="tg">${TRACK_LABEL[k]} ${lvl}</span>`;
-  }).join('');
+  return Object.values(tiers).filter(Boolean).sort((a, b) => (TIER_RANK[b] || 0) - (TIER_RANK[a] || 0))[0] || 'low';
+}
+function tags(i) {
+  const tracks = i.tracks.map(t => `<span class="tg${t.track === FILTER ? ' on' : ''}" data-track="${t.track}"`
+    + ` title="只看${TRACK_LABEL[t.track]}">${TRACK_LABEL[t.track]}</span>`).join('');
+  const t = topTier(i);
+  return `${tracks}<b class="tier tier-${t}" title="三条线里判得最高的等级">${t.toUpperCase()}</b>`;
 }
 
 // ---- 标注：用户自己的三档判断(喜欢/一般/不感兴趣)，给以后的嗅探器当训练数据 ----
@@ -493,9 +482,9 @@ function briefHTML(i) {
   return `<div class="brief" ${delay()}>
     <div class="row">
       <span class="t"><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></span>
-      <span class="side">${labelBtns(i)}<span class="tgline">${tags(i)}</span><span class="dot">·</span>${who(i)}</span>
+      <span class="side">${noteBtn(i)}${labelBtns(i)}<span class="tgline">${tags(i)}</span><span class="dot">·</span>${who(i)}</span>
     </div>
-    <div class="more"><div><p>${esc(summaryOf(i))}</p><div class="tgs">${noteBtn(i)}</div></div></div>
+    <p class="sum">${esc(summaryOf(i))}</p>
   </div>`;
 }
 function listHTML(list) {
@@ -539,7 +528,7 @@ document.addEventListener('click', e => {
   if (e.target.closest('a')) return;
   const lead = e.target.closest('.lead');
   if (lead) { trackOpen(lead.dataset.link, lead, 'card'); window.open(lead.dataset.link, '_blank', 'noopener'); return; }
-  const fold = e.target.closest('.brief, .mini.more');
+  const fold = e.target.closest('.mini.more');   // 简讯的摘要 2026-11-14 起直接显示，不再折叠
   if (!fold) return;
   fold.classList.toggle('open');
   // 简讯的摘要默认收着，展开说明想看摘要；收起不记
