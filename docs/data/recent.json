@@ -151,7 +151,7 @@
         "anchor": "low",
         "eval": "low"
       },
-      "is_company": true,
+      "is_company": false,
       "is_new": true,
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg"
     },
@@ -472,7 +472,7 @@
         "anchor": "medium",
         "eval": "medium"
       },
-      "is_company": true,
+      "is_company": false,
       "is_new": false,
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_carbon_key_art_16-9_lockup.width-1300.jpg"
     },
@@ -501,7 +501,7 @@
         "anchor": "low",
         "eval": "high"
       },
-      "is_company": true,
+      "is_company": false,
       "is_new": false
     },
     {
@@ -647,7 +647,7 @@
         "anchor": "low",
         "eval": "medium"
       },
-      "is_company": true,
+      "is_company": false,
       "is_new": false
     },
     {

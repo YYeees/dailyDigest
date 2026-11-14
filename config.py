@@ -77,8 +77,9 @@ HIGH_ONLY_RECENT_DAYS = 1
 ALWAYS_ARCHIVE_PERSONS = {"Craig Mod", "Teo Crawford", "Dan Koe"}
 
 # 大公司的官方来源(2026-11-14)：它们的内容只在「大公司」页(docs/companies.html)展示，
-# 私有站的 Recent 页不再出现(用户要"分开展示")。公开站不受影响。Google 是已停掉的 DeepMind 源，库里还有旧条目。
-COMPANY_PERSONS = {"Anthropic", "OpenAI", "Google"}
+# 私有站的 Recent 页不再出现(用户要"分开展示")。公开站不受影响。
+# Google(DeepMind)不在这里：2026-11-14 用户要它的更新放在 Recent，不进大公司页，"除非以后觉得它有价值"。
+COMPANY_PERSONS = {"Anthropic", "OpenAI"}
 
 # GitHub Trending展示数量上限(2026-08-15定案)：不用展示太多，只要综合最值得推荐的。
 TRENDING_DAILY_LIMIT = 6    # index.html"7日内关注"页Trending板块

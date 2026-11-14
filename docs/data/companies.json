@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T15:04:29+00:00",
+ "updated_at": "2026-11-14T15:20:14+00:00",
  "window_days": 7,
  "companies": [
   {
@@ -9,10 +9,6 @@
   {
    "name": "OpenAI",
    "key": "openai"
-  },
-  {
-   "name": "Google DeepMind",
-   "key": "deepmind"
   }
  ],
  "items": [
@@ -44,47 +40,6 @@
    ]
   },
   {
-   "company": "Google DeepMind",
-   "key": "deepmind",
-   "title": "Introducing Gemini 4 Hydrogen",
-   "link": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
-   "date": "2026-11-12",
-   "summary": "Gemini 4 Hydrogen是Google的日常型模型，主打快速的编码和agent任务，百万字符上下文内价格不变。它有四档思考强度可调，在编码类测试上比上一代进步明显。每天用AI写代码的人可以考虑拿它当日常主力。",
-   "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg",
-   "priority": "high",
-   "tags": [
-    "AI"
-   ]
-  },
-  {
-   "company": "Google DeepMind",
-   "key": "deepmind",
-   "title": "Gemini 4 Carbon is now available",
-   "link": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
-   "date": "2026-11-10",
-   "summary": "Google 将 Gemini 4 Carbon 开放给更多开发者和用户，定位是需要长时间推理的复杂编程、知识工作与科研任务。文章也展示了多代理分工和反复检查的工作方式，适合判断什么时候该用更强模型，以及为什么任务总成本更值得关注。",
-   "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_carbon_key_art_16-9_lockup.width-1300.jpg",
-   "priority": "high",
-   "tags": [
-    "AI",
-    "Eval"
-   ]
-  },
-  {
-   "company": "Google DeepMind",
-   "key": "deepmind",
-   "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
-   "link": "https://deepmind.google/blog/introducing-alphaproof-code/",
-   "date": "2026-11-10",
-   "summary": "Google 用 AlphaProof Code 为 Signal 核心加密实现的关键安全性质写出数学证明，再由专门程序检查。人类先审查要证明的目标，团队还把修复过的漏洞放回隔离版本，确认系统能证明其不安全，值得做测试的人关注这种质量保障方式。",
-   "image": null,
-   "priority": "high",
-   "tags": [
-    "AI",
-    "Eval"
-   ]
-  },
-  {
    "company": "OpenAI",
    "key": "openai",
    "title": "Introducing Businesses in ChatGPT",
@@ -95,20 +50,6 @@
    "priority": "medium",
    "tags": [
     "AI"
-   ]
-  },
-  {
-   "company": "Google DeepMind",
-   "key": "deepmind",
-   "title": "Gemini Robotics 2.5 accelerates real-world general dexterity",
-   "link": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
-   "date": "2026-11-09",
-   "summary": "Google 发布 Gemini Robotics 2.5，展示机器人处理柔软物体、使用工具，以及在汽车生产线上整理零件的进展。文章也介绍靠近人时的安全控制和专门测试危险指令的数据集，适合了解机器人从演示走向现场还要解决什么。",
-   "image": null,
-   "priority": "high",
-   "tags": [
-    "AI",
-    "Eval"
    ]
   },
   {
