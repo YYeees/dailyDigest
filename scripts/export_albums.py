@@ -30,6 +30,14 @@ LETTERS_INDEX = ROOT / "docs" / "data" / "letters" / "index.json"
 TRACKS_PER_ALBUM = 10
 
 ALBUMS = [
+    # 页面上就按这个顺序排(用户定的，2026-11-14)，不按更新时间
+    {
+        "person": "Thorsten Ball", "pub": "Joy & Curiosity", "cover": "rays", "verb": "Open Letter",
+        "image": "https://thorstenball.com/images/avatar_2026_final_quadratic.jpg",
+        "home": "https://registerspill.thorstenball.com", "href": "letter.html", "source": "letters",
+        "bio": "软件工程师，在 Amp 做编程智能体，写过《Writing An Interpreter In Go》。"
+               "每周日寄出一封 Joy & Curiosity，把一周里让他快乐、让他好奇的东西装进去。",
+    },
     {
         "person": "Craig Mod", "pub": "Ridgeline & Roden", "cover": "ridge", "verb": "Read",
         "image": "img/craig-mod.jpg",   # 用户挑的照片，裁成900px正方形存在docs/img/
@@ -37,13 +45,6 @@ ALBUMS = [
         "bio": "住在日本的作家、摄影师。常年徒步穿越日本的乡间小路，把一路遇到的人和店写进 "
                "Ridgeline 和 Roden 两份 newsletter，出过《Kissa by Kissa》《Things Become Other Things》。"
                "慢、长、专注，是他对抗速度的方式。",
-    },
-    {
-        "person": "Thorsten Ball", "pub": "Joy & Curiosity", "cover": "rays", "verb": "Open Letter",
-        "image": "https://thorstenball.com/images/avatar_2026_final_quadratic.jpg",
-        "home": "https://registerspill.thorstenball.com", "href": "letter.html", "source": "letters",
-        "bio": "软件工程师，在 Amp 做编程智能体，写过《Writing An Interpreter In Go》。"
-               "每周日寄出一封 Joy & Curiosity，把一周里让他快乐、让他好奇的东西装进去。",
     },
     {
         "person": "Dan Koe", "pub": "future/proof", "cover": "spiral", "verb": "Read",

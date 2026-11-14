@@ -261,8 +261,8 @@ document.addEventListener('click', e => {
   let data;
   try { data = await (await fetch('data/albums.json')).json(); }
   catch (e) { document.getElementById('wall').innerHTML = '<p class="foot">数据没读到。</p>'; return; }
-  // 最近有更新的排在前面
-  ALBUMS = data.albums.slice().sort((a, b) => (b.latest || '').localeCompare(a.latest || ''));
+  // 顺序由export_albums.py里ALBUMS的顺序决定(用户定的)，这里不重排
+  ALBUMS = data.albums.slice();
   render();
   document.getElementById('foot').textContent = `${ALBUMS.length} 位`;
 })();

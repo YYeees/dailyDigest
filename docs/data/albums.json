@@ -1,6 +1,28 @@
 {
- "updated_at": "2026-11-14T10:02:13+00:00",
+ "updated_at": "2026-11-14T10:04:36+00:00",
  "albums": [
+  {
+   "person": "Thorsten Ball",
+   "pub": "Joy & Curiosity",
+   "cover": "rays",
+   "verb": "Open Letter",
+   "image": "https://thorstenball.com/images/avatar_2026_final_quadratic.jpg",
+   "home": "https://registerspill.thorstenball.com",
+   "href": "letter.html",
+   "bio": "软件工程师，在 Amp 做编程智能体，写过《Writing An Interpreter In Go》。每周日寄出一封 Joy & Curiosity，把一周里让他快乐、让他好奇的东西装进去。",
+   "tracks": [
+    {
+     "title": "Joy & Curiosity #105",
+     "link": "letter.html",
+     "date": "2026-11-08",
+     "kind": "letter",
+     "note": "16 处去向"
+    }
+   ],
+   "latest": "2026-11-08",
+   "latest_title": "Joy & Curiosity #105",
+   "latest_link": "letter.html"
+  },
   {
    "person": "Craig Mod",
    "pub": "Ridgeline & Roden",
@@ -84,28 +106,6 @@
    "latest": "2026-10-21",
    "latest_title": "[RODEN] Digger Is Good, Notebooks, Please Be Weirder",
    "latest_link": "https://craigmod.com/roden/119/"
-  },
-  {
-   "person": "Thorsten Ball",
-   "pub": "Joy & Curiosity",
-   "cover": "rays",
-   "verb": "Open Letter",
-   "image": "https://thorstenball.com/images/avatar_2026_final_quadratic.jpg",
-   "home": "https://registerspill.thorstenball.com",
-   "href": "letter.html",
-   "bio": "软件工程师，在 Amp 做编程智能体，写过《Writing An Interpreter In Go》。每周日寄出一封 Joy & Curiosity，把一周里让他快乐、让他好奇的东西装进去。",
-   "tracks": [
-    {
-     "title": "Joy & Curiosity #105",
-     "link": "letter.html",
-     "date": "2026-11-08",
-     "kind": "letter",
-     "note": "16 处去向"
-    }
-   ],
-   "latest": "2026-11-08",
-   "latest_title": "Joy & Curiosity #105",
-   "latest_link": "letter.html"
   },
   {
    "person": "Dan Koe",
