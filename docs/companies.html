@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>大公司 · Daily Digest</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Playfair+Display:wght@400&display=swap">
 <style>
   /* ============================================================
      大公司 —— Anthropic、OpenAI 这7天发了什么。
@@ -47,7 +47,9 @@
   .day { display: grid; grid-template-columns: 120px 1fr; gap: 36px; padding: 32px 0 6px; border-top: 1px solid var(--rule); }
   .list .day:last-child { border-bottom: 1px solid var(--hair); }
   .d { font-family: var(--serif); font-size: 15px; color: var(--soft); }
-  .d b { display: block; font-weight: 400; font-size: 46px; line-height: 1; color: var(--ink); margin-bottom: 4px; }
+  /* 大日期用 Playfair Display：高反差细线条，像老报纸刊头的数字 */
+  .d b { display: block; font-family: "Playfair Display", var(--serif); font-weight: 400; font-size: 54px; line-height: 1;
+         color: var(--ink); margin-bottom: 6px; font-variant-numeric: lining-nums; letter-spacing: -.01em; }
   .d .wk { display: block; margin-top: 6px; font-family: var(--sans); font-size: 12px; color: var(--faint); letter-spacing: .06em; }
 
   .item { display: grid; grid-template-columns: 1fr 150px; gap: 26px; padding-bottom: 28px; }
