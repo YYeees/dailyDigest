@@ -1,0 +1,343 @@
+{
+ "updated_at": "2026-11-14T09:24:39+00:00",
+ "albums": [
+  {
+   "person": "Craig Mod",
+   "album": "Walking",
+   "cover": "ridge",
+   "home": "https://craigmod.com",
+   "bio": "住在日本的作家、摄影师。常年徒步穿越日本的乡间小路，把一路遇到的人和店写进 Ridgeline 和 Roden 两份 newsletter，出过《Kissa by Kissa》《Things Become Other Things》。慢、长、专注，是他对抗速度的方式。",
+   "tracks": [
+    {
+     "title": "[RODEN] Digger Is Good, Notebooks, Please Be Weirder",
+     "link": "https://craigmod.com/roden/119/",
+     "date": "2026-10-21",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "[RIDGELINE] A Notebook Fit for a Walk",
+     "link": "https://craigmod.com/ridgeline/237/",
+     "date": "2026-10-19",
+     "kind": "blog",
+     "note": "Craig Mod讲他偶然把一本样书当笔记本用，越用越顺手，后来一步步做出了自己理想中的散步笔记本，现在放在网店里卖。"
+    },
+    {
+     "title": "[RIDGELINE] Walking and Not Walking a Castle in Italy",
+     "link": "https://craigmod.com/ridgeline/236/",
+     "date": "2026-10-12",
+     "kind": "blog",
+     "note": "Craig Mod记叙自己代替Kevin Kelly参加在意大利Rocca Sinibalda城堡举办的五天艺术家驻留活动的经历。原本期待获得写作时间，却被一群思维活跃的创作者冲击，不得不重新校正预期、放下积累已久的过度怀疑。他的感悟是：有时候对平时会拒绝的事说“是”，反而是好事。"
+    },
+    {
+     "title": "[RIDGELINE] Walking Norway's Gudbrandsdalsleden Pilgrimage",
+     "link": "https://craigmod.com/ridgeline/235/",
+     "date": "2026-09-28",
+     "kind": "blog",
+     "note": "作者与Kevin Kelly等人沿挪威中世纪朝圣古道Gudbrandsdalsleden步行132公里，一路上讨论“什么是完美的一天”、人生阶段的取舍变化。步道几乎无游客、只有本地人遛狗的清净场域，让人得以专注内在对话；但一周高强度交流后也感到“心满但灵魂疲惫”，映照深度连接与独处之间的张力，是一次关于简朴生活与自然生长的一手体验。"
+    },
+    {
+     "title": "[RIDGELINE] Walking with Annie",
+     "link": "https://craigmod.com/ridgeline/234/",
+     "date": "2026-09-19",
+     "kind": "blog",
+     "note": "Craig Mod借纪念作家Annie Dillard的机会，讲自己虽未见过她本人，却在日本行走的路上处处带着她的观察视角。他引用Dillard笔下飞蛾扑火和一艘旧船的细节描写，说明琐碎之物如何承载深意；文末引到Dillard的忠告写下你独特的惊异，认为这在算法时代尤其是抵御平庸的堡垒。"
+    },
+    {
+     "title": "[RODEN] Writing in 2026, Walking Europe",
+     "link": "https://craigmod.com/roden/118/",
+     "date": "2026-09-10",
+     "kind": "blog",
+     "note": "Craig Mod在伦敦到挪威的旅途中，反思AI生成文本（他称之为“Claude Voice”）正让写作变得清晰易读却“无源可循”；他主张作家应深挖自己生活中与主流话语不重叠的部分，靠数万小时的输入与输出磨出独有声音，并强调不必技术恐惧，而是要主动拥抱怪异与个体性来对抗文本同质化。挪威徒步在文中更像一种对抗数字饱和的“最人类”活动隐喻。"
+    },
+    {
+     "title": "[RIDGELINE] A Few London Strolls",
+     "link": "https://craigmod.com/ridgeline/233/",
+     "date": "2026-09-08",
+     "kind": "blog",
+     "note": "Craig Mod记录了在伦敦东北角十天的漫步生活：早上读写到眼花，下午反复走同一片街区，享受方向感尽失带来的迷离乐趣；文末因一颗尼古丁袋剧烈不适，意外冲淡了他此前对伦敦建筑审美的评判，成了一则关于“批判总在代价之前”的自嘲反思。"
+    },
+    {
+     "title": "[RIDGELINE] Walking The Length of Manhattan",
+     "link": "https://craigmod.com/ridgeline/232/",
+     "date": "2026-08-21",
+     "kind": "blog",
+     "note": "作者与摄影师从曼哈顿最北端徒步走到最南端，历时六小时、24公里，途中特意放弃把旅行做成创作项目的念头，只是单纯地享受城市与街区的细节。文中顺带提到用Claude做血液数据的侦探式分析，但与主线关系不大。"
+    },
+    {
+     "title": "[RODEN] Blood Robots For You and You and You",
+     "link": "https://craigmod.com/roden/117/",
+     "date": "2026-08-12",
+     "kind": "blog",
+     "note": "这期newsletter介绍了上面那篇四千字长文的写作过程与后续：他用Claude追踪到一篇尘封旧报纸，发现自己出生证明上的中间名竟源于一位几十年前意外身亡的陌生人。另外还提到摄影集《事物变成其他事物》精装第二版开放预订。"
+    },
+    {
+     "title": "[ESSAYS] A Swarm of Blood Robots",
+     "link": "https://craigmod.com/essays/robot_blood/",
+     "date": "2026-08-11",
+     "kind": "blog",
+     "note": "Craig Mod分享用LLM做的一系列创新应用，核心是这次用Claude做家谱寻根——从零散线索追出自己的身世。他认为LLM最大价值在于把复杂信息检索转化为人性化的结果呈现，这类工具正处于应用爆发初期，价值被低估，关键是亲身体验而非跟风议论。"
+    }
+   ],
+   "latest": "2026-10-21"
+  },
+  {
+   "person": "Thorsten Ball",
+   "album": "Joy & Curiosity",
+   "cover": "rays",
+   "home": "https://registerspill.thorstenball.com",
+   "href": "letter.html",
+   "bio": "软件工程师，在 Amp 做编程智能体，写过《Writing An Interpreter In Go》。每周日寄出一封 Joy & Curiosity，把一周里让他快乐、让他好奇的东西装进去。",
+   "tracks": [
+    {
+     "title": "Joy & Curiosity #105",
+     "link": "letter.html",
+     "date": "2026-11-08",
+     "kind": "letter",
+     "note": "16 处去向"
+    }
+   ],
+   "latest": "2026-11-08"
+  },
+  {
+   "person": "Dan Koe",
+   "album": "future/proof",
+   "cover": "spiral",
+   "home": "https://thedankoe.com",
+   "bio": "写「一人企业」和自我教育的作者。他的看法是：AI 能生成一切听起来不错的句子，最后剩下的护城河，是只有你能看见的那个视角。",
+   "tracks": [
+    {
+     "title": "The most lucrative AI business to start in 2027",
+     "link": "https://letters.thedankoe.com/p/the-most-lucrative-ai-business-to",
+     "date": "2026-11-03",
+     "kind": "blog",
+     "note": "Dan Koe提出用AI搭建一个人的内容团队，替自己或客户完成定位、选题、起草和发布。文章的具体做法是先访谈真实经历和独特观点，再结合已有作品与内容研究建立素材库，让人负责方向和最终改写。适合想把写作变成业务的人参考，不过其中也夹有不少自家工具推广。"
+    },
+    {
+     "title": "The influencer is dead. The Age of Experience is here.",
+     "link": "https://letters.thedankoe.com/p/the-influencer-is-dead-the-age-of",
+     "date": "2026-10-20",
+     "kind": "blog",
+     "note": "这篇说短视频网红和纯卖课的个人品牌都在过气，未来属于把社交媒体当成副产品、靠一份能留下来的作品说话的手艺人。作者的核心论点是，AI时代唯一没法被复制的东西是你自己独一无二的视角，这跟锚点清单里一手不二手的想法是同一个意思，只是被包装成了创作者变现的论证。他给了一套用Eden或接了Eden的Claude做选题研究、找表达角度的具体提示词，但整体还是在为自己的产品导流。"
+    },
+    {
+     "title": "Full Course: How To Turn Your Interests Into Profitable a Lifestyle Business",
+     "link": "https://letters.thedankoe.com/p/full-course-how-to-turn-your-interests",
+     "date": "2026-10-05",
+     "kind": "blog",
+     "note": "这篇是Dan Koe免费公开的完整课程，教怎么把自己的兴趣变成一人生意，先画一张内容地图把兴趣拆成大话题、细分话题和具体选题，再搭一套最简软件栈做流量、收邮箱、收款和存想法这四件事。里面提到可以用Claude接上Eden的MCP去研究哪些帖子视频火过，照着那个角度给自己的产品起名字和定方向。整体还是在为他自己的Eden产品做导流，AI部分是研究辅助工具，不是核心内容。"
+    },
+    {
+     "title": "How to launch into a completely new life",
+     "link": "https://letters.thedankoe.com/p/how-to-launch-into-a-completely-new-ef8",
+     "date": "2026-09-19",
+     "kind": "blog",
+     "note": "这篇讲行为改变的两阶段模型，先靠强烈的动机或对现状的厌恶把自己炸出舒适区，再靠环境、信号、行为、奖励这套习惯回路把新行为变成自动反应。作者用健身和写作变现两个例子具体演示了怎么设计这四步。内容是标准的习惯科学加自助框架，跟AI、锚点清单里的主题都没有直接关系。"
+    },
+    {
+     "title": "You need to be delusional if you want to succeed",
+     "link": "https://letters.thedankoe.com/p/you-need-to-be-delusional-if-you",
+     "date": "2026-09-12",
+     "kind": "blog",
+     "note": "这篇讲的是设定不切实际目标的心理学，作者认为普通人定的现实目标注定走向平庸，只有定一个连自己都觉得不可能、期限短到离谱的目标，才会逼着大脑重新组织注意力。他举了乔布斯的现实扭曲力场和自己达成月入10万美元的经历做例子，说目标不是用来精确达成的终点，而是用来过滤每天该做什么的透镜。这篇基本是他惯常的自助鸡汤风格，跟AI、锚点清单里的主题都没有直接关系。"
+    },
+    {
+     "title": "The One-Human Business: How To Earn In The Age of AI",
+     "link": "https://letters.thedankoe.com/p/the-one-human-business-how-to-earn",
+     "date": "2026-09-06",
+     "kind": "blog",
+     "note": "Dan Koe这篇讲怎么靠AI把一个人做成一支团队，用自己的兴趣加社交媒体加AI拼出一个一人公司。他给了一套具体的AI角色清单，比如品牌策略师、内容策略师、长文专家、短文专家，说这套角色原本要花50万美元年薪请人才能做到。文章同时也在推销他自己的Eden工具和写作训练营，AI部分更像是实操清单而不是深入的技术讲解。"
+    },
+    {
+     "title": "We are in the middle of the digital renaissance, please take advantage of it",
+     "link": "https://letters.thedankoe.com/p/we-are-in-the-middle-of-the-digital",
+     "date": "2026-08-27",
+     "kind": "blog",
+     "note": "这篇把面对AI的人分成三类，排斥AI的纯粹派、把一切决定都外包给AI的自动机，以及作者主张的第三种，用AI接住机械性工作、自己负责判断和品味的数字文艺复兴人。他给了几条用AI的具体建议，先想清楚自己要什么、对输出保持高标准、持续迭代而不是指望AI一次做对。整体还是在为他的内容创业方法论做铺垫，不是深入的技术内容。"
+    },
+    {
+     "title": "Give me 20 minutes and i’ll make you impossible to manipulate",
+     "link": "https://letters.thedankoe.com/p/give-me-20-minutes-and-ill-make-you",
+     "date": "2026-08-19",
+     "kind": "blog",
+     "note": "这篇把人的思维分成三个层次，盲从权威的NPC、靠自己判断的主角、能同时装着好几种视角灵活切换的programmer，核心论点是认知灵活度而不是智商决定你过得好不好。作者认为短视频喂养的碎片信息会把人困在低层次思维里，解药是刻意筛选信息来源、多问问题、多读长文章。这个话题沾着深度自我认识这条主干的边，但讲法是他惯常的自助鸡汤风格，不是一手经历反思。"
+    },
+    {
+     "title": "The Art Of Strategic Thinking (How To Become Wildly Successful)",
+     "link": "https://letters.thedankoe.com/p/strategy-vs-tactics-how-to-actually",
+     "date": "2026-08-08",
+     "kind": "blog",
+     "note": "这篇用下棋打比方讲策略思维，核心是先把自己摆到更有利的位置，机会和战术才会自己冒出来。作者借宫本武藏的几条原则，搭了一套从愿景、调研、准备到执行、适应的人生策略框架。内容偏通用的个人发展和商业鸡汤，跟AI、锚点清单里的主题都没有直接关系。"
+    },
+    {
+     "title": "How to remember everything you read... don't",
+     "link": "https://letters.thedankoe.com/p/how-to-remember-everything-you-read",
+     "date": "2026-07-25",
+     "kind": "blog",
+     "note": "这篇反对死记硬背式的阅读学习法，提出学习本质是一个有目标才会产生的反馈过程，不是单纯往脑子里塞内容。作者给了一套具体搭法：用Claude Code打开Obsidian笔记库，分别建一个存想法的skill和一个整理收件箱、打标签、建反向链接的skill，让AI替自己维护笔记系统。这个思路属于卡片笔记/数字花园这类笔记法的AI化实践，但文章同时也在推销他自己的Eden应用。"
+    }
+   ],
+   "latest": "2026-11-03"
+  },
+  {
+   "person": "Teo Crawford",
+   "album": "Frames",
+   "cover": "aperture",
+   "home": "https://www.youtube.com/@TeoCrawford",
+   "bio": "拍胶片和街头摄影的 YouTuber，镜头里多是日本的日常与慢下来的生活。从 2013 年开始做视频，十年如一日地拍。",
+   "tracks": [
+    {
+     "title": "Why you should photograph your home.",
+     "link": "https://www.youtube.com/watch?v=VHQvfVpCaJ4",
+     "date": "2026-10-31",
+     "kind": "youtube",
+     "note": "Teo 分享自己在家拍摄的照片，把镜头转向熟悉的生活环境。这次内容适合想从身边寻找拍摄题材的人，现有简介没有展开具体拍摄方法。"
+    },
+    {
+     "title": "Stop shooting at random shutter speeds.",
+     "link": "https://www.youtube.com/watch?v=5wNgKrLvyjA",
+     "date": "2026-10-23",
+     "kind": "youtube",
+     "note": "Teo Crawford讲了他常用的几档快门速度和对应的拍摄效果，是一期实用小技巧分享，适合想提升拍摄手法的人看。"
+    },
+    {
+     "title": "What 10 Years of making videos looks like.",
+     "link": "https://www.youtube.com/watch?v=MM65INAQUyc",
+     "date": "2026-10-15",
+     "kind": "youtube",
+     "note": "Teo Crawford回顾了自己做YouTube频道十年的历程，算是一期阶段性复盘向的视频，没有具体拍摄技巧内容。"
+    },
+    {
+     "title": "Calm Film Photography in the beautiful Austrian Alps.",
+     "link": "https://www.youtube.com/watch?v=EP2cR3Zf80w",
+     "date": "2026-10-02",
+     "kind": "youtube",
+     "note": "Teo Crawford又一次去奥地利阿尔卑斯山拍胶片，这次主题更安静，记录山间独自拍摄的过程，和他之前那期阿尔卑斯胶片视频风格接近。"
+    },
+    {
+     "title": "My most used camera settings for film photography.",
+     "link": "https://www.youtube.com/watch?v=njfVX4ROVBw",
+     "date": "2026-09-24",
+     "kind": "youtube",
+     "note": "Teo Crawford分享了他拍胶片时最常用的相机设置，是一期偏技巧分享的视频，适合对胶片摄影感兴趣的人参考。"
+    },
+    {
+     "title": "Street Photography with a 10 year old MFT camera.",
+     "link": "https://www.youtube.com/watch?v=CVlwYOjGNUs",
+     "date": "2026-09-16",
+     "kind": "youtube",
+     "note": "Teo Crawford用一台十年前的M43相机去扫街，记录了一天的街头摄影过程，是器材加旅拍结合的日常向视频。"
+    },
+    {
+     "title": "Film photography in the beautiful Austrian alps.",
+     "link": "https://www.youtube.com/watch?v=YxbBs5ERUgQ",
+     "date": "2026-08-31",
+     "kind": "youtube",
+     "note": "Teo Crawford带你去奥地利阿尔卑斯山拍胶片，记录了一个夏日里的山间胶片摄影过程，偏风光纪实。"
+    },
+    {
+     "title": "The simple habit to become a better photographer.",
+     "link": "https://www.youtube.com/watch?v=WEwg9gL9oGo",
+     "date": "2026-08-31",
+     "kind": "youtube",
+     "note": "Teo Crawford聊了一个他认为能让摄影变好的简单习惯，是一期比较随性的闲聊分享，没有具体操作步骤。"
+    },
+    {
+     "title": "My simple camera setup for cinematic videos.",
+     "link": "https://www.youtube.com/watch?v=bvJZHwAgSbA",
+     "date": "2026-08-20",
+     "kind": "youtube",
+     "note": "Teo Crawford介绍了他目前拍视频用的简化器材配置，偏装备清单性质，没有涉及拍摄技法的详细讲解。"
+    },
+    {
+     "title": "Shooting with a 23yr old DSLR.",
+     "link": "https://www.youtube.com/watch?v=B1u8YXWgS8I",
+     "date": "2026-08-09",
+     "kind": "youtube",
+     "note": "Teo Crawford带着一台23年前的老款DSLR去山里拍摄，记录老相机在今天还能拍出什么效果，是一期器材体验向的旅拍视频。"
+    }
+   ],
+   "latest": "2026-10-31"
+  },
+  {
+   "person": "Andy Matuschak",
+   "album": "Evergreen",
+   "cover": "nodes",
+   "home": "https://andymatuschak.org",
+   "bio": "研究「思维工具」的独立研究者，和 Michael Nielsen 一起做过 Quantum Country。他公开的常青笔记本身就是一个不断生长、彼此链接的网站。",
+   "tracks": [
+    {
+     "title": "I've been really loving Grant's thoughtful digital tabletop work.  Some great concepts: * bidirectio…",
+     "link": "https://x.com/andy_matuschak/status/2098553239511945335",
+     "date": "2026-09-11",
+     "kind": "x",
+     "note": "Andy Matuschak称赞Grant的数字桌游交互设计：用传统的块编辑器双向映射空间元素；用'frames'定义可选中、投射到外部屏幕并做CSS变换的区域。"
+    },
+    {
+     "title": "I want weirder representations of \"readings\"—the trace/artifact produced by a reader's interaction w…",
+     "link": "https://x.com/andy_matuschak/status/2098137186319114310",
+     "date": "2026-09-10",
+     "kind": "x",
+     "note": "Andy Matuschak在探索更“奇怪”的阅读痕迹表征方式，比如把文本剪贴拼成海报；他认为边注太受制于原文结构，独立的摘要又太脱离语境，他想要一种既能保留文本整体、又不丢失细节，还能随自己理解演变而持续加工的材料形式。"
+    },
+    {
+     "title": "We might become grey goo, but before that, what about our spirits? \"The world it envisions for all o…",
+     "link": "https://x.com/andy_matuschak/status/2097778827925844467",
+     "date": "2026-09-09",
+     "kind": "x",
+     "note": "Andy回应Gregory Conti一篇引用鲁比奥反共演讲的文章，担心AI会让世界变得“扁平灰暗”，人不再有机会靠技艺和努力脱颖而出，天职存在的前提，机器做不过人，正在消失。Andy部分认同这种担忧是真实的伤害且未被AI拥护者认真对待，但他不认为结论会那么绝望，人会被迫也有机会开辟新的卓越渠道，他自己已经体会到agent帮他更快探索原型、旅行时看懂更多、发现日记里更多联系，但他也承认，这些变化是被强加给所有人的，缺乏民主参与，这是不道德的，尽管他自己作为技术人员也说不清这条线该划在哪。"
+    },
+    {
+     "title": "Made an Obsidian plugin that turns audio files into interactive editable transcripts embedded within…",
+     "link": "https://x.com/andy_matuschak/status/2097528667907743768",
+     "date": "2026-09-09",
+     "kind": "x",
+     "note": "Andy做了一个Obsidian插件，把音频文件变成嵌在Markdown里的可交互可编辑文字稿：按住Command点击任意位置可从那里开始播放，删除文字会同步跳过对应音频片段，复制粘贴也能保留播放功能。"
+    },
+    {
+     "title": "Outstanding new work on a composable and collaborative malleable computing environment from @inkands…",
+     "link": "https://x.com/andy_matuschak/status/2097507349502263323",
+     "date": "2026-09-09",
+     "kind": "x",
+     "note": "Andy转发Ink & Switch一个可组合协作的“可塑计算”环境新工作：同一份数据可被不同工具协同编辑、工具本身也可协同编辑、通过lens在不同表示间双向转换，且全部本地优先、可版本化分支。他形容这像Smalltalk、Webstrates式的梦想终于落地。"
+    },
+    {
+     "title": "RT @dreamwieber: I think one of my fundamental disappointments with modern devices is that I can't j…",
+     "link": "https://x.com/andy_matuschak/status/2097432724231647678",
+     "date": "2026-09-08",
+     "kind": "x",
+     "note": "转推一条对现代设备的不满：无法像纸笔一样自由地在屏幕上随手涂写标注，触及人机交互与思维工具的周边议题。"
+    },
+    {
+     "title": "God's in his heaven; all's right with the world. https://t.co/ujFjXnMS61",
+     "link": "https://x.com/andy_matuschak/status/2097416632884969801",
+     "date": "2026-09-08",
+     "kind": "x",
+     "note": "分享一句诗意短句『天上有神，世间安好』，配一张图片，内容简短未做进一步阐述。"
+    },
+    {
+     "title": "Been tinkering with annotation \"fusion\": annotate a paper with ink; take a photo; markup is segmente…",
+     "link": "https://x.com/andy_matuschak/status/2097098368342192148",
+     "date": "2026-09-07",
+     "kind": "x",
+     "note": "Andy Matuschak在试验一种批注「融合」玩法：先在纸质文档上手写批注、拍照，再把批注切割识别成结构化数据、重新叠加回干净的原始PDF上。他觉得这个方向技术上挺有意思，但概念上是错的——这种「写完就扔」的方式没法让人接着在上下文里继续「使用」这些批注，他会接着琢磨。"
+    },
+    {
+     "title": "U Chicago offers a great four-year program studying the \"Great Books of the Western World\". Meets we…",
+     "link": "https://x.com/andy_matuschak/status/2096701001898348674",
+     "date": "2026-09-06",
+     "kind": "x",
+     "note": "Matuschak分享完成芝加哥大学四年「西方经典」共读项目后的反思：他坦言最初带着「打卡式」心态报名，读完千余小时后发现并未真正吃透多数经典，但收获的是与这些思想源头建立起真实具体的连接——从抽象的书单变成了想反复回访的对象（卢克莱修、洛克、卢梭、尼采等），并由此更深体会到「个体的人」如何创造出改变思想史的具体作品。"
+    },
+    {
+     "title": "Rigged my camera to automatically produce instant prints, via phone (locked in pocket) as BTLE clien…",
+     "link": "https://x.com/andy_matuschak/status/2096327833517728087",
+     "date": "2026-09-05",
+     "kind": "x",
+     "note": "Andy Matuschak改装了自己的相机，让它能通过手机（放在口袋里、锁屏状态）作为BTLE客户端自动触发即时打印；还做了一个模式，只有在相机回放界面给照片\"加星\"时才打印，相当于在相机上直接做出一个\"打印\"按钮。"
+    }
+   ],
+   "latest": "2026-09-11"
+  }
+ ]
+}

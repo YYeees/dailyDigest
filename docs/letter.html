@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 整期原文搬来自己读，不让搜索引擎收录 -->
+<meta name="robots" content="noindex, nofollow">
+<title>周六来信</title>
+<style>
+  /* ============================================================
+     周六来信 —— 每周一卷，解开丝带、摊开、沉浸地读。
+     数据：data/letters/index.json + data/letters/<id>.json(scripts/fetch_letters.py产出)
+     记录：点开过哪条链接存在本浏览器；「卷起来」时把整期链接清单(标出点开过的)
+           写进thought-lab的raw/letters/，用户在那里如实写喜欢读哪些。
+     只在全量站。export_public.py不导出这个页面。
+     ============================================================ */
+  :root {
+    --desk: #1D1A16; --desk-glow: #2C2721;
+    --paper: #FBF7EE; --paper-edge: #EFE6D3; --paper-shade: #D8CCB2;
+    --ink: #2A2620; --ink-soft: #5B544A; --ink-faint: #8C8475;
+    --ribbon: #8E2F23; --ribbon-dark: #6B2119; --ribbon-light: #B0493A;
+    --rule: #E3D9C4;
+    --desk-ink: #CFC6B6; --desk-faint: #8A8174;
+    --serif: "Iowan Old Style", "Charter", "Palatino Linotype", Palatino, Georgia, "Songti SC", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", sans-serif;
+  }
+  /* 这一页本身就是"夜里的桌面 + 纸"，深浅模式下长一个样：纸永远是纸 */
+  html { -webkit-font-smoothing: antialiased; }
+  body {
+    margin: 0; min-height: 100vh; color: var(--desk-ink);
+    background: var(--desk);
+    background-image: radial-gradient(ellipse 80% 55% at 50% 22%, var(--desk-glow), var(--desk) 70%);
+    background-attachment: fixed;
+    font-family: var(--sans); font-size: 15px; line-height: 1.6;
+  }
+  a { color: inherit; }
+  button { font: inherit; }
+
+  .top {
+    max-width: 760px; margin: 0 auto; padding: 22px 20px 0;
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: 13px; color: var(--desk-faint); letter-spacing: .06em;
+  }
+  .top a { text-decoration: none; border-bottom: 1px solid rgba(207,198,182,.25); }
+  .top a:hover { color: var(--desk-ink); }
+
+  /* ---------------- 卷着的样子 ---------------- */
+  .stage { max-width: 760px; margin: 0 auto; padding: 14vh 20px 40px; text-align: center; }
+  .stage.reading { padding-top: 36px; }
+  .whisper { font-size: 13px; letter-spacing: .14em; color: var(--desk-faint); margin: 0 0 34px; }
+
+  .roll-wrap { position: relative; width: min(560px, 88vw); margin: 0 auto; cursor: pointer; }
+  .roll-wrap:focus-visible { outline: 1px dashed var(--desk-faint); outline-offset: 18px; }
+  /* 纸筒：上下明暗模拟圆柱，两端是纸卷的截面 */
+  .tube {
+    position: relative; height: 66px; border-radius: 6px;
+    background: linear-gradient(180deg,
+      var(--paper-shade) 0%, var(--paper-edge) 14%, var(--paper) 38%,
+      #FFFDF7 50%, var(--paper-edge) 72%, var(--paper-shade) 92%, #B9AC92 100%);
+    box-shadow: 0 18px 30px -12px rgba(0,0,0,.6), 0 2px 0 rgba(255,255,255,.04) inset;
+  }
+  .tube::before, .tube::after {   /* 两端截面：一圈圈的纸 */
+    content: ""; position: absolute; top: 0; width: 22px; height: 66px; border-radius: 50%;
+    background: repeating-radial-gradient(circle at 50% 50%,
+      #EFE6D3 0 2px, #D9CDB4 2px 3px, #F6F0E2 3px 5px);
+    box-shadow: inset 0 0 6px rgba(0,0,0,.25);
+  }
+  .tube::before { left: -9px; }
+  .tube::after { right: -9px; }
+  /* 纸卷外层露出的一小段纸边 */
+  .tube .lip {
+    position: absolute; left: 6%; right: 6%; bottom: 13px; height: 1px;
+    background: rgba(140,120,90,.35);
+  }
+
+  /* 丝带：竖着绕一圈 + 一个蝴蝶结 */
+  .ribbon { position: absolute; left: 50%; top: -6px; width: 0; height: 78px; pointer-events: none; }
+  .ribbon .band {
+    position: absolute; left: -11px; top: 0; width: 22px; height: 78px;
+    background: linear-gradient(90deg, var(--ribbon-dark), var(--ribbon) 30%, var(--ribbon-light) 55%, var(--ribbon) 80%, var(--ribbon-dark));
+    border-radius: 2px; box-shadow: 0 2px 6px rgba(0,0,0,.35);
+    transform-origin: 50% 50%;
+  }
+  .ribbon svg { position: absolute; left: -46px; top: -30px; width: 92px; height: 120px; overflow: visible; }
+  .ribbon .loop-l, .ribbon .loop-r, .ribbon .tail-l, .ribbon .tail-r, .ribbon .knot { transform-box: fill-box; }
+  .ribbon .loop-l { transform-origin: 100% 60%; }
+  .ribbon .loop-r { transform-origin: 0% 60%; }
+  .ribbon .tail-l { transform-origin: 100% 0%; }
+  .ribbon .tail-r { transform-origin: 0% 0%; }
+
+  .label { margin-top: 30px; font-family: var(--serif); color: var(--desk-ink); }
+  .label .series { font-size: 13px; letter-spacing: .32em; text-transform: uppercase; }
+  .label .no { font-size: 34px; margin: 4px 0 2px; font-style: italic; }
+  .label .meta { font-family: var(--sans); font-size: 13px; color: var(--desk-faint); letter-spacing: .04em; }
+  .hint { margin-top: 30px; font-size: 13px; color: var(--desk-faint); letter-spacing: .12em; transition: opacity .4s; }
+  .roll-wrap:hover .tube { filter: brightness(1.03); }
+
+  /* 解丝带 */
+  .untying .ribbon .loop-l { animation: loopL .7s ease-in forwards; }
+  .untying .ribbon .loop-r { animation: loopR .7s ease-in forwards; }
+  .untying .ribbon .knot   { animation: fadeOut .35s .25s ease-in forwards; }
+  .untying .ribbon .tail-l { animation: tailL .9s .15s ease-in forwards; }
+  .untying .ribbon .tail-r { animation: tailR .9s .15s ease-in forwards; }
+  .untying .ribbon .band   { animation: bandDrop .8s .35s cubic-bezier(.5,0,.8,.4) forwards; }
+  .untying + .label + .hint, .untying ~ .hint { opacity: 0; }
+  @keyframes loopL { to { transform: translate(-6px, 4px) rotate(-38deg) scale(.2); opacity: 0; } }
+  @keyframes loopR { to { transform: translate(6px, 4px) rotate(38deg) scale(.2); opacity: 0; } }
+  @keyframes tailL { to { transform: translate(-30px, 120px) rotate(-50deg); opacity: 0; } }
+  @keyframes tailR { to { transform: translate(34px, 130px) rotate(46deg); opacity: 0; } }
+  @keyframes bandDrop { 0% { transform: scaleY(1); } 30% { transform: scaleY(1.06) translateY(-2px); }
+                        100% { transform: translateY(140px) scaleY(.4) rotate(14deg); opacity: 0; } }
+  @keyframes fadeOut { to { opacity: 0; } }
+
+  /* 卷筒往下滚、纸跟着摊开 */
+  .rolled-away .label, .rolled-away .hint, .rolled-away .whisper { display: none; }
+
+  /* ---------------- 摊开的纸 ---------------- */
+  .sheet-wrap { position: relative; max-width: 720px; margin: 0 auto; padding: 0 16px 40px; }
+  .sheet {
+    position: relative; text-align: left; color: var(--ink);
+    background-color: var(--paper);
+    /* 极淡的纸纹：内联SVG噪点 */
+    background-image:
+      linear-gradient(180deg, rgba(120,100,70,.10), transparent 26px),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .38  0 0 0 0 .28  0 0 0 .07 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    padding: 72px 76px 64px;
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,.65), 0 0 0 1px rgba(0,0,0,.04);
+    border-radius: 2px;
+    font-family: var(--serif); font-size: 19px; line-height: 1.72;
+    font-feature-settings: "onum" 1, "kern" 1;
+  }
+  .sheet.unrolling { overflow: hidden; }
+  .moving-tube { position: absolute; left: 6px; right: 6px; top: 0; z-index: 3; pointer-events: none; }
+  .moving-tube .tube { height: 46px; }
+  .moving-tube .tube::before, .moving-tube .tube::after { height: 46px; width: 16px; }
+
+  .letterhead { text-align: center; margin-bottom: 46px; }
+  .letterhead .series { font-size: 13px; letter-spacing: .34em; text-transform: uppercase; color: var(--ink-soft); }
+  .letterhead .no { font-size: 46px; font-style: italic; line-height: 1.1; margin: 10px 0 6px; color: var(--ink); }
+  .letterhead .sub { font-size: 16px; font-style: italic; color: var(--ink-faint); }
+  .letterhead .meta { margin-top: 14px; font-family: var(--sans); font-size: 12.5px; letter-spacing: .08em; color: var(--ink-faint); }
+  .letterhead .rule { width: 120px; margin: 26px auto 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); height: 3px; }
+
+  .body p { margin: 0 0 1.05em; }
+  .body ul, .body ol { padding-left: 0; margin: 1.6em 0; list-style: none; }
+  .body ol { counter-reset: n; }
+  .body li { position: relative; margin: 0 0 1.4em; }
+  .body li p { margin-bottom: .5em; }
+  .body ul > li::before {     /* 每条推荐前一个小小的墨点 */
+    content: ""; position: absolute; left: -26px; top: .78em; width: 5px; height: 5px; border-radius: 50%;
+    background: var(--ink-faint); opacity: .6;
+  }
+  .body ol > li { counter-increment: n; }
+  .body ol > li::before { content: counter(n) "."; position: absolute; left: -28px; color: var(--ink-faint); font-style: italic; }
+  .body a {
+    color: var(--ink); text-decoration: none;
+    background-image: linear-gradient(rgba(142,47,35,.35), rgba(142,47,35,.35));
+    background-size: 100% 1px; background-repeat: no-repeat; background-position: 0 92%;
+    transition: background-size .2s, color .2s;
+  }
+  .body a:hover { color: var(--ribbon); background-image: linear-gradient(var(--ribbon), var(--ribbon)); }
+  /* 点开过：链接变成红墨水，前面圈一个小记号 —— 你的"读过"痕迹留在纸上 */
+  .body a.clicked { color: var(--ribbon); }
+  .body a.clicked::after { content: "◦"; font-size: .7em; margin-left: 2px; vertical-align: super; color: var(--ribbon); }
+  .body blockquote { margin: 1.2em 0; padding-left: 1.1em; border-left: 2px solid var(--rule); color: var(--ink-soft); font-style: italic; }
+  .body figure { margin: 2em 0; text-align: center; }
+  .body img { max-width: 100%; height: auto; border-radius: 2px; }
+  /* 他每期末尾/中间那种细长的装饰分隔图，压低存在感 */
+  .body img[src*="x32."], .body img[src*="x38."] { max-width: 50%; opacity: .55; }
+  .body code { font-size: .86em; background: rgba(120,100,70,.08); padding: 1px 4px; border-radius: 3px; }
+  .body pre { font-size: 14px; background: rgba(120,100,70,.07); padding: 14px 16px; overflow-x: auto; border-radius: 3px; }
+  .body hr { border: 0; border-top: 1px solid var(--rule); margin: 2.4em auto; width: 40%; }
+
+  .closing { margin-top: 56px; padding-top: 30px; border-top: 1px solid var(--rule); text-align: center; font-family: var(--sans); }
+  .closing .count { font-size: 13px; color: var(--ink-faint); letter-spacing: .06em; margin-bottom: 18px; }
+  .closing .count b { color: var(--ribbon); font-weight: 600; }
+  .btn-roll {
+    display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+    padding: 11px 22px; border-radius: 999px; border: 0;
+    background: var(--ribbon); color: #FBF3E8; font-size: 14px; letter-spacing: .1em; text-decoration: none;
+    box-shadow: 0 6px 16px -6px rgba(107,33,25,.7);
+    transition: transform .15s, background .15s;
+  }
+  .btn-roll:hover { background: var(--ribbon-dark); transform: translateY(-1px); }
+  .btn-roll.done { background: transparent; color: var(--ribbon); box-shadow: inset 0 0 0 1px var(--ribbon); }
+  .closing .orig { display: block; margin-top: 16px; font-size: 13px; color: var(--ink-faint); }
+  .closing .orig a { text-decoration: none; border-bottom: 1px solid var(--rule); }
+  .closing .fine { margin-top: 10px; font-size: 12px; color: var(--ink-faint); opacity: .8; }
+
+  /* ---------------- 书架：往期 ---------------- */
+  .shelf { max-width: 760px; margin: 40px auto 0; padding: 0 20px 80px; }
+  .shelf h2 { font-family: var(--serif); font-weight: 400; font-style: italic; font-size: 18px; color: var(--desk-ink); margin: 0 0 4px; text-align: center; }
+  .shelf .sub { text-align: center; font-size: 12.5px; color: var(--desk-faint); margin: 0 0 28px; letter-spacing: .06em; }
+  .rack { display: flex; flex-wrap: wrap; gap: 26px 22px; justify-content: center; padding: 0 0 18px;
+          border-bottom: 10px solid #3A3128; box-shadow: 0 14px 18px -10px rgba(0,0,0,.6); border-radius: 0 0 2px 2px; }
+  .mini { all: unset; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 9px; width: 132px; }
+  .mini:focus-visible { outline: 1px dashed var(--desk-faint); outline-offset: 6px; }
+  .mini .t { position: relative; width: 120px; height: 24px; border-radius: 4px;
+    background: linear-gradient(180deg, var(--paper-shade), var(--paper) 40%, #FFFDF7 52%, var(--paper-edge) 75%, #B9AC92);
+    box-shadow: 0 8px 12px -6px rgba(0,0,0,.6); transition: transform .2s; }
+  .mini .t::before, .mini .t::after { content: ""; position: absolute; top: 0; width: 10px; height: 24px; border-radius: 50%;
+    background: repeating-radial-gradient(circle, #EFE6D3 0 1px, #D9CDB4 1px 2px); }
+  .mini .t::before { left: -4px; } .mini .t::after { right: -4px; }
+  .mini .t i { position: absolute; left: 54px; top: -2px; width: 10px; height: 28px; background: var(--ribbon); border-radius: 1px; }
+  .mini.opened .t i { display: none; }
+  .mini:hover .t { transform: translateY(-3px); }
+  .mini .n { font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--desk-ink); }
+  .mini .d { font-size: 11.5px; color: var(--desk-faint); letter-spacing: .04em; margin-top: -6px; }
+  .mini.current .n { color: #E9C9B9; }
+
+  .empty { text-align: center; color: var(--desk-faint); padding: 18vh 20px; font-family: var(--serif); font-style: italic; }
+
+  @media (max-width: 640px) {
+    .stage { padding-top: 10vh; }
+    .sheet { padding: 44px 24px 44px; font-size: 18px; }
+    .sheet-wrap { padding: 0 8px 32px; }
+    .body ul > li::before { left: -14px; }
+    .body ol > li::before { left: -18px; }
+    .body ul, .body ol { padding-left: 12px; }
+    .letterhead .no { font-size: 38px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="top">
+    <a href="albums.html">← 专辑</a>
+    <span id="topDate"></span>
+  </div>
+  <main id="app"></main>
+  <section class="shelf" id="shelf" hidden>
+    <h2>书架</h2>
+    <p class="sub">读过的卷轴放回这里，有丝带的是还没拆的</p>
+    <div class="rack" id="rack"></div>
+  </section>
+
+<script>
+// ---------- 状态(只存在本浏览器；真正留下来的记录在thought-lab的笔记里) ----------
+const STATE_KEY = 'letters-state-v1';    // { id: { untied: ts, noted: ts } }
+const CLICKS_KEY = 'letters-clicks-v1';  // { id: { linkIndex: firstClickTs } }
+const VAULT = 'thought-lab';
+const NOTE_DIR = 'raw/letters';
+
+function load(key) { try { return JSON.parse(localStorage.getItem(key) || '{}') || {}; } catch (e) { return {}; } }
+function save(key, v) { try { localStorage.setItem(key, JSON.stringify(v)); } catch (e) { /* 存不住就算了，不影响阅读 */ } }
+function getState(id) { return load(STATE_KEY)[id] || {}; }
+function setState(id, patch) { const all = load(STATE_KEY); all[id] = Object.assign(all[id] || {}, patch); save(STATE_KEY, all); }
+function getClicks(id) { return load(CLICKS_KEY)[id] || {}; }
+function addClick(id, i) {
+  const all = load(CLICKS_KEY); all[id] = all[id] || {};
+  if (!all[id][i]) all[id][i] = new Date().toISOString();
+  save(CLICKS_KEY, all);
+}
+
+const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const fmtDate = iso => { const [y, m, d] = iso.split('-').map(Number); return `${d} ${MONTHS[m - 1]} ${y}`; };
+const today = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+let INDEX = [];
+let current = null;   // 当前这一期的完整数据
+
+// ---------- 卷着的样子 ----------
+const BOW_SVG = `
+<svg viewBox="-46 -30 92 120" aria-hidden="true">
+  <defs><linearGradient id="rb" x1="0" x2="1"><stop offset="0" stop-color="#6B2119"/><stop offset=".5" stop-color="#B0493A"/><stop offset="1" stop-color="#6B2119"/></linearGradient></defs>
+  <path class="tail-l" d="M-4 6 L-20 58 L-12 52 L-8 62 L4 8 Z" fill="url(#rb)"/>
+  <path class="tail-r" d="M4 6 L22 60 L13 55 L10 64 L-3 8 Z" fill="url(#rb)"/>
+  <path class="loop-l" d="M-4 2 C-26 -26 -46 -10 -36 6 C-30 16 -14 10 -4 6 Z" fill="url(#rb)" stroke="#5A1B14" stroke-width=".6"/>
+  <path class="loop-r" d="M4 2 C26 -26 46 -10 36 6 C30 16 14 10 4 6 Z" fill="url(#rb)" stroke="#5A1B14" stroke-width=".6"/>
+  <rect class="knot" x="-7" y="-4" width="14" height="14" rx="4" fill="#8E2F23" stroke="#5A1B14" stroke-width=".6"/>
+</svg>`;
+
+function renderRolled(meta, untied) {
+  const app = document.getElementById('app');
+  app.innerHTML = `
+    <div class="stage">
+      <p class="whisper">${untied ? '这一卷你拆过了' : '这周的信到了'}</p>
+      <div class="roll-wrap" id="roll" role="button" tabindex="0" aria-label="${untied ? '展开' : '解开丝带，展开'} ${esc(meta.title)}">
+        <div class="tube"><div class="lip"></div></div>
+        ${untied ? '' : `<div class="ribbon"><div class="band"></div>${BOW_SVG}</div>`}
+      </div>
+      <div class="label">
+        <div class="series">${esc(meta.series)}</div>
+        <div class="no">No. ${meta.number}</div>
+        <div class="meta">${esc(meta.author)} · ${fmtDate(meta.date)} · ${meta.links_count} 处去向</div>
+      </div>
+      <p class="hint">${untied ? '点一下，再展开' : '轻拉丝带'}</p>
+    </div>`;
+  const roll = document.getElementById('roll');
+  const go = () => open(meta, untied);
+  roll.addEventListener('click', go, { once: true });
+  roll.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } }, { once: true });
+}
+
+async function open(meta, alreadyUntied) {
+  const dataP = fetch(`data/letters/${meta.id}.json`).then(r => r.json());
+  const stage = document.querySelector('.stage');
+  if (!alreadyUntied && !reduceMotion) {
+    document.getElementById('roll').classList.add('untying');
+    await wait(1250);
+  }
+  if (!alreadyUntied) setState(meta.id, { untied: new Date().toISOString() });
+  current = await dataP;
+  renderSheet(current, stage);
+}
+const wait = ms => new Promise(r => setTimeout(r, ms));
+
+// ---------- 摊开的纸 ----------
+function renderSheet(L, stage) {
+  const clicks = getClicks(L.id);
+  const app = document.getElementById('app');
+  const noted = !!getState(L.id).noted;
+  app.innerHTML = `
+    <div class="stage reading"></div>
+    <div class="sheet-wrap">
+      <article class="sheet" id="sheet">
+        <header class="letterhead">
+          <div class="series">${esc(L.series)}</div>
+          <div class="no">No. ${L.number}</div>
+          ${L.subtitle ? `<div class="sub">${esc(L.subtitle)}</div>` : ''}
+          <div class="meta">from ${esc(L.author)} · ${fmtDate(L.date)}</div>
+          <div class="rule"></div>
+        </header>
+        <div class="body" id="body">${L.html}</div>
+        <footer class="closing">
+          <div class="count" id="count"></div>
+          <a class="btn-roll${noted ? ' done' : ''}" id="rollUp" href="#">${noted ? '打开这一期的笔记' : '卷起来 · 写进 thought-lab'}</a>
+          <span class="orig"><a href="${esc(L.link)}" target="_blank" rel="noopener">在 ${esc(L.author)} 的网站上读原文 ↗</a></span>
+          <div class="fine">点开过的链接会标成红墨水；卷起来时整期清单会进 raw/letters/，你在那里写喜欢读哪些</div>
+        </footer>
+      </article>
+      <div class="moving-tube" id="movingTube"><div class="tube"><div class="lip"></div></div></div>
+    </div>`;
+  document.querySelectorAll('#body a[data-i]').forEach(a => { if (clicks[a.dataset.i]) a.classList.add('clicked'); });
+  updateCount();
+  wireRollUp(L);
+  unroll();
+  renderShelf();
+}
+
+// 卷筒从顶上往下滚过第一屏，纸跟着露出来；滚过一屏就收掉，后面的纸本来就在那儿
+function unroll() {
+  const sheet = document.getElementById('sheet');
+  const tube = document.getElementById('movingTube');
+  if (reduceMotion) { tube.remove(); return; }
+  const H = sheet.offsetHeight;
+  const reveal = Math.min(H, window.innerHeight * 0.95);
+  const dur = 1500;
+  const t0 = performance.now();
+  sheet.style.clipPath = `inset(0 0 ${H}px 0)`;
+  function frame(t) {
+    const p = Math.min(1, (t - t0) / dur);
+    const e = 1 - Math.pow(1 - p, 3);   // easeOutCubic：一开始滚得快，最后轻轻停住
+    const y = reveal * e;
+    sheet.style.clipPath = `inset(0 0 ${Math.max(0, H - y)}px 0)`;
+    tube.style.transform = `translateY(${y - 20}px)`;
+    if (p < 1) { requestAnimationFrame(frame); return; }
+    sheet.style.clipPath = '';
+    tube.style.transition = 'opacity .5s, transform .5s';
+    tube.style.opacity = '0';
+    tube.style.transform = `translateY(${y + 24}px)`;
+    setTimeout(() => tube.remove(), 520);
+  }
+  requestAnimationFrame(frame);
+}
+
+function updateCount() {
+  if (!current) return;
+  const n = Object.keys(getClicks(current.id)).length;
+  document.getElementById('count').innerHTML = n
+    ? `这一卷 ${current.links.length} 处去向，你点开过 <b>${n}</b> 处`
+    : `这一卷 ${current.links.length} 处去向`;
+}
+
+// 记录点击：只记第一次点开的时间。用mousedown/auxclick兼顾中键和Cmd+点击新标签页
+function onLinkOpen(e) {
+  const a = e.target.closest && e.target.closest('#body a[data-i]');
+  if (!a || !current) return;
+  if (e.type === 'auxclick' && e.button !== 1) return;
+  addClick(current.id, a.dataset.i);
+  a.classList.add('clicked');
+  updateCount();
+}
+document.addEventListener('click', onLinkOpen);
+document.addEventListener('auxclick', onLinkOpen);
+
+// ---------- 卷起来：写进thought-lab ----------
+function noteName(L) { return `${L.date} ${L.series.replace(/&/g, 'and')} ${L.number}`; }
+function notePath(L) { return `${NOTE_DIR}/${noteName(L)}`; }
+function noteContent(L) {
+  const clicks = getClicks(L.id);
+  // 方括号会拆掉markdown链接；* _ ` 会被当成格式(比如"*sshole")，都转义掉
+  const md = s => s.replace(/[[\]]/g, m => (m === '[' ? '(' : ')')).replace(/\|/g, '/').replace(/([*_`])/g, '\\$1');
+  const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return ''; } };
+  // 链接文字常常只是句子里的一个词(比如"orbs")，带上域名，日后分析时才知道指向哪
+  const lines = L.links.map(l => {
+    const label = md(l.text || l.href);
+    const mark = clicks[l.i] ? ' `点开过`' : '';
+    return `- [${label}](${l.href}) · ${host(l.href)}${mark} — `;
+  });
+  const n = Object.keys(clicks).length;
+  return [
+    '---',
+    'type: letter',
+    `series: "${L.series}"`,
+    `issue: ${L.number}`,
+    `author: "${L.author}"`,
+    `date: ${L.date}`,
+    `read: ${today()}`,
+    `clicked: ${n}`,
+    `links: ${L.links.length}`,
+    `source: ${L.link}`,
+    '---',
+    '',
+    `# ${L.series} #${L.number}`,
+    '',
+    '> 每条后面写一句：喜欢读吗、为什么。没写的就当没兴趣。',
+    '',
+    ...lines,
+    '',
+    '## 这一卷整体',
+    '',
+    ''
+  ].join('\n');
+}
+function wireRollUp(L) {
+  const btn = document.getElementById('rollUp');
+  const openHref = `obsidian://open?vault=${encodeURIComponent(VAULT)}&file=${encodeURIComponent(notePath(L))}`;
+  if (getState(L.id).noted) { btn.href = openHref; return; }
+  btn.addEventListener('click', e => {
+    // 每次点的瞬间现拼内容，保证点开记录是最新的
+    btn.href = `obsidian://new?vault=${encodeURIComponent(VAULT)}&file=${encodeURIComponent(notePath(L))}`
+      + `&content=${encodeURIComponent(noteContent(L))}`;
+    setState(L.id, { noted: new Date().toISOString() });
+    // 必须推到下一个tick再改href，否则这次点击会跳到还不存在的笔记(index.html里踩过同样的坑)
+    setTimeout(() => {
+      btn.classList.add('done');
+      btn.textContent = '打开这一期的笔记';
+      btn.href = openHref;
+      renderShelf();
+    }, 0);
+  });
+  // 右键退路：浏览器问"是否打开Obsidian"时点了取消，页面不知道，这里可以撤销"已写入"
+  btn.addEventListener('contextmenu', e => {
+    if (!getState(L.id).noted) return;
+    e.preventDefault();
+    setState(L.id, { noted: null });
+    renderSheet(L, null);
+  });
+}
+
+// ---------- 书架 ----------
+function renderShelf() {
+  const shelf = document.getElementById('shelf');
+  if (INDEX.length === 0) { shelf.hidden = true; return; }
+  shelf.hidden = false;
+  document.getElementById('rack').innerHTML = INDEX.map(m => {
+    const st = getState(m.id);
+    const cls = ['mini', st.untied ? 'opened' : '', current && current.id === m.id ? 'current' : ''].join(' ');
+    return `<button class="${cls}" data-id="${esc(m.id)}" title="${esc(m.title)}">
+      <span class="t">${st.untied ? '' : '<i></i>'}</span>
+      <span class="n">No. ${m.number}</span>
+      <span class="d">${fmtDate(m.date)}${st.noted ? ' · 已记' : ''}</span>
+    </button>`;
+  }).join('');
+}
+document.getElementById('rack').addEventListener('click', e => {
+  const b = e.target.closest('.mini');
+  if (!b) return;
+  const meta = INDEX.find(m => m.id === b.dataset.id);
+  current = null;
+  renderRolled(meta, !!getState(meta.id).untied);
+  renderShelf();
+  window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+});
+
+// ---------- 入口 ----------
+(async function init() {
+  const d = new Date();
+  document.getElementById('topDate').textContent =
+    ['周日','周一','周二','周三','周四','周五','周六'][d.getDay()] + (d.getDay() === 6 ? ' · 拆信日' : '');
+  try {
+    INDEX = (await (await fetch('data/letters/index.json')).json()).letters || [];
+  } catch (e) { INDEX = []; }
+  if (!INDEX.length) {
+    document.getElementById('app').innerHTML = '<p class="empty">还没有来信。</p>';
+    return;
+  }
+  // 默认摆出来的是：最新一封还没拆的；都拆过了就是最新一封
+  const first = INDEX.find(m => !getState(m.id).untied) || INDEX[0];
+  renderRolled(first, !!getState(first.id).untied);
+  renderShelf();
+})();
+</script>
+</body>
+</html>

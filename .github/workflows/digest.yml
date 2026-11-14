@@ -39,6 +39,15 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+      # 周六来信(Joy & Curiosity等按周发的newsletter)：纯脚本、不需要Claude，单独commit。
+      # 后面Claude那步或记账那步会push。抓失败不该拖垮当天的digest。
+      - name: Fetch weekly letters
+        continue-on-error: true
+        run: |
+          python3 scripts/fetch_letters.py
+          git add docs/data/letters
+          git diff --cached --quiet || git commit -m "Weekly letter: 新来信"
+
       - name: Run run-digest skill
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -48,6 +57,16 @@ jobs:
         run: |
           claude -p "调用 run-digest 这个skill，完整跑一遍流程：抓取新内容、两段式判断优先级、生成摘要、导出前端JSON、git commit+push。这是无人值守的定时任务，commit+push不需要额外确认，直接做。" \
             --permission-mode bypassPermissions --output-format json | tee /tmp/claude_result.json
+
+      # 专辑墙(albums.html)的数据：每人最近的作品。要等上一步排序完，所以放在Claude之后；
+      # 单独commit，下面的Health check才会看到干净的工作区。
+      - name: Export albums
+        if: always()
+        continue-on-error: true
+        run: |
+          python3 scripts/export_albums.py
+          git add docs/data/albums.json
+          git diff --cached --quiet || git commit -m "Update albums"
 
       - name: Health check
         if: always()

@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>专辑 · Daily Digest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap">
+<style>
+  /* ============================================================
+     专辑墙 —— 每个反复回去"听"的人一张专辑。
+     版式参考 tetragrammaton.com/playlists：单栏、大方封面、衬线标题、专辑之间一条细线、大量留白。
+     数据：data/albums.json(scripts/export_albums.py)。封面是下面JS画的线稿，不用照片。
+     更新提示：有新曲目时，封面后面滑出半张黑胶，日期前多一个红点。"看过"记在本浏览器。
+     只在全量站。export_public.py不导出这个页面。
+     ============================================================ */
+  :root {
+    --bg: #FFFFFF; --ink: #111111; --soft: #4A4A4A; --faint: #8A8A8A; --rule: #111111;
+    --hair: #E7E3DC; --red: #B23A26;
+    --serif: "Libre Baskerville", "Baskerville", "Songti SC", Georgia, serif;
+    --sans: "Helvetica Neue", Helvetica, -apple-system, "PingFang SC", "Noto Sans SC", sans-serif;
+  }
+  html { -webkit-font-smoothing: antialiased; }
+  /* 探出封面的黑胶在窄屏上会超出视口，裁掉，不让页面横向滚动 */
+  html, body { overflow-x: clip; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.6; }
+  a { color: inherit; }
+
+  .top { max-width: 1190px; margin: 0 auto; padding: 34px 24px 0; display: flex; justify-content: space-between; align-items: baseline; }
+  .mark { font-family: var(--serif); font-size: 22px; letter-spacing: .01em; text-decoration: none; }
+  .top nav { display: flex; gap: 34px; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
+  .top nav a { text-decoration: none; }
+  .top nav a:hover, .top nav a.on { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+
+  .intro { max-width: 670px; margin: 0 auto; padding: 120px 24px 40px; }
+  .intro h1 { font-family: var(--serif); font-weight: 400; font-size: 15px; letter-spacing: .24em; text-transform: uppercase; margin: 0; color: var(--soft); }
+  .intro p { margin: 10px 0 0; color: var(--faint); font-size: 14px; }
+
+  /* ---------------- 一张专辑 ---------------- */
+  .album { max-width: 670px; margin: 0 auto; padding: 56px 24px 64px; }
+  .divider { max-width: 1190px; margin: 0 auto; border: 0; border-top: 1px solid var(--rule); width: calc(100% - 48px); }
+
+  .sleeve { position: relative; aspect-ratio: 1 / 1; cursor: pointer; }
+  .cover { position: relative; z-index: 2; width: 100%; height: 100%; display: block; }
+  .cover svg { display: block; width: 100%; height: 100%; }
+
+  /* 有新曲目：封面后面滑出半张黑胶 */
+  .vinyl {
+    position: absolute; z-index: 1; top: 3%; left: 3%; width: 94%; height: 94%; border-radius: 50%;
+    background:
+      radial-gradient(circle, var(--label, #B23A26) 0 15%, #0E0E0E 15.4% 16.2%, transparent 16.4%),
+      repeating-radial-gradient(circle, #151515 0 1.2px, #232323 1.2px 2.4px),
+      #151515;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    transform: translateX(0); transition: transform .8s cubic-bezier(.2,.7,.2,1);
+  }
+  .vinyl::after {  /* 唱片上一道反光 */
+    content: ""; position: absolute; inset: 0; border-radius: 50%;
+    background: conic-gradient(from 20deg, transparent 0 12%, rgba(255,255,255,.10) 16%, transparent 22% 62%, rgba(255,255,255,.07) 66%, transparent 72%);
+  }
+  .vinyl::before { content: ""; position: absolute; left: 50%; top: 50%; width: 2.2%; height: 2.2%; margin: -1.1% 0 0 -1.1%; border-radius: 50%; background: #EDE6DA; z-index: 1; }
+  .album.fresh .vinyl { transform: translateX(26%); }
+  .album.fresh .sleeve:hover .vinyl { transform: translateX(34%) rotate(40deg); }
+  .album.seen-now .vinyl { transform: translateX(0); }   /* 刚点开过：唱片收回去 */
+  .sleeve:hover .cover { filter: brightness(1.02); }
+
+  .title { font-family: var(--serif); font-weight: 400; font-size: 44px; line-height: 1.2; margin: 46px 0 0; letter-spacing: -.005em; }
+  .title em { font-style: italic; color: var(--soft); font-size: .62em; margin-left: .35em; letter-spacing: 0; }
+  .date { margin: 16px 0 0; font-size: 17px; color: var(--ink); }
+  .date .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--red); margin-right: 9px; vertical-align: 2px; }
+  .date .new { color: var(--red); font-size: 14px; letter-spacing: .06em; margin-left: 10px; }
+  .bio { margin: 18px 0 0; color: var(--soft); font-size: 15.5px; line-height: 1.85; text-align: justify; max-width: 600px; }
+  .listen { display: inline-block; margin-top: 18px; font-size: 16px; color: var(--soft); text-decoration: none; cursor: pointer; background: none; border: 0; padding: 0; font-family: inherit; }
+  .listen span { display: inline-block; transition: transform .2s; margin-left: 6px; }
+  .listen:hover { color: var(--ink); }
+  .listen:hover span { transform: translateX(4px); }
+  .album.open .listen span { transform: rotate(90deg); }
+
+  /* 曲目表 */
+  .tracks { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s ease; }
+  .album.open .tracks { grid-template-rows: 1fr; }
+  .tracks > div { overflow: hidden; }
+  .tracks ol { list-style: none; margin: 26px 0 0; padding: 0; border-top: 1px solid var(--hair); }
+  .tracks li { border-bottom: 1px solid var(--hair); }
+  .tracks a { display: grid; grid-template-columns: 34px 1fr auto; gap: 14px; align-items: baseline; padding: 13px 0; text-decoration: none; }
+  .tracks .n { font-family: var(--serif); font-size: 13px; color: var(--faint); font-variant-numeric: tabular-nums; }
+  .tracks .t { font-size: 15.5px; line-height: 1.5; }
+  .tracks a:hover .t { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+  .tracks .d { font-size: 13px; color: var(--faint); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .tracks li.is-new .n { color: var(--red); }
+  .tracks li.is-new .n::after { content: " ●"; font-size: 8px; vertical-align: 2px; }
+  .tracks .home { display: block; padding: 14px 0 0; font-size: 13px; color: var(--faint); text-decoration: none; }
+  .tracks .home:hover { color: var(--ink); }
+
+  .foot { text-align: center; color: var(--faint); font-size: 13px; padding: 30px 24px 90px; }
+
+  @media (max-width: 640px) {
+    .top nav { gap: 18px; font-size: 12px; }
+    .intro { padding-top: 64px; }
+    .album { padding: 40px 16px 48px; }
+    .title { font-size: 32px; margin-top: 30px; }
+    .album.fresh .vinyl { transform: translateX(12%); }
+    .album.fresh .sleeve:hover .vinyl { transform: translateX(16%) rotate(40deg); }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition-duration: .01ms !important; } }
+</style>
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="index.html">Daily Digest</a>
+    <nav>
+      <a href="index.html">Recent</a>
+      <a href="albums.html" class="on">Albums</a>
+      <a href="letter.html">Letters</a>
+    </nav>
+  </header>
+  <section class="intro">
+    <h1>Albums</h1>
+    <p>反复回去「听」的几个人。有新作品的，封面后面会滑出一张唱片。</p>
+  </section>
+  <main id="wall"></main>
+  <p class="foot" id="foot"></p>
+
+<script>
+const SEEN_KEY = 'albums-seen-v1';   // { person: 'YYYY-MM-DD' 上次点开时他的最新曲目日期 }
+const NEW_WINDOW_DAYS = 7;           // 从没点开过的专辑：7天内有更新就算新
+const loadSeen = () => { try { return JSON.parse(localStorage.getItem(SEEN_KEY) || '{}') || {}; } catch (e) { return {}; } };
+const saveSeen = s => { try { localStorage.setItem(SEEN_KEY, JSON.stringify(s)); } catch (e) {} };
+const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const fmtLong = iso => { const [y, m, d] = iso.split('-').map(Number); return `${MONTHS[m - 1]} ${d}, ${y}`; };
+const fmtShort = iso => { const [y, m, d] = iso.split('-').map(Number); return `${MONTHS[m - 1].slice(0, 3)} ${d}`; };
+const daysAgo = iso => (Date.now() - new Date(iso + 'T00:00:00Z').getTime()) / 864e5;
+
+// ---------------- 封面：奶油色纸面上的黑色线稿，每人一个母题 ----------------
+const INK = '#151515';
+function frame(inner, a, idx) {
+  return `<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(a.person)} 专辑封面">
+    <defs>
+      <radialGradient id="g${idx}" cx="45%" cy="38%" r="80%">
+        <stop offset="0" stop-color="#F7EFE2"/><stop offset=".7" stop-color="#EFE4D2"/><stop offset="1" stop-color="#E4D6BF"/>
+      </radialGradient>
+      <filter id="grain${idx}"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/>
+        <feColorMatrix values="0 0 0 0 .3  0 0 0 0 .25  0 0 0 0 .18  0 0 0 .09 0"/></filter>
+    </defs>
+    <rect width="600" height="600" fill="url(#g${idx})"/>
+    <rect width="600" height="600" filter="url(#grain${idx})"/>
+    <text x="40" y="58" font-family="Libre Baskerville, Georgia, serif" font-size="13" fill="#8A7E6B" letter-spacing="2">N°${String(idx + 1).padStart(2, '0')}</text>
+    <text x="560" y="58" text-anchor="end" font-family="Libre Baskerville, Georgia, serif" font-style="italic" font-size="14" fill="#8A7E6B">${esc(initials(a.person))}</text>
+    <g fill="none" stroke="${INK}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">${inner}</g>
+    <text x="300" y="556" text-anchor="middle" font-family="Helvetica Neue, Helvetica, sans-serif" font-size="12" fill="#6F6455" letter-spacing="5">${esc(a.album.toUpperCase())}</text>
+  </svg>`;
+}
+const initials = name => name.split(/\s+/).map(w => w[0]).join('.') + '.';
+
+const COVERS = {
+  // Craig Mod：山脊线 + 一条虚线小路爬上去 + 太阳
+  ridge() {
+    const ridge = 'M70 380 L150 300 L195 335 L265 225 L320 290 L360 255 L430 330 L470 300 L530 380';
+    const ridge2 = 'M70 410 L130 370 L210 400 L290 345 L380 395 L450 360 L530 410';
+    const trail = 'M120 470 C200 455 215 420 250 400 S300 330 265 225';
+    return `<path d="${ridge}"/><path d="${ridge2}" stroke-width="1.6" opacity=".7"/>
+      <path d="${trail}" stroke-width="2.4" stroke-dasharray="2 12"/>
+      <circle cx="415" cy="170" r="44"/><circle cx="265" cy="225" r="5" fill="${INK}"/>
+      <path d="M70 470 L530 470" stroke-width="1.4" opacity=".5"/>`;
+  },
+  // Thorsten Ball：从一点射向四面八方的链接，端点是小圆 —— 每周十几处去向
+  rays() {
+    let s = '<circle cx="300" cy="290" r="9" fill="' + INK + '"/>';
+    const n = 16;
+    for (let i = 0; i < n; i++) {
+      const ang = (i / n) * Math.PI * 2 - Math.PI / 2 + (i % 2 ? .08 : -.05);
+      const len = [190, 120, 165, 95, 205, 140, 110, 175, 150, 100, 195, 130, 160, 90, 180, 125][i];
+      const x = 300 + Math.cos(ang) * len, y = 290 + Math.sin(ang) * len;
+      const x0 = 300 + Math.cos(ang) * 22, y0 = 290 + Math.sin(ang) * 22;
+      s += `<path d="M${x0.toFixed(1)} ${y0.toFixed(1)} L${x.toFixed(1)} ${y.toFixed(1)}" stroke-width="${i % 3 ? 2 : 3}"/>`;
+      s += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${i % 4 ? 6 : 9}" ${i % 5 === 0 ? 'fill="' + INK + '"' : ''}/>`;
+    }
+    return s;
+  },
+  // Dan Koe：向内收拢的螺旋 —— 专注
+  spiral() {
+    let d = '';
+    const turns = 5.2, steps = 520;
+    for (let k = 0; k <= steps; k++) {
+      const t = (k / steps) * turns * Math.PI * 2;
+      const r = 8 + 32 * t / (Math.PI * 2) * 1.04;
+      const x = 300 + Math.cos(t) * r, y = 285 + Math.sin(t) * r;
+      d += (k ? 'L' : 'M') + x.toFixed(1) + ' ' + y.toFixed(1);
+    }
+    return `<path d="${d}" stroke-width="2.4"/><circle cx="300" cy="285" r="6" fill="${INK}"/>`;
+  },
+  // Teo Crawford：相机光圈的六片叶片
+  aperture() {
+    const cx = 300, cy = 285, R = 175, r = 62, n = 6;
+    let s = `<circle cx="${cx}" cy="${cy}" r="${R}"/><circle cx="${cx}" cy="${cy}" r="${R + 14}" stroke-width="1.4" opacity=".6"/>`;
+    const pts = [];
+    for (let i = 0; i < n; i++) { const a = i / n * Math.PI * 2 + .3; pts.push([cx + Math.cos(a) * r, cy + Math.sin(a) * r]); }
+    for (let i = 0; i < n; i++) {
+      const [x1, y1] = pts[i], [x2, y2] = pts[(i + 1) % n];
+      // 沿着内六边形的边往外延伸，直到碰到外圆
+      const dx = x2 - x1, dy = y2 - y1, L = Math.hypot(dx, dy), ux = dx / L, uy = dy / L;
+      const fx = x1 - cx, fy = y1 - cy, b = fx * ux + fy * uy, c = fx * fx + fy * fy - R * R;
+      const t = -b + Math.sqrt(b * b - c);
+      s += `<path d="M${x1.toFixed(1)} ${y1.toFixed(1)} L${(x1 + ux * t).toFixed(1)} ${(y1 + uy * t).toFixed(1)}"/>`;
+    }
+    s += `<path d="M${pts.map(p => p.map(v => v.toFixed(1)).join(' ')).join(' L')} Z" stroke-width="2"/>`;
+    return s;
+  },
+  // Andy Matuschak：彼此链接的常青笔记
+  nodes() {
+    const N = [[300, 170], [200, 230], [395, 225], [150, 330], [262, 300], [355, 320], [450, 330], [205, 420], [310, 410], [420, 430], [300, 500 - 40]];
+    const E = [[0, 1], [0, 2], [1, 3], [1, 4], [2, 5], [2, 6], [4, 5], [3, 7], [4, 8], [5, 8], [6, 9], [8, 9], [7, 10], [8, 10], [4, 7], [5, 9]];
+    let s = E.map(([a, b]) => `<path d="M${N[a][0]} ${N[a][1]} L${N[b][0]} ${N[b][1]}" stroke-width="1.8"/>`).join('');
+    s += N.map(([x, y], i) => `<circle cx="${x}" cy="${y}" r="${[0, 4, 8].includes(i) ? 15 : 10}" fill="${[0, 8].includes(i) ? INK : '#F3EADB'}"/>`).join('');
+    return s;
+  },
+};
+// 每张黑胶的唱片标签颜色不同
+const LABELS = { ridge: '#3F6B4E', rays: '#C9A227', spiral: '#B23A26', aperture: '#2F4A6B', nodes: '#7A4E8A' };
+
+// ---------------- 渲染 ----------------
+function isFresh(a, seen) {
+  if (!a.latest) return false;
+  if (seen[a.person]) return a.latest > seen[a.person];
+  return daysAgo(a.latest) <= NEW_WINDOW_DAYS;
+}
+
+function render(albums) {
+  const seen = loadSeen();
+  const wall = document.getElementById('wall');
+  wall.innerHTML = albums.map((a, idx) => {
+    const fresh = isFresh(a, seen);
+    const since = seen[a.person] || null;
+    const tracks = a.tracks.map((t, i) => {
+      const isNew = fresh && (since ? t.date > since : daysAgo(t.date) <= NEW_WINDOW_DAYS);
+      const external = !String(t.link).startsWith('letter.html');
+      return `<li class="${isNew ? 'is-new' : ''}"><a href="${esc(t.link)}"${external ? ' target="_blank" rel="noopener"' : ''}>
+        <span class="n">${String(i + 1).padStart(2, '0')}</span><span class="t">${esc(t.title)}</span><span class="d">${t.date ? fmtShort(t.date) : ''}</span></a></li>`;
+    }).join('');
+    return `${idx ? '<hr class="divider">' : '<hr class="divider">'}
+    <article class="album${fresh ? ' fresh' : ''}" data-person="${esc(a.person)}" data-latest="${esc(a.latest || '')}" data-href="${esc(a.href || '')}">
+      <div class="sleeve" role="button" tabindex="0" aria-label="打开 ${esc(a.person)}">
+        <div class="vinyl" style="--label:${LABELS[a.cover] || '#B23A26'}"></div>
+        <div class="cover">${frame(COVERS[a.cover] ? COVERS[a.cover]() : '', a, idx)}</div>
+      </div>
+      <h2 class="title">${esc(a.person)}<em>${esc(a.album)}</em></h2>
+      <p class="date">${fresh ? '<span class="dot"></span>' : ''}${a.latest ? fmtLong(a.latest) : '—'}${fresh ? '<span class="new">新曲</span>' : ''}</p>
+      <p class="bio">${esc(a.bio)}</p>
+      <button class="listen" type="button">${a.href ? 'Open Letter' : 'Listen Now'}<span>→</span></button>
+      ${a.href ? '' : `<div class="tracks"><div><ol>${tracks}</ol><a class="home" href="${esc(a.home)}" target="_blank" rel="noopener">${esc(a.home.replace(/^https?:\/\/(www\.)?/, ''))} ↗</a></div></div>`}
+    </article>`;
+  }).join('') + '<hr class="divider">';
+}
+
+function markSeen(album) {
+  const seen = loadSeen();
+  seen[album.dataset.person] = album.dataset.latest;
+  saveSeen(seen);
+}
+
+document.addEventListener('click', e => {
+  const trigger = e.target.closest('.sleeve, .listen');
+  if (!trigger) return;
+  const album = trigger.closest('.album');
+  if (album.dataset.href) {           // Thorsten：直接去拆信
+    markSeen(album);
+    location.href = album.dataset.href;
+    return;
+  }
+  album.classList.toggle('open');
+  if (album.classList.contains('open') && album.classList.contains('fresh')) {
+    // 这次看到了：唱片收回去、红点留到下次进来再消失(这一屏里还能看出哪几首是新的)
+    markSeen(album);
+    album.classList.add('seen-now');
+  }
+});
+document.addEventListener('keydown', e => {
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.classList && e.target.classList.contains('sleeve')) {
+    e.preventDefault(); e.target.click();
+  }
+});
+
+(async function init() {
+  let data;
+  try { data = await (await fetch('data/albums.json')).json(); }
+  catch (e) { document.getElementById('wall').innerHTML = '<p class="foot">专辑数据没读到。</p>'; return; }
+  // 最近有更新的排在前面
+  const albums = data.albums.slice().sort((a, b) => (b.latest || '').localeCompare(a.latest || ''));
+  render(albums);
+  document.getElementById('foot').textContent = `${albums.length} 张专辑`;
+})();
+</script>
+</body>
+</html>
