@@ -131,16 +131,18 @@
   /* 信息行跟「大公司」页一样：左对齐一行 来源 · 轨道 · 等级；来源中灰、其余浅灰。
      操作按钮(标注、记一笔)靠右，悬停那一条才出现 */
   .src { font-size: 14.5px; letter-spacing: 0; color: var(--soft);
-         display: flex; flex-wrap: wrap; gap: 4px; align-items: center; min-height: 24px; margin-bottom: 8px; }
+         display: flex; flex-wrap: wrap; gap: 4px; align-items: center; line-height: 1.5; margin-bottom: 4px; }
   .src .who { color: var(--ink); font-weight: 600; }
   .src .sep { margin: 0 6px; color: var(--faint); }
   .src .tracks { display: inline-flex; align-items: center; }
   .src .acts { margin-left: auto; display: inline-flex; align-items: center; }
   /* 标题在上、信息行在下(2026-11-14 用户要试的顺序)：标题 → 来源·轨道·等级 → 摘要 */
-  .lead h3 { font-family: var(--title); font-size: 26px; line-height: 1.28; font-weight: 400; margin: 0 0 8px; letter-spacing: -.005em;
+  .lead h3 { font-family: var(--title); font-size: 26px; line-height: 1.2; font-weight: 400; margin: 0 0 4px; letter-spacing: -.005em;
              color: var(--ink); -webkit-text-stroke: .3px currentColor; font-feature-settings: "onum" 1; }
   .lead p, .mini .txt { font-family: "CJK Quotes", var(--sans); }
-  .lead p { margin: 0; color: #2A2925; font-size: 15.5px; line-height: 1.75; }
+  .lead p { margin: 0; color: #2A2925; font-size: 15.5px; line-height: 1.7; }
+  /* 信息行里的按钮(记一笔)缩到跟文字一样高，不把这一行撑开 */
+  .src .note-btn { width: 20px; height: 20px; }
   .lead:hover h3 a { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
 
 
