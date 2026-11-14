@@ -10,10 +10,10 @@
 <style>
   /* ============================================================
      大公司 —— Anthropic、OpenAI 这7天发了什么。
-     第三版(2026-11-14)：杂志式太乱、错落拼贴"看得头晕"，用户要"正常点"。所以就是一列安静的列表：
-     - 不分公司，按时间排(同一天优先级高的在前)
-     - 每条左边文字(公司·日期、标题、摘要)，右边一张小配图；没有配图(OpenAI)右边就空着
-     - 没点开过的，日期前一个红点
+     几版之后(杂志式乱、错落拼贴晕、三栏丑)，用户从三种对比稿里挑了"晨报"：
+     - 跟首页同一规则：只放medium/high；不分公司，按日期分组，同一天优先级高的在前
+     - 左边大日期，右边当天的几篇：公司·标签一行、标题、中文摘要；有配图的放右侧小方块
+     - 点公司名或标签可以筛选；没点开过的，公司名前一个红点
      数据：data/companies.json(scripts/export_companies.py)。只在全量站。
      ============================================================ */
   :root {
@@ -34,7 +34,7 @@
   .top nav a:hover, .top nav a.on { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
 
   .wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
-  .intro { max-width: 980px; margin: 0 auto; padding: 96px 0 32px; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
+  .intro { max-width: 860px; margin: 0 auto; padding: 96px 0 32px; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
   .intro h1 { font-family: var(--serif); font-weight: 400; font-size: 34px; line-height: 1.2; margin: 0; letter-spacing: -.01em; }
   .intro h1 em { color: var(--soft); }
   .intro .status { font-size: 14px; color: var(--soft); line-height: 1.7; text-align: right; flex: none; }
@@ -42,35 +42,37 @@
   .intro .status button { color: var(--faint); font-size: 12.5px; }
   .intro .status button:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 
-  /* ---------------- 列表：左栏(公司/日期/标签) · 中栏(标题/摘要) · 右栏(配图) ---------------- */
-  .list { max-width: 980px; margin: 0 auto; padding-bottom: 120px; border-top: 1px solid var(--rule); }
-  .row { display: grid; grid-template-columns: 150px 1fr 220px; column-gap: 40px; align-items: start;
-         padding: 34px 0; border-bottom: 1px solid var(--hair); }
-  .side { display: flex; flex-direction: column; gap: 6px; padding-top: 6px; font-size: 12px; color: var(--faint); }
-  .side .co { align-self: flex-start; font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; }
-  .side .co.anthropic { color: var(--anthropic); }
-  .side .co.openai { color: var(--openai); }
-  .side .co .unread { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--red); margin-right: 7px; vertical-align: 1px; }
-  .side .date { letter-spacing: .08em; text-transform: uppercase; }
-  .side .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
-  .side .tag { font-size: 12px; color: var(--soft); border: 1px solid var(--hair); border-radius: 999px; padding: 1px 9px; }
-  .filterable { cursor: pointer; transition: color .15s, border-color .15s, background .15s; }
-  .side .co.filterable:hover { text-decoration: underline; text-underline-offset: 3px; }
-  .side .tag.filterable:hover { border-color: var(--faint); color: var(--ink); }
-  .side .on.co { text-decoration: underline; text-underline-offset: 3px; }
-  .side .tag.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  /* ---------------- 晨报：按日期分组，左边大日期，右边当天的几篇 ---------------- */
+  .list { max-width: 860px; margin: 0 auto; padding-bottom: 120px; }
+  .day { display: grid; grid-template-columns: 120px 1fr; gap: 36px; padding: 32px 0 6px; border-top: 1px solid var(--rule); }
+  .list .day:last-child { border-bottom: 1px solid var(--hair); }
+  .d { font-family: var(--serif); font-size: 15px; color: var(--soft); }
+  .d b { display: block; font-weight: 400; font-size: 46px; line-height: 1; color: var(--ink); margin-bottom: 4px; }
+  .d .wk { display: block; margin-top: 6px; font-family: var(--sans); font-size: 12px; color: var(--faint); letter-spacing: .06em; }
 
-  .body h2 { font-family: var(--serif); font-weight: 400; font-size: 23px; line-height: 1.3; margin: 0; }
-  .row.high .body h2 { font-size: 26px; }
-  .body h2 a:hover { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
-  .body .sum { margin: 12px 0 0; color: var(--soft); font-size: 14.5px; line-height: 1.85; }
-  .row.read .body h2 { color: var(--soft); }
-
-  .pic { display: block; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 4px; background: #EDEAE0; }
+  .item { display: grid; grid-template-columns: 1fr 150px; gap: 26px; padding-bottom: 28px; }
+  .item + .item { border-top: 1px solid var(--hair); padding-top: 26px; }
+  .item.noimg { grid-template-columns: 1fr; }
+  .m { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); }
+  .m .sep { margin: 0 2px; }
+  .m .unread { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--red); margin-right: 6px; }
+  .co { font-weight: 600; letter-spacing: .12em; }
+  .co.anthropic { color: var(--anthropic); }
+  .co.openai { color: var(--openai); }
+  .tg { letter-spacing: .12em; }
+  .filterable { cursor: pointer; text-transform: uppercase; font-size: inherit; padding: 1px 0; border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
+  .filterable:hover { border-bottom-color: currentColor; }
+  .filterable.on { border-bottom-color: currentColor; color: var(--ink); }
+  .item h2 { font-family: var(--serif); font-weight: 400; font-size: 22px; line-height: 1.32; margin: 8px 0 0; }
+  .item.high h2 { font-size: 24px; }
+  .item h2 a:hover { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
+  .item .sum { margin: 9px 0 0; color: var(--soft); font-size: 14.5px; line-height: 1.85; }
+  .item.read h2 { color: var(--soft); }
+  .pic { display: block; aspect-ratio: 1 / 1; overflow: hidden; border-radius: 4px; background: #EDEAE0; margin-top: 4px; }
   .pic img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
-  .pic:hover img { transform: scale(1.03); }
+  .pic:hover img { transform: scale(1.04); }
 
-  .filter-on { max-width: 980px; margin: 0 auto; padding: 0 0 14px; font-size: 13.5px; color: var(--soft); }
+  .filter-on { max-width: 860px; margin: 0 auto; padding: 0 0 14px; font-size: 13.5px; color: var(--soft); }
   .filter-on b { color: var(--ink); font-weight: 600; }
   .filter-on button { color: var(--faint); margin-left: 10px; }
   .filter-on button:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
@@ -81,15 +83,13 @@
     .top nav { width: 100%; justify-content: space-between; gap: 0; }
     .intro { display: block; padding: 64px 0 36px; }
     .intro .status { margin-top: 14px; text-align: left; }
-    /* 窄屏：左栏变成标题上方的一行，配图放在右上角的小方块 */
-    .row { grid-template-columns: 1fr 96px; column-gap: 16px; row-gap: 10px; padding: 24px 0; }
-    .side { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding-top: 0; }
-    .side .tags { margin-top: 0; }
-    .body { grid-column: 1; }
-    .row.noimg .body { grid-column: 1 / -1; }
-    .pic { grid-column: 2; grid-row: 2; aspect-ratio: 1 / 1; }
-    .body h2, .row.high .body h2 { font-size: 19px; }
-    .body .sum { font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    /* 窄屏：大日期变成每组上方的一行 */
+    .day { grid-template-columns: 1fr; gap: 14px; padding-top: 22px; }
+    .d b { display: inline; font-size: 30px; margin-right: 6px; }
+    .d .wk { display: inline; margin-left: 8px; }
+    .item { grid-template-columns: 1fr 84px; gap: 16px; }
+    .item h2, .item.high h2 { font-size: 19px; }
+    .item .sum { font-size: 14px; }
   }
   @media (prefers-reduced-motion: reduce) { * { transition-duration: .01ms !important; } }
 </style>
@@ -149,34 +149,40 @@ function render() {
   if (!all.length) { document.getElementById('list').innerHTML = '<p class="empty">这 7 天两家都没发什么。</p>'; return; }
   if (!items.length) { document.getElementById('list').innerHTML = '<p class="empty">这个筛选下没有内容。</p>'; return; }
 
-  document.getElementById('list').innerHTML = items.map(it => {
-    const read = seen.has(it.link);
-    const cls = ['row', it.priority || 'low', it.image ? '' : 'noimg', read ? 'read' : ''].join(' ');
-    const coOn = FILTER && FILTER.kind === 'company' && FILTER.value === it.key ? ' on' : '';
-    const tags = (it.tags || []).map(t => {
-      const on = FILTER && FILTER.kind === 'tag' && FILTER.value === t ? ' on' : '';
-      return `<button type="button" class="tag filterable${on}" data-tag="${esc(t)}" title="只看 ${esc(t)}">${esc(t)}</button>`;
-    }).join('');
-    const link = `href="${esc(it.link)}" target="_blank" rel="noopener" data-link="${esc(it.link)}"`;
-    return `<article class="${cls}">
-      <div class="side">
-        <button type="button" class="co filterable ${esc(it.key)}${coOn}" data-company="${esc(it.key)}" title="只看 ${esc(it.company)}">${read ? '' : '<span class="unread" title="还没看过"></span>'}${esc(it.company)}</button>
-        <span class="date">${fmt(it.date)}</span>
-        ${tags ? `<div class="tags">${tags}</div>` : ''}
-      </div>
-      <div class="body">
-        <h2><a ${link}>${esc(it.title)}</a></h2>
-        ${it.summary ? `<p class="sum">${esc(it.summary)}</p>` : ''}
-      </div>
-      ${it.image ? `<a class="pic" ${link}><img src="${esc(it.image)}" alt="" loading="lazy" referrerpolicy="no-referrer"></a>` : '<span></span>'}
-    </article>`;
+  const byDay = {};
+  items.forEach(it => (byDay[it.date] = byDay[it.date] || []).push(it));
+  const WK = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+  document.getElementById('list').innerHTML = Object.keys(byDay).sort().reverse().map(day => {
+    const [y, m, dd] = day.split('-').map(Number);
+    const wk = WK[new Date(y, m - 1, dd).getDay()];
+    return `<section class="day">
+      <div class="d"><b>${dd}</b>${MONTHS[m - 1]}<span class="wk">${wk}</span></div>
+      <div>${byDay[day].map(it => {
+        const read = seen.has(it.link);
+        const cls = ['item', it.priority || 'low', it.image ? '' : 'noimg', read ? 'read' : ''].join(' ');
+        const coOn = FILTER && FILTER.kind === 'company' && FILTER.value === it.key ? ' on' : '';
+        const tags = (it.tags || []).map(t => {
+          const on = FILTER && FILTER.kind === 'tag' && FILTER.value === t ? ' on' : '';
+          return `<span class="sep">·</span><button type="button" class="tg filterable${on}" data-tag="${esc(t)}" title="只看 ${esc(t)}">${esc(t)}</button>`;
+        }).join('');
+        const link = `href="${esc(it.link)}" target="_blank" rel="noopener" data-link="${esc(it.link)}"`;
+        return `<article class="${cls}">
+          <div>
+            <div class="m">${read ? '' : '<span class="unread" title="还没看过"></span>'}<button type="button" class="co filterable ${esc(it.key)}${coOn}" data-company="${esc(it.key)}" title="只看 ${esc(it.company)}">${esc(it.company)}</button>${tags}</div>
+            <h2><a ${link}>${esc(it.title)}</a></h2>
+            ${it.summary ? `<p class="sum">${esc(it.summary)}</p>` : ''}
+          </div>
+          ${it.image ? `<a class="pic" ${link}><img src="${esc(it.image)}" alt="" loading="lazy" referrerpolicy="no-referrer"></a>` : ''}
+        </article>`;
+      }).join('')}</div>
+    </section>`;
   }).join('');
 
   // 配图挂了：这一行变成没有图的
   document.querySelectorAll('.pic img').forEach(img => img.addEventListener('error', () => {
-    const row = img.closest('.row');
-    img.parentElement.replaceWith(document.createElement('span'));
-    row.classList.add('noimg');
+    const item = img.closest('.item');
+    img.parentElement.remove();
+    item.classList.add('noimg');
   }, { once: true }));
 }
 
