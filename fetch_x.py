@@ -2,7 +2,7 @@
 拉取sources.py里X_SOURCES的最新推文(TwitterAPI.io)，存入digest.db的items表，
 按guid去重——跟fetch.py是同一张表、同一套去重逻辑，只是source_type='x'。
 
-只取每人最新一页(最多20条，不含回复)，不做分页增量——digest管线每天跑一次，单页20条
+默认每人取最新一页(最多20条，不含回复)；2026-11-14起会按库里该人最新一条往回翻页补抓(见X_MAX_PAGES)。以下是原先只取一页时的说明——digest管线每天跑一次，单页20条
 对现有账号都能覆盖一天以上。2026-09-12加@steipete时实测过：他是这批里最高产的，约10条/天
 (不含回复)，单页刚好覆盖2天，余量不大；哪天他发超过20条(或者再加更高产的账号)，超出的
 部分会被静默漏掉，那时候就得在这里加分页。注意config.X_SKIP_RETWEETS丢掉的转推**是在
@@ -19,7 +19,7 @@ GitHub Actions里从repo secrets读)。
 import sqlite3
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 import requests
 from dotenv import load_dotenv
@@ -103,6 +103,29 @@ def normalize_tweet(source, tweet):
     }
 
 
+# 补抓翻页上限：每页约20条，5页能覆盖最高产账号(@steipete约10条/天)大约10天的断档
+X_MAX_PAGES = 5
+
+
+def _fetch_page(api_key, username, cursor):
+    payload, resp = None, None
+    for attempt in range(3):
+        resp = requests.get(
+            API_URL,
+            headers={"X-API-Key": api_key},
+            params={"userName": username, "cursor": cursor, "includeReplies": "false"},
+            timeout=30,
+        )
+        try:
+            payload = resp.json()
+        except ValueError:
+            payload = None
+        if payload and payload.get("status") == "success":
+            break
+        time.sleep(2)  # 这个接口偶尔对内容较长的账号返回不完整/失败，重试几次通常就好
+    return payload, resp
+
+
 def fetch_all():
     api_key = os.environ.get("TWITTERAPI_IO_KEY")
     if not api_key:
@@ -111,32 +134,40 @@ def fetch_all():
     conn = sqlite3.connect(DB_PATH)
     init_db(conn)
 
+    row = conn.execute("SELECT MAX(first_seen_at) FROM items WHERE source_type = 'x'").fetchone()
+    last_published = None
+    if row and row[0]:
+        last_published = (datetime.fromisoformat(row[0]) - timedelta(days=1)).isoformat()
+
     total_new = 0
     failed = []
     for source in X_SOURCES:
-        payload = None
-        for attempt in range(3):
-            resp = requests.get(
-                API_URL,
-                headers={"X-API-Key": api_key},
-                params={"userName": source["x_username"], "cursor": "", "includeReplies": "false"},
-                timeout=30,
-            )
-            try:
-                payload = resp.json()
-            except ValueError:
-                payload = None
-            if payload and payload.get("status") == "success":
+        # 增量补抓(2026-11-14加)：跑批断过几天时，单页(约2天)会漏掉中间的推文。所以一直翻页，
+        # 直到这一页最老的一条已经早于上次X抓取时间(再往前留1天余量)、或者没有下一页、或者到了
+        # X_MAX_PAGES上限。截止点用全局的上次抓取时间而不是该人最新一条——不然很久没发推的人
+        # 每天都会白翻满X_MAX_PAGES页。
+        tweets, cursor, ok, pages = [], "", True, 0
+        while pages < X_MAX_PAGES:
+            payload, resp = _fetch_page(api_key, source["x_username"], cursor)
+            if not payload or payload.get("status") != "success":
+                detail = payload.get("msg") if payload else resp.text[:200]
+                print(f"[FAIL] {source['person']} — HTTP {resp.status_code} — {detail} (第{pages + 1}页)")
+                ok = pages > 0  # 第一页就失败才算整个源失败；翻页中途失败保留已拿到的
                 break
-            time.sleep(2)  # 这个接口偶尔对内容较长的账号返回不完整/失败，重试几次通常就好
-
-        if not payload or payload.get("status") != "success":
-            detail = payload.get("msg") if payload else resp.text[:200]
-            print(f"[FAIL] {source['person']} — HTTP {resp.status_code} — {detail}")
+            pages += 1
+            page_tweets = payload["data"]["tweets"]
+            tweets.extend(page_tweets)
+            has_next = payload.get("has_next_page", payload["data"].get("has_next_page"))
+            cursor = payload.get("next_cursor") or payload["data"].get("next_cursor") or ""
+            if not page_tweets or not has_next or not cursor or last_published is None:
+                break
+            oldest = min(parse_tweet_date(t["createdAt"]) for t in page_tweets)
+            if oldest <= last_published:
+                break
+        if not ok:
             failed.append(source["person"])
             continue
 
-        tweets = payload["data"]["tweets"]
         skip_rt = source["person"] in X_SKIP_RETWEETS
         new_count = 0
         rt_count = 0
@@ -161,7 +192,7 @@ def fetch_all():
         conn.commit()
         total_new += new_count
         skipped = f", 跳过{rt_count}条转推" if rt_count else ""
-        print(f"[OK] {source['person']}: {len(tweets)}条 in page, {new_count}条新增{skipped}")
+        print(f"[OK] {source['person']}: {pages}页共{len(tweets)}条, {new_count}条新增{skipped}")
 
     conn.close()
     print(f"\n共新增 {total_new} 条")
