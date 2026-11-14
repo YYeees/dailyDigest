@@ -9,8 +9,9 @@
 - Thorsten Ball不在digest.db里，他的曲目是docs/data/letters/index.json里的每周来信，
   点专辑直接进卷轴页(letter.html)。
 - 名单、介绍、封面都写在下面ALBUMS里，改人就改这里。封面image是公开网络上能代表这个人的图
-  (本人网站头图/标志/插画)，直接引用原网址，不复制进仓库。**不用黑白人像照**——不吉利
-  (2026-11-14用户提的)；黑白的风景、插画可以。图加载失败时退回cover字段对应的线稿。
+  (本人网站头图/头像/插画)，直接引用原网址，不复制进仓库，原色显示(不做黑白处理——
+  2026-11-14用户提过黑白处理后的人像照不吉利；本身是黑白的图由用户挑过，可以)。
+  图加载失败时退回cover字段对应的线稿。
 """
 
 import json
@@ -38,15 +39,14 @@ ALBUMS = [
     },
     {
         "person": "Thorsten Ball", "pub": "Joy & Curiosity", "cover": "rays", "verb": "Open Letter",
-        "image": "https://substackcdn.com/image/fetch/$s_!-2HZ!,w_800,h_800,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff114450f-2313-48c6-a253-a1d476c21d93_1164x1164.png",
+        "image": "https://thorstenball.com/images/avatar_2026_final_quadratic.jpg",
         "home": "https://registerspill.thorstenball.com", "href": "letter.html", "source": "letters",
         "bio": "软件工程师，在 Amp 做编程智能体，写过《Writing An Interpreter In Go》。"
                "每周日寄出一封 Joy & Curiosity，把一周里让他快乐、让他好奇的东西装进去。",
     },
     {
         "person": "Dan Koe", "pub": "future/proof", "cover": "spiral", "verb": "Read",
-        # 他的图都是黑白品牌调性。头像是人像白描，不用；用文章里"伏案写作的人"那张插画
-        "image": "https://substackcdn.com/image/fetch/$s_!I3gB!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe2febc53-bfd6-4022-b668-ca0b547c0b1e_2912x1632.png",
+        "image": "https://substackcdn.com/image/fetch/$s_!OZ7Z!,w_800,h_800,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5ee5bed-1760-427e-9744-f5ad89baf5a9_886x886.png",
         "home": "https://thedankoe.com",
         "bio": "写「一人企业」和自我教育的作者。他的看法是：AI 能生成一切听起来不错的句子，"
                "最后剩下的护城河，是只有你能看见的那个视角。",
@@ -59,8 +59,9 @@ ALBUMS = [
                "从 2013 年开始做视频，十年如一日地拍。",
     },
     {
-        "person": "Andy Matuschak", "pub": "Notes & Posts", "cover": "nodes", "verb": "Read",
-        "image": "https://github.com/andymatuschak.png?size=800",
+        "person": "Andy Matuschak", "pub": "Notes & Posts", "cover": "wordmark", "verb": "Read",
+        # 不用照片：照他网站顶部的名字字标，浅粉底紫字，在页面里画成正方形
+        "bg": "#FDF3F1", "ink": "#360EF5",
         "home": "https://andymatuschak.org",
         "bio": "研究「思维工具」的独立研究者，和 Michael Nielsen 一起做过 Quantum Country。"
                "他公开的常青笔记本身就是一个不断生长、彼此链接的网站。",

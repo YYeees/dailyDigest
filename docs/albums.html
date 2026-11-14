@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>常读的人 · Daily Digest</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=League+Spartan:wght@700&display=swap">
 <style>
   /* ============================================================
      常读的人 —— 反复回去读的几个人，每人一张卡片。
@@ -134,6 +134,17 @@ function frame(inner, a, idx) {
 }
 const initials = name => name.split(/\s+/).map(w => w[0]).join('.') + '.';
 
+// 名字字标封面(Andy)：照他网站顶部的字标，左上起两行粗体名字，满版底色
+function wordmark(a) {
+  const words = a.person.split(/\s+/);
+  const size = 96;
+  const lines = words.map((w, i) => `<text x="58" y="${262 + i * size * 1.02}" font-size="${size}">${esc(w)}</text>`).join('');
+  return `<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(a.person)}">
+    <rect width="600" height="600" fill="${esc(a.bg || '#FDF3F1')}"/>
+    <g fill="${esc(a.ink || '#360EF5')}" font-family="'League Spartan', Futura, 'Avenir Next', 'Helvetica Neue', sans-serif" font-weight="700" letter-spacing="-2">${lines}</g>
+  </svg>`;
+}
+
 const COVERS = {
   // Craig Mod：山脊线 + 一条虚线小路爬上去 + 太阳
   ridge() {
@@ -211,7 +222,7 @@ function render() {
     const fresh = isFresh(a, seen);
     const internal = String(a.latest_link || '').startsWith('letter.html');
     const target = internal ? '' : ' target="_blank" rel="noopener"';
-    const cover = a.image
+    const cover = a.cover === 'wordmark' ? wordmark(a) : a.image
       ? `<img src="${esc(a.image)}" alt="${esc(a.person)}" loading="lazy" referrerpolicy="no-referrer" data-idx="${idx}">`
       : frame(COVERS[a.cover] ? COVERS[a.cover]() : '', a, idx);
     return `<hr class="divider">
