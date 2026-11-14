@@ -141,6 +141,11 @@
              color: var(--ink); -webkit-text-stroke: .3px currentColor; font-feature-settings: "onum" 1; }
   .lead p, .mini .txt { font-family: "CJK Quotes", var(--sans); }
   .lead p { margin: 0; color: #2A2925; font-size: 15.5px; line-height: 1.7; }
+  /* Read More 只给等级 HIGH 的文章(2026-11-14 用户要的)：有它的就是值得读全文的 */
+  .more-link { display: inline-block; margin-top: 8px; font-size: 14px; color: var(--faint); }
+  .more-link span { display: inline-block; margin-left: 4px; transition: transform .2s; }
+  .more-link:hover { color: var(--ink); }
+  .more-link:hover span { transform: translateX(4px); }
   /* 信息行里的按钮(记一笔)缩到跟文字一样高，不把这一行撑开 */
   .src .note-btn { width: 20px; height: 20px; }
   .lead:hover h3 a { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
@@ -463,7 +468,8 @@ function leadHTML(i) {
     <h3><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></h3>
     <div class="src">${who(i)}<span class="sep">·</span><span class="tracks">${tags(i)}</span>
       <span class="acts">${labelBtns(i)}${noteBtn(i)}</span></div>
-    <p>${esc(summaryOf(i))}</p></div>`;
+    <p>${esc(summaryOf(i))}</p>
+    ${topTier(i) === 'high' ? `<a class="more-link" href="${esc(i.link)}" target="_blank" rel="noopener">Read More <span>→</span></a>` : ''}</div>`;
 }
 // high 和 medium 在页面上不再区分(2026-11-14 用户定)：都用同一种卡片，同一天里 high 排在前面。
 function listHTML(list) {
