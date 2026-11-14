@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T10:00:10+00:00",
+ "updated_at": "2026-11-14T10:02:13+00:00",
  "albums": [
   {
    "person": "Craig Mod",
@@ -274,6 +274,90 @@
    "latest": "2026-10-31",
    "latest_title": "Why you should photograph your home.",
    "latest_link": "https://www.youtube.com/watch?v=VHQvfVpCaJ4"
+  },
+  {
+   "person": "Maggie Appleton",
+   "pub": "Digital Garden",
+   "cover": "nodes",
+   "verb": "Read",
+   "home": "https://maggieappleton.com",
+   "image": "img/maggie-appleton.jpg",
+   "bio": "设计师、人类学者，自称「平庸的开发者」。她的「数字花园」里种着视觉随笔、笔记和设计模式，一边画一边写。现在在 GitHub Next 研究 AI 怎样改变写软件这件事。",
+   "tracks": [
+    {
+     "title": "Fortune Telling and Speculative Design",
+     "link": "https://maggieappleton.com/fortune-telling",
+     "date": "2026-11-04",
+     "kind": "blog",
+     "note": "Maggie Appleton分享在GitHub Next探索未来软件的做法：先收集微小变化，再提出判断，最后做出能让人看见和讨论的原型。她用数字花园、个人软件和家庭AI助手等亲身案例，解释如何推演后续影响，也提醒判断要有证据支撑。值得读的是把模糊直觉变成具体作品，再让作品反过来修正想法的方法。"
+    },
+    {
+     "title": "Planning with Agents: Divided Worlds, Boundary Objects, and Thicker Interfaces",
+     "link": "https://maggieappleton.com/planning-agents/",
+     "date": "2026-09-14",
+     "kind": "blog",
+     "note": "作者在GitHub Next的一手实践出发，主张当前人机协作界面太\"薄\"——agent只用文本对话向人汇报，缺少让人类介入验证的界面。她提出应该用可视化状态图、实时可操控原型、多方案并行呈现等\"厚界面\"替代纯文本交互，并以设计系统调整、播放器状态机、重试逻辑对比三个真实项目为例。团队正在开发Chopin项目，一个支持多人协作与决策留痕的实时规划原型工具。"
+    },
+    {
+     "title": "Planning with Agents: Divided Worlds, Boundary Objects, and Thicker Interfaces",
+     "link": "https://maggieappleton.com/planning-agents",
+     "date": "2026-09-14",
+     "kind": "blog",
+     "note": "文章探讨人类与AI agent协作规划时的界面设计问题：当前规划界面往往优化的是机器执行而非人类决策，作者主张构建更丰富的“边界对象”(visual/interactive/social呈现)，让agent先做探索性工作、把规划建立在真实反馈而非纯预测上，引用Lucy Suchman的理论并以Chopin等项目为例展开论证。"
+    },
+    {
+     "title": "August 2026",
+     "link": "https://maggieappleton.com/now-2026-08/",
+     "date": "2026-08-18",
+     "kind": "blog",
+     "note": "Maggie Appleton记录了自己成为父母、搬入新家后的时间挤压体验，并借此反思无偿家务劳动长期被排除在经济核算之外的问题。她期待AI agent未来能分担规划采购、协调日程这类心智负担，但坦言目前自主agent系统在安全性和可配置性上还不成熟，是“明年再看”的技术。她还提到自己正在通过读经济学入门书，试图理解AI带来的劳动力冲击将如何重塑工资与阶层。"
+    },
+    {
+     "title": "August 2026",
+     "link": "https://maggieappleton.com/now-2026-08",
+     "date": "2026-08-18",
+     "kind": "blog",
+     "note": "作者在难得的周末空闲中反思：新房+带娃后时间被家务挤压，期待agent(如Hermes/OpenClaw)未来能分担家庭心智负担，但目前配置agent访问邮件/日历/银行卡等仍是安全隐患，是“暂不成熟”的技术；她还借此讨论了AI取代知识工作后被忽视的家庭照护、社会照护等无人愿付费的劳动该如何被经济体系承接。"
+    },
+    {
+     "title": "In Memoriam, Encountering World War I, and Thinkable Horrors",
+     "link": "https://maggieappleton.com/in-memoriam",
+     "date": "2026-07-18",
+     "kind": "blog",
+     "note": "作者记录了自己通过观看舞台剧《战马》、阅读历史书籍来弥补对一战历史教育空白的经历，用9500朵罂粟花可视化战争死亡人数等细节，提醒我们距离大规模工业化死亡其实并不遥远，是一次一手的历史反思。"
+    },
+    {
+     "title": "In Memoriam, Encountering World War I, and Thinkable Horrors",
+     "link": "https://maggieappleton.com/in-memoriam/",
+     "date": "2026-07-17",
+     "kind": "blog",
+     "note": "作者读小说《In Memoriam》补上了对一战的认知空白——基于大量一手史料的历史虚构，呈现堑壕战里士兵在泥浆、尸体与机枪火力中大规模死亡的真实图景。她用约九千五百朵罂粟花对应九百五十万军人死亡，并由此联想到气候变化、AI风险这类当代的「工业规模威胁」。"
+    },
+    {
+     "title": "One Developer, Two Dozen Agents, Zero Alignment",
+     "link": "https://maggieappleton.com/zero-alignment",
+     "date": "2026-04-13",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "One Developer, Two Dozen Agents, Zero Alignment",
+     "link": "https://maggieappleton.com/zero-alignment/",
+     "date": "2026-04-12",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "Gas Town’s Agent Patterns, Design Bottlenecks, and Vibecoding at Scale",
+     "link": "https://maggieappleton.com/gastown",
+     "date": "2026-01-23",
+     "kind": "blog",
+     "note": ""
+    }
+   ],
+   "latest": "2026-11-04",
+   "latest_title": "Fortune Telling and Speculative Design",
+   "latest_link": "https://maggieappleton.com/fortune-telling"
   },
   {
    "person": "Andy Matuschak",

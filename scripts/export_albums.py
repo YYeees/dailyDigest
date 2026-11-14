@@ -60,6 +60,14 @@ ALBUMS = [
                "从 2013 年开始做视频，十年如一日地拍。",
     },
     {
+        "person": "Maggie Appleton", "pub": "Digital Garden", "cover": "nodes", "verb": "Read",
+        "home": "https://maggieappleton.com",
+        # 她About页上的照片(彩色围巾那张)，裁成正方形存在docs/img/(原图地址带构建哈希，会变)
+        "image": "img/maggie-appleton.jpg",
+        "bio": "设计师、人类学者，自称「平庸的开发者」。她的「数字花园」里种着视觉随笔、笔记和设计模式，"
+               "一边画一边写。现在在 GitHub Next 研究 AI 怎样改变写软件这件事。",
+    },
+    {
         "person": "Andy Matuschak", "pub": "Notes & Posts", "cover": "nodes", "verb": "Read",
         # GitHub公开头像(粉墙前的笑脸)。试过他网站的名字字标(cover改成"wordmark"、配bg/ink即可)，用户更喜欢这张
         "image": "https://github.com/andymatuschak.png?size=800",
