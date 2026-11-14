@@ -60,9 +60,9 @@
   .tg:hover { color: var(--ink); border-bottom-color: var(--faint); }
   .tg.on { color: var(--accent); font-weight: 600; }
   /* 等级：HIGH 土橙、MEDIUM 灰、LOW 最浅；LOW 的轨道只展示，不能点 */
-  .tg { white-space: nowrap; text-transform: uppercase; }
+  .tg { white-space: nowrap; }
   /* 等级只显示一个：HIGH 土橙、MEDIUM 灰、LOW 最浅，跟前面的轨道名隔开一点 */
-  .tier { font-weight: 500; letter-spacing: .12em; white-space: nowrap; }
+  .tier { font-weight: 500; font-size: 12px; letter-spacing: .1em; white-space: nowrap; }
   .tier::before { content: "·"; margin: 0 6px; color: var(--faint); font-weight: 400; }
   .tier-high { color: var(--date); }
   .tier-medium { color: var(--who); }
@@ -116,26 +116,34 @@
     .day-head { position: static; display: flex; align-items: baseline; gap: 8px; padding: 0 0 14px; }
     .day-head .num { display: inline; font-size: 34px; margin: 0 2px 0 0; }
     .day-head .wk, .day-head .n { display: inline; margin: 0 0 0 6px; }
-    .lead h3 { font-size: 20px; }
+    .lead h3 { font-size: 24px; }
+    .lead { padding-bottom: 30px; }
+    .lead + .lead { padding-top: 30px; }
     .src { row-gap: 2px; }
   }
 
   /* 每一条(high 和 medium 同一种样子)：来源、标题、摘要；点标题或空白处都打开原文 */
-  .lead { display: block; padding: 0 0 28px; cursor: pointer; }
-  .lead + .lead { border-top: 1px solid var(--rule); padding-top: 26px; }
+  /* 每一条的节奏参考 tetragrammaton.com 的阅读栏目(2026-11-14 用户给的图)：
+     大标题 → 粗体来源 + 灰色轨道/等级 → 正文字号的摘要 → Read More；条目之间黑色细线、留白大 */
+  .lead { display: block; padding: 6px 0 40px; cursor: pointer; }
+  .lead + .lead { border-top: 1px solid var(--ink); padding-top: 40px; }
   /* 信息行跟「大公司」页一样：左对齐一行 来源 · 轨道 · 等级；来源中灰、其余浅灰。
      操作按钮(标注、记一笔)靠右，悬停那一条才出现 */
-  .src { font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint);
-         display: flex; flex-wrap: wrap; gap: 4px; align-items: center; min-height: 24px; margin-bottom: 8px; }
-  .src .who { color: var(--who); font-weight: 500; }
-  .src .sep { margin: 0 2px; color: var(--faint); }
+  .src { font-size: 14.5px; letter-spacing: 0; color: var(--soft);
+         display: flex; flex-wrap: wrap; gap: 4px; align-items: center; min-height: 24px; margin-bottom: 12px; }
+  .src .who { color: var(--ink); font-weight: 600; }
+  .src .sep { margin: 0 6px; color: var(--faint); }
   .src .tracks { display: inline-flex; align-items: center; }
   .src .acts { margin-left: auto; display: inline-flex; align-items: center; }
   /* 标题在上、信息行在下(2026-11-14 用户要试的顺序)：标题 → 来源·轨道·等级 → 摘要 */
-  .lead h3 { font-family: var(--title); font-size: 24px; line-height: 1.3; font-weight: 400; margin: 0 0 6px; letter-spacing: 0;
+  .lead h3 { font-family: var(--title); font-size: 32px; line-height: 1.25; font-weight: 400; margin: 0 0 12px; letter-spacing: -.005em;
              color: var(--ink); -webkit-text-stroke: .3px currentColor; font-feature-settings: "onum" 1; }
   .lead p, .mini .txt { font-family: "CJK Quotes", var(--sans); }
-  .lead p { margin: 0; color: var(--soft); font-size: 14.5px; line-height: 1.85; }
+  .lead p { margin: 0; color: #2A2925; font-size: 16px; line-height: 1.8; }
+  .more-link { display: inline-block; margin-top: 12px; font-size: 14.5px; color: var(--faint); }
+  .more-link span { display: inline-block; margin-left: 4px; transition: transform .2s; }
+  .more-link:hover { color: var(--ink); }
+  .more-link:hover span { transform: translateX(4px); }
   .lead:hover h3 a { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
 
 
@@ -456,7 +464,8 @@ function leadHTML(i) {
     <h3><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></h3>
     <div class="src">${who(i)}<span class="sep">·</span><span class="tracks">${tags(i)}</span>
       <span class="acts">${labelBtns(i)}${noteBtn(i)}</span></div>
-    <p>${esc(summaryOf(i))}</p></div>`;
+    <p>${esc(summaryOf(i))}</p>
+    <a class="more-link" href="${esc(i.link)}" target="_blank" rel="noopener">Read More <span>→</span></a></div>`;
 }
 // high 和 medium 在页面上不再区分(2026-11-14 用户定)：都用同一种卡片，同一天里 high 排在前面。
 function listHTML(list) {
