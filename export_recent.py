@@ -35,7 +35,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from config import (
-    ALWAYS_ARCHIVE_PERSONS, DB_PATH, HIGH_ONLY_PERSON_LIMIT, HIGH_ONLY_PERSONS,
+    ALWAYS_ARCHIVE_PERSONS, COMPANY_PERSONS, DB_PATH, HIGH_ONLY_PERSON_LIMIT, HIGH_ONLY_PERSONS,
     HIGH_ONLY_RECENT_DAYS, RECENT_WINDOW_DAYS, X_HIGH_ONLY_PERSONS,
 )
 from new_flags import load_prev_items, mark_new
@@ -124,6 +124,8 @@ def export(pipeline_run=False):
             # tracks里只留了medium/high、而且ALWAYS_ARCHIVE_PERSONS的锚点被抬成了high；
             # 这里是数据库里的真实判断。公开站按PUBLIC_ITEM_FIELDS白名单导出，不会带出这个字段。
             "tiers": {"ai": row["ai_tier"], "anchor": row["anchor_tier"], "eval": row["eval_tier"]},
+            # 大公司的条目：私有站 Recent 页不显示(只在「大公司」页)；公开站照常(白名单不带这个字段)
+            "is_company": row["person"] in COMPANY_PERSONS,
         })
 
     recent_items.sort(key=lambda i: i["date"], reverse=True)

@@ -58,7 +58,8 @@ jobs:
           claude -p "调用 run-digest 这个skill，完整跑一遍流程：抓取新内容、两段式判断优先级、生成摘要、导出前端JSON、git commit+push。这是无人值守的定时任务，commit+push不需要额外确认，直接做。" \
             --permission-mode bypassPermissions --output-format json | tee /tmp/claude_result.json
 
-      # 「常读的人」(albums.html)和「大公司」(companies.html)的数据。要等上一步排序完，
+      # 「常读的人」(albums.html)、「大公司」(companies.html)的数据，以及给 Recent 补配图(attach_images.py，
+      # 要在 Claude 那步跑完 export_recent.py 之后)。要等上一步排序完，
       # 所以放在Claude之后；单独commit，下面的Health check才会看到干净的工作区。
       - name: Export people and companies pages
         if: always()
@@ -66,7 +67,8 @@ jobs:
         run: |
           python3 scripts/export_albums.py
           python3 scripts/export_companies.py
-          git add docs/data/albums.json docs/data/companies.json
+          python3 scripts/attach_images.py
+          git add docs/data/albums.json docs/data/companies.json docs/data/recent.json docs/data/image_cache.json
           git diff --cached --quiet || git commit -m "Update people and companies pages"
 
       - name: Health check

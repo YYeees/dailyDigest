@@ -117,6 +117,7 @@
     .day-head .num { display: inline; font-size: 34px; margin: 0 2px 0 0; }
     .day-head .wk, .day-head .n { display: inline; margin: 0 0 0 6px; }
     .lead h3, .lead.t-high h3 { font-size: 19px; }
+    .lead.has-pic { grid-template-columns: minmax(0, 1fr) 84px; column-gap: 16px; }
     .lead p { font-size: 14px; }
     .src { row-gap: 2px; }
   }
@@ -140,6 +141,11 @@
   .lead.t-high h3 { font-size: 26px; }
   .lead p, .mini .txt { font-family: "CJK Quotes", var(--sans); }
   .lead p { margin: 9px 0 0; color: var(--soft); font-size: 14.5px; line-height: 1.85; }
+  /* 配图：跟「大公司」页一样，右侧 150px 小方块，跟信息行顶部对齐；图挂了就整块去掉 */
+  .lead.has-pic { display: grid; grid-template-columns: minmax(0, 1fr) 150px; column-gap: 26px; align-items: start; }
+  .lead .pic { display: block; aspect-ratio: 1 / 1; overflow: hidden; border-radius: 4px; background: #EDEAE0; margin-top: 4px; }
+  .lead .pic img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+  .lead:hover .pic img { transform: scale(1.04); }
   /* 信息行里的按钮(记一笔)缩到跟文字一样高，不把这一行撑开 */
   .src .note-btn { width: 20px; height: 20px; }
   .lead:hover h3 a { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
@@ -458,11 +464,15 @@ function dayHead(iso, n) {
     + `<span class="mon">${MON[d.getMonth()]}</span><span class="wk">${wk}</span></div>`;
 }
 function leadHTML(i) {
-  return `<div class="lead t-${topTier(i)}" data-link="${esc(i.link)}" ${delay()}>
-    <div class="src">${who(i)}<span class="sep">·</span><span class="tracks">${tags(i)}</span>
-      <span class="acts">${labelBtns(i)}${noteBtn(i)}</span></div>
-    <h3><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></h3>
-    <p>${esc(summaryOf(i))}</p></div>`;
+  // 有配图(scripts/attach_images.py 补的)就跟「大公司」页一样放在右侧小方块里
+  const pic = i.image ? `<span class="pic"><img src="${esc(i.image)}" alt="" loading="lazy" referrerpolicy="no-referrer"></span>` : '';
+  return `<div class="lead t-${topTier(i)}${pic ? ' has-pic' : ''}" data-link="${esc(i.link)}" ${delay()}>
+    <div class="body">
+      <div class="src">${who(i)}<span class="sep">·</span><span class="tracks">${tags(i)}</span>
+        <span class="acts">${labelBtns(i)}${noteBtn(i)}</span></div>
+      <h3><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></h3>
+      <p>${esc(summaryOf(i))}</p>
+    </div>${pic}</div>`;
 }
 // high 和 medium 在页面上不再区分(2026-11-14 用户定)：都用同一种卡片，同一天里 high 排在前面。
 function listHTML(list) {
@@ -476,6 +486,10 @@ function renderDays() {
   document.getElementById('days').innerHTML = Object.keys(byDay).sort().reverse()
     .map(day => `<section class="day">${dayHead(day, byDay[day].length)}<div class="day-body">${listHTML(byDay[day])}</div></section>`)
     .join('') || '<p class="empty">最近七天没有内容。</p>';
+  // 配图挂了(对方换地址、网络不通)：去掉图，这一条退回单栏
+  document.querySelectorAll('#days .lead .pic img').forEach(img => img.addEventListener('error', () => {
+    const card = img.closest('.lead'); img.parentElement.remove(); card.classList.remove('has-pic');
+  }, { once: true }));
 }
 function renderFilter() {
   const el = document.getElementById('filterOn');
@@ -513,7 +527,8 @@ document.addEventListener('click', e => {
 
 async function loadRecent() {
   const data = await (await fetch('data/recent.json')).json();
-  RECENT = data.items;
+  // 大公司的条目只在「大公司」页看(2026-11-14 用户要分开展示)；公开站没有那个页面，照常显示
+  RECENT = IS_PUBLIC ? data.items : data.items.filter(i => !i.is_company);
   const high = RECENT.filter(i => i.tracks.some(t => t.tier === 'high')).length;
   document.getElementById('lede').textContent = `过去七天 ${RECENT.length} 篇，值得细读的 ${high} 篇。`;
   renderDays();

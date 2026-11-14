@@ -25,6 +25,7 @@
         "anchor": "low",
         "eval": "low"
       },
+      "is_company": false,
       "is_new": true
     },
     {
@@ -52,6 +53,7 @@
         "anchor": "low",
         "eval": "low"
       },
+      "is_company": false,
       "is_new": true
     },
     {
@@ -74,6 +76,7 @@
         "anchor": "low",
         "eval": "low"
       },
+      "is_company": true,
       "is_new": true
     },
     {
@@ -96,7 +99,9 @@
         "anchor": "low",
         "eval": "low"
       },
-      "is_new": true
+      "is_company": false,
+      "is_new": true,
+      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/e61b607b-f9a5-4a6d-846b-f8792dd0a549/take-back-internet2.jpg?t=1794543381"
     },
     {
       "person": "Anthropic",
@@ -123,7 +128,9 @@
         "anchor": "low",
         "eval": "high"
       },
-      "is_new": true
+      "is_company": true,
+      "is_new": true,
+      "image": "https://assets.claude.com/04a298be2efa241bd5a4a810b97c62bb8ef257dc.jpg"
     },
     {
       "person": "Google",
@@ -145,7 +152,9 @@
         "anchor": "low",
         "eval": "low"
       },
-      "is_new": true
+      "is_company": true,
+      "is_new": true,
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg"
     },
     {
       "person": "Andrew Huberman",
@@ -167,7 +176,9 @@
         "anchor": "medium",
         "eval": "low"
       },
-      "is_new": true
+      "is_company": false,
+      "is_new": true,
+      "image": "https://i.ytimg.com/vi/1rn_Clc-MM0/hqdefault.jpg"
     },
     {
       "person": "Latent Space",
@@ -189,7 +200,9 @@
         "anchor": "low",
         "eval": "low"
       },
-      "is_new": true
+      "is_company": false,
+      "is_new": true,
+      "image": "https://latent.space/og/card/post/ainews-d-day-decision-models-day/d2600d673d83d2c42c810a6c57c6e5942326283dfe350801c137d18f262c4f90.png"
     },
     {
       "person": "Latent Space",
@@ -211,7 +224,9 @@
         "anchor": "low",
         "eval": "low"
       },
-      "is_new": true
+      "is_company": false,
+      "is_new": true,
+      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/b4181d5a-0460-4828-b350-07feca728023/jevalution-feature.jpg?t=1794458692"
     },
     {
       "person": "Andrew Huberman",
@@ -233,7 +248,9 @@
         "anchor": "medium",
         "eval": "low"
       },
-      "is_new": true
+      "is_company": false,
+      "is_new": true,
+      "image": "https://i.ytimg.com/vi/9dWQNg68Ncw/hqdefault.jpg"
     },
     {
       "person": "Greg Isenberg",
@@ -255,7 +272,9 @@
         "anchor": "low",
         "eval": "low"
       },
-      "is_new": true
+      "is_company": false,
+      "is_new": true,
+      "image": "https://i.ytimg.com/vi/1cWZ7Ekff6E/hqdefault.jpg"
     },
     {
       "person": "Latent Space",
@@ -277,7 +296,9 @@
         "anchor": "low",
         "eval": "low"
       },
-      "is_new": true
+      "is_company": false,
+      "is_new": true,
+      "image": "https://latent.space/og/card/post/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/0a6ebbfe98ad97a5127fc1c24df129ccd58884d32c867036ad2d48f36fe03fee.png"
     },
     {
       "person": "Latent Space",
@@ -304,7 +325,9 @@
         "anchor": "low",
         "eval": "medium"
       },
-      "is_new": true
+      "is_company": false,
+      "is_new": true,
+      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/27ce2150-3717-4122-ac3a-37dd0e8ce18f/openai-aiecode-feature.png?t=1794370546"
     },
     {
       "person": "Latent Space",
@@ -331,7 +354,9 @@
         "anchor": "high",
         "eval": "low"
       },
-      "is_new": false
+      "is_company": false,
+      "is_new": false,
+      "image": "https://i.ytimg.com/vi/bdIoODXsu8k/maxresdefault.jpg"
     },
     {
       "person": "Latent Space",
@@ -358,7 +383,9 @@
         "anchor": "low",
         "eval": "medium"
       },
-      "is_new": false
+      "is_company": false,
+      "is_new": false,
+      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/f3b4fd9f-a330-4090-a922-a912d25dcd7c/naiveai-feature2.png?t=1793721927"
     },
     {
       "person": "Arvind Narayanan & Sayash Kapoor",
@@ -390,7 +417,9 @@
         "anchor": "medium",
         "eval": "medium"
       },
-      "is_new": false
+      "is_company": false,
+      "is_new": false,
+      "image": "https://substackcdn.com/image/fetch/$s_!5-fS!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2095f300-0a39-4e16-a60f-6c8a94728bf9_1666x932.jpeg"
     },
     {
       "person": "Greg Isenberg",
@@ -417,7 +446,9 @@
         "anchor": "medium",
         "eval": "low"
       },
-      "is_new": false
+      "is_company": false,
+      "is_new": false,
+      "image": "https://i.ytimg.com/vi/G3i2k6DdI0o/hqdefault.jpg"
     },
     {
       "person": "Google",
@@ -449,7 +480,9 @@
         "anchor": "medium",
         "eval": "medium"
       },
-      "is_new": false
+      "is_company": true,
+      "is_new": false,
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_carbon_key_art_16-9_lockup.width-1300.jpg"
     },
     {
       "person": "Google",
@@ -476,6 +509,7 @@
         "anchor": "low",
         "eval": "high"
       },
+      "is_company": true,
       "is_new": false
     },
     {
@@ -498,6 +532,7 @@
         "anchor": "low",
         "eval": "low"
       },
+      "is_company": true,
       "is_new": false
     },
     {
@@ -520,7 +555,9 @@
         "anchor": "low",
         "eval": "low"
       },
-      "is_new": false
+      "is_company": false,
+      "is_new": false,
+      "image": "https://static.simonwillison.net/static/2026/muse-ember.webp"
     },
     {
       "person": "Latent Space",
@@ -542,7 +579,9 @@
         "anchor": "low",
         "eval": "low"
       },
-      "is_new": false
+      "is_company": false,
+      "is_new": false,
+      "image": "https://latent.space/og/card/post/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/79cc3bf60b8254ca3df43668071877f25f7ce42399c0808daf10ea0aa906733b.png"
     },
     {
       "person": "Simon Willison",
@@ -564,6 +603,7 @@
         "anchor": "medium",
         "eval": "low"
       },
+      "is_company": false,
       "is_new": false
     },
     {
@@ -586,7 +626,9 @@
         "anchor": "high",
         "eval": "medium"
       },
-      "is_new": false
+      "is_company": false,
+      "is_new": false,
+      "image": "https://static.simonwillison.net/static/2026/beep-locator-card.jpg"
     },
     {
       "person": "Google",
@@ -613,6 +655,7 @@
         "anchor": "low",
         "eval": "medium"
       },
+      "is_company": true,
       "is_new": false
     },
     {
@@ -645,7 +688,9 @@
         "anchor": "high",
         "eval": "high"
       },
-      "is_new": false
+      "is_company": false,
+      "is_new": false,
+      "image": "https://substackcdn.com/image/fetch/$s_!-MYM!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4498fb7e-ff69-4b09-903a-f22ff7147e4b_2912x1632.png"
     },
     {
       "person": "Greg Isenberg",
@@ -672,7 +717,9 @@
         "anchor": "medium",
         "eval": "low"
       },
-      "is_new": false
+      "is_company": false,
+      "is_new": false,
+      "image": "https://i.ytimg.com/vi/uJuxenfe-NU/hqdefault.jpg"
     },
     {
       "person": "Latent Space",
@@ -704,7 +751,9 @@
         "anchor": "medium",
         "eval": "high"
       },
-      "is_new": false
+      "is_company": false,
+      "is_new": false,
+      "image": "https://i.ytimg.com/vi/v5IJwVnTxzg/maxresdefault.jpg"
     },
     {
       "person": "Andrew Huberman",
@@ -726,7 +775,9 @@
         "anchor": "medium",
         "eval": "low"
       },
-      "is_new": false
+      "is_company": false,
+      "is_new": false,
+      "image": "https://i.ytimg.com/vi/wbJ_Q1xsDHg/hqdefault.jpg"
     },
     {
       "person": "OpenAI",
@@ -753,6 +804,7 @@
         "anchor": "low",
         "eval": "medium"
       },
+      "is_company": true,
       "is_new": false
     },
     {
@@ -780,7 +832,9 @@
         "anchor": "high",
         "eval": "low"
       },
-      "is_new": false
+      "is_company": false,
+      "is_new": false,
+      "image": "https://static.simonwillison.net/static/2026/details-summary-card.webp"
     },
     {
       "person": "Anthropic",
@@ -807,7 +861,9 @@
         "anchor": "medium",
         "eval": "low"
       },
-      "is_new": false
+      "is_company": true,
+      "is_new": false,
+      "image": "https://assets.claude.com/da1561d7096742c3620943441254fa9d4aaa5590.jpg"
     },
     {
       "person": "Latent Space",
@@ -839,7 +895,9 @@
         "anchor": "high",
         "eval": "medium"
       },
-      "is_new": false
+      "is_company": false,
+      "is_new": false,
+      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/515ad474-e013-48a0-b40f-739bca031d85/A.jpg?t=1794172002"
     },
     {
       "person": "Latent Space",
@@ -866,7 +924,9 @@
         "anchor": "medium",
         "eval": "low"
       },
-      "is_new": false
+      "is_company": false,
+      "is_new": false,
+      "image": "https://i.ytimg.com/vi/dpY7YzZo4kE/maxresdefault.jpg"
     }
   ]
 }
