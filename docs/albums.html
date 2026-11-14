@@ -12,8 +12,8 @@
      常读的人 —— 反复回去读的几个人，每人一张卡片。
      版式参考 tetragrammaton.com/playlists：单栏、方形封面、衬线标题、卡片之间一条细线、大量留白。
      数据：data/albums.json(scripts/export_albums.py)。
-     封面：公开网络上能代表这个人的图(本人网站头图/头像)，统一黑白，悬停恢复原色；
-           图挂了退回下面JS画的线稿。
+     封面：公开网络上能代表这个人的图(本人网站头图/标志/插画)。不用黑白人像照(不吉利)，
+           黑白风景、插画可以。图挂了退回下面JS画的线稿。
      更新提示：有新文章时，封面右上角垂下一条红色书签丝带，日期前多一个红点。"看过"记在本浏览器。
      按钮直接打开最新一篇原文(Thorsten的信去卷轴页)。
      只在全量站。export_public.py不导出这个页面。
@@ -44,9 +44,9 @@
 
   .cover-link { position: relative; display: block; aspect-ratio: 1 / 1; text-decoration: none; }
   .cover { position: absolute; inset: 0; overflow: hidden; background: #EFE9E0; }
-  .cover img { width: 100%; height: 100%; object-fit: cover; display: block;
-               filter: grayscale(1) contrast(1.06); transition: filter .5s ease, transform .8s ease; }
-  .cover-link:hover .cover img { filter: grayscale(0) contrast(1); transform: scale(1.015); }
+  .cover img, .cover svg { transition: transform .8s ease; }
+  .cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .cover-link:hover .cover img, .cover-link:hover .cover svg { transform: scale(1.02); }
   .cover svg { display: block; width: 100%; height: 100%; }
 
   /* 有新文章：封面右上角垂下一条书签丝带 */

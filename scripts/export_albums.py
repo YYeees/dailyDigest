@@ -9,8 +9,8 @@
 - Thorsten Ball不在digest.db里，他的曲目是docs/data/letters/index.json里的每周来信，
   点专辑直接进卷轴页(letter.html)。
 - 名单、介绍、封面都写在下面ALBUMS里，改人就改这里。封面image是公开网络上能代表这个人的图
-  (本人网站头图/头像)，直接引用原网址，不复制进仓库；页面统一处理成黑白。加载失败时退回
-  cover字段对应的内联SVG线稿。
+  (本人网站头图/标志/插画)，直接引用原网址，不复制进仓库。**不用黑白人像照**——不吉利
+  (2026-11-14用户提的)；黑白的风景、插画可以。图加载失败时退回cover字段对应的线稿。
 """
 
 import json
@@ -38,14 +38,15 @@ ALBUMS = [
     },
     {
         "person": "Thorsten Ball", "pub": "Joy & Curiosity", "cover": "rays", "verb": "Open Letter",
-        "image": "https://thorstenball.com/images/avatar_2026_final_quadratic.jpg",
+        "image": "https://substackcdn.com/image/fetch/$s_!-2HZ!,w_800,h_800,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff114450f-2313-48c6-a253-a1d476c21d93_1164x1164.png",
         "home": "https://registerspill.thorstenball.com", "href": "letter.html", "source": "letters",
         "bio": "软件工程师，在 Amp 做编程智能体，写过《Writing An Interpreter In Go》。"
                "每周日寄出一封 Joy & Curiosity，把一周里让他快乐、让他好奇的东西装进去。",
     },
     {
         "person": "Dan Koe", "pub": "future/proof", "cover": "spiral", "verb": "Read",
-        "image": "https://substackcdn.com/image/fetch/$s_!OZ7Z!,w_800,h_800,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc5ee5bed-1760-427e-9744-f5ad89baf5a9_886x886.png",
+        # 他的图都是黑白品牌调性。头像是人像白描，不用；用文章里"伏案写作的人"那张插画
+        "image": "https://substackcdn.com/image/fetch/$s_!I3gB!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe2febc53-bfd6-4022-b668-ca0b547c0b1e_2912x1632.png",
         "home": "https://thedankoe.com",
         "bio": "写「一人企业」和自我教育的作者。他的看法是：AI 能生成一切听起来不错的句子，"
                "最后剩下的护城河，是只有你能看见的那个视角。",
