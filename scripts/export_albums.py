@@ -62,7 +62,7 @@ ALBUMS = [
     {
         "person": "Maggie Appleton", "pub": "Digital Garden", "cover": "nodes", "verb": "Read",
         "home": "https://maggieappleton.com",
-        # 她About页上的照片(彩色围巾那张)，裁成正方形存在docs/img/(原图地址带构建哈希，会变)
+        # 她About页上的照片(条纹毛衣那张)，裁成正方形存在docs/img/(原图地址带构建哈希，会变)
         "image": "img/maggie-appleton.jpg",
         "bio": "设计师、人类学者，自称「平庸的开发者」。她的「数字花园」里种着视觉随笔、笔记和设计模式，"
                "一边画一边写。现在在 GitHub Next 研究 AI 怎样改变写软件这件事。",
