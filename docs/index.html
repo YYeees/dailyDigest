@@ -195,7 +195,8 @@
   .repo .name { font-family: var(--title); font-size: 18px; line-height: 1.4; color: var(--ink); -webkit-text-stroke: .2px currentColor; word-break: break-all; }
   .repo .name span { color: var(--faint); -webkit-text-stroke: 0; }
   .repo .name a:hover { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
-  .repo .txt { margin: 6px 0 8px; }
+  /* Trending 的中文简介默认完整显示，不再截成两行(2026-11-14 用户要的)；X 动态仍然两行、点开看全文 */
+  .repo .txt { margin: 6px 0 8px; display: block; -webkit-line-clamp: unset; overflow: visible; }
   .repo .meta { display: flex; gap: 14px; font-size: 12px; color: var(--faint); letter-spacing: .04em; }
   .repo .meta .up { color: var(--up); font-weight: 600; }
   @media (max-width: 760px) {
