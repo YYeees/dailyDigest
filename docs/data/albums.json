@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T10:53:11+00:00",
+ "updated_at": "2026-11-14T15:09:48+00:00",
  "albums": [
   {
    "person": "Thorsten Ball",
@@ -441,6 +441,90 @@
    "latest": "2026-09-11",
    "latest_title": "I've been really loving Grant's thoughtful digital tabletop work.  Some great concepts: * bidirectio…",
    "latest_link": "https://x.com/andy_matuschak/status/2098553239511945335"
+  },
+  {
+   "person": "Andrew Ng",
+   "pub": "The Batch · Letters",
+   "cover": "nodes",
+   "verb": "Read",
+   "home": "https://www.deeplearning.ai/the-batch/tag/letters/",
+   "image": "img/andrew-ng.jpg",
+   "bio": "吴恩达。Coursera 联合创始人，DeepLearning.AI 和 AI Fund 的创办人，曾带领 Google Brain、做过百度首席科学家。每周在 The Batch 写一封「Dear friends」，讲 AI 工程、产品和职业。",
+   "tracks": [
+    {
+     "title": "Build agent harnesses for any LLM using the open source OpenWorker Agent Harness SDK",
+     "link": "https://www.deeplearning.ai/the-batch/how-to-build-an-agent-harness-in-one-prompt",
+     "date": "2026-11-13",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "A LinkedIn Pulse Study Shows AI Job Creation, Growth, Careers",
+     "link": "https://www.deeplearning.ai/the-batch/ai-job-anxieties-meet-ai-job-opporunities",
+     "date": "2026-11-06",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "Introduction to a special Halloween 2026 edition of The Batch",
+     "link": "https://www.deeplearning.ai/the-batch/how-to-face-your-ai-fears-this-year",
+     "date": "2026-10-30",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "How to Manage An AI-Native Engineering Team",
+     "link": "https://www.deeplearning.ai/the-batch/the-four-ps",
+     "date": "2026-10-23",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "Judgement Tasks Is Where Humans Have the Edge: Don’t Overgeneralize from Progress in Math and Code — The Hardest AI Problems Still Require More Work",
+     "link": "https://www.deeplearning.ai/the-batch/formal-verification-meets-unverifiable-judgement",
+     "date": "2026-10-16",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "More Agents Demand More Compute",
+     "link": "https://www.deeplearning.ai/the-batch/scaling-up-for-future-ai-demands",
+     "date": "2026-10-09",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "We Should Be Encouraged By AI’s Cybersecurity Abilities: Why GLM-5.3’s High ExploitBench score is good news",
+     "link": "https://www.deeplearning.ai/the-batch/we-should-be-encouraged-by-ais-cybersecurity-abilities-why-glm-5-3s-high-exploitbench-score-is-good-news",
+     "date": "2026-10-02",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "Adjust Your Tactics to Fit Your Project's Maturity",
+     "link": "https://www.deeplearning.ai/the-batch/what-stage-is-your-project-takeaways-for-ai-engineering",
+     "date": "2026-09-25",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "Separating Out AI Facts, Fears, and Fiction",
+     "link": "https://www.deeplearning.ai/the-batch/whos-responsible-for-irresponsible-ai",
+     "date": "2026-09-18",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "AI Engineering Adds New Responsiiblities and Opportunities for Product Leadership",
+     "link": "https://www.deeplearning.ai/the-batch/the-ai-engineering-skills-map-in-detail-shaping-the-build",
+     "date": "2026-09-11",
+     "kind": "blog",
+     "note": ""
+    }
+   ],
+   "latest": "2026-11-13",
+   "latest_title": "Build agent harnesses for any LLM using the open source OpenWorker Agent Harness SDK",
+   "latest_link": "https://www.deeplearning.ai/the-batch/how-to-build-an-agent-harness-in-one-prompt"
   }
  ]
 }

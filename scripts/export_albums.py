@@ -76,6 +76,14 @@ ALBUMS = [
         "bio": "研究「思维工具」的独立研究者，和 Michael Nielsen 一起做过 Quantum Country。"
                "他公开的常青笔记本身就是一个不断生长、彼此链接的网站。",
     },
+    {
+        "person": "Andrew Ng", "pub": "The Batch · Letters", "cover": "nodes", "verb": "Read",
+        "home": "https://www.deeplearning.ai/the-batch/tag/letters/",
+        # 他个人网站 About 页的照片，裁成正方形存在 docs/img/(2026-11-14 加，用户要"两边都放")
+        "image": "img/andrew-ng.jpg",
+        "bio": "吴恩达。Coursera 联合创始人，DeepLearning.AI 和 AI Fund 的创办人，曾带领 Google Brain、"
+               "做过百度首席科学家。每周在 The Batch 写一封「Dear friends」，讲 AI 工程、产品和职业。",
+    },
 ]
 
 

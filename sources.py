@@ -86,6 +86,15 @@ SOURCES = [
      "listing_urls": ["https://www.anthropic.com/news", "https://www.anthropic.com/research"],
      "article_path_pattern": r"^/(news|research)/(?!team/)[A-Za-z0-9-]+$"},
 
+    # 2026-11-14 加吴恩达：跟的是 deeplearning.ai 周刊 The Batch 里他每周那封"Dear friends"来信
+    # (tag/letters 栏目)，不是整份周刊的新闻部分。没有RSS，走listing_scraper.py读列表页。
+    # 列表页上还有 /the-batch/tag/... 分类页和 about/search，路径规则里排除；文章页都有
+    # article:published_time 和 og:title。用户要"两边都放"：Recent 照常按优先级筛，「常读的人」也有他的卡片。
+    {"person": "Andrew Ng", "type": "blog", "name": "Andrew Ng (The Batch · Letters)",
+     "base_url": "https://www.deeplearning.ai",
+     "listing_urls": ["https://www.deeplearning.ai/the-batch/tag/letters/"],
+     "article_path_pattern": r"^/the-batch/(?!tag/|about$|search$)[a-z0-9-]+$"},
+
     {"person": "Google", "type": "blog", "name": "Google DeepMind (官方博客)",
      "url": "https://deepmind.google/blog/rss.xml"},
     # 2026-11-14 先删后又加回(同一天)：用户改主意，继续跟DeepMind。
