@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>大公司 · Daily Digest</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Raleway:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Sorts+Mill+Goudy&display=swap">
 <style>
   /* ============================================================
      大公司 —— Anthropic、OpenAI 这7天发了什么。
@@ -47,10 +47,12 @@
   .day { display: grid; grid-template-columns: 120px 1fr; gap: 36px; padding: 32px 0 6px; border-top: 1px solid var(--rule); }
   .list .day:last-child { border-bottom: 1px solid var(--hair); }
   .d { font-family: var(--serif); font-size: 15px; color: var(--soft); }
-  /* 大日期用 Raleway：无衬线，但数字默认是旧式数字(oldstyle figures)，3/4/5/7/9 往下伸出一截"尾巴"
-     (用户给的参考图就是这种"2025")。EB Garamond试过，Google Fonts版本在网页上退回了等高数字。 */
-  .d b { display: block; font-family: "Raleway", var(--sans); font-weight: 400; font-size: 52px; line-height: 1;
-         color: #333; margin-bottom: 12px; letter-spacing: .03em; }
+  /* 大日期：Iowan Old Style 的旧式数字(oldstyle figures)，3/4/5/7/9 往下伸出一截"尾巴"。
+     用户从8款对比里挑的。Iowan是苹果系统自带的，别的设备上用 Sorts Mill Goudy(Google Fonts，同类书籍衬线体)顶上。
+     试过没用：EB Garamond(Google Fonts版本退回等高数字)、Playfair Display、Raleway。 */
+  .d b { display: block; font-family: "Iowan Old Style", "Sorts Mill Goudy", var(--serif); font-weight: 400;
+         font-size: 58px; line-height: 1; color: var(--ink); margin-bottom: 12px;
+         font-variant-numeric: oldstyle-nums; font-feature-settings: "onum" 1; }
   .d .wk { display: block; margin-top: 6px; font-family: var(--sans); font-size: 12px; color: var(--faint); letter-spacing: .06em; }
 
   .item { display: grid; grid-template-columns: 1fr 150px; gap: 26px; padding-bottom: 28px; }
