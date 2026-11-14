@@ -65,8 +65,8 @@
   .tier { font-weight: 500; font-size: 12px; letter-spacing: .1em; white-space: nowrap; }
   .tier::before { content: "·"; margin: 0 6px; color: var(--faint); font-weight: 400; }
   .tier-high { color: var(--date); }
-  .tier-medium { color: var(--who); }
-  .tier-low { color: #C2BEB4; }
+  .tier-medium { color: var(--faint); }
+  .tier-low { color: var(--faint); }
   .tg-low { cursor: default; color: #C2BEB4; letter-spacing: .12em; }
   .tg-low:hover { border-bottom-color: transparent; color: #C2BEB4; }
   /* 标注按钮：三个小图标(♥ 喜欢 / – 一般 / ✕ 不感兴趣)，悬停那一条才浮现；标过的一直显示那一个 */
@@ -132,11 +132,12 @@
      操作按钮(标注、记一笔)靠右，悬停那一条才出现 */
   .src { font-size: 14.5px; letter-spacing: 0; color: var(--soft);
          display: flex; flex-wrap: wrap; gap: 4px; align-items: center; line-height: 1.5; margin-bottom: 4px; }
-  .src .who { color: var(--ink); font-weight: 600; }
+  /* 颜色跟「大公司」页卡片一致(2026-11-14)：来源中灰 #6E6C65、中等字重；轨道和 MEDIUM/LOW 浅灰 #9C9990；HIGH 仍是土橙 */
+  .src .who { color: var(--who); font-weight: 500; }
   .src .sep { margin: 0 6px; color: var(--faint); }
-  /* 轨道名(AI · Core · Eval)跟等级 LOW 同一个浅色(2026-11-14 用户要的)；悬停、选中时照常变深 */
+  /* 轨道名悬停、选中时照常变深 */
   .src .tracks { display: inline-flex; align-items: center; }
-  .src .tracks .tg { color: #C2BEB4; }
+  .src .tracks .tg { color: var(--faint); }
   .src .tracks .tg:hover { color: var(--ink); }
   .src .tracks .tg.on { color: var(--accent); }
   .src .acts { margin-left: auto; display: inline-flex; align-items: center; }
