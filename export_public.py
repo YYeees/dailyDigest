@@ -59,8 +59,8 @@ HTML_STRIPS = (
     # (配合下面"产物里不许再出现这几个页面名"的断言;导航改了这里要跟着改,不然跑批会当场炸)
     ("""    <nav>
       <a href="index.html" class="on">Recent</a>
-      <a href="albums.html">People</a>
       <a href="companies.html">Companies</a>
+      <a href="albums.html">People</a>
       <a href="digest.html">Archive</a>
     </nav>
 """, ""),
