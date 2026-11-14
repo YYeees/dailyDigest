@@ -3,8 +3,8 @@
 
 2026-11-14加。用户的原话是：平时很少点开这些公司的消息，但常在别处看到才发现"这个我错过了"；
 而每次打开公司官网，文章配图都让人很想点开。所以这一页是"补课"用的。2026-11-14第二版(用户反馈"按公司分、只放high、杂志式"太乱)：
-- 只放近WINDOW_DAYS(7)天，不分公司、不筛tier，按时间排；优先级(ai_tier/eval_tier取高者)
-  只决定卡片大小，前端做成大小错落的拼贴
+- 只放近WINDOW_DAYS(7)天，不分公司，按时间排。跟首页同一个规则：判到medium/high的才展示，
+  low的不放(medium/high管线都写了中文摘要，所以每条都有中文介绍)
 - 有配图(og:image)就用，没有(OpenAI)就是纯文字卡，不硬造封面
 
 配图抓取：
@@ -86,6 +86,7 @@ def main():
             FROM items
             WHERE person IN ({",".join("?" * len(COMPANIES))})
               AND published >= ?
+              AND (ai_tier IN ('medium', 'high') OR eval_tier IN ('medium', 'high'))
               AND (excluded_reason IS NULL OR excluded_reason = '')
             ORDER BY published DESC LIMIT ?""",
         (*by_person, since, MAX_ITEMS),
@@ -108,6 +109,9 @@ def main():
             "company": c["name"], "key": c["key"], "title": title, "link": link,
             "date": (published or "")[:10], "summary": summary or "", "image": image,
             "priority": max((ai_tier, eval_tier), key=lambda t: RANK.get(t or "", 0)) or "low",
+            # 标签跟首页一致：判到medium/high的轨道名
+            "tags": [label for label, tier in (("AI", ai_tier), ("Eval", eval_tier))
+                     if tier in ("medium", "high")],
         })
 
     OUT.write_text(json.dumps({

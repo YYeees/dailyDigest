@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T10:25:45+00:00",
+ "updated_at": "2026-11-14T10:32:51+00:00",
  "window_days": 7,
  "companies": [
   {
@@ -20,7 +20,10 @@
    "date": "2026-11-13",
    "summary": "OpenAI推出ChatGPT Wallet，让ChatGPT里的agent和Codex可以在你批准后替你付款，并沿用银行卡原有的保护。想知道agent怎么安全地花钱的人可以留意。",
    "image": null,
-   "priority": "medium"
+   "priority": "medium",
+   "tags": [
+    "AI"
+   ]
   },
   {
    "company": "Anthropic",
@@ -30,7 +33,11 @@
    "date": "2026-11-13",
    "summary": "Anthropic的工程团队讲怎么做出可靠的安全评测，分成设计、运行、报告三步。他们认为说一个模型更安全，前提是评测本身靠得住。做评测或测试的人可以直接借鉴它的流程。",
    "image": "https://assets.claude.com/04a298be2efa241bd5a4a810b97c62bb8ef257dc.jpg",
-   "priority": "high"
+   "priority": "high",
+   "tags": [
+    "AI",
+    "Eval"
+   ]
   },
   {
    "company": "OpenAI",
@@ -40,27 +47,10 @@
    "date": "2026-11-10",
    "summary": "OpenAI 宣布面向商家的 ChatGPT 功能，简介提到管理企业信息、了解企业如何被展示，以及把用户兴趣转成后续行动。原文返回访问拒绝，目前只能确认这些简介信息，具体使用方式仍需点开原文查看。",
    "image": null,
-   "priority": "medium"
-  },
-  {
-   "company": "Anthropic",
-   "key": "anthropic",
-   "title": "Anthropic launches roadshow for proposed initial public offering",
-   "link": "https://www.anthropic.com/news/roadshow-launch",
-   "date": "2026-11-10",
-   "summary": "",
-   "image": "https://assets.claude.com/6d4a0d28992ade92d6fa63646fd9c9d318245c6c.jpg",
-   "priority": "low"
-  },
-  {
-   "company": "OpenAI",
-   "key": "openai",
-   "title": "ChatGPT Enterprise now available in AWS Marketplace",
-   "link": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
-   "date": "2026-11-09",
-   "summary": "",
-   "image": null,
-   "priority": "low"
+   "priority": "medium",
+   "tags": [
+    "AI"
+   ]
   },
   {
    "company": "OpenAI",
@@ -70,7 +60,11 @@
    "date": "2026-11-09",
    "summary": "OpenAI介绍了用于追踪研究基础设施中模型任务的Control Room，称它可以在出现安全问题时迅速停止相关运行。它关注的是模型开始执行任务以后，怎样保持可观察、可控制。原文此次访问被拒绝，目前只能依据官方简介了解用途，具体实现与适用边界仍需点开原文确认。",
    "image": null,
-   "priority": "medium"
+   "priority": "medium",
+   "tags": [
+    "AI",
+    "Eval"
+   ]
   },
   {
    "company": "Anthropic",
@@ -80,7 +74,10 @@
    "date": "2026-11-09",
    "summary": "Anthropic展示了Claude从电路设计、外壳建模到编写固件的完整硬件开发过程，工程师按设计制造的原型可以正常工作。文章讲清楚模型怎样查资料、推翻错误布局并处理制造约束，也说明原型尚未经过完整的安全与可靠性验证。值得看的是人工智能开始把多个工程步骤串起来，以及离可交付产品还差哪些环节。",
    "image": "https://assets.claude.com/da1561d7096742c3620943441254fa9d4aaa5590.jpg",
-   "priority": "high"
+   "priority": "high",
+   "tags": [
+    "AI"
+   ]
   }
  ]
 }

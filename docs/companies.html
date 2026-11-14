@@ -51,6 +51,8 @@
   .meta .co.anthropic { color: var(--anthropic); }
   .meta .co.openai { color: var(--openai); }
   .meta .unread { width: 7px; height: 7px; border-radius: 50%; background: var(--red); flex: none; }
+  .tags { margin-top: 10px; font-size: 13px; color: var(--soft); }
+  .tags .tg + .tg::before { content: "·"; margin: 0 6px; color: var(--faint); }
   .row h2 { font-family: var(--serif); font-weight: 400; font-size: 22px; line-height: 1.35; margin: 8px 0 0; }
   .row.high h2 { font-size: 25px; }
   .row:hover h2 { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
@@ -124,6 +126,7 @@ function render() {
     return `<a class="${cls}" href="${esc(it.link)}" target="_blank" rel="noopener" data-link="${esc(it.link)}">
       <div>
         <div class="meta">${read ? '' : '<span class="unread" title="还没看过"></span>'}<span class="co ${esc(it.key)}">${esc(it.company)}</span><span>· ${fmt(it.date)}</span></div>
+        ${(it.tags || []).length ? `<div class="tags">${it.tags.map(t => `<span class="tg">${esc(t)}</span>`).join('')}</div>` : ''}
         <h2>${esc(it.title)}</h2>
         ${it.summary ? `<p class="sum">${esc(it.summary)}</p>` : ''}
       </div>
