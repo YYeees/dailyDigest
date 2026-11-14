@@ -168,7 +168,10 @@ function render() {
   const WK = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
   document.getElementById('list').innerHTML = Object.keys(byDay).sort().reverse().map(day => {
     const [y, m, dd] = day.split('-').map(Number);
-    const wk = WK[new Date(y, m - 1, dd).getDay()];
+    const dt = new Date(y, m - 1, dd), t0 = new Date(); t0.setHours(0, 0, 0, 0);
+    const diff = Math.round((t0 - dt) / 864e5);
+    // 跟 Recent 页同一个左栏：今天/昨天也标出来
+    const wk = (diff === 0 ? '今天 · ' : diff === 1 ? '昨天 · ' : '') + WK[dt.getDay()];
     return `<section class="day">
       <div class="d"><b>${dd}</b>${MONTHS[m - 1]}<span class="wk">${wk}</span></div>
       <div>${byDay[day].map(it => {

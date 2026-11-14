@@ -5,14 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>7日内关注 · Daily Digest</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Sorts+Mill+Goudy&display=swap">
 <style>
   /* 2026-10-24改版：白底、苹方、按天分组；high是带摘要的头条，medium收成一行简讯点开看摘要；
      右侧深色X面板 + 鼠尾草绿仓库面板。(刊头下面那卷《定风波》竹简 2026-11-14 用户要求去掉了) */
   :root {
     --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", sans-serif;
-    --bg: #FFFFFF; --ink: #1A1917; --soft: #3F3C37; --faint: #7A756B;
-    --rule: #E6E2D9; --accent: #A8461F; --hover: #F6F4EF;
+    /* 颜色层级跟「大公司」页统一(2026-11-14)：标题最深；摘要、人名、标签依次变淡；
+       大日期用土橙(--date)；"新"和选中的筛选用砖红(--accent) */
+    --bg: #FAF9F5; --ink: #16150F; --soft: #4E4C46; --who: #6E6C65; --faint: #9C9990;
+    --rule: #E6E2D8; --rule-strong: #C9C5BB; --accent: #B5442D; --hover: #F1EEE6;
+    --date: #CC785C;
+    --title: "Iowan Old Style", "Sorts Mill Goudy", "PingFang SC", Georgia, serif;
     --up: #3F7D4E; --dark: #1B1A19; --dark-ink: #F3EFE7; --dark-soft: #BDB7AC;
     --sage: #E3E8DE; --sage-rule: #CFD7C8;
   }
@@ -69,51 +73,63 @@
   [data-who]:hover { color: var(--ink); border-bottom-color: var(--faint); }
   [data-who].on { color: var(--accent); }
 
-  /* ---- 按天分组；日期吸顶，滚动时当天的日期停在顶上，滚到下一天被顶掉 ---- */
-  .day { margin-top: 56px; }
-  #days > .day:first-child { margin-top: 56px; }
-  .day-head {
-    display: flex; align-items: flex-end; gap: 14px;
-    padding: 14px 0 12px; border-bottom: 1px solid var(--ink);
-    position: sticky; top: 0; z-index: 3;
-    background: rgba(255, 255, 255, .72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  /* ---- 按天分组：跟「大公司」页同一个版式——左栏大日期(Iowan带尾巴的数字，土橙)，右栏当天内容。
+     左栏吸顶：滚动时当天的日期停在左边，滚到下一天被换掉 ---- */
+  .day { display: grid; grid-template-columns: 104px minmax(0, 1fr); column-gap: 32px;
+         padding-top: 28px; border-top: 1px solid var(--rule-strong); margin-top: 0; }
+  #days > .day:first-child { margin-top: 0; }
+  .day-head { position: sticky; top: 24px; align-self: start; padding-top: 6px;
+              font-family: var(--title); font-size: 15px; line-height: 1.5; color: var(--faint); }
+  .day-head .num { display: block; font-family: var(--title); font-size: 58px; line-height: 1; color: var(--date);
+                   margin-bottom: 12px; font-variant-numeric: oldstyle-nums; font-feature-settings: "onum" 1; }
+  .day-head .mon { display: block; }
+  .day-head .wk, .day-head .n { display: block; font-family: var(--sans); font-size: 12px; color: var(--faint); letter-spacing: .04em; margin-top: 6px; }
+  .day-head .n { margin-top: 2px; }
+  .day-body { min-width: 0; }
+  /* 窄屏：左栏大日期变成每天上方的一行 */
+  @media (max-width: 760px) {
+    .day { grid-template-columns: 1fr; padding-top: 22px; }
+    .day-head { position: static; display: flex; align-items: baseline; gap: 8px; padding: 0 0 14px; }
+    .day-head .num { display: inline; font-size: 34px; margin: 0 2px 0 0; }
+    .day-head .wk, .day-head .n { display: inline; margin: 0 0 0 6px; }
+    .lead h3 { font-size: 20px; }
+    .brief .t { font-size: 16.5px; }
   }
-  .day-head .num { font-size: 3rem; line-height: 1; font-weight: 300; letter-spacing: -.02em; color: var(--accent); }
-  .day-head .lbl { font-size: 14px; line-height: 1.5; font-weight: 600; padding-bottom: 4px; }
-  .day-head .lbl span { display: block; font-weight: 400; color: var(--faint); font-size: 12.5px; }
-  .day-head .n { margin-left: auto; font-size: 13px; color: var(--faint); padding-bottom: 4px; }
 
   /* 头条(high)：来源、标题、摘要；点标题或空白处都打开原文 */
-  .lead { display: block; padding: 24px 0; border-bottom: 1px solid var(--rule); cursor: pointer; }
-  .src { font-size: 13px; color: var(--faint); display: flex; gap: 8px; align-items: center; }
-  .src .who { color: var(--soft); font-weight: 600; }
-  .src .new { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .lead { display: block; padding: 6px 0 26px; border-bottom: 1px solid var(--rule); cursor: pointer; }
+  .lead + .lead { padding-top: 24px; }
+  .src { font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); display: flex; gap: 8px; align-items: center; }
+  .src .who { color: var(--who); font-weight: 500; }
+  .src .new { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
   .src .tracks { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; }
-  .lead h3 { font-size: 1.32rem; line-height: 1.55; font-weight: 600; margin: 10px 0 12px; letter-spacing: 0; }
+  .lead h3 { font-family: var(--title); font-size: 24px; line-height: 1.3; font-weight: 400; margin: 8px 0 10px; letter-spacing: 0;
+             color: var(--ink); -webkit-text-stroke: .3px currentColor; font-feature-settings: "onum" 1; }
   .lead p, .brief .more p, .mini .txt { font-family: "CJK Quotes", var(--sans); }
-  .lead p { margin: 0; color: var(--soft); font-size: 1rem; line-height: 1.75; text-align: justify; }
-  .lead:hover h3 { color: var(--accent); }
+  .lead p { margin: 0; color: var(--soft); font-size: 15px; line-height: 1.85; text-align: justify; }
+  .lead:hover h3 a { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
 
   /* 简讯(medium)：一行；点空白处展开摘要，点标题打开原文 */
-  .briefs { padding: 6px 0 4px; }
+  .briefs { padding: 6px 0 24px; }
   .brief { display: block; padding: 15px 0; border-bottom: 1px dashed var(--rule); cursor: pointer; border-radius: 10px; }
   .brief:last-child { border-bottom: 0; }
   .brief .row { display: flex; gap: 14px; align-items: baseline; }
-  .brief .t { flex: 1; font-size: 1rem; font-weight: 500; line-height: 1.6; letter-spacing: 0; }
-  .brief .t a:hover { color: var(--accent); }
-  .brief .who { font-size: 13px; color: var(--faint); white-space: nowrap; }
+  .brief .t { flex: 1; font-family: var(--title); font-size: 18px; font-weight: 400; line-height: 1.45; letter-spacing: 0;
+              color: var(--ink); -webkit-text-stroke: .2px currentColor; font-feature-settings: "onum" 1; }
+  .brief .t a:hover { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
+  .brief .who { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--who); white-space: nowrap; }
   /* grid-template-rows 0fr→1fr 做高度动画，不用猜摘要有多高 */
   .brief .more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .25s ease; }
   .brief.open .more { grid-template-rows: 1fr; }
   .brief .more > div { overflow: hidden; }
-  .brief .more p { margin: 0; color: var(--soft); font-size: 1rem; line-height: 1.75; text-align: justify; }
-  .brief .tgs { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 13px; color: var(--faint); }
+  .brief .more p { margin: 0; color: var(--soft); font-size: 15px; line-height: 1.85; text-align: justify; }
+  .brief .tgs { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); }
   /* 展开时这一条变成临时头条：标题跟头条一样粗，淡底色跟上下分开。左右用负margin把底色往外扩，
      文字仍跟其他行对齐 */
   .brief { transition: background .2s, padding .2s, margin .2s; }
   .brief.open { background: var(--hover); border-bottom-color: transparent; margin: 6px -18px; padding: 20px 18px 22px; }
   @media (max-width: 760px) { .brief.open { margin: 6px -12px; padding: 18px 12px 20px; } }
-  .brief.open .t { font-weight: 600; }
+  .brief.open .t { -webkit-text-stroke: .35px currentColor; }
   .brief.open .more p { padding-top: 12px; }
 
   /* 「记一笔」——一键在写作收件箱(独立Obsidian vault)新建一条临时笔记。
@@ -410,9 +426,11 @@ function dayHead(iso, n) {
   const t = new Date(); t.setHours(0, 0, 0, 0);
   const diff = Math.round((t - d) / 864e5);
   const rel = diff === 0 ? '今天' : diff === 1 ? '昨天' : `周${WEEK[d.getDay()]}`;
-  const sub = diff <= 1 ? `${d.getMonth() + 1}月 · 周${WEEK[d.getDay()]}` : `${d.getMonth() + 1}月`;
+  // 跟「大公司」页同一个左栏：大日期 / 英文月份 / 昨天·周五 / 几篇
+  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const wk = diff <= 1 ? `${rel} · 周${WEEK[d.getDay()]}` : `周${WEEK[d.getDay()]}`;
   return `<div class="day-head" ${delay()}><span class="num">${d.getDate()}</span>`
-    + `<span class="lbl">${rel}<span>${sub}</span></span><span class="n">${n} 篇</span></div>`;
+    + `<span class="mon">${MON[d.getMonth()]}</span><span class="wk">${wk}</span><span class="n">${n} 篇</span></div>`;
 }
 function leadHTML(i) {
   return `<div class="lead" data-link="${esc(i.link)}" ${delay()}>
@@ -442,7 +460,7 @@ function renderDays() {
   const byDay = {};
   items.forEach(i => (byDay[i.date] ||= []).push(i));
   document.getElementById('days').innerHTML = Object.keys(byDay).sort().reverse()
-    .map(day => `<section class="day">${dayHead(day, byDay[day].length)}${listHTML(byDay[day])}</section>`)
+    .map(day => `<section class="day">${dayHead(day, byDay[day].length)}<div class="day-body">${listHTML(byDay[day])}</div></section>`)
     .join('') || '<p class="empty">最近七天没有内容。</p>';
 }
 function renderFilter() {
