@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>7日内关注 · Daily Digest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap">
 <style>
   /* 2026-10-24改版：白底、苹方、按天分组；high是带摘要的头条，medium收成一行简讯点开看摘要；
      右侧深色X面板 + 鼠尾草绿仓库面板。(刊头下面那卷《定风波》竹简 2026-11-14 用户要求去掉了) */
@@ -29,15 +31,25 @@
   }
   a { color: inherit; text-decoration: none; }
 
-  .page { max-width: 720px; margin: 0 auto; padding: 72px 16px 120px; }
+  /* ---- 顶部横栏：跟「常读的人」「大公司」两页同一份样式(三页切换时 logo 和导航不跳) ---- */
+  /* 首页对所有元素用了border-box，宽度要把左右内边距算进去(1160+48)，才跟另外两页对齐 */
+  .top { max-width: 1208px; margin: 0 auto; padding: 34px 24px 0; line-height: 1.6; letter-spacing: 0; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .top .mark { font-family: "Libre Baskerville", "Baskerville", Georgia, serif; font-size: 20px; letter-spacing: 0; }
+  .top nav { display: flex; gap: 30px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
+             font-family: "Helvetica Neue", Helvetica, -apple-system, "PingFang SC", sans-serif; }
+  .top nav a:hover, .top nav a.on { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+  @media (max-width: 760px) {
+    .top { flex-wrap: wrap; row-gap: 14px; padding-left: 16px; padding-right: 16px; }   /* 跟下面正文的16px对齐 */
+    .top nav { width: 100%; justify-content: space-between; gap: 0; font-size: 11.5px; }
+  }
 
-  /* ---- 刊头 ---- */
-  .mast { margin-bottom: 40px; }
-  .mast .date { font-size: 13px; line-height: 1.6; color: var(--faint); letter-spacing: .08em; }
-  .mast h1 { font-size: 2.4rem; font-weight: 600; margin: 6px 0 10px; letter-spacing: .02em; }
-  .mast .lede { color: var(--soft); font-size: 1.02rem; margin: 0; }
-  .mast nav { margin-top: 18px; font-size: 13px; color: var(--faint); }
-  .mast nav a { color: var(--soft); border-bottom: 1px solid var(--rule); }
+  .page { max-width: 720px; margin: 0 auto; padding: 96px 16px 120px; }
+
+  /* ---- 页头：跟另外两页一样，小号大写页名 + 一行灰色说明(2026-11-14 统一；原来是大标题"7日内关注") ---- */
+  .mast { margin-bottom: 36px; }
+  .mast h1 { font-family: "Libre Baskerville", "Baskerville", Georgia, serif; font-weight: 400; font-size: 14px;
+             letter-spacing: .24em; text-transform: uppercase; margin: 0; color: var(--soft); line-height: 1.6; }
+  .mast .lede { margin: 8px 0 0; font-size: 13.5px; line-height: 1.6; color: var(--faint); letter-spacing: .02em; }
 
   /* ---- 点文章上的分类标签筛选；筛选中在顶上露一行提示，点"看全部"或再点一次标签退出 ---- */
   .tg { cursor: pointer; padding: 2px 0; border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
@@ -163,7 +175,7 @@
   /* 宽屏：正文栏656(原720，收窄四个字)，X和GitHub挪到右侧做吸顶边栏，用宽度但不拉长正文行 */
   @media (min-width: 1220px) {
     .page {
-      max-width: 1160px; display: grid; column-gap: 72px;
+      max-width: 1160px; padding-left: 24px; padding-right: 24px; display: grid; column-gap: 72px;
       grid-template-columns: minmax(0, 656px) 360px; justify-content: center;
     }
     .mast { grid-column: 1 / -1; }
@@ -210,12 +222,19 @@
 </style>
 </head>
 <body>
+<header class="top">
+    <a class="mark" href="index.html">Daily Digest</a>
+    <nav>
+      <a href="index.html" class="on">Recent</a>
+      <a href="albums.html">People</a>
+      <a href="companies.html">Companies</a>
+      <a href="digest.html">Archive</a>
+    </nav>
+</header>
 <div class="page">
   <header class="mast">
-    <div class="date" id="today"></div>
-    <h1>7日内关注</h1>
-    <p class="lede" id="lede"></p>
-    <nav><a href="digest.html">月度归档</a> · <a href="albums.html">常读的人</a> · <a href="companies.html">大公司</a></nav>
+    <h1>Recent</h1>
+    <p class="lede"><span id="today"></span> · <span id="lede"></span></p>
   </header>
   <main id="feed">
     <div class="filter-on" id="filterOn" hidden></div>

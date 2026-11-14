@@ -55,8 +55,15 @@ HTML_PAGES = ("index.html",)
 # 那句"产物里不许再出现锚点"的断言——哪天前端改了措辞导致这里匹配不上,跑批会当场炸,
 # 而不是悄悄把字眼发出去。
 HTML_STRIPS = (
-    # 月度归档、常读的人、大公司都不公开,入口一起摘掉(配合下面"产物里不许再出现这几个页面名"的断言)
-    ('    <nav><a href="digest.html">月度归档</a> · <a href="albums.html">常读的人</a> · <a href="companies.html">大公司</a></nav>\n', ""),
+    # 月度归档、常读的人、大公司都不公开:顶部横栏里整条导航摘掉,只留左边的"Daily Digest"
+    # (配合下面"产物里不许再出现这几个页面名"的断言;导航改了这里要跟着改,不然跑批会当场炸)
+    ("""    <nav>
+      <a href="index.html" class="on">Recent</a>
+      <a href="albums.html">People</a>
+      <a href="companies.html">Companies</a>
+      <a href="digest.html">Archive</a>
+    </nav>
+""", ""),
     ('        <option value="anchor">锚点</option>\n', ""),
     ('        <option value="eval">Eval</option>\n', ""),
     # eval track的样式也摘掉:CSS本身泄露不了内容,但留着等于告诉读源码的人"还有第三条track"
