@@ -9,7 +9,8 @@
 - Thorsten Ball不在digest.db里，他的曲目是docs/data/letters/index.json里的每周来信，
   点专辑直接进卷轴页(letter.html)。
 - 名单、介绍、封面都写在下面ALBUMS里，改人就改这里。封面image是公开网络上能代表这个人的图
-  (本人网站头图/头像/插画)，直接引用原网址，不复制进仓库，原色显示(不做黑白处理——
+  (本人网站头图/头像/插画)，默认直接引用原网址；用户自己挑来的图(链接会过期、或原图太大)
+  裁成正方形存进docs/img/，image写相对路径。原色显示(不做黑白处理——
   2026-11-14用户提过黑白处理后的人像照不吉利；本身是黑白的图由用户挑过，可以)。
   图加载失败时退回cover字段对应的线稿。
 """
@@ -31,7 +32,7 @@ TRACKS_PER_ALBUM = 10
 ALBUMS = [
     {
         "person": "Craig Mod", "pub": "Ridgeline & Roden", "cover": "ridge", "verb": "Read",
-        "image": "https://craigmod.com/images/about/craigmod-headshot-2025-01.jpg",
+        "image": "img/craig-mod.jpg",   # 用户挑的照片，裁成900px正方形存在docs/img/
         "home": "https://craigmod.com",
         "bio": "住在日本的作家、摄影师。常年徒步穿越日本的乡间小路，把一路遇到的人和店写进 "
                "Ridgeline 和 Roden 两份 newsletter，出过《Kissa by Kissa》《Things Become Other Things》。"
