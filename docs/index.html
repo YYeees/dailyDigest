@@ -125,7 +125,6 @@
   .lead + .lead { padding-top: 24px; }
   .src { font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); display: flex; gap: 8px; align-items: center; }
   .src .who { color: var(--who); font-weight: 500; }
-  .src .new { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
   .src .tracks { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; }
   .lead h3 { font-family: var(--title); font-size: 24px; line-height: 1.3; font-weight: 400; margin: 8px 0 10px; letter-spacing: 0;
              color: var(--ink); -webkit-text-stroke: .3px currentColor; font-feature-settings: "onum" 1; }
@@ -258,6 +257,7 @@ const TRACK_LABEL = { ai: 'AI', anchor: 'Anchor', eval: 'Eval' };
 const WEEK = '日一二三四五六';
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 
+// (2026-11-14 用户要求去掉来源前的"刚更新"红点；is_new 字段仍由导出脚本写进JSON，前端暂不使用)
 // "刚更新"高亮完全由导出脚本算好写进JSON的`is_new`字段决定，前端不做任何时间运算——
 // 判定规则和踩过的坑见项目根目录new_flags.py的文件头注释。
 
@@ -454,7 +454,7 @@ function dayHead(iso, n) {
 }
 function leadHTML(i) {
   return `<div class="lead" data-link="${esc(i.link)}" ${delay()}>
-    <div class="src">${i.is_new ? '<span class="new" title="刚更新"></span>' : ''}${who(i)}
+    <div class="src">${who(i)}
       <span class="tracks">${noteBtn(i)}${labelBtns(i)}${tags(i)}</span></div>
     <h3><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></h3>
     <p>${esc(summaryOf(i))}</p></div>`;
