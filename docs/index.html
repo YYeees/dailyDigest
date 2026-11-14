@@ -116,15 +116,11 @@
     .day-head .num { display: inline; font-size: 34px; margin: 0 2px 0 0; }
     .day-head .wk, .day-head .n { display: inline; margin: 0 0 0 6px; }
     .lead h3 { font-size: 20px; }
-    .brief .t { font-size: 16.5px; }
-    .brief .row { flex-wrap: wrap; row-gap: 4px; }
-    .brief .side { width: 100%; flex-wrap: wrap; row-gap: 2px; white-space: normal; }
-    .brief .side .who { white-space: normal; }
     .src { flex-wrap: wrap; row-gap: 4px; }
     .src .tracks { margin-left: 0; width: 100%; }
   }
 
-  /* 头条(high)：来源、标题、摘要；点标题或空白处都打开原文 */
+  /* 每一条(high 和 medium 同一种样子)：来源、标题、摘要；点标题或空白处都打开原文 */
   .lead { display: block; padding: 6px 0 26px; border-bottom: 1px solid var(--rule); cursor: pointer; }
   .lead + .lead { padding-top: 24px; }
   .src { font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); display: flex; gap: 8px; align-items: center; }
@@ -137,21 +133,6 @@
   .lead p { margin: 0; color: var(--soft); font-size: 15px; line-height: 1.85; text-align: justify; }
   .lead:hover h3 a { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
 
-  /* 简讯(medium)：一行；点空白处展开摘要，点标题打开原文 */
-  .briefs { padding: 6px 0 24px; }
-  .brief { display: block; padding: 16px 0 18px; border-bottom: 1px solid var(--rule); border-radius: 10px; }
-  .brief:last-child { border-bottom: 0; }
-  .brief .row { display: flex; gap: 14px; align-items: baseline; }
-  .brief .t { flex: 1; font-family: var(--title); font-size: 18px; font-weight: 400; line-height: 1.45; letter-spacing: 0;
-              color: var(--ink); -webkit-text-stroke: .2px currentColor; font-feature-settings: "onum" 1; }
-  .brief .t a:hover { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
-  .brief .who { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--who); white-space: nowrap; }
-  /* 简讯右侧：[记一笔][标注] 轨道 等级 · 人名，同一行；摘要直接显示在标题下面 */
-  .brief .side { display: inline-flex; align-items: center; white-space: nowrap; font-size: 11px; letter-spacing: .12em;
-                 text-transform: uppercase; color: var(--faint); }
-  .brief .side .tgline .tg + .tg::before { content: "·"; margin: 0 6px; color: var(--faint); }
-  .brief .side .dot { margin: 0 8px; color: var(--faint); }
-  .brief .sum { margin: 6px 0 0; color: var(--soft); font-size: 15px; line-height: 1.85; text-align: justify; font-family: "CJK Quotes", var(--sans); }
 
   /* 「记一笔」——一键在写作收件箱(独立Obsidian vault)新建一条临时笔记。
      回路的另一头是scripts/scan_inbox.py:靠笔记frontmatter里的source匹配回digest.db。
@@ -478,20 +459,9 @@ function leadHTML(i) {
     <h3><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></h3>
     <p>${esc(summaryOf(i))}</p></div>`;
 }
-function briefHTML(i) {
-  return `<div class="brief" ${delay()}>
-    <div class="row">
-      <span class="t"><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></span>
-      <span class="side">${noteBtn(i)}${labelBtns(i)}<span class="tgline">${tags(i)}</span><span class="dot">·</span>${who(i)}</span>
-    </div>
-    <p class="sum">${esc(summaryOf(i))}</p>
-  </div>`;
-}
+// high 和 medium 在页面上不再区分(2026-11-14 用户定)：都用同一种卡片，同一天里 high 排在前面。
 function listHTML(list) {
-  const leads = list.filter(i => best(i) === 'high');
-  const briefs = list.filter(i => best(i) !== 'high');
-  return leads.map(leadHTML).join('')
-    + (briefs.length ? `<div class="briefs">${briefs.map(briefHTML).join('')}</div>` : '');
+  return [...list.filter(i => best(i) === 'high'), ...list.filter(i => best(i) !== 'high')].map(leadHTML).join('');
 }
 function renderDays() {
   SEQ = 0;
