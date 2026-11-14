@@ -148,9 +148,12 @@ function render() {
   const all = DATA.items.slice().sort((a, b) =>
     b.date.localeCompare(a.date) || (RANK[b.priority] || 0) - (RANK[a.priority] || 0));
   const unread = all.filter(it => !seen.has(it.link)).length;
+  // 公司名单来自数据(export_companies.py 的 COMPANIES)，加减公司不用改这里
+  const names = DATA.companies.map(c => c.name);
+  const coNames = names.length > 1 ? names.slice(0, -1).join('、') + ' 和 ' + names[names.length - 1] : names.join('');
   document.getElementById('status').innerHTML = all.length
-    ? `Anthropic 和 OpenAI 这 7 天的重要发布，${all.length} 篇${unread ? `，<b>${unread}</b> 篇没看 · <button type="button" id="markAll">全部标为已读</button>` : '，都看过了'}。`
-    : 'Anthropic 和 OpenAI 这 7 天的重要发布。';
+    ? `${coNames} 这 7 天的重要发布，${all.length} 篇${unread ? `，<b>${unread}</b> 篇没看 · <button type="button" id="markAll">全部标为已读</button>` : '，都看过了'}。`
+    : `${coNames} 这 7 天的重要发布。`;
 
   const fo = document.getElementById('filterOn');
   if (FILTER) {

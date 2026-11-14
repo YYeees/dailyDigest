@@ -35,9 +35,11 @@ MAX_ITEMS = 40
 RANK = {"high": 3, "medium": 2, "low": 1}
 
 COMPANIES = [
-    # person字段跟digest.db里的一致。2026-11-14用户说不跟DeepMind了，这页只放这两家
+    # person字段跟digest.db里的一致(DeepMind 在 sources.py 里记成"Google")。
+    # 2026-11-14 DeepMind 一度去掉，同一天又加回来
     {"person": "Anthropic", "name": "Anthropic", "key": "anthropic"},
     {"person": "OpenAI", "name": "OpenAI", "key": "openai"},
+    {"person": "Google", "name": "Google DeepMind", "key": "deepmind"},
 ]
 NO_FETCH_HOSTS = ("openai.com",)
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
