@@ -55,8 +55,8 @@ HTML_PAGES = ("index.html",)
 # 那句"产物里不许再出现锚点"的断言——哪天前端改了措辞导致这里匹配不上,跑批会当场炸,
 # 而不是悄悄把字眼发出去。
 HTML_STRIPS = (
-    # 月度归档、常读的人、周六来信都不公开,入口一起摘掉(配合下面"产物里不许再出现这几个页面名"的断言)
-    ('    <nav><a href="digest.html">月度归档</a> · <a href="albums.html">常读的人</a> · <a href="letter.html">周六来信</a></nav>\n', ""),
+    # 月度归档、常读的人、大公司、周六来信都不公开,入口一起摘掉(配合下面"产物里不许再出现这几个页面名"的断言)
+    ('    <nav><a href="digest.html">月度归档</a> · <a href="albums.html">常读的人</a> · <a href="companies.html">大公司</a> · <a href="letter.html">周六来信</a></nav>\n', ""),
     ('        <option value="anchor">锚点</option>\n', ""),
     ('        <option value="eval">Eval</option>\n', ""),
     # eval track的样式也摘掉:CSS本身泄露不了内容,但留着等于告诉读源码的人"还有第三条track"
@@ -159,7 +159,7 @@ def export():
         html = html.replace(SITE_CONFIG_MARKER, SITE_CONFIG_SCRIPT)
         for old_text, new_text in HTML_STRIPS:
             html = html.replace(old_text, new_text)
-        for residue in ("锚点", "eval", "digest.html", "letter.html", "albums.html"):
+        for residue in ("锚点", "eval", "digest.html", "letter.html", "albums.html", "companies.html"):
             if residue in html:
                 raise SystemExit(
                     f"[中止] docs/{name} 剥离后仍残留`{residue}`字样,HTML_STRIPS该更新了,不导出。"
