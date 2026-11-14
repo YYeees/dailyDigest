@@ -465,7 +465,8 @@ function dayHead(iso, n) {
 }
 function leadHTML(i) {
   // 有配图(scripts/attach_images.py 补的)就跟「大公司」页一样放在右侧小方块里
-  const pic = i.image ? `<span class="pic"><img src="${esc(i.image)}" alt="" loading="lazy" referrerpolicy="no-referrer"></span>` : '';
+  // 只有 HIGH 的放配图(2026-11-14 用户要试的)：有图的就是重点
+  const pic = i.image && topTier(i) === 'high' ? `<span class="pic"><img src="${esc(i.image)}" alt="" loading="lazy" referrerpolicy="no-referrer"></span>` : '';
   return `<div class="lead t-${topTier(i)}${pic ? ' has-pic' : ''}" data-link="${esc(i.link)}" ${delay()}>
     <div class="body">
       <div class="src">${who(i)}<span class="sep">·</span><span class="tracks">${tags(i)}</span>

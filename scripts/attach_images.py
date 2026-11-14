@@ -2,6 +2,7 @@
 给 docs/data/recent.json 的每一条补一张配图(image 字段)，Recent 页卡片右侧用。
 
 2026-11-14 加：Recent 页改成跟「大公司」页同一种卡片后，用户觉得没有图"看着干枯"。
+- 只给等级为 HIGH 的条目配图(页面上也只有 HIGH 显示图)
 - YouTube：直接用视频缩略图(i.ytimg.com)，不用请求
 - 其他：抓文章页的 og:image(复用 export_companies.py 的抓取函数，openai.com 那种拒绝脚本的站跳过)
 - 抓到的按 link 缓存在 docs/data/image_cache.json，每篇只抓一次；没抓到的下次再试
@@ -39,6 +40,10 @@ def main():
     for item in data.get("items", []):
         link = item.get("link")
         if not link:
+            continue
+        # 页面只给 HIGH 放配图(2026-11-14)，别的不用抓。等级取三条轨道里最高的那个，跟页面一致
+        if "high" not in (item.get("tiers") or {}).values():
+            item.pop("image", None)
             continue
         if link not in cache:
             img = image_for(link)

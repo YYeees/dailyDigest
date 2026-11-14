@@ -100,8 +100,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true,
-      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/e61b607b-f9a5-4a6d-846b-f8792dd0a549/take-back-internet2.jpg?t=1794543381"
+      "is_new": true
     },
     {
       "person": "Anthropic",
@@ -177,8 +176,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true,
-      "image": "https://i.ytimg.com/vi/1rn_Clc-MM0/hqdefault.jpg"
+      "is_new": true
     },
     {
       "person": "Latent Space",
@@ -201,8 +199,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true,
-      "image": "https://latent.space/og/card/post/ainews-d-day-decision-models-day/d2600d673d83d2c42c810a6c57c6e5942326283dfe350801c137d18f262c4f90.png"
+      "is_new": true
     },
     {
       "person": "Latent Space",
@@ -249,8 +246,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true,
-      "image": "https://i.ytimg.com/vi/9dWQNg68Ncw/hqdefault.jpg"
+      "is_new": true
     },
     {
       "person": "Greg Isenberg",
@@ -273,8 +269,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true,
-      "image": "https://i.ytimg.com/vi/1cWZ7Ekff6E/hqdefault.jpg"
+      "is_new": true
     },
     {
       "person": "Latent Space",
@@ -297,8 +292,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true,
-      "image": "https://latent.space/og/card/post/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/0a6ebbfe98ad97a5127fc1c24df129ccd58884d32c867036ad2d48f36fe03fee.png"
+      "is_new": true
     },
     {
       "person": "Latent Space",
@@ -418,8 +412,7 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://substackcdn.com/image/fetch/$s_!5-fS!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2095f300-0a39-4e16-a60f-6c8a94728bf9_1666x932.jpeg"
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -447,8 +440,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://i.ytimg.com/vi/G3i2k6DdI0o/hqdefault.jpg"
+      "is_new": false
     },
     {
       "person": "Google",
@@ -776,8 +768,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://i.ytimg.com/vi/wbJ_Q1xsDHg/hqdefault.jpg"
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -925,8 +916,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://i.ytimg.com/vi/dpY7YzZo4kE/maxresdefault.jpg"
+      "is_new": false
     }
   ]
 }
