@@ -54,7 +54,7 @@ ALBUMS = [
     },
     {
         "person": "Teo Crawford", "pub": "YouTube", "cover": "aperture", "verb": "Watch",
-        "image": "https://yt3.googleusercontent.com/6f-mwpN4uNcUeWCdlzElYj0Y_i33oGydxZyZ4yAN9PhiHsb9CfKp0SpslMVk0anIfwL2vHRA=s900-c-k-c0x00ffffff-no-rj",
+        "image": "img/teo-crawford.jpg",   # 用户挑的海边照片(他的Instagram)，裁成900px正方形
         "home": "https://www.youtube.com/@TeoCrawford",
         "bio": "拍胶片和街头摄影的 YouTuber，镜头里多是日本的日常与慢下来的生活。"
                "从 2013 年开始做视频，十年如一日地拍。",
