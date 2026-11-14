@@ -1,5 +1,7 @@
 """
-抓「每周来信」：把按周发的策展型newsletter整期存成JSON，给docs/letter.html(卷轴页)用。
+抓「每周来信」：把按周发的策展型newsletter整期存成JSON。
+
+(2026-11-14 卷轴页 docs/letter.html 撤掉了；现在只给「常读的人」页里 Thorsten Ball 那张卡片提供最新一期。)
 
 2026-11-14加，第一封是Thorsten Ball的Joy & Curiosity。跟digest主管线完全分开：
 - 不进digest.db、不排tier、不写中文摘要——用户要读原文，他已经替你挑过一遍了，再筛等于否定策展本身。

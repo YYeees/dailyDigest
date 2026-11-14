@@ -6,8 +6,8 @@
 
 - 曲目来自digest.db里这个人的条目(不看tier，这些人用户本来就要全看)，被排序阶段标了
   excluded_reason的不算(比如转发别人的产品宣传语)。
-- Thorsten Ball不在digest.db里，他的曲目是docs/data/letters/index.json里的每周来信，
-  点专辑直接进卷轴页(letter.html)。
+- Thorsten Ball不在digest.db里，他的曲目是docs/data/letters/index.json里的每周来信
+  (scripts/fetch_letters.py照常每天抓)。卷轴页letter.html 2026-11-14撤掉了，点卡片直接去Substack原文。
 - 名单、介绍、封面都写在下面ALBUMS里，改人就改这里。封面image是公开网络上能代表这个人的图
   (本人网站头图/头像/插画)，默认直接引用原网址；用户自己挑来的图(链接会过期、或原图太大)
   裁成正方形存进docs/img/，image写相对路径。原色显示(不做黑白处理——
@@ -32,9 +32,9 @@ TRACKS_PER_ALBUM = 10
 ALBUMS = [
     # 页面上就按这个顺序排(用户定的，2026-11-14)，不按更新时间
     {
-        "person": "Thorsten Ball", "pub": "Joy & Curiosity", "cover": "rays", "verb": "Open Letter",
+        "person": "Thorsten Ball", "pub": "Joy & Curiosity", "cover": "rays", "verb": "Read",
         "image": "https://thorstenball.com/images/avatar_2026_final_quadratic.jpg",
-        "home": "https://registerspill.thorstenball.com", "href": "letter.html", "source": "letters",
+        "home": "https://registerspill.thorstenball.com", "source": "letters",
         "bio": "软件工程师，在 Amp 做编程智能体，写过《Writing An Interpreter In Go》。"
                "每周日寄出一封 Joy & Curiosity，把一周里让他快乐、让他好奇的东西装进去。",
     },
@@ -94,7 +94,7 @@ def tracks_from_letters():
     if not LETTERS_INDEX.exists():
         return []
     letters = json.loads(LETTERS_INDEX.read_text(encoding="utf-8")).get("letters", [])
-    return [{"title": x["title"], "link": "letter.html", "date": x["date"], "kind": "letter",
+    return [{"title": x["title"], "link": x["link"], "date": x["date"], "kind": "letter",
              "note": f"{x.get('links_count', 0)} 处去向"} for x in letters[:TRACKS_PER_ALBUM]]
 
 
@@ -107,8 +107,8 @@ def main():
         entry["tracks"] = tracks
         entry["latest"] = tracks[0]["date"] if tracks else None
         entry["latest_title"] = tracks[0]["title"] if tracks else None
-        # 页面上的按钮直接打开最新一篇原文；Thorsten的信在卷轴页里读(那里记录点开了哪些链接)
-        entry["latest_link"] = a.get("href") or (tracks[0]["link"] if tracks else a["home"])
+        # 页面上的按钮直接打开最新一篇原文
+        entry["latest_link"] = tracks[0]["link"] if tracks else a["home"]
         albums.append(entry)
         print(f"[OK] {a['person']} — {len(tracks)}首, 最新 {entry['latest']}")
     conn.close()

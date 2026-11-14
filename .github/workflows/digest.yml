@@ -39,7 +39,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      # 周六来信(Joy & Curiosity等按周发的newsletter)：纯脚本、不需要Claude，单独commit。
+      # 每周来信(Joy & Curiosity)：给「常读的人」页Thorsten那张卡片用。纯脚本、不需要Claude，单独commit。
       # 后面Claude那步或记账那步会push。抓失败不该拖垮当天的digest。
       - name: Fetch weekly letters
         continue-on-error: true

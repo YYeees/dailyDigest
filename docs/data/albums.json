@@ -1,19 +1,18 @@
 {
- "updated_at": "2026-11-14T10:04:36+00:00",
+ "updated_at": "2026-11-14T10:53:11+00:00",
  "albums": [
   {
    "person": "Thorsten Ball",
    "pub": "Joy & Curiosity",
    "cover": "rays",
-   "verb": "Open Letter",
+   "verb": "Read",
    "image": "https://thorstenball.com/images/avatar_2026_final_quadratic.jpg",
    "home": "https://registerspill.thorstenball.com",
-   "href": "letter.html",
    "bio": "软件工程师，在 Amp 做编程智能体，写过《Writing An Interpreter In Go》。每周日寄出一封 Joy & Curiosity，把一周里让他快乐、让他好奇的东西装进去。",
    "tracks": [
     {
      "title": "Joy & Curiosity #105",
-     "link": "letter.html",
+     "link": "https://registerspill.thorstenball.com/p/joy-and-curiosity-105",
      "date": "2026-11-08",
      "kind": "letter",
      "note": "16 处去向"
@@ -21,7 +20,7 @@
    ],
    "latest": "2026-11-08",
    "latest_title": "Joy & Curiosity #105",
-   "latest_link": "letter.html"
+   "latest_link": "https://registerspill.thorstenball.com/p/joy-and-curiosity-105"
   },
   {
    "person": "Craig Mod",

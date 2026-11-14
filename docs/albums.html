@@ -96,7 +96,6 @@
       <a href="index.html">Recent</a>
       <a href="albums.html" class="on">People</a>
       <a href="companies.html">Companies</a>
-      <a href="letter.html">Letters</a>
     </nav>
   </header>
   <section class="intro">
@@ -223,7 +222,7 @@ function render() {
   const seen = loadSeen();
   document.getElementById('wall').innerHTML = ALBUMS.map((a, idx) => {
     const fresh = isFresh(a, seen);
-    const internal = String(a.latest_link || '').startsWith('letter.html');
+    const internal = false;
     const target = internal ? '' : ' target="_blank" rel="noopener"';
     const cover = a.cover === 'wordmark' ? wordmark(a) : a.image
       ? `<img src="${esc(a.image)}" alt="${esc(a.person)}" loading="lazy" referrerpolicy="no-referrer" data-idx="${idx}">`
