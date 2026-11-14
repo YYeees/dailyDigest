@@ -69,7 +69,8 @@ HTML_STRIPS = (
     # eval track的样式也摘掉:CSS本身泄露不了内容,但留着等于告诉读源码的人"还有第三条track"
     ("    --tag-eval-bg: #d8c6a8;\n", ""),
     ("  .category-eval { background: var(--tag-eval-bg); }\n", ""),
-    ("const TRACK_LABEL = { ai: 'AI', anchor: 'Anchor', eval: 'Eval' };",
+    # 前端里锚点轨道的显示名：锚点 → Anchor → Core(2026-11-14 用户要更短的英文)。改名时这里和下面的残留检查一起改
+    ("const TRACK_LABEL = { ai: 'AI', anchor: 'Core', eval: 'Eval' };",
      "const TRACK_LABEL = { ai: 'AI' };"),
     # 开发注释也算:它们泄露不了判断内容,但会告诉读源码的人"这里还有第二条track"
     ("AI/锚点/tier标签", "AI/tier标签"),
@@ -166,7 +167,7 @@ def export():
         html = html.replace(SITE_CONFIG_MARKER, SITE_CONFIG_SCRIPT)
         for old_text, new_text in HTML_STRIPS:
             html = html.replace(old_text, new_text)
-        for residue in ("锚点", "Anchor", "eval", "digest.html", "albums.html", "companies.html"):
+        for residue in ("锚点", "Anchor", "'Core'", "eval", "digest.html", "albums.html", "companies.html"):
             if residue in html:
                 raise SystemExit(
                     f"[中止] docs/{name} 剥离后仍残留`{residue}`字样,HTML_STRIPS该更新了,不导出。"
