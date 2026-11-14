@@ -12,10 +12,10 @@ description: 跑一次完整的dailyDigest流程——抓取新内容、按RANKI
 ### 1. 抓取新内容
 
 ```bash
-python3 fetch.py && python3 fetch_x.py
+python3 fetch.py; python3 fetch_x.py
 ```
 
-一次Bash调用把两条命令跑完，不要拆成两次调用。按guid去重，只会新增之前没见过的条目。`fetch_x.py`抓`sources.py`里`X_SOURCES`那几个人的最新推文(目前Amanda Askell、Andrej Karpathy)，需要环境变量`TWITTERAPI_IO_KEY`(本地`.env`里有，CI在repo secrets里配)。
+一次Bash调用把两条命令跑完，不要拆成两次调用。中间用`;`不用`&&`：任一RSS源抓失败时`fetch.py`会非零退出，用`&&`会把`fetch_x.py`整个跳过(2026-11-14踩过)。哪个脚本报了`[FAIL]`就在最后汇报里提一句，但不影响继续往下排序。按guid去重，只会新增之前没见过的条目。`fetch_x.py`抓`sources.py`里`X_SOURCES`那几个人的最新推文(目前Amanda Askell、Andrej Karpathy)，需要环境变量`TWITTERAPI_IO_KEY`(本地`.env`里有，CI在repo secrets里配)。
 
 ### 2. 读取待排序条目
 
