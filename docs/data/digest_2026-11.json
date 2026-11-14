@@ -1,6 +1,74 @@
 {
   "items": [
     {
+      "person": "Anthropic",
+      "title": "Building strong safety evaluations",
+      "link": "https://www.anthropic.com/research/building-strong-safety-evaluations",
+      "date": "2026-11-13",
+      "first_seen": "2026-11-14T08:10:56.469832+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic的工程团队讲怎么做出可靠的安全评测，分成设计、运行、报告三步。他们认为说一个模型更安全，前提是评测本身靠得住。做评测或测试的人可以直接借鉴它的流程。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "讲怎么设计、运行和报告模型评测，教怎么测而不是报分数"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Google",
+      "title": "Introducing Gemini 4 Hydrogen",
+      "link": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+      "date": "2026-11-12",
+      "first_seen": "2026-11-14T08:10:56.589518+00:00",
+      "source_type": "blog",
+      "summary": "Gemini 4 Hydrogen是Google的日常型模型，主打快速的编码和agent任务，百万字符上下文内价格不变。它有四档思考强度可调，在编码类测试上比上一代进步明显。每天用AI写代码的人可以考虑拿它当日常主力。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布，讲清了定价和能力"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "The Jev Revolution: What Engineers Are Already Building with System One Models",
+      "link": "https://latent.space/p/jev-revolution/",
+      "date": "2026-11-12",
+      "first_seen": "2026-11-14T08:10:49.148492+00:00",
+      "source_type": "blog",
+      "summary": "AI Engineer Code Summit主题是系统一模型，也就是不写长文、只返回选择、分数或概率的快速模型。创始人讲了Jev这类产品为什么发布后迅速流行，以及已有哪些生产用例。想知道除了聊天模型还有什么新方向，这篇值得读。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "系统一模型是当前新趋势，文章讲清楚是什么以及工程师已经在做什么"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "AI Engineer Code Summit: OpenAI on New Ways of Working With Codex",
+      "link": "https://latent.space/p/codex-work/",
+      "date": "2026-11-11",
+      "first_seen": "2026-11-14T08:10:49.150046+00:00",
+      "source_type": "blog",
+      "summary": "这是AI Engineer Code Summit上OpenAI关于Codex新用法的工作坊记录。重点讲这一年编程agent的产品变化，以及转到云端运行之后用户为什么容易困惑。如果你天天在用Codex或Claude Code，值得看看官方工程师怎么建议的。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "OpenAI现场讲Codex新工作方式，直接影响日常用编程agent"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Cursor",
       "title": "Your agents can now coordinate with your teammatesâ€™ agents.  Projects has been rebuilt for multipl…",
       "link": "https://x.com/cursor_ai/status/2120295553309565139",
@@ -15,7 +83,7 @@
           "reason": "团队成员与代理共享协作空间，直接影响工具使用。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Grok Bot",
@@ -32,7 +100,7 @@
           "reason": "说明连接私有网络工具的新增使用方式。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -54,7 +122,7 @@
           "reason": "创始人用一手构建经历解释如何改善代理工作环境。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -71,7 +139,7 @@
           "reason": "用真实应用与响应时间比较帮助理解快速模型的取舍。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Google",
@@ -88,7 +156,7 @@
           "reason": "解释Carbon的适用任务、可用入口及多代理工作流。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Google",
@@ -110,7 +178,7 @@
           "reason": "解释规格审查、机器检查证明与植入历史漏洞的验证流程。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -127,7 +195,7 @@
           "reason": "结合长上下文收费与亲测，提供小模型选型思路。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -144,7 +212,7 @@
           "reason": "解释新模型成本、推理强度与实际任务费用的差异。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -161,7 +229,7 @@
           "reason": "给出能直接尝试的编程代理提示方式及对照结果。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -195,7 +263,7 @@
           "reason": "用生产线案例解释机器人模型的新能力与应用边界。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ethan Mollick",
@@ -239,7 +307,7 @@
           "reason": "展示可借用的营销代理数据与工具配置方法。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",

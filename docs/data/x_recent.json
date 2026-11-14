@@ -2,6 +2,83 @@
   "items": [
     {
       "person": "Cursor",
+      "title": "We’ve published an update on our recent security incident. See a detailed overview of what happened…",
+      "link": "https://x.com/cursor_ai/status/2121411147714970092",
+      "date": "2026-11-14",
+      "first_seen": "2026-11-14T08:11:11.536540+00:00",
+      "source_type": "x",
+      "summary": "Cursor发布了最近那次安全事件的详细说明，包含发生经过和补救措施。用户可以点开看看自己是否受影响。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Grok Bot",
+      "title": "Grok Bot can now join meetings.  Ask it questions, assign it work, or have it keep track of what you…",
+      "link": "https://x.com/bot/status/2121320089920430181",
+      "date": "2026-11-13",
+      "first_seen": "2026-11-14T08:11:09.484901+00:00",
+      "source_type": "x",
+      "summary": "Grok Bot现在可以加入会议，回答问题、接任务，还能记录团队的决定。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Grok Bot",
+      "title": "Grok Bot on Mac can now use Messages, Mail, Notes, Reminders, Calendar, Location, and Contacts. http…",
+      "link": "https://x.com/bot/status/2120946968403095906",
+      "date": "2026-11-12",
+      "first_seen": "2026-11-14T08:11:09.485135+00:00",
+      "source_type": "x",
+      "summary": "Grok Bot在Mac上可以使用信息、邮件、备忘录、日历、位置和通讯录了。意味着个人助理开始能碰系统里的私人数据，用之前要想想权限。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Cursor",
+      "title": "Gemini 4 Hydrogen is now available in Cursor!  At its default effort, it scores 54.3% on CursorBench…",
+      "link": "https://x.com/cursor_ai/status/2120944639633211619",
+      "date": "2026-11-12",
+      "first_seen": "2026-11-14T08:11:11.536835+00:00",
+      "source_type": "x",
+      "summary": "Cursor宣布接入Gemini 4 Hydrogen，默认档位在自家评测上明显超过上一代。适合Cursor用户决定要不要切模型。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "SpaceX Super Intelligence",
+      "title": "Introducing Grok Bot 1.0.  Bots can be shared and are more collaborative and capable than ever. http…",
+      "link": "https://x.com/SpaceXSI/status/2120584928983441826",
+      "date": "2026-11-11",
+      "first_seen": "2026-11-14T08:11:08.023679+00:00",
+      "source_type": "x",
+      "summary": "官方账号同步宣布Grok Bot 1.0，强调机器人可以共享，协作能力更强。内容和Grok Bot自己的发布一致，看一条就够。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Grok Bot",
+      "title": "Introducing Grok Bot 1.0. AI teammates that work alongside your whole team.  Share Bots, collaborate…",
+      "link": "https://x.com/bot/status/2120582957782200586",
+      "date": "2026-11-11",
+      "first_seen": "2026-11-14T08:11:09.485162+00:00",
+      "source_type": "x",
+      "summary": "Grok Bot 1.0发布，主打可以在团队里共享的AI队友，能在Slack和Teams里协作，还能拉进会议。看点是它把个人助理往团队协作方向推了一步。",
+      "tier": "medium",
+      "is_new": true
+    },
+    {
+      "person": "Grok Bot",
+      "title": "Order groceries, snacks, and essentials end-to-end with Bot and Gopuff",
+      "link": "https://x.com/bot/status/2120580467682656670",
+      "date": "2026-11-11",
+      "first_seen": "2026-11-14T08:11:09.485201+00:00",
+      "source_type": "x",
+      "summary": "Grok Bot和Gopuff合作，可以直接帮你下单买日用品和零食。属于产品合作的宣传，了解一下它的使用场景即可。",
+      "tier": "low",
+      "is_new": true
+    },
+    {
+      "person": "Cursor",
       "title": "Your agents can now coordinate with your teammatesâ€™ agents.  Projects has been rebuilt for multipl…",
       "link": "https://x.com/cursor_ai/status/2120295553309565139",
       "date": "2026-11-10",
@@ -9,7 +86,7 @@
       "source_type": "x",
       "summary": "Cursor 宣布重做 Projects，让团队成员和各自的代理在同一个工作区协作。重点从个人使用代理转向团队协调，适合正在把编程代理引入多人项目的人关注。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Grok Bot",
@@ -20,7 +97,7 @@
       "source_type": "x",
       "summary": "Grok Bot 现在可以加入个人或公司的 Tailscale 私有网络，访问内部工具、应用和私有 MCP 服务。适合希望把代理接到内部工作环境的人关注。",
       "tier": "high",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Cursor",
@@ -31,7 +108,7 @@
       "source_type": "x",
       "summary": "Cursor 宣布已接入 Gemini 4 Carbon，并引用自家编程榜单说明其表现。适合正在选择编辑器内模型的用户关注，榜单成绩不等于你的项目效果。",
       "tier": "medium",
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Cursor",
@@ -63,39 +140,6 @@
       "first_seen": "2026-11-08T01:29:40.990813+00:00",
       "source_type": "x",
       "summary": "Karpathy把一份YouTube频道推荐做成了TristanTube，集中浏览技术视频，还加入了适合靠着看的电视模式。他说这是用Claude Code几分钟一次生成的，展示了把个人学习需求快速做成工具的可能。",
-      "tier": "medium",
-      "is_new": false
-    },
-    {
-      "person": "Cursor",
-      "title": "You can now build live apps in Cursor and share them with a link.  Agents have made it easier to wri…",
-      "link": "https://x.com/cursor_ai/status/2118458629091426304",
-      "date": "2026-11-05",
-      "first_seen": "2026-11-06T02:32:19.390406+00:00",
-      "source_type": "x",
-      "summary": "Cursor宣布可以直接构建上线应用并通过链接分享，从描述需求到配置数据库、执行安全检查和部署都交给agent完成。对想把本地小工具交给别人使用的人，这是值得关注的工作流更新，但推文没有展开安全检查的覆盖范围。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Boris Cherny",
-      "title": "RT @ClaudeDevs: Background subagents in Claude Code now use less of your usage limit.  A running sub…",
-      "link": "https://x.com/bcherny/status/2118130958679605322",
-      "date": "2026-11-04",
-      "first_seen": "2026-11-05T02:23:58.638714+00:00",
-      "source_type": "x",
-      "summary": "Boris Cherny转发消息称，Claude Code的后台子agent现在会消耗更少的使用额度。抓到的推文后半段被截断，具体计算方式和适用条件需要查看原帖。",
-      "tier": "high",
-      "is_new": false
-    },
-    {
-      "person": "Grok Bot",
-      "title": "Grok Bot can now make phone calls. https://t.co/eFghrfwTtz",
-      "link": "https://x.com/bot/status/2118043939592942052",
-      "date": "2026-11-04",
-      "first_seen": "2026-11-05T02:24:02.309089+00:00",
-      "source_type": "x",
-      "summary": "Grok Bot宣布新增打电话功能。这条推文没有说明使用方式、适用范围或限制，感兴趣可以查看所附链接。",
       "tier": "medium",
       "is_new": false
     }

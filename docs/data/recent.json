@@ -2,22 +2,241 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "llm-gemini 0.36",
-      "link": "https://simonwillison.net/2026/Nov/10/llm-gemini/",
-      "date": "2026-11-10",
-      "first_seen": "2026-11-11T01:58:40.136501+00:00",
+      "title": "datasette-cluster-map 0.19",
+      "link": "https://simonwillison.net/2026/Nov/13/datasette-cluster-map/",
+      "date": "2026-11-13",
+      "first_seen": "2026-11-14T08:10:48.376877+00:00",
       "source_type": "blog",
-      "summary": "Simon 更新自己的 Gemini 插件，并试用刚扩大开放范围的 Carbon 模型。他展示了绘图和地图动画，也提醒优惠价格之后会调整，适合已经使用这个插件、想了解接入情况的人。",
+      "summary": null,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "作者维护的插件更新与模型演示，按更新日志标准降档。"
+          "reason": "作者自己维护的小工具版本更新日志"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "未深入锚点主题。"
+          "reason": "与锚点无实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "datasette-leaflet 0.3",
+      "link": "https://simonwillison.net/2026/Nov/13/datasette-leaflet/",
+      "date": "2026-11-13",
+      "first_seen": "2026-11-14T08:10:48.377099+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "作者自己维护的小工具版本更新日志"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "与锚点无实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Introducing ChatGPT Wallet",
+      "link": "https://openai.com/index/introducing-chatgpt-wallet",
+      "date": "2026-11-13",
+      "first_seen": "2026-11-14T08:10:51.217235+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI推出ChatGPT Wallet，让ChatGPT里的agent和Codex可以在你批准后替你付款，并沿用银行卡原有的保护。想知道agent怎么安全地花钱的人可以留意。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "官方新功能公告，让agent能代为付款"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "AI Ambition: ArtCraft Cloned Photoshop and Now Wants to \"Rebuild Everything\"",
+      "link": "https://latent.space/p/artcraft/",
+      "date": "2026-11-13",
+      "first_seen": "2026-11-14T08:10:49.146894+00:00",
+      "source_type": "blog",
+      "summary": "ArtCraft创始人在大会上讲他们用AI从头克隆了Photoshop和Acrobat等软件，目前已经开源十七个。文章记录了现场气氛和他的开源宣言。适合看个野心很大的案例。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "创业者宣讲，偏叙事和项目介绍"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "Building strong safety evaluations",
+      "link": "https://www.anthropic.com/research/building-strong-safety-evaluations",
+      "date": "2026-11-13",
+      "first_seen": "2026-11-14T08:10:56.469832+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic的工程团队讲怎么做出可靠的安全评测，分成设计、运行、报告三步。他们认为说一个模型更安全，前提是评测本身靠得住。做评测或测试的人可以直接借鉴它的流程。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Anthropic官方教你搭建安全评测，偏专业但有价值"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "讲怎么设计、运行和报告模型评测，教怎么测而不是报分数"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Google",
+      "title": "Introducing Gemini 4 Hydrogen",
+      "link": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+      "date": "2026-11-12",
+      "first_seen": "2026-11-14T08:10:56.589518+00:00",
+      "source_type": "blog",
+      "summary": "Gemini 4 Hydrogen是Google的日常型模型，主打快速的编码和agent任务，百万字符上下文内价格不变。它有四档思考强度可调，在编码类测试上比上一代进步明显。每天用AI写代码的人可以考虑拿它当日常主力。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "前沿模型新发布，讲清了定价和能力"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Andrew Huberman",
+      "title": "Essentials: How Emotions & Social Factors Impact Learning | Dr. Mary Helen Immordino-Yang",
+      "link": "https://www.youtube.com/watch?v=1rn_Clc-MM0",
+      "date": "2026-11-12",
+      "first_seen": "2026-11-14T08:10:46.350059+00:00",
+      "source_type": "youtube",
+      "summary": "Immordino-Yang教授谈情绪、故事和文化如何塑造我们看世界和学习的方式。想了解教育怎么让人更有好奇心和意义感的人可以听。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "学习与情感、自我认知，二手访谈"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] D-Day (Decision Models Day)",
+      "link": "https://latent.space/p/ainews-d-day-decision-models-day/",
+      "date": "2026-11-12",
+      "first_seen": "2026-11-14T08:10:49.147537+00:00",
+      "source_type": "blog",
+      "summary": "这是当天大会的每日汇总，讲决策模型集中亮相，Cloudflare展示了自家的模型，Google也宣布了Gemini Decision 1。和另一篇Jev的报道讲的是同一件事，看那篇更完整。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "与The Jev Revolution重复，择一看即可"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "The Jev Revolution: What Engineers Are Already Building with System One Models",
+      "link": "https://latent.space/p/jev-revolution/",
+      "date": "2026-11-12",
+      "first_seen": "2026-11-14T08:10:49.148492+00:00",
+      "source_type": "blog",
+      "summary": "AI Engineer Code Summit主题是系统一模型，也就是不写长文、只返回选择、分数或概率的快速模型。创始人讲了Jev这类产品为什么发布后迅速流行，以及已有哪些生产用例。想知道除了聊天模型还有什么新方向，这篇值得读。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "系统一模型是当前新趋势，文章讲清楚是什么以及工程师已经在做什么"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Andrew Huberman",
+      "title": "Why Addiction is a Control Problem | Dr. Anna Lembke",
+      "link": "https://www.youtube.com/shorts/9dWQNg68Ncw",
+      "date": "2026-11-11",
+      "first_seen": "2026-11-14T08:10:46.350318+00:00",
+      "source_type": "youtube",
+      "summary": "Anna Lembke谈成瘾和人想要掌控、减少不确定之间的关系，是一段很短的访谈剪辑。想从另一个角度理解人为什么会陷进去，可以点开看看。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "主题沾深度自我认识的边，二手访谈片段"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Greg Isenberg",
+      "title": "Use Grok Bot Better Than 99% of People (Full Course)",
+      "link": "https://www.youtube.com/watch?v=1cWZ7Ekff6E",
+      "date": "2026-11-11",
+      "first_seen": "2026-11-14T08:10:46.457181+00:00",
+      "source_type": "youtube",
+      "summary": "Greg和一位用户聊他怎么把工作和生活都交给Grok Bot这个个人助理。他还让它把写代码的活转给Claude Code，覆盖工程、设计、内容、理财和购物五块。想照着抄一套agent用法的人可以看。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "创作者访谈演示一套个人agent用法，偏推广和演示"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Mercor $750m Series D at $20B valuation, $3B run rate",
+      "link": "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
+      "date": "2026-11-11",
+      "first_seen": "2026-11-14T08:10:49.148967+00:00",
+      "source_type": "blog",
+      "summary": "Mercor这家给AI模型提供专家数据的公司，拿到新一轮融资，估值到了两百亿美元。文章看点是它的收入涨得很快，以及它说各行各业的工作流程都还没被模型评测过。适合想了解AI数据行业景气度的人扫一眼。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI行业融资新闻，偏宏观叙事"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "AI Engineer Code Summit: OpenAI on New Ways of Working With Codex",
+      "link": "https://latent.space/p/codex-work/",
+      "date": "2026-11-11",
+      "first_seen": "2026-11-14T08:10:49.150046+00:00",
+      "source_type": "blog",
+      "summary": "这是AI Engineer Code Summit上OpenAI关于Codex新用法的工作坊记录。重点讲这一年编程agent的产品变化，以及转到云端运行之后用户为什么容易困惑。如果你天天在用Codex或Claude Code，值得看看官方工程师怎么建议的。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "OpenAI现场讲Codex新工作方式，直接影响日常用编程agent"
+        },
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "涉及编程agent工作流，但不是测试专题"
         }
       ],
       "is_new": true
@@ -42,7 +261,7 @@
           "reason": "创始人用一手构建经历解释如何改善代理工作环境。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -64,7 +283,7 @@
           "reason": "公开测量代码并说明均值、中位数和测量来源局限，但未评答案正确率。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Arvind Narayanan & Sayash Kapoor",
@@ -91,7 +310,7 @@
           "reason": "提出开放任务评测与专家审查方向，缺少可直接落地的完整方法。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -113,7 +332,7 @@
           "reason": "将个人决策方式整理为代理可复用的工作说明。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Google",
@@ -140,7 +359,7 @@
           "reason": "介绍漏洞验证和安全测试案例，未给出完整复现流程。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Google",
@@ -162,7 +381,7 @@
           "reason": "解释规格审查、机器检查证明与植入历史漏洞的验证流程。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -179,7 +398,7 @@
           "reason": "商家在ChatGPT中的信息管理功能介绍，全文抓取受阻。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -194,14 +413,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "结合长上下文收费与亲测，提供小模型选型思路。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "重点是模型选型而非锚点母题。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -218,7 +432,7 @@
           "reason": "解释新模型成本、推理强度与实际任务费用的差异。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -233,36 +447,9 @@
           "track": "ai",
           "tier": "high",
           "reason": "给出能直接尝试的编程代理提示方式及对照结果。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "提示中的责任设定影响代理如何维护代码。"
         }
       ],
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Yonkers Rises",
-      "link": "https://simonwillison.net/2026/Nov/10/yonkers-rises/",
-      "date": "2026-11-10",
-      "first_seen": "2026-11-11T01:58:40.136743+00:00",
-      "source_type": "blog",
-      "summary": "Simon 为了记住纽约 Yonkers 的位置，让 Claude 做了一段城区变成机甲、在城市中行走的动画。他给出了提示词和成品，适合看模型如何把地图数据变成帮助理解和记忆的交互场景。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "编程代理制作动画的演示案例。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "将生成式交互图景用于记住地理位置。"
-        }
-      ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -301,7 +488,7 @@
           "reason": "介绍机器人安全引导与开源越狱测试集，方法展开有限。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ethan Mollick",
@@ -350,7 +537,7 @@
           "reason": "说明代理能力取决于数据与工作环境。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -394,7 +581,7 @@
           "reason": "讨论控制欲与共依赖，连接深度自我认识。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -507,277 +694,6 @@
           "track": "anchor",
           "tier": "medium",
           "reason": "与同源完整版重复，涉及智能体运行环境和人保持理解力的实践。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Anthropic IPO: Whither Now?",
-      "link": "https://latent.space/p/ainews-anthropic-ipo-whither-now/",
-      "date": "2026-11-07",
-      "first_seen": "2026-11-08T01:29:23.405216+00:00",
-      "source_type": "blog",
-      "summary": "这期Latent Space围绕AI市场回调，讨论Anthropic上市预期和收入增长能否撑住估值。正文简述市场情绪与增长目标，具体分析放在配套播客里，另有较长的赞助介绍。适合想了解AI商业预期的人，单看这篇文字能获得的实操信息有限。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "围绕Anthropic上市预期与AI市场估值的宏观评论，正文主要引向播客，缺少实操内容。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Controlling Biology - Fabian Theis, Helmholtz Munich",
-      "link": "https://latent.space/p/controlling-biology-fabian-theis-helmholtz-munich/",
-      "date": "2026-11-06",
-      "first_seen": "2026-11-07T01:59:40.514867+00:00",
-      "source_type": "blog",
-      "summary": "这篇访谈介绍用AI建立虚拟细胞的研究方向，也解释为什么更复杂的模型有时看起来还不如简单猜测。问题可能出在评分方式，也可能是研究任务本身还不足以发挥复杂模型的价值。除了了解AI与生物学的交叉进展，它也提醒我们，判断模型有没有进步，得先检查问题和评价标准是否合理。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "讨论AI虚拟细胞与生物数据的新方向，内容扎实但专业背景要求较高。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "对问题定义、模型复杂度和证据之间关系的讨论连接批判性思维，但主要是访谈转述。"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "指出评测指标可能奖励无信息的平均预测，提供审视AI模型基线与指标有效性的具体案例。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Inkling 2 Small: 17A-594B trained in 68 hours on 12T tokens, beating Muse Spark",
-      "link": "https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark/",
-      "date": "2026-11-06",
-      "first_seen": "2026-11-07T01:59:40.515831+00:00",
-      "source_type": "blog",
-      "summary": "这篇简讯介绍Thinking Machines的新开放权重模型Inkling 2 Small，重点是较快的训练过程，以及围绕可定制性展开的产品方向。作者认为它显示这家新实验室开始持续交付成果，但正文更多是概览和外链，缺少深入的使用比较。如果你想跟踪开放模型的新参与者，可以把它当作继续查阅的入口。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "概述开放权重模型的训练效率与可定制方向，但正文偏简短转述，缺少普通用户可用的选型细节。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "Measuring how AI agents handle everyday wet-lab science",
-      "link": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
-      "date": "2026-11-06",
-      "first_seen": "2026-11-07T01:59:43.991160+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI介绍了一套面向日常实验室工作的智能体评测，关注它们能否读懂原始实验数据并处理实际科研任务。它把观察范围从知识问答移向具体工作，对了解专业场景如何评估AI有参考价值。原文暂时无法访问，这里只能依据官方简介介绍，评测方法和局限仍需点开确认。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "介绍实验室任务中的智能体能力评测，但全文抓取返回403，仅能依据发布简介判断。"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "以真实实验数据设计智能体任务评测，值得关注，但全文不可读，方法细节尚未核实。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Anthropic",
-      "title": "Teaching AI to build scientific models",
-      "link": "https://www.anthropic.com/research/teaching-ai-to-build-scientific-models",
-      "date": "2026-11-06",
-      "first_seen": "2026-11-07T01:59:50.456174+00:00",
-      "source_type": "blog",
-      "summary": "研究者讨论AI如何帮助建立科学模型，也提醒我们，拟合出漂亮结果不代表理解了真实世界。同一批数据可能支持多种解释，真正有用的是知道哪些结论有证据、哪些仍不确定，以及下一次实验该排除什么。如果你关心与AI一起思考时如何保留自己的判断，这篇提供了很具体的科学例子。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "系统解释AI辅助科学建模的进展与局限，但涉及统计推断与科研背景，实操门槛较高。"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "研究者一手反思拟合答案与真正理解的区别，强调比较失败方案和保留不确定性，命中认知不能外包。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Anthropic",
-      "title": "The components of agent memory",
-      "link": "https://www.anthropic.com/research/components-of-agent-memory",
-      "date": "2026-11-06",
-      "first_seen": "2026-11-07T01:59:50.458790+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic分享了给智能体设计记忆的经验：记得多未必有用，更重要的是保存经过验证的规则，并定期回看原始记录纠错。文章用游戏和文档问答实验说明，过期笔记、机械的记录要求，以及多人同时改写同一页，都可能拖累结果。想改进AI助手的长期记忆，或验证这类功能到底有没有帮助，这篇很值得读。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "以具体实验讲清智能体记忆的筛选、纠错和分层组织，能直接指导日常记忆文件与上下文设计。"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "工程团队一手展示如何靠记忆组织和后台复盘改善智能体，直接命中护城河在harness与认知系统构建。"
-        },
-        {
-          "track": "eval",
-          "tier": "high",
-          "reason": "通过有无记忆、提示规则及知识库组织的对照实验定位失败，并展示回查原始记录和避免并发覆盖的质量保障方法。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Google",
-      "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
-      "link": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
-      "date": "2026-11-05",
-      "first_seen": "2026-11-06T02:32:07.067496+00:00",
-      "source_type": "blog",
-      "summary": "Google更新Gemini Omni 1.2 Flash，支持生成最长15秒的视频，价格比上一版降低30%。更实用的变化是可以沿着同一段视频继续对话修改背景、人物或光线，不必每次从头生成，文章也展示了参考图与角色一致性的例子。做短片或产品演示可以看看这些新流程，同时留意它对高速动作和复杂物理效果仍有局限。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "讲清视频模型更新、对话编辑流程与生成限制，直接帮助创作者选择和使用工具。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
-      "link": "https://openai.com/index/introducing-gpt-6-cyber",
-      "date": "2026-11-05",
-      "first_seen": "2026-11-06T02:32:01.180766+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI宣布GPT‑6 Cyber，官方简介称它用于寻找可利用的安全漏洞并开发修复方案，同时强调只在授权范围内工作。这与AI如何参与安全测试有关，但本次原文访问受阻，尚无法确认实际操作方式、适用条件和局限，建议点开原文后再判断是否适合自己的项目。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "全文抓取返回403，仅据官方简介暂判为安全模型发布，能力与用法尚无法核实。"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "介绍自主找漏洞与修复的模型，涉及AI测试工具，但全文不可读，缺少可核实的实践细节。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] It's Swapping Season",
-      "link": "https://latent.space/p/ainews-it-s-swapping-season/",
-      "date": "2026-11-05",
-      "first_seen": "2026-11-06T02:31:58.337640+00:00",
-      "source_type": "blog",
-      "summary": "这期AI行业简报主要整理团队换人和公司收购，包括Claude Code产品负责人转投OpenAI，以及几家开发工具公司的整合。现有正文更像行业动向速览，也夹有作者大会的宣传，没有展开工具能力或具体用法。想追踪AI编程工具背后的人与公司可以看看，寻找实操指南则不必优先读。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "以人员流动、收购与活动宣传为主，是轻量行业动态而非深入实操。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Anthropic",
-      "title": "How scientists use Claude",
-      "link": "https://www.anthropic.com/research/how-researchers-use-claude",
-      "date": "2026-11-05",
-      "first_seen": "2026-11-06T02:32:06.831819+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic分析研究人员如何使用Claude，发现最常见的用途是分析数据和写作，而科学家最看重的提出问题与收集数据，用得反而少。报告把这些差异与模型能力、实验室里的实际操作限制联系起来，也讨论专用科研工具能否填补缺口。值得读的是哪些环节已经能交给AI，哪些仍是研究者自己的核心工作，而不是把未来产出预测当成已经实现的成绩。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "基于真实科研会话分析采用趋势，内容扎实但偏宏观研究，缺少普通用户可直接照做的指南。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "对照科研任务与实际使用，提供理解人机认知分工的实证材料。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "Greg Isenberg",
-      "title": "8 Businesses for the AI Age",
-      "link": "https://www.youtube.com/watch?v=b3tMAOFB71o",
-      "date": "2026-11-04",
-      "first_seen": "2026-11-11T01:58:37.920038+00:00",
-      "source_type": "youtube",
-      "summary": "Greg 讨论当软件和内容更容易复制时，什么生意仍然有价值。他把机会放在现实服务、信任、独有数据和交付结果上，适合想重新审视创业方向的人。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "讨论AI时代商业护城河，偏宏观观点。"
-        }
-      ],
-      "is_new": true
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Behind Latent Space: Kill My SaaS, Jev & AI in 2026 | AIEi Shanghai",
-      "link": "https://latent.space/p/ainews-behind-latent-space-kill-my-saas-jev-ai-in-2026-aiei-shanghai/",
-      "date": "2026-11-04",
-      "first_seen": "2026-11-05T02:23:34.462754+00:00",
-      "source_type": "blog",
-      "summary": "这期Latent Space资讯回顾继续讨论让模型直接修改神经网络权重的实验，同时承认此前的标题对部分结果过于乐观。现有片段汇总了复现与质疑，提醒读者区分修复模型循环问题和真正提升能力，也别把针对考题调参当作普遍进步。适合用来了解争议，具体结论仍要回到实验与对照证据。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "AI行业资讯汇编涉及直接编辑模型权重及其争议，技术门槛较高且材料仅为RSS现有片段。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "对权重编辑的夸大叙事提出基线与复现质疑，可触发批判性思考，但属于二手综述。"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "讨论基准过拟合、对照基线与独立复现，具有评测讨论价值，但缺少可操作的完整方法。"
-        }
-      ],
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
-      "link": "https://openai.com/index/daybreak-red-aws-govcloud",
-      "date": "2026-11-04",
-      "first_seen": "2026-11-05T02:23:37.380645+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI的发布提要称，Daybreak Red已通过Amazon Bedrock进入AWS GovCloud的美国东部区域，面向获批客户开展授权网络安全工作。它使用GPT-5.6 Cyber，但这条提要主要说明部署渠道，没有介绍实际操作方法。原文访问受限，本次未能核对使用条件和能力边界。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "AI安全产品部署渠道更新，属于轻量产品消息，正文HTTP 403，判断仅基于提要。"
         }
       ],
       "is_new": false
