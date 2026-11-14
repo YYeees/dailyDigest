@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T09:58:37+00:00",
+ "updated_at": "2026-11-14T10:00:10+00:00",
  "albums": [
   {
    "person": "Craig Mod",
@@ -278,10 +278,9 @@
   {
    "person": "Andy Matuschak",
    "pub": "Notes & Posts",
-   "cover": "wordmark",
+   "cover": "nodes",
    "verb": "Read",
-   "bg": "#FDF3F1",
-   "ink": "#360EF5",
+   "image": "https://github.com/andymatuschak.png?size=800",
    "home": "https://andymatuschak.org",
    "bio": "研究「思维工具」的独立研究者，和 Michael Nielsen 一起做过 Quantum Country。他公开的常青笔记本身就是一个不断生长、彼此链接的网站。",
    "tracks": [

@@ -60,9 +60,9 @@ ALBUMS = [
                "从 2013 年开始做视频，十年如一日地拍。",
     },
     {
-        "person": "Andy Matuschak", "pub": "Notes & Posts", "cover": "wordmark", "verb": "Read",
-        # 不用照片：照他网站顶部的名字字标，浅粉底紫字，在页面里画成正方形
-        "bg": "#FDF3F1", "ink": "#360EF5",
+        "person": "Andy Matuschak", "pub": "Notes & Posts", "cover": "nodes", "verb": "Read",
+        # GitHub公开头像(粉墙前的笑脸)。试过他网站的名字字标(cover改成"wordmark"、配bg/ink即可)，用户更喜欢这张
+        "image": "https://github.com/andymatuschak.png?size=800",
         "home": "https://andymatuschak.org",
         "bio": "研究「思维工具」的独立研究者，和 Michael Nielsen 一起做过 Quantum Country。"
                "他公开的常青笔记本身就是一个不断生长、彼此链接的网站。",
