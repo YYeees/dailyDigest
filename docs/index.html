@@ -17,8 +17,7 @@
     --rule: #E6E2D8; --rule-strong: #C9C5BB; --accent: #B5442D; --hover: #F1EEE6;
     --date: #CC785C;
     --title: "Iowan Old Style", "Sorts Mill Goudy", "PingFang SC", Georgia, serif;
-    --up: #3F7D4E; --dark: #1B1A19; --dark-ink: #F3EFE7; --dark-soft: #BDB7AC;
-    --sage: #E3E8DE; --sage-rule: #CFD7C8;
+    --up: #3F7D4E;
   }
   /* 弯双引号U+201C/D在中英文里是同一个码位，按字体顺序会先落到苹果英文字体上，变成窄窄的半角。
      只在中文摘要里把这两个字符交给苹方，英文字母照旧；单引号不动，英文缩写里的撇号也是它 */
@@ -47,7 +46,8 @@
     .top nav { width: 100%; justify-content: space-between; gap: 0; font-size: 11.5px; }
   }
 
-  .page { max-width: 720px; margin: 0 auto; padding: 96px 16px 120px; }
+  /* 单栏居中，跟「大公司」页同宽(860)。原来宽屏是"正文656 + 右侧360边栏"的两栏 */
+  .page { max-width: 892px; margin: 0 auto; padding: 96px 16px 120px; }
 
   /* ---- 页头：跟另外两页一样，小号大写页名 + 一行灰色说明(2026-11-14 统一；原来是大标题"7日内关注") ---- */
   .mast { margin-bottom: 36px; }
@@ -151,59 +151,38 @@
   .note-btn.noted svg { fill: currentColor; }
   .note-btn.noted:hover { background: rgba(168, 70, 31, .08); }
 
-  /* ---- 侧栏：深色X面板 + 鼠尾草绿仓库面板 ---- */
-  .aside { margin-top: 80px; display: grid; gap: 48px; }
-  @media (min-width: 760px) { .aside { grid-template-columns: 1fr 1fr; } }
-  .aside > div { border-radius: 14px; padding: 18px 20px 6px; }
-  .aside h4 { font-size: 13px; font-weight: 600; letter-spacing: .1em; margin: 0 0 6px; padding-bottom: 4px; }
-  .panel-x { background: var(--dark); }
-  .panel-x h4 { color: var(--dark-soft); }
-  .panel-gh { background: var(--sage); }
-  .panel-gh h4 { color: var(--soft); }
-  .mini { display: block; padding: 14px 0; border-top: 1px solid var(--rule); font-size: .92rem; line-height: 1.75; }
-  .panel-x .mini { border-top-color: #34322F; }
-  .panel-gh .mini { border-top-color: var(--sage-rule); }
-  .mini .who { display: block; font-size: 14px; font-weight: 600; margin-bottom: 3px; }
-  .mini .who em { font-style: normal; font-weight: 400; color: var(--faint); margin-left: 6px; font-size: 12.5px; }
-  .panel-x .who, .panel-x .who a { color: var(--dark-ink); }
-  .panel-x .who a:hover { color: var(--accent); }
-  /* X和仓库的说明：收起时排满两行、行尾省略号，点开后同一段接着往下排 */
-  .mini .txt { color: var(--soft); text-align: justify; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
-  .panel-x .txt { color: var(--dark-soft); }
-  /* X面板只露前四条，其余在面板里滚动(高度由fitX()按第四条的底边算，条目高矮不一) */
-  /* 滚动条只在滚动时出现，停下来一会儿就藏起来(用户要求)：靠JS在滚动时挂上.scrolling。
-     只写::-webkit-scrollbar、不写标准的scrollbar-width：Chrome见到标准属性就改用系统滚动条，
-     这里的显隐控制就不起作用了 */
-  #x { position: relative; overflow-y: auto; margin-right: -12px; padding-right: 12px; }
-  #x::-webkit-scrollbar { width: 4px; }
-  #x::-webkit-scrollbar-track, #x::-webkit-scrollbar-thumb { background: transparent; border-radius: 2px; }
-  #x.scrolling::-webkit-scrollbar-track { background: #2A2826; }
-  #x.scrolling::-webkit-scrollbar-thumb { background: #6B665E; }
+  /* ---- X 动态、GitHub Trending：原来是右侧吸顶的深色/鼠尾草绿面板，2026-11-14 用户觉得
+     "挂在右边看着难受"，挪到正文下方，跟按天分组同一个"左栏标题 + 右栏列表"的版式，不要色块 ---- */
+  .aside { margin-top: 0; }
+  .extra { display: grid; grid-template-columns: 104px minmax(0, 1fr); column-gap: 32px;
+           padding: 28px 0 8px; border-top: 1px solid var(--rule-strong); }
+  .extra h4 { margin: 0; padding-top: 6px; font-family: var(--title); font-weight: 400; font-size: 20px; line-height: 1.2;
+              color: var(--date); letter-spacing: .04em; }
+  .extra h4 span { display: block; margin-top: 8px; font-family: var(--sans); font-size: 12px; color: var(--faint); letter-spacing: .04em; }
+  .mini { display: block; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .mini:first-child { padding-top: 6px; }
+  .mini:last-child { border-bottom: 0; }
+  .mini .who { display: block; font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--who); font-weight: 500; margin-bottom: 6px; }
+  .mini .who em { font-style: normal; color: var(--faint); margin-left: 8px; letter-spacing: .06em; }
+  .mini .who a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  /* 说明文字：收起时两行、行尾省略号，点开后接着往下排 */
+  .mini .txt { color: var(--soft); font-size: 15px; line-height: 1.85; text-align: justify;
+               display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
   .mini.open .txt { display: block; }
   .mini.more { cursor: pointer; }
-  .repo .name { font-size: 15px; line-height: 1.4; font-weight: 600; word-break: break-all; }
-  .repo .name span { font-weight: 400; color: var(--faint); }
-  .repo .name a:hover { color: var(--accent); }
-  .repo .txt { margin: 4px 0 6px; }
-  .repo .meta { display: flex; gap: 12px; font-size: 12.5px; color: var(--faint); }
+  .mini.hidden-x { display: none; }
+  .more-x { display: inline-block; margin: 6px 0 18px; font-size: 13px; color: var(--faint); cursor: pointer; border-bottom: 1px solid var(--rule); }
+  .more-x:hover { color: var(--ink); border-bottom-color: var(--faint); }
+  .repo .name { font-family: var(--title); font-size: 18px; line-height: 1.4; color: var(--ink); -webkit-text-stroke: .2px currentColor; word-break: break-all; }
+  .repo .name span { color: var(--faint); -webkit-text-stroke: 0; }
+  .repo .name a:hover { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
+  .repo .txt { margin: 6px 0 8px; }
+  .repo .meta { display: flex; gap: 14px; font-size: 12px; color: var(--faint); letter-spacing: .04em; }
   .repo .meta .up { color: var(--up); font-weight: 600; }
-
-  /* 宽屏：正文栏656(原720，收窄四个字)，X和GitHub挪到右侧做吸顶边栏，用宽度但不拉长正文行 */
-  @media (min-width: 1220px) {
-    .page {
-      max-width: 1160px; padding-left: 24px; padding-right: 24px; display: grid; column-gap: 72px;
-      grid-template-columns: minmax(0, 656px) 360px; justify-content: center;
-    }
-    .mast { grid-column: 1 / -1; }
-    #feed, .foot { grid-column: 1; }
-    .aside {
-      grid-column: 2; grid-row: 2 / span 2; align-self: start;
-      position: sticky; top: 40px; margin-top: 0;
-      grid-template-columns: 1fr; gap: 40px;
-      max-height: calc(100vh - 80px); overflow-y: auto; scrollbar-width: none;
-    }
-    .aside::-webkit-scrollbar { display: none; }
-    .mini { font-size: .9rem; }
+  @media (max-width: 760px) {
+    .extra { grid-template-columns: 1fr; padding-top: 22px; }
+    .extra h4 { padding: 0 0 12px; display: flex; align-items: baseline; gap: 10px; }
+    .extra h4 span { display: inline; margin: 0; }
   }
 
   /* ---- 页脚：最近一次更新 + 收起来的运行日志 ---- */
@@ -257,8 +236,8 @@
     <div id="days"></div>
   </main>
   <section class="aside">
-    <div class="panel-x" id="board-x"><h4>他们在 X 上说</h4><div id="x"></div></div>
-    <div class="panel-gh"><h4>本周在涨的仓库</h4><div id="gh"></div></div>
+    <div class="extra" id="board-x"><h4>On X<span>他们在 X 上说</span></h4><div id="x"></div></div>
+    <div class="extra"><h4>Trending<span>本周在涨的仓库</span></h4><div id="gh"></div></div>
   </section>
   <details class="foot">
     <summary>最近一次更新 <span id="lastRun"></span> · 运行日志</summary>
@@ -518,33 +497,26 @@ function markFoldable() {
 }
 addEventListener('resize', markFoldable);
 
-const X_VISIBLE = 4;
-function fitX() {
-  const box = document.getElementById('x');
-  const minis = box.querySelectorAll('.mini');
-  const last = minis[X_VISIBLE - 1];
-  box.style.maxHeight = minis.length > X_VISIBLE ? `${last.offsetTop + last.offsetHeight}px` : '';
-}
-addEventListener('resize', fitX);
-{
-  const box = document.getElementById('x');
-  let idle;
-  box.addEventListener('scroll', () => {
-    box.classList.add('scrolling');
-    clearTimeout(idle);
-    idle = setTimeout(() => box.classList.remove('scrolling'), 800);
-  }, { passive: true });
-}
+const X_VISIBLE = 5;   // X 先露5条，其余点"再看 N 条"展开(原来是在深色面板里滚动)
+document.addEventListener('click', e => {
+  const m = e.target.closest('.more-x');
+  if (!m) return;
+  document.querySelectorAll('#x .hidden-x').forEach(el => el.classList.remove('hidden-x'));
+  m.remove();
+  markFoldable();
+});
 
 async function loadX() {
   const data = await (await fetch('data/x_recent.json')).json();
   document.getElementById('x').innerHTML = data.items.length
-    ? data.items.map(i => `<div class="mini xpost">
+    ? data.items.map((i, k) => `<div class="mini xpost${k >= X_VISIBLE ? ' hidden-x' : ''}">
         <span class="who"><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.person)}</a><em>${(i.date || '').slice(5)}</em></span>
         <div class="txt">${esc(i.summary || i.title)}</div></div>`).join('')
     : '<div class="empty">最近7天没有新动态</div>';
+  if (data.items.length > X_VISIBLE) {
+    document.getElementById('x').insertAdjacentHTML('beforeend', `<span class="more-x">再看 ${data.items.length - X_VISIBLE} 条</span>`);
+  }
   markFoldable();
-  fitX();
 }
 async function loadTrending() {
   const data = await (await fetch('data/trending.json')).json();
