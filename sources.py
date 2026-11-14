@@ -86,8 +86,7 @@ SOURCES = [
      "listing_urls": ["https://www.anthropic.com/news", "https://www.anthropic.com/research"],
      "article_path_pattern": r"^/(news|research)/(?!team/)[A-Za-z0-9-]+$"},
 
-    {"person": "Google", "type": "blog", "name": "Google DeepMind (官方博客)",
-     "url": "https://deepmind.google/blog/rss.xml"},
+    # 2026-11-14 用户说不跟DeepMind了，删掉了Google DeepMind官方博客这个源。库里已有的条目留着不动。
 ]
 # 2026-10-23加Teo Crawford(YouTube @TeoCrawford)：胶片/街拍摄影和日本慢生活vlog，约两周一条。
 #   用户原话"和craig有点像，对我的意义""我喜欢他的视频，可以不做过滤"，所以进了
@@ -125,6 +124,7 @@ SOURCES = [
 #     查过没用的：GitHub上Olshansk/rss-feeds这类第三方爬虫生成的feed——内容虽是官方的，但
 #     链路在别人手里，违反文件头"一手渠道"的规矩。
 # 2026-10-25加Google，用户要把大厂单独放一块"观摩巨头之间的竞争"，点名要Google和xAI。
+#   (2026-11-14删掉了：用户不想再跟DeepMind。下面是当时的记录。)
 #   Google  走deepmind.google/blog/rss.xml，近90天28条，Gemini新模型发布都在这里。混着森林
 #     测绘、抗菌肽这类科学稿，交给ai_tier去判。feed不带正文(summary只有一两百字符)，精判要
 #     WebFetch，跟OpenAI一样。person记成"Google"不记"Google DeepMind"，跟OpenAI/Anthropic
