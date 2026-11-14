@@ -120,6 +120,10 @@ def export(pipeline_run=False):
             "source_type": row["source_type"],
             "summary": row["digest_summary"],
             "tracks": tracks,
+            # 三条轨道的原始等级(含low)，页面标签和用户标注用(2026-11-14)。
+            # tracks里只留了medium/high、而且ALWAYS_ARCHIVE_PERSONS的锚点被抬成了high；
+            # 这里是数据库里的真实判断。公开站按PUBLIC_ITEM_FIELDS白名单导出，不会带出这个字段。
+            "tiers": {"ai": row["ai_tier"], "anchor": row["anchor_tier"], "eval": row["eval_tier"]},
         })
 
     recent_items.sort(key=lambda i: i["date"], reverse=True)

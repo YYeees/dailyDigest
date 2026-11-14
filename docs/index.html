@@ -59,6 +59,24 @@
   .tg { cursor: pointer; padding: 2px 0; border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
   .tg:hover { color: var(--ink); border-bottom-color: var(--faint); }
   .tg.on { color: var(--accent); font-weight: 600; }
+  /* 等级：HIGH 土橙、MEDIUM 灰、LOW 最浅；LOW 的轨道只展示，不能点 */
+  .tier { font-weight: 500; letter-spacing: .1em; margin-left: 3px; }
+  .tier-high { color: var(--date); }
+  .tier-medium { color: var(--who); }
+  .tier-low { color: #C2BEB4; }
+  .tg-low { cursor: default; color: #C2BEB4; }
+  .tg-low:hover { border-bottom-color: transparent; color: #C2BEB4; }
+  /* 标注按钮：平时隐藏，悬停那一条才浮现；标过的一直显示，选中的那一档填色 */
+  .lbls { display: inline-flex; gap: 4px; margin-left: 10px; opacity: 0; transition: opacity .15s; }
+  .lead:hover .lbls, .brief:hover .lbls, .lbls.set, .lbls:focus-within { opacity: 1; }
+  @media (hover: none) { .lbls { opacity: 1; } }
+  .lb { font: inherit; font-size: 11.5px; letter-spacing: .04em; text-transform: none; cursor: pointer;
+        color: var(--faint); background: transparent; border: 1px solid var(--rule); border-radius: 999px; padding: 1px 9px; line-height: 1.6; }
+  .lb:hover { color: var(--ink); border-color: var(--faint); }
+  .lb.on { color: #fff; border-color: transparent; }
+  .lb-like.on { background: var(--date); }
+  .lb-meh.on { background: var(--who); }
+  .lb-no.on { background: #9C9990; }
   .tg + .tg::before { content: "·"; margin: 0 6px; color: var(--faint); font-weight: 400; }
   .filter-on {
     display: flex; align-items: baseline; gap: 12px; padding: 12px 0;
@@ -118,6 +136,9 @@
               color: var(--ink); -webkit-text-stroke: .2px currentColor; font-feature-settings: "onum" 1; }
   .brief .t a:hover { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
   .brief .who { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--who); white-space: nowrap; }
+  .brief .brow { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 0; margin-top: 4px;
+                 font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); }
+  .brief .brow .tg + .tg::before { content: "·"; margin: 0 6px; color: var(--faint); }
   /* grid-template-rows 0fr→1fr 做高度动画，不用猜摘要有多高 */
   .brief .more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .25s ease; }
   .brief.open .more { grid-template-rows: 1fr; }
@@ -390,10 +411,49 @@ function best(i) {
   const ts = FILTER ? i.tracks.filter(t => t.track === FILTER) : i.tracks;
   return ts.some(t => t.tier === 'high') ? 'high' : 'medium';
 }
+// 标签：每条轨道 + 管线判的真实等级(HIGH/MEDIUM/LOW，来自recent.json的tiers)。
+// 判到medium/high的轨道(也就是在tracks里的)可以点来筛选；LOW的只是展示，颜色最浅。
 function tags(i) {
-  return i.tracks.map(t => `<span class="tg${t.track === FILTER ? ' on' : ''}" data-track="${t.track}"`
-    + ` title="只看${TRACK_LABEL[t.track]}">${TRACK_LABEL[t.track]}</span>`).join('');
+  const shown = new Set(i.tracks.map(t => t.track));
+  const tiers = i.tiers || Object.fromEntries(i.tracks.map(t => [t.track, t.tier]));
+  return Object.keys(TRACK_LABEL).filter(k => tiers[k] || shown.has(k)).map(k => {
+    const tier = (tiers[k] || (i.tracks.find(t => t.track === k) || {}).tier || 'low').toLowerCase();
+    const lvl = `<b class="tier tier-${tier}">${tier.toUpperCase()}</b>`;
+    return shown.has(k)
+      ? `<span class="tg${k === FILTER ? ' on' : ''}" data-track="${k}" title="只看${TRACK_LABEL[k]}">${TRACK_LABEL[k]} ${lvl}</span>`
+      : `<span class="tg tg-low" title="${TRACK_LABEL[k]}这条线判的是 ${tier}">${TRACK_LABEL[k]} ${lvl}</span>`;
+  }).join('');
 }
+
+// ---- 标注：用户自己的三档判断(喜欢/一般/不感兴趣)，给以后的嗅探器当训练数据 ----
+// 存两份：本浏览器(localStorage，用来显示已标的状态) + 点击记录后台(D1，以后分析用)。
+// 每条标注带上当时的机器等级，方便对比"管线判HIGH但我不感兴趣"这类分歧。
+const LABEL_KEY = 'digest-labels-v1';
+const LABELS = [['like', '喜欢'], ['meh', '一般'], ['no', '不感兴趣']];
+function loadLabels() { try { return JSON.parse(localStorage.getItem(LABEL_KEY) || '{}') || {}; } catch (e) { return {}; } }
+function saveLabel(link, v) {
+  try { const all = loadLabels(); if (v) all[link] = v; else delete all[link]; localStorage.setItem(LABEL_KEY, JSON.stringify(all)); }
+  catch (e) { /* 存不住也不影响后台那份 */ }
+}
+function labelBtns(i) {
+  if (IS_PUBLIC) return '';
+  const cur = loadLabels()[i.link];
+  return `<span class="lbls${cur ? ' set' : ''}" data-link="${esc(i.link)}">`
+    + LABELS.map(([v, txt]) => `<button type="button" class="lb lb-${v}${cur === v ? ' on' : ''}" data-label="${v}">${txt}</button>`).join('')
+    + '</span>';
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('.lb');
+  if (!b) return;
+  e.stopPropagation();
+  const box = b.closest('.lbls'), link = box.dataset.link;
+  const v = b.classList.contains('on') ? null : b.dataset.label;   // 再点一次取消
+  saveLabel(link, v);
+  box.querySelectorAll('.lb').forEach(x => x.classList.toggle('on', x.dataset.label === v));
+  box.classList.toggle('set', !!v);
+  const i = RECENT.find(x => x.link === link) || {};
+  track({ type: 'label', link, label: v, tiers: i.tiers || null, ...itemCtx(b), ...itemMeta(link) });
+}, true);
 function who(i) {
   return `<span class="who${i.person === WHO ? ' on' : ''}" data-who="${esc(i.person)}" title="只看${esc(i.person)}">${esc(i.person)}</span>`;
 }
@@ -414,7 +474,7 @@ function dayHead(iso, n) {
 function leadHTML(i) {
   return `<div class="lead" data-link="${esc(i.link)}" ${delay()}>
     <div class="src">${i.is_new ? '<span class="new" title="刚更新"></span>' : ''}${who(i)}
-      <span class="tracks">${noteBtn(i)}${tags(i)}</span></div>
+      <span class="tracks">${noteBtn(i)}${tags(i)}${labelBtns(i)}</span></div>
     <h3><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></h3>
     <p>${esc(summaryOf(i))}</p></div>`;
 }
@@ -424,7 +484,8 @@ function briefHTML(i) {
       <span class="t"><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></span>
       ${who(i)}
     </div>
-    <div class="more"><div><p>${esc(summaryOf(i))}</p><div class="tgs">${tags(i)}${noteBtn(i)}</div></div></div>
+    <div class="brow">${tags(i)}${labelBtns(i)}</div>
+    <div class="more"><div><p>${esc(summaryOf(i))}</p><div class="tgs">${noteBtn(i)}</div></div></div>
   </div>`;
 }
 function listHTML(list) {

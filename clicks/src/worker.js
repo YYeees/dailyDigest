@@ -8,7 +8,7 @@
 const SITE_ORIGIN = 'https://yyeees.github.io';
 const LOCAL_ORIGIN = /^http:\/\/(localhost|127\.0\.0\.1):\d+$/;   // 本地 http.server 预览，端口不固定
 const allowed = o => o === SITE_ORIGIN || LOCAL_ORIGIN.test(o || '');
-const TYPES = new Set(['view', 'click', 'expand']);
+const TYPES = new Set(['view', 'click', 'expand', 'label']);   // label=用户在Recent页的三档标注(喜欢/一般/不感兴趣)，2026-11-14加
 const MAX_BODY = 32 * 1024;   // view 事件带着整页的链接列表，七天一百来条，远小于这个数
 
 export default {

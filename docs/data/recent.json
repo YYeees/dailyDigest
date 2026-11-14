@@ -20,6 +20,11 @@
           "reason": "与锚点无实质连接"
         }
       ],
+      "tiers": {
+        "ai": "low",
+        "anchor": "low",
+        "eval": "low"
+      },
       "is_new": true
     },
     {
@@ -42,6 +47,11 @@
           "reason": "与锚点无实质连接"
         }
       ],
+      "tiers": {
+        "ai": "low",
+        "anchor": "low",
+        "eval": "low"
+      },
       "is_new": true
     },
     {
@@ -59,6 +69,11 @@
           "reason": "官方新功能公告，让agent能代为付款"
         }
       ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
       "is_new": true
     },
     {
@@ -76,6 +91,11 @@
           "reason": "创业者宣讲，偏叙事和项目介绍"
         }
       ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
       "is_new": true
     },
     {
@@ -98,6 +118,11 @@
           "reason": "讲怎么设计、运行和报告模型评测，教怎么测而不是报分数"
         }
       ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "high"
+      },
       "is_new": true
     },
     {
@@ -115,6 +140,11 @@
           "reason": "前沿模型新发布，讲清了定价和能力"
         }
       ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "low",
+        "eval": "low"
+      },
       "is_new": true
     },
     {
@@ -132,6 +162,11 @@
           "reason": "学习与情感、自我认知，二手访谈"
         }
       ],
+      "tiers": {
+        "ai": "low",
+        "anchor": "medium",
+        "eval": "low"
+      },
       "is_new": true
     },
     {
@@ -149,6 +184,11 @@
           "reason": "与The Jev Revolution重复，择一看即可"
         }
       ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
       "is_new": true
     },
     {
@@ -166,6 +206,11 @@
           "reason": "系统一模型是当前新趋势，文章讲清楚是什么以及工程师已经在做什么"
         }
       ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "low",
+        "eval": "low"
+      },
       "is_new": true
     },
     {
@@ -183,6 +228,11 @@
           "reason": "主题沾深度自我认识的边，二手访谈片段"
         }
       ],
+      "tiers": {
+        "ai": "low",
+        "anchor": "medium",
+        "eval": "low"
+      },
       "is_new": true
     },
     {
@@ -200,6 +250,11 @@
           "reason": "创作者访谈演示一套个人agent用法，偏推广和演示"
         }
       ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
       "is_new": true
     },
     {
@@ -217,6 +272,11 @@
           "reason": "AI行业融资新闻，偏宏观叙事"
         }
       ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
       "is_new": true
     },
     {
@@ -239,6 +299,11 @@
           "reason": "涉及编程agent工作流，但不是测试专题"
         }
       ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "low",
+        "eval": "medium"
+      },
       "is_new": true
     },
     {
@@ -261,6 +326,11 @@
           "reason": "创始人用一手构建经历解释如何改善代理工作环境。"
         }
       ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "high",
+        "eval": "low"
+      },
       "is_new": false
     },
     {
@@ -283,6 +353,11 @@
           "reason": "公开测量代码并说明均值、中位数和测量来源局限，但未评答案正确率。"
         }
       ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "low",
+        "eval": "medium"
+      },
       "is_new": false
     },
     {
@@ -310,6 +385,11 @@
           "reason": "提出开放任务评测与专家审查方向，缺少可直接落地的完整方法。"
         }
       ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "medium",
+        "eval": "medium"
+      },
       "is_new": false
     },
     {
@@ -332,6 +412,11 @@
           "reason": "将个人决策方式整理为代理可复用的工作说明。"
         }
       ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "medium",
+        "eval": "low"
+      },
       "is_new": false
     },
     {
@@ -359,6 +444,11 @@
           "reason": "介绍漏洞验证和安全测试案例，未给出完整复现流程。"
         }
       ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "medium",
+        "eval": "medium"
+      },
       "is_new": false
     },
     {
@@ -381,6 +471,11 @@
           "reason": "解释规格审查、机器检查证明与植入历史漏洞的验证流程。"
         }
       ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "low",
+        "eval": "high"
+      },
       "is_new": false
     },
     {
@@ -398,6 +493,11 @@
           "reason": "商家在ChatGPT中的信息管理功能介绍，全文抓取受阻。"
         }
       ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
       "is_new": false
     },
     {
@@ -415,6 +515,11 @@
           "reason": "结合长上下文收费与亲测，提供小模型选型思路。"
         }
       ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "low",
+        "eval": "low"
+      },
       "is_new": false
     },
     {
@@ -432,6 +537,11 @@
           "reason": "解释新模型成本、推理强度与实际任务费用的差异。"
         }
       ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "low",
+        "eval": "low"
+      },
       "is_new": false
     },
     {
@@ -449,6 +559,11 @@
           "reason": "给出能直接尝试的编程代理提示方式及对照结果。"
         }
       ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "medium",
+        "eval": "low"
+      },
       "is_new": false
     },
     {
@@ -466,6 +581,11 @@
           "reason": "作者亲手搭建感知与反馈环境解决生活问题，具体体现与模型共建及系统约束的重要性。"
         }
       ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "high",
+        "eval": "medium"
+      },
       "is_new": false
     },
     {
@@ -488,6 +608,11 @@
           "reason": "介绍机器人安全引导与开源越狱测试集，方法展开有限。"
         }
       ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "low",
+        "eval": "medium"
+      },
       "is_new": false
     },
     {
@@ -515,6 +640,11 @@
           "reason": "具体揭示固定截图评分被优化、评审规则膨胀及正确性检查漏掉整体质量，能改变智能体质量保障实践。"
         }
       ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "high",
+        "eval": "high"
+      },
       "is_new": false
     },
     {
@@ -537,6 +667,11 @@
           "reason": "说明代理能力取决于数据与工作环境。"
         }
       ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "medium",
+        "eval": "low"
+      },
       "is_new": false
     },
     {
@@ -564,6 +699,11 @@
           "reason": "展示真实任务环境、过程轨迹检查、部分得分及评分器被钻空子的案例，可直接启发智能体评测设计。"
         }
       ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "medium",
+        "eval": "high"
+      },
       "is_new": false
     },
     {
@@ -581,6 +721,11 @@
           "reason": "讨论控制欲与共依赖，连接深度自我认识。"
         }
       ],
+      "tiers": {
+        "ai": "low",
+        "anchor": "medium",
+        "eval": "low"
+      },
       "is_new": false
     },
     {
@@ -603,6 +748,11 @@
           "reason": "涉及模型运行监控与紧急停止的可靠性保障，但全文无法访问，具体方法尚不能核实。"
         }
       ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "medium"
+      },
       "is_new": false
     },
     {
@@ -625,6 +775,11 @@
           "reason": "作者亲述用人工编辑判断保护读者注意力，直接呼应认知系统不能外包与写作表达。"
         }
       ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "high",
+        "eval": "low"
+      },
       "is_new": false
     },
     {
@@ -647,6 +802,11 @@
           "reason": "提供智能体连接现实工具的构建案例，但主线不是认知反思。"
         }
       ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "medium",
+        "eval": "low"
+      },
       "is_new": false
     },
     {
@@ -674,6 +834,11 @@
           "reason": "实质讨论智能体代码审查、可验证环境和复现故障，但偏实践概览，没有完整测试方案。"
         }
       ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "high",
+        "eval": "medium"
+      },
       "is_new": false
     },
     {
@@ -696,6 +861,11 @@
           "reason": "与同源完整版重复，涉及智能体运行环境和人保持理解力的实践。"
         }
       ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "medium",
+        "eval": "low"
+      },
       "is_new": false
     }
   ]

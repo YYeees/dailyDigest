@@ -1,4 +1,5 @@
--- 一张表装所有事件。type：view=打开页面时屏幕上有哪些条目，click=点开原文，expand=展开简讯看摘要。
+-- 一张表装所有事件。type：view=打开页面时屏幕上有哪些条目，click=点开原文，expand=展开简讯看摘要，
+-- label=用户标注(data.label: like/meh/no，取消时为null；data.tiers 是当时三条轨道的机器等级)。
 -- 各类事件的字段不一样，统一塞进 data(JSON)，分析时用 json_extract 取。
 CREATE TABLE IF NOT EXISTS events (
   id    INTEGER PRIMARY KEY AUTOINCREMENT,
