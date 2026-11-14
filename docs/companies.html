@@ -34,12 +34,12 @@
   .top nav a:hover, .top nav a.on { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
 
   .wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
-  .intro { max-width: 860px; margin: 0 auto; padding: 96px 0 32px; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
-  .intro h1 { font-family: var(--serif); font-weight: 400; font-size: 34px; line-height: 1.2; margin: 0; letter-spacing: -.01em; }
-  .intro h1 em { color: var(--soft); }
-  .intro .status { font-size: 14px; color: var(--soft); line-height: 1.7; text-align: right; flex: none; }
+  .intro { max-width: 860px; margin: 0 auto; padding: 96px 0 30px; }
+  .intro h1 { font-family: var(--serif); font-weight: 400; font-size: 14px; letter-spacing: .24em; text-transform: uppercase; margin: 0; color: var(--soft); }
+  .intro .status { margin: 8px 0 0; font-size: 13.5px; color: var(--faint); }
+
   .intro .status b { color: var(--red); font-weight: 600; }
-  .intro .status button { color: var(--faint); font-size: 12.5px; }
+  .intro .status button { color: var(--faint); font-size: inherit; }
   .intro .status button:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 
   /* ---------------- 晨报：按日期分组，左边大日期，右边当天的几篇 ---------------- */
@@ -81,8 +81,7 @@
   @media (max-width: 760px) {
     .top { flex-wrap: wrap; row-gap: 14px; }
     .top nav { width: 100%; justify-content: space-between; gap: 0; }
-    .intro { display: block; padding: 64px 0 36px; }
-    .intro .status { margin-top: 14px; text-align: left; }
+    .intro { padding: 56px 0 26px; }
     /* 窄屏：大日期变成每组上方的一行 */
     .day { grid-template-columns: 1fr; gap: 14px; padding-top: 22px; }
     .d b { display: inline; font-size: 30px; margin-right: 6px; }
@@ -106,8 +105,8 @@
   </header>
   <div class="wrap">
     <section class="intro">
-      <div class="hd"><h1 id="headline">这 7 天，<em>Anthropic</em> 和 <em>OpenAI</em></h1></div>
-      <div class="status" id="status"></div>
+      <h1>Companies</h1>
+      <p class="status" id="status"></p>
     </section>
     <div class="filter-on" id="filterOn" hidden></div>
     <main class="list" id="list"></main>
@@ -135,8 +134,8 @@ function render() {
     b.date.localeCompare(a.date) || (RANK[b.priority] || 0) - (RANK[a.priority] || 0));
   const unread = all.filter(it => !seen.has(it.link)).length;
   document.getElementById('status').innerHTML = all.length
-    ? `一共 ${all.length} 篇${unread ? `，还有 <b>${unread}</b> 篇没看<br><button type="button" id="markAll">全部标为已读</button>` : '，都看过了'}`
-    : '';
+    ? `Anthropic 和 OpenAI 这 7 天的重要发布，${all.length} 篇${unread ? `，<b>${unread}</b> 篇没看 · <button type="button" id="markAll">全部标为已读</button>` : '，都看过了'}。`
+    : 'Anthropic 和 OpenAI 这 7 天的重要发布。';
 
   const fo = document.getElementById('filterOn');
   if (FILTER) {
