@@ -2,9 +2,10 @@
 导出「大公司」页(docs/companies.html)的数据：docs/data/companies.json。
 
 2026-11-14加。用户的原话是：平时很少点开这些公司的消息，但常在别处看到才发现"这个我错过了"；
-而每次打开公司官网，文章配图都让人很想点开。所以这一页是"补课"用的：
-- 只放近WINDOW_DAYS天里判成high的(ai_tier或eval_tier)，不刷屏
-- 以文章配图为主角(og:image)，前端做成杂志式大图
+而每次打开公司官网，文章配图都让人很想点开。所以这一页是"补课"用的。2026-11-14第二版(用户反馈"按公司分、只放high、杂志式"太乱)：
+- 只放近WINDOW_DAYS(7)天，不分公司、不筛tier，按时间排；优先级(ai_tier/eval_tier取高者)
+  只决定卡片大小，前端做成大小错落的拼贴
+- 有配图(og:image)就用，没有(OpenAI)就是纯文字卡，不硬造封面
 
 配图抓取：
 - 每篇文章抓一次og:image，抓到的按link缓存在上一次的companies.json里，之后不再请求；
@@ -29,8 +30,9 @@ sys.path.insert(0, str(ROOT))
 from config import DB_PATH  # noqa: E402
 
 OUT = ROOT / "docs" / "data" / "companies.json"
-WINDOW_DAYS = 60
-MAX_ITEMS = 48
+WINDOW_DAYS = 7
+MAX_ITEMS = 40
+RANK = {"high": 3, "medium": 2, "low": 1}
 
 COMPANIES = [
     # person字段跟digest.db里的一致。2026-11-14用户说不跟DeepMind了，这页只放这两家
@@ -80,11 +82,10 @@ def main():
     by_person = {c["person"]: c for c in COMPANIES}
     conn = sqlite3.connect(DB_PATH)
     rows = conn.execute(
-        f"""SELECT person, title, link, published, digest_summary
+        f"""SELECT person, title, link, published, digest_summary, ai_tier, eval_tier
             FROM items
             WHERE person IN ({",".join("?" * len(COMPANIES))})
               AND published >= ?
-              AND (ai_tier = 'high' OR eval_tier = 'high')
               AND (excluded_reason IS NULL OR excluded_reason = '')
             ORDER BY published DESC LIMIT ?""",
         (*by_person, since, MAX_ITEMS),
@@ -92,7 +93,7 @@ def main():
     conn.close()
 
     items, seen_links, fetched = [], set(), 0
-    for person, title, link, published, summary in rows:
+    for person, title, link, published, summary, ai_tier, eval_tier in rows:
         if link in seen_links:     # 同一篇偶尔会被两个feed各收一次
             continue
         seen_links.add(link)
@@ -106,6 +107,7 @@ def main():
         items.append({
             "company": c["name"], "key": c["key"], "title": title, "link": link,
             "date": (published or "")[:10], "summary": summary or "", "image": image,
+            "priority": max((ai_tier, eval_tier), key=lambda t: RANK.get(t or "", 0)) or "low",
         })
 
     OUT.write_text(json.dumps({
@@ -115,7 +117,7 @@ def main():
         "items": items,
     }, ensure_ascii=False, indent=1), encoding="utf-8")
     with_img = sum(1 for x in items if x["image"])
-    print(f"[OK] companies.json — {len(items)}条(近{WINDOW_DAYS}天high)，{with_img}条有配图，新抓配图{fetched}次")
+    print(f"[OK] companies.json — 近{WINDOW_DAYS}天{len(items)}条，{with_img}条有配图，新抓配图{fetched}次")
 
 
 if __name__ == "__main__":

@@ -9,17 +9,20 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap">
 <style>
   /* ============================================================
-     大公司 —— Anthropic、OpenAI 近期的重要发布，"补课"用。
-     用户平时很少点开公司消息，但常在别处看到才发现错过了；又觉得官网文章配图很想让人点。
-     所以：只放判成high的；以文章配图为主角，杂志式排版；没点开过的带红点，顶上告诉你还剩几条。
-     数据：data/companies.json(scripts/export_companies.py)。"看过"记在本浏览器。
-     OpenAI官网不让脚本抓配图，给它画黑底标题卡。
-     只在全量站。export_public.py不导出这个页面。
+     大公司 —— Anthropic、OpenAI 这7天发了什么。
+     第二版(2026-11-14)：用户觉得第一版(按公司分、杂志式)乱、没有美感，想要anthropic.com/research
+     那种错落、大小不一、散落着的游玩感。所以：
+     - 不分公司，按时间排；优先级(high/medium/low)只决定卡片多大
+     - 拼贴式排版：12列网格，按宽度一行行排，每行剩余空白分到不同位置，卡片再上下错开
+       (错开多少由链接算出来，每次打开都一样)
+     - 有配图用配图；没有(OpenAI)就是纯文字卡，标题本身当视觉，不硬造封面
+     - 没点开过的，日期前一个红点
+     数据：data/companies.json(scripts/export_companies.py)。只在全量站。
      ============================================================ */
   :root {
-    --bg: #FFFFFF; --ink: #111111; --soft: #4A4A4A; --faint: #8A8A8A; --rule: #111111; --hair: #E7E3DC;
-    --red: #9E2F22;
-    --anthropic: #C96442; --openai: #111111;
+    --bg: #FAF9F5; --ink: #141413; --soft: #4D4C48; --faint: #8F8D86; --rule: #141413; --hair: #E3E0D6;
+    --red: #B5442D;
+    --anthropic: #C96442; --openai: #141413;
     --serif: "Libre Baskerville", "Baskerville", "Songti SC", Georgia, serif;
     --sans: "Helvetica Neue", Helvetica, -apple-system, "PingFang SC", "Noto Sans SC", sans-serif;
   }
@@ -28,73 +31,64 @@
   a { color: inherit; text-decoration: none; }
   button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
 
-  .top { max-width: 1040px; margin: 0 auto; padding: 34px 24px 0; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .top { max-width: 1180px; margin: 0 auto; padding: 34px 28px 0; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
   .mark { font-family: var(--serif); font-size: 20px; }
   .top nav { display: flex; gap: 30px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
   .top nav a:hover, .top nav a.on { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
 
-  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
-  .intro { padding: 96px 0 28px; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
-  .intro h1 { font-family: var(--serif); font-weight: 400; font-size: 14px; letter-spacing: .24em; text-transform: uppercase; margin: 0; color: var(--soft); }
-  .intro p { margin: 8px 0 0; color: var(--faint); font-size: 13.5px; }
-  .status { font-size: 14px; color: var(--soft); text-align: right; }
-  .status b { color: var(--red); font-weight: 600; }
-  .status .dot, .unread-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--red); vertical-align: 2px; margin-right: 8px; }
-  .status button { display: block; margin-top: 4px; margin-left: auto; font-size: 12.5px; color: var(--faint); }
-  .status button:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+  .intro { padding: 110px 0 70px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: end; }
+  .intro .hd { grid-column: 1 / span 9; }
+  .intro h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(38px, 4.6vw, 60px); line-height: 1.05; margin: 0; letter-spacing: -.015em; }
+  .intro h1 em { color: var(--soft); }
+  .intro .status { grid-column: 10 / span 3; font-size: 14px; color: var(--soft); line-height: 1.7; }
+  .intro .status b { color: var(--red); font-weight: 600; }
+  .intro .status button { color: var(--faint); font-size: 12.5px; }
+  .intro .status button:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 
-  .filters { display: flex; gap: 26px; padding: 14px 0 0; border-top: 1px solid var(--rule); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
-  .filters button { color: var(--faint); padding-bottom: 4px; }
-  .filters button.on, .filters button:hover { color: var(--ink); }
-  .filters button.on { border-bottom: 1px solid var(--ink); }
+  /* ---------------- 拼贴 ---------------- */
+  .collage { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 28px; row-gap: 84px; padding-bottom: 120px; align-items: start; }
+  .piece { display: block; }
+  .piece .pic { display: block; overflow: hidden; border-radius: 6px; background: #EDEAE0; }
+  .piece .pic img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1s cubic-bezier(.2,.7,.2,1); }
+  .piece:hover .pic img { transform: scale(1.035); }
+  .piece.high .pic { aspect-ratio: 4 / 3; }
+  .piece.medium .pic { aspect-ratio: 1 / 1; }
+  .piece.low .pic { aspect-ratio: 3 / 2; }
 
-  /* ---------------- 配图 ---------------- */
-  .pic { position: relative; display: block; overflow: hidden; background: #F0EEE6; }
-  .pic img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .9s ease; }
-  a:hover .pic img, a:hover .pic .titlecard { transform: scale(1.025); }
-  /* 拿不到配图时的标题卡：OpenAI 黑底白字；其他(配图加载失败)象牙底深字 */
-  .titlecard { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 7%; transition: transform .9s ease; }
-  .titlecard .co { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; opacity: .7; }
-  .titlecard .tt { font-weight: 500; line-height: 1.12; letter-spacing: -.01em; }
-  .titlecard.openai { background: #000; color: #fff; }
-  .titlecard.anthropic { background: #F0EEE6; color: #191919; }
-  .titlecard.anthropic .tt { font-family: var(--serif); font-weight: 400; }
-  .badge { position: absolute; z-index: 2; top: 14px; right: 14px; width: 11px; height: 11px; border-radius: 50%; background: var(--red); box-shadow: 0 0 0 3px #fff; }
-
-  .meta { display: flex; gap: 10px; align-items: baseline; font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); margin-top: 16px; }
-  .meta .co { font-weight: 600; }
+  .meta { display: flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); }
   .meta .co.anthropic { color: var(--anthropic); }
   .meta .co.openai { color: var(--openai); }
+  .meta .unread { width: 7px; height: 7px; border-radius: 50%; background: var(--red); flex: none; }
+  .piece h2 { font-family: var(--serif); font-weight: 400; margin: 8px 0 0; letter-spacing: -.005em; transition: color .2s; }
+  .piece:hover h2 { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
+  .piece.high h2 { font-size: 29px; line-height: 1.22; }
+  .piece.medium h2 { font-size: 21px; line-height: 1.32; }
+  .piece.low h2 { font-size: 16.5px; line-height: 1.45; }
+  .piece .sum { margin: 12px 0 0; color: var(--soft); font-size: 14.5px; line-height: 1.8;
+                display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .piece.read h2 { color: var(--soft); }
 
-  /* 头条 */
-  .lead { display: grid; grid-template-columns: 1.55fr 1fr; gap: 40px; align-items: end; padding: 40px 0 48px; border-bottom: 1px solid var(--hair); }
-  .lead .pic { aspect-ratio: 16 / 10; }
-  .lead .pic .titlecard .tt { font-size: clamp(26px, 3.4vw, 42px); }
-  .lead h2 { font-family: var(--serif); font-weight: 400; font-size: 32px; line-height: 1.25; margin: 10px 0 0; }
-  .lead .sum { color: var(--soft); font-size: 15px; line-height: 1.85; margin: 16px 0 0; text-align: justify; }
-  .lead .go { display: inline-block; margin-top: 18px; color: var(--soft); font-size: 15px; }
-  .lead a:hover h2 { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+  /* 纯文字卡：没有配图，标题本身就是画面 */
+  .piece.text { border-top: 1px solid var(--rule); padding-top: 4px; }
+  .piece.text .meta { margin-top: 12px; }
+  .piece.text.high h2 { font-size: 38px; line-height: 1.12; }
+  .piece.text.medium h2 { font-size: 30px; line-height: 1.16; }
+  .piece.text.low h2 { font-size: 21px; line-height: 1.3; }
 
-  /* 其余两列 */
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px 40px; padding: 44px 0 40px; }
-  .card .pic { aspect-ratio: 16 / 10; }
-  .card .pic .titlecard .tt { font-size: clamp(20px, 2.2vw, 28px); }
-  .card h3 { font-family: var(--serif); font-weight: 400; font-size: 21px; line-height: 1.35; margin: 8px 0 0; }
-  .card a:hover h3 { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
-  .card .sum { color: var(--soft); font-size: 14px; line-height: 1.75; margin: 10px 0 0;
-               display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-  .is-read h2, .is-read h3 { color: var(--soft); }
+  .empty { grid-column: 1 / -1; color: var(--faint); font-family: var(--serif); font-style: italic; font-size: 20px; padding: 40px 0; }
 
-  .foot { text-align: center; color: var(--faint); font-size: 13px; padding: 20px 24px 90px; border-top: 1px solid var(--rule); }
-
-  @media (max-width: 760px) {
+  @media (max-width: 860px) {
     .top nav { gap: 14px; font-size: 11.5px; }
-    .intro { padding-top: 56px; }
-    .lead { grid-template-columns: 1fr; gap: 0; padding-top: 28px; }
-    .lead h2 { font-size: 26px; }
-    .grid { grid-template-columns: 1fr; gap: 40px; }
-    .status { text-align: left; }
-    .status button { margin-left: 0; }
+    .intro { display: block; padding: 64px 0 48px; }
+    .intro .status { margin-top: 18px; }
+    .collage { display: block; }
+    /* 窄屏：一列，但左右交替缩进，保留一点散落感 */
+    .piece { width: 86%; margin: 0 0 64px 0 !important; }
+    .piece:nth-child(even) { margin-left: 14% !important; }
+    .piece.high { width: 100%; margin-left: 0 !important; }
+    .piece.text.high h2 { font-size: 30px; }
+    .piece.text.medium h2 { font-size: 25px; }
   }
   @media (prefers-reduced-motion: reduce) { * { transition-duration: .01ms !important; } }
 </style>
@@ -111,16 +105,11 @@
   </header>
   <div class="wrap">
     <section class="intro">
-      <div>
-        <h1>Companies</h1>
-        <p id="sub">Anthropic 和 OpenAI 近期的重要发布。</p>
-      </div>
+      <div class="hd"><h1 id="headline">这 7 天，<em>Anthropic</em> 和 <em>OpenAI</em></h1></div>
       <div class="status" id="status"></div>
     </section>
-    <div class="filters" id="filters"></div>
-    <main id="main"></main>
+    <main class="collage" id="collage"></main>
   </div>
-  <p class="foot" id="foot"></p>
 
 <script>
 const SEEN_KEY = 'companies-seen-v1';   // [link, ...] 点开过的
@@ -128,84 +117,105 @@ const loadSeen = () => { try { return new Set(JSON.parse(localStorage.getItem(SE
 const saveSeen = s => { try { localStorage.setItem(SEEN_KEY, JSON.stringify([...s])); } catch (e) {} };
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-const fmt = iso => { const [y, m, d] = iso.split('-').map(Number); return `${MONTHS[m - 1]} ${d}, ${y}`; };
+const fmt = iso => { const [, m, d] = iso.split('-').map(Number); return `${MONTHS[m - 1]} ${d}`; };
+const RANK = { high: 3, medium: 2, low: 1 };
+
+// 由链接算一个稳定的伪随机数(0~1)：每次打开排版都一样，但每张卡片各不相同
+function rnd(str, salt) {
+  let h = 2166136261 ^ salt;
+  for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return ((h >>> 0) % 1000) / 1000;
+}
+
+// 卡片宽度(12列里占几列)：有图的大一些；纯文字卡窄一点，像散落的标语
+const WIDTH = {
+  img:  { high: 7, medium: 5, low: 4 },
+  text: { high: 5, medium: 4, low: 3 },
+};
+
+// 拼贴：一行一行排，每行剩下的列随机分到行首和卡片之间；每张卡片再上下错开一点
+function layout(items) {
+  const rows = [];
+  let row = [], used = 0;
+  for (const it of items) {
+    const w = WIDTH[it.image ? 'img' : 'text'][it.priority] || 4;
+    if (used + w > 12 && row.length) { rows.push(row); row = []; used = 0; }
+    row.push({ it, w }); used += w;
+  }
+  if (row.length) rows.push(row);
+
+  rows.forEach((r, ri) => {
+    let spare = 12 - r.reduce((s, x) => s + x.w, 0);
+    let col = 1;
+    r.forEach((x, i) => {
+      // 剩余空白：第一张卡片前给一部分，卡片之间再给一部分；奇偶行方向相反，制造错落
+      let gap = 0;
+      if (spare > 0) {
+        const share = rnd(x.it.link, ri) < .5 ? 1 : Math.min(2, spare);
+        gap = (i === 0 && ri % 2 === 0) ? 0 : Math.min(spare, share);
+        if (i === r.length - 1 && ri % 2 === 1) gap = spare;   // 奇数行把剩下的都推到前面，整行靠右
+      }
+      spare -= gap; col += gap;
+      x.col = col; col += x.w;
+      // 上下错开：有图的0~70px，纯文字卡更多一些，像飘在图旁边的说明
+      const base = x.it.image ? 0 : 36;
+      x.dy = Math.round(base + rnd(x.it.link, 7) * (x.it.image ? 70 : 110));
+    });
+    // 每三行里第三行左右镜像：大图换到右边，避免"左图右文"一路重复下去
+    if (ri % 3 === 2) r.forEach(x => { x.col = 14 - x.col - x.w; });
+  });
+  return rows.flat();
+}
 
 let DATA = null;
-let filter = 'all';
-
-function titlecard(it) {
-  return `<div class="titlecard ${esc(it.key)}"><span class="co">${esc(it.company)}</span><span class="tt">${esc(it.title)}</span></div>`;
-}
-function pic(it, seen) {
-  const inner = it.image
-    ? `<img src="${esc(it.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" data-link="${esc(it.link)}">`
-    : titlecard(it);
-  return `<span class="pic">${seen.has(it.link) ? '' : '<span class="badge" title="还没看过"></span>'}${inner}</span>`;
-}
-function meta(it) {
-  return `<div class="meta"><span class="co ${esc(it.key)}">${esc(it.company)}</span><span>${fmt(it.date)}</span></div>`;
-}
 
 function render() {
   const seen = loadSeen();
-  const items = DATA.items.filter(it => filter === 'all' || it.key === filter);
-  const unread = DATA.items.filter(it => !seen.has(it.link)).length;
+  const items = DATA.items.slice().sort((a, b) =>
+    b.date.localeCompare(a.date) || (RANK[b.priority] || 0) - (RANK[a.priority] || 0));
+  const unread = items.filter(it => !seen.has(it.link)).length;
 
-  document.getElementById('sub').textContent = `Anthropic 和 OpenAI 近 ${DATA.window_days} 天的重要发布，一共 ${DATA.items.length} 条。`;
-  document.getElementById('status').innerHTML = unread
-    ? `<span class="dot"></span>还有 <b>${unread}</b> 条没看<button type="button" id="markAll">全部标为已读</button>`
-    : '都看过了';
-  document.getElementById('filters').innerHTML = [['all', '全部'], ...DATA.companies.map(c => [c.key, c.name])]
-    .map(([k, label]) => `<button type="button" data-k="${k}" class="${k === filter ? 'on' : ''}">${esc(label)}</button>`).join('');
+  document.getElementById('status').innerHTML = items.length
+    ? `一共 ${items.length} 篇${unread ? `，还有 <b>${unread}</b> 篇没看<br><button type="button" id="markAll">全部标为已读</button>` : '，都看过了'}`
+    : '';
+  if (!items.length) {
+    document.getElementById('collage').innerHTML = '<p class="empty">这 7 天两家都没发什么。</p>';
+    return;
+  }
 
-  if (!items.length) { document.getElementById('main').innerHTML = '<p class="foot">这里还没有内容。</p>'; return; }
-  const [lead, ...rest] = items;
-  const readCls = it => (seen.has(it.link) ? ' is-read' : '');
-  document.getElementById('main').innerHTML = `
-    <article class="lead${readCls(lead)}">
-      <a href="${esc(lead.link)}" target="_blank" rel="noopener" data-link="${esc(lead.link)}">${pic(lead, seen)}</a>
-      <div>
-        ${meta(lead)}
-        <a href="${esc(lead.link)}" target="_blank" rel="noopener" data-link="${esc(lead.link)}"><h2>${esc(lead.title)}</h2></a>
-        ${lead.summary ? `<p class="sum">${esc(lead.summary)}</p>` : ''}
-        <a class="go" href="${esc(lead.link)}" target="_blank" rel="noopener" data-link="${esc(lead.link)}">Read →</a>
-      </div>
-    </article>
-    <section class="grid">${rest.map(it => `
-      <article class="card${readCls(it)}">
-        <a href="${esc(it.link)}" target="_blank" rel="noopener" data-link="${esc(it.link)}">
-          ${pic(it, seen)}
-          ${meta(it)}
-          <h3>${esc(it.title)}</h3>
-          ${it.summary ? `<p class="sum">${esc(it.summary)}</p>` : ''}
-        </a>
-      </article>`).join('')}
-    </section>`;
-  // 配图挂了：换成标题卡
+  document.getElementById('collage').innerHTML = layout(items).map(({ it, w, col, dy }) => {
+    const isText = !it.image;
+    const cls = ['piece', it.priority || 'low', isText ? 'text' : '', seen.has(it.link) ? 'read' : ''].join(' ');
+    const showSum = it.summary && (it.priority === 'high' || (isText && it.priority === 'medium'));
+    return `<a class="${cls}" href="${esc(it.link)}" target="_blank" rel="noopener" data-link="${esc(it.link)}"
+               style="grid-column:${col} / span ${w}; margin-top:${dy}px">
+      ${isText ? '' : `<span class="pic"><img src="${esc(it.image)}" alt="" loading="lazy" referrerpolicy="no-referrer"></span>`}
+      <div class="meta">${seen.has(it.link) ? '' : '<span class="unread" title="还没看过"></span>'}<span class="co ${esc(it.key)}">${esc(it.company)}</span><span>· ${fmt(it.date)}</span></div>
+      <h2>${esc(it.title)}</h2>
+      ${showSum ? `<p class="sum">${esc(it.summary)}</p>` : ''}
+    </a>`;
+  }).join('');
+
+  // 配图挂了：这张卡片变成纯文字卡
   document.querySelectorAll('.pic img').forEach(img => img.addEventListener('error', () => {
-    const it = DATA.items.find(x => x.link === img.dataset.link);
-    img.replaceWith(Object.assign(document.createElement('div'), { innerHTML: titlecard(it) }).firstChild);
+    const piece = img.closest('.piece');
+    img.parentElement.remove();
+    piece.classList.add('text');
   }, { once: true }));
 }
 
 document.addEventListener('click', e => {
-  const f = e.target.closest('#filters button');
-  if (f) { filter = f.dataset.k; render(); return; }
   if (e.target.id === 'markAll') {
     const s = loadSeen(); DATA.items.forEach(it => s.add(it.link)); saveSeen(s); render(); return;
   }
   const a = e.target.closest('a[data-link]');
-  if (a) {
-    const s = loadSeen(); s.add(a.dataset.link); saveSeen(s);
-    setTimeout(render, 300);   // 等新标签页打开后再刷新红点
-  }
+  if (a) { const s = loadSeen(); s.add(a.dataset.link); saveSeen(s); setTimeout(render, 300); }
 });
 
 (async function init() {
   try { DATA = await (await fetch('data/companies.json')).json(); }
-  catch (e) { document.getElementById('main').innerHTML = '<p class="foot">数据没读到。</p>'; return; }
+  catch (e) { document.getElementById('collage').innerHTML = '<p class="empty">数据没读到。</p>'; return; }
   render();
-  document.getElementById('foot').textContent = `更新于 ${DATA.updated_at.slice(0, 10)}`;
 })();
 </script>
 </body>
