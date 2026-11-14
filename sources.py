@@ -244,11 +244,12 @@ X_SOURCES = [
     {"person": "Andrej Karpathy", "x_username": "karpathy"},
     {"person": "Boris Cherny", "x_username": "bcherny"},
     {"person": "Peter Steinberger", "x_username": "steipete"},
-    {"person": "SpaceX Super Intelligence", "x_username": "SpaceXSI"},
-    {"person": "Grok Bot", "x_username": "bot"},
-    {"person": "Cursor", "x_username": "cursor_ai"},
+    # 2026-11-14 用户：大公司只跟Anthropic和OpenAI，其他公司的号都停掉(注释掉，不删，想恢复去掉#即可)
+    # {"person": "SpaceX Super Intelligence", "x_username": "SpaceXSI"},
+    # {"person": "Grok Bot", "x_username": "bot"},
+    # {"person": "Cursor", "x_username": "cursor_ai"},
 ]
-# 2026-10-25加xAI一家三个号，用户要单独看大厂之间的竞争，点名要xAI。x.ai全站对脚本403、没有RSS，只能走X。
+# 2026-10-25加xAI一家三个号，用户要单独看大厂之间的竞争，点名要xAI。(2026-11-14已注释掉，见上)x.ai全站对脚本403、没有RSS，只能走X。
 #   用户原话"xai收购了cursor，spacex和他们也是一个大家庭""grok bot还蛮火的"。
 #   身份都查TwitterAPI.io的user/info核实过，三个都是蓝标Business认证：
 #   - @SpaceXSI  name="SpaceX Super Intelligence"，xAI并进SpaceX后的官方号，208万粉。旧号@xai
