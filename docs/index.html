@@ -134,7 +134,11 @@
          display: flex; flex-wrap: wrap; gap: 4px; align-items: center; line-height: 1.5; margin-bottom: 4px; }
   .src .who { color: var(--ink); font-weight: 600; }
   .src .sep { margin: 0 6px; color: var(--faint); }
+  /* 轨道名(AI · Core · Eval)跟等级 LOW 同一个浅色(2026-11-14 用户要的)；悬停、选中时照常变深 */
   .src .tracks { display: inline-flex; align-items: center; }
+  .src .tracks .tg { color: #C2BEB4; }
+  .src .tracks .tg:hover { color: var(--ink); }
+  .src .tracks .tg.on { color: var(--accent); }
   .src .acts { margin-left: auto; display: inline-flex; align-items: center; }
   /* 标题在上、信息行在下(2026-11-14 用户要试的顺序)：标题 → 来源·轨道·等级 → 摘要 */
   .lead h3 { font-family: var(--title); font-size: 26px; line-height: 1.2; font-weight: 400; margin: 0 0 4px; letter-spacing: -.005em;
