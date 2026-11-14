@@ -9,6 +9,8 @@
       "source_type": "x",
       "summary": "Cursor发布了最近那次安全事件的详细说明，包含发生经过和补救措施。用户可以点开看看自己是否受影响。",
       "tier": "medium",
+      "text": "We’ve published an update on our recent security incident. See a detailed overview of what happened and our remediation steps here:",
+      "handle": null,
       "is_new": true
     },
     {
@@ -20,6 +22,8 @@
       "source_type": "x",
       "summary": "Grok Bot现在可以加入会议，回答问题、接任务，还能记录团队的决定。",
       "tier": "medium",
+      "text": "Grok Bot can now join meetings.\n\nAsk it questions, assign it work, or have it keep track of what your team decides.",
+      "handle": null,
       "is_new": true
     },
     {
@@ -31,6 +35,8 @@
       "source_type": "x",
       "summary": "Grok Bot在Mac上可以使用信息、邮件、备忘录、日历、位置和通讯录了。意味着个人助理开始能碰系统里的私人数据，用之前要想想权限。",
       "tier": "medium",
+      "text": "Grok Bot on Mac can now use Messages, Mail, Notes, Reminders, Calendar, Location, and Contacts.",
+      "handle": null,
       "is_new": true
     },
     {
@@ -42,6 +48,8 @@
       "source_type": "x",
       "summary": "Cursor宣布接入Gemini 4 Hydrogen，默认档位在自家评测上明显超过上一代。适合Cursor用户决定要不要切模型。",
       "tier": "medium",
+      "text": "Gemini 4 Hydrogen is now available in Cursor!\n\nAt its default effort, it scores 54.3% on CursorBench, up from 39.6% for Gemini 3.8 Flash.",
+      "handle": null,
       "is_new": true
     },
     {
@@ -53,6 +61,8 @@
       "source_type": "x",
       "summary": "官方账号同步宣布Grok Bot 1.0，强调机器人可以共享，协作能力更强。内容和Grok Bot自己的发布一致，看一条就够。",
       "tier": "medium",
+      "text": "Introducing Grok Bot 1.0.\n\nBots can be shared and are more collaborative and capable than ever.",
+      "handle": null,
       "is_new": true
     },
     {
@@ -64,6 +74,8 @@
       "source_type": "x",
       "summary": "Grok Bot 1.0发布，主打可以在团队里共享的AI队友，能在Slack和Teams里协作，还能拉进会议。看点是它把个人助理往团队协作方向推了一步。",
       "tier": "medium",
+      "text": "Introducing Grok Bot 1.0. AI teammates that work alongside your whole team.\n\nShare Bots, collaborate with them in Slack and Teams, invite them to meetings, and watch them learn and become more helpful.",
+      "handle": null,
       "is_new": true
     },
     {
@@ -75,6 +87,8 @@
       "source_type": "x",
       "summary": "Grok Bot和Gopuff合作，可以直接帮你下单买日用品和零食。属于产品合作的宣传，了解一下它的使用场景即可。",
       "tier": "low",
+      "text": "Order groceries, snacks, and essentials end-to-end with Bot and Gopuff",
+      "handle": null,
       "is_new": true
     },
     {
@@ -86,6 +100,8 @@
       "source_type": "x",
       "summary": "Cursor 宣布重做 Projects，让团队成员和各自的代理在同一个工作区协作。重点从个人使用代理转向团队协调，适合正在把编程代理引入多人项目的人关注。",
       "tier": "high",
+      "text": "Your agents can now coordinate with your teammatesâ€™ agents.\n\nProjects has been rebuilt for multiplayer: every teammate and their agents can now work together in one unified workspace.",
+      "handle": null,
       "is_new": false
     },
     {
@@ -97,6 +113,8 @@
       "source_type": "x",
       "summary": "Grok Bot 现在可以加入个人或公司的 Tailscale 私有网络，访问内部工具、应用和私有 MCP 服务。适合希望把代理接到内部工作环境的人关注。",
       "tier": "high",
+      "text": "Grok Bot can now join your personal or company tailnets on Tailscale.\n\nUse it to securely reach private MCP servers, internal tools, and apps on your network.",
+      "handle": null,
       "is_new": false
     },
     {
@@ -108,6 +126,8 @@
       "source_type": "x",
       "summary": "Cursor 宣布已接入 Gemini 4 Carbon，并引用自家编程榜单说明其表现。适合正在选择编辑器内模型的用户关注，榜单成绩不等于你的项目效果。",
       "tier": "medium",
+      "text": "Gemini 4 Carbon is now available in Cursor!\n\nAt high effort, it's the top model on CursorBench at 60.4%",
+      "handle": null,
       "is_new": false
     },
     {
@@ -119,6 +139,8 @@
       "source_type": "x",
       "summary": "Cursor宣布已接入Claude Fable 5.2，并称它在最高思考强度下位居自家评测榜首。日常使用者可以在编辑器里尝试新模型，但这些成绩来自Cursor自己的测试，是否适合你的任务还要实际比较。",
       "tier": "medium",
+      "text": "Claude Fable 5.2 is now available in Cursor!\n\nAt max effort, it's the top model on CursorBench at 60%.\n\nFable 5.2 scores 56.9% on CursorBench at default effort, up from 49.2% for Fable 5.1.",
+      "handle": null,
       "is_new": false
     },
     {
@@ -130,6 +152,8 @@
       "source_type": "x",
       "summary": "Grok Bot宣布已为所有用户重置每周使用限额，已经用完额度的人可以重新使用。公告没有提供其他功能变化或后续额度规则。",
       "tier": "medium",
+      "text": "We've reset weekly limits for all Grok Bot users.\n\nEnjoy!",
+      "handle": null,
       "is_new": false
     },
     {
@@ -141,6 +165,8 @@
       "source_type": "x",
       "summary": "Karpathy把一份YouTube频道推荐做成了TristanTube，集中浏览技术视频，还加入了适合靠着看的电视模式。他说这是用Claude Code几分钟一次生成的，展示了把个人学习需求快速做成工具的可能。",
       "tier": "medium",
+      "text": "Earlier this week Tristan published his top YouTube channels:\nWhich looked excellent so clearly I had to turn it into TristanTube:\n47K super nerdy videos +TV mode for laid back watching. (One-shotted with Claude Code in 3 minutes)",
+      "handle": "karpathy",
       "is_new": false
     }
   ]

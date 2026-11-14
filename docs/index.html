@@ -189,8 +189,25 @@
                display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
   .mini.open .txt { display: block; }
   .mini.more { cursor: pointer; }
-  .mini.hidden-x { display: none; }
-  .more-x { display: inline-block; margin: 6px 0 18px; font-size: 13px; color: var(--faint); cursor: pointer; border-bottom: 1px solid var(--rule); }
+  /* X 引语卡：白底卡片两列；头像 + 名字/@账号·日期；英文原话(Iowan 斜体，前面一个土橙大引号)；中文转述 */
+  #x { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding-top: 4px; }
+  .xcard { display: flex; flex-direction: column; gap: 12px; background: #fff; border: 1px solid var(--rule); border-radius: 10px;
+           padding: 16px 18px 14px; transition: border-color .2s, box-shadow .2s; }
+  .xcard:hover { border-color: #D5D0C4; box-shadow: 0 4px 14px rgba(40, 30, 10, .06); }
+  .xcard.hidden-x { display: none; }
+  .xwho { display: flex; align-items: center; gap: 10px; }
+  .xwho .av { width: 32px; height: 32px; border-radius: 50%; overflow: hidden; flex: none; background: #E9E5DB;
+              display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: var(--who); }
+  .xwho .av img { width: 100%; height: 100%; object-fit: cover; }
+  .xmeta { display: flex; flex-direction: column; line-height: 1.3; }
+  .xmeta .nm { font-size: 13px; font-weight: 600; color: var(--ink); }
+  .xmeta .hd { font-size: 12px; color: var(--faint); }
+  .xq { position: relative; padding-left: 18px; font-family: var(--title); font-style: italic; font-size: 16.5px; line-height: 1.5;
+        color: var(--ink); white-space: pre-line; overflow-wrap: anywhere; }
+  .xq::before { content: "\201C"; position: absolute; left: -2px; top: -8px; font: 36px/1 var(--title); color: var(--date); }
+  .xzh { font-size: 13px; line-height: 1.7; color: var(--soft); border-top: 1px dashed var(--rule); padding-top: 10px; }
+  @media (max-width: 760px) { #x { grid-template-columns: 1fr; } }
+  .more-x { display: inline-block; margin: 16px 0 18px; font-size: 13px; color: var(--faint); cursor: pointer; border-bottom: 1px solid var(--rule); }
   .more-x:hover { color: var(--ink); border-bottom-color: var(--faint); }
   .repo .name { font-family: var(--title); font-size: 18px; line-height: 1.4; color: var(--ink); -webkit-text-stroke: .2px currentColor; word-break: break-all; }
   .repo .name span { color: var(--faint); -webkit-text-stroke: 0; }
@@ -249,7 +266,7 @@
     <div id="days"></div>
   </main>
   <section class="aside">
-    <div class="extra" id="board-x"><h4>On X<span>他们在 X 上说</span></h4><div id="x"></div></div>
+    <div class="extra" id="board-x"><h4>On X<span>他们在 X 上说</span></h4><div><div id="x"></div></div></div>
     <div class="extra"><h4>Trending<span>本周在涨的仓库</span></h4><div id="gh"></div></div>
   </section>
   <details class="foot">
@@ -549,26 +566,38 @@ function markFoldable() {
 }
 addEventListener('resize', markFoldable);
 
-const X_VISIBLE = 5;   // X 先露5条，其余点"再看 N 条"展开(原来是在深色面板里滚动)
+const X_VISIBLE = 6;   // X 先露6条(两列各三张)，其余点"再看 N 条"展开
 document.addEventListener('click', e => {
   const m = e.target.closest('.more-x');
   if (!m) return;
   document.querySelectorAll('#x .hidden-x').forEach(el => el.classList.remove('hidden-x'));
   m.remove();
-  markFoldable();
 });
 
+// X 动态：引语卡(2026-11-14 用户从两种样式里挑的)——头像 + 名字/@账号/日期，推文英文原话当引语，
+// 下面一行中文转述。两列，先露 X_VISIBLE 条，其余点"再看 N 条"。头像来自 unavatar.io，挂了退回首字母
+function xAvatar(i) {
+  const ini = esc((i.person || '?')[0]);
+  return i.handle
+    ? `<span class="av"><img src="https://unavatar.io/x/${esc(i.handle)}" alt="" loading="lazy" referrerpolicy="no-referrer" data-ini="${ini}"></span>`
+    : `<span class="av">${ini}</span>`;
+}
 async function loadX() {
   const data = await (await fetch('data/x_recent.json')).json();
-  document.getElementById('x').innerHTML = data.items.length
-    ? data.items.map((i, k) => `<div class="mini xpost${k >= X_VISIBLE ? ' hidden-x' : ''}">
-        <span class="who"><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.person)}</a><em>${(i.date || '').slice(5)}</em></span>
-        <div class="txt">${esc(i.summary || i.title)}</div></div>`).join('')
+  const box = document.getElementById('x');
+  box.innerHTML = data.items.length
+    ? data.items.map((i, k) => `<a class="xcard${k >= X_VISIBLE ? ' hidden-x' : ''}" href="${esc(i.link)}" target="_blank" rel="noopener">
+        <span class="xwho">${xAvatar(i)}<span class="xmeta"><span class="nm">${esc(i.person)}</span>`
+        + `<span class="hd">${i.handle ? '@' + esc(i.handle) + ' · ' : ''}${esc((i.date || '').slice(5))}</span></span></span>
+        <span class="xq">${esc((i.text || i.title).replace(/\n\s*\n+/g, '\n'))}</span>
+        ${i.summary ? `<span class="xzh">${esc(i.summary)}</span>` : ''}</a>`).join('')
     : '<div class="empty">最近7天没有新动态</div>';
   if (data.items.length > X_VISIBLE) {
-    document.getElementById('x').insertAdjacentHTML('beforeend', `<span class="more-x">再看 ${data.items.length - X_VISIBLE} 条</span>`);
+    box.insertAdjacentHTML('afterend', `<span class="more-x">再看 ${data.items.length - X_VISIBLE} 条</span>`);
   }
-  markFoldable();
+  box.querySelectorAll('.av img').forEach(img => img.addEventListener('error', () => {
+    img.parentElement.textContent = img.dataset.ini;
+  }, { once: true }));
 }
 async function loadTrending() {
   const data = await (await fetch('data/trending.json')).json();

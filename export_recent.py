@@ -29,11 +29,13 @@
 
 import argparse
 import json
+import re
 import sqlite3
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from sources import X_SOURCES
 from config import (
     ALWAYS_ARCHIVE_PERSONS, COMPANY_PERSONS, DB_PATH, HIGH_ONLY_PERSON_LIMIT, HIGH_ONLY_PERSONS,
     HIGH_ONLY_RECENT_DAYS, RECENT_WINDOW_DAYS, X_HIGH_ONLY_PERSONS,
@@ -42,6 +44,7 @@ from new_flags import load_prev_items, mark_new
 
 
 OUT_DIR = Path("docs/data")
+X_HANDLES = {s["person"]: s["x_username"] for s in X_SOURCES}
 TRACKS = (("ai", "ai_tier", "ai_reason"), ("anchor", "anchor_tier", "anchor_reason"),
           ("eval", "eval_tier", "eval_reason"))
 
@@ -149,6 +152,9 @@ def export(pipeline_run=False):
             "source_type": row["source_type"],
             "summary": row["digest_summary"],
             "tier": best_tier(row["ai_tier"], row["anchor_tier"]),
+            # 推文原话(去掉末尾的 t.co 短链)和账号名，页面上做成"引语"、显示头像用(2026-11-14)
+            "text": re.sub(r"\s*https://t\.co/\S+", "", row["summary"] or "").strip(),
+            "handle": X_HANDLES.get(row["person"]),
         })
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
