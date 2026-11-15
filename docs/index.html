@@ -41,6 +41,18 @@
   .top nav { display: flex; gap: 30px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
              font-family: "Helvetica Neue", Helvetica, -apple-system, "PingFang SC", sans-serif; }
   .top nav a:hover, .top nav a.on { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+
+  /* ---- Recent 下拉子菜单(2026-11-15)：悬停 Recent 竖着展开 Digest / X / Trending，当前页深色、其余灰。
+     在这三页里子菜单常驻，当作分区导航。绝对定位，不撑高横栏，切页时 logo 和导航不跳 ---- */
+  .top nav .grp { position: relative; }
+  .top nav .sub { position: absolute; left: 0; top: 100%; z-index: 10; padding-top: 12px;
+                  display: flex; flex-direction: column; gap: 4px; white-space: nowrap;
+                  font-size: 14px; letter-spacing: .02em; text-transform: none;
+                  opacity: 0; visibility: hidden; transform: translateY(-4px);
+                  transition: opacity .18s ease, transform .18s ease, visibility .18s; }
+  .top nav .grp:hover .sub, .top nav .grp:focus-within .sub, .top nav .grp.here .sub { opacity: 1; visibility: visible; transform: none; }
+  .top nav .sub a, .top nav .sub a:hover, .top nav .sub a.on { color: var(--faint); text-decoration: none; transition: color .15s; }
+  .top nav .sub a:hover, .top nav .sub a.on { color: var(--ink); }
   @media (max-width: 760px) {
     .top { flex-wrap: wrap; row-gap: 14px; padding-left: 16px; padding-right: 16px; }   /* 跟下面正文的16px对齐 */
     .top nav { width: 100%; justify-content: space-between; gap: 0; font-size: 11.5px; }
@@ -48,6 +60,8 @@
 
   /* 单栏居中，跟「大公司」页同宽(860)。原来宽屏是"正文656 + 右侧360边栏"的两栏 */
   .page { max-width: 892px; margin: 0 auto; padding: 96px 16px 120px; }
+  /* 窄屏上 Recent 的子菜单常驻在横栏下面，页头往下让一让，不跟子菜单挤在一起 */
+  @media (max-width: 760px) { .page { padding-top: 132px; } }
 
   /* ---- 页头：跟另外两页一样，小号大写页名 + 一行灰色说明(2026-11-14 统一；原来是大标题"7日内关注") ---- */
   .mast { margin-bottom: 36px; }
@@ -139,7 +153,7 @@
   .lead h3 { font-family: var(--title); font-size: 24px; line-height: 1.3; font-weight: 400; margin: 8px 0 0; letter-spacing: 0;
              color: var(--ink); -webkit-text-stroke: .3px currentColor; font-feature-settings: "onum" 1; }
   .lead.t-high h3 { font-size: 26px; }
-  .lead p, .mini .txt { font-family: "CJK Quotes", var(--sans); }
+  .lead p { font-family: "CJK Quotes", var(--sans); }
   .lead p { margin: 9px 0 0; color: var(--soft); font-size: 14.5px; line-height: 1.85; }
   /* 配图：跟「大公司」页一样，右侧 150px 小方块，跟信息行顶部对齐；图挂了就整块去掉 */
   .lead.has-pic { display: grid; grid-template-columns: minmax(0, 1fr) 150px; column-gap: 26px; align-items: start; }
@@ -170,58 +184,6 @@
   .note-btn.noted svg { fill: currentColor; }
   .note-btn.noted:hover { background: rgba(168, 70, 31, .08); }
 
-  /* ---- X 动态、GitHub Trending：原来是右侧吸顶的深色/鼠尾草绿面板，2026-11-14 用户觉得
-     "挂在右边看着难受"，挪到正文下方，跟按天分组同一个"左栏标题 + 右栏列表"的版式，不要色块 ---- */
-  .aside { margin-top: 0; }
-  .extra { display: grid; grid-template-columns: 104px minmax(0, 1fr); column-gap: 32px;
-           padding: 28px 0 8px; border-top: 1px solid var(--rule-strong); }
-  .extra h4 { margin: 0; padding-top: 6px; font-family: var(--title); font-weight: 400; font-size: 20px; line-height: 1.2;
-              color: var(--date); letter-spacing: .04em; }
-  .extra h4 span { display: block; margin-top: 8px; font-family: var(--sans); font-size: 12px; color: var(--faint); letter-spacing: .04em; }
-  .mini { display: block; padding: 16px 0; border-bottom: 1px solid var(--rule); }
-  .mini:first-child { padding-top: 6px; }
-  .mini:last-child { border-bottom: 0; }
-  .mini .who { display: block; font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--who); font-weight: 500; margin-bottom: 6px; }
-  .mini .who em { font-style: normal; color: var(--faint); margin-left: 8px; letter-spacing: .06em; }
-  .mini .who a:hover { text-decoration: underline; text-underline-offset: 3px; }
-  /* 说明文字：收起时两行、行尾省略号，点开后接着往下排 */
-  .mini .txt { color: var(--soft); font-size: 15px; line-height: 1.85; text-align: justify;
-               display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
-  .mini.open .txt { display: block; }
-  .mini.more { cursor: pointer; }
-  /* X 引语卡：白底卡片两列；头像 + 名字/@账号·日期；英文原话(Iowan 斜体，前面一个土橙大引号)；中文转述 */
-  #x { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding-top: 4px; }
-  .xcard { display: flex; flex-direction: column; gap: 12px; background: #fff; border: 1px solid var(--rule); border-radius: 10px;
-           padding: 16px 18px 14px; transition: border-color .2s, box-shadow .2s; }
-  .xcard:hover { border-color: #D5D0C4; box-shadow: 0 4px 14px rgba(40, 30, 10, .06); }
-  .xcard.hidden-x { display: none; }
-  .xwho { display: flex; align-items: center; gap: 10px; }
-  .xwho .av { width: 32px; height: 32px; border-radius: 50%; overflow: hidden; flex: none; background: #E9E5DB;
-              display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: var(--who); }
-  .xwho .av img { width: 100%; height: 100%; object-fit: cover; }
-  .xmeta { display: flex; flex-direction: column; line-height: 1.3; }
-  .xmeta .nm { font-size: 13px; font-weight: 600; color: var(--ink); }
-  .xmeta .hd { font-size: 12px; color: var(--faint); }
-  .xq { position: relative; padding-left: 18px; font-family: var(--title); font-style: italic; font-size: 16.5px; line-height: 1.5;
-        color: var(--ink); white-space: pre-line; overflow-wrap: anywhere; }
-  .xq::before { content: "\201C"; position: absolute; left: -2px; top: -8px; font: 36px/1 var(--title); color: var(--date); }
-  .xzh { font-size: 13px; line-height: 1.7; color: var(--soft); border-top: 1px dashed var(--rule); padding-top: 10px; }
-  @media (max-width: 760px) { #x { grid-template-columns: 1fr; } }
-  .more-x { display: inline-block; margin: 16px 0 18px; font-size: 13px; color: var(--faint); cursor: pointer; border-bottom: 1px solid var(--rule); }
-  .more-x:hover { color: var(--ink); border-bottom-color: var(--faint); }
-  .repo .name { font-family: var(--title); font-size: 18px; line-height: 1.4; color: var(--ink); -webkit-text-stroke: .2px currentColor; word-break: break-all; }
-  .repo .name span { color: var(--faint); -webkit-text-stroke: 0; }
-  .repo .name a:hover { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
-  /* Trending 的中文简介默认完整显示，不再截成两行(2026-11-14 用户要的)；X 动态仍然两行、点开看全文 */
-  .repo .txt { margin: 6px 0 8px; display: block; -webkit-line-clamp: unset; overflow: visible; }
-  .repo .meta { display: flex; gap: 14px; font-size: 12px; color: var(--faint); letter-spacing: .04em; }
-  .repo .meta .up { color: var(--up); font-weight: 600; }
-  @media (max-width: 760px) {
-    .extra { grid-template-columns: 1fr; padding-top: 22px; }
-    .extra h4 { padding: 0 0 12px; display: flex; align-items: baseline; gap: 10px; }
-    .extra h4 span { display: inline; margin: 0; }
-  }
-
   /* ---- 页脚：最近一次更新 + 收起来的运行日志 ---- */
   .foot { margin-top: 72px; font-size: 12.5px; color: var(--faint); }
   .foot summary { cursor: pointer; list-style: none; text-align: center; }
@@ -250,7 +212,14 @@
 <header class="top">
     <a class="mark" href="index.html">Daily Digest</a>
     <nav>
-      <a href="index.html" class="on">Recent</a>
+      <div class="grp here">
+        <a href="index.html" class="on">Recent</a>
+        <div class="sub">
+          <a href="index.html" class="on">Digest</a>
+          <a href="x.html">X</a>
+          <a href="trending.html">Trending</a>
+        </div>
+      </div>
       <a href="companies.html">Companies</a>
       <a href="albums.html">People</a>
       <a href="digest.html">Archive</a>
@@ -265,10 +234,6 @@
     <div class="filter-on" id="filterOn" hidden></div>
     <div id="days"></div>
   </main>
-  <section class="aside">
-    <div class="extra" id="board-x"><h4>On X<span>他们在 X 上说</span></h4><div><div id="x"></div></div></div>
-    <div class="extra"><h4>Trending<span>本周在涨的仓库</span></h4><div id="gh"></div></div>
-  </section>
   <details class="foot">
     <summary>最近一次更新 <span id="lastRun"></span> · 运行日志</summary>
     <div id="runLog"></div>
@@ -397,7 +362,7 @@ function itemMeta(link) {
 }
 function trackOpen(link, el, how) {
   const ctx = itemCtx(el);
-  const area = ctx ? 'main' : el.closest('#x') ? 'x' : el.closest('#gh') ? 'gh' : 'other';
+  const area = ctx ? 'main' : 'other';   // X、Trending 2026-11-15 拆成了独立页，在各自页里记
   track({ type: 'click', link, area, how, filter: FILTER || WHO || '', ...ctx, ...(ctx ? itemMeta(link) : {}) });
 }
 // click 管左键(含 Cmd/Ctrl 点击在新标签打开)，auxclick 管中键。右键菜单里"在新标签页打开"收不到，只能漏掉。
@@ -535,13 +500,7 @@ document.addEventListener('click', e => {
   if (e.target.closest('[data-clear]')) { setFilter(''); return; }
   if (e.target.closest('a')) return;
   const lead = e.target.closest('.lead');
-  if (lead) { trackOpen(lead.dataset.link, lead, 'card'); window.open(lead.dataset.link, '_blank', 'noopener'); return; }
-  const fold = e.target.closest('.mini.more');   // 简讯的摘要 2026-11-14 起直接显示，不再折叠
-  if (!fold) return;
-  fold.classList.toggle('open');
-  // 简讯的摘要默认收着，展开说明想看摘要；收起不记
-  const a = fold.classList.contains('brief') && fold.classList.contains('open') && fold.querySelector('a');
-  if (a) track({ type: 'expand', link: a.getAttribute('href'), filter: FILTER || WHO || '', ...itemCtx(a), ...itemMeta(a.getAttribute('href')) });
+  if (lead) { trackOpen(lead.dataset.link, lead, 'card'); window.open(lead.dataset.link, '_blank', 'noopener'); }
 });
 
 async function loadRecent() {
@@ -553,63 +512,6 @@ async function loadRecent() {
   renderDays();
   track({ type: 'view', links: [...document.querySelectorAll('#days .lead, #days .brief')]
     .map(c => c.dataset.link || c.querySelector('a').getAttribute('href')) });
-}
-
-// ---- 侧栏：X 和 GitHub ----
-// 说明文字收起时两行；只有真被截断的才标成可展开(窗口宽度一变，能不能展开也跟着变)
-function markFoldable() {
-  document.querySelectorAll('.mini').forEach(m => {
-    if (m.classList.contains('open')) return;
-    const t = m.querySelector('.txt');
-    m.classList.toggle('more', t.scrollHeight > t.clientHeight + 1);
-  });
-}
-addEventListener('resize', markFoldable);
-
-const X_VISIBLE = 6;   // X 先露6条(两列各三张)，其余点"再看 N 条"展开
-document.addEventListener('click', e => {
-  const m = e.target.closest('.more-x');
-  if (!m) return;
-  document.querySelectorAll('#x .hidden-x').forEach(el => el.classList.remove('hidden-x'));
-  m.remove();
-});
-
-// X 动态：引语卡(2026-11-14 用户从两种样式里挑的)——头像 + 名字/@账号/日期，推文英文原话当引语，
-// 下面一行中文转述。两列，先露 X_VISIBLE 条，其余点"再看 N 条"。头像来自 unavatar.io，挂了退回首字母
-function xAvatar(i) {
-  const ini = esc((i.person || '?')[0]);
-  return i.handle
-    ? `<span class="av"><img src="https://unavatar.io/x/${esc(i.handle)}" alt="" loading="lazy" referrerpolicy="no-referrer" data-ini="${ini}"></span>`
-    : `<span class="av">${ini}</span>`;
-}
-async function loadX() {
-  const data = await (await fetch('data/x_recent.json')).json();
-  const box = document.getElementById('x');
-  box.innerHTML = data.items.length
-    ? data.items.map((i, k) => `<a class="xcard${k >= X_VISIBLE ? ' hidden-x' : ''}" href="${esc(i.link)}" target="_blank" rel="noopener">
-        <span class="xwho">${xAvatar(i)}<span class="xmeta"><span class="nm">${esc(i.person)}</span>`
-        + `<span class="hd">${i.handle ? '@' + esc(i.handle) + ' · ' : ''}${esc((i.date || '').slice(5))}</span></span></span>
-        <span class="xq">${esc((i.text || i.title).replace(/\n\s*\n+/g, '\n'))}</span>
-        ${i.summary ? `<span class="xzh">${esc(i.summary)}</span>` : ''}</a>`).join('')
-    : '<div class="empty">最近7天没有新动态</div>';
-  if (data.items.length > X_VISIBLE) {
-    box.insertAdjacentHTML('afterend', `<span class="more-x">再看 ${data.items.length - X_VISIBLE} 条</span>`);
-  }
-  box.querySelectorAll('.av img').forEach(img => img.addEventListener('error', () => {
-    img.parentElement.textContent = img.dataset.ini;
-  }, { once: true }));
-}
-async function loadTrending() {
-  const data = await (await fetch('data/trending.json')).json();
-  document.getElementById('gh').innerHTML = data.items.map(i => {
-    const [owner, name] = i.full_name.split('/');
-    return `<div class="mini repo">
-      <div class="name"><a href="${esc(i.url)}" target="_blank" rel="noopener"><span>${esc(owner)} / </span>${esc(name)}</a></div>
-      <div class="txt">${esc(i.recommend_reason || i.description || '')}</div>
-      <div class="meta">${i.language ? `<span>${esc(i.language)}</span>` : ''}<span>★ ${(i.stars_total || 0).toLocaleString()}</span>
-        ${i.stars_period ? `<span class="up">本周 +${i.stars_period.toLocaleString()}</span>` : ''}</div></div>`;
-  }).join('') || '<div class="empty">还没有数据</div>';
-  markFoldable();
 }
 
 // ---- 页脚运行日志 ----
@@ -636,13 +538,7 @@ async function loadRunLog() {
 const today = new Date();
 document.getElementById('today').textContent =
   `${today.getFullYear()}年${today.getMonth() + 1}月${today.getDate()}日 星期${WEEK[today.getDay()]}`;
-if (IS_PUBLIC) {
-  // 公开站不导出x_recent.json:X是不限tier全展示的,里面混着跟AI无关的个人动态。
-  document.getElementById('board-x').remove();
-}
 loadRecent();
-if (!IS_PUBLIC) loadX();
-loadTrending();
 loadRunLog();
 </script>
 </body>

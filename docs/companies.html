@@ -41,6 +41,18 @@
   .top nav { display: flex; gap: 30px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
   .top nav a:hover, .top nav a.on { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
 
+  /* ---- Recent 下拉子菜单(2026-11-15)：悬停 Recent 竖着展开 Digest / X / Trending，当前页深色、其余灰。
+     在这三页里子菜单常驻，当作分区导航。绝对定位，不撑高横栏，切页时 logo 和导航不跳 ---- */
+  .top nav .grp { position: relative; }
+  .top nav .sub { position: absolute; left: 0; top: 100%; z-index: 10; padding-top: 12px;
+                  display: flex; flex-direction: column; gap: 4px; white-space: nowrap;
+                  font-size: 14px; letter-spacing: .02em; text-transform: none;
+                  opacity: 0; visibility: hidden; transform: translateY(-4px);
+                  transition: opacity .18s ease, transform .18s ease, visibility .18s; }
+  .top nav .grp:hover .sub, .top nav .grp:focus-within .sub, .top nav .grp.here .sub { opacity: 1; visibility: visible; transform: none; }
+  .top nav .sub a, .top nav .sub a:hover, .top nav .sub a.on { color: var(--faint); text-decoration: none; transition: color .15s; }
+  .top nav .sub a:hover, .top nav .sub a.on { color: var(--ink); }
+
   .wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
   .intro { max-width: 860px; margin: 0 auto; padding: 96px 0 30px; }
   .intro h1 { font-family: var(--serif); font-weight: 400; font-size: 14px; letter-spacing: .24em; text-transform: uppercase; margin: 0; color: var(--t2); }
@@ -112,7 +124,14 @@
   <header class="top">
     <a class="mark" href="index.html">Daily Digest</a>
     <nav>
-      <a href="index.html">Recent</a>
+      <div class="grp">
+        <a href="index.html">Recent</a>
+        <div class="sub">
+          <a href="index.html">Digest</a>
+          <a href="x.html">X</a>
+          <a href="trending.html">Trending</a>
+        </div>
+      </div>
       <a href="companies.html" class="on">Companies</a>
       <a href="albums.html">People</a>
       <a href="digest.html">Archive</a>

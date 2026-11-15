@@ -25,11 +25,12 @@
 字段走**白名单**不走黑名单(见PUBLIC_ITEM_FIELDS):以后往items表/导出里加新字段,默认是
 不出去的,不会因为忘了在这里补一条排除规则就漏出去。
 
-前端HTML不复制第二份,直接用docs/下那两个文件,把`<!--SITE-CONFIG-->`那行换成一个开关
-脚本(见SITE_CONFIG_MARKER)。index.html里所有`IS_PUBLIC`的分支就是靠这个开关生效的。
+前端HTML不复制第二份,直接用docs/下的文件(见HTML_PAGES),把`<!--SITE-CONFIG-->`那行换成一个开关
+脚本(见SITE_CONFIG_MARKER)。index.html、trending.html里所有`IS_PUBLIC`的分支就是靠这个开关生效的。
 """
 
 import json
+import re
 import shutil
 from pathlib import Path
 
@@ -48,22 +49,31 @@ PUBLIC_ITEM_FIELDS = ("person", "title", "link", "date", "source_type", "summary
 # 原样搬运的数据文件:内容本身已经满足公开边界,不需要过滤。
 COPY_AS_IS = ("trending.json", "run_log.json")
 
-HTML_PAGES = ("index.html",)
+# trending.html 2026-11-15 从首页底部拆成独立页(私有站在 Recent 下拉菜单里),公开站跟着一起导出。
+# x.html 不导出,理由见文件头"X动态不放"。
+HTML_PAGES = ("index.html", "trending.html")
+
+# 顶部横栏:私有站是 Recent(下拉 Digest/X/Trending) · Companies · People · Archive。公开站只有
+# 首页和 Trending 两页,整块 <nav> 换成这两个链接——X、大公司、常读的人、月度归档都不公开,
+# 配合下面"产物里不许再出现这几个页面名"的断言,换漏了跑批会当场炸。
+NAV_BLOCK = re.compile(r"    <nav>\n.*?</nav>\n", re.S)
+
+
+def public_nav(page: str) -> str:
+    on = lambda name: ' class="on"' if name == page else ""
+    return (
+        "    <nav>\n"
+        f'      <a href="index.html"{on("index.html")}>Recent</a>\n'
+        f'      <a href="trending.html"{on("trending.html")}>Trending</a>\n'
+        "    </nav>\n"
+    )
+
 
 # 光靠JS在运行时删掉锚点筛选器是不够的:HTML源码里还留着"锚点"两个字,查看源代码就能看见
 # 有这么个隐藏分类。这里在导出时就从文本里摘干净。每条都是精确匹配、命中即换,配合下面
 # 那句"产物里不许再出现锚点"的断言——哪天前端改了措辞导致这里匹配不上,跑批会当场炸,
 # 而不是悄悄把字眼发出去。
 HTML_STRIPS = (
-    # 月度归档、常读的人、大公司都不公开:顶部横栏里整条导航摘掉,只留左边的"Daily Digest"
-    # (配合下面"产物里不许再出现这几个页面名"的断言;导航改了这里要跟着改,不然跑批会当场炸)
-    ("""    <nav>
-      <a href="index.html" class="on">Recent</a>
-      <a href="companies.html">Companies</a>
-      <a href="albums.html">People</a>
-      <a href="digest.html">Archive</a>
-    </nav>
-""", ""),
     ('        <option value="anchor">锚点</option>\n', ""),
     ('        <option value="eval">Eval</option>\n', ""),
     # eval track的样式也摘掉:CSS本身泄露不了内容,但留着等于告诉读源码的人"还有第三条track"
@@ -165,8 +175,14 @@ def export():
                 f"[中止] docs/{name} 里{SITE_CONFIG_MARKER}出现了{html.count(SITE_CONFIG_MARKER)}次,应该恰好1次。"
             )
         html = html.replace(SITE_CONFIG_MARKER, SITE_CONFIG_SCRIPT)
+        html, n_nav = NAV_BLOCK.subn(lambda _: public_nav(name), html)
+        if n_nav != 1:
+            raise SystemExit(f"[中止] docs/{name} 里<nav>块有{n_nav}个,应该恰好1个,不导出。")
         for old_text, new_text in HTML_STRIPS:
             html = html.replace(old_text, new_text)
+        # x.html 单独按整词查:直接查子串会误伤 index.html
+        if re.search(r"(?<![\w-])x\.html", html):
+            raise SystemExit(f"[中止] docs/{name} 剥离后仍残留`x.html`字样,不导出。")
         for residue in ("锚点", "Anchor", "'Core'", "eval", "digest.html", "albums.html", "companies.html"):
             if residue in html:
                 raise SystemExit(

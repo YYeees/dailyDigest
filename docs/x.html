@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X · Daily Digest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Sorts+Mill+Goudy&display=swap">
+<style>
+  /* 2026-11-15 从 Recent 页底部拆出来的独立页(Recent 下拉菜单里的 X)。横栏、页头、颜色跟 index.html 同一套。
+     公开站不放这一页：X 不限 tier 全展示，混着跟 AI 无关的个人动态(见 export_public.py 文件头) */
+  :root {
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", sans-serif;
+    --bg: #FAF9F5; --ink: #16150F; --soft: #4E4C46; --who: #6E6C65; --faint: #9C9990;
+    --rule: #E6E2D8; --rule-strong: #C9C5BB; --accent: #B5442D; --hover: #F1EEE6;
+    --date: #CC785C;
+    --title: "Iowan Old Style", "Sorts Mill Goudy", "PingFang SC", Georgia, serif;
+  }
+  @font-face {
+    font-family: "CJK Quotes";
+    src: local("PingFangSC-Regular"), local("PingFang SC Regular");
+    unicode-range: U+201C-201D;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-font-smoothing: antialiased; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--sans); font-size: 17px; line-height: 1.9; letter-spacing: .02em;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  .top { max-width: 1208px; margin: 0 auto; padding: 34px 24px 0; line-height: 1.6; letter-spacing: 0; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .top .mark { font-family: "Libre Baskerville", "Baskerville", Georgia, serif; font-size: 20px; letter-spacing: 0; }
+  .top nav { display: flex; gap: 30px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
+             font-family: "Helvetica Neue", Helvetica, -apple-system, "PingFang SC", sans-serif; }
+  .top nav a:hover, .top nav a.on { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+
+  /* ---- Recent 下拉子菜单(2026-11-15)：悬停 Recent 竖着展开 Digest / X / Trending，当前页深色、其余灰。
+     在这三页里子菜单常驻，当作分区导航。绝对定位，不撑高横栏，切页时 logo 和导航不跳 ---- */
+  .top nav .grp { position: relative; }
+  .top nav .sub { position: absolute; left: 0; top: 100%; z-index: 10; padding-top: 12px;
+                  display: flex; flex-direction: column; gap: 4px; white-space: nowrap;
+                  font-size: 14px; letter-spacing: .02em; text-transform: none;
+                  opacity: 0; visibility: hidden; transform: translateY(-4px);
+                  transition: opacity .18s ease, transform .18s ease, visibility .18s; }
+  .top nav .grp:hover .sub, .top nav .grp:focus-within .sub, .top nav .grp.here .sub { opacity: 1; visibility: visible; transform: none; }
+  .top nav .sub a, .top nav .sub a:hover, .top nav .sub a.on { color: var(--faint); text-decoration: none; transition: color .15s; }
+  .top nav .sub a:hover, .top nav .sub a.on { color: var(--ink); }
+  @media (max-width: 760px) {
+    .top { flex-wrap: wrap; row-gap: 14px; padding-left: 16px; padding-right: 16px; }
+    .top nav { width: 100%; justify-content: space-between; gap: 0; font-size: 11.5px; }
+  }
+
+  .page { max-width: 892px; margin: 0 auto; padding: 96px 16px 120px; }
+  /* 窄屏上 Recent 的子菜单常驻在横栏下面，页头往下让一让，不跟子菜单挤在一起 */
+  @media (max-width: 760px) { .page { padding-top: 132px; } }
+  .mast { margin-bottom: 36px; }
+  .mast h1 { font-family: "Libre Baskerville", "Baskerville", Georgia, serif; font-weight: 400; font-size: 14px;
+             letter-spacing: .24em; text-transform: uppercase; margin: 0; color: var(--soft); line-height: 1.6; }
+  .mast .lede { margin: 8px 0 0; font-size: 13.5px; line-height: 1.6; color: var(--faint); letter-spacing: .02em; }
+  .empty { color: var(--faint); font-size: .95rem; padding: 14px 0; }
+
+  /* X 引语卡：白底卡片两列；头像 + 名字/@账号·日期；英文原话(Iowan 斜体，前面一个土橙大引号)；中文转述。
+     在 Recent 页底部时先露 6 条、其余折叠；独立成页后全部摊开 */
+  #x { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .xcard { display: flex; flex-direction: column; gap: 12px; background: #fff; border: 1px solid var(--rule); border-radius: 10px;
+           padding: 16px 18px 14px; transition: border-color .2s, box-shadow .2s; }
+  .xcard:hover { border-color: #D5D0C4; box-shadow: 0 4px 14px rgba(40, 30, 10, .06); }
+  .xwho { display: flex; align-items: center; gap: 10px; }
+  .xwho .av { width: 32px; height: 32px; border-radius: 50%; overflow: hidden; flex: none; background: #E9E5DB;
+              display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: var(--who); }
+  .xwho .av img { width: 100%; height: 100%; object-fit: cover; }
+  .xmeta { display: flex; flex-direction: column; line-height: 1.3; }
+  .xmeta .nm { font-size: 13px; font-weight: 600; color: var(--ink); }
+  .xmeta .hd { font-size: 12px; color: var(--faint); }
+  .xq { position: relative; padding-left: 18px; font-family: var(--title); font-style: italic; font-size: 16.5px; line-height: 1.5;
+        color: var(--ink); white-space: pre-line; overflow-wrap: anywhere; }
+  .xq::before { content: "\201C"; position: absolute; left: -2px; top: -8px; font: 36px/1 var(--title); color: var(--date); }
+  .xzh { font-family: "CJK Quotes", var(--sans); font-size: 13px; line-height: 1.7; color: var(--soft); border-top: 1px dashed var(--rule); padding-top: 10px; }
+  @media (max-width: 760px) { #x { grid-template-columns: 1fr; } }
+
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+  .xcard { animation: rise .45s ease backwards; animation-delay: calc(var(--d, 0) * 40ms); }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+    <a class="mark" href="index.html">Daily Digest</a>
+    <nav>
+      <div class="grp here">
+        <a href="index.html" class="on">Recent</a>
+        <div class="sub">
+          <a href="index.html">Digest</a>
+          <a href="x.html" class="on">X</a>
+          <a href="trending.html">Trending</a>
+        </div>
+      </div>
+      <a href="companies.html">Companies</a>
+      <a href="albums.html">People</a>
+      <a href="digest.html">Archive</a>
+    </nav>
+</header>
+<div class="page">
+  <header class="mast">
+    <h1>On X</h1>
+    <p class="lede">他们在 X 上说 · <span id="lede"></span></p>
+  </header>
+  <main id="x"></main>
+</div>
+
+<script>
+const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+
+// ---- 阅读记录：跟 index.html 同一个 Worker，area 记 'x'(拆页前在 Recent 页底部也是这么记的) ----
+const TRACK_URL = 'https://digest-clicks.yyeees.workers.dev';
+const PAGE_ID = Math.random().toString(36).slice(2, 10);
+function track(ev) {
+  try { navigator.sendBeacon(TRACK_URL, new Blob([JSON.stringify({ ...ev, page: PAGE_ID })], { type: 'text/plain' })); }
+  catch (e) { /* 记不上就算了，不能影响阅读 */ }
+}
+function onLinkPress(e) {
+  if (e.type === 'auxclick' && e.button !== 1) return;
+  const a = e.target.closest && e.target.closest('a[target="_blank"]');
+  if (a) track({ type: 'click', link: a.getAttribute('href'), area: 'x',
+                 how: e.type === 'auxclick' || e.metaKey || e.ctrlKey ? 'newtab' : 'click' });
+}
+document.addEventListener('click', onLinkPress);
+document.addEventListener('auxclick', onLinkPress);
+
+// 头像来自 unavatar.io，挂了退回首字母
+function xAvatar(i) {
+  const ini = esc((i.person || '?')[0]);
+  return i.handle
+    ? `<span class="av"><img src="https://unavatar.io/x/${esc(i.handle)}" alt="" loading="lazy" referrerpolicy="no-referrer" data-ini="${ini}"></span>`
+    : `<span class="av">${ini}</span>`;
+}
+async function loadX() {
+  const data = await (await fetch('data/x_recent.json')).json();
+  const box = document.getElementById('x');
+  document.getElementById('lede').textContent = `最近七天 ${data.items.length} 条`;
+  box.innerHTML = data.items.length
+    ? data.items.map((i, k) => `<a class="xcard" style="--d:${Math.min(k, 12)}" href="${esc(i.link)}" target="_blank" rel="noopener">
+        <span class="xwho">${xAvatar(i)}<span class="xmeta"><span class="nm">${esc(i.person)}</span>`
+        + `<span class="hd">${i.handle ? '@' + esc(i.handle) + ' · ' : ''}${esc((i.date || '').slice(5))}</span></span></span>
+        <span class="xq">${esc((i.text || i.title).replace(/\n\s*\n+/g, '\n'))}</span>
+        ${i.summary ? `<span class="xzh">${esc(i.summary)}</span>` : ''}</a>`).join('')
+    : '<div class="empty">最近7天没有新动态</div>';
+  box.querySelectorAll('.av img').forEach(img => img.addEventListener('error', () => {
+    img.parentElement.textContent = img.dataset.ini;
+  }, { once: true }));
+  track({ type: 'view', area: 'x', links: data.items.map(i => i.link) });
+}
+loadX();
+</script>
+</body>
+</html>
