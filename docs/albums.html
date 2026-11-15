@@ -63,19 +63,18 @@
   .cover-link:hover .cover img, .cover-link:hover .cover svg { transform: scale(1.02); }
   .cover svg { display: block; width: 100%; height: 100%; }
 
-  /* 有新文章：封面右上角垂下一条书签丝带 */
-  .ribbon {
-    position: absolute; z-index: 2; top: -10px; right: 28px; width: 22px; height: 0;
-    background: linear-gradient(90deg, var(--red-dark), var(--red) 45%, #B4483A 60%, var(--red));
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 9px), 0 100%);
-    box-shadow: 0 2px 4px rgba(0,0,0,.25);
-    transition: height .9s cubic-bezier(.2,.8,.2,1) .2s;
+  /* 有新文章：封面右上角斜别着一枚回形针(2026-11-15 用户觉得原来的红丝带丑，换掉)。
+     上半截露在封面上沿外面，像把卡片夹住；读过之后(去掉 .fresh)淡出 */
+  .clip {
+    position: absolute; z-index: 2; top: -28px; right: 26px; width: 32px; height: 92px;
+    transform: rotate(24deg) translateY(-10px); transform-origin: 50% 40%;
+    opacity: 0; pointer-events: none;
+    filter: drop-shadow(1px 2px 1.5px rgba(40, 30, 10, .28));
+    transition: opacity .5s ease .2s, transform .8s cubic-bezier(.2,.8,.2,1) .2s;
   }
-  .card.fresh .ribbon { height: 78px; }
-  .card.fresh .cover-link:hover .ribbon { height: 92px; transition-delay: 0s; }
-  .ribbon::before {   /* 丝带从封面上沿"夹"进去的那一道折痕 */
-    content: ""; position: absolute; left: 0; right: 0; top: 10px; height: 2px; background: rgba(0,0,0,.18);
-  }
+  .clip svg { display: block; width: 100%; height: 100%; overflow: visible; }
+  .card.fresh .clip { opacity: 1; transform: rotate(24deg); }
+  .card.fresh .cover-link:hover .clip { transform: rotate(18deg) translateY(-2px); transition-delay: 0s; }
 
   .title { font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 1.25; margin: 30px 0 0; }
   .pub { font-family: var(--serif); font-style: italic; color: var(--soft); font-size: 15px; margin: 6px 0 0; }
@@ -242,6 +241,11 @@ function isFresh(a, seen) {
 let ALBUMS = [];
 function render() {
   const seen = loadSeen();
+  // 回形针(新文章标记)：同一条路径画两遍，底下一层钢灰、上面一层细白高光，看着像金属丝
+  const CLIP_PATH = 'M10 22 V60 a5 5 0 0 0 10 0 V12 a8 8 0 0 0 -16 0 V64 a10 10 0 0 0 20 0 V30';
+  const CLIP_SVG = `<svg viewBox="0 0 28 80" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="${CLIP_PATH}" stroke="#7A776F" stroke-width="3"/>
+    <path d="${CLIP_PATH}" stroke="rgba(255,255,255,.6)" stroke-width="0.9" transform="translate(-0.5 -0.4)"/></svg>`;
   document.getElementById('wall').innerHTML = ALBUMS.map((a, idx) => {
     const fresh = isFresh(a, seen);
     const internal = false;
@@ -252,7 +256,7 @@ function render() {
     return `<hr class="divider">
     <article class="card${fresh ? ' fresh' : ''}" data-person="${esc(a.person)}" data-latest="${esc(a.latest || '')}">
       <a class="cover-link" href="${esc(a.latest_link)}"${target} aria-label="${esc(a.verb)}：${esc(a.latest_title || a.person)}">
-        <span class="ribbon" aria-hidden="true"></span>
+        <span class="clip" aria-hidden="true">${CLIP_SVG}</span>
         <div class="cover">${cover}</div>
       </a>
       <h2 class="title">${esc(a.person)}</h2>
