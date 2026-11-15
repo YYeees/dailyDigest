@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T15:09:48+00:00",
+ "updated_at": "2026-11-15T00:55:39+00:00",
  "albums": [
   {
    "person": "Thorsten Ball",
@@ -456,14 +456,14 @@
      "link": "https://www.deeplearning.ai/the-batch/how-to-build-an-agent-harness-in-one-prompt",
      "date": "2026-11-13",
      "kind": "blog",
-     "note": ""
+     "note": "吴恩达推荐了刚开源的OpenWorker Agent Harness SDK，用它可以给任意大模型搭一个agent harness，也就是包住模型、让它能真正干活的那层外壳。他鼓励没做过的人自己动手做一次，这也是面试里会考的技能。想理解agent是怎么搭起来的，可以从这篇开始。"
     },
     {
      "title": "A LinkedIn Pulse Study Shows AI Job Creation, Growth, Careers",
      "link": "https://www.deeplearning.ai/the-batch/ai-job-anxieties-meet-ai-job-opporunities",
      "date": "2026-11-06",
      "kind": "blog",
-     "note": ""
+     "note": "吴恩达引用领英的数据说，AI已经带来两百万个工作岗位，AI工程师也在七个主要经济体里增长最快的职业之列。这和“AI带来大规模失业”的说法对不上。适合被就业焦虑困扰时读一读。"
     },
     {
      "title": "Introduction to a special Halloween 2026 edition of The Batch",
@@ -477,14 +477,14 @@
      "link": "https://www.deeplearning.ai/the-batch/the-four-ps",
      "date": "2026-10-23",
      "kind": "blog",
-     "note": ""
+     "note": "吴恩达给工程负责人讲了一套带团队变得更会用AI的框架。小团队可以直接找AI原生的人，大公司则要想办法让现有成员逐步转过来。主要给带团队的人看，个人使用者可以略读。"
     },
     {
      "title": "Judgement Tasks Is Where Humans Have the Edge: Don’t Overgeneralize from Progress in Math and Code — The Hardest AI Problems Still Require More Work",
      "link": "https://www.deeplearning.ai/the-batch/formal-verification-meets-unverifiable-judgement",
      "date": "2026-10-16",
      "kind": "blog",
-     "note": ""
+     "note": "吴恩达指出，大模型在写代码、解数学题这类答案能自动核对的任务上很强，但在需要判断的任务上差距比多数人以为的大。比如怎么回复一个客户的投诉，就没有标准答案可以检查。提醒大家别把数学和代码上的进展直接推到所有事情上。"
     },
     {
      "title": "More Agents Demand More Compute",
@@ -505,7 +505,7 @@
      "link": "https://www.deeplearning.ai/the-batch/what-stage-is-your-project-takeaways-for-ai-engineering",
      "date": "2026-09-25",
      "kind": "blog",
-     "note": ""
+     "note": "吴恩达总结了一个很难学的能力：判断项目现在处在哪个阶段，再选合适的打法。从零到一的早期项目和成熟项目，做法几乎相反。这是他技能地图系列的收尾，篇幅短，很快能读完。"
     },
     {
      "title": "Separating Out AI Facts, Fears, and Fiction",
@@ -519,7 +519,7 @@
      "link": "https://www.deeplearning.ai/the-batch/the-ai-engineering-skills-map-in-detail-shaping-the-build",
      "date": "2026-09-11",
      "kind": "blog",
-     "note": ""
+     "note": "吴恩达说AI工程师最好的工作不只是照着别人写好的需求实现，而是主动参与决定做什么。以前产品和工程分得很清，现在一个人能做的事变多了，这条线也在变。这篇偏职业和团队角度，不太涉及具体工具。"
     }
    ],
    "latest": "2026-11-13",
