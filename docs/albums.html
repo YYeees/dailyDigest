@@ -63,18 +63,18 @@
   .cover-link:hover .cover img, .cover-link:hover .cover svg { transform: scale(1.02); }
   .cover svg { display: block; width: 100%; height: 100%; }
 
-  /* 有新文章：封面右上角斜别着一枚回形针(2026-11-15 用户觉得原来的红丝带丑，换掉)。
+  /* 有新文章：封面右上角斜别着一枚钴蓝回形针，往右下斜(2026-11-15 用户觉得原来的红丝带丑，换掉)。
      上半截露在封面上沿外面，像把卡片夹住；读过之后(去掉 .fresh)淡出 */
   .clip {
     position: absolute; z-index: 2; top: -28px; right: 26px; width: 32px; height: 92px;
-    transform: rotate(24deg) translateY(-10px); transform-origin: 50% 40%;
+    transform: rotate(-32deg) translateY(-10px); transform-origin: 50% 40%;
     opacity: 0; pointer-events: none;
-    filter: drop-shadow(1px 2px 1.5px rgba(40, 30, 10, .28));
+    filter: drop-shadow(1px 2px 1.5px rgba(20, 40, 90, .3));
     transition: opacity .5s ease .2s, transform .8s cubic-bezier(.2,.8,.2,1) .2s;
   }
   .clip svg { display: block; width: 100%; height: 100%; overflow: visible; }
-  .card.fresh .clip { opacity: 1; transform: rotate(24deg); }
-  .card.fresh .cover-link:hover .clip { transform: rotate(18deg) translateY(-2px); transition-delay: 0s; }
+  .card.fresh .clip { opacity: 1; transform: rotate(-32deg); }
+  .card.fresh .cover-link:hover .clip { transform: rotate(-26deg) translateY(-2px); transition-delay: 0s; }
 
   .title { font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 1.25; margin: 30px 0 0; }
   .pub { font-family: var(--serif); font-style: italic; color: var(--soft); font-size: 15px; margin: 6px 0 0; }
@@ -241,10 +241,10 @@ function isFresh(a, seen) {
 let ALBUMS = [];
 function render() {
   const seen = loadSeen();
-  // 回形针(新文章标记)：同一条路径画两遍，底下一层钢灰、上面一层细白高光，看着像金属丝
+  // 回形针(新文章标记)：同一条路径画两遍，底下一层钴蓝(包塑回形针的颜色)、上面一层细白高光
   const CLIP_PATH = 'M10 22 V60 a5 5 0 0 0 10 0 V12 a8 8 0 0 0 -16 0 V64 a10 10 0 0 0 20 0 V30';
   const CLIP_SVG = `<svg viewBox="0 0 28 80" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="${CLIP_PATH}" stroke="#7A776F" stroke-width="3"/>
+    <path d="${CLIP_PATH}" stroke="#2F6BE0" stroke-width="3"/>
     <path d="${CLIP_PATH}" stroke="rgba(255,255,255,.6)" stroke-width="0.9" transform="translate(-0.5 -0.4)"/></svg>`;
   document.getElementById('wall').innerHTML = ALBUMS.map((a, idx) => {
     const fresh = isFresh(a, seen);
