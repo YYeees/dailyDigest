@@ -1,6 +1,29 @@
 {
   "items": [
     {
+      "person": "Craig Mod",
+      "title": "[RIDGELINE] Walking a Bit of the Izu Peninsula",
+      "link": "https://craigmod.com/ridgeline/238/",
+      "date": "2026-11-15",
+      "first_seen": "2026-11-15T22:46:59.094665+00:00",
+      "source_type": "blog",
+      "summary": "Craig Mod 的 Ridgeline 通讯（伊豆半岛徒步），开头先推荐朋友 Nick Dwyer 的 Kickstarter 项目《A Century in Sound》：用东京的音乐咖啡馆讲述百年历史的纪录片，另有配套摄影书，众筹还剩六天。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "开头只是推荐朋友的纪录片众筹，无可对应的母题。"
+        }
+      ],
+      "tiers": {
+        "ai": "low",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "datasette-llm 0.1a11",
       "link": "https://simonwillison.net/2026/Nov/14/datasette-llm/",
@@ -26,35 +49,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "datasette-vega 0.7",
-      "link": "https://simonwillison.net/2026/Nov/14/datasette-vega/",
-      "date": "2026-11-14",
-      "first_seen": "2026-11-15T00:54:42.207025+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "作者自己维护的小插件版本更新日志，无实质内容"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "与锚点主干无实质连接"
-        }
-      ],
-      "tiers": {
-        "ai": "low",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -82,7 +77,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrew Ng",
@@ -110,7 +105,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -184,8 +179,7 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": false,
-      "image": "https://assets.claude.com/04a298be2efa241bd5a4a810b97c62bb8ef257dc.jpg"
+      "is_new": false
     },
     {
       "person": "Google",
@@ -208,8 +202,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg"
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -278,8 +271,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/b4181d5a-0460-4828-b350-07feca728023/jevalution-feature.jpg?t=1794458692"
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -376,8 +368,7 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/27ce2150-3717-4122-ac3a-37dd0e8ce18f/openai-aiecode-feature.png?t=1794370546"
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -405,8 +396,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://i.ytimg.com/vi/bdIoODXsu8k/maxresdefault.jpg"
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -434,8 +424,7 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/f3b4fd9f-a330-4090-a922-a912d25dcd7c/naiveai-feature2.png?t=1793721927"
+      "is_new": false
     },
     {
       "person": "Arvind Narayanan & Sayash Kapoor",
@@ -529,8 +518,7 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_carbon_key_art_16-9_lockup.width-1300.jpg"
+      "is_new": false
     },
     {
       "person": "Google",
@@ -604,8 +592,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://static.simonwillison.net/static/2026/muse-ember.webp"
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -628,8 +615,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://latent.space/og/card/post/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/79cc3bf60b8254ca3df43668071877f25f7ce42399c0808daf10ea0aa906733b.png"
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -675,8 +661,7 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://static.simonwillison.net/static/2026/beep-locator-card.jpg"
+      "is_new": false
     },
     {
       "person": "Google",
@@ -737,8 +722,7 @@
         "eval": "high"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://substackcdn.com/image/fetch/$s_!-MYM!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4498fb7e-ff69-4b09-903a-f22ff7147e4b_2912x1632.png"
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -766,8 +750,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://i.ytimg.com/vi/uJuxenfe-NU/hqdefault.jpg"
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -800,8 +783,7 @@
         "eval": "high"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://i.ytimg.com/vi/v5IJwVnTxzg/maxresdefault.jpg"
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -880,8 +862,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://static.simonwillison.net/static/2026/details-summary-card.webp"
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -909,69 +890,6 @@
         "eval": "low"
       },
       "is_company": true,
-      "is_new": false,
-      "image": "https://assets.claude.com/da1561d7096742c3620943441254fa9d4aaa5590.jpg"
-    },
-    {
-      "person": "Latent Space",
-      "title": "How Stanford Teaches AI-Native Engineering — Mihail Eric, Monaco",
-      "link": "https://latent.space/p/cs146s/",
-      "date": "2026-11-08",
-      "first_seen": "2026-11-09T01:45:54.134724+00:00",
-      "source_type": "blog",
-      "summary": "编程智能体能轻松完成旧作业后，斯坦福这门课改让学生参与真实开源项目，学会解释修改并接受维护者审查。访谈还拆开了团队怎样配置上下文、搭建能复现故障的运行环境，以及为何代码审查成了新瓶颈。适合想把个人使用经验变成团队工作方式的人，也提醒我们保留对代码和设计的理解。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "以课程与真实团队实践讲解上下文管理、技能配置和智能体工作环境，适合工程师系统学习。"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "受访者结合亲自教学和团队建设，讨论运行环境与人对代码的理解，直接命中认知不能外包和护城河在运行框架。"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "实质讨论智能体代码审查、可验证环境和复现故障，但偏实践概览，没有完整测试方案。"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "high",
-        "eval": "medium"
-      },
-      "is_company": false,
-      "is_new": false,
-      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/515ad474-e013-48a0-b40f-739bca031d85/A.jpg?t=1794172002"
-    },
-    {
-      "person": "Latent Space",
-      "title": "[One Million AI Engineer Special] How Stanford Teaches AI-Native Engineering — Mihail Eric, Monaco",
-      "link": "https://latent.space/p/one_million_ai_engineer_special_how_stanford_teaches_ai-native_engineering_mihail_eric_monaco/",
-      "date": "2026-11-08",
-      "first_seen": "2026-11-09T01:45:54.148217+00:00",
-      "source_type": "blog",
-      "summary": "这期访谈介绍斯坦福如何教学生使用编程智能体，以及这些方法怎样用到真实团队。课程让学生给开源项目提交修改，再由维护者审查，重点是理解代码和设计取舍。与同源完整版是同一期内容，想看课程和团队实践的展开，优先点完整版即可。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "与同源《How Stanford Teaches AI-Native Engineering》重复，完整版信息更全，择一看即可。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "与同源完整版重复，涉及智能体运行环境和人保持理解力的实践。"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "medium",
-        "eval": "low"
-      },
-      "is_company": false,
       "is_new": false
     }
   ]

@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "person": "Craig Mod",
+      "title": "[RIDGELINE] Walking a Bit of the Izu Peninsula",
+      "link": "https://craigmod.com/ridgeline/238/",
+      "date": "2026-11-15",
+      "first_seen": "2026-11-15T22:46:59.094665+00:00",
+      "source_type": "blog",
+      "summary": "Craig Mod 的 Ridgeline 通讯（伊豆半岛徒步），开头先推荐朋友 Nick Dwyer 的 Kickstarter 项目《A Century in Sound》：用东京的音乐咖啡馆讲述百年历史的纪录片，另有配套摄影书，众筹还剩六天。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "开头只是推荐朋友的纪录片众筹，无可对应的母题。"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Andrew Ng",
       "title": "Build agent harnesses for any LLM using the open source OpenWorker Agent Harness SDK",
       "link": "https://www.deeplearning.ai/the-batch/how-to-build-an-agent-harness-in-one-prompt",
@@ -15,7 +32,7 @@
           "reason": "讲怎么用开源SDK搭agent harness，可直接动手"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
