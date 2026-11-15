@@ -41,15 +41,17 @@
   .top nav { display: flex; gap: 30px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
   .top nav a:hover, .top nav a.on { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
 
-  /* ---- Recent 下拉子菜单(2026-11-15)：悬停 Recent 竖着展开 Digest / X / Trending，当前页深色、其余灰。
-     在这三页里子菜单常驻，当作分区导航。绝对定位，不撑高横栏，切页时 logo 和导航不跳 ---- */
+  /* ---- Recent 下拉子菜单(2026-11-15)：鼠标停在 Recent 上才竖着展开 Digest / X / Trending，移开就收起
+     (用户要的，在这三页里也不常驻)；当前页深色、其余灰。手机没有悬停，只在这三页里常驻，不然到不了 X/Trending。
+     绝对定位，不撑高横栏，切页时 logo 和导航不跳 ---- */
   .top nav .grp { position: relative; }
   .top nav .sub { position: absolute; left: 0; top: 100%; z-index: 10; padding-top: 12px;
                   display: flex; flex-direction: column; gap: 4px; white-space: nowrap;
                   font-size: 14px; letter-spacing: .02em; text-transform: none;
                   opacity: 0; visibility: hidden; transform: translateY(-4px);
                   transition: opacity .18s ease, transform .18s ease, visibility .18s; }
-  .top nav .grp:hover .sub, .top nav .grp:focus-within .sub, .top nav .grp.here .sub { opacity: 1; visibility: visible; transform: none; }
+  .top nav .grp:hover .sub, .top nav .grp:has(:focus-visible) .sub { opacity: 1; visibility: visible; transform: none; }
+  @media (hover: none) { .top nav .grp.here .sub { opacity: 1; visibility: visible; transform: none; } }
   .top nav .sub a, .top nav .sub a:hover, .top nav .sub a.on { color: var(--faint); text-decoration: none; transition: color .15s; }
   .top nav .sub a:hover, .top nav .sub a.on { color: var(--ink); }
 

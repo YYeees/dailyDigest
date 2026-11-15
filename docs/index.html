@@ -42,15 +42,17 @@
              font-family: "Helvetica Neue", Helvetica, -apple-system, "PingFang SC", sans-serif; }
   .top nav a:hover, .top nav a.on { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
 
-  /* ---- Recent 下拉子菜单(2026-11-15)：悬停 Recent 竖着展开 Digest / X / Trending，当前页深色、其余灰。
-     在这三页里子菜单常驻，当作分区导航。绝对定位，不撑高横栏，切页时 logo 和导航不跳 ---- */
+  /* ---- Recent 下拉子菜单(2026-11-15)：鼠标停在 Recent 上才竖着展开 Digest / X / Trending，移开就收起
+     (用户要的，在这三页里也不常驻)；当前页深色、其余灰。手机没有悬停，只在这三页里常驻，不然到不了 X/Trending。
+     绝对定位，不撑高横栏，切页时 logo 和导航不跳 ---- */
   .top nav .grp { position: relative; }
   .top nav .sub { position: absolute; left: 0; top: 100%; z-index: 10; padding-top: 12px;
                   display: flex; flex-direction: column; gap: 4px; white-space: nowrap;
                   font-size: 14px; letter-spacing: .02em; text-transform: none;
                   opacity: 0; visibility: hidden; transform: translateY(-4px);
                   transition: opacity .18s ease, transform .18s ease, visibility .18s; }
-  .top nav .grp:hover .sub, .top nav .grp:focus-within .sub, .top nav .grp.here .sub { opacity: 1; visibility: visible; transform: none; }
+  .top nav .grp:hover .sub, .top nav .grp:has(:focus-visible) .sub { opacity: 1; visibility: visible; transform: none; }
+  @media (hover: none) { .top nav .grp.here .sub { opacity: 1; visibility: visible; transform: none; } }
   .top nav .sub a, .top nav .sub a:hover, .top nav .sub a.on { color: var(--faint); text-decoration: none; transition: color .15s; }
   .top nav .sub a:hover, .top nav .sub a.on { color: var(--ink); }
   @media (max-width: 760px) {
@@ -61,7 +63,7 @@
   /* 单栏居中，跟「大公司」页同宽(860)。原来宽屏是"正文656 + 右侧360边栏"的两栏 */
   .page { max-width: 892px; margin: 0 auto; padding: 96px 16px 120px; }
   /* 窄屏上 Recent 的子菜单常驻在横栏下面，页头往下让一让，不跟子菜单挤在一起 */
-  @media (max-width: 760px) { .page { padding-top: 132px; } }
+  @media (max-width: 760px) and (hover: none) { .page { padding-top: 132px; } }
 
   /* ---- 页头：跟另外两页一样，小号大写页名 + 一行灰色说明(2026-11-14 统一；原来是大标题"7日内关注") ---- */
   .mast { margin-bottom: 36px; }
