@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T00:55:39+00:00",
+ "updated_at": "2026-11-15T22:47:30+00:00",
  "albums": [
   {
    "person": "Thorsten Ball",
@@ -11,6 +11,13 @@
    "bio": "软件工程师，在 Amp 做编程智能体，写过《Writing An Interpreter In Go》。每周日寄出一封 Joy & Curiosity，把一周里让他快乐、让他好奇的东西装进去。",
    "tracks": [
     {
+     "title": "Joy & Curiosity #106",
+     "link": "https://registerspill.thorstenball.com/p/joy-and-curiosity-106",
+     "date": "2026-11-15",
+     "kind": "letter",
+     "note": "32 处去向"
+    },
+    {
      "title": "Joy & Curiosity #105",
      "link": "https://registerspill.thorstenball.com/p/joy-and-curiosity-105",
      "date": "2026-11-08",
@@ -18,9 +25,9 @@
      "note": "16 处去向"
     }
    ],
-   "latest": "2026-11-08",
-   "latest_title": "Joy & Curiosity #105",
-   "latest_link": "https://registerspill.thorstenball.com/p/joy-and-curiosity-105"
+   "latest": "2026-11-15",
+   "latest_title": "Joy & Curiosity #106",
+   "latest_link": "https://registerspill.thorstenball.com/p/joy-and-curiosity-106"
   },
   {
    "person": "Craig Mod",
@@ -31,6 +38,13 @@
    "home": "https://craigmod.com",
    "bio": "住在日本的作家、摄影师。常年徒步穿越日本的乡间小路，把一路遇到的人和店写进 Ridgeline 和 Roden 两份 newsletter，出过《Kissa by Kissa》《Things Become Other Things》。慢、长、专注，是他对抗速度的方式。",
    "tracks": [
+    {
+     "title": "[RIDGELINE] Walking a Bit of the Izu Peninsula",
+     "link": "https://craigmod.com/ridgeline/238/",
+     "date": "2026-11-15",
+     "kind": "blog",
+     "note": "Craig Mod 的 Ridgeline 通讯（伊豆半岛徒步），开头先推荐朋友 Nick Dwyer 的 Kickstarter 项目《A Century in Sound》：用东京的音乐咖啡馆讲述百年历史的纪录片，另有配套摄影书，众筹还剩六天。"
+    },
     {
      "title": "[RODEN] Digger Is Good, Notebooks, Please Be Weirder",
      "link": "https://craigmod.com/roden/119/",
@@ -93,18 +107,11 @@
      "date": "2026-08-12",
      "kind": "blog",
      "note": "这期newsletter介绍了上面那篇四千字长文的写作过程与后续：他用Claude追踪到一篇尘封旧报纸，发现自己出生证明上的中间名竟源于一位几十年前意外身亡的陌生人。另外还提到摄影集《事物变成其他事物》精装第二版开放预订。"
-    },
-    {
-     "title": "[ESSAYS] A Swarm of Blood Robots",
-     "link": "https://craigmod.com/essays/robot_blood/",
-     "date": "2026-08-11",
-     "kind": "blog",
-     "note": "Craig Mod分享用LLM做的一系列创新应用，核心是这次用Claude做家谱寻根——从零散线索追出自己的身世。他认为LLM最大价值在于把复杂信息检索转化为人性化的结果呈现，这类工具正处于应用爆发初期，价值被低估，关键是亲身体验而非跟风议论。"
     }
    ],
-   "latest": "2026-10-21",
-   "latest_title": "[RODEN] Digger Is Good, Notebooks, Please Be Weirder",
-   "latest_link": "https://craigmod.com/roden/119/"
+   "latest": "2026-11-15",
+   "latest_title": "[RIDGELINE] Walking a Bit of the Izu Peninsula",
+   "latest_link": "https://craigmod.com/ridgeline/238/"
   },
   {
    "person": "Dan Koe",
