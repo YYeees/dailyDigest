@@ -1,6 +1,17 @@
 {
  "letters": [
   {
+   "id": "jc-106",
+   "series": "Joy & Curiosity",
+   "author": "Thorsten Ball",
+   "number": 106,
+   "title": "Joy & Curiosity #106",
+   "subtitle": "Interesting & joyful things from the previous week",
+   "link": "https://registerspill.thorstenball.com/p/joy-and-curiosity-106",
+   "date": "2026-11-15",
+   "links_count": 32
+  },
+  {
    "id": "jc-105",
    "series": "Joy & Curiosity",
    "author": "Thorsten Ball",
@@ -12,5 +23,5 @@
    "links_count": 16
   }
  ],
- "updated_at": "2026-11-14T09:03:43+00:00"
+ "updated_at": "2026-11-15T22:46:51+00:00"
 }
