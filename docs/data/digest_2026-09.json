@@ -32,7 +32,7 @@
           "reason": "重大旗舰模型发布，给出具体突破数字（输出扩到100万token、软件工程任务77.9%新纪录）并说明了分阶段开放的谨慎策略"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Grok Bot",
@@ -49,7 +49,7 @@
           "reason": "具体的软件开发agent能力（任务移交给Cursor、PR管理插件、视频演示），直接影响开发者的工作流"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Peter Steinberger",
@@ -83,7 +83,7 @@
           "reason": "讲清楚了技术方法（微调氨基酸选择和3D结构嵌入水印）和具体验证实验，解决了AI设计蛋白质绕过传统筛查的安全问题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Hamel Husain",
@@ -518,7 +518,7 @@
           "reason": "引入部署前写监控计划、部署中持续验证的具体机制，直接影响agent做变更时的质量把关方式"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -569,7 +569,7 @@
           "reason": "讲清楚了具体的工程优化手段（精简提示词/按需加载工具/缓存/压缩文件读取）且不损失效果，对做agent工程的人有直接参考价值"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -710,7 +710,7 @@
           "reason": "给出具体榜单成绩和价格对比，直接影响用户选模型的决策，实操价值高"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -795,7 +795,7 @@
           "reason": "通用习惯科学/自助框架，未触及锚点三根主干具体母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -1230,7 +1230,7 @@
           "reason": "通用目标设定心理学，未触及锚点三根主干具体母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -1405,7 +1405,7 @@
           "reason": "引入持续在线的协调agent代替逐任务开对话的工作方式，是具体且影响日常使用习惯的新功能"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -1738,7 +1738,7 @@
           "reason": "讲清楚了技术方法（AVI评分）、具体医学研究案例（癫痫脑病相关变异）和数据规模，不是空洞通稿"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Ministry of Testing",
@@ -1857,7 +1857,7 @@
           "reason": "商业/个人品牌叙事，跟三根主干无实质连接"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -1945,6 +1945,23 @@
       "is_new": false
     },
     {
+      "person": "Andrew Ng",
+      "title": "How to Use Coding Agents Effectively from Planning to Execution and Monitoring",
+      "link": "https://www.deeplearning.ai/the-batch/the-ai-engineering-skills-map-in-detail-using-coding-agents",
+      "date": "2026-09-04",
+      "first_seen": "2026-11-14T15:08:53.114722+00:00",
+      "source_type": "blog",
+      "summary": "这一篇讲怎么把编程agent用好，从前期规划、交代任务，到执行中盯着它、事后检查。他还提到agent不只能写代码，也能做数据分析和运维这类事。每天都在用Claude Code这类工具的人，值得对照着看自己漏了哪一步。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "直接讲怎么用编程agent，从规划到监控，实操性强"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] GPT-6 Astra: OpenAI’s biggest LLM launch of all time",
       "link": "https://www.latent.space/p/ainews-gpt-6-astra-openais-biggest",
@@ -2027,7 +2044,7 @@
           "reason": "给出具体性能提升数字（分辨率提升5倍、降水预测准确度提升60%）和实际落地场景，讲清楚了技术突破和影响面"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -2061,7 +2078,7 @@
           "reason": "直接影响开发者怎么用Cursor的agent功能，能接入自己的基础设施和专用硬件，是具体可用的新能力"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",

@@ -2,22 +2,22 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "datasette-cluster-map 0.19",
-      "link": "https://simonwillison.net/2026/Nov/13/datasette-cluster-map/",
-      "date": "2026-11-13",
-      "first_seen": "2026-11-14T08:10:48.376877+00:00",
+      "title": "datasette-llm 0.1a11",
+      "link": "https://simonwillison.net/2026/Nov/14/datasette-llm/",
+      "date": "2026-11-14",
+      "first_seen": "2026-11-15T00:54:42.206702+00:00",
       "source_type": "blog",
       "summary": null,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "作者自己维护的小工具版本更新日志"
+          "reason": "作者自己维护的小插件版本更新日志，无实质内容"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "与锚点无实质连接"
+          "reason": "与锚点主干无实质连接"
         }
       ],
       "tiers": {
@@ -30,27 +30,83 @@
     },
     {
       "person": "Simon Willison",
-      "title": "datasette-leaflet 0.3",
-      "link": "https://simonwillison.net/2026/Nov/13/datasette-leaflet/",
-      "date": "2026-11-13",
-      "first_seen": "2026-11-14T08:10:48.377099+00:00",
+      "title": "datasette-vega 0.7",
+      "link": "https://simonwillison.net/2026/Nov/14/datasette-vega/",
+      "date": "2026-11-14",
+      "first_seen": "2026-11-15T00:54:42.207025+00:00",
       "source_type": "blog",
       "summary": null,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "作者自己维护的小工具版本更新日志"
+          "reason": "作者自己维护的小插件版本更新日志，无实质内容"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "与锚点无实质连接"
+          "reason": "与锚点主干无实质连接"
         }
       ],
       "tiers": {
         "ai": "low",
         "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] The No AI Slop Manifesto",
+      "link": "https://latent.space/p/ainews-the-no-ai-slop-manifesto/",
+      "date": "2026-11-14",
+      "first_seen": "2026-11-15T00:54:43.259537+00:00",
+      "source_type": "blog",
+      "summary": "这期简报的主角是一份“拒绝AI垃圾内容”宣言，在AI工程师大会的讨论中诞生，被很多演讲者联署，还上了Hacker News首页。另外提到llama.cpp和ggml、SGLang都发布了1.0。想了解业内怎么看AI生成内容质量的人可以点开。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "报道反AI垃圾内容宣言和几个项目的1.0发布，偏新闻与讨论"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "宣言涉及一手不二手、反对低质量内容，沾边"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "medium",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Andrew Ng",
+      "title": "Build agent harnesses for any LLM using the open source OpenWorker Agent Harness SDK",
+      "link": "https://www.deeplearning.ai/the-batch/how-to-build-an-agent-harness-in-one-prompt",
+      "date": "2026-11-13",
+      "first_seen": "2026-11-14T15:08:53.100887+00:00",
+      "source_type": "blog",
+      "summary": "吴恩达推荐了刚开源的OpenWorker Agent Harness SDK，用它可以给任意大模型搭一个agent harness，也就是包住模型、让它能真正干活的那层外壳。他鼓励没做过的人自己动手做一次，这也是面试里会考的技能。想理解agent是怎么搭起来的，可以从这篇开始。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲怎么用开源SDK搭agent harness，可直接动手"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "harness相关，沾“护城河在harness”母题，但偏工具介绍"
+        }
+      ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "medium",
         "eval": "low"
       },
       "is_company": false,
@@ -77,7 +133,7 @@
         "eval": "low"
       },
       "is_company": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -100,7 +156,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -128,8 +184,7 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": true,
-      "image": "https://assets.claude.com/04a298be2efa241bd5a4a810b97c62bb8ef257dc.jpg"
+      "is_new": false
     },
     {
       "person": "Google",
@@ -152,8 +207,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true,
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg"
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -176,7 +230,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -199,7 +253,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -222,8 +276,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true,
-      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/b4181d5a-0460-4828-b350-07feca728023/jevalution-feature.jpg?t=1794458692"
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -246,7 +299,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -269,7 +322,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -292,7 +345,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -320,8 +373,7 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": true,
-      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/27ce2150-3717-4122-ac3a-37dd0e8ce18f/openai-aiecode-feature.png?t=1794370546"
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -349,8 +401,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://i.ytimg.com/vi/bdIoODXsu8k/maxresdefault.jpg"
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -378,8 +429,7 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/f3b4fd9f-a330-4090-a922-a912d25dcd7c/naiveai-feature2.png?t=1793721927"
+      "is_new": false
     },
     {
       "person": "Arvind Narayanan & Sayash Kapoor",
@@ -473,8 +523,7 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_carbon_key_art_16-9_lockup.width-1300.jpg"
+      "is_new": false
     },
     {
       "person": "Google",
@@ -548,8 +597,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://static.simonwillison.net/static/2026/muse-ember.webp"
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -572,8 +620,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://latent.space/og/card/post/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/79cc3bf60b8254ca3df43668071877f25f7ce42399c0808daf10ea0aa906733b.png"
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -619,8 +666,7 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://static.simonwillison.net/static/2026/beep-locator-card.jpg"
+      "is_new": false
     },
     {
       "person": "Google",
@@ -681,8 +727,7 @@
         "eval": "high"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://substackcdn.com/image/fetch/$s_!-MYM!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4498fb7e-ff69-4b09-903a-f22ff7147e4b_2912x1632.png"
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -710,8 +755,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://i.ytimg.com/vi/uJuxenfe-NU/hqdefault.jpg"
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -744,8 +788,7 @@
         "eval": "high"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://i.ytimg.com/vi/v5IJwVnTxzg/maxresdefault.jpg"
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -824,8 +867,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://static.simonwillison.net/static/2026/details-summary-card.webp"
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -853,8 +895,7 @@
         "eval": "low"
       },
       "is_company": true,
-      "is_new": false,
-      "image": "https://assets.claude.com/da1561d7096742c3620943441254fa9d4aaa5590.jpg"
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -887,8 +928,7 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/515ad474-e013-48a0-b40f-739bca031d85/A.jpg?t=1794172002"
+      "is_new": false
     },
     {
       "person": "Latent Space",
