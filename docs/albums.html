@@ -63,13 +63,13 @@
   .cover-link:hover .cover img, .cover-link:hover .cover svg { transform: scale(1.02); }
   .cover svg { display: block; width: 100%; height: 100%; }
 
-  /* 有新文章：封面右上角斜别着一枚钴蓝回形针，往右下斜(2026-11-15 用户觉得原来的红丝带丑，换掉)。
+  /* 有新文章：封面右上角斜别着一枚粉色回形针，往右下斜(2026-11-15 用户觉得原来的红丝带丑，换掉)。
      上半截露在封面上沿外面，像把卡片夹住；读过之后(去掉 .fresh)淡出 */
   .clip {
     position: absolute; z-index: 2; top: -28px; right: 26px; width: 32px; height: 92px;
     transform: rotate(-32deg) translateY(-10px); transform-origin: 50% 40%;
     opacity: 0; pointer-events: none;
-    filter: drop-shadow(1px 2px 1.5px rgba(20, 40, 90, .3));
+    filter: drop-shadow(1px 2px 1.5px rgba(120, 20, 60, .28));
     transition: opacity .5s ease .2s, transform .8s cubic-bezier(.2,.8,.2,1) .2s;
   }
   .clip svg { display: block; width: 100%; height: 100%; overflow: visible; }
@@ -241,10 +241,10 @@ function isFresh(a, seen) {
 let ALBUMS = [];
 function render() {
   const seen = loadSeen();
-  // 回形针(新文章标记)：同一条路径画两遍，底下一层钴蓝(包塑回形针的颜色)、上面一层细白高光
+  // 回形针(新文章标记)：同一条路径画两遍，底下一层粉色(包塑回形针的颜色)、上面一层细白高光
   const CLIP_PATH = 'M10 22 V60 a5 5 0 0 0 10 0 V12 a8 8 0 0 0 -16 0 V64 a10 10 0 0 0 20 0 V30';
   const CLIP_SVG = `<svg viewBox="0 0 28 80" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="${CLIP_PATH}" stroke="#2F6BE0" stroke-width="3"/>
+    <path d="${CLIP_PATH}" stroke="#E8559A" stroke-width="3"/>
     <path d="${CLIP_PATH}" stroke="rgba(255,255,255,.6)" stroke-width="0.9" transform="translate(-0.5 -0.4)"/></svg>`;
   document.getElementById('wall').innerHTML = ALBUMS.map((a, idx) => {
     const fresh = isFresh(a, seen);
