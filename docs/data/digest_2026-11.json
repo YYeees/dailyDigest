@@ -686,6 +686,15 @@
       "stars_total": 140803
     },
     {
+      "full_name": "rasbt/LLMs-from-scratch",
+      "url": "https://github.com/rasbt/LLMs-from-scratch",
+      "description": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",
+      "language": "Jupyter Notebook",
+      "difficulty": "advanced",
+      "recommend_reason": "Sebastian Raschka的经典项目，用PyTorch一步步从零实现类ChatGPT的LLM，配书和完整notebook。质量极高，但需要较深的深度学习背景，适合想真正理解模型内部机制时精读。",
+      "stars_total": 108467
+    },
+    {
       "full_name": "Leonxlnx/taste-skill",
       "url": "https://github.com/Leonxlnx/taste-skill",
       "description": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages",
@@ -710,7 +719,7 @@
       "language": "TypeScript",
       "difficulty": "beginner",
       "recommend_reason": "提供把模型、技能、资源库、记忆和团队聊天接到一起的智能体工作空间，支持任务跟踪与定时执行。README列出外部编程智能体接入、可编辑记忆和GitHub检查失败后返回任务的工作链路，适合普通使用者实践持续的人机协作。可先使用托管入口，自托管则涉及数据库、缓存和文件存储等额外组件。",
-      "stars_total": 84434
+      "stars_total": 85583
     },
     {
       "full_name": "remotion-dev/remotion",
@@ -720,15 +729,6 @@
       "difficulty": "intermediate",
       "recommend_reason": "把视频表示为可编程的网页组件，并明确提供代理制作视频与 Agent Skills 的学习入口。README 同时给出交互编辑、批量渲染和应用嵌入路径，适合学习把 AI 视频创作接到可重复修改的代码工作流；需要一定前端基础，部分公司使用还需商业许可。",
       "stars_total": 69770
-    },
-    {
-      "full_name": "HKUDS/DeepTutor",
-      "url": "https://github.com/HKUDS/DeepTutor",
-      "description": "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
-      "language": "Python",
-      "difficulty": "intermediate",
-      "recommend_reason": "把资料阅读、带来源的问答、练习、研究和可编辑记忆整合成学习工作区，并支持多种检索后端与外部代理。README 有完整容器试用和模块化安装路线，也解释了共享上下文与记忆证据，是学习知识库应用如何形成持续学习流程的扎实样本。",
-      "stars_total": 57057
     }
   ]
 }
