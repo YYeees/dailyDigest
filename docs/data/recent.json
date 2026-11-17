@@ -26,6 +26,149 @@
         "eval": "low"
       },
       "is_company": false,
+      "is_new": false
+    },
+    {
+      "person": "Latent Space",
+      "title": "Building Visual Intelligence — Andreas Blattmann & Dustin Podell, Black Forest Labs",
+      "link": "https://latent.space/p/bfl/",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-17T01:52:01.792748+00:00",
+      "source_type": "blog",
+      "summary": "Latent Space访谈了Black Forest Labs的两位负责人，聊他们为什么要从做图像模型转向视频和世界模型。核心观点是只看静态图学不到物体怎么运动，要把画面、动作和声音放在一起训练FLUX 3。想了解图像视频生成这条路线怎么想的人值得听。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Black Forest Labs讲从像素运动声音学视觉智能，偏图像视频模型技术，需要一定背景"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Science at the Frontier: How scientists use ChatGPT",
+      "link": "https://openai.com/index/science-at-the-frontier",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-17T01:52:04.081827+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI调查了一千八百多位科学家怎么在研究里用ChatGPT，看日常工作流和他们自报的效率变化。全文没能抓到，仅据摘要判断。想看专业人群怎么用AI的可以点开。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "研究者怎么用ChatGPT的使用情况调查，偏宏观，仅凭摘要判断"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": true,
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Our first phase of embedded assessments",
+      "link": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-17T01:52:04.081849+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI开始让Apollo Research、METR、Transluce和Goodfire这些外部机构嵌进来，独立评估模型的对齐、安全防护和监控系统。全文没能抓到，仅据摘要判断。关心第三方怎么评测AI的人可以留意。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "OpenAI联合外部机构做对齐与安全评测，偏研究治理，全文403抓取失败"
+        },
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "第三方独立评测模型对齐和监控系统，沾评测方法但偏治理，不是教怎么测"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "medium"
+      },
+      "is_company": true,
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Advancing computer-use agents for healthcare teams",
+      "link": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-17T01:52:04.081868+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI介绍了面向医疗团队的computer-use agent，也就是让AI像人一样操作医疗软件界面完成工作。仅基于标题判断，全文没能抓到。想看agent在受监管行业怎么落地可以点开看。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "OpenAI官方的computer-use agent落地发布，仅凭标题和摘要判断，全文403抓取失败"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": true,
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "More ways to move care forward with ChatGPT for Healthcare",
+      "link": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-17T01:52:04.081884+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI给ChatGPT医疗版加了computer-use agent、更准的临床回答和跨医疗软件的插件。和同日另一篇healthcare computer-use是同一件事，挑一篇看就行。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "ChatGPT for Healthcare的功能更新，与上一条重复，择一看即可"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": true,
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "Updating our coordinated vulnerability disclosure policy timelines",
+      "link": "https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-17T01:52:09.754892+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic把自己的漏洞披露窗口从90天缩短到30天，其他问题缩到45天，2027年起生效。理由是模型找漏洞越来越强，同一个漏洞被别的模型重复发现的概率也在变高，修复和公开都得更快。想知道AI时代安全披露规矩怎么变的人可以点开看看。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "前沿模型找漏洞能力带来的披露政策变化，偏安全政策，实操性一般"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": true,
       "is_new": true
     },
     {
