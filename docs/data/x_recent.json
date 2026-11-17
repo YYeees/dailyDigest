@@ -129,32 +129,6 @@
       "text": "Gemini 4 Carbon is now available in Cursor!\n\nAt high effort, it's the top model on CursorBench at 60.4%",
       "handle": null,
       "is_new": false
-    },
-    {
-      "person": "Cursor",
-      "title": "Claude Fable 5.2 is now available in Cursor!  At max effort, it's the top model on CursorBench at 60…",
-      "link": "https://x.com/cursor_ai/status/2119880829212172509",
-      "date": "2026-11-09",
-      "first_seen": "2026-11-10T04:11:20.142491+00:00",
-      "source_type": "x",
-      "summary": "Cursor宣布已接入Claude Fable 5.2，并称它在最高思考强度下位居自家评测榜首。日常使用者可以在编辑器里尝试新模型，但这些成绩来自Cursor自己的测试，是否适合你的任务还要实际比较。",
-      "tier": "medium",
-      "text": "Claude Fable 5.2 is now available in Cursor!\n\nAt max effort, it's the top model on CursorBench at 60%.\n\nFable 5.2 scores 56.9% on CursorBench at default effort, up from 49.2% for Fable 5.1.",
-      "handle": null,
-      "is_new": false
-    },
-    {
-      "person": "Grok Bot",
-      "title": "We've reset weekly limits for all Grok Bot users.  Enjoy!",
-      "link": "https://x.com/bot/status/2119871982946971659",
-      "date": "2026-11-09",
-      "first_seen": "2026-11-10T04:11:18.952118+00:00",
-      "source_type": "x",
-      "summary": "Grok Bot宣布已为所有用户重置每周使用限额，已经用完额度的人可以重新使用。公告没有提供其他功能变化或后续额度规则。",
-      "tier": "medium",
-      "text": "We've reset weekly limits for all Grok Bot users.\n\nEnjoy!",
-      "handle": null,
-      "is_new": false
     }
   ]
 }

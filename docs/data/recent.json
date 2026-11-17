@@ -1,6 +1,34 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "llm 0.37.3",
+      "link": "https://simonwillison.net/2026/Nov/16/llm/",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-17T01:52:01.210049+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "作者自己维护的小工具版本更新日志，不算AI实操内容"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "无实质连接"
+        }
+      ],
+      "tiers": {
+        "ai": "low",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
       "person": "Craig Mod",
       "title": "[RIDGELINE] Walking a Bit of the Izu Peninsula",
       "link": "https://craigmod.com/ridgeline/238/",
@@ -13,34 +41,6 @@
           "track": "anchor",
           "tier": "high",
           "reason": "开头只是推荐朋友的纪录片众筹，无可对应的母题。"
-        }
-      ],
-      "tiers": {
-        "ai": "low",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "datasette-llm 0.1a11",
-      "link": "https://simonwillison.net/2026/Nov/14/datasette-llm/",
-      "date": "2026-11-14",
-      "first_seen": "2026-11-15T00:54:42.206702+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "作者自己维护的小插件版本更新日志，无实质内容"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "与锚点主干无实质连接"
         }
       ],
       "tiers": {
@@ -179,8 +179,7 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": false,
-      "image": "https://assets.claude.com/04a298be2efa241bd5a4a810b97c62bb8ef257dc.jpg"
+      "is_new": false
     },
     {
       "person": "Google",
@@ -203,8 +202,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg"
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -273,8 +271,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/b4181d5a-0460-4828-b350-07feca728023/jevalution-feature.jpg?t=1794458692"
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -371,8 +368,7 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/27ce2150-3717-4122-ac3a-37dd0e8ce18f/openai-aiecode-feature.png?t=1794370546"
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -400,8 +396,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://i.ytimg.com/vi/bdIoODXsu8k/maxresdefault.jpg"
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -429,8 +424,7 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/f3b4fd9f-a330-4090-a922-a912d25dcd7c/naiveai-feature2.png?t=1793721927"
+      "is_new": false
     },
     {
       "person": "Arvind Narayanan & Sayash Kapoor",
@@ -524,8 +518,7 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_carbon_key_art_16-9_lockup.width-1300.jpg"
+      "is_new": false
     },
     {
       "person": "Google",
@@ -599,8 +592,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://static.simonwillison.net/static/2026/muse-ember.webp"
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -623,8 +615,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://latent.space/og/card/post/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/79cc3bf60b8254ca3df43668071877f25f7ce42399c0808daf10ea0aa906733b.png"
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -648,264 +639,6 @@
       },
       "is_company": false,
       "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Locating the source of a mysterious beep with Claude",
-      "link": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
-      "date": "2026-11-09",
-      "first_seen": "2026-11-10T04:10:50.130462+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison让Claude写出一个用多台手机和电脑共同监听的工具，最终找到了藏在箱子里的报警器。更有意思的是，他让智能体读取声音记录、在线修改设备代码，再通过拍手和回放确认定位是否靠谱。文章展示了如何给编程智能体接上现实世界的反馈，也保留了从粗糙原型逐步调到能用的过程。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "作者亲手搭建感知与反馈环境解决生活问题，具体体现与模型共建及系统约束的重要性。"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "high",
-        "eval": "medium"
-      },
-      "is_company": false,
-      "is_new": false,
-      "image": "https://static.simonwillison.net/static/2026/beep-locator-card.jpg"
-    },
-    {
-      "person": "Google",
-      "title": "Gemini Robotics 2.5 accelerates real-world general dexterity",
-      "link": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
-      "date": "2026-11-09",
-      "first_seen": "2026-11-11T01:58:50.503819+00:00",
-      "source_type": "blog",
-      "summary": "Google 发布 Gemini Robotics 2.5，展示机器人处理柔软物体、使用工具，以及在汽车生产线上整理零件的进展。文章也介绍靠近人时的安全控制和专门测试危险指令的数据集，适合了解机器人从演示走向现场还要解决什么。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "用生产线案例解释机器人模型的新能力与应用边界。"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "介绍机器人安全引导与开源越狱测试集，方法展开有限。"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "low",
-        "eval": "medium"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "Ethan Mollick",
-      "title": "Fable 5.2 and Jagged AGI",
-      "link": "https://www.oneusefulthing.org/p/fable-52-and-jagged-agi",
-      "date": "2026-11-09",
-      "first_seen": "2026-11-10T04:10:49.925189+00:00",
-      "source_type": "blog",
-      "summary": "Ethan Mollick用新Claude做创业方案、文学课程和持续生成的虚拟世界，发现它能完成复杂工作，却常常察觉不到成果已经冗长、无趣或失控。尤其值得看的是，多智能体为了通过固定画面的评分不断优化，最后还把自己困在越来越厚的规则里。这些一手实验说明，检查事实和代码还不够，目标是否值得、整体体验好不好，仍需要人持续判断。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "通过跨领域的一手实验解释新模型的能力和使用边界，面向普通用户且有具体干预经验。"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "作者亲自观察多智能体协作失控与人工判断的作用，直接呼应认知不能外包和系统约束设计。"
-        },
-        {
-          "track": "eval",
-          "tier": "high",
-          "reason": "具体揭示固定截图评分被优化、评审规则膨胀及正确性检查漏掉整体质量，能改变智能体质量保障实践。"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "high",
-        "eval": "high"
-      },
-      "is_company": false,
-      "is_new": false,
-      "image": "https://substackcdn.com/image/fetch/$s_!-MYM!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4498fb7e-ff69-4b09-903a-f22ff7147e4b_2912x1632.png"
-    },
-    {
-      "person": "Greg Isenberg",
-      "title": "AI Agents are too good at marketing now",
-      "link": "https://www.youtube.com/watch?v=uJuxenfe-NU",
-      "date": "2026-11-09",
-      "first_seen": "2026-11-11T01:58:37.920010+00:00",
-      "source_type": "youtube",
-      "summary": "这期演示如何让 AI 代理真正接手营销工作，重点是先准备业务数据、广告平台权限和创作工具。嘉宾解释为什么要把数据集中起来再让代理查询，也展示广告生成流程，适合想把聊天助手接进实际业务的人。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "展示可借用的营销代理数据与工具配置方法。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "说明代理能力取决于数据与工作环境。"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "medium",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false,
-      "image": "https://i.ytimg.com/vi/uJuxenfe-NU/hqdefault.jpg"
-    },
-    {
-      "person": "Latent Space",
-      "title": "What Frontier Labs Buy: A Data Deep Dive with Handshake AI — Garrett Lord & Team",
-      "link": "https://latent.space/p/handshake/",
-      "date": "2026-11-09",
-      "first_seen": "2026-11-10T04:10:51.225026+00:00",
-      "source_type": "blog",
-      "summary": "这期访谈把模型训练和评测用的专业任务环境直接搬到屏幕上，展示银行业务、科学图像和文件操作中的真实失败。最值得看的是，模型能背出规则却不会在任务中应用，还可能钻评分器的空子，而只看最终回复会漏掉关键行为。对设计智能体测试的人来说，它具体说明了为什么要检查执行过程，并让领域专家参与判断。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "提供前沿实验室采购训练数据与专业任务环境的行业观察，但篇幅长且专业门槛较高。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "专家判断与评分规则的落差呼应独立判断，主要仍是访谈转述。"
-        },
-        {
-          "track": "eval",
-          "tier": "high",
-          "reason": "展示真实任务环境、过程轨迹检查、部分得分及评分器被钻空子的案例，可直接启发智能体评测设计。"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "medium",
-        "eval": "high"
-      },
-      "is_company": false,
-      "is_new": false,
-      "image": "https://i.ytimg.com/vi/v5IJwVnTxzg/maxresdefault.jpg"
-    },
-    {
-      "person": "Andrew Huberman",
-      "title": "Overcome Addictions and Obsessions of All Kinds | Dr. Anna Lembke",
-      "link": "https://www.youtube.com/watch?v=wbJ_Q1xsDHg",
-      "date": "2026-11-09",
-      "first_seen": "2026-11-11T01:58:37.570382+00:00",
-      "source_type": "youtube",
-      "summary": "Huberman 与 Anna Lembke 讨论成瘾、强迫行为和控制欲，也谈到人为什么会陷入共依赖。节目介绍把放下控制作为一个讨论方向，适合借此观察自己的行为模式，现有材料是节目简介而非完整论证。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "讨论控制欲与共依赖，连接深度自我认识。"
-        }
-      ],
-      "tiers": {
-        "ai": "low",
-        "anchor": "medium",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "Control Room: A central system to track and stop model workloads across our research infrastructure",
-      "link": "https://openai.com/index/control-room",
-      "date": "2026-11-09",
-      "first_seen": "2026-11-10T04:10:54.577653+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI介绍了用于追踪研究基础设施中模型任务的Control Room，称它可以在出现安全问题时迅速停止相关运行。它关注的是模型开始执行任务以后，怎样保持可观察、可控制。原文此次访问被拒绝，目前只能依据官方简介了解用途，具体实现与适用边界仍需点开原文确认。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "研究基础设施的模型工作负载管控与人工智能工程相关，但全文被拒绝访问，暂据简介保守判断。"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "涉及模型运行监控与紧急停止的可靠性保障，但全文无法访问，具体方法尚不能核实。"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "medium"
-      },
-      "is_company": true,
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Hide your slop PR descriptions behind <details><summary>",
-      "link": "https://simonwillison.net/2026/Nov/9/details-summary/",
-      "date": "2026-11-09",
-      "first_seen": "2026-11-10T04:10:50.130545+00:00",
-      "source_type": "blog",
-      "summary": "Simon Willison发现，智能体写的变更说明即使准确完整，也常常长到让人不想读。他现在先放一段由自己挑选和认可的简短介绍，把模型生成的完整说明折叠在后面，必要时再展开。文章附有实际例子，适合直接借来改善人工智能参与开发时的沟通，也提醒人类判断应该放在读者最先看到的位置。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "给出可立即应用的人工智能编程协作写法，并有真实合并请求示例。"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "作者亲述用人工编辑判断保护读者注意力，直接呼应认知系统不能外包与写作表达。"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "high",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false,
-      "image": "https://static.simonwillison.net/static/2026/details-summary-card.webp"
-    },
-    {
-      "person": "Anthropic",
-      "title": "Claude can design electronic prototypes from start to finish",
-      "link": "https://www.anthropic.com/research/claude-electronics-design",
-      "date": "2026-11-09",
-      "first_seen": "2026-11-10T04:11:00.853714+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic展示了Claude从电路设计、外壳建模到编写固件的完整硬件开发过程，工程师按设计制造的原型可以正常工作。文章讲清楚模型怎样查资料、推翻错误布局并处理制造约束，也说明原型尚未经过完整的安全与可靠性验证。值得看的是人工智能开始把多个工程步骤串起来，以及离可交付产品还差哪些环节。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "以完整硬件原型与明确局限解释模型能力的新进展，内容扎实且容易理解。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "提供智能体连接现实工具的构建案例，但主线不是认知反思。"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "medium",
-        "eval": "low"
-      },
-      "is_company": true,
-      "is_new": false,
-      "image": "https://assets.claude.com/da1561d7096742c3620943441254fa9d4aaa5590.jpg"
     }
   ]
 }
