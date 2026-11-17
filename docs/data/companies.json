@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T22:47:31+00:00",
+ "updated_at": "2026-11-17T01:52:58+00:00",
  "window_days": 7,
  "companies": [
   {
@@ -12,6 +12,72 @@
   }
  ],
  "items": [
+  {
+   "company": "OpenAI",
+   "key": "openai",
+   "title": "Science at the Frontier: How scientists use ChatGPT",
+   "link": "https://openai.com/index/science-at-the-frontier",
+   "date": "2026-11-16",
+   "summary": "OpenAI调查了一千八百多位科学家怎么在研究里用ChatGPT，看日常工作流和他们自报的效率变化。全文没能抓到，仅据摘要判断。想看专业人群怎么用AI的可以点开。",
+   "image": null,
+   "priority": "medium",
+   "tags": [
+    "AI"
+   ]
+  },
+  {
+   "company": "OpenAI",
+   "key": "openai",
+   "title": "Our first phase of embedded assessments",
+   "link": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+   "date": "2026-11-16",
+   "summary": "OpenAI开始让Apollo Research、METR、Transluce和Goodfire这些外部机构嵌进来，独立评估模型的对齐、安全防护和监控系统。全文没能抓到，仅据摘要判断。关心第三方怎么评测AI的人可以留意。",
+   "image": null,
+   "priority": "medium",
+   "tags": [
+    "AI",
+    "Eval"
+   ]
+  },
+  {
+   "company": "OpenAI",
+   "key": "openai",
+   "title": "Advancing computer-use agents for healthcare teams",
+   "link": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+   "date": "2026-11-16",
+   "summary": "OpenAI介绍了面向医疗团队的computer-use agent，也就是让AI像人一样操作医疗软件界面完成工作。仅基于标题判断，全文没能抓到。想看agent在受监管行业怎么落地可以点开看。",
+   "image": null,
+   "priority": "medium",
+   "tags": [
+    "AI"
+   ]
+  },
+  {
+   "company": "OpenAI",
+   "key": "openai",
+   "title": "More ways to move care forward with ChatGPT for Healthcare",
+   "link": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+   "date": "2026-11-16",
+   "summary": "OpenAI给ChatGPT医疗版加了computer-use agent、更准的临床回答和跨医疗软件的插件。和同日另一篇healthcare computer-use是同一件事，挑一篇看就行。",
+   "image": null,
+   "priority": "medium",
+   "tags": [
+    "AI"
+   ]
+  },
+  {
+   "company": "Anthropic",
+   "key": "anthropic",
+   "title": "Updating our coordinated vulnerability disclosure policy timelines",
+   "link": "https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines",
+   "date": "2026-11-16",
+   "summary": "Anthropic把自己的漏洞披露窗口从90天缩短到30天，其他问题缩到45天，2027年起生效。理由是模型找漏洞越来越强，同一个漏洞被别的模型重复发现的概率也在变高，修复和公开都得更快。想知道AI时代安全披露规矩怎么变的人可以点开看看。",
+   "image": "https://assets.claude.com/87317c13cd86cd0b62244c430e91d0bb13b920a1.jpg",
+   "priority": "medium",
+   "tags": [
+    "AI"
+   ]
+  },
   {
    "company": "OpenAI",
    "key": "openai",
@@ -48,33 +114,6 @@
    "summary": "OpenAI 宣布面向商家的 ChatGPT 功能，简介提到管理企业信息、了解企业如何被展示，以及把用户兴趣转成后续行动。原文返回访问拒绝，目前只能确认这些简介信息，具体使用方式仍需点开原文查看。",
    "image": null,
    "priority": "medium",
-   "tags": [
-    "AI"
-   ]
-  },
-  {
-   "company": "OpenAI",
-   "key": "openai",
-   "title": "Control Room: A central system to track and stop model workloads across our research infrastructure",
-   "link": "https://openai.com/index/control-room",
-   "date": "2026-11-09",
-   "summary": "OpenAI介绍了用于追踪研究基础设施中模型任务的Control Room，称它可以在出现安全问题时迅速停止相关运行。它关注的是模型开始执行任务以后，怎样保持可观察、可控制。原文此次访问被拒绝，目前只能依据官方简介了解用途，具体实现与适用边界仍需点开原文确认。",
-   "image": null,
-   "priority": "medium",
-   "tags": [
-    "AI",
-    "Eval"
-   ]
-  },
-  {
-   "company": "Anthropic",
-   "key": "anthropic",
-   "title": "Claude can design electronic prototypes from start to finish",
-   "link": "https://www.anthropic.com/research/claude-electronics-design",
-   "date": "2026-11-09",
-   "summary": "Anthropic展示了Claude从电路设计、外壳建模到编写固件的完整硬件开发过程，工程师按设计制造的原型可以正常工作。文章讲清楚模型怎样查资料、推翻错误布局并处理制造约束，也说明原型尚未经过完整的安全与可靠性验证。值得看的是人工智能开始把多个工程步骤串起来，以及离可交付产品还差哪些环节。",
-   "image": "https://assets.claude.com/da1561d7096742c3620943441254fa9d4aaa5590.jpg",
-   "priority": "high",
    "tags": [
     "AI"
    ]

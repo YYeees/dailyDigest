@@ -322,7 +322,8 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": false
+      "is_new": false,
+      "image": "https://assets.claude.com/04a298be2efa241bd5a4a810b97c62bb8ef257dc.jpg"
     },
     {
       "person": "Google",
@@ -345,7 +346,8 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg"
     },
     {
       "person": "Andrew Huberman",
@@ -414,7 +416,8 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/b4181d5a-0460-4828-b350-07feca728023/jevalution-feature.jpg?t=1794458692"
     },
     {
       "person": "Andrew Huberman",
@@ -511,7 +514,8 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/27ce2150-3717-4122-ac3a-37dd0e8ce18f/openai-aiecode-feature.png?t=1794370546"
     },
     {
       "person": "Latent Space",
@@ -539,7 +543,8 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://i.ytimg.com/vi/bdIoODXsu8k/maxresdefault.jpg"
     },
     {
       "person": "Latent Space",
@@ -567,7 +572,8 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/f3b4fd9f-a330-4090-a922-a912d25dcd7c/naiveai-feature2.png?t=1793721927"
     },
     {
       "person": "Arvind Narayanan & Sayash Kapoor",
@@ -661,7 +667,8 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_carbon_key_art_16-9_lockup.width-1300.jpg"
     },
     {
       "person": "Google",
@@ -735,7 +742,8 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://static.simonwillison.net/static/2026/muse-ember.webp"
     },
     {
       "person": "Latent Space",
@@ -758,7 +766,8 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://latent.space/og/card/post/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/79cc3bf60b8254ca3df43668071877f25f7ce42399c0808daf10ea0aa906733b.png"
     },
     {
       "person": "Simon Willison",
