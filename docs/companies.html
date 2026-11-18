@@ -88,6 +88,24 @@
   .filterable { cursor: pointer; text-transform: uppercase; font-size: inherit; padding: 1px 0; border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
   .filterable:hover { border-bottom-color: currentColor; }
   .filterable.on { border-bottom-color: currentColor; color: var(--t1); }
+
+  /* 「记一笔」(2026-11-18)：跟 Recent/Archive 同一个按钮——在写作收件箱(Obsidian vault writing-inbox)
+     新建一条临时笔记，已记过的改成打开那条。放在公司·标签那一行的最右边。
+     未记态悬停那一条才浮现，已记态一直显示；已记用土橙(--t5)，红色只给"未读"。 */
+  .m .note-btn { margin-left: auto; }
+  .note-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; color: var(--faint);
+    border: 1px solid var(--rule); border-radius: 999px;
+    opacity: 0; transition: opacity .15s, color .15s, border-color .15s, background .15s;
+  }
+  .note-btn svg { fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linejoin: round; }
+  .note-btn:hover { color: var(--ink); border-color: var(--faint); }
+  .item:hover .note-btn, .note-btn:focus-visible, .note-btn.noted { opacity: 1; }
+  @media (hover: none) { .note-btn { opacity: 1; } }
+  .note-btn.noted { color: var(--t5); border-color: transparent; }
+  .note-btn.noted svg { fill: currentColor; }
+  .note-btn.noted:hover { background: rgba(204, 120, 92, .1); }
   /* 标题跟大日期同一套：Iowan Old Style(苹果系统自带)，别的设备用 Sorts Mill Goudy */
   /* 标题要比公司名更醒目：近乎纯黑，再用极细的描边把Iowan偏细的笔画压实一点 */
   .item h2 { color: var(--t1); -webkit-text-stroke: .3px currentColor;
@@ -157,6 +175,71 @@ const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov
 const fmt = iso => { const [, m, d] = iso.split('-').map(Number); return `${MONTHS[m - 1]} ${d}`; };
 const RANK = { high: 3, medium: 2, low: 1 };
 
+// ---- 「记一笔」：跟 index.html / digest.html 同一套(vault、笔记命名、localStorage 键都一样)，
+// 所以同一篇在哪页记过，另几页也显示成已记。为什么要 noted 键、为什么点击后要 setTimeout 再改 href，
+// 见 index.html 那段注释。属性用 data-note-link 而不是 data-link：data-link 会被下面当成"点开原文"标已读。
+const INBOX_VAULT = 'writing-inbox';
+const NOTED_KEY = 'digest-noted-links-v1';
+const notedLinks = () => { try { return new Set(JSON.parse(localStorage.getItem(NOTED_KEY) || '[]')); } catch (e) { return new Set(); } };
+function setNoted(link, on) {
+  try {
+    const s = notedLinks();
+    if (on) { s.add(link); } else { s.delete(link); }
+    localStorage.setItem(NOTED_KEY, JSON.stringify([...s]));
+  } catch (e) { /* 记不住就下次再建一个，不该让点击失败 */ }
+}
+// 笔记日期用"记的那天"(本地时间)，不是文章发布日(2026-11-18 用户要的)。
+// 名字跟着日期变，所以记下时把文件名存起来(NAMES_KEY)，之后"打开"按存的名字找；
+// 存的名字丢了(在 Recent/Archive 页记的、或 localStorage 被清)就退回发布日命名——那两页还是按发布日起名。
+const NAMES_KEY = 'companies-note-names-v1';   // { link: 笔记文件名 }
+const loadNames = () => { try { return JSON.parse(localStorage.getItem(NAMES_KEY) || '{}'); } catch (e) { return {}; } };
+function saveName(link, name) {
+  try { const m = loadNames(); if (name) { m[link] = name; } else { delete m[link]; } localStorage.setItem(NAMES_KEY, JSON.stringify(m)); }
+  catch (e) {}
+}
+const todayISO = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
+function inboxNoteName(it, date) {
+  const slug = (it.title || '').trim()
+    .replace(/[\\/:*?"<>|#^[\]]/g, ' ')
+    .replace(/\s+/g, ' ').trim().slice(0, 60);
+  return `${date} ${slug}`;
+}
+const notedName = it => loadNames()[it.link] || inboxNoteName(it, it.date);
+const openHref = name => `obsidian://open?vault=${encodeURIComponent(INBOX_VAULT)}&file=${encodeURIComponent(name)}`;
+function inboxHref(it, noted) {
+  if (noted) return openHref(notedName(it));
+  const today = todayISO();
+  const name = inboxNoteName(it, today);
+  const anchor = (it.title || '').trim().replace(/[[\]]/g, m => (m === '[' ? '(' : ')'));
+  const from = (it.company || '').replace(/"/g, "'");
+  // 链接下面带上页面上那段中文摘要(引用块)，写的时候不用再翻回来看。摘要必须在链接**之后**：
+  // scan_inbox.py 取正文里第一个 markdown 链接去匹配 digest.db。
+  const brief = (it.summary || '').trim().replace(/\s*\n\s*/g, ' ');
+  const content = `---\nsource: "${from}"\ndate: ${today}\n---\n\n[${anchor}](${it.link})\n\n`
+    + (brief ? `> ${brief}\n\n` : '');
+  return `obsidian://new?vault=${encodeURIComponent(INBOX_VAULT)}`
+    + `&name=${encodeURIComponent(name)}&content=${encodeURIComponent(content)}`;
+}
+const PEN_SVG = '<svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true">'
+  + '<path d="M11.1 1.9a1.3 1.3 0 0 1 1.9 0l1.1 1.1a1.3 1.3 0 0 1 0 1.9l-7.6 7.6-3.4.9.9-3.4z"/></svg>';
+function noteBtn(it, noted) {
+  return `<a class="note-btn${noted ? ' noted' : ''}" href="${esc(inboxHref(it, noted))}"`
+    + ` data-note-link="${esc(it.link)}" data-name="${esc(inboxNoteName(it, todayISO()))}"`
+    + ` data-new-href="${esc(inboxHref(it, false))}"`
+    + ` title="${noted ? '打开已记的那条笔记（右键取消标记）' : '在写作收件箱里记一笔'}">${PEN_SVG}</a>`;
+}
+// 右键取消已记：浏览器弹"是否打开Obsidian"时点了取消，页面收不到，右键给条退路
+document.addEventListener('contextmenu', e => {
+  const btn = e.target.closest && e.target.closest('.note-btn.noted');
+  if (!btn) return;
+  e.preventDefault();
+  setNoted(btn.dataset.noteLink, false);
+  saveName(btn.dataset.noteLink, null);
+  btn.classList.remove('noted');
+  btn.href = btn.dataset.newHref;
+  btn.title = '在写作收件箱里记一笔（点了没反应？右键可取消标记）';
+});
+
 let DATA = null;
 let FILTER = null;   // { kind: 'company' | 'tag', value }
 
@@ -166,6 +249,7 @@ const matches = it => !FILTER
 
 function render() {
   const seen = loadSeen();
+  const noted = notedLinks();
   const all = DATA.items.slice().sort((a, b) =>
     b.date.localeCompare(a.date) || (RANK[b.priority] || 0) - (RANK[a.priority] || 0));
   const unread = all.filter(it => !seen.has(it.link)).length;
@@ -209,7 +293,7 @@ function render() {
         const link = `href="${esc(it.link)}" target="_blank" rel="noopener" data-link="${esc(it.link)}"`;
         return `<article class="${cls}">
           <div>
-            <div class="m">${read ? '' : '<span class="unread" title="还没看过"></span>'}<button type="button" class="co filterable ${esc(it.key)}${coOn}" data-company="${esc(it.key)}" title="只看 ${esc(it.company)}">${esc(it.company)}</button>${tags}</div>
+            <div class="m">${read ? '' : '<span class="unread" title="还没看过"></span>'}<button type="button" class="co filterable ${esc(it.key)}${coOn}" data-company="${esc(it.key)}" title="只看 ${esc(it.company)}">${esc(it.company)}</button>${tags}${noteBtn(it, noted.has(it.link))}</div>
             <h2><a ${link}>${esc(it.title)}</a></h2>
             ${it.summary ? `<p class="sum">${esc(it.summary)}</p>` : ''}
           </div>
@@ -238,6 +322,19 @@ document.addEventListener('click', e => {
     const s = loadSeen(); DATA.items.forEach(it => s.add(it.link)); saveSeen(s); render(); return;
   }
   if (e.target.id === 'clearFilter') { FILTER = null; render(); return; }
+  const nb = e.target.closest('.note-btn');
+  if (nb) {
+    if (nb.classList.contains('noted')) return;   // 已记：默认跳转走 open 就行
+    setNoted(nb.dataset.noteLink, true);
+    saveName(nb.dataset.noteLink, nb.dataset.name);
+    // 必须等默认跳转带着 new 链接发出去之后再改 href，否则这次就跳到还不存在的笔记上
+    setTimeout(() => {
+      nb.classList.add('noted');
+      nb.title = '打开已记的那条笔记（右键取消标记）';
+      nb.href = openHref(nb.dataset.name);
+    }, 0);
+    return;
+  }
   const co = e.target.closest('[data-company]');
   if (co) { toggleFilter('company', co.dataset.company); return; }
   const tg = e.target.closest('[data-tag]');
