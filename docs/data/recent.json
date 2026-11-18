@@ -2,17 +2,96 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "llm 0.37.3",
-      "link": "https://simonwillison.net/2026/Nov/16/llm/",
-      "date": "2026-11-16",
-      "first_seen": "2026-11-17T01:52:01.210049+00:00",
+      "title": "External sandboxes for coding agents",
+      "link": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-18T00:56:28.382012+00:00",
+      "source_type": "blog",
+      "summary": "Simon介绍了一种让编程agent更安全的做法：agent本身留在外面，它要执行的代码都丢到一个单独的沙箱里跑。项目给了三种沙箱实现，接口一样，Claude Code、Codex这类工具都能接，还能限制代码能访问哪些网站，并且不把密钥交给agent。想放心试本地模型或者怕agent误操作的人，这篇值得读。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲清楚怎么让编程agent在隔离沙箱里跑代码，直接影响日常用Claude Code等工具的安全实践"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "构建者线的harness思路，沾边但不是一手反思"
+        }
+      ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "medium",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "GPT‑6.2 Astra and GPT‑6.2 Sol",
+      "link": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-18T00:56:28.382300+00:00",
+      "source_type": "blog",
+      "summary": "Simon快速记了一下GPT-6.2两个模型的API价格，Astra比上一代便宜两成，缓存价格降得更多，对跑得久的agent尤其划算。他还用画鹈鹕骑自行车的老办法比了几代模型的效果。想看价格和直观对比的话，比官方通稿更好读。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "GPT-6.2发布的价格对比与实测，与OpenAI官方那条重复，择一看即可"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "无实质连接"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Introducing GPT-6.2 Astra and Sol",
+      "link": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-18T00:56:31.869689+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI发布了GPT-6.2 Astra和Sol两个新模型，Astra面向最难的任务，Sol负责日常使用的高效场景。官方说专业产出、写代码和操作电脑都有提升，价格还更低，Codex和API里都能用。你平时用Codex或者选模型的话，值得点开看一下新的定价和适用场景。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "OpenAI新一代模型发布，涉及编码与computer use，影响日常选模型；页面403，依据简介和Simon的转述"
+        }
+      ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": true,
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Running the full server-side Datasette Python app in the browser with service workers and Pyodide",
+      "link": "https://simonwillison.net/2026/Nov/17/datasette-lite/",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-18T00:56:28.382332+00:00",
       "source_type": "blog",
       "summary": null,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "作者自己维护的小工具版本更新日志，不算AI实操内容"
+          "reason": "作者自己小工具Datasette Lite的重写发布，与AI关系不大"
         },
         {
           "track": "anchor",
@@ -26,7 +105,104 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Cloudflare Joins the Jevolution and Labels Itself a Neolab",
+      "link": "https://latent.space/p/cloudflare/",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-18T00:56:29.019931+00:00",
+      "source_type": "blog",
+      "summary": "Cloudflare这家做网络基础设施的公司，开始自己做模型了，先放出两个反应很快的小模型，主要用来做决策和抽取信息。文章还聊了“neolab”这个新说法到底指什么，以及Cloudflare算不算。对关心AI公司格局的人，值得看看基础设施厂商怎么切入模型。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Cloudflare自研小模型的访谈报道，偏行业叙事"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Perplexity hits a $1B revenue run rate, up 4x in 2026",
+      "link": "https://latent.space/p/ainews-perplexity-hits-a-1b-revenue-run-rate-up-4x-in-2026/",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-18T00:56:29.020791+00:00",
+      "source_type": "blog",
+      "summary": "这是一条AI行业简讯，说Perplexity的年化收入已经到了10亿美元，比年初涨了约4倍。后面顺带梳理了它最近上线的几个东西，比如能接手长期任务的Computer和监测网页变化的Monitor API。想了解AI产品公司赚钱赚到什么程度，扫一眼就够了。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Perplexity营收与新产品的行业简讯，偏新闻"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Introducing ChatGPT for Sales",
+      "link": "https://openai.com/index/introducing-chatgpt-for-sales",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-18T00:56:31.869919+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI给ChatGPT上了一个销售插件，外加30多个合作伙伴插件，用来查客户资料、准备方案、更新CRM。官网页面这次没抓到全文，只看到简介。更偏企业销售场景，普通使用者可以扫一眼看看ChatGPT插件生态在往哪走。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "ChatGPT销售场景插件发布，偏产品通稿，页面403未读全文"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": true,
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Go Proverbs",
+      "link": "https://simonwillison.net/2026/Nov/17/go-proverbs/",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-18T00:56:28.382392+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Go语言格言的一句引用，与AI无关"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "一句编程格言，无实质连接"
+        }
+      ],
+      "tiers": {
+        "ai": "low",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
     },
     {
       "person": "Latent Space",
@@ -49,7 +225,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -72,7 +248,7 @@
         "eval": "low"
       },
       "is_company": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -100,7 +276,7 @@
         "eval": "medium"
       },
       "is_company": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -123,7 +299,7 @@
         "eval": "low"
       },
       "is_company": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -146,7 +322,7 @@
         "eval": "low"
       },
       "is_company": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -169,7 +345,7 @@
         "eval": "low"
       },
       "is_company": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -322,8 +498,7 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": false,
-      "image": "https://assets.claude.com/04a298be2efa241bd5a4a810b97c62bb8ef257dc.jpg"
+      "is_new": false
     },
     {
       "person": "Google",
@@ -346,8 +521,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg"
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -416,8 +590,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/b4181d5a-0460-4828-b350-07feca728023/jevalution-feature.jpg?t=1794458692"
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -512,282 +685,6 @@
         "ai": "high",
         "anchor": "low",
         "eval": "medium"
-      },
-      "is_company": false,
-      "is_new": false,
-      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/27ce2150-3717-4122-ac3a-37dd0e8ce18f/openai-aiecode-feature.png?t=1794370546"
-    },
-    {
-      "person": "Latent Space",
-      "title": "Designing for Agents — Zeno Rocha, Resend",
-      "link": "https://latent.space/p/resend/",
-      "date": "2026-11-10",
-      "first_seen": "2026-11-11T01:58:41.066907+00:00",
-      "source_type": "blog",
-      "summary": "Resend 创始人谈如何让开发工具更容易被 AI 代理找到和使用，从可直接读取的价格表讲到工具调用返回的数据量。他会展开代理实际调用，检查哪些内容占满上下文，适合正在设计文档或代理工具的人借用这种观察方式。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "提供文档可读性与工具返回大小的具体代理设计建议。"
-        },
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "创始人用一手构建经历解释如何改善代理工作环境。"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "high",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false,
-      "image": "https://i.ytimg.com/vi/bdIoODXsu8k/maxresdefault.jpg"
-    },
-    {
-      "person": "Latent Space",
-      "title": "NaiveAI Promises 2,100 Tokens per Second. How Well Does It Code?",
-      "link": "https://latent.space/p/naiveai/",
-      "date": "2026-11-10",
-      "first_seen": "2026-11-11T01:58:41.067624+00:00",
-      "source_type": "blog",
-      "summary": "Latent Space 实测 NaiveAI 的高速模型，把生成速度、等待时间和做出来的应用放在一起比较。结果显示，吐字快仍可能因为思考太长而拖慢任务，文章也坦承没有检查答题正确率，适合学习怎样看穿单一速度指标。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "用真实应用与响应时间比较帮助理解快速模型的取舍。"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "公开测量代码并说明均值、中位数和测量来源局限，但未评答案正确率。"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "low",
-        "eval": "medium"
-      },
-      "is_company": false,
-      "is_new": false,
-      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/f3b4fd9f-a330-4090-a922-a912d25dcd7c/naiveai-feature2.png?t=1793721927"
-    },
-    {
-      "person": "Arvind Narayanan & Sayash Kapoor",
-      "title": "The missing quadrant in responses to AI",
-      "link": "https://www.normaltech.ai/p/the-missing-quadrant-in-responses",
-      "date": "2026-11-10",
-      "first_seen": "2026-11-11T01:58:43.003485+00:00",
-      "source_type": "blog",
-      "summary": "AI as Normal Technology 团队介绍新研究机构 STABL，认为 AI 能力增长和社会真正发生改变之间，还隔着组织与制度瓶颈。他们也计划用开放任务和专家审查检验代理能力，适合校准对技术进展的判断，避免把榜单提升直接当成现实效果。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "AI扩散与制度瓶颈的宏观研究主张。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "以证据拆解技术决定论，连接批判性思维和人的能动性。"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "提出开放任务评测与专家审查方向，缺少可直接落地的完整方法。"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "medium",
-        "eval": "medium"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "Greg Isenberg",
-      "title": "Claude Fable 5.2: How I’d Make Money With It",
-      "link": "https://www.youtube.com/watch?v=G3i2k6DdI0o",
-      "date": "2026-11-10",
-      "first_seen": "2026-11-11T01:58:37.919868+00:00",
-      "source_type": "youtube",
-      "summary": "Greg 用 Fable 演示业务审查、行业调研和内容制作等提示词，也尝试让模型把自己的决策习惯整理成长期使用的说明。适合找可改写的任务模板，节目中的赚钱设想和自主工作能力仍应放回自己的业务里验证。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "商业提示词和现场演示为主，效果宣称需自行验证。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "将个人决策方式整理为代理可复用的工作说明。"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "medium",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "Google",
-      "title": "Gemini 4 Carbon is now available",
-      "link": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
-      "date": "2026-11-10",
-      "first_seen": "2026-11-11T01:58:50.503605+00:00",
-      "source_type": "blog",
-      "summary": "Google 将 Gemini 4 Carbon 开放给更多开发者和用户，定位是需要长时间推理的复杂编程、知识工作与科研任务。文章也展示了多代理分工和反复检查的工作方式，适合判断什么时候该用更强模型，以及为什么任务总成本更值得关注。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "解释Carbon的适用任务、可用入口及多代理工作流。"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "多代理协作与检查环境连接harness构建。"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "介绍漏洞验证和安全测试案例，未给出完整复现流程。"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "medium",
-        "eval": "medium"
-      },
-      "is_company": false,
-      "is_new": false,
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_carbon_key_art_16-9_lockup.width-1300.jpg"
-    },
-    {
-      "person": "Google",
-      "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
-      "link": "https://deepmind.google/blog/introducing-alphaproof-code/",
-      "date": "2026-11-10",
-      "first_seen": "2026-11-11T01:58:50.503795+00:00",
-      "source_type": "blog",
-      "summary": "Google 用 AlphaProof Code 为 Signal 核心加密实现的关键安全性质写出数学证明，再由专门程序检查。人类先审查要证明的目标，团队还把修复过的漏洞放回隔离版本，确认系统能证明其不安全，值得做测试的人关注这种质量保障方式。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "清楚说明AI证明真实软件安全性的工作方式与意义。"
-        },
-        {
-          "track": "eval",
-          "tier": "high",
-          "reason": "解释规格审查、机器检查证明与植入历史漏洞的验证流程。"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "low",
-        "eval": "high"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "Introducing Businesses in ChatGPT",
-      "link": "https://openai.com/index/introducing-businesses-chatgpt",
-      "date": "2026-11-10",
-      "first_seen": "2026-11-11T01:58:44.211509+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI 宣布面向商家的 ChatGPT 功能，简介提到管理企业信息、了解企业如何被展示，以及把用户兴趣转成后续行动。原文返回访问拒绝，目前只能确认这些简介信息，具体使用方式仍需点开原文查看。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "商家在ChatGPT中的信息管理功能介绍，全文抓取受阻。"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": true,
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
-      "link": "https://simonwillison.net/2026/Nov/10/muse-ember/",
-      "date": "2026-11-10",
-      "first_seen": "2026-11-11T01:58:40.136682+00:00",
-      "source_type": "blog",
-      "summary": "Simon 试用了 Meta 的轻量模型 Muse Ember，把它与同档模型的收费和实际表现放在一起看。他特别提醒，长输入会改变价格，模型思考时消耗的字数也不同，选型应看完成任务的总成本，而不只看标价。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "结合长上下文收费与亲测，提供小模型选型思路。"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false,
-      "image": "https://static.simonwillison.net/static/2026/muse-ember.webp"
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Fable 5.2 retakes World #1 LLM spot as $ANT IPO roadshow begins",
-      "link": "https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/",
-      "date": "2026-11-10",
-      "first_seen": "2026-11-11T01:58:41.068825+00:00",
-      "source_type": "blog",
-      "summary": "这篇梳理 Claude Fable 新版本的能力和费用变化，提醒每个字更便宜，不代表完成任务的账单更低。模型会花更多时间检查工作，推理强度也影响成本，适合在升级之前理解该怎样比较实际使用代价。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "解释新模型成本、推理强度与实际任务费用的差异。"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false,
-      "image": "https://latent.space/og/card/post/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/79cc3bf60b8254ca3df43668071877f25f7ce42399c0808daf10ea0aa906733b.png"
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Prompting Claude Fable 5.2",
-      "link": "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/",
-      "date": "2026-11-10",
-      "first_seen": "2026-11-11T01:58:40.136726+00:00",
-      "source_type": "blog",
-      "summary": "Simon 摘录了 Anthropic 对 Claude Fable 的提示建议：明确告诉模型代码库由它负责，会影响它是否主动整理重复代码。小任务实验中，这种表述比不说明归属时更常触发重构，值得在希望代理长期维护项目时试用。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "给出能直接尝试的编程代理提示方式及对照结果。"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "medium",
-        "eval": "low"
       },
       "is_company": false,
       "is_new": false

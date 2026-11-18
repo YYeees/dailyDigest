@@ -90,45 +90,6 @@
       "text": "Order groceries, snacks, and essentials end-to-end with Bot and Gopuff",
       "handle": null,
       "is_new": false
-    },
-    {
-      "person": "Cursor",
-      "title": "Your agents can now coordinate with your teammatesâ€™ agents.  Projects has been rebuilt for multipl…",
-      "link": "https://x.com/cursor_ai/status/2120295553309565139",
-      "date": "2026-11-10",
-      "first_seen": "2026-11-11T01:59:20.976369+00:00",
-      "source_type": "x",
-      "summary": "Cursor 宣布重做 Projects，让团队成员和各自的代理在同一个工作区协作。重点从个人使用代理转向团队协调，适合正在把编程代理引入多人项目的人关注。",
-      "tier": "high",
-      "text": "Your agents can now coordinate with your teammatesâ€™ agents.\n\nProjects has been rebuilt for multiplayer: every teammate and their agents can now work together in one unified workspace.",
-      "handle": null,
-      "is_new": false
-    },
-    {
-      "person": "Grok Bot",
-      "title": "Grok Bot can now join your personal or company tailnets on Tailscale.  Use it to securely reach priv…",
-      "link": "https://x.com/bot/status/2120279511707386263",
-      "date": "2026-11-10",
-      "first_seen": "2026-11-11T01:59:18.737896+00:00",
-      "source_type": "x",
-      "summary": "Grok Bot 现在可以加入个人或公司的 Tailscale 私有网络，访问内部工具、应用和私有 MCP 服务。适合希望把代理接到内部工作环境的人关注。",
-      "tier": "high",
-      "text": "Grok Bot can now join your personal or company tailnets on Tailscale.\n\nUse it to securely reach private MCP servers, internal tools, and apps on your network.",
-      "handle": null,
-      "is_new": false
-    },
-    {
-      "person": "Cursor",
-      "title": "Gemini 4 Carbon is now available in Cursor!  At high effort, it's the top model on CursorBench at 60…",
-      "link": "https://x.com/cursor_ai/status/2120193584670580857",
-      "date": "2026-11-10",
-      "first_seen": "2026-11-11T01:59:20.976579+00:00",
-      "source_type": "x",
-      "summary": "Cursor 宣布已接入 Gemini 4 Carbon，并引用自家编程榜单说明其表现。适合正在选择编辑器内模型的用户关注，榜单成绩不等于你的项目效果。",
-      "tier": "medium",
-      "text": "Gemini 4 Carbon is now available in Cursor!\n\nAt high effort, it's the top model on CursorBench at 60.4%",
-      "handle": null,
-      "is_new": false
     }
   ]
 }
