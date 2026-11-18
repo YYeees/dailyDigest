@@ -26,7 +26,8 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": true,
+      "image": "https://static.simonwillison.net/static/2026/sandbox-proxy.png"
     },
     {
       "person": "Simon Willison",
@@ -498,7 +499,8 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": false
+      "is_new": false,
+      "image": "https://assets.claude.com/04a298be2efa241bd5a4a810b97c62bb8ef257dc.jpg"
     },
     {
       "person": "Google",
@@ -521,7 +523,8 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg"
     },
     {
       "person": "Andrew Huberman",
@@ -590,7 +593,8 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/b4181d5a-0460-4828-b350-07feca728023/jevalution-feature.jpg?t=1794458692"
     },
     {
       "person": "Andrew Huberman",
@@ -687,7 +691,8 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/27ce2150-3717-4122-ac3a-37dd0e8ce18f/openai-aiecode-feature.png?t=1794370546"
     }
   ]
 }
