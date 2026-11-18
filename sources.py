@@ -86,6 +86,15 @@ SOURCES = [
      "listing_urls": ["https://www.anthropic.com/news", "https://www.anthropic.com/research"],
      "article_path_pattern": r"^/(news|research)/(?!team/)[A-Za-z0-9-]+$"},
 
+    # 2026-11-18加claude.dev博客：Anthropic开发者自己写的工程/实操文章(Claude Code团队怎么做
+    # verification、code review、prompt caching这类)。用户在小红书刷到verification那篇才发现漏了。
+    # 身份：claude.com顶栏和页脚的"Developer blog"直接链到claude.dev，作者是Anthropic员工。
+    # 有RSS(/rss.xml，/blog/rss.xml是404)，近7个月20条，分类Engineering/Playbooks/Agents/
+    # Tutorials/Skills，没有产品公关稿，不设分类白名单。feed不带正文(description一两百字符)，
+    # 精判要WebFetch。person记Anthropic，跟官网news/research一起进「大公司」页。
+    {"person": "Anthropic", "type": "blog", "name": "Anthropic (claude.dev 开发者博客)",
+     "url": "https://claude.dev/rss.xml"},
+
     # 2026-11-14 加吴恩达：跟的是 deeplearning.ai 周刊 The Batch 里他每周那封"Dear friends"来信
     # (tag/letters 栏目)，不是整份周刊的新闻部分。没有RSS，走listing_scraper.py读列表页。
     # 列表页上还有 /the-batch/tag/... 分类页和 about/search，路径规则里排除；文章页都有
@@ -127,6 +136,8 @@ SOURCES = [
 #     合计约60条。滤掉的是没分类的客户案例41、Company 37、Startup 16、Global Affairs 17、
 #     Security 9。Product留着是因为新模型/新API发布都在这一类，代价是混进"ChatGPT Ads扩到
 #     26个国家"这种稿子，交给ai_tier去判。feed不给正文(summary只有一句)，精判要WebFetch。
+#   (2026-11-18补：claude.com现在有RSS了，/resources/articles/rss.xml，但大半是产品公告和
+#   客户案例，没接；它的"Developer blog"即claude.dev，已单独接，见上面SOURCES。)
 #   Anthropic  没有RSS(anthropic.com、claude.com的/rss.xml全是404)，走listing_scraper.py读
 #     /news和/research两个列表页。原先的/engineering已经并进/research(比如
 #     /research/claude-code-best-practices)，不用单独抓。列表页上的分类页链接
