@@ -89,6 +89,26 @@
   .go:hover { color: var(--ink); }
   .go:hover span { transform: translateX(4px); }
 
+  /* 「记一笔」(2026-11-18)：Read Now 旁边一支笔，给最新那篇在 writing-inbox 建笔记，记过的改走 open。
+     已记填深墨色——粉色留给回形针。
+     记没记按文章链接算，跟另几页共用；这人出了新篇，链接变了，笔自动回到空心。 */
+  .acts { display: flex; align-items: center; gap: 14px; margin-top: 16px; }
+  .acts .go { margin-top: 0; }
+  .note-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 26px; height: 26px; color: var(--faint);
+    border: 1px solid #D6D6D6; border-radius: 999px; text-decoration: none;
+    opacity: 0; transition: opacity .15s, color .15s, border-color .15s, background .15s;
+  }
+  /* 不要太显眼(用户 2026-11-18)：鼠标移到 Read Now 这一行才浮现；已记的一直显示；手机没有悬停，常显 */
+  .acts:hover .note-btn, .note-btn:focus-visible, .note-btn.noted { opacity: 1; }
+  @media (hover: none) { .note-btn { opacity: 1; } }
+  .note-btn svg { fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linejoin: round; }
+  .note-btn:hover { color: var(--ink); border-color: var(--faint); }
+  .note-btn.noted { color: var(--ink); border-color: transparent; }
+  .note-btn.noted svg { fill: currentColor; }
+  .note-btn.noted:hover { background: rgba(0, 0, 0, .06); }
+
   .foot { text-align: center; color: var(--faint); font-size: 13px; padding: 30px 24px 90px; }
 
   @media (max-width: 640px) {
@@ -239,8 +259,77 @@ function isFresh(a, seen) {
 }
 
 let ALBUMS = [];
+// ---- 「记一笔」：跟 index/digest/companies 同一套(vault、localStorage 键 digest-noted-links-v1)。
+// 跟 Companies 一样，笔记用"记的那天"命名、填 date，文件名按链接存起来，之后"打开"才找得到。
+// 这页的数据里没有文章摘要(只有人物简介，每篇都一样，放进去没用)，笔记正文只有链接。
+const INBOX_VAULT = 'writing-inbox';
+const NOTED_KEY = 'digest-noted-links-v1';
+const NAMES_KEY = 'people-note-names-v1';   // { link: 笔记文件名 }
+const notedLinks = () => { try { return new Set(JSON.parse(localStorage.getItem(NOTED_KEY) || '[]')); } catch (e) { return new Set(); } };
+function setNoted(link, on) {
+  try {
+    const s = notedLinks();
+    if (on) { s.add(link); } else { s.delete(link); }
+    localStorage.setItem(NOTED_KEY, JSON.stringify([...s]));
+  } catch (e) {}
+}
+const loadNames = () => { try { return JSON.parse(localStorage.getItem(NAMES_KEY) || '{}'); } catch (e) { return {}; } };
+function saveName(link, name) {
+  try { const m = loadNames(); if (name) { m[link] = name; } else { delete m[link]; } localStorage.setItem(NAMES_KEY, JSON.stringify(m)); }
+  catch (e) {}
+}
+const todayISO = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
+function inboxNoteName(a, date) {
+  const slug = (a.latest_title || a.person || '').trim()
+    .replace(/[\\/:*?"<>|#^[\]]/g, ' ')
+    .replace(/\s+/g, ' ').trim().slice(0, 60);
+  return `${date} ${slug}`;
+}
+const openHref = name => `obsidian://open?vault=${encodeURIComponent(INBOX_VAULT)}&file=${encodeURIComponent(name)}`;
+function inboxHref(a, noted) {
+  // 在别的页记过、这页没存名字：退回按发布日命名(Recent/Archive 的规则)
+  if (noted) return openHref(loadNames()[a.latest_link] || inboxNoteName(a, a.latest));
+  const today = todayISO();
+  const anchor = (a.latest_title || a.person || '').trim().replace(/[[\]]/g, m => (m === '[' ? '(' : ')'));
+  const from = (a.person || '').replace(/"/g, "'");
+  const content = `---\nsource: "${from}"\ndate: ${today}\n---\n\n[${anchor}](${a.latest_link})\n\n`;
+  return `obsidian://new?vault=${encodeURIComponent(INBOX_VAULT)}`
+    + `&name=${encodeURIComponent(inboxNoteName(a, today))}&content=${encodeURIComponent(content)}`;
+}
+const PEN_SVG = '<svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true">'
+  + '<path d="M11.1 1.9a1.3 1.3 0 0 1 1.9 0l1.1 1.1a1.3 1.3 0 0 1 0 1.9l-7.6 7.6-3.4.9.9-3.4z"/></svg>';
+function noteBtn(a, noted) {
+  return `<a class="note-btn${noted ? ' noted' : ''}" href="${esc(inboxHref(a, noted))}"`
+    + ` data-note-link="${esc(a.latest_link)}" data-name="${esc(inboxNoteName(a, todayISO()))}"`
+    + ` data-new-href="${esc(inboxHref(a, false))}"`
+    + ` title="${noted ? '打开已记的那条笔记（右键取消标记）' : '给最新这篇在写作收件箱里记一笔'}">${PEN_SVG}</a>`;
+}
+document.addEventListener('contextmenu', e => {
+  const btn = e.target.closest && e.target.closest('.note-btn.noted');
+  if (!btn) return;
+  e.preventDefault();
+  setNoted(btn.dataset.noteLink, false);
+  saveName(btn.dataset.noteLink, null);
+  btn.classList.remove('noted');
+  btn.href = btn.dataset.newHref;
+  btn.title = '给最新这篇在写作收件箱里记一笔（点了没反应？右键可取消标记）';
+});
+document.addEventListener('click', e => {
+  const btn = e.target.closest && e.target.closest('.note-btn');
+  if (!btn || btn.classList.contains('noted')) return;
+  setNoted(btn.dataset.noteLink, true);
+  saveName(btn.dataset.noteLink, btn.dataset.name);
+  // 等默认跳转带着 new 链接发出去再改 href，不然这次就跳到还不存在的笔记
+  setTimeout(() => {
+    btn.classList.add('noted');
+    btn.title = '打开已记的那条笔记（右键取消标记）';
+    btn.href = openHref(btn.dataset.name);
+  }, 0);
+});
+
 function render() {
   const seen = loadSeen();
+  const noted = notedLinks();
   // 回形针(新文章标记)：同一条路径画两遍，底下一层粉色(包塑回形针的颜色)、上面一层细白高光
   const CLIP_PATH = 'M10 22 V60 a5 5 0 0 0 10 0 V12 a8 8 0 0 0 -16 0 V64 a10 10 0 0 0 20 0 V30';
   const CLIP_SVG = `<svg viewBox="0 0 28 80" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -264,7 +353,10 @@ function render() {
       <p class="date">${fresh ? '<span class="dot"></span>' : ''}${a.latest ? fmtLong(a.latest) : '—'}${fresh ? '<span class="new">新篇</span>' : ''}</p>
       ${a.latest_title ? `<p class="latest">${esc(a.latest_title)}</p>` : ''}
       <p class="bio">${esc(a.bio)}</p>
-      <a class="go" href="${esc(a.latest_link)}"${target}>${esc(a.verb)} Now<span>→</span></a>
+      <div class="acts">
+        <a class="go" href="${esc(a.latest_link)}"${target}>${esc(a.verb)} Now<span>→</span></a>
+        ${a.latest_link ? noteBtn(a, noted.has(a.latest_link)) : ''}
+      </div>
     </article>`;
   }).join('') + '<hr class="divider">';
   // 图挂了(对方换地址、网络不通)：退回线稿封面
