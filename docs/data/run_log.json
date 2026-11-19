@@ -1,6 +1,18 @@
 {
   "runs": [
     {
+      "timestamp": "2026-11-19T00:22:38.829271+00:00",
+      "label": "digest",
+      "total_cost_usd": 0.18270389999999997,
+      "input_tokens": 24,
+      "output_tokens": 6638,
+      "cache_creation_input_tokens": 31701,
+      "cache_read_input_tokens": 334187,
+      "duration_ms": 79932,
+      "num_turns": 18,
+      "is_error": false
+    },
+    {
       "timestamp": "2026-11-18T00:57:52.927806+00:00",
       "label": "digest",
       "total_cost_usd": 0.15465050000000002,
