@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "person": "Google",
+      "title": "Introducing Gemini 4 Neon",
+      "link": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-19T00:21:28.766636+00:00",
+      "source_type": "blog",
+      "summary": "Google发布Gemini 4 Neon，定位在能力和成本之间，主打编程、办公分析和科学推理，价格比上一档便宜。示例里多个agent在Antigravity里协作做出3D实验室和滑雪模拟器。已经能通过API和付费订阅用上，选模型的时候值得先看一眼。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "新模型发布，讲清定位与可用渠道，直接影响选型"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "External sandboxes for coding agents",
       "link": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
@@ -15,7 +32,7 @@
           "reason": "讲清楚怎么让编程agent在隔离沙箱里跑代码，直接影响日常用Claude Code等工具的安全实践"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -32,7 +49,7 @@
           "reason": "OpenAI新一代模型发布，涉及编码与computer use，影响日常选模型；页面403，依据简介和Simon的转述"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",

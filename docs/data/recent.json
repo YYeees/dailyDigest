@@ -1,6 +1,246 @@
 {
   "items": [
     {
+      "person": "Greg Isenberg",
+      "title": "Build a 1 Person Media Machine With Grok Bot",
+      "link": "https://www.youtube.com/watch?v=vKobP6DkC1E",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-19T00:21:16.118066+00:00",
+      "source_type": "youtube",
+      "summary": "Greg Isenberg请Tella的Louise聊她怎么用GrokBot把视频内容从调研到发布全包下来。她每周固定找出爆款帖子、存下好的开头，再接着写脚本和剪辑。想看一个人怎么靠AI搭内容流水线，可以点开。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "创作者访谈，用Grok Bot做内容流程，偏推广演示"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Google",
+      "title": "Introducing Gemini 4 Neon",
+      "link": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-19T00:21:28.766636+00:00",
+      "source_type": "blog",
+      "summary": "Google发布Gemini 4 Neon，定位在能力和成本之间，主打编程、办公分析和科学推理，价格比上一档便宜。示例里多个agent在Antigravity里协作做出3D实验室和滑雪模拟器。已经能通过API和付费订阅用上，选模型的时候值得先看一眼。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "新模型发布，讲清定位与可用渠道，直接影响选型"
+        }
+      ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Google",
+      "title": "Genie 4 is now available",
+      "link": "https://deepmind.google/blog/genie-4-is-now-available/",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-19T00:21:28.766895+00:00",
+      "source_type": "blog",
+      "summary": "Google把新一代世界模型Genie 4开放给Ultra订阅用户，可以用一句话实时改场景里的天气和角色，还自带声音。同时升级了上一代的单次探索时长，并加了社区画廊。不用写代码就能做可玩的小世界，想体验的话值得点开看。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "世界模型产品发布，面向订阅用户，偏演示"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Daniel Stenberg",
+      "link": "https://simonwillison.net/2026/Nov/18/daniel-stenberg/",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-19T00:21:18.149008+00:00",
+      "source_type": "blog",
+      "summary": "curl作者说，AI agent把十八万多行C代码改写成了三十多万行Rust，同期真正的curl项目还合并了三百多个提交。这条引用的意思是改写没有拖慢主线开发。想看AI重写大型老项目到底靠不靠谱，可以顺着去读原文。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "curl作者讲agent把C代码改写成Rust的实测"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "与锚点主干无实质连接"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "The PSF end-of-year fundraiser",
+      "link": "https://simonwillison.net/2026/Nov/18/psf-end-of-year-fundraiser/",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-19T00:21:18.149275+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Python基金会募捐，与AI无关"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "与锚点主干无实质连接"
+        }
+      ],
+      "tiers": {
+        "ai": "low",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] GPT-6.2 Astra, the #2 Frontier Model is better and 20%-600% cheaper, but has mixed reviews; 6.2 Sol likely main workhorse",
+      "link": "https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-19T00:21:19.451755+00:00",
+      "source_type": "blog",
+      "summary": "这期简报讲OpenAI发了GPT-6.2 Astra和Sol两个新模型，按第三方测试，每个任务的成本低了很多，但综合得分还是略低于Anthropic的Fable 5.2。社交媒体上的口碑很分裂，作者认为有些批评过头，有些确实说中了。想快速了解选哪个模型划算，可以扫一眼。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "新模型发布与成本对比，信息偏简报"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Research acceleration: The jagged frontier",
+      "link": "https://openai.com/index/research-acceleration-jagged-frontier",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-19T00:21:22.218180+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "编程agent加速AI研究的度量，偏宏观，正文未能抓取"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": true,
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Inside the Codex sandbox",
+      "link": "https://openai.com/index/inside-the-codex-sandbox",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-19T00:21:22.218421+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Codex沙箱的运行机制，关系到日常用法，正文未能抓取"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": true,
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Managing frontier AI risk: From training to deployment",
+      "link": "https://openai.com/index/managing-frontier-ai-risk",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-19T00:21:22.218475+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "风险管理流程介绍，偏宏观，正文未能抓取"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": true,
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Advancing chip design with OpenAI models",
+      "link": "https://openai.com/index/advancing-chip-design-with-our-models",
+      "date": "2026-11-18",
+      "first_seen": "2026-11-19T00:21:22.218572+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "芯片设计应用案例，偏专业领域，正文未能抓取"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": true,
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "External sandboxes for coding agents",
       "link": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
@@ -13,11 +253,6 @@
           "track": "ai",
           "tier": "high",
           "reason": "讲清楚怎么让编程agent在隔离沙箱里跑代码，直接影响日常用Claude Code等工具的安全实践"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "构建者线的harness思路，沾边但不是一手反思"
         }
       ],
       "tiers": {
@@ -26,36 +261,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true,
-      "image": "https://static.simonwillison.net/static/2026/sandbox-proxy.png"
-    },
-    {
-      "person": "Simon Willison",
-      "title": "GPT‑6.2 Astra and GPT‑6.2 Sol",
-      "link": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/",
-      "date": "2026-11-17",
-      "first_seen": "2026-11-18T00:56:28.382300+00:00",
-      "source_type": "blog",
-      "summary": "Simon快速记了一下GPT-6.2两个模型的API价格，Astra比上一代便宜两成，缓存价格降得更多，对跑得久的agent尤其划算。他还用画鹈鹕骑自行车的老办法比了几代模型的效果。想看价格和直观对比的话，比官方通稿更好读。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "GPT-6.2发布的价格对比与实测，与OpenAI官方那条重复，择一看即可"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "无实质连接"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -78,35 +284,7 @@
         "eval": "low"
       },
       "is_company": true,
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Running the full server-side Datasette Python app in the browser with service workers and Pyodide",
-      "link": "https://simonwillison.net/2026/Nov/17/datasette-lite/",
-      "date": "2026-11-17",
-      "first_seen": "2026-11-18T00:56:28.382332+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "作者自己小工具Datasette Lite的重写发布，与AI关系不大"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "无实质连接"
-        }
-      ],
-      "tiers": {
-        "ai": "low",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -129,7 +307,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -152,7 +330,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -175,34 +353,29 @@
         "eval": "low"
       },
       "is_company": true,
-      "is_new": true
+      "is_new": false
     },
     {
-      "person": "Simon Willison",
-      "title": "Quoting Go Proverbs",
-      "link": "https://simonwillison.net/2026/Nov/17/go-proverbs/",
+      "person": "Anthropic",
+      "title": "Claude Fable 5.2 solves two open problems in the physics of black holes",
+      "link": "https://www.anthropic.com/research/claude-black-hole-physics",
       "date": "2026-11-17",
-      "first_seen": "2026-11-18T00:56:28.382392+00:00",
+      "first_seen": "2026-11-19T00:21:28.380764+00:00",
       "source_type": "blog",
-      "summary": null,
+      "summary": "Claude Fable 5.2解决了黑洞物理里两个悬了很久的问题，一个是二十多年前有人开了头却没人算完的计算。Anthropic先用大白话讲发现，再给技术细节，还交代了Claude是怎么一步步做研究的。想看AI现在能在真正的科研里做到什么程度，可以点开看看。",
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "Go语言格言的一句引用，与AI无关"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "一句编程格言，无实质连接"
+          "reason": "官方研究成果展示，偏物理前沿，门槛高"
         }
       ],
       "tiers": {
-        "ai": "low",
+        "ai": "medium",
         "anchor": "low",
         "eval": "low"
       },
-      "is_company": false,
+      "is_company": true,
       "is_new": true
     },
     {
@@ -499,8 +672,7 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": false,
-      "image": "https://assets.claude.com/04a298be2efa241bd5a4a810b97c62bb8ef257dc.jpg"
+      "is_new": false
     },
     {
       "person": "Google",
@@ -523,8 +695,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg"
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -593,106 +764,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/b4181d5a-0460-4828-b350-07feca728023/jevalution-feature.jpg?t=1794458692"
-    },
-    {
-      "person": "Andrew Huberman",
-      "title": "Why Addiction is a Control Problem | Dr. Anna Lembke",
-      "link": "https://www.youtube.com/shorts/9dWQNg68Ncw",
-      "date": "2026-11-11",
-      "first_seen": "2026-11-14T08:10:46.350318+00:00",
-      "source_type": "youtube",
-      "summary": "Anna Lembke谈成瘾和人想要掌控、减少不确定之间的关系，是一段很短的访谈剪辑。想从另一个角度理解人为什么会陷进去，可以点开看看。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "主题沾深度自我认识的边，二手访谈片段"
-        }
-      ],
-      "tiers": {
-        "ai": "low",
-        "anchor": "medium",
-        "eval": "low"
-      },
-      "is_company": false,
       "is_new": false
-    },
-    {
-      "person": "Greg Isenberg",
-      "title": "Use Grok Bot Better Than 99% of People (Full Course)",
-      "link": "https://www.youtube.com/watch?v=1cWZ7Ekff6E",
-      "date": "2026-11-11",
-      "first_seen": "2026-11-14T08:10:46.457181+00:00",
-      "source_type": "youtube",
-      "summary": "Greg和一位用户聊他怎么把工作和生活都交给Grok Bot这个个人助理。他还让它把写代码的活转给Claude Code，覆盖工程、设计、内容、理财和购物五块。想照着抄一套agent用法的人可以看。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "创作者访谈演示一套个人agent用法，偏推广和演示"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Mercor $750m Series D at $20B valuation, $3B run rate",
-      "link": "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
-      "date": "2026-11-11",
-      "first_seen": "2026-11-14T08:10:49.148967+00:00",
-      "source_type": "blog",
-      "summary": "Mercor这家给AI模型提供专家数据的公司，拿到新一轮融资，估值到了两百亿美元。文章看点是它的收入涨得很快，以及它说各行各业的工作流程都还没被模型评测过。适合想了解AI数据行业景气度的人扫一眼。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "AI行业融资新闻，偏宏观叙事"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "AI Engineer Code Summit: OpenAI on New Ways of Working With Codex",
-      "link": "https://latent.space/p/codex-work/",
-      "date": "2026-11-11",
-      "first_seen": "2026-11-14T08:10:49.150046+00:00",
-      "source_type": "blog",
-      "summary": "这是AI Engineer Code Summit上OpenAI关于Codex新用法的工作坊记录。重点讲这一年编程agent的产品变化，以及转到云端运行之后用户为什么容易困惑。如果你天天在用Codex或Claude Code，值得看看官方工程师怎么建议的。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "OpenAI现场讲Codex新工作方式，直接影响日常用编程agent"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "涉及编程agent工作流，但不是测试专题"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "low",
-        "eval": "medium"
-      },
-      "is_company": false,
-      "is_new": false,
-      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/27ce2150-3717-4122-ac3a-37dd0e8ce18f/openai-aiecode-feature.png?t=1794370546"
     }
   ]
 }

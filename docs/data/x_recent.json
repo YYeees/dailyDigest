@@ -51,45 +51,6 @@
       "text": "Gemini 4 Hydrogen is now available in Cursor!\n\nAt its default effort, it scores 54.3% on CursorBench, up from 39.6% for Gemini 3.8 Flash.",
       "handle": null,
       "is_new": false
-    },
-    {
-      "person": "SpaceX Super Intelligence",
-      "title": "Introducing Grok Bot 1.0.  Bots can be shared and are more collaborative and capable than ever. http…",
-      "link": "https://x.com/SpaceXSI/status/2120584928983441826",
-      "date": "2026-11-11",
-      "first_seen": "2026-11-14T08:11:08.023679+00:00",
-      "source_type": "x",
-      "summary": "官方账号同步宣布Grok Bot 1.0，强调机器人可以共享，协作能力更强。内容和Grok Bot自己的发布一致，看一条就够。",
-      "tier": "medium",
-      "text": "Introducing Grok Bot 1.0.\n\nBots can be shared and are more collaborative and capable than ever.",
-      "handle": null,
-      "is_new": false
-    },
-    {
-      "person": "Grok Bot",
-      "title": "Introducing Grok Bot 1.0. AI teammates that work alongside your whole team.  Share Bots, collaborate…",
-      "link": "https://x.com/bot/status/2120582957782200586",
-      "date": "2026-11-11",
-      "first_seen": "2026-11-14T08:11:09.485162+00:00",
-      "source_type": "x",
-      "summary": "Grok Bot 1.0发布，主打可以在团队里共享的AI队友，能在Slack和Teams里协作，还能拉进会议。看点是它把个人助理往团队协作方向推了一步。",
-      "tier": "medium",
-      "text": "Introducing Grok Bot 1.0. AI teammates that work alongside your whole team.\n\nShare Bots, collaborate with them in Slack and Teams, invite them to meetings, and watch them learn and become more helpful.",
-      "handle": null,
-      "is_new": false
-    },
-    {
-      "person": "Grok Bot",
-      "title": "Order groceries, snacks, and essentials end-to-end with Bot and Gopuff",
-      "link": "https://x.com/bot/status/2120580467682656670",
-      "date": "2026-11-11",
-      "first_seen": "2026-11-14T08:11:09.485201+00:00",
-      "source_type": "x",
-      "summary": "Grok Bot和Gopuff合作，可以直接帮你下单买日用品和零食。属于产品合作的宣传，了解一下它的使用场景即可。",
-      "tier": "low",
-      "text": "Order groceries, snacks, and essentials end-to-end with Bot and Gopuff",
-      "handle": null,
-      "is_new": false
     }
   ]
 }
