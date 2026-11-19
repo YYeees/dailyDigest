@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T00:57:51+00:00",
+ "updated_at": "2026-11-19T00:22:37+00:00",
  "window_days": 7,
  "companies": [
   {
@@ -12,6 +12,58 @@
   }
  ],
  "items": [
+  {
+   "company": "OpenAI",
+   "key": "openai",
+   "title": "Research acceleration: The jagged frontier",
+   "link": "https://openai.com/index/research-acceleration-jagged-frontier",
+   "date": "2026-11-18",
+   "summary": "",
+   "image": null,
+   "priority": "medium",
+   "tags": [
+    "AI"
+   ]
+  },
+  {
+   "company": "OpenAI",
+   "key": "openai",
+   "title": "Inside the Codex sandbox",
+   "link": "https://openai.com/index/inside-the-codex-sandbox",
+   "date": "2026-11-18",
+   "summary": "",
+   "image": null,
+   "priority": "medium",
+   "tags": [
+    "AI"
+   ]
+  },
+  {
+   "company": "OpenAI",
+   "key": "openai",
+   "title": "Managing frontier AI risk: From training to deployment",
+   "link": "https://openai.com/index/managing-frontier-ai-risk",
+   "date": "2026-11-18",
+   "summary": "",
+   "image": null,
+   "priority": "medium",
+   "tags": [
+    "AI"
+   ]
+  },
+  {
+   "company": "OpenAI",
+   "key": "openai",
+   "title": "Advancing chip design with OpenAI models",
+   "link": "https://openai.com/index/advancing-chip-design-with-our-models",
+   "date": "2026-11-18",
+   "summary": "",
+   "image": null,
+   "priority": "medium",
+   "tags": [
+    "AI"
+   ]
+  },
   {
    "company": "OpenAI",
    "key": "openai",
@@ -33,6 +85,19 @@
    "date": "2026-11-17",
    "summary": "OpenAI给ChatGPT上了一个销售插件，外加30多个合作伙伴插件，用来查客户资料、准备方案、更新CRM。官网页面这次没抓到全文，只看到简介。更偏企业销售场景，普通使用者可以扫一眼看看ChatGPT插件生态在往哪走。",
    "image": null,
+   "priority": "medium",
+   "tags": [
+    "AI"
+   ]
+  },
+  {
+   "company": "Anthropic",
+   "key": "anthropic",
+   "title": "Claude Fable 5.2 solves two open problems in the physics of black holes",
+   "link": "https://www.anthropic.com/research/claude-black-hole-physics",
+   "date": "2026-11-17",
+   "summary": "Claude Fable 5.2解决了黑洞物理里两个悬了很久的问题，一个是二十多年前有人开了头却没人算完的计算。Anthropic先用大白话讲发现，再给技术细节，还交代了Claude是怎么一步步做研究的。想看AI现在能在真正的科研里做到什么程度，可以点开看看。",
+   "image": "https://assets.claude.com/57a443b51d13727573b7c1290130d09c5f434b2c.jpg",
    "priority": "medium",
    "tags": [
     "AI"

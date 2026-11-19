@@ -44,7 +44,8 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": true,
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png"
     },
     {
       "person": "Google",
@@ -261,7 +262,8 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://static.simonwillison.net/static/2026/sandbox-proxy.png"
     },
     {
       "person": "OpenAI",
@@ -672,7 +674,8 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": false
+      "is_new": false,
+      "image": "https://assets.claude.com/04a298be2efa241bd5a4a810b97c62bb8ef257dc.jpg"
     },
     {
       "person": "Google",
@@ -695,7 +698,8 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg"
     },
     {
       "person": "Andrew Huberman",
@@ -764,7 +768,8 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/b4181d5a-0460-4828-b350-07feca728023/jevalution-feature.jpg?t=1794458692"
     }
   ]
 }
