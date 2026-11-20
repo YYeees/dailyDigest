@@ -261,6 +261,28 @@
       "is_new": false
     },
     {
+      "person": "Anthropic",
+      "title": "Automating eval design and hillclimbing with Claude",
+      "link": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/",
+      "date": "2026-09-28",
+      "first_seen": "2026-11-20T00:37:21.433054+00:00",
+      "source_type": "blog",
+      "summary": "这篇讲怎么给AI应用设计一套靠谱的评测，并且一轮轮优化它而不自欺欺人。关键做法是评测题要来自真实的线上问题，评分的模型不能是被测模型，每轮只改一处，并且要先量出评测本身的噪声再判断有没有进步。做测试的人不用装它的工具，光看这套纪律就能直接用。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "教怎么设计评测和迭代优化，方法通用"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "讲评测集设计、评分器自检、噪声估计、防过拟合的迭代规则，方法能直接搬到自己的评测流程"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Craig Mod",
       "title": "[RIDGELINE] Walking Norway's Gudbrandsdalsleden Pilgrimage",
       "link": "https://craigmod.com/ridgeline/235/",
@@ -378,6 +400,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Anthropic",
+      "title": "Using Claude Code: Spending your effort",
+      "link": "https://claude.dev/blog/spending-your-effort/",
+      "date": "2026-09-25",
+      "first_seen": "2026-11-20T00:37:21.433087+00:00",
+      "source_type": "blog",
+      "summary": "这篇讲Claude Code里的思考力度到底是什么，什么时候该用哪一档。作者自己跑了测试，发现力度调高对藏着很多边界情况的任务帮助明显，但也更费额度，快速出草稿和头脑风暴则用低档就够。最后给了一套简单的选档规则，可以直接拿来用。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Claude Code里effort档位怎么选的实测与规则，直接影响日常用法"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Latent Space",
@@ -728,6 +767,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Anthropic",
+      "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
+      "link": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/",
+      "date": "2026-09-22",
+      "first_seen": "2026-11-20T00:37:21.433116+00:00",
+      "source_type": "blog",
+      "summary": "这篇教你怎么用好Opus 5.5，包括怎么写提示、怎么带一个跑很久的任务、怎么检查它交回来的结果。要点是一次把任务和完成标准讲清楚，不用再写让它仔细想想这类话，并且先看模型列出的需要你拍板的事项，再读总结。每天都在用Claude Code的人可以直接照着改自己的用法。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Opus 5.5的提示写法和长任务控制的实操指南"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Latent Space",
@@ -1959,7 +2015,7 @@
           "reason": "直接讲怎么用编程agent，从规划到监控，实操性强"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",

@@ -32,7 +32,7 @@
           "reason": "以家中摄影连接日常观察与个人表达。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -1054,6 +1054,23 @@
       "is_new": false
     },
     {
+      "person": "Anthropic",
+      "title": "How the Claude Code team does code review",
+      "link": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+      "date": "2026-10-15",
+      "first_seen": "2026-11-20T00:37:21.432965+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic的Claude Code团队讲了他们在代码由agent大量产出的情况下怎么做审查。做法是先让Claude自己跑测试并展示结果，再叠几层自动审查，人的时间只花在风险最高的改动上，还把历史事故做成评测题来给审查工具打分。想知道一个重度用AI写代码的团队怎么守质量，可以看这篇。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲在agent大量产出代码的时代怎么做代码审查，流程可落地"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Boris Cherny",
       "title": "RT @ClaudeDevs: We've been working hard on making the Claude Code desktop app great for running lots…",
       "link": "https://x.com/bcherny/status/2110627630945079624",
@@ -1501,6 +1518,23 @@
       "is_new": false
     },
     {
+      "person": "Anthropic",
+      "title": "Building effective agent automations",
+      "link": "https://claude.dev/blog/building-effective-agent-automations/",
+      "date": "2026-10-08",
+      "first_seen": "2026-11-20T00:37:21.432982+00:00",
+      "source_type": "blog",
+      "summary": "这篇用一个每天自动做简报的agent当例子，讲怎么把定时运行的自动化做可靠。它的重点是各种不出声的失败，比如读取失败被当成没有新内容，所以文章主张读不到就明说读不到，确认发送成功后才更新进度。自己想搭类似的自动化，这些做法能少踩不少坑。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "给出定时运行的agent自动化的参考实现和常见失败模式"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] Claude Haiku 5.5 — better than GPT-6 Luna at the same pricing",
       "link": "https://www.latent.space/p/ainews-claude-haiku-55-better-than",
@@ -1798,6 +1832,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Anthropic",
+      "title": "Claude Code in the cloud: a field guide to cloud sessions",
+      "link": "https://claude.dev/blog/claude-code-in-the-cloud/",
+      "date": "2026-10-06",
+      "first_seen": "2026-11-20T00:37:21.433008+00:00",
+      "source_type": "blog",
+      "summary": "这篇介绍Claude Code的云端会话，每个任务在一台全新的虚拟机里跑，不怕笔记本合盖或断网。文章用一个示例仓库做了真实实验，并列出七类适合放到云上的工作，比如并行清待办和定时任务。还提醒了先推送提交、并行会吃额度这些容易忽略的细节，上手前值得看一遍。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Claude Code云端会话的实操指南，讲清楚适用场景和坑"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Anthropic",

@@ -25,32 +25,6 @@
       "text": "Grok Bot can now join meetings.\n\nAsk it questions, assign it work, or have it keep track of what your team decides.",
       "handle": null,
       "is_new": false
-    },
-    {
-      "person": "Grok Bot",
-      "title": "Grok Bot on Mac can now use Messages, Mail, Notes, Reminders, Calendar, Location, and Contacts. http…",
-      "link": "https://x.com/bot/status/2120946968403095906",
-      "date": "2026-11-12",
-      "first_seen": "2026-11-14T08:11:09.485135+00:00",
-      "source_type": "x",
-      "summary": "Grok Bot在Mac上可以使用信息、邮件、备忘录、日历、位置和通讯录了。意味着个人助理开始能碰系统里的私人数据，用之前要想想权限。",
-      "tier": "medium",
-      "text": "Grok Bot on Mac can now use Messages, Mail, Notes, Reminders, Calendar, Location, and Contacts.",
-      "handle": null,
-      "is_new": false
-    },
-    {
-      "person": "Cursor",
-      "title": "Gemini 4 Hydrogen is now available in Cursor!  At its default effort, it scores 54.3% on CursorBench…",
-      "link": "https://x.com/cursor_ai/status/2120944639633211619",
-      "date": "2026-11-12",
-      "first_seen": "2026-11-14T08:11:11.536835+00:00",
-      "source_type": "x",
-      "summary": "Cursor宣布接入Gemini 4 Hydrogen，默认档位在自家评测上明显超过上一代。适合Cursor用户决定要不要切模型。",
-      "tier": "medium",
-      "text": "Gemini 4 Hydrogen is now available in Cursor!\n\nAt its default effort, it scores 54.3% on CursorBench, up from 39.6% for Gemini 3.8 Flash.",
-      "handle": null,
-      "is_new": false
     }
   ]
 }

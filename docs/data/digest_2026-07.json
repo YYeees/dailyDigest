@@ -71,7 +71,7 @@
           "reason": "给出具体准确率数字和Boston Dynamics实例，讲清楚了机器人推理大脑的实际能力和安全改进"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -190,7 +190,7 @@
           "reason": "讲清楚了全身协同控制、灵巧操作、安全基准等具体技术突破，标志机器人从预编程走向通用物理智能"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -256,6 +256,23 @@
           "track": "anchor",
           "tier": "high",
           "reason": "命中卡片笔记/数字花园周边领域，但文章同时是Eden产品推广，非纯一手反思"
+        }
+      ],
+      "is_new": false
+    },
+    {
+      "person": "Anthropic",
+      "title": "The new rules of context engineering for Claude 5 generation models",
+      "link": "https://claude.dev/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models/",
+      "date": "2026-07-24",
+      "first_seen": "2026-11-20T00:37:21.433132+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic把Claude Code的系统提示词删掉了八成以上，编码评测也没有掉分，这篇讲的就是为什么以及怎么做。核心想法是新模型不需要那么多规则和重复叮嘱，反而会被互相打架的指令绑住，所以要少写规则，多给工具和参考材料。如果你的CLAUDE.md越写越长，这篇能帮你判断哪些该删。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "新一代模型怎么写上下文的一手实操指南，直接影响日常用Claude Code"
         }
       ],
       "is_new": true
@@ -433,7 +450,7 @@
           "reason": "讲清楚了DeepMind和Isomorphic Labs防止AI被滥用、同时用AI加速疫苗设计和病原体检测的具体做法，不是空洞通稿"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Dan Koe",
@@ -450,7 +467,7 @@
           "reason": "涉及写作与表达、卡片笔记/数字花园这类周边领域，但主要是产品推广非一手反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -664,7 +681,7 @@
           "reason": "通用营销/自助框架，跟锚点三根主干没有实质连接"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Teo Crawford",

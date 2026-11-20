@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "person": "Teo Crawford",
+      "title": "Shooting with an old MFT camera.",
+      "link": "https://www.youtube.com/watch?v=YCBC9oZiWV8",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-20T00:36:48.505957+00:00",
+      "source_type": "youtube",
+      "summary": "Teo带着一台老款的微型四三系统相机，也就是Lumix GX80，出门拍了一次，视频记录了整个拍摄过程。内容偏器材和日常，没有涉及别的主题。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "无关"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Gemini 4 Neon: GDM's Opus/Sol Contender",
+      "link": "https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-20T00:37:13.453810+00:00",
+      "source_type": "blog",
+      "summary": "Google DeepMind发布了Gemini 4 Neon，这是它七周内的第四个Gemini 4模型，中档但比上一档更快更便宜。这期汇总了定价、上下文长度、各家第三方评测的排名和早期用户的实测反馈，还顺带提到Anthropic的IPO定价。想一次掌握这个新模型的位置和大家的评价，看这期就够了。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Gemini 4 Neon发布的要点汇总，含价格规格和独立评测，并比较了几家模型"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Google",
       "title": "Introducing Gemini 4 Neon",
       "link": "https://deepmind.google/blog/introducing-gemini-4-neon/",
@@ -15,7 +49,7 @@
           "reason": "新模型发布，讲清定位与可用渠道，直接影响选型"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -50,6 +84,45 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Anthropic",
+      "title": "Using a \"chaos loop\" to harden the Claude Docs launch: 60 server errors across billions of requests",
+      "link": "https://claude.dev/blog/chaos-loop-claude-docs-launch/",
+      "date": "2026-11-17",
+      "first_seen": "2026-11-20T00:37:21.432679+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic在Claude Docs上线前，让Claude连续两周在预发布环境里做压力测试和故意制造故障，上线一周后在大约二十亿次请求里只出现了六十个服务器错误。做法是让Claude读监控数据、自己提修复并部署到预发布，只有难以撤销的决定才由人审批。想看AI怎么做混沌测试的话，这篇给了一套完整流程。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "混沌测试加不变量校验加遥测驱动回归的完整做法，是AI做压测故障注入的实例"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "How the Claude Code team thinks about verification",
+      "link": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
+      "date": "2026-11-16",
+      "first_seen": "2026-11-20T00:37:21.432886+00:00",
+      "source_type": "blog",
+      "summary": "Claude Code团队讲了他们怎么让编码agent用证据证明自己做对了。推荐投入的是三类测试，端到端、属性测试和差分测试，并且要防止agent去改自己的检查，不稳定的测试要找根因而不是重跑。新的质检关卡还建议先只记录不拦截，观察误报后再强制执行。做测试的人这篇值得细读。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "讲怎么让coding agent用证据证明工作正确，实操性强"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "讲端到端、属性、差分测试的具体用法，以及怎么让检查器不被糊弄，能直接改变怎么测"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Craig Mod",
@@ -410,6 +483,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Anthropic",
+      "title": "Which Claude model should you build with? Fable, Opus, Sonnet, or Haiku",
+      "link": "https://claude.dev/blog/which-claude-model-should-you-build-with/",
+      "date": "2026-11-09",
+      "first_seen": "2026-11-20T00:37:21.432928+00:00",
+      "source_type": "blog",
+      "summary": "这篇帮你在Claude现有的四个模型里做选择，建议大多数工作先用Opus 5.5的默认中档力度。原则是先调思考力度再考虑换模型，大批量的简单活用小的，最难的技术问题再用最大的。还讲了怎么让几个模型分工，以及迁移时常见的报错，选型犹豫的时候可以对着看。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "四个模型怎么选、怎么搭配的选型指南，面向工程师"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Simon Willison",
