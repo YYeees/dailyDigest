@@ -1,10 +1,8 @@
 {
  "https://latent.space/p/artcraft/": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/e61b607b-f9a5-4a6d-846b-f8792dd0a549/take-back-internet2.jpg?t=1794543381",
- "https://www.anthropic.com/research/building-strong-safety-evaluations": "https://assets.claude.com/04a298be2efa241bd5a4a810b97c62bb8ef257dc.jpg",
- "https://deepmind.google/blog/introducing-gemini-4-hydrogen/": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg",
- "https://www.youtube.com/watch?v=1rn_Clc-MM0": "https://i.ytimg.com/vi/1rn_Clc-MM0/hqdefault.jpg",
- "https://latent.space/p/ainews-d-day-decision-models-day/": "https://latent.space/og/card/post/ainews-d-day-decision-models-day/d2600d673d83d2c42c810a6c57c6e5942326283dfe350801c137d18f262c4f90.png",
- "https://latent.space/p/jev-revolution/": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/b4181d5a-0460-4828-b350-07feca728023/jevalution-feature.jpg?t=1794458692",
  "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/": "https://static.simonwillison.net/static/2026/sandbox-proxy.png",
- "https://deepmind.google/blog/introducing-gemini-4-neon/": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png"
+ "https://deepmind.google/blog/introducing-gemini-4-neon/": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png",
+ "https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/": "https://latent.space/og/card/post/ainews-gemini-4-neon-gdm-s-opus-sol-contender/0da9bd9da4547622b312ec1f44ab6ab42cc9e07bed6eb1d47b2fff64e4150bda.png",
+ "https://claude.dev/blog/chaos-loop-claude-docs-launch/": "https://claude.dev/blog/chaos-loop-claude-docs-launch/og.png",
+ "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/og.png"
 }

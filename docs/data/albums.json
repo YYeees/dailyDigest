@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T00:22:30+00:00",
+ "updated_at": "2026-11-20T00:38:50+00:00",
  "albums": [
   {
    "person": "Thorsten Ball",
@@ -207,6 +207,13 @@
    "bio": "拍胶片和街头摄影的 YouTuber，镜头里多是日本的日常与慢下来的生活。从 2013 年开始做视频，十年如一日地拍。",
    "tracks": [
     {
+     "title": "Shooting with an old MFT camera.",
+     "link": "https://www.youtube.com/watch?v=YCBC9oZiWV8",
+     "date": "2026-11-19",
+     "kind": "youtube",
+     "note": "Teo带着一台老款的微型四三系统相机，也就是Lumix GX80，出门拍了一次，视频记录了整个拍摄过程。内容偏器材和日常，没有涉及别的主题。"
+    },
+    {
      "title": "Why you should photograph your home.",
      "link": "https://www.youtube.com/watch?v=VHQvfVpCaJ4",
      "date": "2026-10-31",
@@ -268,18 +275,11 @@
      "date": "2026-08-20",
      "kind": "youtube",
      "note": "Teo Crawford介绍了他目前拍视频用的简化器材配置，偏装备清单性质，没有涉及拍摄技法的详细讲解。"
-    },
-    {
-     "title": "Shooting with a 23yr old DSLR.",
-     "link": "https://www.youtube.com/watch?v=B1u8YXWgS8I",
-     "date": "2026-08-09",
-     "kind": "youtube",
-     "note": "Teo Crawford带着一台23年前的老款DSLR去山里拍摄，记录老相机在今天还能拍出什么效果，是一期器材体验向的旅拍视频。"
     }
    ],
-   "latest": "2026-10-31",
-   "latest_title": "Why you should photograph your home.",
-   "latest_link": "https://www.youtube.com/watch?v=VHQvfVpCaJ4"
+   "latest": "2026-11-19",
+   "latest_title": "Shooting with an old MFT camera.",
+   "latest_link": "https://www.youtube.com/watch?v=YCBC9oZiWV8"
   },
   {
    "person": "Maggie Appleton",

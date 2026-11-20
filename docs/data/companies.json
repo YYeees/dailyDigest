@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T00:22:37+00:00",
+ "updated_at": "2026-11-20T00:38:57+00:00",
  "window_days": 7,
  "companies": [
   {
@@ -12,6 +12,19 @@
   }
  ],
  "items": [
+  {
+   "company": "OpenAI",
+   "key": "openai",
+   "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+   "link": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+   "date": "2026-11-19",
+   "summary": "OpenAI介绍了一套叫Performance Factory的系统，用基于Codex的工作流自动发现并修复性能问题，让ChatGPT保持流畅。原文这次没能抓取，只能依据官方摘要判断，具体做法要点开看。可以跟Anthropic那篇讲claude.ai提速的文章对照着读。",
+   "image": null,
+   "priority": "medium",
+   "tags": [
+    "AI"
+   ]
+  },
   {
    "company": "OpenAI",
    "key": "openai",
@@ -78,6 +91,20 @@
    ]
   },
   {
+   "company": "Anthropic",
+   "key": "anthropic",
+   "title": "Using a \"chaos loop\" to harden the Claude Docs launch: 60 server errors across billions of requests",
+   "link": "https://claude.dev/blog/chaos-loop-claude-docs-launch/",
+   "date": "2026-11-17",
+   "summary": "Anthropic在Claude Docs上线前，让Claude连续两周在预发布环境里做压力测试和故意制造故障，上线一周后在大约二十亿次请求里只出现了六十个服务器错误。做法是让Claude读监控数据、自己提修复并部署到预发布，只有难以撤销的决定才由人审批。想看AI怎么做混沌测试的话，这篇给了一套完整流程。",
+   "image": "https://claude.dev/blog/chaos-loop-claude-docs-launch/og.png",
+   "priority": "high",
+   "tags": [
+    "AI",
+    "Eval"
+   ]
+  },
+  {
    "company": "OpenAI",
    "key": "openai",
    "title": "Introducing ChatGPT for Sales",
@@ -114,6 +141,20 @@
    "priority": "medium",
    "tags": [
     "AI"
+   ]
+  },
+  {
+   "company": "Anthropic",
+   "key": "anthropic",
+   "title": "How the Claude Code team thinks about verification",
+   "link": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
+   "date": "2026-11-16",
+   "summary": "Claude Code团队讲了他们怎么让编码agent用证据证明自己做对了。推荐投入的是三类测试，端到端、属性测试和差分测试，并且要防止agent去改自己的检查，不稳定的测试要找根因而不是重跑。新的质检关卡还建议先只记录不拦截，观察误报后再强制执行。做测试的人这篇值得细读。",
+   "image": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/og.png",
+   "priority": "high",
+   "tags": [
+    "AI",
+    "Eval"
    ]
   },
   {
@@ -180,20 +221,6 @@
    "priority": "medium",
    "tags": [
     "AI"
-   ]
-  },
-  {
-   "company": "Anthropic",
-   "key": "anthropic",
-   "title": "Building strong safety evaluations",
-   "link": "https://www.anthropic.com/research/building-strong-safety-evaluations",
-   "date": "2026-11-13",
-   "summary": "Anthropic的工程团队讲怎么做出可靠的安全评测，分成设计、运行、报告三步。他们认为说一个模型更安全，前提是评测本身靠得住。做评测或测试的人可以直接借鉴它的流程。",
-   "image": "https://assets.claude.com/04a298be2efa241bd5a4a810b97c62bb8ef257dc.jpg",
-   "priority": "high",
-   "tags": [
-    "AI",
-    "Eval"
    ]
   }
  ]
