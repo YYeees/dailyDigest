@@ -2,6 +2,141 @@
   "items": [
     {
       "person": "Latent Space",
+      "title": "The War Against Slop and an Emerging Weapon to Fight it: Formal Verification",
+      "link": "https://latent.space/p/formal-verification/",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-20T23:59:18.069983+00:00",
+      "source_type": "blog",
+      "summary": "这篇讲的是在AI写代码越来越多的当下，怎么用形式化验证对付低质量的“slop”，也就是用数学证明程序没问题。文中采访了一家新公司的联合创始人，介绍了Harmonic等几家用AI自动完成证明的公司各自的做法。对做测试的人来说，可以看看“证明正确”这条路离日常工作还有多远。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "形式化验证与AI结合的行业综述，需要一定技术背景"
+        },
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "讲AI如何让软件正确性验证自动化，沾测试手艺的边，但偏行业综览不是实操"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "medium"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Ravi Vakil",
+      "link": "https://simonwillison.net/2026/Nov/20/ravi-vakil/",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-20T23:59:17.375572+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "引文讲的是纯人类完成的数学证明，与AI无关"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "无实质连接"
+        }
+      ],
+      "tiers": {
+        "ai": "low",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Quoting Levent Alpöge",
+      "link": "https://simonwillison.net/2026/Nov/20/levent-alpoge/",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-20T23:59:17.375925+00:00",
+      "source_type": "blog",
+      "summary": "一位数学家说他和Claude合作，找到了黎曼猜想的证明，还把论证形式化了，也就是写成能被程序逐步核对的形式。这只是作者自己的说法，还没经过外界验证，但他对Claude在收尾阶段表现的描述很有画面感。可以当作观察AI数学能力的一个信号，别急着下结论。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "数学家称与Claude合作证明黎曼猜想，是前沿能力的信号，但只是引文，且尚未验证"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "无实质连接"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Anthropic successfully completes largest IPO in history, valued at $1.5T",
+      "link": "https://latent.space/p/ainews-anthropic-successfully-completes-largest-ipo-in-history-valued-at-1-5t/",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-20T23:59:18.071242+00:00",
+      "source_type": "blog",
+      "summary": "这期AI新闻汇总主要讲Anthropic上市首日的情况，发行价83美元，收盘涨了约17%，融资规模成了史上最大的IPO。另外还提到Google把Genie 4开放给了开发者。想快速了解这一天AI圈发生了什么，扫一眼这篇就够。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "每日AI新闻汇总，Anthropic上市是大新闻但偏资讯，另含Genie 4开放给开发者"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Token fraud is here and it’s BAD (YouTube)",
+      "link": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-20T23:59:17.375969+00:00",
+      "source_type": "blog",
+      "summary": "ChatPRD的创始人讲了她的AI产品被人批量薅免费试用额度的经历。有团伙靠循环领试用和优惠码，借她的agent帮自己做游戏地图，还有人转手倒卖额度。对想做AI产品的人来说，这是个很具体的提醒，免费试用可能比想象中更容易被滥用。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "做AI产品遇到的真实滥用案例，有参考价值但偏轻量"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "无实质连接"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
       "title": "Scaling Linear’s GTM to $100M ARR — Cristina Cordova, COO",
       "link": "https://latent.space/p/linear-scaling/",
       "date": "2026-11-19",
@@ -21,35 +156,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "PostgreSQL 19 Released",
-      "link": "https://simonwillison.net/2026/Nov/19/postgresql-19/",
-      "date": "2026-11-19",
-      "first_seen": "2026-11-20T00:37:12.765832+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "数据库版本发布，与AI无关"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "无关"
-        }
-      ],
-      "tiers": {
-        "ai": "low",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Teo Crawford",
@@ -72,7 +179,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -95,7 +202,7 @@
         "eval": "low"
       },
       "is_company": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -118,8 +225,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true,
-      "image": "https://latent.space/og/card/post/ainews-gemini-4-neon-gdm-s-opus-sol-contender/0da9bd9da4547622b312ec1f44ab6ab42cc9e07bed6eb1d47b2fff64e4150bda.png"
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -165,8 +271,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png"
+      "is_new": false
     },
     {
       "person": "Google",
@@ -327,8 +432,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://static.simonwillison.net/static/2026/sandbox-proxy.png"
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -402,8 +506,7 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": true,
-      "image": "https://claude.dev/blog/chaos-loop-claude-docs-launch/og.png"
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -546,8 +649,7 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": true,
-      "image": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/og.png"
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -692,80 +794,6 @@
       "tiers": {
         "ai": "medium",
         "anchor": "medium",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "Andrew Ng",
-      "title": "Build agent harnesses for any LLM using the open source OpenWorker Agent Harness SDK",
-      "link": "https://www.deeplearning.ai/the-batch/how-to-build-an-agent-harness-in-one-prompt",
-      "date": "2026-11-13",
-      "first_seen": "2026-11-14T15:08:53.100887+00:00",
-      "source_type": "blog",
-      "summary": "吴恩达推荐了刚开源的OpenWorker Agent Harness SDK，用它可以给任意大模型搭一个agent harness，也就是包住模型、让它能真正干活的那层外壳。他鼓励没做过的人自己动手做一次，这也是面试里会考的技能。想理解agent是怎么搭起来的，可以从这篇开始。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "讲怎么用开源SDK搭agent harness，可直接动手"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "harness相关，沾“护城河在harness”母题，但偏工具介绍"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "medium",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "Introducing ChatGPT Wallet",
-      "link": "https://openai.com/index/introducing-chatgpt-wallet",
-      "date": "2026-11-13",
-      "first_seen": "2026-11-14T08:10:51.217235+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI推出ChatGPT Wallet，让ChatGPT里的agent和Codex可以在你批准后替你付款，并沿用银行卡原有的保护。想知道agent怎么安全地花钱的人可以留意。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "官方新功能公告，让agent能代为付款"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": true,
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "AI Ambition: ArtCraft Cloned Photoshop and Now Wants to \"Rebuild Everything\"",
-      "link": "https://latent.space/p/artcraft/",
-      "date": "2026-11-13",
-      "first_seen": "2026-11-14T08:10:49.146894+00:00",
-      "source_type": "blog",
-      "summary": "ArtCraft创始人在大会上讲他们用AI从头克隆了Photoshop和Acrobat等软件，目前已经开源十七个。文章记录了现场气氛和他的开源宣言。适合看个野心很大的案例。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "创业者宣讲，偏叙事和项目介绍"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
         "eval": "low"
       },
       "is_company": false,

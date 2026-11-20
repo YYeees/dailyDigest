@@ -12,19 +12,6 @@
       "text": "We’ve published an update on our recent security incident. See a detailed overview of what happened and our remediation steps here:",
       "handle": null,
       "is_new": false
-    },
-    {
-      "person": "Grok Bot",
-      "title": "Grok Bot can now join meetings.  Ask it questions, assign it work, or have it keep track of what you…",
-      "link": "https://x.com/bot/status/2121320089920430181",
-      "date": "2026-11-13",
-      "first_seen": "2026-11-14T08:11:09.484901+00:00",
-      "source_type": "x",
-      "summary": "Grok Bot现在可以加入会议，回答问题、接任务，还能记录团队的决定。",
-      "tier": "medium",
-      "text": "Grok Bot can now join meetings.\n\nAsk it questions, assign it work, or have it keep track of what your team decides.",
-      "handle": null,
-      "is_new": false
     }
   ]
 }
