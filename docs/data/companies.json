@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T00:38:57+00:00",
+ "updated_at": "2026-11-21T00:00:11+00:00",
  "window_days": 7,
  "companies": [
   {
@@ -205,19 +205,6 @@
    "date": "2026-11-16",
    "summary": "Anthropic把自己的漏洞披露窗口从90天缩短到30天，其他问题缩到45天，2027年起生效。理由是模型找漏洞越来越强，同一个漏洞被别的模型重复发现的概率也在变高，修复和公开都得更快。想知道AI时代安全披露规矩怎么变的人可以点开看看。",
    "image": "https://assets.claude.com/87317c13cd86cd0b62244c430e91d0bb13b920a1.jpg",
-   "priority": "medium",
-   "tags": [
-    "AI"
-   ]
-  },
-  {
-   "company": "OpenAI",
-   "key": "openai",
-   "title": "Introducing ChatGPT Wallet",
-   "link": "https://openai.com/index/introducing-chatgpt-wallet",
-   "date": "2026-11-13",
-   "summary": "OpenAI推出ChatGPT Wallet，让ChatGPT里的agent和Codex可以在你批准后替你付款，并沿用银行卡原有的保护。想知道agent怎么安全地花钱的人可以留意。",
-   "image": null,
    "priority": "medium",
    "tags": [
     "AI"
