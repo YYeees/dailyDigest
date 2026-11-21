@@ -1,17 +1,3 @@
 {
-  "items": [
-    {
-      "person": "Cursor",
-      "title": "We’ve published an update on our recent security incident. See a detailed overview of what happened…",
-      "link": "https://x.com/cursor_ai/status/2121411147714970092",
-      "date": "2026-11-14",
-      "first_seen": "2026-11-14T08:11:11.536540+00:00",
-      "source_type": "x",
-      "summary": "Cursor发布了最近那次安全事件的详细说明，包含发生经过和补救措施。用户可以点开看看自己是否受影响。",
-      "tier": "medium",
-      "text": "We’ve published an update on our recent security incident. See a detailed overview of what happened and our remediation steps here:",
-      "handle": null,
-      "is_new": false
-    }
-  ]
+  "items": []
 }

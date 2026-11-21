@@ -15,7 +15,7 @@
           "reason": "无关"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -30,6 +30,40 @@
           "track": "ai",
           "tier": "high",
           "reason": "Gemini 4 Neon发布的要点汇总，含价格规格和独立评测，并比较了几家模型"
+        }
+      ],
+      "is_new": false
+    },
+    {
+      "person": "Craig Mod",
+      "title": "[RIDGELINE] SHŌWA COLOSSUS — A Jazz Kissa Pop-up",
+      "link": "https://craigmod.com/ridgeline/239/",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-21T23:13:46.988773+00:00",
+      "source_type": "blog",
+      "summary": "Craig Mod宣布11月25日开一个为期三周左右的快闪邮件小刊，带读者逛九州岛上最后几家老派爵士喫茶店。小刊结束后，所有订阅邮箱都会被删掉，这种做法本身就挺有他的味道。如果你喜欢他那种慢、具体、不凑热闹的写法，可以先订阅看看。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "质朴慢的构建者活法，限时快闪式的小项目，偏预告性质，属周边内容。"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Eugene Yan",
+      "title": "How Public Evals Work and Fail, and What Should Change",
+      "link": "https://eugeneyan.com/writing/public-evals",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-21T23:13:49.880155+00:00",
+      "source_type": "blog",
+      "summary": "Eugene Yan拆解了12个公开的AI评测，发现很多题目的打分程序会把做对的判错，也会把做错的放过去。比如有的检查只看邮件里有没有数字3和4，数字写反了照样算通过。他建议不要只看平均分，还要看多跑几次是否稳定，并且在自己的工作环境里亲自测。做评测或测试的人读这篇，能直接拿到一套检查评测靠不靠谱的办法。",
+      "tracks": [
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "拆解12个公开评测的打分器缺陷，给出可复现的审计方法，如查通过样本的假阳性、报告多次运行的稳定性，直接可用于建评测。"
         }
       ],
       "is_new": true
@@ -100,7 +134,7 @@
           "reason": "混沌测试加不变量校验加遥测驱动回归的完整做法，是AI做压测故障注入的实例"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -122,7 +156,7 @@
           "reason": "讲端到端、属性、差分测试的具体用法，以及怎么让检查器不被糊弄，能直接改变怎么测"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -499,7 +533,7 @@
           "reason": "四个模型怎么选、怎么搭配的选型指南，面向工程师"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

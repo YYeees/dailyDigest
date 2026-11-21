@@ -2,6 +2,57 @@
   "items": [
     {
       "person": "Latent Space",
+      "title": "[AINews] Riemann Hypothesis proved...twice independently",
+      "link": "https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/",
+      "date": "2026-11-21",
+      "first_seen": "2026-11-21T23:13:49.007530+00:00",
+      "source_type": "blog",
+      "summary": "这期AI新闻日报的头条是，Anthropic的一位研究员宣布用Claude写出了黎曼猜想的证明，同一天另一位数学家也放出了自己花十二年写的人工证明。前者附带巨大的机器可验证代码，大概率正确却没有人能读完，后者好懂却可能有错。这个对比挺值得想一想，不过结论还要等数年验证。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI新闻日报，头条是Claude辅助的黎曼猜想证明声明，偏宏观新闻，难度较高。"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "AI写出的证明可能正确却无人读得懂，对应认知系统不能外包的母题，二手转述。"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "medium",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Greg Isenberg",
+      "title": "Gemini 4 Neon: the most underrated model of the year",
+      "link": "https://www.youtube.com/watch?v=tCY7zMknCJQ",
+      "date": "2026-11-20",
+      "first_seen": "2026-11-21T23:13:46.267699+00:00",
+      "source_type": "youtube",
+      "summary": "Greg Isenberg上手测了Google新发布的Gemini 4 Neon，展示了用它做动效、游戏和硬件原型的例子。他讲了在哪里跑、怎么用得更好，也坦率说了写作习惯和命名混乱这些缺点。想快速了解这个新模型能干什么可以看，不过里面赚钱建议偏创作者视角。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Gemini 4 Neon的上手体验和用法，偏创作者推广与赚钱角度。"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
       "title": "The War Against Slop and an Emerging Weapon to Fight it: Formal Verification",
       "link": "https://latent.space/p/formal-verification/",
       "date": "2026-11-20",
@@ -26,63 +77,7 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Ravi Vakil",
-      "link": "https://simonwillison.net/2026/Nov/20/ravi-vakil/",
-      "date": "2026-11-20",
-      "first_seen": "2026-11-20T23:59:17.375572+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "引文讲的是纯人类完成的数学证明，与AI无关"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "无实质连接"
-        }
-      ],
-      "tiers": {
-        "ai": "low",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Levent Alpöge",
-      "link": "https://simonwillison.net/2026/Nov/20/levent-alpoge/",
-      "date": "2026-11-20",
-      "first_seen": "2026-11-20T23:59:17.375925+00:00",
-      "source_type": "blog",
-      "summary": "一位数学家说他和Claude合作，找到了黎曼猜想的证明，还把论证形式化了，也就是写成能被程序逐步核对的形式。这只是作者自己的说法，还没经过外界验证，但他对Claude在收尾阶段表现的描述很有画面感。可以当作观察AI数学能力的一个信号，别急着下结论。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "数学家称与Claude合作证明黎曼猜想，是前沿能力的信号，但只是引文，且尚未验证"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "无实质连接"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -105,35 +100,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Token fraud is here and it’s BAD (YouTube)",
-      "link": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
-      "date": "2026-11-20",
-      "first_seen": "2026-11-20T23:59:17.375969+00:00",
-      "source_type": "blog",
-      "summary": "ChatPRD的创始人讲了她的AI产品被人批量薅免费试用额度的经历。有团伙靠循环领试用和优惠码，借她的agent帮自己做游戏地图，还有人转手倒卖额度。对想做AI产品的人来说，这是个很具体的提醒，免费试用可能比想象中更容易被滥用。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "做AI产品遇到的真实滥用案例，有参考价值但偏轻量"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "无实质连接"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -225,8 +192,58 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://latent.space/og/card/post/ainews-gemini-4-neon-gdm-s-opus-sol-contender/0da9bd9da4547622b312ec1f44ab6ab42cc9e07bed6eb1d47b2fff64e4150bda.png"
+      "is_new": false
+    },
+    {
+      "person": "Craig Mod",
+      "title": "[RIDGELINE] SHŌWA COLOSSUS — A Jazz Kissa Pop-up",
+      "link": "https://craigmod.com/ridgeline/239/",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-21T23:13:46.988773+00:00",
+      "source_type": "blog",
+      "summary": "Craig Mod宣布11月25日开一个为期三周左右的快闪邮件小刊，带读者逛九州岛上最后几家老派爵士喫茶店。小刊结束后，所有订阅邮箱都会被删掉，这种做法本身就挺有他的味道。如果你喜欢他那种慢、具体、不凑热闹的写法，可以先订阅看看。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "质朴慢的构建者活法，限时快闪式的小项目，偏预告性质，属周边内容。"
+        }
+      ],
+      "tiers": {
+        "ai": "low",
+        "anchor": "medium",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Eugene Yan",
+      "title": "How Public Evals Work and Fail, and What Should Change",
+      "link": "https://eugeneyan.com/writing/public-evals",
+      "date": "2026-11-19",
+      "first_seen": "2026-11-21T23:13:49.880155+00:00",
+      "source_type": "blog",
+      "summary": "Eugene Yan拆解了12个公开的AI评测，发现很多题目的打分程序会把做对的判错，也会把做错的放过去。比如有的检查只看邮件里有没有数字3和4，数字写反了照样算通过。他建议不要只看平均分，还要看多跑几次是否稳定，并且在自己的工作环境里亲自测。做评测或测试的人读这篇，能直接拿到一套检查评测靠不靠谱的办法。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "讲怎么读模型评测分数，偏方法论，需要一定背景，不是日常用法指南。"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "拆解12个公开评测的打分器缺陷，给出可复现的审计方法，如查通过样本的假阳性、报告多次运行的稳定性，直接可用于建评测。"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "high"
+      },
+      "is_company": false,
+      "is_new": true
     },
     {
       "person": "Greg Isenberg",
@@ -272,8 +289,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png"
+      "is_new": false
     },
     {
       "person": "Google",
@@ -434,8 +450,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://static.simonwillison.net/static/2026/sandbox-proxy.png"
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -509,8 +524,7 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": false,
-      "image": "https://claude.dev/blog/chaos-loop-claude-docs-launch/og.png"
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -653,8 +667,7 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": false,
-      "image": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/og.png"
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -771,34 +784,6 @@
       "tiers": {
         "ai": "low",
         "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] The No AI Slop Manifesto",
-      "link": "https://latent.space/p/ainews-the-no-ai-slop-manifesto/",
-      "date": "2026-11-14",
-      "first_seen": "2026-11-15T00:54:43.259537+00:00",
-      "source_type": "blog",
-      "summary": "这期简报的主角是一份“拒绝AI垃圾内容”宣言，在AI工程师大会的讨论中诞生，被很多演讲者联署，还上了Hacker News首页。另外提到llama.cpp和ggml、SGLang都发布了1.0。想了解业内怎么看AI生成内容质量的人可以点开。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "报道反AI垃圾内容宣言和几个项目的1.0发布，偏新闻与讨论"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "宣言涉及一手不二手、反对低质量内容，沾边"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "medium",
         "eval": "low"
       },
       "is_company": false,
