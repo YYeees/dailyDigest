@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T23:14:56+00:00",
+ "updated_at": "2026-11-22T23:39:25+00:00",
  "window_days": 7,
  "companies": [
   {
@@ -12,6 +12,20 @@
   }
  ],
  "items": [
+  {
+   "company": "OpenAI",
+   "key": "openai",
+   "title": "Perplexity and Intelligence",
+   "link": "https://openai.com/index/perplexity-and-intelligence",
+   "date": "2026-11-22",
+   "summary": "OpenAI讲困惑度这个指标怎么衡量模型进步，并提议开发者可以用它建立统一的评估方式。偏技术概念，有一定门槛，但和评估模型能力有关。",
+   "image": null,
+   "priority": "medium",
+   "tags": [
+    "AI",
+    "Eval"
+   ]
+  },
   {
    "company": "OpenAI",
    "key": "openai",

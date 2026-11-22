@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T23:14:50+00:00",
+ "updated_at": "2026-11-22T23:39:19+00:00",
  "albums": [
   {
    "person": "Thorsten Ball",
@@ -466,6 +466,13 @@
    "bio": "吴恩达。Coursera 联合创始人，DeepLearning.AI 和 AI Fund 的创办人，曾带领 Google Brain、做过百度首席科学家。每周在 The Batch 写一封「Dear friends」，讲 AI 工程、产品和职业。",
    "tracks": [
     {
+     "title": "How Nvidia's founder saw opportunities other people couldn't",
+     "link": "https://www.deeplearning.ai/the-batch/jensen-huangs-legacy-and-future",
+     "date": "2026-11-20",
+     "kind": "blog",
+     "note": "吴恩达在信里回应黄仁勋辞任英伟达，肯定他推动算力、支持开源的贡献，也提到他早年对用GPU训练神经网络的支持。偏人物评论，跟日常用AI关系不大。"
+    },
+    {
      "title": "Build agent harnesses for any LLM using the open source OpenWorker Agent Harness SDK",
      "link": "https://www.deeplearning.ai/the-batch/how-to-build-an-agent-harness-in-one-prompt",
      "date": "2026-11-13",
@@ -527,18 +534,11 @@
      "date": "2026-09-18",
      "kind": "blog",
      "note": ""
-    },
-    {
-     "title": "AI Engineering Adds New Responsiiblities and Opportunities for Product Leadership",
-     "link": "https://www.deeplearning.ai/the-batch/the-ai-engineering-skills-map-in-detail-shaping-the-build",
-     "date": "2026-09-11",
-     "kind": "blog",
-     "note": "吴恩达说AI工程师最好的工作不只是照着别人写好的需求实现，而是主动参与决定做什么。以前产品和工程分得很清，现在一个人能做的事变多了，这条线也在变。这篇偏职业和团队角度，不太涉及具体工具。"
     }
    ],
-   "latest": "2026-11-13",
-   "latest_title": "Build agent harnesses for any LLM using the open source OpenWorker Agent Harness SDK",
-   "latest_link": "https://www.deeplearning.ai/the-batch/how-to-build-an-agent-harness-in-one-prompt"
+   "latest": "2026-11-20",
+   "latest_title": "How Nvidia's founder saw opportunities other people couldn't",
+   "latest_link": "https://www.deeplearning.ai/the-batch/jensen-huangs-legacy-and-future"
   }
  ]
 }
