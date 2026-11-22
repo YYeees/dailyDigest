@@ -1068,7 +1068,7 @@
           "reason": "讲在agent大量产出代码的时代怎么做代码审查，流程可落地"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -1532,7 +1532,7 @@
           "reason": "给出定时运行的agent自动化的参考实现和常见失败模式"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -1698,6 +1698,28 @@
       "is_new": false
     },
     {
+      "person": "Hugo Bowne-Anderson",
+      "title": "Claude’s fraud detector looked excellent. It leaked the answer.",
+      "link": "https://hugobowne.substack.com/p/stop-babysitting-your-ai-agents",
+      "date": "2026-10-07",
+      "first_seen": "2026-11-22T23:38:17.731233+00:00",
+      "source_type": "blog",
+      "summary": "标题里的案例是一个看起来非常好的欺诈检测模型，其实训练时偷偷看到了答案。这期还介绍了怎么捕捉数据科学里这类失败，以及编程agent的搭建。教人怎么识别被泄露答案的假好结果，对做测试评估的人很有用。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "按正文判断，实操指南类"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "讲怎么测/评估agent"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "OpenAI “rogue” agent activities found on Wikimedia projects",
       "link": "https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/",
@@ -1848,7 +1870,7 @@
           "reason": "Claude Code云端会话的实操指南，讲清楚适用场景和坑"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",

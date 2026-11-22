@@ -280,6 +280,23 @@
           "reason": "讲评测集设计、评分器自检、噪声估计、防过拟合的迭代规则，方法能直接搬到自己的评测流程"
         }
       ],
+      "is_new": false
+    },
+    {
+      "person": "Hugo Bowne-Anderson",
+      "title": "Agentic Data Science: Specify the Work, Verify the Claim",
+      "link": "https://hugobowne.substack.com/p/the-agentic-data-science-playbook",
+      "date": "2026-09-28",
+      "first_seen": "2026-11-22T23:38:17.732668+00:00",
+      "source_type": "blog",
+      "summary": "讲数据科学家怎么把整个分析任务交给agent，自己只负责定问题、补专业知识、质疑证据。重点是光有能跑通的代码不够，还要设计验证环节。对想让agent做分析的人是一份实用的分工思路。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "按正文判断，实操指南类"
+        }
+      ],
       "is_new": true
     },
     {
@@ -416,7 +433,7 @@
           "reason": "Claude Code里effort档位怎么选的实测与规则，直接影响日常用法"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -628,6 +645,28 @@
       "is_new": false
     },
     {
+      "person": "Hugo Bowne-Anderson",
+      "title": "Does Your AI Agent Actually Work? A Guide to Evals",
+      "link": "https://hugobowne.substack.com/p/ai-agent-evals-how-to-test-what-matters",
+      "date": "2026-09-23",
+      "first_seen": "2026-11-22T23:38:17.734449+00:00",
+      "source_type": "blog",
+      "summary": "一份从零开始的agent评测指南，先想清楚产品要做什么、给谁用、什么算成功，再把试用中看到的问题变成可重复的检查，用来确认改动有没有让旧功能变差。讲得具体，想给自己的agent建评测可以直接照着做。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "按正文判断，实操指南类"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "讲怎么测/评估agent"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Anthropic",
       "title": "Claude discovers a novel enzyme system",
       "link": "https://www.anthropic.com/research/claude-discovers-novel-enzyme-system",
@@ -783,7 +822,7 @@
           "reason": "Opus 5.5的提示写法和长任务控制的实操指南"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -835,6 +874,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Hugo Bowne-Anderson",
+      "title": "The 6 Most Common AI Agent Mistakes",
+      "link": "https://hugobowne.substack.com/p/the-6-most-common-ai-agent-mistakes",
+      "date": "2026-09-20",
+      "first_seen": "2026-11-22T23:38:17.737198+00:00",
+      "source_type": "blog",
+      "summary": "总结了做AI agent最常犯的几个错误，比如不知道哪里出了问题就一直加功能、换模型，半年后还说不清是不是解决了最初的问题。有时缺的只是更好的检索或更清楚的工具说明，甚至一个固定流程就够了。适合做agent的人对照自查。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "按正文判断，实操指南类"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Dan Koe",
@@ -1129,6 +1185,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Hugo Bowne-Anderson",
+      "title": "How to Build a Coding Agent with Nico (Amp Code)",
+      "link": "https://hugobowne.substack.com/p/how-to-build-a-coding-agent-with",
+      "date": "2026-09-15",
+      "first_seen": "2026-11-22T23:38:17.740064+00:00",
+      "source_type": "blog",
+      "summary": "Amp团队的人讲怎么做一个编程agent的外壳。一个很好用的说法是，外壳里每个组件都是在假设模型自己做不到，所以会随着模型变强而过期，比如计划模式就被撤掉了。想理解为什么编程工具老在变，看这篇很有启发。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "按正文判断，实操指南类"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Boris Cherny",
@@ -2225,6 +2298,28 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Hugo Bowne-Anderson",
+      "title": "How Evals Are Central To Harness Engineering",
+      "link": "https://hugobowne.substack.com/p/how-evals-are-central-to-harness",
+      "date": "2026-09-01",
+      "first_seen": "2026-11-22T23:38:17.743817+00:00",
+      "source_type": "blog",
+      "summary": "讲评测为什么是harness工程的核心，因为改了工具、记忆或权限之后，只有评测能告诉你系统是不是真的变好了。流程是从真实运行记录出发，归纳失败类型，定下本领域的判断标准，再验证用来打分的模型靠不靠谱。做agent质量保障的人可以照着走。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "按正文判断，实操指南类"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "讲怎么测/评估agent"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Martin Fowler",

@@ -91,6 +91,28 @@
       "is_new": false
     },
     {
+      "person": "Hugo Bowne-Anderson",
+      "title": "How to Build a Search Agent and Prove It Works",
+      "link": "https://hugobowne.substack.com/p/how-to-build-a-search-agent-and-prove",
+      "date": "2026-08-30",
+      "first_seen": "2026-11-22T23:38:17.745221+00:00",
+      "source_type": "blog",
+      "summary": "一个完整的实验：先用传统关键词检索在商品数据集上跑出基线，再把同一个检索交给agent当工具，让它改写查询、反复搜索，最后用同一套人工标注的评判来比。重点是怎么证明agent真的比基线好。教你怎么测agent，直接能拿去用。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "按正文判断，实操指南类"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "讲怎么测/评估agent"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "Introducing Hy4 Preview",
       "link": "https://simonwillison.net/2026/Aug/29/hy4/",
@@ -106,6 +128,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Hugo Bowne-Anderson",
+      "title": "RAG Isn’t Dead. It’s Sleeping.",
+      "link": "https://hugobowne.substack.com/p/rag-isnt-dead-its-sleeping",
+      "date": "2026-08-29",
+      "first_seen": "2026-11-22T23:38:17.747466+00:00",
+      "source_type": "blog",
+      "summary": "作者认为RAG没死只是换了形态，以前是检索流水线把段落塞给模型，现在agent自己写查询、选关键词还是向量检索、看结果再接着搜。讲者是做了多年搜索的老手。想弄清楚检索在agent时代还有什么用，这篇讲得清楚。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "按正文判断，实操指南类"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Simon Willison",
@@ -212,7 +251,7 @@
           "reason": "主要是个人品牌/商业叙事，未触及AI作为认知方式这一母题的实质内容"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -246,7 +285,7 @@
           "reason": "直接是在讲怎么建立靠谱的AI评测方法论（用密码学手段防止模型偷看题目、防止基准污染），命中eval track核心"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -366,6 +405,23 @@
         }
       ],
       "is_new": false
+    },
+    {
+      "person": "Hugo Bowne-Anderson",
+      "title": "Your Agent Won’t Tell You Its Search Is Broken",
+      "link": "https://hugobowne.substack.com/p/knowledge-management-for-personal",
+      "date": "2026-08-25",
+      "first_seen": "2026-11-22T23:38:17.748770+00:00",
+      "source_type": "blog",
+      "summary": "介绍一套把个人笔记放在普通文件里的做法，笔记不被任何一个工具锁住，新接入的agent读一份说明文件就知道怎么用这些笔记。重点还有agent搜索坏了却不会告诉你，要自己设法发现。和自己搭知识库的思路很贴近，值得一读。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "按正文判断，实操指南类"
+        }
+      ],
+      "is_new": true
     },
     {
       "person": "Martin Fowler",
@@ -531,6 +587,23 @@
       "is_new": false
     },
     {
+      "person": "Hugo Bowne-Anderson",
+      "title": "Your Agents Are Only As Good As Your Retrieval",
+      "link": "https://hugobowne.substack.com/p/your-agents-are-only-as-good-as-your",
+      "date": "2026-08-21",
+      "first_seen": "2026-11-22T23:38:17.749822+00:00",
+      "source_type": "blog",
+      "summary": "一个检索出错的真实例子：用户说想取消，其实是在报bug，系统却按字面把订阅取消了。聊天机器人答错只是答错，agent答错会真的去执行动作，所以检索质量成了agent的上限。做agent的人值得看看这类坑怎么避。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "按正文判断，实操指南类"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] Poolside gets $12B reverse-execuhire to NVIDIA; founders stay for $1B, employees go for $6B, Infraco scaling to 7GW neocloud",
       "link": "https://www.latent.space/p/ainews-poolside-gets-12b-reverse",
@@ -657,7 +730,7 @@
           "reason": "清单外但沾深度自我认识这根主干的边（认知发展阶段、信息环境对思维的影响），是他惯常的自助风格，非一手反思"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Martin Fowler",
@@ -939,7 +1012,7 @@
           "reason": "讲清楚了技术路径（计算机视觉追踪全身动作理解手语语法）、训练数据规模和实际产品落地（Pixel 11）"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -1063,7 +1136,7 @@
           "reason": "通用商业/个人发展框架，未触及锚点三根主干具体母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Simon Willison",

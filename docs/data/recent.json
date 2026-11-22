@@ -1,6 +1,90 @@
 {
   "items": [
     {
+      "person": "Greg Isenberg",
+      "title": "How to design an agent harness",
+      "link": "https://www.youtube.com/shorts/LrJ4RYRQSpk",
+      "date": "2026-11-22",
+      "first_seen": "2026-11-22T23:36:00.261327+00:00",
+      "source_type": "youtube",
+      "summary": "Greg Isenberg访谈Gamma的联合创始人，聊agent外壳以及围绕它的创业机会。Gamma今年把产品重做成一个创作型agent，做一份演示稿背后要调用大约二十个模型。偏访谈，适合想看产品怎么落地的人。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "按正文判断，偏观点或推广或需背景"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "沾边缘主题"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "medium",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "OpenAI",
+      "title": "Perplexity and Intelligence",
+      "link": "https://openai.com/index/perplexity-and-intelligence",
+      "date": "2026-11-22",
+      "first_seen": "2026-11-22T23:38:19.072037+00:00",
+      "source_type": "blog",
+      "summary": "OpenAI讲困惑度这个指标怎么衡量模型进步，并提议开发者可以用它建立统一的评估方式。偏技术概念，有一定门槛，但和评估模型能力有关。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "按正文判断，偏观点或推广或需背景"
+        },
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "讲怎么测/评估agent"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "medium"
+      },
+      "is_company": true,
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Muru",
+      "link": "https://simonwillison.net/2026/Nov/21/muru/",
+      "date": "2026-11-21",
+      "first_seen": "2026-11-22T23:38:16.118453+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison介绍Muru，一个由mod_wsgi作者借助AI写出来的新项目，想用更理想的方式部署Python网页应用。偏小工具介绍，需要一些后端背景。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "按正文判断，偏观点或推广或需背景"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "清单外或关联较弱"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] Riemann Hypothesis proved...twice independently",
       "link": "https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/",
@@ -26,7 +110,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -49,7 +133,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -192,8 +276,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://latent.space/og/card/post/ainews-gemini-4-neon-gdm-s-opus-sol-contender/0da9bd9da4547622b312ec1f44ab6ab42cc9e07bed6eb1d47b2fff64e4150bda.png"
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -216,7 +299,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Eugene Yan",
@@ -244,8 +327,7 @@
         "eval": "high"
       },
       "is_company": false,
-      "is_new": true,
-      "image": "https://eugeneyan.com/assets/og_image/public-evals.jpg"
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -291,8 +373,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png"
+      "is_new": false
     },
     {
       "person": "Google",
@@ -453,8 +534,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://static.simonwillison.net/static/2026/sandbox-proxy.png"
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -528,8 +608,7 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": false,
-      "image": "https://claude.dev/blog/chaos-loop-claude-docs-launch/og.png"
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -672,8 +751,7 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": false,
-      "image": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/og.png"
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -770,29 +848,6 @@
         "eval": "low"
       },
       "is_company": true,
-      "is_new": false
-    },
-    {
-      "person": "Craig Mod",
-      "title": "[RIDGELINE] Walking a Bit of the Izu Peninsula",
-      "link": "https://craigmod.com/ridgeline/238/",
-      "date": "2026-11-15",
-      "first_seen": "2026-11-15T22:46:59.094665+00:00",
-      "source_type": "blog",
-      "summary": "Craig Mod 的 Ridgeline 通讯（伊豆半岛徒步），开头先推荐朋友 Nick Dwyer 的 Kickstarter 项目《A Century in Sound》：用东京的音乐咖啡馆讲述百年历史的纪录片，另有配套摄影书，众筹还剩六天。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "开头只是推荐朋友的纪录片众筹，无可对应的母题。"
-        }
-      ],
-      "tiers": {
-        "ai": "low",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
       "is_new": false
     }
   ]

@@ -210,6 +210,23 @@
       "is_new": false
     },
     {
+      "person": "Hugo Bowne-Anderson",
+      "title": "How to Build an Effective Agent Harness",
+      "link": "https://hugobowne.substack.com/p/how-to-build-an-effective-agent-harness",
+      "date": "2026-07-28",
+      "first_seen": "2026-11-22T23:38:17.751065+00:00",
+      "source_type": "blog",
+      "summary": "作者把给agent搭外壳（harness）拆成几个要自己回答的问题：下一步由谁决定、上下文会堆多少、能做哪些动作、出错了怎么办。核心观点是编程agent里那套压缩、计划模式、子agent不该照搬给所有agent。想自己搭agent的人读完能少走弯路。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "按正文判断，实操指南类"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "[AINews] Much ado about Open Weights",
       "link": "https://www.latent.space/p/ainews-much-ado-about-open-weights",
@@ -275,7 +292,7 @@
           "reason": "新一代模型怎么写上下文的一手实操指南，直接影响日常用Claude Code"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Jason Fried",
