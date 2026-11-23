@@ -867,7 +867,7 @@
       "language": "Jupyter Notebook",
       "difficulty": "advanced",
       "recommend_reason": "Sebastian Raschka的经典项目，用PyTorch一步步从零实现类ChatGPT的LLM，配书和完整notebook。质量极高，但需要较深的深度学习背景，适合想真正理解模型内部机制时精读。",
-      "stars_total": 108467
+      "stars_total": 108853
     },
     {
       "full_name": "Leonxlnx/taste-skill",
@@ -894,16 +894,16 @@
       "language": "TypeScript",
       "difficulty": "beginner",
       "recommend_reason": "提供把模型、技能、资源库、记忆和团队聊天接到一起的智能体工作空间，支持任务跟踪与定时执行。README列出外部编程智能体接入、可编辑记忆和GitHub检查失败后返回任务的工作链路，适合普通使用者实践持续的人机协作。可先使用托管入口，自托管则涉及数据库、缓存和文件存储等额外组件。",
-      "stars_total": 85583
+      "stars_total": 86009
     },
     {
-      "full_name": "remotion-dev/remotion",
-      "url": "https://github.com/remotion-dev/remotion",
-      "description": "🎥 Make videos programmatically with React",
-      "language": "TypeScript",
+      "full_name": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "language": "Python",
       "difficulty": "intermediate",
-      "recommend_reason": "把视频表示为可编程的网页组件，并明确提供代理制作视频与 Agent Skills 的学习入口。README 同时给出交互编辑、批量渲染和应用嵌入路径，适合学习把 AI 视频创作接到可重复修改的代码工作流；需要一定前端基础，部分公司使用还需商业许可。",
-      "stars_total": 69770
+      "recommend_reason": "让agent跨Reddit、X、YouTube、HN、Polymarket检索某话题并按互动/真金白银信号综合排序的skill，代码、测试、CI齐全，多宿主打包。是'给agent补充最新社区上下文'的代表性实现。",
+      "stars_total": 72838
     }
   ]
 }

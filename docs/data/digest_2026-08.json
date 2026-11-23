@@ -1309,7 +1309,7 @@
       "language": "Python",
       "difficulty": "beginner",
       "recommend_reason": "Anthropic官方维护的Agent Skills参考库，用Markdown+YAML就能定义Claude可动态加载的技能，门槛很低。包含48+个覆盖创意、文档处理、企业工作流的示例，部分（如docx/pdf处理）附带可读源码。是理解Claude技能扩展机制、学习如何给AI助手写可复用指令模块的权威一手资料，不是玩具项目。",
-      "stars_total": 195408
+      "stars_total": 199068
     },
     {
       "full_name": "firecrawl/firecrawl",

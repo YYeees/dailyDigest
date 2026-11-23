@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "full_name": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "language": "Python",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "让agent跨Reddit、X、YouTube、HN、Polymarket检索某话题并按互动/真金白银信号综合排序的skill，代码、测试、CI齐全，多宿主打包。是'给agent补充最新社区上下文'的代表性实现。",
+      "first_seen_date": "2026-11-16",
+      "stars_total": 72838,
+      "stars_period": 4731,
+      "last_snapshot_date": "2026-11-23"
+    },
+    {
       "full_name": "anthropics/skills",
       "url": "https://github.com/anthropics/skills",
       "description": "Public repository for Agent Skills",
@@ -9,22 +22,9 @@
       "worth_tier": "high",
       "recommend_reason": "Anthropic官方维护的Agent Skills参考库，用Markdown+YAML就能定义Claude可动态加载的技能，门槛很低。包含48+个覆盖创意、文档处理、企业工作流的示例，部分（如docx/pdf处理）附带可读源码。是理解Claude技能扩展机制、学习如何给AI助手写可复用指令模块的权威一手资料，不是玩具项目。",
       "first_seen_date": "2026-08-15",
-      "stars_total": 195408,
-      "stars_period": 6077,
-      "last_snapshot_date": "2026-11-16"
-    },
-    {
-      "full_name": "GoogleChrome/modern-web-guidance-src",
-      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
-      "description": "Keep your coding agent up to date with the latest web best practices",
-      "language": "TypeScript",
-      "difficulty": "intermediate",
-      "worth_tier": "high",
-      "recommend_reason": "Chrome团队维护的agent skills源码：TypeScript CLI加约250个Web特性、200个用例的指南库，并有eval工具校准内容，帮助编码agent避免过时写法。是'用evals打磨agent知识内容'的优秀实践。",
-      "first_seen_date": "2026-11-16",
-      "stars_total": 7269,
-      "stars_period": 5692,
-      "last_snapshot_date": "2026-11-16"
+      "stars_total": 199068,
+      "stars_period": 3864,
+      "last_snapshot_date": "2026-11-23"
     },
     {
       "full_name": "milind-soni/OpenMausBot",
@@ -35,48 +35,48 @@
       "worth_tier": "high",
       "recommend_reason": "把本机 Claude、Codex 和 Grok 组织成聊天联系人式的代理团队，提供操作批准、共享频道和可导入团队配置。README 给出桌面安装、已有登录复用及可选云电脑的清楚路径，适合尝试多代理协作；不同系统的电脑控制能力仍有差异，云电脑和应用连接也依赖第三方服务。",
       "first_seen_date": "2026-11-02",
-      "stars_total": 23478,
-      "stars_period": 5463,
-      "last_snapshot_date": "2026-11-16"
+      "stars_total": 26890,
+      "stars_period": 3728,
+      "last_snapshot_date": "2026-11-23"
     },
     {
-      "full_name": "vercel-labs/agent-browser",
-      "url": "https://github.com/vercel-labs/agent-browser",
-      "description": "Browser automation CLI for AI agents",
-      "language": "Rust",
-      "difficulty": "beginner",
-      "worth_tier": "high",
-      "recommend_reason": "让智能体用命令行打开网页，将页面读成带元素编号的简洁文本，再执行点击和填写。README用几条命令演示了操作后重新读取页面、检查结果的闭环，也明确说明页面变化后需要更新元素编号。适合从小任务入手理解浏览器智能体如何观察、行动和验证，并可通过MCP接入现有客户端。",
-      "first_seen_date": "2026-11-09",
-      "stars_total": 51663,
-      "stars_period": 4217,
-      "last_snapshot_date": "2026-11-16"
-    },
-    {
-      "full_name": "addyosmani/agent-skills",
-      "url": "https://github.com/addyosmani/agent-skills",
-      "description": "Production-grade engineering skills for AI coding agents.",
-      "language": "JavaScript",
+      "full_name": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
       "difficulty": "intermediate",
       "worth_tier": "high",
-      "recommend_reason": "把资深工程实践拆解成覆盖spec到ship全生命周期的24个skill和8个斜杠命令，专门给Claude Code、Cursor等编码agent用来约束其按生产级流程工作而非原型级抄近路。有清晰的CLI安装方式(npx skills)和多工具原生集成，是学习如何用Skill机制规范agent工作流的代表性范例。",
-      "first_seen_date": "2026-08-15",
-      "stars_total": 117970,
-      "stars_period": 3889,
-      "last_snapshot_date": "2026-11-16"
+      "recommend_reason": "阿里内部实战打磨出的AI代码审查CLI，用「确定性工程层+Agent层」的混合架构：文件筛选、规则匹配走可控的模板引擎,动态决策交给LLM agent，兼顾稳定性和深度。README给出了50个仓库、200个PR、80+资深工程师参与的benchmark，对比通用agent精度更高、token消耗只有约1/9，不是自吹自擂的demo。适合想学习「如何用deterministic pipeline约束LLM agent」这类工程化AI工具设计思路的人。",
+      "first_seen_date": "2026-09-21",
+      "stars_total": 55448,
+      "stars_period": 3700,
+      "last_snapshot_date": "2026-11-23"
     },
     {
-      "full_name": "ranxianglei/billion-context",
-      "url": "https://github.com/ranxianglei/billion-context",
-      "description": "A context-compression plugin for small context windows (a 100K context is enough), token savings (5x fewer tokens), and month-long single sessions (billions of tokens).上下文压缩插件，兼顾小窗口(100k上下文足矣)省token(省5倍token)和超长会话(数月级别几十亿token单会话)。billion-context is all you need",
+      "full_name": "ag-ui-protocol/ag-ui",
+      "url": "https://github.com/ag-ui-protocol/ag-ui",
+      "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
       "language": "TypeScript",
-      "difficulty": "beginner",
+      "difficulty": "intermediate",
       "worth_tier": "high",
-      "recommend_reason": "插在agent和模型API之间的上下文压缩代理,让模型自己决定何时、压缩什么内容成高保真摘要(不是硬截断),还提供compress/decompress/search_context等工具调用,压缩过程可逆且保持prefix-cache兼容。号称实跑过4.5个月、174327次模型调用、187亿累计token,单命令安装,是\"小上下文开长会话\"这个真实痛点的生产级方案。",
-      "first_seen_date": "2026-10-12",
-      "stars_total": 7560,
-      "stars_period": 2575,
-      "last_snapshot_date": "2026-11-16"
+      "recommend_reason": "AG-UI是连接AI Agent与前端应用的开放事件流协议，1.0规范已冻结，有TS/Python/.NET SDK、Dojo演示和脚手架CLI。解决的是不同Agent框架对接前端时重复造轮子的问题，是理解Agent应用前后端交互的代表性样本。需要一定前端/Agent开发背景，但文档和quick-start清晰。",
+      "first_seen_date": "2026-11-23",
+      "stars_total": 21226,
+      "stars_period": 3620,
+      "last_snapshot_date": "2026-11-23"
+    },
+    {
+      "full_name": "GoogleChrome/modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "description": "Keep your coding agent up to date with the latest web best practices",
+      "language": "TypeScript",
+      "difficulty": "intermediate",
+      "worth_tier": "high",
+      "recommend_reason": "Chrome团队维护的agent skills源码：TypeScript CLI加约250个Web特性、200个用例的指南库，并有eval工具校准内容，帮助编码agent避免过时写法。是'用evals打磨agent知识内容'的优秀实践。",
+      "first_seen_date": "2026-11-16",
+      "stars_total": 10256,
+      "stars_period": 3575,
+      "last_snapshot_date": "2026-11-23"
     }
   ]
 }
