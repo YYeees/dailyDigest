@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T23:39:25+00:00",
+ "updated_at": "2026-11-24T04:00:04+00:00",
  "window_days": 7,
  "companies": [
   {
@@ -12,6 +12,19 @@
   }
  ],
  "items": [
+  {
+   "company": "Anthropic",
+   "key": "anthropic",
+   "title": "Working with AI",
+   "link": "https://www.anthropic.com/research/working-with-ai",
+   "date": "2026-11-23",
+   "summary": "Anthropic访谈了58家用Claude的公司，看AI到底怎么改变工作。结论是真正因AI裁员的很少，但招人变少了，而且最有价值的用法往往是重新组织工作方式，而不是单纯省钱。想知道企业里AI落地卡在哪，这篇可以看看。",
+   "image": "https://assets.claude.com/cd30ce2e82eb423476801098073b39e025839018.jpg",
+   "priority": "medium",
+   "tags": [
+    "AI"
+   ]
+  },
   {
    "company": "OpenAI",
    "key": "openai",
@@ -126,99 +139,6 @@
    "date": "2026-11-17",
    "summary": "OpenAI给ChatGPT上了一个销售插件，外加30多个合作伙伴插件，用来查客户资料、准备方案、更新CRM。官网页面这次没抓到全文，只看到简介。更偏企业销售场景，普通使用者可以扫一眼看看ChatGPT插件生态在往哪走。",
    "image": null,
-   "priority": "medium",
-   "tags": [
-    "AI"
-   ]
-  },
-  {
-   "company": "Anthropic",
-   "key": "anthropic",
-   "title": "Claude Fable 5.2 solves two open problems in the physics of black holes",
-   "link": "https://www.anthropic.com/research/claude-black-hole-physics",
-   "date": "2026-11-17",
-   "summary": "Claude Fable 5.2解决了黑洞物理里两个悬了很久的问题，一个是二十多年前有人开了头却没人算完的计算。Anthropic先用大白话讲发现，再给技术细节，还交代了Claude是怎么一步步做研究的。想看AI现在能在真正的科研里做到什么程度，可以点开看看。",
-   "image": "https://assets.claude.com/57a443b51d13727573b7c1290130d09c5f434b2c.jpg",
-   "priority": "medium",
-   "tags": [
-    "AI"
-   ]
-  },
-  {
-   "company": "OpenAI",
-   "key": "openai",
-   "title": "Science at the Frontier: How scientists use ChatGPT",
-   "link": "https://openai.com/index/science-at-the-frontier",
-   "date": "2026-11-16",
-   "summary": "OpenAI调查了一千八百多位科学家怎么在研究里用ChatGPT，看日常工作流和他们自报的效率变化。全文没能抓到，仅据摘要判断。想看专业人群怎么用AI的可以点开。",
-   "image": null,
-   "priority": "medium",
-   "tags": [
-    "AI"
-   ]
-  },
-  {
-   "company": "Anthropic",
-   "key": "anthropic",
-   "title": "How the Claude Code team thinks about verification",
-   "link": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
-   "date": "2026-11-16",
-   "summary": "Claude Code团队讲了他们怎么让编码agent用证据证明自己做对了。推荐投入的是三类测试，端到端、属性测试和差分测试，并且要防止agent去改自己的检查，不稳定的测试要找根因而不是重跑。新的质检关卡还建议先只记录不拦截，观察误报后再强制执行。做测试的人这篇值得细读。",
-   "image": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/og.png",
-   "priority": "high",
-   "tags": [
-    "AI",
-    "Eval"
-   ]
-  },
-  {
-   "company": "OpenAI",
-   "key": "openai",
-   "title": "Our first phase of embedded assessments",
-   "link": "https://openai.com/index/our-first-phase-of-embedded-assessments",
-   "date": "2026-11-16",
-   "summary": "OpenAI开始让Apollo Research、METR、Transluce和Goodfire这些外部机构嵌进来，独立评估模型的对齐、安全防护和监控系统。全文没能抓到，仅据摘要判断。关心第三方怎么评测AI的人可以留意。",
-   "image": null,
-   "priority": "medium",
-   "tags": [
-    "AI",
-    "Eval"
-   ]
-  },
-  {
-   "company": "OpenAI",
-   "key": "openai",
-   "title": "Advancing computer-use agents for healthcare teams",
-   "link": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-   "date": "2026-11-16",
-   "summary": "OpenAI介绍了面向医疗团队的computer-use agent，也就是让AI像人一样操作医疗软件界面完成工作。仅基于标题判断，全文没能抓到。想看agent在受监管行业怎么落地可以点开看。",
-   "image": null,
-   "priority": "medium",
-   "tags": [
-    "AI"
-   ]
-  },
-  {
-   "company": "OpenAI",
-   "key": "openai",
-   "title": "More ways to move care forward with ChatGPT for Healthcare",
-   "link": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
-   "date": "2026-11-16",
-   "summary": "OpenAI给ChatGPT医疗版加了computer-use agent、更准的临床回答和跨医疗软件的插件。和同日另一篇healthcare computer-use是同一件事，挑一篇看就行。",
-   "image": null,
-   "priority": "medium",
-   "tags": [
-    "AI"
-   ]
-  },
-  {
-   "company": "Anthropic",
-   "key": "anthropic",
-   "title": "Updating our coordinated vulnerability disclosure policy timelines",
-   "link": "https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines",
-   "date": "2026-11-16",
-   "summary": "Anthropic把自己的漏洞披露窗口从90天缩短到30天，其他问题缩到45天，2027年起生效。理由是模型找漏洞越来越强，同一个漏洞被别的模型重复发现的概率也在变高，修复和公开都得更快。想知道AI时代安全披露规矩怎么变的人可以点开看看。",
-   "image": "https://assets.claude.com/87317c13cd86cd0b62244c430e91d0bb13b920a1.jpg",
    "priority": "medium",
    "tags": [
     "AI"

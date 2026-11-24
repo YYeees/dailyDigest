@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T23:39:19+00:00",
+ "updated_at": "2026-11-24T04:00:00+00:00",
  "albums": [
   {
    "person": "Thorsten Ball",
@@ -45,6 +45,13 @@
    "home": "https://craigmod.com",
    "bio": "住在日本的作家、摄影师。常年徒步穿越日本的乡间小路，把一路遇到的人和店写进 Ridgeline 和 Roden 两份 newsletter，出过《Kissa by Kissa》《Things Become Other Things》。慢、长、专注，是他对抗速度的方式。",
    "tracks": [
+    {
+     "title": "[RODEN] A Jazz Walk Incoming",
+     "link": "https://craigmod.com/roden/120/",
+     "date": "2026-11-22",
+     "kind": "blog",
+     "note": "Craig Mod这期Roden通讯聊了他最近一个月的日常，昼夜颠倒地深夜工作，中午起来干活，配上简单的饮食和每天走路。字里行间有自己雇自己的自在，也顺带吐槽了一句世界正在疯狂加速。预告了接下来的爵士徒步，喜欢他这种慢节奏写法的可以随手读读。"
+    },
     {
      "title": "[RIDGELINE] SHŌWA COLOSSUS — A Jazz Kissa Pop-up",
      "link": "https://craigmod.com/ridgeline/239/",
@@ -107,18 +114,11 @@
      "date": "2026-09-08",
      "kind": "blog",
      "note": "Craig Mod记录了在伦敦东北角十天的漫步生活：早上读写到眼花，下午反复走同一片街区，享受方向感尽失带来的迷离乐趣；文末因一颗尼古丁袋剧烈不适，意外冲淡了他此前对伦敦建筑审美的评判，成了一则关于“批判总在代价之前”的自嘲反思。"
-    },
-    {
-     "title": "[RIDGELINE] Walking The Length of Manhattan",
-     "link": "https://craigmod.com/ridgeline/232/",
-     "date": "2026-08-21",
-     "kind": "blog",
-     "note": "作者与摄影师从曼哈顿最北端徒步走到最南端，历时六小时、24公里，途中特意放弃把旅行做成创作项目的念头，只是单纯地享受城市与街区的细节。文中顺带提到用Claude做血液数据的侦探式分析，但与主线关系不大。"
     }
    ],
-   "latest": "2026-11-19",
-   "latest_title": "[RIDGELINE] SHŌWA COLOSSUS — A Jazz Kissa Pop-up",
-   "latest_link": "https://craigmod.com/ridgeline/239/"
+   "latest": "2026-11-22",
+   "latest_title": "[RODEN] A Jazz Walk Incoming",
+   "latest_link": "https://craigmod.com/roden/120/"
   },
   {
    "person": "Dan Koe",
