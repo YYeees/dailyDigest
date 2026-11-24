@@ -1,6 +1,205 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer",
+      "link": "https://simonwillison.net/2026/Nov/23/glm-54/",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-24T03:57:57.550792+00:00",
+      "source_type": "blog",
+      "summary": "智谱Z.ai发布GLM-5.4，是他们第一个用循环Transformer的模型，也就是让同一组层反复运行几轮，不增加参数也能变深。Simon Willison拿它试了画图，只能通过订阅的编程套餐调用，目前还没开放权重。想跟进新模型架构的趋势可以看，不用太深究。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "新模型发布并附实测，涉及循环Transformer架构，有一定技术门槛"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干无实质连接"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "Ladybird's first alpha release",
+      "link": "https://simonwillison.net/2026/Nov/23/ladybird/",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-24T03:57:57.551096+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "浏览器项目发布，跟AI关系很弱"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "跟三根主干无实质连接"
+        }
+      ],
+      "tiers": {
+        "ai": "low",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Arvind Narayanan & Sayash Kapoor",
+      "title": "Management consulting is not a thin wrapper on intelligence",
+      "link": "https://www.normaltech.ai/p/management-consulting-is-not-a-thin",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-24T03:57:59.852021+00:00",
+      "source_type": "blog",
+      "summary": "这篇文章反驳了咨询业要被AI取代的说法，认为咨询不只是处理信息。客户买的还有判断、协调、信誉和担责，这些恰恰是AI最难替代的。想看一个不人云亦云的AI就业分析，值得读。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "以咨询业为例讨论AI对知识工作的影响，宏观分析"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "偏认识论的批判思考，主题沾边但是周边内容"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "medium",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Andrew Huberman",
+      "title": "Happiness Isn't the World's Job | Eckhart Tolle",
+      "link": "https://www.youtube.com/shorts/t09qO4lQ6y8",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-24T03:57:55.279399+00:00",
+      "source_type": "youtube",
+      "summary": "这是Huberman和Eckhart Tolle对谈的另一部分，核心是幸福不该指望世界来给。Tolle继续用现场练习带着听众体会当下的感受。和上一集是同一场谈话，择一先看即可。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "同一期Tolle访谈的后半，谈幸福与外部世界的关系，二手内容"
+        }
+      ],
+      "tiers": {
+        "ai": "low",
+        "anchor": "medium",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Greg Isenberg",
+      "title": "Robots are the new apps (and you’re early)",
+      "link": "https://www.youtube.com/watch?v=TXzJ4pGW59o",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-24T03:57:55.373980+00:00",
+      "source_type": "youtube",
+      "summary": "Greg Isenberg和一家机器人公司的联合创始人聊物理AI怎么入场。重点是部署中积累的数据最值钱，以及不靠几亿美元融资也能切入的方向，比如数据、保险、遥操作和小众机器人。想了解机器人这个新赛道有哪些小机会，可以听听。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "机器人与物理AI创业访谈，偏商业趋势"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Google",
+      "title": "Finding faster quantum algorithms with agents and formal verification",
+      "link": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-24T03:58:06.894061+00:00",
+      "source_type": "blog",
+      "summary": "DeepMind和Google Quantum AI让多组AI agent各自琢磨怎么改进已有的量子算法，每个想法都要先用定理证明器验证，也就是用数学证明它没错，才能进入共享笔记。结果是聚变能相关计算的成本降到原来的十二分之一左右。想看agent加严格验证能做到什么程度，这篇是个好例子。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "DeepMind研究成果，用agent团队加形式化验证优化量子算法，偏研究门槛较高"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Andrew Huberman",
+      "title": "Access the Power of Now to Experience Life More Fully | Eckhart Tolle",
+      "link": "https://www.youtube.com/watch?v=brzkTni-nTQ",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-24T03:57:55.279796+00:00",
+      "source_type": "youtube",
+      "summary": "Huberman请Eckhart Tolle聊如何活在当下，Tolle在节目里现场示范怎么进入这种状态。话题偏向觉察和内心平静，不涉及科学实验。想听听这类自我观察的路子可以点开。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "灵修老师谈活在当下，属于自我认识主题但是二手访谈"
+        }
+      ],
+      "tiers": {
+        "ai": "low",
+        "anchor": "medium",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "Working with AI",
+      "link": "https://www.anthropic.com/research/working-with-ai",
+      "date": "2026-11-23",
+      "first_seen": "2026-11-24T03:58:06.448845+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic访谈了58家用Claude的公司，看AI到底怎么改变工作。结论是真正因AI裁员的很少，但招人变少了，而且最有价值的用法往往是重新组织工作方式，而不是单纯省钱。想知道企业里AI落地卡在哪，这篇可以看看。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Anthropic访谈企业客户的研究报告，宏观叙事偏多，对日常用法的直接帮助有限"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": true,
+      "is_new": true
+    },
+    {
       "person": "Greg Isenberg",
       "title": "How to design an agent harness",
       "link": "https://www.youtube.com/shorts/LrJ4RYRQSpk",
@@ -26,7 +225,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -54,31 +253,26 @@
         "eval": "medium"
       },
       "is_company": true,
-      "is_new": true
+      "is_new": false
     },
     {
-      "person": "Simon Willison",
-      "title": "Muru",
-      "link": "https://simonwillison.net/2026/Nov/21/muru/",
-      "date": "2026-11-21",
-      "first_seen": "2026-11-22T23:38:16.118453+00:00",
+      "person": "Craig Mod",
+      "title": "[RODEN] A Jazz Walk Incoming",
+      "link": "https://craigmod.com/roden/120/",
+      "date": "2026-11-22",
+      "first_seen": "2026-11-24T03:57:56.070506+00:00",
       "source_type": "blog",
-      "summary": "Simon Willison介绍Muru，一个由mod_wsgi作者借助AI写出来的新项目，想用更理想的方式部署Python网页应用。偏小工具介绍，需要一些后端背景。",
+      "summary": "Craig Mod这期Roden通讯聊了他最近一个月的日常，昼夜颠倒地深夜工作，中午起来干活，配上简单的饮食和每天走路。字里行间有自己雇自己的自在，也顺带吐槽了一句世界正在疯狂加速。预告了接下来的爵士徒步，喜欢他这种慢节奏写法的可以随手读读。",
       "tracks": [
         {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "按正文判断，偏观点或推广或需背景"
-        },
-        {
           "track": "anchor",
-          "tier": "medium",
-          "reason": "清单外或关联较弱"
+          "tier": "high",
+          "reason": "作者本人一手的生活与工作节奏记录，贴近质朴慢的构建者活法，但不直接讨论母题"
         }
       ],
       "tiers": {
-        "ai": "medium",
-        "anchor": "low",
+        "ai": "low",
+        "anchor": "medium",
         "eval": "low"
       },
       "is_company": false,
@@ -276,8 +470,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://latent.space/og/card/post/ainews-gemini-4-neon-gdm-s-opus-sol-contender/0da9bd9da4547622b312ec1f44ab6ab42cc9e07bed6eb1d47b2fff64e4150bda.png"
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -328,8 +521,7 @@
         "eval": "high"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://eugeneyan.com/assets/og_image/public-evals.jpg"
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -375,8 +567,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png"
+      "is_new": false
     },
     {
       "person": "Google",
@@ -537,8 +728,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://static.simonwillison.net/static/2026/sandbox-proxy.png"
+      "is_new": false
     },
     {
       "person": "OpenAI",
@@ -612,8 +802,7 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": false,
-      "image": "https://claude.dev/blog/chaos-loop-claude-docs-launch/og.png"
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -651,201 +840,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "ChatGPT销售场景插件发布，偏产品通稿，页面403未读全文"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": true,
-      "is_new": false
-    },
-    {
-      "person": "Anthropic",
-      "title": "Claude Fable 5.2 solves two open problems in the physics of black holes",
-      "link": "https://www.anthropic.com/research/claude-black-hole-physics",
-      "date": "2026-11-17",
-      "first_seen": "2026-11-19T00:21:28.380764+00:00",
-      "source_type": "blog",
-      "summary": "Claude Fable 5.2解决了黑洞物理里两个悬了很久的问题，一个是二十多年前有人开了头却没人算完的计算。Anthropic先用大白话讲发现，再给技术细节，还交代了Claude是怎么一步步做研究的。想看AI现在能在真正的科研里做到什么程度，可以点开看看。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "官方研究成果展示，偏物理前沿，门槛高"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": true,
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Building Visual Intelligence — Andreas Blattmann & Dustin Podell, Black Forest Labs",
-      "link": "https://latent.space/p/bfl/",
-      "date": "2026-11-16",
-      "first_seen": "2026-11-17T01:52:01.792748+00:00",
-      "source_type": "blog",
-      "summary": "Latent Space访谈了Black Forest Labs的两位负责人，聊他们为什么要从做图像模型转向视频和世界模型。核心观点是只看静态图学不到物体怎么运动，要把画面、动作和声音放在一起训练FLUX 3。想了解图像视频生成这条路线怎么想的人值得听。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "Black Forest Labs讲从像素运动声音学视觉智能，偏图像视频模型技术，需要一定背景"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "Science at the Frontier: How scientists use ChatGPT",
-      "link": "https://openai.com/index/science-at-the-frontier",
-      "date": "2026-11-16",
-      "first_seen": "2026-11-17T01:52:04.081827+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI调查了一千八百多位科学家怎么在研究里用ChatGPT，看日常工作流和他们自报的效率变化。全文没能抓到，仅据摘要判断。想看专业人群怎么用AI的可以点开。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "研究者怎么用ChatGPT的使用情况调查，偏宏观，仅凭摘要判断"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": true,
-      "is_new": false
-    },
-    {
-      "person": "Anthropic",
-      "title": "How the Claude Code team thinks about verification",
-      "link": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
-      "date": "2026-11-16",
-      "first_seen": "2026-11-20T00:37:21.432886+00:00",
-      "source_type": "blog",
-      "summary": "Claude Code团队讲了他们怎么让编码agent用证据证明自己做对了。推荐投入的是三类测试，端到端、属性测试和差分测试，并且要防止agent去改自己的检查，不稳定的测试要找根因而不是重跑。新的质检关卡还建议先只记录不拦截，观察误报后再强制执行。做测试的人这篇值得细读。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "讲怎么让coding agent用证据证明工作正确，实操性强"
-        },
-        {
-          "track": "eval",
-          "tier": "high",
-          "reason": "讲端到端、属性、差分测试的具体用法，以及怎么让检查器不被糊弄，能直接改变怎么测"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "low",
-        "eval": "high"
-      },
-      "is_company": true,
-      "is_new": false,
-      "image": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/og.png"
-    },
-    {
-      "person": "OpenAI",
-      "title": "Our first phase of embedded assessments",
-      "link": "https://openai.com/index/our-first-phase-of-embedded-assessments",
-      "date": "2026-11-16",
-      "first_seen": "2026-11-17T01:52:04.081849+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI开始让Apollo Research、METR、Transluce和Goodfire这些外部机构嵌进来，独立评估模型的对齐、安全防护和监控系统。全文没能抓到，仅据摘要判断。关心第三方怎么评测AI的人可以留意。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "OpenAI联合外部机构做对齐与安全评测，偏研究治理，全文403抓取失败"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "第三方独立评测模型对齐和监控系统，沾评测方法但偏治理，不是教怎么测"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "medium"
-      },
-      "is_company": true,
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "Advancing computer-use agents for healthcare teams",
-      "link": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-      "date": "2026-11-16",
-      "first_seen": "2026-11-17T01:52:04.081868+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI介绍了面向医疗团队的computer-use agent，也就是让AI像人一样操作医疗软件界面完成工作。仅基于标题判断，全文没能抓到。想看agent在受监管行业怎么落地可以点开看。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "OpenAI官方的computer-use agent落地发布，仅凭标题和摘要判断，全文403抓取失败"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": true,
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "More ways to move care forward with ChatGPT for Healthcare",
-      "link": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
-      "date": "2026-11-16",
-      "first_seen": "2026-11-17T01:52:04.081884+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI给ChatGPT医疗版加了computer-use agent、更准的临床回答和跨医疗软件的插件。和同日另一篇healthcare computer-use是同一件事，挑一篇看就行。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "ChatGPT for Healthcare的功能更新，与上一条重复，择一看即可"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": true,
-      "is_new": false
-    },
-    {
-      "person": "Anthropic",
-      "title": "Updating our coordinated vulnerability disclosure policy timelines",
-      "link": "https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines",
-      "date": "2026-11-16",
-      "first_seen": "2026-11-17T01:52:09.754892+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic把自己的漏洞披露窗口从90天缩短到30天，其他问题缩到45天，2027年起生效。理由是模型找漏洞越来越强，同一个漏洞被别的模型重复发现的概率也在变高，修复和公开都得更快。想知道AI时代安全披露规矩怎么变的人可以点开看看。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "前沿模型找漏洞能力带来的披露政策变化，偏安全政策，实操性一般"
         }
       ],
       "tiers": {

@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "person": "Craig Mod",
+      "title": "[RODEN] A Jazz Walk Incoming",
+      "link": "https://craigmod.com/roden/120/",
+      "date": "2026-11-22",
+      "first_seen": "2026-11-24T03:57:56.070506+00:00",
+      "source_type": "blog",
+      "summary": "Craig Mod这期Roden通讯聊了他最近一个月的日常，昼夜颠倒地深夜工作，中午起来干活，配上简单的饮食和每天走路。字里行间有自己雇自己的自在，也顺带吐槽了一句世界正在疯狂加速。预告了接下来的爵士徒步，喜欢他这种慢节奏写法的可以随手读读。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "作者本人一手的生活与工作节奏记录，贴近质朴慢的构建者活法，但不直接讨论母题"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Teo Crawford",
       "title": "Shooting with an old MFT camera.",
       "link": "https://www.youtube.com/watch?v=YCBC9oZiWV8",
@@ -49,7 +66,7 @@
           "reason": "质朴慢的构建者活法，限时快闪式的小项目，偏预告性质，属周边内容。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Eugene Yan",
@@ -66,7 +83,7 @@
           "reason": "拆解12个公开评测的打分器缺陷，给出可复现的审计方法，如查通过样本的假阳性、报告多次运行的稳定性，直接可用于建评测。"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Google",
