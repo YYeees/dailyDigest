@@ -44,6 +44,9 @@ jobs:
       # 后面Claude那步或记账那步会push。抓失败不该拖垮当天的digest。
       - name: Fetch weekly letters
         continue-on-error: true
+        env:
+          # Benedict Evans周报的邮件转Atom地址，地址里的ID就是收件邮箱，所以不进仓库
+          BENEDICT_LETTERS_FEED: ${{ secrets.BENEDICT_LETTERS_FEED }}
         run: |
           python3 scripts/fetch_letters.py
           git add docs/data/letters

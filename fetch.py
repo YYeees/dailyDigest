@@ -9,6 +9,7 @@ import sys
 from datetime import datetime, timezone
 
 import feedparser
+import requests
 
 from config import DB_PATH, DIGEST_START_DATE
 from content_extract import extract_body
@@ -102,6 +103,21 @@ def wanted_categories(source, entry):
     return any(tag.get("term") in allowed for tag in entry.get("tags", []))
 
 
+def parse_feed(url):
+    """feedparser直连抓取；它内置的urllib抛异常时(而不是返回bozo)，改用requests取回再交给它解析。
+
+    2026-11-25 接Benedict Evans时踩到：他的Squarespace feed有430KB，feedparser走urllib
+    每次都在中途IncompleteRead，curl和requests却能完整拿到。而且feedparser.parse对这种网络
+    异常是直接抛出、不包进bozo——没有这层兜底，一个源断线就让整个fetch_all崩掉、所有源都没抓成。
+    """
+    try:
+        return feedparser.parse(url)
+    except Exception:
+        resp = requests.get(url, timeout=60, headers={"User-Agent": "dailyDigest-fetch/1.0"})
+        resp.raise_for_status()
+        return feedparser.parse(resp.content)
+
+
 def fetch_all():
     conn = sqlite3.connect(DB_PATH)
     init_db(conn)
@@ -120,7 +136,12 @@ def fetch_all():
                 failed.append(source["name"])
                 continue
         else:
-            parsed = feedparser.parse(source["url"])
+            try:
+                parsed = parse_feed(source["url"])
+            except Exception as e:
+                print(f"[FAIL] {source['name']} ({source['url']}) — {type(e).__name__}: {e}")
+                failed.append(source["name"])
+                continue
             if parsed.bozo and not parsed.entries:
                 print(f"[FAIL] {source['name']} ({source['url']}) — {parsed.bozo_exception}")
                 failed.append(source["name"])

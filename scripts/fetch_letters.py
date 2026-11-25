@@ -3,7 +3,8 @@
 
 (2026-11-14 卷轴页 docs/letter.html 撤掉了；现在只给「常读的人」页里 Thorsten Ball 那张卡片提供最新一期。)
 
-2026-11-14加，第一封是Thorsten Ball的Joy & Curiosity。跟digest主管线完全分开：
+2026-11-14加，第一封是Thorsten Ball的Joy & Curiosity；2026-11-25加第二封Benedict Evans的周报
+(走邮件转Atom，见LETTER_SOURCES里那条的注释)。跟digest主管线完全分开：
 - 不进digest.db、不排tier、不写中文摘要——用户要读原文，他已经替你挑过一遍了，再筛等于否定策展本身。
 - 不需要Claude，纯脚本，在digest workflow里Claude那步之前单独跑、单独commit。
 
@@ -19,6 +20,7 @@
 """
 
 import json
+import os
 import re
 import sys
 from datetime import datetime, timezone
@@ -42,9 +44,34 @@ LETTER_SOURCES = [
         # 同一个feed里还有他的普通文章，只要这个系列
         "title_re": r"^Joy & Curiosity #(\d+)",
     },
+    # 2026-11-25加Benedict Evans的周报(免费版，每周二到)。周报只走邮件、没有公开RSS，用户在
+    # kill-the-newsletter.com开了个收件邮箱订阅，那边把收到的邮件转成Atom feed。
+    # - feed地址放GitHub secret(BENEDICT_LETTERS_FEED)不写进代码：地址里的ID就是收件邮箱，
+    #   仓库是公开的，写进来等于谁都能往这个邮箱塞邮件冒充周报。没配这个变量就跳过，不算失败。
+    # - 只认正文里带他Mailchimp账号ID的邮件(content_re，退订链接里的u=...)、且能找到期号的
+    #   (number_re，正文头部"NO. 441")，订阅确认信这类靠这两道滤掉。没按发件人认：实测确认信的
+    #   发件人是Mandrill的退信地址(bounce-md_...@mandrillapp.com)，不是他的名字。
+    # - **不存正文**(store_html=False)：Mailchimp邮件是表格排版，清洗出来没法读；更要紧的是
+    #   全量站是公开的，把一份本来不公开发布的周报整期放进公开仓不合适。只存元信息和他推荐的
+    #   外链清单，link指向邮件里"在浏览器中查看"那个Mailchimp网页版(他自己发布的公开地址)。
+    {
+        "slug": "be",
+        "series": "Benedict's Newsletter",
+        "author": "Benedict Evans",
+        "feed_env": "BENEDICT_LETTERS_FEED",
+        "format": "atom",
+        "content_re": r"b98e2de85f03865f1d38de74f",
+        "number_re": r"\bNo\.?\s*(\d{3,4})\b",
+        "store_html": False,
+        "web_version_re": r"https?://(?:mailchi\.mp|[a-z0-9.-]*campaign-archive\.com)/[^\s\"'<>]+",
+        # 退订/偏好设置/付费会员/他自己网站导航，不算"他推荐的链接"
+        "drop_link_re": r"list-manage\.com|campaign-archive\.com|mailchi\.mp|memberful\.com|"
+                        r"kill-the-newsletter\.com|(?:www\.)?ben-evans\.com/(?:newsletter|privacy|contact|sponsorship)?/?$",
+    },
 ]
 
 CONTENT_NS = "{http://purl.org/rss/1.0/modules/content/}encoded"
+ATOM = "{http://www.w3.org/2005/Atom}"
 
 # ---- 正文清洗 ----
 ALLOWED = {"p", "a", "ul", "ol", "li", "em", "strong", "b", "i", "blockquote", "h2", "h3", "h4",
@@ -150,31 +177,86 @@ def clean_html(raw):
 
 
 # ---- feed解析 ----
+def _rss_items(root):
+    for item in root.iter("item"):
+        yield {
+            "title": (item.findtext("title") or "").strip(),
+            "published": parsedate_to_datetime(item.findtext("pubDate")),
+            "link": (item.findtext("link") or "").strip(),
+            "subtitle": (item.findtext("description") or "").strip(),
+            "content": item.findtext(CONTENT_NS) or "",
+            "sender": item.findtext("{http://purl.org/dc/elements/1.1/}creator") or "",
+        }
+
+
+def _atom_items(root):
+    for entry in root.iter(ATOM + "entry"):
+        when = entry.findtext(ATOM + "published") or entry.findtext(ATOM + "updated")
+        author = entry.find(ATOM + "author")
+        sender = " ".join((author.findtext(ATOM + t) or "") for t in ("name", "email")) if author is not None else ""
+        link = entry.find(ATOM + "link[@rel='alternate']")
+        if link is None:
+            link = entry.find(ATOM + "link")
+        yield {
+            "title": (entry.findtext(ATOM + "title") or "").strip(),
+            "published": datetime.fromisoformat(when.strip().replace("Z", "+00:00")),
+            "link": link.get("href", "") if link is not None else "",
+            "subtitle": "",
+            "content": entry.findtext(ATOM + "content") or "",
+            "sender": sender,
+        }
+
+
+def _issue_number(source, title, content):
+    if source.get("title_re"):
+        m = re.match(source["title_re"], title)
+        return int(m.group(1)) if m else None
+    m = re.search(source["number_re"], title, re.I)
+    if not m:
+        text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", content))
+        m = re.search(source["number_re"], text[:3000], re.I)   # 期号在邮件头部，别被正文里的"No. 1"之类误伤
+    return int(m.group(1)) if m else None
+
+
 def parse_feed(xml_text, source):
     root = ET.fromstring(xml_text)
+    items = _atom_items(root) if source.get("format") == "atom" else _rss_items(root)
     issues = []
-    for item in root.iter("item"):
-        title = (item.findtext("title") or "").strip()
-        m = re.match(source["title_re"], title)
-        if not m:
+    for it in items:
+        if source.get("content_re") and not re.search(source["content_re"], it["content"]):
             continue
-        number = int(m.group(1))
-        published = parsedate_to_datetime(item.findtext("pubDate")).astimezone(timezone.utc)
-        html, links = clean_html(item.findtext(CONTENT_NS) or "")
+        number = _issue_number(source, it["title"], it["content"])
+        if number is None:
+            continue
+        published = it["published"].astimezone(timezone.utc)
+        html, links = clean_html(it["content"])
+        link = it["link"]
+        if source.get("web_version_re"):
+            # 邮件转feed服务给的link指向它自己那份(地址里带收件邮箱ID)，换成发件方的网页版；没找到就留空
+            m = re.search(source["web_version_re"], it["content"])
+            link = m.group(0).replace("&amp;", "&") if m else ""
+        if source.get("drop_link_re"):
+            links = [x for x in links if not re.search(source["drop_link_re"], x["href"], re.I)]
+            for i, x in enumerate(links):
+                x["i"] = i
         issues.append({
             "id": f"{source['slug']}-{number}",
             "series": source["series"],
             "author": source["author"],
             "number": number,
-            "title": title,
-            "subtitle": (item.findtext("description") or "").strip(),
-            "link": (item.findtext("link") or "").strip(),
+            "title": it["title"],
+            "subtitle": it["subtitle"],
+            "link": link,
             "date": published.date().isoformat(),
             "published": published.isoformat(),
-            "html": html,
+            "html": html if source.get("store_html", True) else "",
             "links": links,
         })
-    return sorted(issues, key=lambda x: x["number"], reverse=True)
+    # 同一期可能收到两封(比如重发)，按期号去重留最早那封
+    uniq = {}
+    for x in sorted(issues, key=lambda x: x["published"]):
+        uniq.setdefault(x["number"], x)
+    return sorted(uniq.values(), key=lambda x: x["number"], reverse=True)
 
 
 def select_new(issues, stored_numbers):
@@ -200,8 +282,13 @@ def main():
     failed = []
     added = 0
     for source in LETTER_SOURCES:
+        feed = source.get("feed") or os.environ.get(source.get("feed_env", ""), "")
+        if not feed:
+            print(f"[SKIP] {source['series']} — 没配 {source.get('feed_env')}")
+            continue
+        added_before = added
         try:
-            resp = requests.get(source["feed"], timeout=30,
+            resp = requests.get(feed, timeout=30,
                                 headers={"User-Agent": "Mozilla/5.0 (dailyDigest letters)"})
             resp.raise_for_status()
             issues = parse_feed(resp.content, source)
@@ -219,7 +306,7 @@ def main():
             index["letters"].append(entry)
             added += 1
             print(f"[OK] {issue['title']} ({issue['date']}) — {len(issue['links'])}个链接")
-        if not added:
+        if added == added_before:
             print(f"[OK] {source['series']} — 没有新一期")
     index["letters"].sort(key=lambda x: x["date"], reverse=True)
     index["updated_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")

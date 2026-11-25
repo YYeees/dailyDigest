@@ -34,7 +34,7 @@ ALBUMS = [
     {
         "person": "Thorsten Ball", "pub": "Joy & Curiosity", "cover": "rays", "verb": "Read",
         "image": "https://thorstenball.com/images/avatar_2026_final_quadratic.jpg",
-        "home": "https://registerspill.thorstenball.com", "source": "letters",
+        "home": "https://registerspill.thorstenball.com", "source": "letters", "letters_slug": "jc",
         "bio": "软件工程师，在 Amp 做编程智能体，写过《Writing An Interpreter In Go》。"
                "每周日寄出一封 Joy & Curiosity，把一周里让他快乐、让他好奇的东西装进去。",
     },
@@ -84,6 +84,16 @@ ALBUMS = [
         "bio": "吴恩达。Coursera 联合创始人，DeepLearning.AI 和 AI Fund 的创办人，曾带领 Google Brain、"
                "做过百度首席科学家。每周在 The Batch 写一封「Dear friends」，讲 AI 工程、产品和职业。",
     },
+    {
+        # 2026-11-25加。曲目是每周二的免费版周报(fetch_letters.py，slug "be") + digest.db里他的Essays
+        "person": "Benedict Evans", "pub": "Benedict's Newsletter", "cover": "nodes", "verb": "Read",
+        "home": "https://www.ben-evans.com/newsletter", "source": "letters+db", "letters_slug": "be",
+        # 他网站About & Contact页的照片，原图竖幅，页面上object-fit裁成方形
+        "image": "https://images.squarespace-cdn.com/content/v1/50363cf324ac8e905e7df861/"
+                 "7697741e-0a89-4bb3-b69c-a9e62753e1f9/BEvans_BenedictEvans_170_Final%2Bsmall.jpg?format=1000w",
+        "bio": "独立科技分析师，做过 a16z 合伙人，之前多年在做移动和媒体行业的研究分析。每周给近二十万人写一封周报，"
+               "挑出一周里真正要紧的科技新闻，放进更长的历史和产业背景里讲。不追次日热点，看长期。",
+    },
 ]
 
 
@@ -98,20 +108,38 @@ def tracks_from_db(conn, person):
             for t, l, p, k, s in rows]
 
 
-def tracks_from_letters():
+def tracks_from_letters(slug):
+    """只取这个人那封来信(按id前缀)——index.json里不止一封，不筛的话会全挂到同一张卡片上。"""
     if not LETTERS_INDEX.exists():
         return []
     letters = json.loads(LETTERS_INDEX.read_text(encoding="utf-8")).get("letters", [])
     return [{"title": x["title"], "link": x["link"], "date": x["date"], "kind": "letter",
-             "note": f"{x.get('links_count', 0)} 处去向"} for x in letters[:TRACKS_PER_ALBUM]]
+             "note": f"{x.get('links_count', 0)} 处去向"}
+            for x in letters if x["id"].startswith(slug + "-")][:TRACKS_PER_ALBUM]
+
+
+def tracks_for(conn, a, home):
+    src = a.get("source")
+    if src == "letters":
+        tracks = tracks_from_letters(a["letters_slug"])
+    elif src == "letters+db":
+        # 周报和digest.db里的条目(Benedict的Essays)合在一起按日期排
+        tracks = tracks_from_letters(a["letters_slug"]) + tracks_from_db(conn, a["person"])
+        tracks.sort(key=lambda t: t["date"], reverse=True)
+        tracks = tracks[:TRACKS_PER_ALBUM]
+    else:
+        tracks = tracks_from_db(conn, a["person"])
+    for t in tracks:
+        t["link"] = t["link"] or home   # 周报没找到网页版时退回主页
+    return tracks
 
 
 def main():
     conn = sqlite3.connect(DB_PATH)
     albums = []
     for a in ALBUMS:
-        tracks = tracks_from_letters() if a.get("source") == "letters" else tracks_from_db(conn, a["person"])
-        entry = {k: v for k, v in a.items() if k != "source"}
+        tracks = tracks_for(conn, a, a["home"])
+        entry = {k: v for k, v in a.items() if k not in ("source", "letters_slug")}
         entry["tracks"] = tracks
         entry["latest"] = tracks[0]["date"] if tracks else None
         entry["latest_title"] = tracks[0]["title"] if tracks else None
