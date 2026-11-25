@@ -26,7 +26,8 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": true,
+      "image": "https://img.youtube.com/vi/9RKrSF9d2SE/maxresdefault.jpg"
     },
     {
       "person": "Greg Isenberg",
@@ -128,7 +129,8 @@
         "eval": "medium"
       },
       "is_company": true,
-      "is_new": true
+      "is_new": true,
+      "image": "https://claude.dev/blog/the-work-after-you-open-a-pr/og.png"
     },
     {
       "person": "Greg Isenberg",
@@ -646,7 +648,8 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://latent.space/og/card/post/ainews-gemini-4-neon-gdm-s-opus-sol-contender/0da9bd9da4547622b312ec1f44ab6ab42cc9e07bed6eb1d47b2fff64e4150bda.png"
     },
     {
       "person": "Craig Mod",
@@ -697,7 +700,8 @@
         "eval": "high"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://eugeneyan.com/assets/og_image/public-evals.jpg"
     },
     {
       "person": "Greg Isenberg",
@@ -743,7 +747,8 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png"
     },
     {
       "person": "Google",

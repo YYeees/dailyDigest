@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T04:00:04+00:00",
+ "updated_at": "2026-11-25T02:26:04+00:00",
  "window_days": 7,
  "companies": [
   {
@@ -12,6 +12,20 @@
   }
  ],
  "items": [
+  {
+   "company": "Anthropic",
+   "key": "anthropic",
+   "title": "A practical guide to shipping with Claude Code",
+   "link": "https://claude.dev/blog/the-work-after-you-open-a-pr/",
+   "date": "2026-11-24",
+   "summary": "这篇讲Claude Code新增的/ship命令，开完PR之后，它会自动提交推送、跑代码审查、修复有效意见，还会盯着PR最多七天处理失败的检查和冲突。文中给了怎么调审查力度、指定PR、加额外机器人的写法。另外提醒了只在信得过的仓库用，规则文件要自己手动提交。每天用Claude Code的人值得读。",
+   "image": "https://claude.dev/blog/the-work-after-you-open-a-pr/og.png",
+   "priority": "high",
+   "tags": [
+    "AI",
+    "Eval"
+   ]
+  },
   {
    "company": "Anthropic",
    "key": "anthropic",
@@ -85,59 +99,6 @@
    "link": "https://openai.com/index/managing-frontier-ai-risk",
    "date": "2026-11-18",
    "summary": "",
-   "image": null,
-   "priority": "medium",
-   "tags": [
-    "AI"
-   ]
-  },
-  {
-   "company": "OpenAI",
-   "key": "openai",
-   "title": "Advancing chip design with OpenAI models",
-   "link": "https://openai.com/index/advancing-chip-design-with-our-models",
-   "date": "2026-11-18",
-   "summary": "",
-   "image": null,
-   "priority": "medium",
-   "tags": [
-    "AI"
-   ]
-  },
-  {
-   "company": "OpenAI",
-   "key": "openai",
-   "title": "Introducing GPT-6.2 Astra and Sol",
-   "link": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
-   "date": "2026-11-17",
-   "summary": "OpenAI发布了GPT-6.2 Astra和Sol两个新模型，Astra面向最难的任务，Sol负责日常使用的高效场景。官方说专业产出、写代码和操作电脑都有提升，价格还更低，Codex和API里都能用。你平时用Codex或者选模型的话，值得点开看一下新的定价和适用场景。",
-   "image": null,
-   "priority": "high",
-   "tags": [
-    "AI"
-   ]
-  },
-  {
-   "company": "Anthropic",
-   "key": "anthropic",
-   "title": "Using a \"chaos loop\" to harden the Claude Docs launch: 60 server errors across billions of requests",
-   "link": "https://claude.dev/blog/chaos-loop-claude-docs-launch/",
-   "date": "2026-11-17",
-   "summary": "Anthropic在Claude Docs上线前，让Claude连续两周在预发布环境里做压力测试和故意制造故障，上线一周后在大约二十亿次请求里只出现了六十个服务器错误。做法是让Claude读监控数据、自己提修复并部署到预发布，只有难以撤销的决定才由人审批。想看AI怎么做混沌测试的话，这篇给了一套完整流程。",
-   "image": "https://claude.dev/blog/chaos-loop-claude-docs-launch/og.png",
-   "priority": "high",
-   "tags": [
-    "AI",
-    "Eval"
-   ]
-  },
-  {
-   "company": "OpenAI",
-   "key": "openai",
-   "title": "Introducing ChatGPT for Sales",
-   "link": "https://openai.com/index/introducing-chatgpt-for-sales",
-   "date": "2026-11-17",
-   "summary": "OpenAI给ChatGPT上了一个销售插件，外加30多个合作伙伴插件，用来查客户资料、准备方案、更新CRM。官网页面这次没抓到全文，只看到简介。更偏企业销售场景，普通使用者可以扫一眼看看ChatGPT插件生态在往哪走。",
    "image": null,
    "priority": "medium",
    "tags": [

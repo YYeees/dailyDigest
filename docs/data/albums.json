@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T04:00:00+00:00",
+ "updated_at": "2026-11-25T02:26:01+00:00",
  "albums": [
   {
    "person": "Thorsten Ball",
@@ -214,6 +214,13 @@
    "bio": "拍胶片和街头摄影的 YouTuber，镜头里多是日本的日常与慢下来的生活。从 2013 年开始做视频，十年如一日地拍。",
    "tracks": [
     {
+     "title": "How to shoot better photos on cloudy days.",
+     "link": "https://www.youtube.com/watch?v=lmdWvjN8xqE",
+     "date": "2026-11-24",
+     "kind": "youtube",
+     "note": "Teo Crawford讲阴天怎么拍出好看的照片，没有太阳的时候光线变软，反而有别的玩法。属于他一贯的摄影分享，想学拍照可以看。"
+    },
+    {
      "title": "Shooting with an old MFT camera.",
      "link": "https://www.youtube.com/watch?v=YCBC9oZiWV8",
      "date": "2026-11-19",
@@ -275,18 +282,11 @@
      "date": "2026-08-31",
      "kind": "youtube",
      "note": "Teo Crawford聊了一个他认为能让摄影变好的简单习惯，是一期比较随性的闲聊分享，没有具体操作步骤。"
-    },
-    {
-     "title": "My simple camera setup for cinematic videos.",
-     "link": "https://www.youtube.com/watch?v=bvJZHwAgSbA",
-     "date": "2026-08-20",
-     "kind": "youtube",
-     "note": "Teo Crawford介绍了他目前拍视频用的简化器材配置，偏装备清单性质，没有涉及拍摄技法的详细讲解。"
     }
    ],
-   "latest": "2026-11-19",
-   "latest_title": "Shooting with an old MFT camera.",
-   "latest_link": "https://www.youtube.com/watch?v=YCBC9oZiWV8"
+   "latest": "2026-11-24",
+   "latest_title": "How to shoot better photos on cloudy days.",
+   "latest_link": "https://www.youtube.com/watch?v=lmdWvjN8xqE"
   },
   {
    "person": "Maggie Appleton",
