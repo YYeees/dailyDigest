@@ -1,6 +1,74 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "Three LLM inflection points in twelve months",
+      "link": "https://simonwillison.net/2026/Nov/24/llm-inflection-points/",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-25T02:24:48.649826+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison回顾过去十二个月里LLM和编程agent的三次关键跃迁，从去年十一月编程agent开始可靠，到今年模型能围绕目标自己坚持做完。他认为只要能把软件描述清楚，现在的模型往往就能做出来，自己很可能不会再回去手写大部分代码。想看懂这一年变化脉络的人值得读。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "一线从业者对过去一年LLM和编程agent三次能力跃迁的系统回顾"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Boris Cherny",
+      "title": "Really excited about this one. MCP servers can now ship with their own skills, so Claude Code knows…",
+      "link": "https://x.com/bcherny/status/2125292098165612585",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-25T02:25:11.446159+00:00",
+      "source_type": "x",
+      "summary": "Boris说MCP服务器现在可以自带skill，这样Claude Code装上之后，一开始就知道该怎么用它。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Claude Code新功能，直接影响日常使用"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Teo Crawford",
+      "title": "How to shoot better photos on cloudy days.",
+      "link": "https://www.youtube.com/watch?v=lmdWvjN8xqE",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-25T02:24:46.203004+00:00",
+      "source_type": "youtube",
+      "summary": "Teo Crawford讲阴天怎么拍出好看的照片，没有太阳的时候光线变软，反而有别的玩法。属于他一贯的摄影分享，想学拍照可以看。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "无实质连接"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "A practical guide to shipping with Claude Code",
+      "link": "https://claude.dev/blog/the-work-after-you-open-a-pr/",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-25T02:24:57.462277+00:00",
+      "source_type": "blog",
+      "summary": "这篇讲Claude Code新增的/ship命令，开完PR之后，它会自动提交推送、跑代码审查、修复有效意见，还会盯着PR最多七天处理失败的检查和冲突。文中给了怎么调审查力度、指定PR、加额外机器人的写法。另外提醒了只在信得过的仓库用，规则文件要自己手动提交。每天用Claude Code的人值得读。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Claude Code新命令/ship的直接实操指南，影响日常工作流"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Craig Mod",
       "title": "[RODEN] A Jazz Walk Incoming",
       "link": "https://craigmod.com/roden/120/",
@@ -15,7 +83,7 @@
           "reason": "作者本人一手的生活与工作节奏记录，贴近质朴慢的构建者活法，但不直接讨论母题"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Teo Crawford",

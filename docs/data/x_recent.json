@@ -1,3 +1,17 @@
 {
-  "items": []
+  "items": [
+    {
+      "person": "Boris Cherny",
+      "title": "Really excited about this one. MCP servers can now ship with their own skills, so Claude Code knows…",
+      "link": "https://x.com/bcherny/status/2125292098165612585",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-25T02:25:11.446159+00:00",
+      "source_type": "x",
+      "summary": "Boris说MCP服务器现在可以自带skill，这样Claude Code装上之后，一开始就知道该怎么用它。",
+      "tier": "high",
+      "text": "Really excited about this one. MCP servers can now ship with their own skills, so Claude Code knows how to use them out of the box.",
+      "handle": "bcherny",
+      "is_new": true
+    }
+  ]
 }

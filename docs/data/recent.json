@@ -2,22 +2,45 @@
   "items": [
     {
       "person": "Simon Willison",
-      "title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer",
-      "link": "https://simonwillison.net/2026/Nov/23/glm-54/",
-      "date": "2026-11-23",
-      "first_seen": "2026-11-24T03:57:57.550792+00:00",
+      "title": "Three LLM inflection points in twelve months",
+      "link": "https://simonwillison.net/2026/Nov/24/llm-inflection-points/",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-25T02:24:48.649826+00:00",
       "source_type": "blog",
-      "summary": "智谱Z.ai发布GLM-5.4，是他们第一个用循环Transformer的模型，也就是让同一组层反复运行几轮，不增加参数也能变深。Simon Willison拿它试了画图，只能通过订阅的编程套餐调用，目前还没开放权重。想跟进新模型架构的趋势可以看，不用太深究。",
+      "summary": "Simon Willison回顾过去十二个月里LLM和编程agent的三次关键跃迁，从去年十一月编程agent开始可靠，到今年模型能围绕目标自己坚持做完。他认为只要能把软件描述清楚，现在的模型往往就能做出来，自己很可能不会再回去手写大部分代码。想看懂这一年变化脉络的人值得读。",
       "tracks": [
         {
           "track": "ai",
-          "tier": "medium",
-          "reason": "新模型发布并附实测，涉及循环Transformer架构，有一定技术门槛"
+          "tier": "high",
+          "reason": "一线从业者对过去一年LLM和编程agent三次能力跃迁的系统回顾"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "跟三根主干无实质连接"
+          "reason": "谈AI改变写软件的方式，沾根二但偏观察而非一手反思母题"
+        }
+      ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "medium",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Greg Isenberg",
+      "title": "5 ways to get the most out of Gemini 4 Neon",
+      "link": "https://www.youtube.com/shorts/dk8vltIu_6k",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-25T02:24:46.495537+00:00",
+      "source_type": "youtube",
+      "summary": "Greg Isenberg上手测了Google新发布的Gemini 4 Neon，讲了社区做出的作品和五种用法。最后还坦白说了几个缺点，比如回答太简短、命名容易混淆。想快速知道这个新模型值不值得试的人可以看。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "新模型上手介绍，偏推广与演示"
         }
       ],
       "tiers": {
@@ -30,22 +53,175 @@
     },
     {
       "person": "Simon Willison",
-      "title": "Ladybird's first alpha release",
-      "link": "https://simonwillison.net/2026/Nov/23/ladybird/",
-      "date": "2026-11-23",
-      "first_seen": "2026-11-24T03:57:57.551096+00:00",
+      "title": "GPT 6.2 Astra Solves a Historical Mystery",
+      "link": "https://simonwillison.net/2026/Nov/24/astra-historical-mystery/",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-25T02:24:48.650139+00:00",
+      "source_type": "blog",
+      "summary": "一位历史学教授用GPT-6.2 Astra，只给很少的提示，它就在二十多分钟里查出了一本匿名素描本的作者，还找到了一份冷门档案来佐证。Simon转述后抛出一个问题，历史学家会不会也迎来自己的深蓝时刻。看看AI做研究型工作现在能到什么程度。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI用于历史研究的案例，偏轻量的趣闻"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "无明确母题"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Teo Crawford",
+      "title": "How to shoot better photos on cloudy days.",
+      "link": "https://www.youtube.com/watch?v=lmdWvjN8xqE",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-25T02:24:46.203004+00:00",
+      "source_type": "youtube",
+      "summary": "Teo Crawford讲阴天怎么拍出好看的照片，没有太阳的时候光线变软，反而有别的玩法。属于他一贯的摄影分享，想学拍照可以看。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "无实质连接"
+        }
+      ],
+      "tiers": {
+        "ai": "low",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "A practical guide to shipping with Claude Code",
+      "link": "https://claude.dev/blog/the-work-after-you-open-a-pr/",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-25T02:24:57.462277+00:00",
+      "source_type": "blog",
+      "summary": "这篇讲Claude Code新增的/ship命令，开完PR之后，它会自动提交推送、跑代码审查、修复有效意见，还会盯着PR最多七天处理失败的检查和冲突。文中给了怎么调审查力度、指定PR、加额外机器人的写法。另外提醒了只在信得过的仓库用，规则文件要自己手动提交。每天用Claude Code的人值得读。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Claude Code新命令/ship的直接实操指南，影响日常工作流"
+        },
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "涉及PR后自动review和修复检查失败，沾质量保障但不是测试方法本身"
+        }
+      ],
+      "tiers": {
+        "ai": "high",
+        "anchor": "low",
+        "eval": "medium"
+      },
+      "is_company": true,
+      "is_new": true
+    },
+    {
+      "person": "Greg Isenberg",
+      "title": "$1.1B robotics founder: millions of robots will exist in 10 years",
+      "link": "https://www.youtube.com/shorts/RV9JbYtfCOo",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-25T02:24:46.495791+00:00",
+      "source_type": "youtube",
+      "summary": "Greg Isenberg访谈一位机器人公司联合创始人，聊机器人创业除了拿大额融资之外还有哪些小切口。比如数据、供应链、远程操控、保险和软件工具。适合对物理AI方向的创业机会感兴趣的人。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "机器人与物理AI创业访谈片段，偏宏观"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "datasette-charts 0.2a0",
+      "link": "https://simonwillison.net/2026/Nov/24/datasette-charts/",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-25T02:24:48.650165+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison给自己的Datasette图表插件加了和聊天agent的联动，现在直接跟agent说想要什么图，它就会自动生成。文中附了演示视频，可以登录体验。想看一个小型数据工具怎么接上agent的话可以点开。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "作者自己维护的Datasette插件版本更新，AI只是顺带集成"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "无关"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "[AINews] Jensen Is Back! and OpenAI Shows Its Pretraining Curve, joined by Microsoft",
+      "link": "https://latent.space/p/ainews-jensen-is-back-and-openai-shows-its-pretraining-curve-joined-by-microsoft/",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-25T02:24:49.758064+00:00",
+      "source_type": "blog",
+      "summary": "这期AI News汇总了一天的行业动态，头条是英伟达黄仁勋在宣布辞职十一天后回归担任CEO，以及OpenAI公布了预训练的进展曲线。另外还提到Sierra估值翻了三倍、智谱发布了新模型。适合想快速扫一眼行业大事的时候看。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI行业新闻汇总，偏宏观叙事"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "datasette-agent 0.7a1",
+      "link": "https://simonwillison.net/2026/Nov/24/datasette-agent/",
+      "date": "2026-11-24",
+      "first_seen": "2026-11-25T02:24:48.650182+00:00",
       "source_type": "blog",
       "summary": null,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "浏览器项目发布，跟AI关系很弱"
+          "reason": "小工具版本更新日志，与同日datasette-charts重复，择一看即可"
         },
         {
           "track": "anchor",
           "tier": "medium",
-          "reason": "跟三根主干无实质连接"
+          "reason": "无关"
         }
       ],
       "tiers": {
@@ -82,7 +258,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -105,7 +281,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -128,7 +304,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Google",
@@ -151,7 +327,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Andrew Huberman",
@@ -174,7 +350,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -197,7 +373,7 @@
         "eval": "low"
       },
       "is_company": true,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -276,7 +452,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -470,8 +646,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://latent.space/og/card/post/ainews-gemini-4-neon-gdm-s-opus-sol-contender/0da9bd9da4547622b312ec1f44ab6ab42cc9e07bed6eb1d47b2fff64e4150bda.png"
+      "is_new": false
     },
     {
       "person": "Craig Mod",
@@ -522,8 +697,7 @@
         "eval": "high"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://eugeneyan.com/assets/og_image/public-evals.jpg"
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -569,8 +743,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png"
+      "is_new": false
     },
     {
       "person": "Google",
@@ -677,174 +850,6 @@
           "track": "ai",
           "tier": "medium",
           "reason": "风险管理流程介绍，偏宏观，正文未能抓取"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": true,
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "Advancing chip design with OpenAI models",
-      "link": "https://openai.com/index/advancing-chip-design-with-our-models",
-      "date": "2026-11-18",
-      "first_seen": "2026-11-19T00:21:22.218572+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "芯片设计应用案例，偏专业领域，正文未能抓取"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": true,
-      "is_new": false
-    },
-    {
-      "person": "Simon Willison",
-      "title": "External sandboxes for coding agents",
-      "link": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
-      "date": "2026-11-17",
-      "first_seen": "2026-11-18T00:56:28.382012+00:00",
-      "source_type": "blog",
-      "summary": "Simon介绍了一种让编程agent更安全的做法：agent本身留在外面，它要执行的代码都丢到一个单独的沙箱里跑。项目给了三种沙箱实现，接口一样，Claude Code、Codex这类工具都能接，还能限制代码能访问哪些网站，并且不把密钥交给agent。想放心试本地模型或者怕agent误操作的人，这篇值得读。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "讲清楚怎么让编程agent在隔离沙箱里跑代码，直接影响日常用Claude Code等工具的安全实践"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "medium",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false,
-      "image": "https://static.simonwillison.net/static/2026/sandbox-proxy.png"
-    },
-    {
-      "person": "OpenAI",
-      "title": "Introducing GPT-6.2 Astra and Sol",
-      "link": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
-      "date": "2026-11-17",
-      "first_seen": "2026-11-18T00:56:31.869689+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI发布了GPT-6.2 Astra和Sol两个新模型，Astra面向最难的任务，Sol负责日常使用的高效场景。官方说专业产出、写代码和操作电脑都有提升，价格还更低，Codex和API里都能用。你平时用Codex或者选模型的话，值得点开看一下新的定价和适用场景。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "OpenAI新一代模型发布，涉及编码与computer use，影响日常选模型；页面403，依据简介和Simon的转述"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": true,
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Cloudflare Joins the Jevolution and Labels Itself a Neolab",
-      "link": "https://latent.space/p/cloudflare/",
-      "date": "2026-11-17",
-      "first_seen": "2026-11-18T00:56:29.019931+00:00",
-      "source_type": "blog",
-      "summary": "Cloudflare这家做网络基础设施的公司，开始自己做模型了，先放出两个反应很快的小模型，主要用来做决策和抽取信息。文章还聊了“neolab”这个新说法到底指什么，以及Cloudflare算不算。对关心AI公司格局的人，值得看看基础设施厂商怎么切入模型。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "Cloudflare自研小模型的访谈报道，偏行业叙事"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "Anthropic",
-      "title": "Using a \"chaos loop\" to harden the Claude Docs launch: 60 server errors across billions of requests",
-      "link": "https://claude.dev/blog/chaos-loop-claude-docs-launch/",
-      "date": "2026-11-17",
-      "first_seen": "2026-11-20T00:37:21.432679+00:00",
-      "source_type": "blog",
-      "summary": "Anthropic在Claude Docs上线前，让Claude连续两周在预发布环境里做压力测试和故意制造故障，上线一周后在大约二十亿次请求里只出现了六十个服务器错误。做法是让Claude读监控数据、自己提修复并部署到预发布，只有难以撤销的决定才由人审批。想看AI怎么做混沌测试的话，这篇给了一套完整流程。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "一个团队用Claude做压测和故障注入的案例，偏案例演示，成本估算未验证"
-        },
-        {
-          "track": "eval",
-          "tier": "high",
-          "reason": "混沌测试加不变量校验加遥测驱动回归的完整做法，是AI做压测故障注入的实例"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "high"
-      },
-      "is_company": true,
-      "is_new": false,
-      "image": "https://claude.dev/blog/chaos-loop-claude-docs-launch/og.png"
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Perplexity hits a $1B revenue run rate, up 4x in 2026",
-      "link": "https://latent.space/p/ainews-perplexity-hits-a-1b-revenue-run-rate-up-4x-in-2026/",
-      "date": "2026-11-17",
-      "first_seen": "2026-11-18T00:56:29.020791+00:00",
-      "source_type": "blog",
-      "summary": "这是一条AI行业简讯，说Perplexity的年化收入已经到了10亿美元，比年初涨了约4倍。后面顺带梳理了它最近上线的几个东西，比如能接手长期任务的Computer和监测网页变化的Monitor API。想了解AI产品公司赚钱赚到什么程度，扫一眼就够了。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "Perplexity营收与新产品的行业简讯，偏新闻"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "Introducing ChatGPT for Sales",
-      "link": "https://openai.com/index/introducing-chatgpt-for-sales",
-      "date": "2026-11-17",
-      "first_seen": "2026-11-18T00:56:31.869919+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI给ChatGPT上了一个销售插件，外加30多个合作伙伴插件，用来查客户资料、准备方案、更新CRM。官网页面这次没抓到全文，只看到简介。更偏企业销售场景，普通使用者可以扫一眼看看ChatGPT插件生态在往哪走。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "ChatGPT销售场景插件发布，偏产品通稿，页面403未读全文"
         }
       ],
       "tiers": {
