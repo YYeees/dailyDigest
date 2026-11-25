@@ -104,6 +104,15 @@ SOURCES = [
      "listing_urls": ["https://www.deeplearning.ai/the-batch/tag/letters/"],
      "article_path_pattern": r"^/the-batch/(?!tag/|about$|search$)[a-z0-9-]+$"},
 
+    # 2026-11-25 加Benedict Evans。用户给的是 ben-evans.com/newsletter，但那份周报只走邮件：
+    # Premium $150/年周日发，免费版延迟两天，往期归档(/newsletter-archive)要登录(401)，没有RSS。
+    # 能抓的一手渠道只有他的长文 Essays(/benedictevans?format=rss，Squarespace自带)：
+    # 一年三四篇，近两年几乎篇篇讲AI(token定价、AI就业冲击、OpenAI怎么竞争)，feed带全文。
+    # 身份：域名即本人，站上链着 twitter.com/benedictevans。别接 benedictevans.substack.com——
+    # 那个号简介自己写着"I don't use substack. I never will."，是占位/冒名号。
+    {"person": "Benedict Evans", "type": "blog", "name": "Benedict Evans (Essays)",
+     "url": "https://www.ben-evans.com/benedictevans?format=rss"},
+
     {"person": "Google", "type": "blog", "name": "Google DeepMind (官方博客)",
      "url": "https://deepmind.google/blog/rss.xml"},
     # 2026-11-14 先删后又加回(同一天)：用户改主意，继续跟DeepMind。
