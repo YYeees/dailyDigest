@@ -1,7 +1,6 @@
 {
- "https://deepmind.google/blog/introducing-gemini-4-neon/": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png",
  "https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/": "https://latent.space/og/card/post/ainews-gemini-4-neon-gdm-s-opus-sol-contender/0da9bd9da4547622b312ec1f44ab6ab42cc9e07bed6eb1d47b2fff64e4150bda.png",
- "https://eugeneyan.com/writing/public-evals": "https://eugeneyan.com/assets/og_image/public-evals.jpg",
  "https://simonwillison.net/2026/Nov/24/llm-inflection-points/": "https://img.youtube.com/vi/9RKrSF9d2SE/maxresdefault.jpg",
- "https://claude.dev/blog/the-work-after-you-open-a-pr/": "https://claude.dev/blog/the-work-after-you-open-a-pr/og.png"
+ "https://claude.dev/blog/the-work-after-you-open-a-pr/": "https://claude.dev/blog/the-work-after-you-open-a-pr/og.png",
+ "https://www.anthropic.com/research/migrating-api-to-rust": "https://assets.claude.com/faac348155bf01d5c59ab38cbd05294eb2fa8197.jpg"
 }

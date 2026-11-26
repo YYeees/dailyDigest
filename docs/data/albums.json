@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T02:26:01+00:00",
+ "updated_at": "2026-11-26T01:47:47+00:00",
  "albums": [
   {
    "person": "Thorsten Ball",
@@ -130,6 +130,13 @@
    "bio": "写「一人企业」和自我教育的作者。他的看法是：AI 能生成一切听起来不错的句子，最后剩下的护城河，是只有你能看见的那个视角。",
    "tracks": [
     {
+     "title": "The deep work routine that changed my life",
+     "link": "https://letters.thedankoe.com/p/the-deep-work-routine-that-changed-651",
+     "date": "2026-11-25",
+     "kind": "blog",
+     "note": "Dan Koe讲他的深度工作方法，核心是每天早上拿出一小时，只做最能推进理想生活的那件事，坚持半年以上。文章先讲为什么忙碌的人总做不成，最后才给出具体的做法。偏成功学口吻，但想养成专注习惯的人可以参考。"
+    },
+    {
      "title": "The most lucrative AI business to start in 2027",
      "link": "https://letters.thedankoe.com/p/the-most-lucrative-ai-business-to",
      "date": "2026-11-03",
@@ -191,18 +198,11 @@
      "date": "2026-08-08",
      "kind": "blog",
      "note": "这篇用下棋打比方讲策略思维，核心是先把自己摆到更有利的位置，机会和战术才会自己冒出来。作者借宫本武藏的几条原则，搭了一套从愿景、调研、准备到执行、适应的人生策略框架。内容偏通用的个人发展和商业鸡汤，跟AI、锚点清单里的主题都没有直接关系。"
-    },
-    {
-     "title": "How to remember everything you read... don't",
-     "link": "https://letters.thedankoe.com/p/how-to-remember-everything-you-read",
-     "date": "2026-07-25",
-     "kind": "blog",
-     "note": "这篇反对死记硬背式的阅读学习法，提出学习本质是一个有目标才会产生的反馈过程，不是单纯往脑子里塞内容。作者给了一套具体搭法：用Claude Code打开Obsidian笔记库，分别建一个存想法的skill和一个整理收件箱、打标签、建反向链接的skill，让AI替自己维护笔记系统。这个思路属于卡片笔记/数字花园这类笔记法的AI化实践，但文章同时也在推销他自己的Eden应用。"
     }
    ],
-   "latest": "2026-11-03",
-   "latest_title": "The most lucrative AI business to start in 2027",
-   "latest_link": "https://letters.thedankoe.com/p/the-most-lucrative-ai-business-to"
+   "latest": "2026-11-25",
+   "latest_title": "The deep work routine that changed my life",
+   "latest_link": "https://letters.thedankoe.com/p/the-deep-work-routine-that-changed-651"
   },
   {
    "person": "Teo Crawford",
@@ -539,6 +539,90 @@
    "latest": "2026-11-20",
    "latest_title": "How Nvidia's founder saw opportunities other people couldn't",
    "latest_link": "https://www.deeplearning.ai/the-batch/jensen-huangs-legacy-and-future"
+  },
+  {
+   "person": "Benedict Evans",
+   "pub": "Benedict's Newsletter",
+   "cover": "nodes",
+   "verb": "Read",
+   "home": "https://www.ben-evans.com/newsletter",
+   "image": "https://images.squarespace-cdn.com/content/v1/50363cf324ac8e905e7df861/7697741e-0a89-4bb3-b69c-a9e62753e1f9/BEvans_BenedictEvans_170_Final%2Bsmall.jpg?format=1000w",
+   "bio": "独立科技分析师，做过 a16z 合伙人，之前多年在做移动和媒体行业的研究分析。每周给近二十万人写一封周报，挑出一周里真正要紧的科技新闻，放进更长的历史和产业背景里讲。不追次日热点，看长期。",
+   "tracks": [
+    {
+     "title": "AI, tools and transformation",
+     "link": "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation",
+     "date": "2026-09-03",
+     "kind": "blog",
+     "note": "Benedict Evans反驳“有了AI人人都会自己做工具，传统软件要消失”的说法。他的理由是大多数人并不会主动想怎么换一种方式干活，企业里的软件也不是单纯的工具问题。适合想跳出硅谷视角看AI落地的人。"
+    },
+    {
+     "title": "Ways to think about token pricing",
+     "link": "https://www.ben-evans.com/benedictevans/2026/7/9/ways-to-think-about-token-pricing",
+     "date": "2026-07-09",
+     "kind": "blog",
+     "note": "Benedict Evans讨论大模型的token价格会往哪里走，眼下算力紧缺，但数据中心投资正在大量涌入。他的判断是模型厂商长期更可能变成低利润的基础设施，而不是靠定价权赚钱。想看AI行业商业格局的人值得读。"
+    },
+    {
+     "title": "Predicting AI job exposure",
+     "link": "https://www.ben-evans.com/benedictevans/2026/5/24/ai-job-exposure",
+     "date": "2026-05-24",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "How will OpenAI compete?",
+     "link": "https://www.ben-evans.com/benedictevans/2026/2/19/how-will-openai-compete-nkg2x",
+     "date": "2026-02-19",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "AI, networks and Mechanical Turks",
+     "link": "https://www.ben-evans.com/benedictevans/2025/11/23/ai-networks-and-mechanical-turks",
+     "date": "2025-11-23",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "AI metrics",
+     "link": "https://www.ben-evans.com/benedictevans/2025/6/9/generative-ais-metrics-question",
+     "date": "2025-06-09",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "GenAI’s adoption puzzle",
+     "link": "https://www.ben-evans.com/benedictevans/2025/5/25/genais-adoption-puzzle",
+     "date": "2025-05-25",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "What kind of disruption?",
+     "link": "https://www.ben-evans.com/benedictevans/2025/3/14/what-kind-of-disruption",
+     "date": "2025-03-14",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "Apple innovation and execution",
+     "link": "https://www.ben-evans.com/benedictevans/2025/3/13/apple-innovation-and-execution",
+     "date": "2025-03-14",
+     "kind": "blog",
+     "note": ""
+    },
+    {
+     "title": "The Deep Research problem",
+     "link": "https://www.ben-evans.com/benedictevans/2025/2/17/the-deep-research-problem",
+     "date": "2025-02-18",
+     "kind": "blog",
+     "note": ""
+    }
+   ],
+   "latest": "2026-09-03",
+   "latest_title": "AI, tools and transformation",
+   "latest_link": "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation"
   }
  ]
 }

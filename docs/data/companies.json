@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T02:26:04+00:00",
+ "updated_at": "2026-11-26T01:47:49+00:00",
  "window_days": 7,
  "companies": [
   {
@@ -12,6 +12,20 @@
   }
  ],
  "items": [
+  {
+   "company": "Anthropic",
+   "key": "anthropic",
+   "title": "Migrating our Messages API to Rust",
+   "link": "https://www.anthropic.com/research/migrating-api-to-rust",
+   "date": "2026-11-25",
+   "summary": "Anthropic讲了他们怎么把Messages API从Python迁到Rust，难点不是写代码，而是怎么确认新版本行为和旧版本一致。他们发现移植过来的测试有上百处断言被悄悄放松，于是拿线上真实流量让新旧两版对照，再让agent自动去修差异。做测试的人可以看看，在代码越来越容易生成的时代，验证怎么变成真正的瓶颈。",
+   "image": "https://assets.claude.com/faac348155bf01d5c59ab38cbd05294eb2fa8197.jpg",
+   "priority": "high",
+   "tags": [
+    "AI",
+    "Eval"
+   ]
+  },
   {
    "company": "Anthropic",
    "key": "anthropic",
@@ -60,45 +74,6 @@
    "link": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
    "date": "2026-11-19",
    "summary": "OpenAI介绍了一套叫Performance Factory的系统，用基于Codex的工作流自动发现并修复性能问题，让ChatGPT保持流畅。原文这次没能抓取，只能依据官方摘要判断，具体做法要点开看。可以跟Anthropic那篇讲claude.ai提速的文章对照着读。",
-   "image": null,
-   "priority": "medium",
-   "tags": [
-    "AI"
-   ]
-  },
-  {
-   "company": "OpenAI",
-   "key": "openai",
-   "title": "Research acceleration: The jagged frontier",
-   "link": "https://openai.com/index/research-acceleration-jagged-frontier",
-   "date": "2026-11-18",
-   "summary": "",
-   "image": null,
-   "priority": "medium",
-   "tags": [
-    "AI"
-   ]
-  },
-  {
-   "company": "OpenAI",
-   "key": "openai",
-   "title": "Inside the Codex sandbox",
-   "link": "https://openai.com/index/inside-the-codex-sandbox",
-   "date": "2026-11-18",
-   "summary": "",
-   "image": null,
-   "priority": "medium",
-   "tags": [
-    "AI"
-   ]
-  },
-  {
-   "company": "OpenAI",
-   "key": "openai",
-   "title": "Managing frontier AI risk: From training to deployment",
-   "link": "https://openai.com/index/managing-frontier-ai-risk",
-   "date": "2026-11-18",
-   "summary": "",
    "image": null,
    "priority": "medium",
    "tags": [
