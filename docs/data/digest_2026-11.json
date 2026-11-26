@@ -1,6 +1,45 @@
 {
   "items": [
     {
+      "person": "Dan Koe",
+      "title": "The deep work routine that changed my life",
+      "link": "https://letters.thedankoe.com/p/the-deep-work-routine-that-changed-651",
+      "date": "2026-11-25",
+      "first_seen": "2026-11-26T01:46:43.075132+00:00",
+      "source_type": "blog",
+      "summary": "Dan Koe讲他的深度工作方法，核心是每天早上拿出一小时，只做最能推进理想生活的那件事，坚持半年以上。文章先讲为什么忙碌的人总做不成，最后才给出具体的做法。偏成功学口吻，但想养成专注习惯的人可以参考。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "high",
+          "reason": "谈深度专注与每天留一小时给自己，沾慢与清净的边，但带强烈个人品牌与成功学色彩"
+        }
+      ],
+      "is_new": true
+    },
+    {
+      "person": "Anthropic",
+      "title": "Migrating our Messages API to Rust",
+      "link": "https://www.anthropic.com/research/migrating-api-to-rust",
+      "date": "2026-11-25",
+      "first_seen": "2026-11-26T01:46:53.381199+00:00",
+      "source_type": "blog",
+      "summary": "Anthropic讲了他们怎么把Messages API从Python迁到Rust，难点不是写代码，而是怎么确认新版本行为和旧版本一致。他们发现移植过来的测试有上百处断言被悄悄放松，于是拿线上真实流量让新旧两版对照，再让agent自动去修差异。做测试的人可以看看，在代码越来越容易生成的时代，验证怎么变成真正的瓶颈。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "high",
+          "reason": "Anthropic一手工程实践，讲清楚怎么让agent团队迁移大型线上系统"
+        },
+        {
+          "track": "eval",
+          "tier": "high",
+          "reason": "详述迁移中如何验证正确性：测试被改弱、覆盖不全，改用线上流量对比做验证，直接对应agent时代怎么测"
+        }
+      ],
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
       "title": "Three LLM inflection points in twelve months",
       "link": "https://simonwillison.net/2026/Nov/24/llm-inflection-points/",
@@ -15,7 +54,7 @@
           "reason": "一线从业者对过去一年LLM和编程agent三次能力跃迁的系统回顾"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Boris Cherny",
@@ -32,7 +71,7 @@
           "reason": "Claude Code新功能，直接影响日常使用"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Teo Crawford",
@@ -49,7 +88,7 @@
           "reason": "无实质连接"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -66,7 +105,7 @@
           "reason": "Claude Code新命令/ship的直接实操指南，影响日常工作流"
         }
       ],
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Craig Mod",
