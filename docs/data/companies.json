@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26T01:47:49+00:00",
+ "updated_at": "2026-11-27T01:44:49+00:00",
  "window_days": 7,
  "companies": [
   {
@@ -65,19 +65,6 @@
    "tags": [
     "AI",
     "Eval"
-   ]
-  },
-  {
-   "company": "OpenAI",
-   "key": "openai",
-   "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
-   "link": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
-   "date": "2026-11-19",
-   "summary": "OpenAI介绍了一套叫Performance Factory的系统，用基于Codex的工作流自动发现并修复性能问题，让ChatGPT保持流畅。原文这次没能抓取，只能依据官方摘要判断，具体做法要点开看。可以跟Anthropic那篇讲claude.ai提速的文章对照着读。",
-   "image": null,
-   "priority": "medium",
-   "tags": [
-    "AI"
    ]
   }
  ]

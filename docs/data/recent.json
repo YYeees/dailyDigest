@@ -240,7 +240,8 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": false
+      "is_new": false,
+      "image": "https://assets.claude.com/faac348155bf01d5c59ab38cbd05294eb2fa8197.jpg"
     },
     {
       "person": "Simon Willison",
@@ -263,7 +264,8 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false
+      "is_new": false,
+      "image": "https://img.youtube.com/vi/9RKrSF9d2SE/maxresdefault.jpg"
     },
     {
       "person": "Greg Isenberg",
@@ -337,7 +339,8 @@
         "eval": "medium"
       },
       "is_company": true,
-      "is_new": false
+      "is_new": false,
+      "image": "https://claude.dev/blog/the-work-after-you-open-a-pr/og.png"
     },
     {
       "person": "Greg Isenberg",
