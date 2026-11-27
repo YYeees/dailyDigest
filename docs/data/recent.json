@@ -1,18 +1,102 @@
 {
   "items": [
     {
+      "person": "Latent Space",
+      "title": "How Clay Builds GTM Agents — Jeff Barg, Head of AI",
+      "link": "https://latent.space/p/how-clay-builds-gtm-agents-jeff-barg-head-of-ai/",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-27T01:43:56.859028+00:00",
+      "source_type": "blog",
+      "summary": "Clay的AI负责人聊他们怎么给任何agent都能用的销售获客工具打基础，现在一半的使用已经来自外部的Claude Code这类工具。里面讲了他们的agent从固定工具循环改成会写代码的agent，当初的评测为什么没抓到真实问题，以及为什么大多数公司太早去训练自己的模型。做agent产品或者关心评测的人可以听听他们踩过的坑。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "Clay讲自家agent基础设施的工程经验，有实操价值但偏业务场景"
+        },
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "提到早期用大模型当裁判的评测漏掉了真实用法，以及agent还不能调试别的agent，有讨论价值但不是系统的测试方法"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "medium"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
       "person": "Simon Willison",
-      "title": "Quoting Scott Aaronson",
-      "link": "https://simonwillison.net/2026/Nov/25/scott-aaronson/",
-      "date": "2026-11-25",
-      "first_seen": "2026-11-26T01:46:44.765297+00:00",
+      "title": "Quoting Jack Despain Zhou",
+      "link": "https://simonwillison.net/2026/Nov/26/jack-despain-zhou/",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-27T01:43:56.254247+00:00",
+      "source_type": "blog",
+      "summary": "这是一段很短的引文，作者说AI已经让文字有了一种千人一面的味道，打开视频、听演讲、看邮件，到处都能认出Claude的腔调。读起来几十秒，但正好点到了用AI写东西时最容易丢掉的东西，也就是自己的声音。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "一句引文，讲AI带来的千人一面，偏观点叙事"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "沾“一手不二手”和写作表达的边，清单外但值得注意"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "medium",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "sqlite3_rsync: Database Remote-Copy Tool For SQLite",
+      "link": "https://simonwillison.net/2026/Nov/26/sqlite3-rsync/",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-27T01:43:56.254477+00:00",
       "source_type": "blog",
       "summary": null,
       "tracks": [
         {
           "track": "ai",
           "tier": "medium",
-          "reason": "一句引文，偏理论计算机科学，与日常使用AI无关"
+          "reason": "SQLite工具介绍，与AI无关"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "无实质连接"
+        }
+      ],
+      "tiers": {
+        "ai": "low",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Simon Willison",
+      "title": "The New York Times warns photographers not to update Photoshop over AI features",
+      "link": "https://simonwillison.net/2026/Nov/26/hn-50651685/",
+      "date": "2026-11-26",
+      "first_seen": "2026-11-27T01:43:56.254510+00:00",
+      "source_type": "blog",
+      "summary": null,
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "只是对新闻摄影规范的一条评论，与AI关系弱"
         },
         {
           "track": "anchor",
@@ -54,7 +138,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -77,7 +161,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Dan Koe",
@@ -100,7 +184,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -123,7 +207,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Anthropic",
@@ -156,8 +240,7 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": true,
-      "image": "https://assets.claude.com/faac348155bf01d5c59ab38cbd05294eb2fa8197.jpg"
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -180,8 +263,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://img.youtube.com/vi/9RKrSF9d2SE/maxresdefault.jpg"
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -255,8 +337,7 @@
         "eval": "medium"
       },
       "is_company": true,
-      "is_new": false,
-      "image": "https://claude.dev/blog/the-work-after-you-open-a-pr/og.png"
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -627,99 +708,6 @@
       },
       "is_company": false,
       "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "Scaling Linear’s GTM to $100M ARR — Cristina Cordova, COO",
-      "link": "https://latent.space/p/linear-scaling/",
-      "date": "2026-11-19",
-      "first_seen": "2026-11-20T00:37:13.446809+00:00",
-      "source_type": "blog",
-      "summary": "Latent Space这期访谈Linear的COO，聊这家做任务管理的公司在AI时代怎么调整做法。现在Linear上超过一半的工作项是agent创建的，她说如果产品里的agent体验不比外面的好，就没人有理由打开你的应用。还聊了为什么一直不雇销售开发人员，适合关心AI产品怎么赚钱的人。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "讲AI时代SaaS公司的销售和产品策略，沾AI但偏商业叙事"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "Teo Crawford",
-      "title": "Shooting with an old MFT camera.",
-      "link": "https://www.youtube.com/watch?v=YCBC9oZiWV8",
-      "date": "2026-11-19",
-      "first_seen": "2026-11-20T00:36:48.505957+00:00",
-      "source_type": "youtube",
-      "summary": "Teo带着一台老款的微型四三系统相机，也就是Lumix GX80，出门拍了一次，视频记录了整个拍摄过程。内容偏器材和日常，没有涉及别的主题。",
-      "tracks": [
-        {
-          "track": "anchor",
-          "tier": "high",
-          "reason": "无关"
-        }
-      ],
-      "tiers": {
-        "ai": "low",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "OpenAI",
-      "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
-      "link": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
-      "date": "2026-11-19",
-      "first_seen": "2026-11-20T00:37:16.301620+00:00",
-      "source_type": "blog",
-      "summary": "OpenAI介绍了一套叫Performance Factory的系统，用基于Codex的工作流自动发现并修复性能问题，让ChatGPT保持流畅。原文这次没能抓取，只能依据官方摘要判断，具体做法要点开看。可以跟Anthropic那篇讲claude.ai提速的文章对照着读。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "OpenAI用Codex工作流找并修复性能问题的案例，原文未能抓取，只据摘要判断"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": true,
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Gemini 4 Neon: GDM's Opus/Sol Contender",
-      "link": "https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/",
-      "date": "2026-11-19",
-      "first_seen": "2026-11-20T00:37:13.453810+00:00",
-      "source_type": "blog",
-      "summary": "Google DeepMind发布了Gemini 4 Neon，这是它七周内的第四个Gemini 4模型，中档但比上一档更快更便宜。这期汇总了定价、上下文长度、各家第三方评测的排名和早期用户的实测反馈，还顺带提到Anthropic的IPO定价。想一次掌握这个新模型的位置和大家的评价，看这期就够了。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "high",
-          "reason": "Gemini 4 Neon发布的要点汇总，含价格规格和独立评测，并比较了几家模型"
-        }
-      ],
-      "tiers": {
-        "ai": "high",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false,
-      "image": "https://latent.space/og/card/post/ainews-gemini-4-neon-gdm-s-opus-sol-contender/0da9bd9da4547622b312ec1f44ab6ab42cc9e07bed6eb1d47b2fff64e4150bda.png"
     }
   ]
 }
