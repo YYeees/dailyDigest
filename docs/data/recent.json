@@ -1,6 +1,85 @@
 {
   "items": [
     {
+      "person": "Simon Willison",
+      "title": "datasette-charts 0.4a0",
+      "link": "https://simonwillison.net/2026/Nov/27/datasette-charts/",
+      "date": "2026-11-27",
+      "first_seen": "2026-11-28T01:27:15.663096+00:00",
+      "source_type": "blog",
+      "summary": "Simon Willison更新了他的图表插件datasette-charts，并给它做了一个官网，有写插件的教程和图表样例库。这次改动的起因是他让Claude Opus 5.5随手写了个实验插件来试用接口，结果暴露出一堆不好用的地方。想看看怎么让AI帮你检验自己的设计，可以看看这个例子。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "作者自己维护的小工具版本更新，但提到让Claude Opus 5.5试用插件接口来发现设计问题"
+        },
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "与三根主干无实质连接"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Latent Space",
+      "title": "Inside the AI Training Data Market — Gabe Greenberg, G2i",
+      "link": "https://latent.space/p/inside_the_ai_training_data_market_gabe_greenberg_g2i/",
+      "date": "2026-11-27",
+      "first_seen": "2026-11-28T01:27:16.239057+00:00",
+      "source_type": "blog",
+      "summary": "这期播客聊的是前沿AI实验室怎么向外部买训练数据，嘉宾是做这门生意的G2i创始人。里面讲了好的训练任务该出得比模型现在的水平稍难一点，资深工程师怎么出题，又怎么写一个能给结果打分的验证程序。想知道模型背后的数据是怎么来的，可以听听。",
+      "tracks": [
+        {
+          "track": "ai",
+          "tier": "medium",
+          "reason": "AI训练数据市场的行业访谈，偏行业内幕，离日常使用AI较远"
+        },
+        {
+          "track": "eval",
+          "tier": "medium",
+          "reason": "讲训练任务怎么设计、怎么做能打分的verifier，沾评测边但不是教怎么测"
+        }
+      ],
+      "tiers": {
+        "ai": "medium",
+        "anchor": "low",
+        "eval": "medium"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
+      "person": "Andrew Huberman",
+      "title": "OPINIONS ARE CONCEPTS. IF THEY ARE STRONGLY LINKED TO YOUR EGO, YOU WILL BE EASILY OFFENDED.",
+      "link": "https://www.youtube.com/shorts/Ji-N7w1BhMw",
+      "date": "2026-11-27",
+      "first_seen": "2026-11-28T01:27:13.032201+00:00",
+      "source_type": "youtube",
+      "summary": "Eckhart Tolle在Huberman的播客里谈到，观点只是一些概念，一旦跟自我绑得太紧，别人不同意你就容易被冒犯。反过来，被人夸得太舒服也是同一个信号。他的建议不是抽离或一直冥想，而是看清楚自己为什么会被某件事刺到。",
+      "tracks": [
+        {
+          "track": "anchor",
+          "tier": "medium",
+          "reason": "谈观点与自我认同的关系，沾根一深度自我认识的边，但是二手短视频片段"
+        }
+      ],
+      "tiers": {
+        "ai": "low",
+        "anchor": "medium",
+        "eval": "low"
+      },
+      "is_company": false,
+      "is_new": true
+    },
+    {
       "person": "Latent Space",
       "title": "How Clay Builds GTM Agents — Jeff Barg, Head of AI",
       "link": "https://latent.space/p/how-clay-builds-gtm-agents-jeff-barg-head-of-ai/",
@@ -26,91 +105,7 @@
         "eval": "medium"
       },
       "is_company": false,
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "Quoting Jack Despain Zhou",
-      "link": "https://simonwillison.net/2026/Nov/26/jack-despain-zhou/",
-      "date": "2026-11-26",
-      "first_seen": "2026-11-27T01:43:56.254247+00:00",
-      "source_type": "blog",
-      "summary": "这是一段很短的引文，作者说AI已经让文字有了一种千人一面的味道，打开视频、听演讲、看邮件，到处都能认出Claude的腔调。读起来几十秒，但正好点到了用AI写东西时最容易丢掉的东西，也就是自己的声音。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "一句引文，讲AI带来的千人一面，偏观点叙事"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "沾“一手不二手”和写作表达的边，清单外但值得注意"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "medium",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "sqlite3_rsync: Database Remote-Copy Tool For SQLite",
-      "link": "https://simonwillison.net/2026/Nov/26/sqlite3-rsync/",
-      "date": "2026-11-26",
-      "first_seen": "2026-11-27T01:43:56.254477+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "SQLite工具介绍，与AI无关"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "无实质连接"
-        }
-      ],
-      "tiers": {
-        "ai": "low",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": true
-    },
-    {
-      "person": "Simon Willison",
-      "title": "The New York Times warns photographers not to update Photoshop over AI features",
-      "link": "https://simonwillison.net/2026/Nov/26/hn-50651685/",
-      "date": "2026-11-26",
-      "first_seen": "2026-11-27T01:43:56.254510+00:00",
-      "source_type": "blog",
-      "summary": null,
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "只是对新闻摄影规范的一条评论，与AI关系弱"
-        },
-        {
-          "track": "anchor",
-          "tier": "medium",
-          "reason": "无实质连接"
-        }
-      ],
-      "tiers": {
-        "ai": "low",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": true
+      "is_new": false
     },
     {
       "person": "Latent Space",
@@ -240,8 +235,7 @@
         "eval": "high"
       },
       "is_company": true,
-      "is_new": false,
-      "image": "https://assets.claude.com/faac348155bf01d5c59ab38cbd05294eb2fa8197.jpg"
+      "is_new": false
     },
     {
       "person": "Simon Willison",
@@ -264,8 +258,7 @@
         "eval": "low"
       },
       "is_company": false,
-      "is_new": false,
-      "image": "https://img.youtube.com/vi/9RKrSF9d2SE/maxresdefault.jpg"
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -339,8 +332,7 @@
         "eval": "medium"
       },
       "is_company": true,
-      "is_new": false,
-      "image": "https://claude.dev/blog/the-work-after-you-open-a-pr/og.png"
+      "is_new": false
     },
     {
       "person": "Greg Isenberg",
@@ -633,80 +625,6 @@
       "tiers": {
         "ai": "medium",
         "anchor": "medium",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "Greg Isenberg",
-      "title": "Gemini 4 Neon: the most underrated model of the year",
-      "link": "https://www.youtube.com/watch?v=tCY7zMknCJQ",
-      "date": "2026-11-20",
-      "first_seen": "2026-11-21T23:13:46.267699+00:00",
-      "source_type": "youtube",
-      "summary": "Greg Isenberg上手测了Google新发布的Gemini 4 Neon，展示了用它做动效、游戏和硬件原型的例子。他讲了在哪里跑、怎么用得更好，也坦率说了写作习惯和命名混乱这些缺点。想快速了解这个新模型能干什么可以看，不过里面赚钱建议偏创作者视角。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "Gemini 4 Neon的上手体验和用法，偏创作者推广与赚钱角度。"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "low"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "The War Against Slop and an Emerging Weapon to Fight it: Formal Verification",
-      "link": "https://latent.space/p/formal-verification/",
-      "date": "2026-11-20",
-      "first_seen": "2026-11-20T23:59:18.069983+00:00",
-      "source_type": "blog",
-      "summary": "这篇讲的是在AI写代码越来越多的当下，怎么用形式化验证对付低质量的“slop”，也就是用数学证明程序没问题。文中采访了一家新公司的联合创始人，介绍了Harmonic等几家用AI自动完成证明的公司各自的做法。对做测试的人来说，可以看看“证明正确”这条路离日常工作还有多远。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "形式化验证与AI结合的行业综述，需要一定技术背景"
-        },
-        {
-          "track": "eval",
-          "tier": "medium",
-          "reason": "讲AI如何让软件正确性验证自动化，沾测试手艺的边，但偏行业综览不是实操"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
-        "eval": "medium"
-      },
-      "is_company": false,
-      "is_new": false
-    },
-    {
-      "person": "Latent Space",
-      "title": "[AINews] Anthropic successfully completes largest IPO in history, valued at $1.5T",
-      "link": "https://latent.space/p/ainews-anthropic-successfully-completes-largest-ipo-in-history-valued-at-1-5t/",
-      "date": "2026-11-20",
-      "first_seen": "2026-11-20T23:59:18.071242+00:00",
-      "source_type": "blog",
-      "summary": "这期AI新闻汇总主要讲Anthropic上市首日的情况，发行价83美元，收盘涨了约17%，融资规模成了史上最大的IPO。另外还提到Google把Genie 4开放给了开发者。想快速了解这一天AI圈发生了什么，扫一眼这篇就够。",
-      "tracks": [
-        {
-          "track": "ai",
-          "tier": "medium",
-          "reason": "每日AI新闻汇总，Anthropic上市是大新闻但偏资讯，另含Genie 4开放给开发者"
-        }
-      ],
-      "tiers": {
-        "ai": "medium",
-        "anchor": "low",
         "eval": "low"
       },
       "is_company": false,
